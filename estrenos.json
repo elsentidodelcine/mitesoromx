@@ -396,7 +396,7 @@
     "id": "aaa",
     "titulo": "Triplemanía 34 Las Vegas",
     "tipo": "estreno",
-    "estadoCartelera": "estreno",
+    "estadoCartelera": "fuera",
     "fecha": "2026-09-11",
     "fechaTexto": "Viernes 11 de Septiembre del 2026",
     "poster": "imgs/estrenos/vegas.jpg",
@@ -406,7 +406,7 @@
   {
     "id": "aaa1",
     "titulo": "Triplemanía 34 México",
-    "tipo": "estreno",
+    "tipo": "fuera",
     "estadoCartelera": "preventa",
     "fecha": "2026-09-13",
     "fechaTexto": "Domingo 13 de Septiembre del 2026",
@@ -435,7 +435,7 @@
     "id": "garcia",
     "titulo": "Ryan García Vs Conor Benn",
     "tipo": "estreno",
-    "estadoCartelera": "estreno",
+    "estadoCartelera": "fuera",
     "fecha": "2026-09-12",
     "fechaTexto": "Sábado 12 de Septiembre del 2026",
     "poster": "imgs/estrenos/garcia.jpg",
@@ -738,5 +738,27 @@
     "poster": "imgs/estrenos/bestia.jpg",
     "cines": ["Cinepolis", "Cinemex"],
     "nota": "Estados Unidos"
+  },
+  {
+    "id": "btsbrasil",
+    "titulo": "BTS WORLD TOUR 'ARIRANG' IN SÃO PAULO: LIVE VIEWING",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-30",
+    "fechaTexto": "Viernes 30 de Octubre del 2026",
+    "poster": "imgs/estrenos/btsbrasil.jpg",
+    "cines": ["Cinepolis", "Cinemex"],
+    "nota": "Brasil"
+  },
+  {
+    "id": "btsargentina",
+    "titulo": "BTS WORLD TOUR 'ARIRANG' IN BUENOS AIRES: LIVE VIEWING",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-24",
+    "fechaTexto": "Sábado 24 de Octubre del 2026",
+    "poster": "imgs/estrenos/btsargentina.jpg",
+    "cines": ["Cinepolis", "Cinemex"],
+    "nota": "Argentina"
   }
 ]
