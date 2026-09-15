@@ -69,7 +69,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     llenarVersusSelects();
     refreshTools();
     renderPromos();
-    bindFabYCopia();
   } catch (error) {
     console.error(error);
     if (container) {
@@ -194,6 +193,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     let boletos = complejo.boletos || [];
     if (!Array.isArray(boletos)) boletos = [boletos];
     const diasLabel = ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'];
+    const hoyKey = diaDeHoy(); // lunes, martes...
 
     const filas = boletos.map(b => `
       <tr>
@@ -201,7 +201,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         ${DIAS.map(dia => {
           const p = b[dia];
           const vacio = p == null || p === 0;
-          return `<td class="${vacio ? 'na' : 'precio'}">${vacio ? '—' : fmt(p)}</td>`;
+          const hoyClass = dia === hoyKey ? ' hoy-col' : '';
+          return `<td class="${vacio ? 'na' : 'precio'}${hoyClass}">${vacio ? '—' : fmt(p)}</td>`;
         }).join('')}
       </tr>
     `).join('');
@@ -214,7 +215,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             <thead>
               <tr>
                 <th>Tipo</th>
-                ${diasLabel.map(d => `<th>${d}</th>`).join('')}
+                ${DIAS.map((dia, i) => {
+                  const hoyClass = dia === hoyKey ? ' hoy-col' : '';
+                  return `<th class="${hoyClass}">${diasLabel[i]}${dia === hoyKey ? ' · hoy' : ''}</th>`;
+                }).join('')}
               </tr>
             </thead>
             <tbody>${filas}</tbody>
@@ -747,87 +751,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     `).join('');
   }
 
-  function bindFabYCopia() {
-    const fab = document.getElementById('fab-sim');
-    const panel = document.getElementById('sim-panel');
-    const close = document.getElementById('sim-close');
-    const btnCopy = document.getElementById('btn-copy-resumen');
-
-    fab?.addEventListener('click', () => {
-      panel?.classList.toggle('open');
-      document.querySelector('.simulador')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-
-    close?.addEventListener('click', () => panel?.classList.remove('open'));
-
-    btnCopy?.addEventListener('click', async () => {
-      const texto = construirResumen();
-      try {
-        await navigator.clipboard.writeText(texto);
-        const fb = document.getElementById('sim-copy-feedback');
-        if (fb) {
-          fb.hidden = false;
-          setTimeout(() => { fb.hidden = true; }, 1800);
-        }
-      } catch {
-        prompt('Copia este resumen:', texto);
-      }
-    });
-  }
-
-  function construirResumen() {
-    const ciudadKey = document.getElementById('sim-ciudad')?.value || 'sfr';
-    const adultos = Number(document.getElementById('sim-adultos')?.value || 0);
-    const ninos = Number(document.getElementById('sim-ninos')?.value || 0);
-    const dia = filtroDia === 'promedio' ? 'viernes' : filtroDia;
-    const ciudadNombre = CIUDADES[ciudadKey]?.nombre || ciudadKey;
-
-    const lista = filtrarLista(CIUDADES[ciudadKey]?.complejos || []);
-    let mejor = null;
-
-    lista.forEach(c => {
-      let total = 0;
-      let ok = true;
-
-      for (let i = 0; i < adultos; i++) {
-        const b = precioBoleto(c, dia, { club: usarClub });
-        if (b == null) { ok = false; break; }
-        total += b;
-      }
-      for (let i = 0; i < ninos; i++) {
-        const b = precioBoleto(c, dia, { nino: true }) ?? precioBoleto(c, dia, {});
-        if (b == null) { ok = false; break; }
-        total += b;
-      }
-
-      const palOpt = document.getElementById('sim-pal')?.value || '0';
-      if (palOpt !== '0') {
-        const p = snackSize(c, /palomitas/i, palOpt) ?? snackSize(c, /palomitas/i, 'grande');
-        if (p == null) ok = false; else total += p;
-      }
-
-      const nRef = Number(document.getElementById('sim-ref')?.value || 0);
-      for (let i = 0; i < nRef; i++) {
-        const r = snackSize(c, /refresco/i, 'grande');
-        if (r == null) ok = false; else total += r;
-      }
-
-      if (ok && (mejor == null || total < mejor.total)) {
-        mejor = { c, total };
-      }
-    });
-
-    if (!mejor) {
-      return `Los Brujos del Cine — No pude calcular un total para ${ciudadNombre}.`;
-    }
-
-    return `Los Brujos del Cine
-${ciudadNombre} · ${DIAS_LABEL[dia] || dia}
-${mejor.c.nombreCadena} · ${mejor.c.nombre}
-${adultos} adulto(s)${ninos ? `, ${ninos} niño(s)` : ''}
-Total estimado: $${mejor.total}
-(Precios de referencia, sujetos a cambio)`;
-  }
 
   function diaDeHoy() {
     // getDay(): 0=domingo ... 6=sábado
@@ -886,5 +809,74 @@ document.addEventListener('DOMContentLoaded', () => {
     nav.classList.remove('is-open');
     toggle.setAttribute('aria-expanded', 'false');
     toggle.setAttribute('aria-label', 'Abrir menú');
+  });
+});
+
+// ===== Toggle tema =====
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+
+  btn.addEventListener('click', () => {
+    const html = document.documentElement;
+    const actual = html.getAttribute('data-theme') || 'dark';
+    const nuevo = actual === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', nuevo);
+    try { localStorage.setItem('lbdc-theme', nuevo); } catch (e) {}
+  });
+});
+
+// ===== Botón volver arriba =====
+document.addEventListener('DOMContentLoaded', () => {
+  const btnTop = document.getElementById('btn-top');
+  if (!btnTop) return;
+
+  function toggleBtnTop() {
+    if (window.scrollY > 400) btnTop.classList.add('is-visible');
+    else btnTop.classList.remove('is-visible');
+  }
+
+  window.addEventListener('scroll', toggleBtnTop, { passive: true });
+  toggleBtnTop();
+
+  btnTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+
+// ===== Toggle tema =====
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+
+  btn.addEventListener('click', () => {
+    const html = document.documentElement;
+    const actual = html.getAttribute('data-theme') || 'dark';
+    const nuevo = actual === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', nuevo);
+    try {
+      localStorage.setItem('lbdc-theme', nuevo);
+    } catch (e) {}
+  });
+});
+
+// ===== Botón volver arriba =====
+document.addEventListener('DOMContentLoaded', () => {
+  const btnTop = document.getElementById('btn-top');
+  if (!btnTop) return;
+
+  function toggleBtnTop() {
+    if (window.scrollY > 400) {
+      btnTop.classList.add('is-visible');
+    } else {
+      btnTop.classList.remove('is-visible');
+    }
+  }
+
+  window.addEventListener('scroll', toggleBtnTop, { passive: true });
+  toggleBtnTop();
+
+  btnTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 });

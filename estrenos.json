@@ -71,14 +71,8 @@
     "fecha": "2026-09-17",
     "fechaTexto": "Jueves 17 de Septiembre 2026",
     "poster": "imgs/estrenos/one.jpg",
-    "cines": ["Cinemex"],
-    "links": [
-      {
-        "cine": "Cinemex",
-        "url": "https://cinemex.com/proximamente/4502/one-piece-la-pelicula-2000"
-      }
-    ],
-    "nota": "Proximamente"
+    "cines": ["Cinemex", "Cinepolis"],
+    "nota": "Japón"
   },
   {
     "id": "linkin",
@@ -733,5 +727,16 @@
     "poster": "imgs/estrenos/puella4.jpg",
     "cines": ["Cinepolis"],
     "nota": "Japón"
+  },
+  {
+    "id": "bestia",
+    "titulo": "El Corazón De La Bestia",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-09-24",
+    "fechaTexto": "Jueves 24 de Septiembre del 2026",
+    "poster": "imgs/estrenos/bestia.jpg",
+    "cines": ["Cinepolis", "Cinemex"],
+    "nota": "Estados Unidos"
   }
 ]
