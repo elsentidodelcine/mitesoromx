@@ -31,20 +31,11 @@
     "id": "transformers",
     "titulo": "Transformers: La película",
     "tipo": "preventa",
+    "estadoCartelera": "preventa",
     "fecha": "2026-09-17",
     "fechaTexto": "Jueves 17 de Septiembre 2026",
     "poster": "imgs/estrenos/transformers.jpg",
     "cines": ["Cinemex", "Cinepolis"],
-    "links": [
-      {
-        "cine": "Cinemex",
-        "url": "https://cinemex.com/pelicula/72428/transformers-la-pelicula"
-      },
-      {
-        "cine": "Cinepolis",
-        "url": "https://www.cinepolis.com"
-      }
-    ],
     "nota": "Preventa ya disponible"
   },
   {
@@ -56,20 +47,15 @@
     "fechaTexto": "Miércoles 26 de Agosto 2026",
     "poster": "imgs/estrenos/ghost.jpg",
     "cines": ["Cinépolis"],
-    "links": [
-      {
-        "cine": "Cinépolis",
-        "url": "https://www.cinepolis.com"
-      }
-    ],
     "nota": "Preventa ya disponible"
   },
   {
     "id": "one",
     "titulo": "One Piece: La Película (2000)",
-    "tipo": "preventa",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
     "fecha": "2026-09-17",
-    "fechaTexto": "Jueves 17 de Septiembre 2026",
+    "fechaTexto": "Miércoles 16 de Septiembre 2026",
     "poster": "imgs/estrenos/one.jpg",
     "cines": ["Cinemex", "Cinepolis"],
     "nota": "Japón"
@@ -82,16 +68,6 @@
     "fechaTexto": "Miércoles 30 de Septiembre del 2026",
     "poster": "imgs/estrenos/linkin.jpg",
     "cines": ["Cinemex", "Cinepolis"],
-    "links": [
-      {
-        "cine": "Cinemex",
-        "url": "https://cinemex.com/pelicula/72456/linkin-park-unshatter-en-cines"
-      },
-      {
-        "cine": "Cinépolis",
-        "url": "https://www.cinepolis.com"
-      }
-    ],
     "nota": "Proximamente"
   },
   {
@@ -208,9 +184,10 @@
   {
     "id": "madre",
     "titulo": "A Toda Madre",
-    "tipo": "preventa",
-    "fecha": "2026-09-17",
-    "fechaTexto": "Jueves 17 de Septiembre del 2026",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
+    "fecha": "2026-09-16",
+    "fechaTexto": "Miércoles 16 de Septiembre del 2026",
     "poster": "imgs/estrenos/madre.jpg",
     "cines": ["Cinepolis"],
     "links": [
@@ -304,8 +281,8 @@
   {
     "id": "terminator",
     "titulo": "Terminator 2: El Juicio Final",
-    "tipo": "preventa",
-    "estadoCartelera": "preventa",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
     "fecha": "2026-09-16",
     "fechaTexto": "Miércoles 16 de Septiembre del 2026",
     "poster": "imgs/estrenos/terminator.jpg",
@@ -621,12 +598,12 @@
   {
     "id": "resident",
     "titulo": "Resident Evil: Noche Cero",
-    "tipo": "preventa",
-    "estadoCartelera": "preventa",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
     "fecha": "2026-09-16",
     "fechaTexto": "Miércoles 16 de Septiembre 2026",
     "poster": "imgs/estrenos/resident.jpg",
-    "cines": ["Cinemex"],
+    "cines": ["Cinemex", "Cinepolis"],
     "nota": "Estados Unidos"
   },
   {
@@ -760,5 +737,49 @@
     "poster": "imgs/estrenos/btsargentina.jpg",
     "cines": ["Cinepolis", "Cinemex"],
     "nota": "Argentina"
+  },
+  {
+    "id": "isla",
+    "titulo": "La Isla Olvidada",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
+    "fecha": "2026-09-16",
+    "fechaTexto": "Miércoles 16 de Septiembre 2026",
+    "poster": "imgs/estrenos/isla.jpg",
+    "cines": ["Cinemex", "Cinepolis"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "precio",
+    "titulo": "A Cualquier Precio",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
+    "fecha": "2026-09-16",
+    "fechaTexto": "Miércoles 16 de Septiembre 2026",
+    "poster": "imgs/estrenos/precio.jpg",
+    "cines": ["Cinemex", "Cinepolis"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "paranorman",
+    "titulo": "Paranorman (Re Estreno)",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
+    "fecha": "2026-09-16",
+    "fechaTexto": "Miércoles 16 de Septiembre 2026",
+    "poster": "imgs/estrenos/paranorman.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "viaje",
+    "titulo": "Jikuri: Viaje al País de los Tarahumaras",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
+    "fecha": "2026-09-16",
+    "fechaTexto": "Miércoles 16 de Septiembre 2026",
+    "poster": "imgs/estrenos/viaje.jpg",
+    "cines": ["Cinemex", "Cinepolis"],
+    "nota": "México"
   }
 ]

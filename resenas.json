@@ -921,5 +921,72 @@
     ],
     "cita": "Tiene una buena idea escondida dentro de una película que no sabe qué hacer con ella.",
     "veredicto": "Premisa con potencial desperdiciada en comedia infantil y superficial. Predecible y olvidable. Mal augurio."
+  },
+  {
+    "id": "hechizo-de-amor-2",
+    "titulo": "Hechizo de Amor 2",
+    "anio": 2026,
+    "fecha": "2026-09-16",
+    "duracion": "130 min",
+    "generos": ["Fantasía", "Romance", "Comedia"],
+    "puntaje": 1.5,
+    "destacada": false,
+    "etiqueta": "ESTRENO",
+    "plataformas": ["Cines"],
+    "resumen": "Secuela cargada de nostalgia con Bullock y Kidman, pero demasiado larga, pesada y con poca magia real. La resolución de la maldición se siente demasiado fácil y conveniente.",
+    "poster": "imgs/resenias/amor.jpg",
+    "posterFallback": {
+      "linea1": "Hechizo de",
+      "linea2": "Amor 2"
+    },
+    "letterboxd": "https://letterboxd.com/film/practical-magic-2",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt32588798/",
+      "rating": "6.4"
+    },
+    "lead": "Nostalgia y química entre Bullock y Kidman, pero 130 minutos de una historia que se siente larga, conveniente y con muy poca magia de verdad. Brujería oscura.",
+    "contenido": [
+      "Hechizo de Amor 2 es de esas secuelas que llegan cargadísimas de nostalgia, pero que también demuestran que no todo lo que recordamos con cariño necesita una continuación. Para empezar, 130 minutos me parecen demasiado para lo poco que tiene que contar. La película se siente larga, pesada y por momentos hasta me estaba aburriendo.",
+      "Lo que sí funciona es volver a ver a Sandra Bullock y Nicole Kidman juntas. Las dos siguen teniendo una química muy particular y, de hecho, hubo momentos en los que sentí que se olvidaban de que eran hermanas porque la conexión entre ellas se sentía tan intensa que por un momento hasta pensé que se iban a besar. También está todo el fan service con las cuatro protagonistas, incluyendo a las dos tías, que seguramente va a sacar una sonrisa a quienes tienen cariño por la película original.",
+      "La historia ahora se centra en las hijas del personaje de Nicole Kidman, quienes crecieron sin conocer realmente su herencia mágica ni todo lo relacionado con la maldición. Y justamente ahí empieza a regresar el problema. El concepto podía haber dado para algo interesante, pero la película está demasiado cargada y muchas cosas se resuelven de una manera que me pareció demasiado conveniente. Hay situaciones que prácticamente ocurren porque el guion necesita que ocurran, y cuando llega la resolución de la maldición, todo resulta todavía más fácil de lo que debería.",
+      "Y aquí está uno de mis mayores problemas: ¿dónde quedó la magia? Porque si le quitas el título de Hechizo de Amor, la palabra bruja y algunos elementos sobrenaturales, prácticamente podrías estar viendo otra película romántica sobre una familia con problemas. No sentí esa oscuridad ni ese encanto mágico que esperaba. Todo se va más hacia las relaciones, los romances y los conflictos familiares, dejando la parte de las brujas en segundo plano.",
+      "El final está bien y, al menos, termina resolviendo las cosas de manera positiva. Pero para llegar ahí tuve que atravesar una película demasiado larga, con una historia que no me enganchó y con una resolución que me pareció demasiado floja. Tiene nostalgia, tiene a Bullock y Kidman y tiene momentos que recuerdan a la original, pero para mí eso no es suficiente para sostener una secuela de 130 minutos."
+    ],
+    "cita": "¿Dónde quedó la magia?",
+    "veredicto": "Nostalgia y química entre las protagonistas, pero demasiado larga, conveniente y con poca magia real. No necesita esta continuación. Brujería oscura."
+  },
+  {
+    "id": "la-isla-olvidada",
+    "titulo": "La Isla Olvidada",
+    "anio": 2026,
+    "fecha": "2026-09-16",
+    "duracion": "109 min",
+    "generos": ["Animación", "Fantasía", "Aventuras"],
+    "puntaje": 1.5,
+    "destacada": false,
+    "etiqueta": "ESTRENO",
+    "plataformas": ["Cines"],
+    "resumen": "Animación de DreamWorks con folclore filipino y una historia de amistad que se rompe. Animación híbrida interesante, pero la ejecución, la estructura de recuerdos y el final de «el poder de la amistad» la dejan a medias.",
+    "poster": "imgs/resenias/isla.jpg",
+    "posterFallback": {
+      "linea1": "La Isla",
+      "linea2": "Olvidada"
+    },
+    "letterboxd": "https://letterboxd.com/film/forgotten-island-2026",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt36583977/",
+      "rating": "7.5"
+    },
+    "lead": "Propuesta con potencial (amistad que se rompe + mitología filipina), pero la forma de contarla, la resolución básica y el final de «la amistad lo puede todo» hacen que se quede a medias. Brujería oscura.",
+    "contenido": [
+      "La Isla Olvidada nos cuenta la historia de Jo y Raissa, dos chicas que se conocen en la escuela y terminan convirtiéndose en mejores amigas. Y aquí tengo que decir algo desde el principio: entiendo perfectamente el amor de los abuelos por contarles historias a sus nietos, pero en esta película llevar esas historias del folclore filipino al extremo termina siendo parte del problema. Jo crece tan obsesionada con estas historias que parece vivir completamente desconectada de la realidad, mientras que Raissa consigue avanzar, entrar a la universidad y comenzar a construir su futuro.",
+      "Y justo ahí está una de las cosas que más me interesaban de la película: ver cómo una amistad que alguna vez fue tan fuerte se va rompiendo porque las dos están tomando caminos completamente diferentes. Incluso sus propios padres le dicen a Raissa que debería alejarse de Jo. La idea me parecía bastante buena, porque habla de algo que realmente sucede cuando crecemos: no siempre las amistades sobreviven a los cambios de la vida.",
+      "Alerta de spoilers. El problema es la manera en la que la película decide contar todo. Resulta que la isla olvidada sí existe y que terminan viviendo toda esta aventura, pero después descubrimos que buena parte de lo que vimos está relacionado con sus recuerdos. Y personalmente hubiera preferido que la película nos mostrara todo desde el principio y que viéramos cómo esa aventura fortalecía nuevamente su amistad. En cambio, al estar todo contado de esta manera, siento que la relación se vuelve todavía más complicada y cuando finalmente vuelven a unirse, simplemente ocurre y ya. No sentí que hubiera un gran momento para esa reconciliación.",
+      "Y la resolución contra el villano tampoco me convenció. Otra vez tenemos el clásico recurso de que el poder de la amistad termina salvándolo todo, algo que ya hemos visto muchísimas veces. Me hubiera parecido mucho más interesante que Raissa realmente regresara a su vida y que Jo decidiera quedarse en la isla. Eso habría dejado una consecuencia mucho más fuerte para las dos y habría hecho que todo lo que veníamos viendo tuviera mayor peso.",
+      "Visualmente sí hay cosas interesantes. La película utiliza una animación híbrida que mezcla diferentes estilos y texturas, siguiendo esa tendencia que popularizó Spider-Man: Un Nuevo Universo y que DreamWorks ya había explorado en películas como El Gato con Botas: El Último Deseo. Además, el uso del folclore filipino le da una identidad propia y es probablemente uno de los elementos más llamativos de la propuesta. El problema es que la película quiere hablar de amistad, recuerdos, familia, identidad, crecer, cultura y mitología al mismo tiempo, y varias de esas ideas terminan quedándose a medias.",
+      "Al final, La Isla Olvidada me parece una película rara. Tiene una propuesta que podía haber sido bastante buena, tiene una animación llamativa y una mitología que no solemos ver en este tipo de películas, pero la ejecución no me convenció. La historia de Jo y Raissa tenía potencial para hacerme sentir mucho más, pero entre la forma de contar los acontecimientos, una resolución demasiado básica y ese final de «la amistad lo puede todo», terminé sintiendo que pudo haber sido mucho más."
+    ],
+    "cita": "La película quiere hablar de amistad, recuerdos, familia, identidad, crecer, cultura y mitología al mismo tiempo, y varias de esas ideas terminan quedándose a medias.",
+    "veredicto": "Animación interesante y mitología filipina fresca, pero la estructura de recuerdos y el final de «el poder de la amistad» desperdician el potencial de la historia. Pudo haber sido mucho más."
   }
 ]
