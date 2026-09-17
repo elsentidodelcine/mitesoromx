@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const selectComplejo = document.getElementById('filtro-complejo');
   const complejoWrap = document.getElementById('complejo-filter-wrap');
   const ciudadTabs = document.getElementById('ciudad-tabs');
+  let filtroPreset = '1'; // 1 | pareja | familia
 
   let data = [];
   let metaActualizado = null;
@@ -53,6 +54,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const raw = await response.json();
     data = normalizarData(raw);
+    const sk = document.getElementById('precios-skeleton');
+    if (sk) sk.remove();
 
     // Listeners (ANTES estaban faltando)
     bindTabs();
@@ -162,11 +165,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const cat = complejo.categoria || (/vip|platino/i.test(complejo.nombre) ? 'premium' : 'economico');
     const badgeCat = cat === 'premium'
-      ? '<span class="badge badge-premium">VIP / Platino</span>'
-      : '<span class="badge badge-economico">Económico</span>';
+      ? '<span class="badge badge-premium" data-tip="Sala VIP / Platino, precio más alto">VIP / Platino</span>'
+      : '<span class="badge badge-economico" data-tip="Sala tradicional, mejor precio">Económico</span>';
+
     const badgeDulcero = tieneDulcero(complejo)
       ? ''
-      : '<span class="badge badge-sin-dulcero">Sin dulcero cargado</span>';
+      : '<span class="badge badge-sin-dulcero" data-tip="Sin precios de dulcero en la base de datos">Sin dulcero cargado</span>';
 
     container.innerHTML = `
       <section class="cine-section active">
@@ -338,6 +342,44 @@ document.addEventListener('DOMContentLoaded', async () => {
     return costoPersona(complejo, filtroDia);
   }
 
+  function multiplicadorPreset() {
+    if (filtroPreset === 'pareja') return { adultos: 2, ninos: 0 };
+    if (filtroPreset === 'familia') return { adultos: 2, ninos: 2 };
+    return { adultos: 1, ninos: 0 };
+  }
+
+  function scoreConPreset(complejo) {
+    const base = scoreComplejo(complejo);
+    if (base == null) return null;
+    const { adultos, ninos } = multiplicadorPreset();
+    return base * adultos + (ninos > 0 ? Math.round(base * 0.85) * ninos : 0);
+  }
+
+ function renderResumenRapido() {
+   const el = document.getElementById('resumen-rapido');
+   if (!el) return;
+
+   const ciudadKey = ciudadActiva === 'leon-cadenas' ? 'leon' : (ciudadActiva || 'sfr');
+   const ids = CIUDADES[ciudadKey]?.complejos || CIUDADES.sfr.complejos;
+   const lista = filtrarLista(ids)
+     .map(c => ({ c, score: scoreComplejo(c) }))
+     .filter(x => x.score != null)
+     .sort((a, b) => a.score - b.score);
+
+   if (!lista.length) {
+     el.hidden = true;
+     return;
+   }
+
+   const g = lista[0];
+   const diaTxt = filtroDia === 'promedio' ? 'promedio semanal' : (DIAS_LABEL[filtroDia] || filtroDia);
+   el.innerHTML = `
+     Hoy conviene <strong>${escapeHTML(g.c.nombreCadena)} · ${escapeHTML(g.c.nombre)}</strong>
+     con <strong>${fmt(g.score)}</strong> (${escapeHTML(diaTxt)}, modo actual).
+   `;
+   el.hidden = false;
+ }
+
   function mejorDiaDe(complejo) {
     let best = null;
     DIAS.forEach(d => {
@@ -375,17 +417,31 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (ciudad.modo === 'cadenas') {
       const porCadena = {};
       lista.forEach(c => {
-        const prom = scoreComplejo(c);
+        const prom = scoreConPreset(c);
         if (prom == null) return;
         if (!porCadena[c.cadena] || prom < porCadena[c.cadena].prom) {
           porCadena[c.cadena] = { complejo: c, prom };
         }
       });
       const filas = Object.values(porCadena).sort((a, b) => a.prom - b.prom);
-      if (!filas.length) {
-        box.innerHTML = `<div class="error-state">No hay datos suficientes (prueba modo “Solo boleto”).</div>`;
-        return;
-      }
+     if (!lista.length) {
+       box.innerHTML = `
+         <div class="empty-state-box">
+           <p>No hay datos suficientes con estos filtros.</p>
+           <p style="font-size:.85rem">Prueba cambiar a <strong>Solo boleto</strong> o quitar el filtro de categoría.</p>
+           <button type="button" class="filter-btn" id="btn-solo-boleto">Usar Solo boleto</button>
+         </div>`;
+
+       document.getElementById('btn-solo-boleto')?.addEventListener('click', () => {
+         const sel = document.getElementById('filtro-modo');
+         if (sel) {
+           sel.value = 'boleto';
+           filtroModo = 'boleto';
+         }
+         refreshTools();
+       });
+       return;
+     }
       const mejor = filas[0];
       box.innerHTML = `
         <div class="comp-winner">
@@ -422,7 +478,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const filas = lista.map(c => {
       const pal = getSnackGrande(c, /palomitas/i);
       const ref = getSnackGrande(c, /refresco/i);
-      const prom = scoreComplejo(c);
+      const prom = scoreConPreset(c);
       const esMejor = ganador && c.id === ganador.c.id;
       return `
         <tr class="${esMejor ? 'mejor' : ''}">
@@ -444,12 +500,20 @@ document.addEventListener('DOMContentLoaded', async () => {
     }).join('');
 
     box.innerHTML = `
-      ${ganador ? `
-        <div class="comp-winner">
-          En <strong>${escapeHTML(ciudad.nombre)}</strong> conviene más
-          <strong>${escapeHTML(ganador.c.nombreCadena)} · ${escapeHTML(ganador.c.nombre)}</strong>
-          con <strong>$${ganador.prom}</strong>.
-        </div>` : ''}
+      box.innerHTML = `
+        ${ganador ? `...` : ''}
+        <div class="table-block">
+          <h3>...</h3>
+          <div class="table-scroll">
+            <table>...</table>
+          </div>
+          <p style="padding:12px 18px;...">...</p>
+        </div>
+        <div style="text-align:center;padding:12px">
+          <button type="button" class="btn-export" id="btn-export-comp">Exportar imagen</button>
+        </div>`;
+
+      document.getElementById('btn-export-comp')?.addEventListener('click', exportarComparativa);
       <div class="table-block">
         <h3><span>★</span> Comparativa de gasto adulto</h3>
         <div class="table-scroll">
@@ -483,15 +547,31 @@ document.addEventListener('DOMContentLoaded', async () => {
     const ids = CIUDADES[baseKey]?.complejos || CIUDADES.sfr.complejos;
 
     const lista = filtrarLista(ids)
-      .map(c => ({ c, score: scoreComplejo(c), best: mejorDiaDe(c) }))
+      .map(c => ({ c, score: scoreConPreset(c), best: mejorDiaDe(c) }))
       .filter(x => x.score != null)
       .sort((a, b) => a.score - b.score);
 
     if (!lista.length) {
-      tip.innerHTML = 'No hay datos suficientes para este filtro (prueba “Solo boleto”).';
-      top3.innerHTML = '';
+      tip.innerHTML = '';
+      top3.innerHTML = `
+        <div class="empty-state-box">
+          <p>No hay datos suficientes con estos filtros.</p>
+          <p style="font-size:.85rem">Prueba cambiar a <strong>Solo boleto</strong> o quitar el filtro de categoría.</p>
+          <button type="button" class="filter-btn" id="btn-solo-boleto">Usar Solo boleto</button>
+        </div>`;
+      document.getElementById('btn-solo-boleto')?.addEventListener('click', () => {
+        const sel = document.getElementById('filtro-modo');
+        if (sel) {
+          sel.value = 'boleto';
+          filtroModo = 'boleto';
+        }
+        refreshTools();
+      });
       return;
     }
+
+    const scores = lista.map(x => x.score);
+    const promedio = Math.round(scores.reduce((a, b) => a + b, 0) / scores.length);
 
     const g = lista[0];
     tip.innerHTML = g.best
@@ -505,18 +585,27 @@ document.addEventListener('DOMContentLoaded', async () => {
         <table class="precios-table">
           <thead><tr><th>#</th><th>Complejo</th><th>Total</th><th>Mejor día</th></tr></thead>
           <tbody>
-            ${lista.slice(0, 3).map((x, i) => `
-              <tr class="${i === 0 ? 'rank-1' : ''}">
-                <td>${i + 1}</td>
-                <td>
-                  <strong>${escapeHTML(x.c.nombre)}</strong><br>
-                  <span style="color:var(--muted-2);font-size:.72rem">
-                    ${escapeHTML(x.c.nombreCadena)}${x.c.zona ? ' · ' + escapeHTML(x.c.zona) : ''}
-                  </span>
-                </td>
-                <td class="precio">${fmt(x.score)}</td>
-                <td>${x.best ? DIAS_LABEL[x.best.d] + ' · ' + fmt(x.best.v) : '—'}</td>
-              </tr>`).join('')}
+            ${lista.slice(0, 3).map((x, i) => {
+              const diff = x.score - promedio;
+              const diffHtml = diff < 0
+                ? `<span class="diff-barato">${diff} vs prom.</span>`
+                : diff > 0
+                  ? `<span class="diff-caro">+${diff} vs prom.</span>`
+                  : '';
+
+              return `
+                <tr class="${i === 0 ? 'rank-1' : ''}">
+                  <td>${i + 1}</td>
+                  <td>
+                    <strong>${escapeHTML(x.c.nombre)}</strong><br>
+                    <span style="color:var(--muted-2);font-size:.72rem">
+                      ${escapeHTML(x.c.nombreCadena)}${x.c.zona ? ' · ' + escapeHTML(x.c.zona) : ''}
+                    </span>
+                  </td>
+                  <td class="precio">${fmt(x.score)} ${diffHtml}</td>
+                  <td>${x.best ? DIAS_LABEL[x.best.d] + ' · ' + fmt(x.best.v) : '—'}</td>
+                </tr>`;
+            }).join('')}
           </tbody>
         </table>
       </div>`;
@@ -565,8 +654,22 @@ document.addEventListener('DOMContentLoaded', async () => {
       return { c, total: ok ? total : null };
     }).filter(x => x.total != null).sort((a, b) => a.total - b.total);
 
-    if (!filas.length) {
-      box.innerHTML = `<p style="padding:16px;color:var(--muted)">No se pudo calcular (faltan snacks o boletos en esos complejos).</p>`;
+    if (!lista.length) {
+      box.innerHTML = `
+        <div class="empty-state-box">
+          <p>No hay datos suficientes con estos filtros.</p>
+          <p style="font-size:.85rem">Prueba cambiar a <strong>Solo boleto</strong> o quitar el filtro de categoría.</p>
+          <button type="button" class="filter-btn" id="btn-solo-boleto">Usar Solo boleto</button>
+        </div>`;
+
+      document.getElementById('btn-solo-boleto')?.addEventListener('click', () => {
+        const sel = document.getElementById('filtro-modo');
+        if (sel) {
+          sel.value = 'boleto';
+          filtroModo = 'boleto';
+        }
+        refreshTools();
+      });
       return;
     }
 
@@ -682,6 +785,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     on('sim-agua', () => renderSimulador());
     on('vs-a', () => renderVersus());
     on('vs-b', () => renderVersus());
+      on('filtro-preset', e => {
+          filtroPreset = e.target.value;
+          // sincronizar simulador
+          if (filtroPreset === '1') simSet(1, 0, 'grande', 1, 0);
+          else if (filtroPreset === 'pareja') simSet(2, 0, 'jumbo', 2, 0);
+          else if (filtroPreset === 'familia') simSet(2, 2, 'jumbo', 3, 1);
+          refreshTools();
+        });
 
     const preset = document.getElementById('sim-preset');
     if (preset) {
@@ -693,6 +804,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         renderSimulador();
       });
     }
+
+
   }
 
   function refreshTools() {
@@ -700,15 +813,34 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderSimulador();
     renderVersus();
     renderComparativa(ciudadActiva);
+    renderResumenRapido();
   }
 
-  function actualizarNotaFecha() {
-    const el = document.getElementById('precios-actualizado');
-    if (!el) return;
-    el.textContent = metaActualizado
-      ? `Precios actualizados: ${metaActualizado}. Sujetos a cambio por sucursal y promociones.`
-      : 'Precios sujetos a cambio según sucursal y promociones.';
-  }
+ function actualizarNotaFecha() {
+   const el = document.getElementById('precios-actualizado');
+   if (!el) return;
+
+   if (!metaActualizado) {
+     el.textContent = 'Precios sujetos a cambio según sucursal y promociones.';
+     el.classList.remove('viejo');
+     return;
+   }
+
+   el.textContent = `Precios actualizados: ${metaActualizado}. Sujetos a cambio por sucursal y promociones.`;
+
+   // Si la fecha es string tipo "2026-09-10" o similar
+   const m = String(metaActualizado).match(/(\d{4})-(\d{2})-(\d{2})/);
+   if (m) {
+     const fecha = new Date(`${m[1]}-${m[2]}-${m[3]}T12:00:00`);
+     const dias = Math.floor((Date.now() - fecha.getTime()) / 86400000);
+     if (dias > 14) {
+       el.classList.add('viejo');
+       el.textContent += ` ⚠️ Hace ${dias} días — pueden estar desactualizados.`;
+     } else {
+       el.classList.remove('viejo');
+     }
+   }
+ }
 
   function fmt(valor) {
     if (valor == null || valor === '') return '—';
@@ -819,7 +951,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const nav = document.getElementById('main-nav');
   if (!toggle || !nav) return;
 
-  toggle.addEventListener('click', () => {
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
     const open = nav.classList.toggle('is-open');
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
@@ -829,7 +962,6 @@ document.addEventListener('DOMContentLoaded', () => {
     a.addEventListener('click', () => {
       nav.classList.remove('is-open');
       toggle.setAttribute('aria-expanded', 'false');
-      toggle.setAttribute('aria-label', 'Abrir menú');
     });
   });
 
@@ -838,7 +970,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (nav.contains(e.target) || toggle.contains(e.target)) return;
     nav.classList.remove('is-open');
     toggle.setAttribute('aria-expanded', 'false');
-    toggle.setAttribute('aria-label', 'Abrir menú');
   });
 });
 
@@ -875,3 +1006,20 @@ document.addEventListener('DOMContentLoaded', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 });
+
+
+async function exportarComparativa() {
+  const target = document.getElementById('comparativa-container');
+  if (!target || typeof html2canvas === 'undefined') {
+    alert('No se pudo exportar. Recarga la página.');
+    return;
+  }
+  const canvas = await html2canvas(target, {
+    backgroundColor: document.documentElement.getAttribute('data-theme') === 'light' ? '#f4f4f6' : '#121218',
+    scale: 2
+  });
+  const link = document.createElement('a');
+  link.download = `comparativa-precios-${Date.now()}.png`;
+  link.href = canvas.toDataURL('image/png');
+  link.click();
+}

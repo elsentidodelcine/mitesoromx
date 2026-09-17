@@ -1036,6 +1036,229 @@ html[data-theme="light"] .check-club {
 html[data-theme="light"] .section-title-mini {
   color: #121214 !important;
 }
+
+        /* ===== SKELETON ===== */
+.precios-skeleton {
+  width: min(var(--max), calc(100% - 48px));
+  margin: 24px auto;
+  display: grid;
+  gap: 16px;
+}
+.sk-block {
+  height: 120px;
+  border-radius: 14px;
+  background: linear-gradient(90deg, #1a1a22 25%, #252530 50%, #1a1a22 75%);
+  background-size: 200% 100%;
+  animation: sk-shine 1.4s ease-in-out infinite;
+}
+html[data-theme="light"] .sk-block {
+  background: linear-gradient(90deg, #e4e4e8 25%, #f0f0f4 50%, #e4e4e8 75%);
+  background-size: 200% 100%;
+}
+@keyframes sk-shine {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ===== RESUMEN RÁPIDO ===== */
+.resumen-rapido {
+  width: min(var(--max), calc(100% - 48px));
+  margin: 20px auto 0;
+  padding: 16px 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(201,162,39,.35);
+  background: rgba(201,162,39,.1);
+  text-align: center;
+  font-size: .92rem;
+  color: #e8e8ec;
+  animation: fadeIn .35s ease;
+}
+.resumen-rapido strong { color: var(--gold); }
+html[data-theme="light"] .resumen-rapido {
+  background: rgba(201,162,39,.12);
+  color: #3d3d46;
+}
+
+/* ===== INDICADOR ACTUALIZADO ===== */
+.precios-note.viejo {
+  border-color: rgba(196,30,58,.4);
+  background: rgba(196,30,58,.1);
+  color: #ff8a9a;
+}
+html[data-theme="light"] .precios-note.viejo {
+  color: #b71c1c;
+  background: rgba(196,30,58,.08);
+}
+
+/* ===== EMPTY STATE ===== */
+.empty-state-box {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--muted);
+}
+.empty-state-box p { margin: 0 0 14px; }
+.empty-state-box .filter-btn {
+  margin-top: 8px;
+}
+
+/* ===== DIFF VS PROMEDIO ===== */
+.diff-barato { color: #7ddea0; font-size: .75rem; font-weight: 600; }
+.diff-caro { color: #ff8a9a; font-size: .75rem; font-weight: 600; }
+
+/* ===== ANIMACIÓN AL CAMBIAR ===== */
+.cine-section, #comparativa-container, #top3-box, #sim-resultados, #vs-result {
+  animation: fadeIn .3s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== TOOLTIPS BADGES ===== */
+.badge {
+  position: relative;
+  cursor: help;
+}
+.badge[data-tip]::after {
+  content: attr(data-tip);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translateX(-50%);
+  background: #1a1a22;
+  color: #fff;
+  font-size: .65rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s;
+  z-index: 20;
+  box-shadow: 0 4px 12px rgba(0,0,0,.4);
+}
+.badge[data-tip]:hover::after,
+.badge[data-tip]:focus-visible::after {
+  opacity: 1;
+}
+
+/* ===== TABLAS MÓVIL + CONTRASTE CLARO ===== */
+html[data-theme="light"] table.precios-table {
+  color: #121214;
+}
+html[data-theme="light"] table.precios-table th {
+  background: #ececf0 !important;
+  color: #3d3d46 !important;
+  border-bottom-color: rgba(0,0,0,.12);
+}
+html[data-theme="light"] table.precios-table td {
+  border-bottom-color: rgba(0,0,0,.08);
+  color: #121214;
+}
+html[data-theme="light"] table.precios-table .precio {
+  color: #8a7019 !important;
+}
+html[data-theme="light"] table.precios-table .na {
+  color: #9a9aa6 !important;
+}
+html[data-theme="light"] tr.mejor,
+html[data-theme="light"] .rank-1 {
+  background: rgba(201,162,39,.18) !important;
+}
+html[data-theme="light"] table.precios-table th.hoy-col,
+html[data-theme="light"] table.precios-table td.hoy-col {
+  background: rgba(201,162,39,.22) !important;
+}
+
+/* Sticky primera columna en móvil */
+@media (max-width: 700px) {
+  .table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  table.precios-table th:first-child,
+  table.precios-table td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background: var(--surface);
+    box-shadow: 4px 0 8px rgba(0,0,0,.15);
+    min-width: 120px;
+  }
+  html[data-theme="light"] table.precios-table th:first-child,
+  html[data-theme="light"] table.precios-table td:first-child {
+    background: #fff;
+  }
+  table.precios-table {
+    min-width: 560px;
+    font-size: .8rem;
+  }
+  table.precios-table th,
+  table.precios-table td {
+    padding: 10px 8px;
+  }
+}
+
+/* ===== BOTÓN EXPORTAR ===== */
+.btn-export {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 12px auto 0;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(201,162,39,.35);
+  background: rgba(201,162,39,.12);
+  color: var(--gold);
+  font-size: .8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn-export:hover { background: rgba(201,162,39,.2); }
+
+/* ===== MENÚ HAMBURGUESA (fix) ===== */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1002;
+}
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  margin: 5px 0;
+  transition: .2s;
+}
+@media (max-width: 768px) {
+  .nav-toggle { display: block; }
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 20px 20px;
+    gap: 4px;
+    z-index: 1001;
+  }
+  .main-nav.is-open { display: flex; }
+  .main-nav a {
+    padding: 12px 8px;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .header-inner { position: relative; }
+}
     </style>
     <script>
         try {
@@ -1095,6 +1318,8 @@ html[data-theme="light"] .section-title-mini {
     <p class="precios-note" id="precios-actualizado">
         Precios sujetos a cambio según sucursal y promociones.
     </p>
+
+    <div id="resumen-rapido" class="resumen-rapido" hidden></div>
 <!--
     <section class="promos-section" id="promos-section">
         <h2 class="section-title-mini">Promos del momento</h2>
@@ -1133,6 +1358,15 @@ html[data-theme="light"] .section-title-mini {
                     <option value="todos">Todos</option>
                     <option value="economico">Económico</option>
                     <option value="premium">VIP / Platino</option>
+                </select>
+            </div>
+
+            <div class="tool-group">
+                <label for="filtro-preset">Salida</label>
+                <select id="filtro-preset">
+                    <option value="1">1 adulto</option>
+                    <option value="pareja">Pareja (2)</option>
+                    <option value="familia">Familia (2+2)</option>
                 </select>
             </div>
 
@@ -1221,7 +1455,11 @@ html[data-theme="light"] .section-title-mini {
     </div>
 
     <div id="precios-container">
-        <div class="loading-state">Cargando precios...</div>
+        <div class="precios-skeleton" id="precios-skeleton">
+            <div class="sk-block"></div>
+            <div class="sk-block"></div>
+            <div class="sk-block" style="height:80px"></div>
+        </div>
     </div>
 </main>
 
@@ -1243,6 +1481,8 @@ html[data-theme="light"] .section-title-mini {
 
     <button type="button" id="btn-top" class="btn-top" aria-label="Volver arriba">↑</button>
 
-    <script src="precios.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="precios.js"></script>
+
 </body>
 </html>
