@@ -1001,7 +1001,7 @@
     "etiqueta": "ESTRENO",
     "plataformas": ["Cines"],
     "resumen": "Reinicio de Zach Cregger con estructura de videojuego y un repartidor como protagonista. Cumple como entretenimiento palomero, pero el ritmo lento del primer tramo y el exceso de comedia matan el terror.",
-    "poster": "imgs/resenias/residentevilhoracero.jpg",
+    "poster": "imgs/resenias/resident.jpg",
     "posterFallback": {
       "linea1": "Resident Evil:",
       "linea2": "Hora Cero"
