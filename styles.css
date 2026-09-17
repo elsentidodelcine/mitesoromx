@@ -434,63 +434,6 @@ body.dark .cart-btn {
   background: #ffe082;
 }
 
-/* ================= CÓMO FUNCIONA ================= */
-.como-funciona {
-  max-width: 1100px;
-  margin: 48px auto;
-  padding: 0 20px;
-  text-align: center;
-}
-
-.como-funciona h2 {
-  font-size: 1.4rem;
-  margin: 0 0 28px;
-  font-weight: 700;
-}
-
-.pasos-compra {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 16px;
-}
-
-.paso {
-  background: var(--card);
-  border-radius: var(--radius);
-  padding: 22px 16px;
-  box-shadow: var(--shadow);
-  border: 1px solid var(--border);
-  transition: transform 0.2s;
-}
-
-.paso:hover {
-  transform: translateY(-4px);
-}
-
-.paso span {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  background: #111;
-  color: #fff;
-  border-radius: 50%;
-  font-weight: 700;
-  font-size: 0.9rem;
-  margin-bottom: 10px;
-}
-
-body.dark .paso span {
-  background: #fff;
-  color: #111;
-}
-
-.paso p {
-  margin: 0;
-  font-size: 0.9rem;
-  color: var(--text-muted);
-}
 
 /* ================= CATÁLOGO HEADER ================= */
 .catalogo-title {
@@ -2126,6 +2069,7 @@ body.dark .envio-gratis-track {
 }
 
 /* ================= CÓMO PAGAR ================= */
+.como-funciona,
 .como-pagar {
   max-width: 1000px;
   margin: 48px auto;
@@ -4530,4 +4474,94 @@ body.dark .sticky-envio-track {
 .boton.btn-lista-espera:hover {
   filter: brightness(1.08);
   transform: scale(1.02);
+}
+
+/* ================= CÓMO FUNCIONA ================= */
+.como-funciona {
+  max-width: 1100px;
+  margin: 48px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.como-funciona h2 {
+  font-size: 1.4rem;
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+
+.como-funciona-intro {
+  margin: 0 auto 28px;
+  max-width: 520px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.pasos-funciona {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.paso-funciona {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 22px 16px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center;
+}
+
+.paso-funciona:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.paso-funciona .paso-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: #111;
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+body.dark .paso-funciona .paso-num {
+  background: #fff;
+  color: #111;
+}
+
+.paso-funciona strong {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.paso-funciona p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+/* Móvil */
+@media (max-width: 600px) {
+  .pasos-funciona {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .paso-funciona {
+    padding: 18px 14px;
+  }
 }

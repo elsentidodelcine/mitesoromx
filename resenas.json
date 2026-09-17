@@ -988,5 +988,41 @@
     ],
     "cita": "La película quiere hablar de amistad, recuerdos, familia, identidad, crecer, cultura y mitología al mismo tiempo, y varias de esas ideas terminan quedándose a medias.",
     "veredicto": "Animación interesante y mitología filipina fresca, pero la estructura de recuerdos y el final de «el poder de la amistad» desperdician el potencial de la historia. Pudo haber sido mucho más."
+  },
+  {
+    "id": "resident-evil-hora-cero",
+    "titulo": "Resident Evil: Hora Cero",
+    "anio": 2026,
+    "fecha": "2026-09-17",
+    "duracion": "90 min",
+    "generos": ["Terror", "Acción"],
+    "puntaje": 3.0,
+    "destacada": false,
+    "etiqueta": "ESTRENO",
+    "plataformas": ["Cines"],
+    "resumen": "Reinicio de Zach Cregger con estructura de videojuego y un repartidor como protagonista. Cumple como entretenimiento palomero, pero el ritmo lento del primer tramo y el exceso de comedia matan el terror.",
+    "poster": "imgs/resenias/residentevilhoracero.jpg",
+    "posterFallback": {
+      "linea1": "Resident Evil:",
+      "linea2": "Hora Cero"
+    },
+    "letterboxd": "https://letterboxd.com/film/resident-evil-2026",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt35538033/",
+      "rating": "7.9"
+    },
+    "lead": "Cumple como entretenimiento, pero hasta ahí. Estructura interesante de videojuego, body horror y un protagonista que evoluciona, aunque el ritmo y la comedia la dejan en simple película palomera.",
+    "contenido": [
+      "Tanto Barbarian como Weapons las tengo con 3 de 5 estrellas, así que con Resident Evil: Hora Cero me pasa exactamente lo mismo: cumple como entretenimiento, pero hasta ahí. No me parece ni una mala película ni una gran película; simplemente es una película palomera.",
+      "Tampoco soy fan de los videojuegos porque nunca los he jugado. Lo que sí conozco son las películas de Resident Evil, desde las de Milla Jovovich hasta Welcome to Raccoon City, y sinceramente ninguna me ha parecido particularmente buena. Por eso no voy a verla como fan de los videojuegos, sino simplemente como una película de terror y entretenimiento.",
+      "Y la idea de esta sí me parece interesante, porque durante buena parte de la película se siente como si estuviéramos jugando un videojuego. Tenemos a un protagonista prácticamente solo, comenzamos en un punto A y tenemos que llegar al punto B, mientras vamos descubriendo el escenario, los peligros y lo que está pasando. Incluso el hecho de tener a un simple repartidor como protagonista y verlo aprender poco a poco a sobrevivir funciona bastante bien.",
+      "El problema es que aproximadamente una hora de la película consiste en llegar al hospital y durante ese trayecto pasan muy pocas cosas realmente interesantes. Está lo del perro, la señora y algunas situaciones de body horror, pero todo ocurre con un ritmo tan lento que llega a desesperar. Y cuando por fin llega al hospital, ahí sí sentí que la película se ponía más interesante, porque vemos cómo el protagonista empieza a adaptarse y a convertirse, poco a poco, en alguien capaz de sobrevivir.",
+      "Y luego está la comedia. Para mí, aquí es donde más pierde la película. Hay tanto chiste y tanta situación cómica que me resultaba imposible tomar en serio lo que estaba pasando. Tenemos sangre, gritos, transformaciones y body horror, pero no hay realmente una sensación de terror. No hay sustos que me hayan sorprendido y cuando parece que podría construirse un momento de tensión, llega otro chiste y termina rompiéndolo.",
+      "Algo que sí me gustó bastante fue el doblaje en español de José Antonio Toledano. Prácticamente es como volver a escuchar a Finn diciendo groserías y malas palabras durante todo este desastre, y para mí le quedó perfecto al personaje. Esa voz le da todavía más personalidad al protagonista y hace que la experiencia en español funcione bastante bien.",
+      "La parte final sí me gustó más. Me agradó ver hasta dónde llegó el personaje después de todo lo que tuvo que aprender y también me gustó ese cierre donde vemos a lo lejos los aviones de la Guardia Nacional llegando. Aunque precisamente ahí me quedé con la sensación de que esperaba mucho más. Me hubiera gustado que la película contara más de este mundo y de lo que está sucediendo. Incluso podría haber durado dos horas o hasta dos horas y media, siempre y cuando hubiera utilizado ese tiempo para contar más historia y no para alargar ese trayecto inicial que se siente demasiado lento.",
+      "Resident Evil: Hora Cero es una película que tiene una propuesta interesante, bastante sangre, body horror y una estructura que recuerda mucho a un videojuego, pero para mí se queda corta por su ritmo y porque la comedia termina destruyendo cualquier intento de terror. No me arrepiento de haberla visto, pero tampoco salí pensando que acababa de ver algo extraordinario. Es, simplemente, una palomera seca."
+    ],
+    "cita": "Es, simplemente, una palomera seca.",
+    "veredicto": "Propuesta interesante con estructura de videojuego y buen body horror, pero el ritmo lento y el exceso de comedia matan el terror. Cumple como entretenimiento, nada más."
   }
 ]

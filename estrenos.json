@@ -30,8 +30,8 @@
   {
     "id": "transformers",
     "titulo": "Transformers: La película",
-    "tipo": "preventa",
-    "estadoCartelera": "preventa",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
     "fecha": "2026-09-17",
     "fechaTexto": "Jueves 17 de Septiembre 2026",
     "poster": "imgs/estrenos/transformers.jpg",
@@ -57,7 +57,7 @@
     "fecha": "2026-09-17",
     "fechaTexto": "Miércoles 16 de Septiembre 2026",
     "poster": "imgs/estrenos/one.jpg",
-    "cines": ["Cinemex", "Cinepolis"],
+    "cines": ["Cinemex", "Cinepolis", "MovieCenter"],
     "nota": "Japón"
   },
   {
@@ -118,23 +118,19 @@
   {
     "id": "zoe",
     "titulo": "ZOÉ: Memorex + Rexsexex Y Más",
-    "tipo": "preventa",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
     "fecha": "2026-09-17",
     "fechaTexto": "Jueves 17 de Septiembre del 2026",
     "poster": "imgs/estrenos/zoe.jpg",
     "cines": ["Cinemex"],
-    "links": [
-      {
-        "cine": "Cinemex",
-        "url": "https://cinemex.com/pelicula/72507/zoE-memorex-rexsexex-y-mas"
-      }
-    ],
     "nota": "Proximamente"
   },
   {
     "id": "pulp",
     "titulo": "PULP: ¿Qué harías por una canción más?",
     "tipo": "preventa",
+    "estadoCartelera": "preventa",
     "fecha": "2026-09-24",
     "fechaTexto": "Jueves 24 de Septiembre del 2026",
     "poster": "imgs/estrenos/pulp.jpg",
@@ -190,12 +186,6 @@
     "fechaTexto": "Miércoles 16 de Septiembre del 2026",
     "poster": "imgs/estrenos/madre.jpg",
     "cines": ["Cinepolis"],
-    "links": [
-      {
-        "cine": "Cinepolis",
-        "url": "https://www.cinepolis.com"
-      }
-    ],
     "nota": "Proximamente"
   },
   {
@@ -243,7 +233,7 @@
     "id": "puella",
     "titulo": "Puella Magi Madoka Magica: La Rebelión",
     "tipo": "estreno",
-    "estadoCartelera": "cartelera",
+    "estadoCartelera": "fuera",
     "fecha": "2026-09-03",
     "fechaTexto": "Jueves 3 de Septiembre del 2026",
     "poster": "imgs/estrenos/puella3.jpg",
@@ -313,7 +303,7 @@
     "id": "ocho",
     "titulo": "Día Ocho",
     "tipo": "estreno",
-    "estadoCartelera": "estreno",
+    "estadoCartelera": "cartelera",
     "fecha": "2026-09-10",
     "fechaTexto": "Jueves 10 de Septiembre del 2026",
     "poster": "imgs/estrenos/ocho.jpg",
@@ -324,18 +314,18 @@
     "id": "cars",
     "titulo": "Cars (20° Aniversario)",
     "tipo": "estreno",
-    "estadoCartelera": "estreno",
+    "estadoCartelera": "cartelera",
     "fecha": "2026-09-10",
     "fechaTexto": "Jueves 10 de Septiembre del 2026",
     "poster": "imgs/estrenos/cars.jpg",
-    "cines": ["Cinepolis", "Cinemex"],
+    "cines": ["Cinepolis", "Cinemex", "MovieCenter"],
     "nota": "Estados Unidos"
   },
   {
     "id": "vecino",
     "titulo": "Mi Vecino Totoro",
     "tipo": "estreno",
-    "estadoCartelera": "estreno",
+    "estadoCartelera": "cartelera",
     "fecha": "2026-09-10",
     "fechaTexto": "Jueves 10 de Septiembre del 2026",
     "poster": "imgs/estrenos/vecino.jpg",
@@ -346,7 +336,7 @@
     "id": "akira",
     "titulo": "AKIRA 4K",
     "tipo": "estreno",
-    "estadoCartelera": "estreno",
+    "estadoCartelera": "cartelera",
     "fecha": "2026-09-10",
     "fechaTexto": "Jueves 10 de Septiembre del 2026",
     "poster": "imgs/estrenos/akira.jpg",
@@ -427,7 +417,7 @@
     "fecha": "2026-09-03",
     "fechaTexto": "Jueves 3 de Septiembre del 2026",
     "poster": "imgs/estrenos/zonacero.jpg",
-    "cines": ["Cinepolis", "Cinemex"],
+    "cines": ["Cinepolis", "Cinemex", "MovieCenter"],
     "links": [
       {
         "cine": "Cinemex",
@@ -448,24 +438,14 @@
     "fecha": "2026-09-03",
     "fechaTexto": "Jueves 3 de Septiembre del 2026",
     "poster": "imgs/estrenos/gungo.jpg",
-    "cines": ["Cinepolis", "Cinemex"],
-    "links": [
-      {
-        "cine": "Cinemex",
-        "url": "https://cinemex.com/proximamente/4460/gungo-y-los-juegos-cavernicolas"
-      },
-      {
-        "cine": "Cinepolis",
-        "url": "https://www.cinepolis.com"
-      }
-    ],
+    "cines": ["Cinepolis", "Cinemex", "MovieCenter"],
     "nota": "México"
   },
   {
     "id": "icecream",
     "titulo": "El Heladero Dulce Sabor a Muerte",
     "tipo": "estreno",
-    "estadoCartelera": "cartelera",
+    "estadoCartelera": "fuera",
     "fecha": "2026-09-03",
     "fechaTexto": "Jueves 3 de Septiembre del 2026",
     "poster": "imgs/estrenos/ice.jpg",
@@ -490,24 +470,14 @@
     "fecha": "2026-09-03",
     "fechaTexto": "Jueves 3 de Septiembre del 2026",
     "poster": "imgs/estrenos/rapidos.jpg",
-    "cines": ["Cinepolis", "Cinemex"],
-    "links": [
-      {
-        "cine": "Cinemex",
-        "url": "https://cinemex.com/proximamente/4529/rapido-y-furioso-25-aniversario"
-      },
-      {
-        "cine": "Cinepolis",
-        "url": "https://www.cinepolis.com"
-      }
-    ],
+    "cines": ["Cinepolis", "Cinemex", "MovieCenter"],
     "nota": "Estados Unidos"
   },
   {
     "id": "idiotas",
     "titulo": "Idiotas",
     "tipo": "estreno",
-    "estadoCartelera": "cartelera",
+    "estadoCartelera": "fuera",
     "fecha": "2026-09-03",
     "fechaTexto": "Jueves 3 de Septiembre del 2026",
     "poster": "imgs/estrenos/ifiotas.jpg",
@@ -528,7 +498,7 @@
     "id": "desaire",
     "titulo": "El Desaire",
     "tipo": "estreno",
-    "estadoCartelera": "cartelera",
+    "estadoCartelera": "fuera",
     "fecha": "2026-09-03",
     "fechaTexto": "Jueves 3 de Septiembre del 2026",
     "poster": "imgs/estrenos/desaire.jpg",
@@ -566,7 +536,7 @@
     "id": "rebelion",
     "titulo": "Rebelion en la Granja",
     "tipo": "estreno",
-    "estadoCartelera": "cartelera",
+    "estadoCartelera": "fuera",
     "fecha": "2026-09-03",
     "fechaTexto": "Jueves 3 de Septiembre 2026",
     "poster": "imgs/estrenos/granja.jpg",
@@ -577,7 +547,7 @@
     "id": "oasis",
     "titulo": "Oasis: Don't Look Back In Anger",
     "tipo": "estreno",
-    "estadoCartelera": "estreno",
+    "estadoCartelera": "cartelera",
     "fecha": "2026-09-10",
     "fechaTexto": "Jueves 10 de Septiembre 2026",
     "poster": "imgs/estrenos/reseñas.jpg",
@@ -603,40 +573,40 @@
     "fecha": "2026-09-16",
     "fechaTexto": "Miércoles 16 de Septiembre 2026",
     "poster": "imgs/estrenos/resident.jpg",
-    "cines": ["Cinemex", "Cinepolis"],
+    "cines": ["Cinemex", "Cinepolis", "MovieCenter"],
     "nota": "Estados Unidos"
   },
   {
     "id": "hechizo",
     "titulo": "HECHIZO DE AMOR: LA MAGIA CONTINÚA",
     "tipo": "estreno",
-    "estadoCartelera": "estreno",
+    "estadoCartelera": "cartelera",
     "fecha": "2026-09-10",
     "fechaTexto": "Jueves 10 de Septiembre 2026",
     "poster": "imgs/estrenos/amor.jpg",
-    "cines": ["Cinemex", "Cinepolis"],
+    "cines": ["Cinemex", "Cinepolis", "MovieCenter"],
     "nota": "Estados Unidos"
   },
   {
     "id": "izquierdo",
     "titulo": "El club del pie izquierdo",
     "tipo": "estreno",
-    "estadoCartelera": "estreno",
+    "estadoCartelera": "cartelera",
     "fecha": "2026-09-10",
     "fechaTexto": "Jueves 10 de Septiembre 2026",
     "poster": "imgs/estrenos/izquierdo.jpg",
-    "cines": ["Cinemex", "Cinepolis"],
+    "cines": ["Cinemex", "Cinepolis", "MovieCenter"],
     "nota": "Estados Unidos"
   },
   {
     "id": "evelyn",
     "titulo": "La Maldición De Evelyn",
     "tipo": "estreno",
-    "estadoCartelera": "estreno",
+    "estadoCartelera": "cartelera",
     "fecha": "2026-09-10",
     "fechaTexto": "Jueves 10 de Septiembre 2026",
     "poster": "imgs/estrenos/evelyn.jpg",
-    "cines": ["Cinemex"],
+    "cines": ["Cinemex", "MovieCenter"],
     "nota": "Estados Unidos"
   },
   {
@@ -746,7 +716,7 @@
     "fecha": "2026-09-16",
     "fechaTexto": "Miércoles 16 de Septiembre 2026",
     "poster": "imgs/estrenos/isla.jpg",
-    "cines": ["Cinemex", "Cinepolis"],
+    "cines": ["Cinemex", "Cinepolis", "MovieCenter"],
     "nota": "Estados Unidos"
   },
   {
@@ -757,7 +727,7 @@
     "fecha": "2026-09-16",
     "fechaTexto": "Miércoles 16 de Septiembre 2026",
     "poster": "imgs/estrenos/precio.jpg",
-    "cines": ["Cinemex", "Cinepolis"],
+    "cines": ["Cinemex", "Cinepolis", "MovieCenter"],
     "nota": "Estados Unidos"
   },
   {
