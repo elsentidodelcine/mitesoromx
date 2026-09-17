@@ -500,8 +500,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     }).join('');
 
     box.innerHTML = `
-      box.innerHTML = `
-        ${ganador ? `...` : ''}
         <div class="table-block">
           <h3>...</h3>
           <div class="table-scroll">
