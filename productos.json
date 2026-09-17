@@ -1,10 +1,10 @@
 [
 
-  { "nombre": "Preventa Palomera Snoopy Cinemex", "categoria": "Infantil", "precio": 720, "imagen": "imgs/snoopy.jpg" ,"badge": "preventa", "stock": 1},
-  { "nombre": "Preventa Palomera La Isla Cinepolis", "categoria": "Infantil", "precio": 520, "imagen": "imgs/isla.jpg" ,"badge": "preventa", "stock": 1},
-  { "nombre": "Preventa Palomera Rapido y Furioso Cinemex", "categoria": "Marvel", "precio": 790, "imagen": "imgs/rapido100.jpg" ,"badge": "preventa", "stock": 1},
-  { "nombre": "Vaso 100 Años Cocacola Cinemex", "categoria": "Marvel", "precio": 360, "imagen": "imgs/coca100.jpg" ,"badge": "preventa", "stock": 1},
-  { "nombre": "Preventa Palomera Iron Man Encore Cinepolis", "categoria": "Marvel", "precio": 899, "imagen": "imgs/encore.jpg" ,"badge": "preventa", "stock": 1},
+  { "nombre": "Preventa Palomera Snoopy Cinemex", "categoria": "Infantil", "precio": 720, "imagen": "imgs/snoopy.jpg" ,"badge": "preventa", "stock": 3},
+  { "nombre": "Preventa Palomera La Isla Cinepolis", "categoria": "Infantil", "precio": 520, "imagen": "imgs/isla.jpg" ,"badge": "preventa", "stock": 3},
+  { "nombre": "Preventa Palomera Rapido y Furioso Cinemex", "categoria": "Marvel", "precio": 790, "imagen": "imgs/rapido100.jpg" ,"badge": "preventa", "stock": 3},
+  { "nombre": "Vaso 100 Años Cocacola Cinemex", "categoria": "Marvel", "precio": 360, "imagen": "imgs/coca100.jpg" ,"badge": "preventa", "stock": 3},
+  { "nombre": "Preventa Palomera Iron Man Encore Cinepolis", "categoria": "Marvel", "precio": 899, "imagen": "imgs/encore.jpg" ,"badge": "preventa", "stock": 3},
 
 
   { "nombre": "4 Figuras Looney Toons", "categoria": "Infantil", "precio": 160, "imagen": "imgs/nuevo1.jpg" ,"badge": "nuevo", "stock": 1},

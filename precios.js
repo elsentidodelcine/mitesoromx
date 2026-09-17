@@ -396,144 +396,157 @@ document.addEventListener('DOMContentLoaded', async () => {
       .filter(c => filtroCat === 'todos' || c.categoria === filtroCat);
   }
 
-  function renderComparativa(ciudadKey) {
-    const box = document.getElementById('comparativa-container');
-    if (!box) return;
+ function renderComparativa(ciudadKey) {
+   const box = document.getElementById('comparativa-container');
+   if (!box) return;
 
-    const ciudad = CIUDADES[ciudadKey];
-    if (!ciudad) {
-      box.innerHTML = `<div class="error-state">Ciudad no configurada.</div>`;
-      return;
-    }
+   const ciudad = CIUDADES[ciudadKey];
+   if (!ciudad) {
+     box.innerHTML = `<div class="error-state">Ciudad no configurada.</div>`;
+     return;
+   }
 
-    let lista = flatComplejos().filter(c => ciudad.complejos.includes(c.id));
-    if (filtroCat !== 'todos') lista = lista.filter(c => c.categoria === filtroCat);
+   let lista = flatComplejos().filter(c => ciudad.complejos.includes(c.id));
+   if (filtroCat !== 'todos') lista = lista.filter(c => c.categoria === filtroCat);
 
-    if (!lista.length) {
-      box.innerHTML = `<div class="error-state">No hay complejos para esta ciudad / filtro.</div>`;
-      return;
-    }
+   if (!lista.length) {
+     box.innerHTML = `
+       <div class="empty-state-box">
+         <p>No hay datos suficientes con estos filtros.</p>
+         <p style="font-size:.85rem">Prueba cambiar a <strong>Solo boleto</strong> o quitar el filtro de categoría.</p>
+         <button type="button" class="filter-btn" id="btn-solo-boleto">Usar Solo boleto</button>
+       </div>`;
+     document.getElementById('btn-solo-boleto')?.addEventListener('click', () => {
+       const sel = document.getElementById('filtro-modo');
+       if (sel) { sel.value = 'boleto'; filtroModo = 'boleto'; }
+       refreshTools();
+     });
+     return;
+   }
 
-    if (ciudad.modo === 'cadenas') {
-      const porCadena = {};
-      lista.forEach(c => {
-        const prom = scoreConPreset(c);
-        if (prom == null) return;
-        if (!porCadena[c.cadena] || prom < porCadena[c.cadena].prom) {
-          porCadena[c.cadena] = { complejo: c, prom };
-        }
-      });
-      const filas = Object.values(porCadena).sort((a, b) => a.prom - b.prom);
-     if (!lista.length) {
+   // ----- Modo León por cadena -----
+   if (ciudad.modo === 'cadenas') {
+     const porCadena = {};
+     lista.forEach(c => {
+       const prom = scoreConPreset(c);
+       if (prom == null) return;
+       if (!porCadena[c.cadena] || prom < porCadena[c.cadena].prom) {
+         porCadena[c.cadena] = { complejo: c, prom };
+       }
+     });
+     const filas = Object.values(porCadena).sort((a, b) => a.prom - b.prom);
+
+     if (!filas.length) {
        box.innerHTML = `
          <div class="empty-state-box">
            <p>No hay datos suficientes con estos filtros.</p>
-           <p style="font-size:.85rem">Prueba cambiar a <strong>Solo boleto</strong> o quitar el filtro de categoría.</p>
+           <p style="font-size:.85rem">Prueba cambiar a <strong>Solo boleto</strong>.</p>
            <button type="button" class="filter-btn" id="btn-solo-boleto">Usar Solo boleto</button>
          </div>`;
-
        document.getElementById('btn-solo-boleto')?.addEventListener('click', () => {
          const sel = document.getElementById('filtro-modo');
-         if (sel) {
-           sel.value = 'boleto';
-           filtroModo = 'boleto';
-         }
+         if (sel) { sel.value = 'boleto'; filtroModo = 'boleto'; }
          refreshTools();
        });
        return;
      }
-      const mejor = filas[0];
-      box.innerHTML = `
-        <div class="comp-winner">
-          En León, la cadena más barata es
-          <strong>${escapeHTML(mejor.complejo.nombreCadena)}</strong>
-          con <strong>$${mejor.prom}</strong> en ${escapeHTML(mejor.complejo.nombre)}.
-        </div>
-        <div class="table-block">
-          <h3><span>★</span> Mejor complejo por cadena</h3>
-          <div class="table-scroll">
-            <table class="precios-table">
-              <thead><tr><th>Cadena</th><th>Mejor complejo</th><th>Total</th></tr></thead>
-              <tbody>
-                ${filas.map((f, i) => `
-                  <tr class="${i === 0 ? 'mejor' : ''}">
-                    <td>${escapeHTML(f.complejo.nombreCadena)}</td>
-                    <td>${escapeHTML(f.complejo.nombre)}</td>
-                    <td class="precio">$${f.prom}</td>
-                  </tr>`).join('')}
-              </tbody>
-            </table>
-          </div>
-        </div>`;
-      return;
-    }
 
-    const diasLabel = ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'];
-    const ranked = lista
-      .map(c => ({ c, prom: scoreComplejo(c) }))
-      .filter(x => x.prom != null)
-      .sort((a, b) => a.prom - b.prom);
-    const ganador = ranked[0];
+     const mejor = filas[0];
+     box.innerHTML = `
+       <div class="comp-winner">
+         En León, la cadena más barata es
+         <strong>${escapeHTML(mejor.complejo.nombreCadena)}</strong>
+         con <strong>$${mejor.prom}</strong> en ${escapeHTML(mejor.complejo.nombre)}.
+       </div>
+       <div class="table-block">
+         <h3><span>★</span> Mejor complejo por cadena</h3>
+         <div class="table-scroll">
+           <table class="precios-table">
+             <thead><tr><th>Cadena</th><th>Mejor complejo</th><th>Total</th></tr></thead>
+             <tbody>
+               ${filas.map((f, i) => `
+                 <tr class="${i === 0 ? 'mejor' : ''}">
+                   <td>${escapeHTML(f.complejo.nombreCadena)}</td>
+                   <td>${escapeHTML(f.complejo.nombre)}</td>
+                   <td class="precio">$${f.prom}</td>
+                 </tr>`).join('')}
+             </tbody>
+           </table>
+         </div>
+       </div>
+       <div style="text-align:center;padding:12px">
+         <button type="button" class="btn-export" id="btn-export-comp">Exportar imagen</button>
+       </div>`;
+     document.getElementById('btn-export-comp')?.addEventListener('click', exportarComparativa);
+     return;
+   }
 
-    const filas = lista.map(c => {
-      const pal = getSnackGrande(c, /palomitas/i);
-      const ref = getSnackGrande(c, /refresco/i);
-      const prom = scoreConPreset(c);
-      const esMejor = ganador && c.id === ganador.c.id;
-      return `
-        <tr class="${esMejor ? 'mejor' : ''}">
-          <td>
-            <strong>${escapeHTML(c.nombre)}</strong><br>
-            <span style="color:var(--muted-2);font-size:.72rem;">
-              ${escapeHTML(c.nombreCadena)}${c.categoria === 'premium' ? ' · VIP/Platino' : ''}
-            </span>
-          </td>
-          <td class="precio">${fmt(precioBoleto(c, 'viernes', { club: usarClub }))}</td>
-          <td class="precio">${fmt(pal)}</td>
-          <td class="precio">${fmt(ref)}</td>
-          ${DIAS.map(d => {
-            const t = costoPersona(c, d);
-            return `<td class="${t == null ? 'na' : 'precio'}">${t == null ? '—' : '$' + t}</td>`;
-          }).join('')}
-          <td class="precio"><strong>${prom == null ? '—' : '$' + prom}</strong></td>
-        </tr>`;
-    }).join('');
+   // ----- Comparativa normal -----
+   const diasLabel = ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'];
+   const ranked = lista
+     .map(c => ({ c, prom: scoreConPreset(c) }))
+     .filter(x => x.prom != null)
+     .sort((a, b) => a.prom - b.prom);
+   const ganador = ranked[0];
 
-    box.innerHTML = `
-        <div class="table-block">
-          <h3>...</h3>
-          <div class="table-scroll">
-            <table>...</table>
-          </div>
-          <p style="padding:12px 18px;...">...</p>
-        </div>
-        <div style="text-align:center;padding:12px">
-          <button type="button" class="btn-export" id="btn-export-comp">Exportar imagen</button>
-        </div>`;
+   const filas = lista.map(c => {
+     const pal = getSnackGrande(c, /palomitas/i);
+     const ref = getSnackGrande(c, /refresco/i);
+     const prom = scoreConPreset(c);
+     const esMejor = ganador && c.id === ganador.c.id;
+     return `
+       <tr class="${esMejor ? 'mejor' : ''}">
+         <td>
+           <strong>${escapeHTML(c.nombre)}</strong><br>
+           <span style="color:var(--muted-2);font-size:.72rem;">
+             ${escapeHTML(c.nombreCadena)}${c.categoria === 'premium' ? ' · VIP/Platino' : ''}
+           </span>
+         </td>
+         <td class="precio">${fmt(precioBoleto(c, 'viernes', { club: usarClub }))}</td>
+         <td class="precio">${fmt(pal)}</td>
+         <td class="precio">${fmt(ref)}</td>
+         ${DIAS.map(d => {
+           const t = costoPersona(c, d);
+           return `<td class="${t == null ? 'na' : 'precio'}">${t == null ? '—' : '$' + t}</td>`;
+         }).join('')}
+         <td class="precio"><strong>${prom == null ? '—' : '$' + prom}</strong></td>
+       </tr>`;
+   }).join('');
 
-      document.getElementById('btn-export-comp')?.addEventListener('click', exportarComparativa);
-      <div class="table-block">
-        <h3><span>★</span> Comparativa de gasto adulto</h3>
-        <div class="table-scroll">
-          <table class="precios-table">
-            <thead>
-              <tr>
-                <th>Complejo</th>
-                <th>Boleto*</th>
-                <th>Pal G</th>
-                <th>Ref G</th>
-                ${diasLabel.map(d => `<th>${d}</th>`).join('')}
-                <th>Score</th>
-              </tr>
-            </thead>
-            <tbody>${filas}</tbody>
-          </table>
-        </div>
-        <p style="padding:12px 18px;color:var(--muted);font-size:.78rem;margin:0;">
-          * Viernes (o membresía). Si ves muchos “—”, cambia el modo a “Solo boleto”.
-        </p>
-      </div>`;
-  }
+   box.innerHTML = `
+     ${ganador ? `
+       <div class="comp-winner">
+         En <strong>${escapeHTML(ciudad.nombre)}</strong> conviene más
+         <strong>${escapeHTML(ganador.c.nombreCadena)} · ${escapeHTML(ganador.c.nombre)}</strong>
+         con <strong>$${ganador.prom}</strong>.
+       </div>` : ''}
+     <div class="table-block">
+       <h3><span>★</span> Comparativa de gasto adulto</h3>
+       <div class="table-scroll">
+         <table class="precios-table">
+           <thead>
+             <tr>
+               <th>Complejo</th>
+               <th>Boleto*</th>
+               <th>Pal G</th>
+               <th>Ref G</th>
+               ${diasLabel.map(d => `<th>${d}</th>`).join('')}
+               <th>Score</th>
+             </tr>
+           </thead>
+           <tbody>${filas}</tbody>
+         </table>
+       </div>
+       <p style="padding:12px 18px;color:var(--muted);font-size:.78rem;margin:0;">
+         * Viernes (o membresía). Si ves muchos “—”, cambia el modo a “Solo boleto”.
+       </p>
+     </div>
+     <div style="text-align:center;padding:12px">
+       <button type="button" class="btn-export" id="btn-export-comp">Exportar imagen</button>
+     </div>`;
+
+   document.getElementById('btn-export-comp')?.addEventListener('click', exportarComparativa);
+ }
 
   function renderTipYTop3() {
     const tip = document.getElementById('tip-mejor-dia');
