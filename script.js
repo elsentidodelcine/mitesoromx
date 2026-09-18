@@ -71,12 +71,17 @@ function calcularTotalesCarrito() {
   });
 
   let descuento = 0;
-  if (cuponAplicado) {
+
+  // Preventas: ningún cupón aplica
+  if (tienePreventa) {
+    cuponAplicado = null;
+  } else if (cuponAplicado) {
     if (cuponAplicado.tipo === "fijo") {
       descuento = Math.min(cuponAplicado.descuento, subtotal);
     } else if (cuponAplicado.tipo === "porcentaje") {
       descuento = Math.round(subtotal * (cuponAplicado.descuento / 100));
     }
+    // envio_gratis ya se maneja más abajo; si hay preventa, cuponAplicado ya es null
   }
 
   const subtotalConDescuento = Math.max(0, subtotal - descuento);
@@ -2011,12 +2016,28 @@ function detectarFranquicia(nombre) {
 }
 
 function aplicarCupon() {
-  const input = document.getElementById("inputCupon");
-  const msg = document.getElementById("cuponMsg");
-  if (!input || !msg) return;
+    const input = document.getElementById("inputCupon");
+    const msg = document.getElementById("cuponMsg");
+    if (!input || !msg) return;
 
-  const codigo = (input.value || "").trim().toUpperCase();
-  const cupon = CUPONES[codigo];
+    const codigo = (input.value || "").trim().toUpperCase();
+
+    // Si hay preventa en el carrito → no permitir cupón
+    const hayPreventa = carrito.some((item) => {
+      const prod = productosGlobal.find((p) => p.nombre === item.nombre) || item;
+      return esPreventa(prod);
+    });
+
+    if (hayPreventa) {
+        cuponAplicado = null;
+        msg.hidden = false;
+        msg.textContent = "Los cupones no aplican en preventas";
+        msg.className = "cupon-msg error";
+        actualizarCarritoUI();
+        return;
+      }
+
+      const cupon = CUPONES[codigo];
 
   if (!cupon) {
     cuponAplicado = null;
