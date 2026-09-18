@@ -6,6 +6,12 @@
   { "nombre": "Vaso 100 Años Cocacola Cinemex", "categoria": "Marvel", "precio": 360, "imagen": "imgs/coca100.jpg" ,"badge": "preventa", "stock": 3},
   { "nombre": "Preventa Palomera Iron Man Encore Cinepolis", "categoria": "Marvel", "precio": 899, "imagen": "imgs/encore.jpg" ,"badge": "preventa", "stock": 3},
 
+  { "nombre": "3 Vasos Paw Patrol Dino Movie Cinepolis", "categoria": "Paw Patrol", "precio": 300, "imagen": "imgs/paw100.jpeg" ,"badge": "exclusivo", "stock": 1},
+  { "nombre": "1 Gorra The Flash Cinepolis", "categoria": "DC", "precio": 100, "imagen": "imgs/gorra1.jpeg" ,"badge": "nuevo", "stock": 1},
+  { "nombre": "1 Gorra Batman Model 1 Cinepolis", "categoria": "DC", "precio": 100, "imagen": "imgs/gorra2.jpeg" ,"badge": "nuevo", "stock": 1},
+  { "nombre": "1 Gorra Wonder Woman Cinepolis", "categoria": "DC", "precio": 100, "imagen": "imgs/gorra3.jpeg" ,"badge": "nuevo", "stock": 1},
+  { "nombre": "1 Gorra Batman Model 2 Cinepolis", "categoria": "DC", "precio": 100, "imagen": "imgs/gorra4.jpeg" ,"badge": "nuevo", "stock": 1},
+  { "nombre": "1 Gorra Batman Model 3 Cinepolis", "categoria": "DC", "precio": 100, "imagen": "imgs/gorra5.jpeg" ,"badge": "nuevo", "stock": 1},
 
   { "nombre": "4 Figuras Looney Toons", "categoria": "Infantil", "precio": 160, "imagen": "imgs/nuevo1.jpg" ,"badge": "nuevo", "stock": 1},
   { "nombre": "Postal SpiderMan 3D", "categoria": "SpiderMan", "precio": 100, "imagen": "imgs/nuevo2.jpg" ,"badge": "nuevo", "stock": 1},
@@ -18,13 +24,13 @@
   { "nombre": "Postal Juan Gabriel", "categoria": "Musica", "precio": 150, "imagen": "imgs/nuevo9.jpg" ,"badge": "nuevo", "stock": 1},
 
   { "nombre": "Vaso Casa Gryffindor Harry Potter", "categoria": "Harry Potter", "precio": 465, "imagen": "imgs/harry3.jpg" ,"badge": "exclusivo", "stock": 0},
-  { "nombre": "Vaso Casa Ravenclaw  Harry Potter", "categoria": "Harry Potter", "precio": 500, "imagen": "imgs/hp100.jpeg" ,"badge": "exclusivo", "stock": 1},
+  { "nombre": "Vaso Casa Ravenclaw  Harry Potter", "categoria": "Harry Potter", "precio": 500, "imagen": "imgs/hp100.jpeg" ,"badge": "exclusivo", "stock": 0},
   { "nombre": "Vaso Casa Slytherin  Harry Potter", "categoria": "Harry Potter", "precio": 500, "imagen": "imgs/hp101.jpeg" ,"badge": "exclusivo", "stock": 1},
   { "nombre": "2 Postales Conmemorativas Harry Potter", "categoria": "Harry Potter", "precio": 300, "imagen": "imgs/hp102.jpeg" ,"badge": "exclusivo", "stock": 1},
   { "nombre": "Vaso Casa Hufflepuff Harry Potter", "categoria": "Harry Potter", "precio": 465, "imagen": "imgs/harry4.jpg" ,"badge": "exclusivo", "stock": 0},
   { "nombre": "Palomera Sombrero Harry Potter", "categoria": "Harry Potter", "precio": 959, "imagen": "imgs/harry5.jpg" ,"badge": "exclusivo", "stock": 0},
 
-  { "nombre": "4 Vasos Paw Patrol Dino Movie Cinepolis", "categoria": "Paw Patrol", "precio": 400, "imagen": "imgs/paw100.jpeg" ,"badge": "exclusivo", "stock": 1},
+
 
 
   { "nombre": "Album de Estampas Copa America Panini Model1", "categoria": "Album Estampas", "precio": 50, "imagen": "imgs/halbum1.png" ,"badge": "ultimo", "stock": 1},
