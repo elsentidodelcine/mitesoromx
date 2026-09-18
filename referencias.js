@@ -162,7 +162,7 @@
   ];
 
   const POR_PAGINA = 24;
-  const PEDIDOS_TOTAL = 163; // número del contador animado
+  const PEDIDOS_TOTAL = 182; // número del contador animado
   let paginaActual = 1;
   let indiceLightbox = 0;
 
