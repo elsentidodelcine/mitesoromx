@@ -987,7 +987,7 @@ function actualizarCarritoUI() {
         <span>${t.costoEnvio === 0 ? "<strong class='text-success'>GRATIS</strong>" : `$${t.costoEnvio.toLocaleString("es-MX")} MXN`}</span>
       </div>
       ${t.tienePreventa ? `
-        <p class="cart-summary-note">* Las preventas no aplican para envío gratis</p>
+        <p class="cart-summary-note">* En preventas no aplican envío gratis ni cupones</p>
       ` : ""}
       <div class="cart-summary-row cart-summary-total">
         <span>Total</span>

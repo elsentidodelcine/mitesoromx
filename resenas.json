@@ -1024,5 +1024,38 @@
     ],
     "cita": "Es, simplemente, una palomera seca.",
     "veredicto": "Propuesta interesante con estructura de videojuego y buen body horror, pero el ritmo lento y el exceso de comedia matan el terror. Cumple como entretenimiento, nada más."
+  },
+  {
+    "id": "one-piece-la-pelicula",
+    "titulo": "One Piece: La Película",
+    "anio": 2000,
+    "fecha": "2026-09-17",
+    "duracion": "51 min",
+    "generos": ["Animación", "Aventuras", "Acción"],
+    "puntaje": 1.5,
+    "destacada": false,
+    "etiqueta": "",
+    "plataformas": ["Cines"],
+    "resumen": "Primera película de One Piece. Aventura sencilla y visualmente floja 26 años después. Mensaje básico y desenlace que no está a la altura de lo que plantea.",
+    "poster": "imgs/resenias/one.jpg",
+    "posterFallback": {
+      "linea1": "One Piece:",
+      "linea2": "La Película"
+    },
+    "letterboxd": "https://letterboxd.com/film/one-piece-the-movie",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt0814243/",
+      "rating": "6.8"
+    },
+    "lead": "Aventura básica de hace 26 años que no envejeció bien. Animación sencilla, historia simple y un mensaje demasiado obvio. Solo para fans nostálgicos.",
+    "contenido": [
+      "No soy fan de One Piece y realmente solo he visto dos películas de la franquicia. Esta es la segunda, así que tampoco tengo ese cariño o conocimiento de la historia que seguramente tienen muchos fans. Pero incluso tomando en cuenta que estamos hablando de una película del año 2000, y que han pasado 26 años desde su estreno, verla actualmente en el cine hace todavía más evidente lo sencilla que es.",
+      "La animación para mí no envejeció muy bien. Es bastante sencilla, la imagen no se ve especialmente bonita y visualmente no encontré algo que me llamara demasiado la atención. Entiendo perfectamente que es una producción de hace 26 años y que hay que verla dentro de su contexto, pero eso no cambia que, al menos para mí, la experiencia visual fue bastante floja.",
+      "Y enfocándome en la historia, también me pareció demasiado simple y hasta barata. Nos presentan al famoso pirata de oro Woonan como si estuviéramos frente a algo enorme, como si el tesoro fuera a representar una aventura gigantesca, pero cuando finalmente llegamos al desenlace me quedé pensando: ¿tanto para esto? Todo termina sintiéndose muy X para todo lo que nos habían planteado.",
+      "Sí entiendo el mensaje que intenta dejar la película: el oro no es necesariamente lo importante, sino lo que haces para conseguirlo y el significado que puede tener aquello que encuentras en el camino. El problema es que me parece un mensaje demasiado sencillo y que la película tampoco hace demasiado para desarrollarlo.",
+      "Al final, One Piece: La Película me pareció una aventura bastante básica que no consiguió engancharme. Sé que es una película de hace 26 años y seguramente para los fans más veteranos tenga un valor nostálgico importante, pero viéndola simplemente como película, no encontré mucho que rescatar."
+    ],
+    "cita": "¿Tanto para esto?",
+    "veredicto": "Aventura básica y visualmente floja. Mensaje sencillo y desenlace que no está a la altura. Solo valor nostálgico para fans. Brujería oscura."
   }
 ]
