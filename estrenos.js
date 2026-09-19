@@ -103,66 +103,125 @@ function renderCalendario(listaCompleta) {
     html += '<span class="cal-dow">' + dow + '</span>';
     html += '</header><ul>';
 
-    items.forEach(function (it) {
-      const esPreventa = String(it.tipo || '').toLowerCase() === 'preventa';
-      const liClass = esPreventa ? 'is-preventa' : 'is-estreno';
-      const labelTipo = esPreventa
-        ? 'Preventa'
-        : (it.estadoCartelera === 'estreno' ? 'Estreno' : 'Cartelera');
-      const id = it.id || '';
-      const poster = it.poster
-        ? '<img src="' + escapeHTML(it.poster) + '" alt="" loading="lazy">'
-        : '';
+       items.forEach(function (it) {
+         var estado = (it.estadoCartelera || '').toLowerCase();
+         var tipo = String(it.tipo || '').toLowerCase();
+         var fuera = estado === 'fuera' || it.enCartelera === false;
 
-      html += '<li class="' + liClass + '" data-estreno-id="' + escapeHTML(id) + '" role="button" tabindex="0" title="Ver en la lista">';
-      html += poster;
-      html += '<div><strong>' + escapeHTML(it.titulo || 'Sin título') + '</strong>';
-      html += '<span>' + labelTipo + '</span></div></li>';
-    });
+         var liClass = 'is-estreno';
+         var labelTipo = 'Estreno';
+
+         if (fuera) {
+           liClass = 'is-fuera';
+           labelTipo = 'Fuera de cartelera';
+         } else if (tipo === 'preventa') {
+           liClass = 'is-preventa';
+           labelTipo = 'Preventa';
+         } else if (estado === 'cartelera') {
+           liClass = 'is-cartelera';
+           labelTipo = 'En cartelera';
+         } else if (estado === 'estreno' || tipo === 'estreno') {
+           liClass = 'is-estreno';
+           labelTipo = 'Estreno';
+         }
+
+         var id = it.id || '';
+         var poster = it.poster
+           ? '<img src="' + escapeHTML(it.poster) + '" alt="" loading="lazy">'
+           : '';
+
+         html += '<li class="' + liClass + '" data-estreno-id="' + escapeHTML(id) + '" role="button" tabindex="0" title="Ver en la lista">';
+         html += poster;
+         html += '<div><strong>' + escapeHTML(it.titulo || 'Sin título') + '</strong>';
+         html += '<span>' + labelTipo + '</span></div></li>';
+       });
 
     html += '</ul></article>';
   });
 
   grid.innerHTML = html;
 
-  grid.querySelectorAll('[data-estreno-id]').forEach(function (el) {
-    function ir() {
-      const id = el.getAttribute('data-estreno-id');
-      if (!id) return;
+    grid.querySelectorAll('[data-estreno-id]').forEach(function (el) {
+      function ir() {
+        var id = el.getAttribute('data-estreno-id');
+        if (!id) {
+          console.warn('Esta película no tiene id en estrenos.json');
+          return;
+        }
 
-      var target = document.getElementById('estreno-' + id);
-      if (target) {
-        resaltarYScroll(target);
-        return;
+        // 1) ¿Ya está visible en la lista de abajo?
+        var target = document.getElementById('estreno-' + id);
+        if (target) {
+          resaltarYScroll(target);
+          return;
+        }
+
+        // 2) Buscar el ítem en los datos
+        var item = null;
+        for (var i = 0; i < estrenos.length; i++) {
+          if (estrenos[i].id === id) {
+            item = estrenos[i];
+            break;
+          }
+        }
+        if (!item) {
+          console.warn('No se encontró id en datos:', id);
+          return;
+        }
+
+        // 3) Elegir filtro según estado (si es "fuera", hay que usar ese filtro)
+        var esFuera =
+          item.estadoCartelera === 'fuera' || item.enCartelera === false;
+
+        filtroTipo = esFuera ? 'fuera' : 'todos';
+        filtroMes = 'todos';
+        if (selectMes) selectMes.value = 'todos';
+
+        if (filters) {
+          filters.querySelectorAll('.filter-btn').forEach(function (b) {
+            b.classList.remove('active');
+          });
+          var sel = filters.querySelector(
+            esFuera ? '[data-filter="fuera"]' : '[data-filter="todos"]'
+          );
+          if (sel) sel.classList.add('active');
+        }
+
+        // 4) Armar lista y saltar a la página correcta
+        renderEstrenos(); // actualiza listaFiltrada
+
+        var idx = -1;
+        for (var j = 0; j < listaFiltrada.length; j++) {
+          if (listaFiltrada[j].id === id) {
+            idx = j;
+            break;
+          }
+        }
+
+        if (idx >= 0) {
+          paginaActual = Math.floor(idx / POR_PAGINA) + 1;
+          renderPagina();
+        }
+
+        // 5) Scroll cuando el DOM ya pintó
+        setTimeout(function () {
+          var t = document.getElementById('estreno-' + id);
+          if (t) {
+            resaltarYScroll(t);
+          } else {
+            console.warn('Card no está en el DOM:', 'estreno-' + id);
+          }
+        }, 50);
       }
 
-      filtroTipo = 'todos';
-      filtroMes = 'todos';
-      if (selectMes) selectMes.value = 'todos';
-      if (filters) {
-        filters.querySelectorAll('.filter-btn').forEach(function (b) {
-          b.classList.remove('active');
-        });
-        var btnTodos = filters.querySelector('[data-filter="todos"]');
-        if (btnTodos) btnTodos.classList.add('active');
-      }
-      paginaActual = 1;
-      renderEstrenos();
-
-      requestAnimationFrame(function () {
-        var t = document.getElementById('estreno-' + id);
-        if (t) resaltarYScroll(t);
+      el.addEventListener('click', ir);
+      el.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          ir();
+        }
       });
-    }
-
-    el.addEventListener('click', ir);
-    el.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        ir();
-      }
     });
-  });
 }
 
   // Mostrar skeleton mientras carga

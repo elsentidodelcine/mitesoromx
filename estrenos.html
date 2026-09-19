@@ -870,6 +870,20 @@ html[data-theme="light"] .cal-dia li[data-estreno-id]:hover {
   box-shadow: 0 0 0 6px rgba(201, 162, 39, 0.25);
   transition: box-shadow .3s ease, outline .3s ease;
 }
+
+.cal-dia li.is-preventa strong  { color: #c9a227 !important; }
+.cal-dia li.is-estreno strong   { color: #ff6b7a !important; }
+.cal-dia li.is-cartelera strong { color: #6b8cff !important; }
+.cal-dia li.is-fuera strong     { color: #8a8a96 !important; }
+
+.cal-dia li.is-fuera {
+  opacity: 0.45;
+  filter: grayscale(0.75);
+}
+.cal-dia li.is-fuera:hover {
+  opacity: 0.75;
+  filter: grayscale(0.3);
+}
     </style>
 
     <script>
@@ -942,7 +956,9 @@ html[data-theme="light"] .cal-dia li[data-estreno-id]:hover {
             <div class="cal-leyenda">
                 <span><i class="dot dot-semana"></i> Esta semana (jue–mié)</span>
                 <span><i class="dot dot-preventa"></i> Preventa</span>
-                <span><i class="dot dot-estreno"></i> Estreno / cartelera</span>
+                <span><i class="dot dot-estreno"></i> Estreno</span>
+                <span><i class="dot dot-cartelera"></i> Cartelera</span>
+                <span><i class="dot dot-fuera"></i> Fuera</span>
             </div>
 
             <div id="cal-grid" class="cal-grid"></div>
