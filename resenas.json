@@ -1057,5 +1057,38 @@
     ],
     "cita": "¿Tanto para esto?",
     "veredicto": "Aventura básica y visualmente floja. Mensaje sencillo y desenlace que no está a la altura. Solo valor nostálgico para fans. Brujería oscura."
+  },
+  {
+    "id": "mi-vecino-totoro",
+    "titulo": "Mi vecino Totoro",
+    "anio": 1988,
+    "fecha": "2026-09-19",
+    "duracion": "86 min",
+    "generos": ["Animación", "Fantasía", "Familiar"],
+    "puntaje": 2.5,
+    "destacada": false,
+    "etiqueta": "",
+    "plataformas": ["Cines"],
+    "resumen": "Clásico de Ghibli tranquilo y enfocado en la infancia. Animación preciosa y mucho encanto, pero Totoro tiene poco protagonismo y la tranquilidad total me dejó bastante indiferente.",
+    "poster": "imgs/resenias/vecino.jpg",
+    "posterFallback": {
+      "linea1": "Mi vecino",
+      "linea2": "Totoro"
+    },
+    "letterboxd": "https://letterboxd.com/film/my-neighbor-totoro",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt0096283/",
+      "rating": "8.1"
+    },
+    "lead": "Entiendo por qué es tan querida, pero este tipo de Ghibli tranquilo y cotidiano no termina de conectar conmigo. Bonita, pero me dejó indiferente.",
+    "contenido": [
+      "He comenzado a ver todas las películas de Studio Ghibli que van saliendo en Cinemex y con Mi vecino Totoro me vuelve a pasar algo que ya me había pasado con Kiki: Entregas a domicilio y El viaje de Chihiro: siento que este tipo de películas simplemente no son tanto para mí. Y eso que sí he disfrutado otras como El niño y la garza, La tumba de las luciérnagas, El castillo ambulante y La princesa Mononoke.",
+      "Entiendo perfectamente por qué Totoro es tan querida. Es una película tranquila, bonita y muy enfocada en la infancia, la naturaleza y la imaginación. La animación sigue siendo preciosa para tener casi 40 años, los paisajes de Japón están muy bien logrados y la música de Joe Hisaishi acompaña perfectamente ese tono relajado. Pero justamente esa tranquilidad también hizo que a mí me costara conectar con ella.",
+      "Y aquí está una de mis principales decepciones: yo esperaba que Totoro tuviera mucho más protagonismo. Al final, el personaje que da nombre a la película aparece realmente en momentos muy concretos y buena parte de la historia se concentra en las niñas y su vida cotidiana. No es necesariamente un error, porque la película claramente busca contar otra cosa, pero personalmente sentí que me vendieron una película de Totoro y terminé viendo mucho más de las niñas que del propio Totoro.",
+      "Además, si me pongo a pensar en algunas decisiones de los personajes, hay situaciones que hoy me hacen bastante ruido. La escena del baño familiar, por ejemplo, vista desde nuestra perspectiva actual en México podría resultar bastante extraña, y también está el hecho de que las niñas pasan bastante tiempo solas o con poca supervisión. Claro que estamos hablando de Japón y de otra época, así que tampoco tiene sentido juzgarlo completamente con nuestra realidad actual, pero son detalles que me hicieron cuestionar algunas situaciones dentro de la historia.",
+      "No me parece una mala película, simplemente creo que pertenece a ese tipo de Ghibli con el que no termino de conectar. Es tranquila, tierna y probablemente funciona muy bien para verla en familia o con niños, pero a mí me dejó bastante indiferente. Tiene mucho encanto y calidad, pero también me confirmó que no todo lo que hace Studio Ghibli necesariamente es para mí."
+    ],
+    "cita": "Me vendieron una película de Totoro y terminé viendo mucho más de las niñas que del propio Totoro.",
+    "veredicto": "Bonita, tranquila y con mucho encanto, pero este estilo de Ghibli cotidiano no termina de engancharme. Neutral, pero olvidable."
   }
 ]

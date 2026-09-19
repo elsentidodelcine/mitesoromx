@@ -124,7 +124,7 @@
     "fechaTexto": "Jueves 17 de Septiembre del 2026",
     "poster": "imgs/estrenos/zoe.jpg",
     "cines": ["Cinemex"],
-    "nota": "Proximamente"
+    "nota": "México"
   },
   {
     "id": "pulp",
@@ -264,7 +264,7 @@
     "estadoCartelera": "preventa",
     "fecha": "2026-09-24",
     "fechaTexto": "Jueves 24 de Septiembre del 2026",
-    "poster": "imgs/estrenos/encore.jpg",
+    "poster": "imgs/estrenos/infinity.jpg",
     "cines": ["Cinepolis", "Cinemex"],
     "nota": "Estados Unidos"
   },

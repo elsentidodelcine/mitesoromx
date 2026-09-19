@@ -987,7 +987,7 @@ function actualizarCarritoUI() {
         <span>${t.costoEnvio === 0 ? "<strong class='text-success'>GRATIS</strong>" : `$${t.costoEnvio.toLocaleString("es-MX")} MXN`}</span>
       </div>
       ${t.tienePreventa ? `
-        <p class="cart-summary-note">* En preventas no aplican envío gratis ni cupones</p>
+        <p class="cart-summary-note">* En preventas no aplica envío gratis ni cupones</p>
       ` : ""}
       <div class="cart-summary-row cart-summary-total">
         <span>Total</span>
@@ -2134,7 +2134,7 @@ function actualizarEnvioGratisBar(t) {
 
   // Solo preventas → no mostrar progreso de envío gratis
   if (t.tienePreventa) {
-    text.innerHTML = `⚠️ En preventas <strong>no aplican</strong> envío gratis ni cupones`;
+    text.innerHTML = `⚠️ En preventas <strong>no aplica</strong> envío gratis ni cupones`;
     fill.style.width = "0%";
     fill.classList.remove("completo");
     return;
