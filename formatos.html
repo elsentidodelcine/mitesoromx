@@ -4,11 +4,304 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guía de formatos | Los Brujos del Cine</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0RVV6RWHTS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-0RVV6RWHTS');
+    </script>
+    <meta name="description" content="Guía de formatos de sala: 2D, VIP, Platino, Macro XE y 3D. Qué conviene según la película y tu presupuesto.">
     <meta name="theme-color" content="#030304">
-    <link rel="icon" href="imgs/logoLB.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Guía de formatos | Los Brujos del Cine">
+    <meta property="og:description" content="2D, VIP, Macro XE o Platino: qué vale la pena pagar.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="imgs/logoLB.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="imgs/logoLB.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stylesLBDC.css">
-    <link rel="stylesheet" href="guias-extra.css">
+    <style>
+        .formatos-page { padding-bottom: 100px; }
+
+        .formatos-hero {
+          position: relative;
+          padding: 70px 0 48px;
+          text-align: center;
+          border-bottom: 1px solid var(--border);
+          overflow: hidden;
+        }
+        .formatos-hero::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background:
+            radial-gradient(ellipse 80% 60% at 50% -20%, rgba(196,30,58,.16), transparent 55%),
+            radial-gradient(ellipse 50% 40% at 85% 40%, rgba(201,162,39,.07), transparent 50%);
+          pointer-events: none;
+        }
+        .formatos-hero-inner {
+          position: relative;
+          width: min(720px, calc(100% - 48px));
+          margin: 0 auto;
+        }
+        .formatos-hero h1 {
+          font-family: 'Playfair Display', Georgia, serif;
+          font-size: clamp(2.4rem, 6vw, 3.6rem);
+          font-weight: 800;
+          line-height: 1.05;
+          letter-spacing: -.03em;
+          margin: 14px 0;
+        }
+        .formatos-hero h1 em { font-style: italic; color: var(--gold); }
+        .formatos-hero p {
+          color: var(--muted);
+          font-size: 1.05rem;
+          line-height: 1.7;
+          max-width: 540px;
+          margin: 0 auto;
+        }
+
+        .formatos-note {
+          width: min(var(--max, 1120px), calc(100% - 48px));
+          margin: 24px auto 0;
+          padding: 12px 16px;
+          border-radius: 12px;
+          border: 1px solid rgba(201,162,39,.2);
+          background: rgba(201,162,39,.06);
+          color: var(--muted);
+          font-size: .85rem;
+          text-align: center;
+        }
+
+        .formatos-grid {
+          width: min(var(--max, 1120px), calc(100% - 48px));
+          margin: 36px auto 28px;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 18px;
+        }
+        @media (max-width: 800px) {
+          .formatos-grid { grid-template-columns: 1fr; }
+        }
+
+        .formato-card {
+          position: relative;
+          background: var(--surface);
+          border: 1px solid var(--border);
+          border-radius: 18px;
+          padding: 22px 20px 20px;
+          overflow: hidden;
+          transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+          box-shadow: 0 10px 28px rgba(0,0,0,.22);
+        }
+        .formato-card::before {
+          content: "";
+          position: absolute;
+          top: 0; left: 0; right: 0;
+          height: 3px;
+          background: var(--accent, var(--gold));
+          opacity: .9;
+        }
+        .formato-card:hover {
+          transform: translateY(-4px);
+          border-color: rgba(201,162,39,.28);
+          box-shadow: 0 16px 36px rgba(0,0,0,.32);
+        }
+        .formato-card[data-id="2d"] { --accent: #7ddea0; }
+        .formato-card[data-id="macro"] { --accent: #c41e3a; }
+        .formato-card[data-id="vip"] { --accent: #c9a227; }
+        .formato-card[data-id="3d"] { --accent: #6b8cff; }
+
+        .formato-top {
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+          gap: 12px;
+          margin-bottom: 14px;
+        }
+        .formato-icon {
+          width: 48px; height: 48px;
+          border-radius: 14px;
+          display: flex; align-items: center; justify-content: center;
+          font-size: 1.45rem;
+          background: color-mix(in srgb, var(--accent) 16%, transparent);
+          border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+        }
+        .formato-badge {
+          font-size: .65rem;
+          font-weight: 700;
+          letter-spacing: .06em;
+          text-transform: uppercase;
+          padding: 5px 10px;
+          border-radius: 999px;
+          color: var(--accent);
+          border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+          background: color-mix(in srgb, var(--accent) 12%, transparent);
+          white-space: nowrap;
+        }
+        .formato-card h2 {
+          font-family: 'Playfair Display', Georgia, serif;
+          font-size: 1.35rem;
+          margin: 0 0 6px;
+          color: var(--text, #fff);
+        }
+        .formato-ideal {
+          margin: 0 0 16px;
+          font-size: .9rem;
+          color: var(--muted);
+          line-height: 1.45;
+        }
+        .formato-ideal strong { color: var(--text, #e8e8ec); }
+
+        .formato-cols {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 14px;
+          margin-bottom: 14px;
+        }
+        @media (max-width: 480px) {
+          .formato-cols { grid-template-columns: 1fr; }
+        }
+        .formato-cols h3 {
+          margin: 0 0 8px;
+          font-size: .68rem;
+          font-weight: 700;
+          letter-spacing: .08em;
+          text-transform: uppercase;
+          color: var(--accent);
+        }
+        .formato-cols ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+        }
+        .formato-cols li {
+          position: relative;
+          padding-left: 14px;
+          margin-bottom: 6px;
+          font-size: .84rem;
+          color: var(--muted);
+          line-height: 1.4;
+        }
+        .formato-cols li::before {
+          content: "";
+          position: absolute;
+          left: 0; top: .55em;
+          width: 6px; height: 6px;
+          border-radius: 50%;
+          background: var(--accent);
+          opacity: .7;
+        }
+
+        .formato-veredicto {
+          margin: 0;
+          padding: 14px 14px;
+          border-radius: 12px;
+          background: rgba(255,255,255,.03);
+          border: 1px solid var(--border);
+          font-size: .9rem;
+          line-height: 1.5;
+          color: var(--muted);
+        }
+        .formato-veredicto strong {
+          display: block;
+          color: var(--text, #fff);
+          margin-bottom: 4px;
+          font-size: .78rem;
+          letter-spacing: .04em;
+          text-transform: uppercase;
+        }
+
+        /* Decision helper */
+        .formato-decision {
+          width: min(var(--max, 1120px), calc(100% - 48px));
+          margin: 8px auto 36px;
+          padding: 22px 20px;
+          border-radius: 18px;
+          border: 1px solid rgba(201,162,39,.25);
+          background:
+            linear-gradient(135deg, rgba(201,162,39,.08), rgba(196,30,58,.06));
+        }
+        .formato-decision h2 {
+          font-family: 'Playfair Display', Georgia, serif;
+          text-align: center;
+          margin: 0 0 6px;
+          font-size: 1.35rem;
+        }
+        .formato-decision > p {
+          text-align: center;
+          color: var(--muted);
+          margin: 0 0 18px;
+          font-size: .92rem;
+        }
+        .decision-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 12px;
+        }
+        .decision-item {
+          background: var(--surface);
+          border: 1px solid var(--border);
+          border-radius: 14px;
+          padding: 14px 14px;
+          text-align: center;
+        }
+        .decision-item span {
+          display: block;
+          font-size: .75rem;
+          font-weight: 600;
+          color: var(--muted);
+          margin-bottom: 6px;
+          text-transform: uppercase;
+          letter-spacing: .05em;
+        }
+        .decision-item strong {
+          font-size: .95rem;
+          color: var(--gold);
+        }
+
+        .guia-tips {
+          width: min(720px, calc(100% - 48px));
+          margin: 0 auto 40px;
+          padding: 22px 22px;
+          border-radius: 18px;
+          border: 1px solid var(--border);
+          background: var(--surface);
+        }
+        .guia-tips h2 {
+          font-family: 'Playfair Display', Georgia, serif;
+          margin: 0 0 14px;
+          font-size: 1.25rem;
+          text-align: center;
+        }
+        .tips-list {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+        }
+        .tips-list li {
+          padding: 12px 0;
+          border-bottom: 1px solid var(--border);
+          color: var(--muted);
+          font-size: .95rem;
+          line-height: 1.5;
+        }
+        .tips-list li:last-child { border-bottom: none; }
+        .tips-list strong { color: var(--text, #e8e8ec); }
+
+        html[data-theme="light"] .formato-card,
+        html[data-theme="light"] .guia-tips,
+        html[data-theme="light"] .decision-item {
+          background: #fff;
+        }
+        html[data-theme="light"] .formato-veredicto {
+          background: rgba(0,0,0,.03);
+        }
+        html[data-theme="light"] .formatos-hero h1 { color: #121214; }
+    </style>
     <script>
         try {
           var t = localStorage.getItem('lbdc-theme');
@@ -17,27 +310,141 @@
     </script>
 </head>
 <body>
-<!-- pega tu mismo header -->
-<main class="guia-page">
-    <section class="guia-hero">
-        <div class="eyebrow">Guía práctica</div>
-        <h1>Formatos de <em>sala</em></h1>
-        <p>¿2D, VIP, Macro XE o Platino? Qué conviene según la película y tu presupuesto.</p>
+<a href="#main-content" class="skip-link">Saltar al contenido</a>
+
+<header class="site-header">
+    <div class="header-inner">
+        <a href="blog.html" class="brand-link" aria-label="Los Brujos del Cine, inicio">
+            <img src="imgs/logoLB.png" alt="Los Brujos del Cine" class="site-logo">
+            <div class="logo-text">
+                <h1>Los Brujos del Cine</h1>
+                <span>Mi Tesoro MX</span>
+            </div>
+        </a>
+        <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+            <a href="blog.html#resenas">Reseñas</a>
+            <a href="estrenos.html">Estrenos</a>
+            <a href="precios.html">Precios</a>
+            <a href="taquilla-historia.html">Taquilla</a>
+            <a href="formatos.html">Formatos</a>
+        </nav>
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema" title="Modo claro / oscuro">
+            <span class="theme-icon theme-icon-moon" aria-hidden="true">☾</span>
+            <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
+        </button>
+    </div>
+</header>
+
+<main id="main-content" class="formatos-page">
+    <section class="formatos-hero">
+        <div class="formatos-hero-inner">
+            <div class="eyebrow"><span aria-hidden="true"></span> Guía práctica</div>
+            <h1>Formatos de <em>sala</em></h1>
+            <p>¿2D, VIP, Macro XE o Platino? Qué conviene según la película y tu presupuesto — sin humo.</p>
+        </div>
     </section>
+
+    <p class="formatos-note">
+        Los nombres varían por cadena (Macro XE, IMAX, Platino, VIP…). La lógica es la misma: pantalla/sonido vs comodidad vs precio.
+    </p>
 
     <div class="formatos-grid" id="formatos-grid"></div>
 
-    <section class="guia-tips table-block">
+    <section class="formato-decision">
+        <h2>¿Cuál elijo hoy?</h2>
+        <p>Atajos según el plan de la salida</p>
+        <div class="decision-grid">
+            <div class="decision-item">
+                <span>Blockbuster visual</span>
+                <strong>Macro / pantalla grande</strong>
+            </div>
+            <div class="decision-item">
+                <span>Drama o comedia</span>
+                <strong>2D tradicional</strong>
+            </div>
+            <div class="decision-item">
+                <span>Cita / cumpleaños</span>
+                <strong>VIP / Platino</strong>
+            </div>
+            <div class="decision-item">
+                <span>Presupuesto justo</span>
+                <strong>2D + día barato</strong>
+            </div>
+        </div>
+    </section>
+
+    <section class="guia-tips">
         <h2>Regla rápida</h2>
         <ul class="tips-list">
-            <li><strong>Acción / sci-fi / animación grande</strong> → Macro XE o similar vale la pena.</li>
-            <li><strong>Drama / comedia / diálogo</strong> → 2D tradicional suele bastar.</li>
-            <li><strong>Cita o comodidad</strong> → VIP / Platino si el precio no duele.</li>
-            <li><strong>Presupuesto justo</strong> → 2D + martes/miércoles.</li>
+            <li><strong>Acción / sci-fi / animación grande</strong> → Macro XE (o similar) suele valer más que VIP.</li>
+            <li><strong>Drama / comedia / diálogo</strong> → 2D tradicional basta; el dinero mejor en mejor día u horario.</li>
+            <li><strong>Cita o máxima comodidad</strong> → VIP / Platino si el precio no duele.</li>
+            <li><strong>Presupuesto justo</strong> → 2D + martes/miércoles y snack compartido.</li>
         </ul>
     </section>
 </main>
-<!-- pega tu mismo footer + btn-top + scripts de tema/nav -->
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-links">
+            <a href="aviso-de-privacidad-LBDC.html">Política de Privacidad</a>
+            <a href="https://losbrujosdelcine.com/#catalogo" target="_blank" rel="noopener noreferrer">Mi Tesoro MX</a>
+            <a href="https://www.facebook.com/LosBrujosDelCine" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://boxd.it/8uSCV" target="_blank" rel="noopener noreferrer">Letterboxd</a>
+        </div>
+        <div class="footer-copy">
+            <p>© 2026 Los Brujos del Cine</p>
+        </div>
+    </div>
+</footer>
+
+<button type="button" id="btn-top" class="btn-top" aria-label="Volver arriba">↑</button>
+
 <script src="formatos.js"></script>
+<script>
+    // Tema
+    document.getElementById('theme-toggle')?.addEventListener('click', () => {
+      const html = document.documentElement;
+      const actual = html.getAttribute('data-theme') || 'dark';
+      const nuevo = actual === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', nuevo);
+      try { localStorage.setItem('lbdc-theme', nuevo); } catch (e) {}
+    });
+
+    // Menú móvil
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.getElementById('nav-toggle');
+      const nav = document.getElementById('main-nav');
+      if (!toggle || !nav) return;
+      toggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const open = nav.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        nav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }));
+      document.addEventListener('click', (e) => {
+        if (!nav.classList.contains('is-open')) return;
+        if (nav.contains(e.target) || toggle.contains(e.target)) return;
+        nav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Volver arriba
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('btn-top');
+      if (!btn) return;
+      const sync = () => btn.classList.toggle('is-visible', window.scrollY > 400);
+      window.addEventListener('scroll', sync, { passive: true });
+      sync();
+      btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    });
+</script>
 </body>
 </html>
