@@ -1090,5 +1090,39 @@
     ],
     "cita": "Me vendieron una película de Totoro y terminé viendo mucho más de las niñas que del propio Totoro.",
     "veredicto": "Bonita, tranquila y con mucho encanto, pero este estilo de Ghibli cotidiano no termina de engancharme. Neutral, pero olvidable."
+  },
+  {
+    "id": "transformers-the-movie",
+    "titulo": "Transformers: The Movie",
+    "anio": 1986,
+    "fecha": "2026-09-19",
+    "duracion": "85 min",
+    "generos": ["Animación", "Acción", "Ciencia ficción"],
+    "puntaje": 2.5,
+    "destacada": false,
+    "etiqueta": "",
+    "plataformas": ["Cines"],
+    "resumen": "Primera vez viéndola 40 años después. Nostalgia y gran soundtrack ochentero, pero la historia es una licuadora de personajes y la derrota de Unicron se siente demasiado fácil y apresurada.",
+    "poster": "imgs/resenias/transformers.jpg",
+    "posterFallback": {
+      "linea1": "Transformers:",
+      "linea2": "The Movie"
+    },
+    "letterboxd": "https://letterboxd.com/film/the-transformers-the-movie",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt0092106/",
+      "rating": "7.2"
+    },
+    "lead": "Nostalgia, música ochentera y muertes memorables, pero intenta abarcar demasiado y termina apresurando todo. Interesante por el contexto, pero neutral.",
+    "contenido": [
+      "Esta fue mi primera vez viendo Transformers: The Movie y qué mejor momento que hacerlo en el cine, 40 años después de su estreno. Yo soy de los 90 y crecí entre los 90 y los 2000, así que aunque no viví el estreno original, sí me trajo cierta nostalgia de cuando veía la serie de Transformers. Y creo que esa nostalgia es de lo que más disfruté de la película.",
+      "Porque la historia está hecha una verdadera licuadora. Hay muchísimos personajes, aparecen nuevos cada rato, las escenas cambian de un momento a otro y parece que la película quiere contarnos demasiadas historias al mismo tiempo. Hay tantos personajes y situaciones que por momentos sentí que no estaba siguiendo una sola línea, sino varias historias metidas dentro de una sola película.",
+      "Además, Unicron me daba la impresión de que iba a ser el gran villano que aparecería hasta el final, porque durante buena parte de la película se están enfocando en otras cosas. Pero cuando finalmente llega el momento de enfrentarlo, su derrota se me hizo demasiado sencilla. Después de todo lo que habían armado alrededor de él, prácticamente fue un: “ya se va a acabar la película, hay que derrotarlo”, y listo.",
+      "Eso sí, la música me gustó muchísimo. El soundtrack tiene todo ese sonido ochentero de rock que le queda perfecto y termina siendo uno de los elementos que más recuerdo de la película. También están las muertes, que para una película de Transformers me sorprendieron bastante por lo gráficas que llegan a ser, especialmente la de Optimus Prime y ese cambio de color cuando muere. Y por lo que se ha comentado sobre la producción, la enorme cantidad de personajes nuevos también estaba relacionada con la necesidad de introducir nuevas figuras para la línea de juguetes, algo que se nota bastante al verla.",
+      "Los personajes incluso me parecieron algo tontos en varios momentos, pero también entiendo que estoy viendo una película completamente ochentera y hay que tomarla como tal. Tiene ese encanto de una época muy específica, con diseños, música, violencia y una forma de contar la historia que hoy se siente bastante diferente.",
+      "Me quedo con la nostalgia, la música y algunos momentos bastante memorables, pero como película siento que intenta abarcar demasiado y termina contando todo de manera muy apresurada. Fue interesante verla por primera vez 40 años después, pero esperaba algo más de esa batalla final y de toda la historia que estaban construyendo."
+    ],
+    "cita": "La historia está hecha una verdadera licuadora.",
+    "veredicto": "Nostalgia y soundtrack ochentero genial, pero demasiados personajes y una resolución apresurada. Interesante por el contexto de época, nada más. Neutral, pero olvidable."
   }
 ]
