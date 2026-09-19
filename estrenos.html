@@ -667,6 +667,156 @@
         .estreno-poster img {
           background: linear-gradient(135deg, #1a1a22, #121218);
         }
+
+        /* ===== Calendario dentro de estrenos ===== */
+        .estrenos-cal {
+          width: min(var(--max, 1120px), calc(100% - 40px));
+          margin: 28px auto 8px;
+          padding: 20px 0 8px;
+          border-bottom: 1px solid var(--border, rgba(255,255,255,.1));
+        }
+
+        .estrenos-cal-head {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: space-between;
+          gap: 14px;
+          margin-bottom: 12px;
+        }
+
+        .estrenos-cal-head h2 {
+          font-family: 'Playfair Display', Georgia, serif;
+          font-size: 1.35rem;
+          margin: 4px 0 0;
+        }
+
+        .cal-controls {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .cal-controls h3 {
+          margin: 0;
+          min-width: 160px;
+          text-align: center;
+          font-size: 1rem;
+          font-weight: 600;
+        }
+
+        .cal-leyenda {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 14px;
+          font-size: .8rem;
+          color: var(--muted, #9a9aa6);
+          margin-bottom: 14px;
+        }
+
+        .cal-leyenda .dot {
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          margin-right: 6px;
+          vertical-align: middle;
+        }
+        .dot-semana { background: #7ddea0; }
+        .dot-preventa { background: #c9a227; }
+        .dot-estreno { background: #c41e3a; }
+
+        .cal-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+          gap: 12px;
+          margin-bottom: 20px;
+        }
+
+        .cal-dia {
+          background: var(--surface, #121218);
+          border: 1px solid var(--border, rgba(255,255,255,.1));
+          border-radius: 14px;
+          padding: 12px;
+        }
+
+        .cal-dia--semana {
+          border-color: rgba(125, 222, 160, 0.45);
+          box-shadow: 0 0 0 1px rgba(125, 222, 160, 0.12);
+        }
+
+        .cal-dia header {
+          display: flex;
+          align-items: baseline;
+          gap: 8px;
+          margin-bottom: 8px;
+        }
+
+        .cal-num {
+          font-size: 1.35rem;
+          font-weight: 800;
+          line-height: 1;
+        }
+
+        .cal-dow {
+          font-size: .75rem;
+          color: var(--muted, #9a9aa6);
+          text-transform: capitalize;
+        }
+
+        .cal-dia ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+
+        .cal-dia li {
+          display: flex;
+          gap: 8px;
+          align-items: center;
+          margin: 8px 0 0;
+          font-size: .82rem;
+        }
+
+        .cal-dia li img {
+          width: 32px;
+          height: 48px;
+          object-fit: cover;
+          border-radius: 4px;
+          flex-shrink: 0;
+          background: #1a1a22;
+        }
+
+        .cal-dia li strong {
+          display: block;
+          line-height: 1.25;
+          color: var(--text, #e8e8ec);
+        }
+
+        .cal-dia li span {
+          font-size: .72rem;
+          color: var(--muted, #9a9aa6);
+        }
+
+        .cal-dia li.is-preventa strong {
+          color: var(--gold, #c9a227);
+        }
+
+        .cal-empty {
+          grid-column: 1 / -1;
+          text-align: center;
+          padding: 24px;
+          color: var(--muted, #9a9aa6);
+          font-size: .9rem;
+        }
+
+        html[data-theme="light"] .cal-dia {
+          background: #fff;
+          border-color: rgba(0,0,0,.1);
+        }
+        html[data-theme="light"] .cal-dia li strong {
+          color: #121214;
+        }
     </style>
 
     <script>
@@ -706,6 +856,7 @@
     </header>
 
     <main id="main-content" class="estrenos-page">
+
         <!-- HERO -->
         <section class="estrenos-hero">
             <div class="estrenos-hero-inner">
@@ -719,6 +870,29 @@
                     Encuentra fechas y compra tus boletos.
                 </p>
             </div>
+        </section>
+
+        <!-- ===== CALENDARIO DEL MES ===== -->
+        <section class="estrenos-cal" id="calendario-mes" aria-label="Calendario de estrenos del mes">
+            <div class="estrenos-cal-head">
+                <div>
+                    <span class="section-kicker">VISTA MENSUAL</span>
+                    <h2>Calendario del mes</h2>
+                </div>
+                <div class="cal-controls">
+                    <button type="button" class="filter-btn" id="cal-prev" aria-label="Mes anterior">←</button>
+                    <h3 id="cal-mes-label">—</h3>
+                    <button type="button" class="filter-btn" id="cal-next" aria-label="Mes siguiente">→</button>
+                </div>
+            </div>
+
+            <div class="cal-leyenda">
+                <span><i class="dot dot-semana"></i> Esta semana</span>
+                <span><i class="dot dot-preventa"></i> Preventa</span>
+                <span><i class="dot dot-estreno"></i> Estreno / cartelera</span>
+            </div>
+
+            <div id="cal-grid" class="cal-grid"></div>
         </section>
         <!-- FILTROS -->
         <div class="estrenos-filters-wrapper">

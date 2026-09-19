@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   const filters = document.getElementById('estrenos-filters');
   const selectMes = document.getElementById('filtro-mes');
   const countEl = document.getElementById('resultados-count');
+  let calVista = new Date();
+  calVista.setDate(1); // primer día del mes actual
 
 
   let estrenos = [];
@@ -35,7 +37,8 @@ document.addEventListener('DOMContentLoaded', async () => {
    const sk = document.getElementById('skeleton-loading');
    if (sk) sk.style.display = 'none';
 
-   renderEstrenos();
+      renderCalendario(estrenos); // lista completa
+      renderEstrenos();           // lista filtrable de abajo
 
   } catch (error) {
     console.error(error);
@@ -69,6 +72,16 @@ document.addEventListener('DOMContentLoaded', async () => {
       renderEstrenos();
     });
   }
+
+  document.getElementById('cal-prev')?.addEventListener('click', () => {
+    calVista.setMonth(calVista.getMonth() - 1);
+    renderCalendario(estrenos);
+  });
+
+  document.getElementById('cal-next')?.addEventListener('click', () => {
+    calVista.setMonth(calVista.getMonth() + 1);
+    renderCalendario(estrenos);
+  });
 
   // ===== Skeleton =====
     function mostrarSkeleton(cantidad = 8) {
@@ -316,6 +329,98 @@ function crearCard(item) {
       </div>
     </article>
   `;
+}
+
+
+const MESES_ES = [
+  'Enero','Febrero','Marzo','Abril','Mayo','Junio',
+  'Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'
+];
+
+function inicioSemanaLunes(d) {
+  const x = new Date(d);
+  x.setHours(0, 0, 0, 0);
+  const day = x.getDay(); // 0=dom
+  const diff = day === 0 ? -6 : 1 - day;
+  x.setDate(x.getDate() + diff);
+  return x;
+}
+
+function enEstaSemana(fechaStr) {
+  if (!fechaStr) return false;
+  const f = new Date(fechaStr + 'T12:00:00');
+  const hoy = new Date();
+  hoy.setHours(0, 0, 0, 0);
+  const ini = inicioSemanaLunes(hoy);
+  const fin = new Date(ini);
+  fin.setDate(fin.getDate() + 6);
+  return f >= ini && f <= fin;
+}
+
+function renderCalendario(listaCompleta) {
+  const grid = document.getElementById('cal-grid');
+  const label = document.getElementById('cal-mes-label');
+  if (!grid || !label) return;
+
+  const y = calVista.getFullYear();
+  const m = calVista.getMonth();
+  label.textContent = `${MESES_ES[m]} ${y}`;
+
+  // Usa la lista completa de estrenos (no la filtrada de la grilla)
+  const data = Array.isArray(listaCompleta) ? listaCompleta : [];
+
+  const delMes = data
+    .filter(item => {
+      if (!item.fecha) return false;
+      const d = new Date(item.fecha + 'T12:00:00');
+      return d.getFullYear() === y && d.getMonth() === m;
+    })
+    .sort((a, b) => String(a.fecha).localeCompare(String(b.fecha)));
+
+  const porDia = {};
+  delMes.forEach(item => {
+    (porDia[item.fecha] ||= []).push(item);
+  });
+
+  const dias = Object.keys(porDia).sort();
+
+  if (!dias.length) {
+    grid.innerHTML = `<p class="cal-empty">No hay estrenos/preventas cargados en este mes.</p>`;
+    return;
+  }
+
+  grid.innerHTML = dias.map(fecha => {
+    const d = new Date(fecha + 'T12:00:00');
+    const semana = enEstaSemana(fecha) ? ' cal-dia--semana' : '';
+    const items = porDia[fecha];
+
+    return `
+      <article class="cal-dia${semana}">
+        <header>
+          <span class="cal-num">${d.getDate()}</span>
+          <span class="cal-dow">${d.toLocaleDateString('es-MX', { weekday: 'short' })}</span>
+        </header>
+        <ul>
+          ${items.map(it => {
+            const esPreventa = (it.tipo || '').toLowerCase() === 'preventa';
+            const labelTipo = esPreventa
+              ? 'Preventa'
+              : (it.estadoCartelera === 'estreno' ? 'Estreno' : 'Cartelera');
+            const poster = it.poster
+              ? `<img src="${escapeHTML(it.poster)}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">`
+              : '';
+            return `
+              <li class="${esPreventa ? 'is-preventa' : 'is-estreno'}">
+                ${poster}
+                <div>
+                  <strong>${escapeHTML(it.titulo || 'Sin título')}</strong>
+                  <span>${labelTipo}</span>
+                </div>
+              </li>`;
+          }).join('')}
+        </ul>
+      </article>`;
+  }).join('');
 }
 
   function escapeHTML(str) {
