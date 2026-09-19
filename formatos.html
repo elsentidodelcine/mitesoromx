@@ -301,6 +301,90 @@
           background: rgba(0,0,0,.03);
         }
         html[data-theme="light"] .formatos-hero h1 { color: #121214; }
+
+        .formatos-filtros {
+          width: min(var(--max, 1120px), calc(100% - 48px));
+          margin: 28px auto 8px;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          justify-content: center;
+        }
+        .formatos-filtros .filter-btn {
+          padding: 10px 18px;
+          border-radius: 999px;
+          border: 1px solid rgba(255,255,255,.18);
+          background: #1a1a22;
+          color: #e8e8ec;
+          font-size: .78rem;
+          font-weight: 600;
+          cursor: pointer;
+        }
+        .formatos-filtros .filter-btn.active {
+          background: linear-gradient(135deg, var(--red, #c41e3a), #9a1830);
+          border-color: transparent;
+          color: #fff;
+        }
+        html[data-theme="light"] .formatos-filtros .filter-btn {
+          background: #fff;
+          border-color: rgba(0,0,0,.12);
+          color: #3d3d46;
+        }
+        html[data-theme="light"] .formatos-filtros .filter-btn.active {
+          background: linear-gradient(135deg, var(--red, #c41e3a), #9a1830);
+          color: #fff;
+        }
+
+        .formato-top-right {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 6px;
+        }
+        .fmt-chain {
+          font-size: .65rem;
+          font-weight: 700;
+          letter-spacing: .04em;
+          text-transform: uppercase;
+          padding: 3px 8px;
+          border-radius: 999px;
+        }
+        .fmt-chain-cp {
+          color: #ff8a9a;
+          border: 1px solid rgba(196,30,58,.35);
+          background: rgba(196,30,58,.1);
+        }
+        .fmt-chain-cm {
+          color: #6b8cff;
+          border: 1px solid rgba(107,140,255,.35);
+          background: rgba(107,140,255,.1);
+        }
+        .fmt-chain-both {
+          color: var(--gold, #c9a227);
+          border: 1px solid rgba(201,162,39,.35);
+          background: rgba(201,162,39,.1);
+        }
+        .formato-meta {
+          margin: 0 0 8px;
+          font-size: .8rem;
+          color: var(--muted);
+        }
+        .formato-meta strong { color: var(--gold, #c9a227); }
+
+        /* acentos por id */
+        .formato-card[data-id="macro-xe"],
+        .formato-card[data-id="sxtreme"] { --accent: #c41e3a; }
+        .formato-card[data-id="imax-cp"],
+        .formato-card[data-id="imax-cm"] { --accent: #e8e8ec; }
+        .formato-card[data-id="4dx-cp"],
+        .formato-card[data-id="4dx-cm"] { --accent: #6b8cff; }
+        .formato-card[data-id="screenx"] { --accent: #c9a227; }
+        .formato-card[data-id="pluus"],
+        .formato-card[data-id="premium"] { --accent: #7ddea0; }
+        .formato-card[data-id="vip-cp"],
+        .formato-card[data-id="platino"] { --accent: #c9a227; }
+        .formato-card[data-id="2d"] { --accent: #7ddea0; }
+        .formato-card[data-id="3d"] { --accent: #9a9aa6; }
     </style>
     <script>
         try {
@@ -310,7 +394,6 @@
     </script>
 </head>
 <body>
-<a href="#main-content" class="skip-link">Saltar al contenido</a>
 
 <header class="site-header">
     <div class="header-inner">
@@ -351,23 +434,38 @@
         Los nombres varían por cadena (Macro XE, IMAX, Platino, VIP…). La lógica es la misma: pantalla/sonido vs comodidad vs precio.
     </p>
 
+    <div class="formatos-filtros" id="formatos-filtros">
+        <button type="button" class="filter-btn active" data-cadena="todas">Todos</button>
+        <button type="button" class="filter-btn" data-cadena="cinepolis">Cinépolis</button>
+        <button type="button" class="filter-btn" data-cadena="cinemex">Cinemex</button>
+    </div>
+
+
     <div class="formatos-grid" id="formatos-grid"></div>
 
     <section class="formato-decision">
         <h2>¿Cuál elijo hoy?</h2>
-        <p>Atajos según el plan de la salida</p>
+        <p>Atajos según el plan (nombres Cinépolis · Cinemex)</p>
         <div class="decision-grid">
             <div class="decision-item">
                 <span>Blockbuster visual</span>
-                <strong>Macro / pantalla grande</strong>
+                <strong>Macro XE · SXTREME</strong>
             </div>
             <div class="decision-item">
-                <span>Drama o comedia</span>
-                <strong>2D tradicional</strong>
+                <span>Máxima calidad de imagen</span>
+                <strong>IMAX</strong>
             </div>
             <div class="decision-item">
-                <span>Cita / cumpleaños</span>
-                <strong>VIP / Platino</strong>
+                <span>Diversión / atracción</span>
+                <strong>4DX</strong>
+            </div>
+            <div class="decision-item">
+                <span>Cita o máxima comodidad</span>
+                <strong>VIP · Platino</strong>
+            </div>
+            <div class="decision-item">
+                <span>Confort sin irte al cielo</span>
+                <strong>PLUUS · Premium</strong>
             </div>
             <div class="decision-item">
                 <span>Presupuesto justo</span>
