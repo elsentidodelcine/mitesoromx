@@ -1597,6 +1597,16 @@ const PREVENTAS_ACTIVAS = [
     linkTexto: "Ver términos de preventa",
     tema: "cinemex",
   },
+  {
+    id: "vaso-coca-cola-cinemex-2026",
+    active: true,
+    emoji: "🥤",
+    titulo: "Vaso Coca-Cola – Cinemex",
+    texto: "Llegó el <strong>vaso de Coca-Cola</strong> de Cinemex.<br><br>Ideal para fans de cine y coleccionistas de vasos oficiales.",
+    link: "preventas.html",
+    linkTexto: "Ver términos de preventa",
+    tema: "cinemex",
+  }
 ];
 
 function initCarouselPreventas() {
@@ -2124,7 +2134,7 @@ function actualizarEnvioGratisBar(t) {
 
   // Solo preventas → no mostrar progreso de envío gratis
   if (t.tienePreventa) {
-    text.innerHTML = `⚠️ Las preventas <strong>no aplican</strong> para envío gratis`;
+    text.innerHTML = `⚠️ En preventas <strong>no aplican</strong> envío gratis ni cupones`;
     fill.style.width = "0%";
     fill.classList.remove("completo");
     return;

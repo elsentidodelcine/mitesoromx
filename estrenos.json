@@ -751,5 +751,71 @@
     "poster": "imgs/estrenos/viaje.jpg",
     "cines": ["Cinemex", "Cinepolis"],
     "nota": "México"
+  },
+  {
+    "id": "cadaver-novia",
+    "titulo": "El Cadaver De La Novia (Re-estreno 2026)",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-15",
+    "fechaTexto": "Jueves 15 de Octubre 2026",
+    "poster": "imgs/estrenos/novia.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "mary-y-max",
+    "titulo": "Mary y Max (2009)",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-09-24",
+    "fechaTexto": "Jueves 24 de Septiembre 2026",
+    "poster": "imgs/estrenos/mary.jpg",
+    "cines": ["Cinemex", "Cinepolis"],
+    "nota": "Australia"
+  },
+  {
+    "id": "vertigo2",
+    "titulo": "Vertigo 2: Punto Muerto",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-09-24",
+    "fechaTexto": "Jueves 24 de Septiembre 2026",
+    "poster": "imgs/estrenos/vertigo2.jpg",
+    "cines": ["Cinemex", "Cinepolis"],
+    "nota": "Australia"
+  },
+  {
+    "id": "verity",
+    "titulo": "VERITY: La Sombra De Un Engaño",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-01",
+    "fechaTexto": "Jueves 01 de Octubre 2026",
+    "poster": "imgs/estrenos/verity.jpg",
+    "cines": ["Cinemex", "Cinepolis"],
+    "nota": "Australia"
+  },
+  {
+    "id": "descenso",
+    "titulo": "El Descenso (2005)",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-09-24",
+    "fechaTexto": "Jueves 24 de Septiembre 2026",
+    "poster": "imgs/estrenos/descenso.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Inglaterra"
+  },
+  {
+    "id": "tesoros",
+    "titulo": "Guardianes del Museo 2: Los Tesoros de Egipto",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-09-24",
+    "fechaTexto": "Jueves 24 de Septiembre 2026",
+    "poster": "imgs/estrenos/tesoros.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Rusia"
   }
 ]
