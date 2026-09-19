@@ -103,7 +103,7 @@ const FORMATOS = [
   {
     id: 'sxtreme',
     icon: '📡',
-    nombre: 'CinemeXtremo (SXTREME)',
+    nombre: 'CinemeXtremo',
     badge: 'Mejor upgrade Cinemex',
     cadenas: ['cinemex'],
     precio: 'Medio-alto',
