@@ -48,6 +48,14 @@ function enEstaSemana(fechaStr) {
   return f >= ini && f <= fin;
 }
 
+function resaltarYScroll(el) {
+  el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  el.classList.add('estreno-flash');
+  setTimeout(function () {
+    el.classList.remove('estreno-flash');
+  }, 1600);
+}
+
 function renderCalendario(listaCompleta) {
   const grid = document.getElementById('cal-grid');
   const label = document.getElementById('cal-mes-label');
@@ -55,107 +63,106 @@ function renderCalendario(listaCompleta) {
 
   const y = calVista.getFullYear();
   const m = calVista.getMonth();
-  label.textContent = `${MESES_ES[m]} ${y}`;
+  label.textContent = MESES_ES[m] + ' ' + y;
 
-  // Usa la lista completa de estrenos (no la filtrada de la grilla)
   const data = Array.isArray(listaCompleta) ? listaCompleta : [];
 
   const delMes = data
-    .filter(item => {
+    .filter(function (item) {
       if (!item.fecha) return false;
       const d = new Date(item.fecha + 'T12:00:00');
       return d.getFullYear() === y && d.getMonth() === m;
     })
-    .sort((a, b) => String(a.fecha).localeCompare(String(b.fecha)));
+    .sort(function (a, b) {
+      return String(a.fecha).localeCompare(String(b.fecha));
+    });
 
   const porDia = {};
-  delMes.forEach(item => {
-    (porDia[item.fecha] ||= []).push(item);
+  delMes.forEach(function (item) {
+    if (!porDia[item.fecha]) porDia[item.fecha] = [];
+    porDia[item.fecha].push(item);
   });
 
   const dias = Object.keys(porDia).sort();
 
   if (!dias.length) {
-    grid.innerHTML = `<p class="cal-empty">No hay estrenos/preventas cargados en este mes.</p>`;
+    grid.innerHTML = '<p class="cal-empty">No hay estrenos/preventas cargados en este mes.</p>';
     return;
   }
 
-  grid.innerHTML = dias.map(fecha => {
+  var html = '';
+  dias.forEach(function (fecha) {
     const d = new Date(fecha + 'T12:00:00');
-    const semana = enEstaSemana(fecha) ? ' cal-dia--semana' : '';
+    const semanaClass = enEstaSemana(fecha) ? ' cal-dia--semana' : '';
     const items = porDia[fecha];
+    const dow = d.toLocaleDateString('es-MX', { weekday: 'short' });
 
-    return `
-      <article class="cal-dia${semana}">
-        <header>
-          <span class="cal-num">${d.getDate()}</span>
-          <span class="cal-dow">${d.toLocaleDateString('es-MX', { weekday: 'short' })}</span>
-        </header>
-        <ul>
-          ${items.map(it => {
-            const esPreventa = (it.tipo || '').toLowerCase() === 'preventa';
-            const labelTipo = esPreventa
-              ? 'Preventa'
-              : (it.estadoCartelera === 'estreno' ? 'Estreno' : 'Cartelera');
-            const poster = it.poster
-              ? `<img src="${escapeHTML(it.poster)}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">`
-              : '';
-              const id = it.id || '';
-            return `
-              <li class="${esPreventa ? 'is-preventa' : 'is-estreno'}"
-                                data-estreno-id="${escapeHTML(id)}"
-                                role="button"
-                                tabindex="0"
-                                title="Ver en la lista">
-                              ${poster}
-                              <div>
-                                <strong>${escapeHTML(it.titulo || 'Sin título')}</strong>
-                                <span>${labelTipo}</span>
-                              </div>
-                            </li>`;
-          }).join('')}
-        </ul>
-      </article>`;
-  }).join('');
+    html += '<article class="cal-dia' + semanaClass + '">';
+    html += '<header>';
+    html += '<span class="cal-num">' + d.getDate() + '</span>';
+    html += '<span class="cal-dow">' + dow + '</span>';
+    html += '</header><ul>';
 
-    grid.querySelectorAll('[data-estreno-id]').forEach(el => {
-      const ir = () => {
-        const id = el.getAttribute('data-estreno-id');
-        if (!id) return;
-        const target = document.getElementById('estreno-' + id);
-        if (!target) {
-          // Si no está en esta página de resultados, quita filtros y vuelve a renderizar
-          filtroTipo = 'todos';
-          filtroMes = 'todos';
-          if (selectMes) selectMes.value = 'todos';
-          filters?.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-          filters?.querySelector('[data-filter="todos"]')?.classList.add('active');
-          paginaActual = 1;
-          renderEstrenos();
-          // esperar un frame a que exista el DOM
-          requestAnimationFrame(() => {
-            const t = document.getElementById('estreno-' + id);
-            if (t) resaltarYScroll(t);
-          });
-          return;
-        }
-        resaltarYScroll(target);
-      };
-      el.addEventListener('click', ir);
-      el.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          ir();
-        }
-      });
+    items.forEach(function (it) {
+      const esPreventa = String(it.tipo || '').toLowerCase() === 'preventa';
+      const liClass = esPreventa ? 'is-preventa' : 'is-estreno';
+      const labelTipo = esPreventa
+        ? 'Preventa'
+        : (it.estadoCartelera === 'estreno' ? 'Estreno' : 'Cartelera');
+      const id = it.id || '';
+      const poster = it.poster
+        ? '<img src="' + escapeHTML(it.poster) + '" alt="" loading="lazy">'
+        : '';
+
+      html += '<li class="' + liClass + '" data-estreno-id="' + escapeHTML(id) + '" role="button" tabindex="0" title="Ver en la lista">';
+      html += poster;
+      html += '<div><strong>' + escapeHTML(it.titulo || 'Sin título') + '</strong>';
+      html += '<span>' + labelTipo + '</span></div></li>';
     });
-  }
 
-  function resaltarYScroll(el) {
-    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    el.classList.add('estreno-flash');
-    setTimeout(() => el.classList.remove('estreno-flash'), 1600);
-  }
+    html += '</ul></article>';
+  });
+
+  grid.innerHTML = html;
+
+  grid.querySelectorAll('[data-estreno-id]').forEach(function (el) {
+    function ir() {
+      const id = el.getAttribute('data-estreno-id');
+      if (!id) return;
+
+      var target = document.getElementById('estreno-' + id);
+      if (target) {
+        resaltarYScroll(target);
+        return;
+      }
+
+      filtroTipo = 'todos';
+      filtroMes = 'todos';
+      if (selectMes) selectMes.value = 'todos';
+      if (filters) {
+        filters.querySelectorAll('.filter-btn').forEach(function (b) {
+          b.classList.remove('active');
+        });
+        var btnTodos = filters.querySelector('[data-filter="todos"]');
+        if (btnTodos) btnTodos.classList.add('active');
+      }
+      paginaActual = 1;
+      renderEstrenos();
+
+      requestAnimationFrame(function () {
+        var t = document.getElementById('estreno-' + id);
+        if (t) resaltarYScroll(t);
+      });
+    }
+
+    el.addEventListener('click', ir);
+    el.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        ir();
+      }
+    });
+  });
 }
 
   // Mostrar skeleton mientras carga
@@ -446,10 +453,10 @@ function crearCard(item) {
     countdownClass = 'esta-semana';
   }
 
-  const idAttr = item.id ? `id="estreno-${escapeHTML(item.id)}"` : '';
+   const idAttr = item.id ? 'id="estreno-' + escapeHTML(item.id) + '"' : '';
 
-  return `
-    <article class="estreno-card ${extraClass} ${idAttr} data-estreno-id="${escapeHTML(item.id || '')}">
+   return `
+     <article class="estreno-card ${extraClass}" ${idAttr} data-estreno-id="${escapeHTML(item.id || '')}">
       <div class="estreno-poster">
         <img
           src="${escapeHTML(item.poster)}"
