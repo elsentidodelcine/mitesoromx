@@ -25,23 +25,26 @@ const MESES_ES = [
   'Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'
 ];
 
-function inicioSemanaLunes(d) {
-  const x = new Date(d);
+// Semana de cine en México: jueves → miércoles
+function inicioSemanaJueves(ref) {
+  const x = new Date(ref);
   x.setHours(0, 0, 0, 0);
-  const day = x.getDay(); // 0=dom
-  const diff = day === 0 ? -6 : 1 - day;
-  x.setDate(x.getDate() + diff);
+  const day = x.getDay(); // 0=dom ... 4=jue ... 6=sáb
+  // Días desde el jueves más reciente (o hoy si es jueves)
+  const diff = (day - 4 + 7) % 7; // 4 = jueves
+  x.setDate(x.getDate() - diff);
   return x;
 }
 
 function enEstaSemana(fechaStr) {
   if (!fechaStr) return false;
   const f = new Date(fechaStr + 'T12:00:00');
-  const hoy = new Date();
-  hoy.setHours(0, 0, 0, 0);
-  const ini = inicioSemanaLunes(hoy);
+  const hoyLocal = new Date();
+  hoyLocal.setHours(0, 0, 0, 0);
+  const ini = inicioSemanaJueves(hoyLocal); // jueves actual
   const fin = new Date(ini);
-  fin.setDate(fin.getDate() + 6);
+  fin.setDate(fin.getDate() + 6); // miércoles
+  fin.setHours(23, 59, 59, 999);
   return f >= ini && f <= fin;
 }
 
@@ -97,18 +100,62 @@ function renderCalendario(listaCompleta) {
             const poster = it.poster
               ? `<img src="${escapeHTML(it.poster)}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">`
               : '';
+              const id = it.id || '';
             return `
-              <li class="${esPreventa ? 'is-preventa' : 'is-estreno'}">
-                ${poster}
-                <div>
-                  <strong>${escapeHTML(it.titulo || 'Sin título')}</strong>
-                  <span>${labelTipo}</span>
-                </div>
-              </li>`;
+              <li class="${esPreventa ? 'is-preventa' : 'is-estreno'}"
+                                data-estreno-id="${escapeHTML(id)}"
+                                role="button"
+                                tabindex="0"
+                                title="Ver en la lista">
+                              ${poster}
+                              <div>
+                                <strong>${escapeHTML(it.titulo || 'Sin título')}</strong>
+                                <span>${labelTipo}</span>
+                              </div>
+                            </li>`;
           }).join('')}
         </ul>
       </article>`;
   }).join('');
+
+    grid.querySelectorAll('[data-estreno-id]').forEach(el => {
+      const ir = () => {
+        const id = el.getAttribute('data-estreno-id');
+        if (!id) return;
+        const target = document.getElementById('estreno-' + id);
+        if (!target) {
+          // Si no está en esta página de resultados, quita filtros y vuelve a renderizar
+          filtroTipo = 'todos';
+          filtroMes = 'todos';
+          if (selectMes) selectMes.value = 'todos';
+          filters?.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+          filters?.querySelector('[data-filter="todos"]')?.classList.add('active');
+          paginaActual = 1;
+          renderEstrenos();
+          // esperar un frame a que exista el DOM
+          requestAnimationFrame(() => {
+            const t = document.getElementById('estreno-' + id);
+            if (t) resaltarYScroll(t);
+          });
+          return;
+        }
+        resaltarYScroll(target);
+      };
+      el.addEventListener('click', ir);
+      el.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          ir();
+        }
+      });
+    });
+  }
+
+  function resaltarYScroll(el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    el.classList.add('estreno-flash');
+    setTimeout(() => el.classList.remove('estreno-flash'), 1600);
+  }
 }
 
   // Mostrar skeleton mientras carga
@@ -399,8 +446,10 @@ function crearCard(item) {
     countdownClass = 'esta-semana';
   }
 
+  const idAttr = item.id ? `id="estreno-${escapeHTML(item.id)}"` : '';
+
   return `
-    <article class="estreno-card ${extraClass}">
+    <article class="estreno-card ${extraClass} ${idAttr} data-estreno-id="${escapeHTML(item.id || '')}">
       <div class="estreno-poster">
         <img
           src="${escapeHTML(item.poster)}"

@@ -817,6 +817,59 @@
         html[data-theme="light"] .cal-dia li strong {
           color: #121214;
         }
+
+        /* Leyenda: que se vean los colores */
+.cal-leyenda .dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.dot-semana  { background: #7ddea0 !important; }
+.dot-preventa { background: #c9a227 !important; }
+.dot-estreno  { background: #c41e3a !important; }
+
+/* Día de esta semana (jue–mié) */
+.cal-dia--semana {
+  border-color: rgba(125, 222, 160, 0.55) !important;
+  box-shadow:
+    0 0 0 1px rgba(125, 222, 160, 0.2),
+    0 8px 24px rgba(125, 222, 160, 0.08);
+  background: rgba(125, 222, 160, 0.06);
+}
+html[data-theme="light"] .cal-dia--semana {
+  background: rgba(125, 222, 160, 0.12);
+  border-color: rgba(40, 140, 80, 0.35) !important;
+}
+
+/* Preventa / estreno en el texto */
+.cal-dia li.is-preventa strong { color: #c9a227 !important; }
+.cal-dia li.is-estreno strong  { color: var(--text, #e8e8ec); }
+
+/* Click */
+.cal-dia li[data-estreno-id] {
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 4px;
+  margin-left: -4px;
+  margin-right: -4px;
+  transition: background .15s ease;
+}
+.cal-dia li[data-estreno-id]:hover {
+  background: rgba(255,255,255,.06);
+}
+html[data-theme="light"] .cal-dia li[data-estreno-id]:hover {
+  background: rgba(0,0,0,.05);
+}
+
+/* Flash al saltar desde el calendario */
+.estreno-card.estreno-flash {
+  outline: 2px solid var(--gold, #c9a227);
+  box-shadow: 0 0 0 6px rgba(201, 162, 39, 0.25);
+  transition: box-shadow .3s ease, outline .3s ease;
+}
     </style>
 
     <script>
@@ -887,7 +940,7 @@
             </div>
 
             <div class="cal-leyenda">
-                <span><i class="dot dot-semana"></i> Esta semana</span>
+                <span><i class="dot dot-semana"></i> Esta semana (jue–mié)</span>
                 <span><i class="dot dot-preventa"></i> Preventa</span>
                 <span><i class="dot dot-estreno"></i> Estreno / cartelera</span>
             </div>
