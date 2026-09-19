@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de formatos | Los Brujos del Cine</title>
+    <meta name="theme-color" content="#030304">
+    <link rel="icon" href="imgs/logoLB.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesLBDC.css">
+    <link rel="stylesheet" href="guias-extra.css">
+    <script>
+        try {
+          var t = localStorage.getItem('lbdc-theme');
+          if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+    </script>
+</head>
+<body>
+<!-- pega tu mismo header -->
+<main class="guia-page">
+    <section class="guia-hero">
+        <div class="eyebrow">Guía práctica</div>
+        <h1>Formatos de <em>sala</em></h1>
+        <p>¿2D, VIP, Macro XE o Platino? Qué conviene según la película y tu presupuesto.</p>
+    </section>
+
+    <div class="formatos-grid" id="formatos-grid"></div>
+
+    <section class="guia-tips table-block">
+        <h2>Regla rápida</h2>
+        <ul class="tips-list">
+            <li><strong>Acción / sci-fi / animación grande</strong> → Macro XE o similar vale la pena.</li>
+            <li><strong>Drama / comedia / diálogo</strong> → 2D tradicional suele bastar.</li>
+            <li><strong>Cita o comodidad</strong> → VIP / Platino si el precio no duele.</li>
+            <li><strong>Presupuesto justo</strong> → 2D + martes/miércoles.</li>
+        </ul>
+    </section>
+</main>
+<!-- pega tu mismo footer + btn-top + scripts de tema/nav -->
+<script src="formatos.js"></script>
+</body>
+</html>
