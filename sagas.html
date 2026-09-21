@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagas y universos | Los Brujos del Cine</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0RVV6RWHTS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-0RVV6RWHTS');
+    </script>
+    <meta name="description" content="Sagas y universos en orden: UCM hasta Avengers: Endgame y más.">
+    <meta name="theme-color" content="#030304">
+    <link rel="icon" href="imgs/logoLB.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="imgs/logoLB.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesLBDC.css">
+    <link rel="stylesheet" href="sagas.css">
+    <script>
+        try {
+          var t = localStorage.getItem('lbdc-theme');
+          if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+    </script>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Saltar al contenido</a>
+
+<header class="site-header">
+    <div class="header-inner">
+        <a href="blog.html" class="brand-link" aria-label="Los Brujos del Cine, inicio">
+            <img src="imgs/logoLB.png" alt="Los Brujos del Cine" class="site-logo">
+            <div class="logo-text">
+                <h1>Los Brujos del Cine</h1>
+                <span>Mi Tesoro MX</span>
+            </div>
+        </a>
+        <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+            <a href="blog.html#resenas">Reseñas</a>
+            <a href="estrenos.html">Estrenos</a>
+            <a href="precios.html">Precios</a>
+            <a href="taquilla-historia.html">Taquilla</a>
+            <a href="formatos.html">Formatos</a>
+            <a href="sagas.html">Sagas</a>
+        </nav>
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema" title="Modo claro / oscuro">
+            <span class="theme-icon theme-icon-moon" aria-hidden="true">☾</span>
+            <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
+        </button>
+    </div>
+</header>
+
+<main id="main-content" class="sagas-page">
+    <section class="sagas-hero">
+        <div class="sagas-hero-inner">
+            <div class="eyebrow"><span aria-hidden="true"></span> Universos conectados</div>
+            <h1>Sagas y <em>universos</em></h1>
+            <p>Órdenes para ver sin perder el hilo. Empezamos con el UCM hasta <strong>Avengers: Endgame</strong>.</p>
+        </div>
+    </section>
+
+    <!-- Selector de saga -->
+    <div class="sagas-tabs" id="sagas-tabs" role="tablist">
+        <button type="button" class="saga-tab active" data-saga="ucm" role="tab" aria-selected="true">UCM · Infinity Saga</button>
+        <!-- Más sagas después: Star Wars, DC, etc. -->
+    </div>
+
+    <div class="saga-meta" id="saga-meta"></div>
+    <div class="saga-timeline" id="saga-timeline"></div>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-links">
+            <a href="aviso-de-privacidad-LBDC.html">Política de Privacidad</a>
+            <a href="https://losbrujosdelcine.com/#catalogo" target="_blank" rel="noopener noreferrer">Mi Tesoro MX</a>
+            <a href="https://www.facebook.com/LosBrujosDelCine" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://boxd.it/8uSCV" target="_blank" rel="noopener noreferrer">Letterboxd</a>
+        </div>
+        <div class="footer-copy">
+            <p>© 2026 Los Brujos del Cine</p>
+        </div>
+    </div>
+</footer>
+
+<button type="button" id="btn-top" class="btn-top" aria-label="Volver arriba">↑</button>
+<script src="sagas.js"></script>
+<script>
+    document.getElementById('theme-toggle')?.addEventListener('click', () => {
+      const html = document.documentElement;
+      const actual = html.getAttribute('data-theme') || 'dark';
+      const nuevo = actual === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', nuevo);
+      try { localStorage.setItem('lbdc-theme', nuevo); } catch (e) {}
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.getElementById('nav-toggle');
+      const nav = document.getElementById('main-nav');
+      if (!toggle || !nav) return;
+      toggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const open = nav.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        nav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }));
+      document.addEventListener('click', (e) => {
+        if (!nav.classList.contains('is-open')) return;
+        if (nav.contains(e.target) || toggle.contains(e.target)) return;
+        nav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('btn-top');
+      if (!btn) return;
+      const sync = () => btn.classList.toggle('is-visible', window.scrollY > 400);
+      window.addEventListener('scroll', sync, { passive: true });
+      sync();
+      btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    });
+</script>
+</body>
+</html>

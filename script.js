@@ -1578,16 +1578,6 @@ const PREVENTAS_ACTIVAS = [
     tema: "envio",
   },
   {
-    id: "isla-perdida-universal-2026",
-    active: true,
-    emoji: "🏝️",
-    titulo: "Preventa: La Isla Perdida",
-    texto: "Ya puedes apartar los <strong>coleccionables de La Isla Perdida</strong>.<br><br>Ediciones limitadas: reserva la tuya antes de que se agoten.",
-    link: "preventas.html",
-    linkTexto: "Ver términos de preventa",
-    tema: "universal",
-  },
-  {
     id: "palomera-snoopy-cinemex",
     active: true,
     emoji: "🐶",
