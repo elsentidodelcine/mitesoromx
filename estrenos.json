@@ -817,5 +817,38 @@
     "poster": "imgs/estrenos/tesoros.jpg",
     "cines": ["Cinemex"],
     "nota": "Rusia"
+  },
+  {
+    "id": "gran-golpe",
+    "titulo": "El Último Gran Golpe",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-01",
+    "fechaTexto": "Jueves 01 de Octubre 2026",
+    "poster": "imgs/estrenos/golpe.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "sorop",
+    "titulo": "Sorop Herencia Diabólica",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-01",
+    "fechaTexto": "Jueves 01 de Octubre 2026",
+    "poster": "imgs/estrenos/sorop.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Indonesia"
+  },
+  {
+    "id": "pinocho",
+    "titulo": "Pinocho: El Lado Oscuro",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-01",
+    "fechaTexto": "Jueves 01 de Octubre 2026",
+    "poster": "imgs/estrenos/pinocho.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Estados Unidos"
   }
 ]

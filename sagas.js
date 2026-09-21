@@ -255,7 +255,7 @@ function renderSaga(sagaId) {
       return (
         '<' +
         tag +
-        class="saga-item' +
+        ' class="saga-item' +
         disabled +
         '"' +
         href +
@@ -276,7 +276,7 @@ function renderSaga(sagaId) {
         escapeHTML(item.cuando) +
         '</span>' +
         '<span>Estreno ' +
-        escapeHTML(item.anio) +
+        escapeHTML(String(item.anio)) +
         '</span>' +
         '</div>' +
         (item.nota
