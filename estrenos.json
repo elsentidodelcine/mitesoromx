@@ -850,5 +850,60 @@
     "poster": "imgs/estrenos/pinocho.jpg",
     "cines": ["Cinemex"],
     "nota": "Estados Unidos"
+  },
+  {
+    "id": "volvan",
+    "titulo": "Volcán: Fuego Bajo Tierra",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-01",
+    "fechaTexto": "Jueves 01 de Octubre 2026",
+    "poster": "imgs/estrenos/volcan.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Islandia"
+  },
+  {
+    "id": "kraken",
+    "titulo": "Kraken: Terror En lo Profundo",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-08",
+    "fechaTexto": "Jueves 08 de Octubre 2026",
+    "poster": "imgs/estrenos/kraken.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Noruega"
+  },
+  {
+    "id": "red",
+    "titulo": "El Poder de la Red",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-08",
+    "fechaTexto": "Jueves 08 de Octubre 2026",
+    "poster": "imgs/estrenos/red.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "shaun",
+    "titulo": "Shaun, El Cordero: El Monstruo de Mossy Bottom",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-08",
+    "fechaTexto": "Jueves 08 de Octubre 2026",
+    "poster": "imgs/estrenos/shaun.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Reino Unido"
+  },
+  {
+    "id": "carrie",
+    "titulo": "Carrie. Extraño Presentimiento (Re-Estreno)",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-08",
+    "fechaTexto": "Jueves 08 de Octubre 2026",
+    "poster": "imgs/estrenos/carrie.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Estados Unidos"
   }
 ]

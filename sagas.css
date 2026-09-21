@@ -196,3 +196,46 @@ html[data-theme="light"] .saga-item {
   border-color: rgba(0,0,0,.1);
 }
 html[data-theme="light"] .saga-body h2 { color: #121214; }
+
+.saga-item {
+  display: grid;
+  grid-template-columns: 56px 64px 1fr;
+  gap: 12px 14px;
+  align-items: center;
+}
+
+.saga-poster {
+  width: 64px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #1a1a22;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,.35);
+}
+
+.saga-poster--empty {
+  background: linear-gradient(145deg, #1a1a22, #2a2a35);
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+@media (max-width: 520px) {
+  .saga-item {
+    grid-template-columns: 44px 52px 1fr;
+    gap: 10px;
+  }
+  .saga-poster {
+    width: 52px;
+    height: 78px;
+  }
+  .saga-num {
+    width: 36px;
+    height: 36px;
+    font-size: .85rem;
+  }
+}
+
+/* la línea vertical del timeline: ajustar si hace falta */
+.saga-timeline::before {
+  left: 27px;
+}

@@ -3118,7 +3118,6 @@ body.dark .btn-wishlist {
 }
 
 /* === TEMAS === */
-/* === TEMAS === */
 
 .carousel-slide--marvel {
   background: linear-gradient(135deg, #b71c1c 0%, #c62828 40%, #1a237e 100%);
@@ -3145,6 +3144,21 @@ body.dark .btn-wishlist {
   color: #000;
 }
 
+/* Cinemex / Scream 30 años (versión slasher) */
+.carousel-slide--cinemex {
+  background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 35%, #5c0a0a 75%, #2b0000 100%);
+  border-color: rgba(220, 20, 60, 0.3);
+}
+.carousel-slide--cinemex .banner-btn {
+  background: #e8e8e8;
+  color: #1a0000;
+  font-weight: 700;
+}
+.carousel-slide--cinemex .banner-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
 /* FedEx / envíos */
 .carousel-slide--envio {
   background: linear-gradient(135deg, #4a148c 0%, #6a1b9a 40%, #e65100 100%);
@@ -3160,35 +3174,8 @@ body.dark .btn-wishlist {
   color: #000;
 }
 
-/* Universal / La Isla Perdida */
-.carousel-slide--universal {
-  background: linear-gradient(135deg, #01579b 0%, #0277bd 45%, #00838f 100%);
-  border-color: rgba(0, 188, 212, 0.25);
-}
-.carousel-slide--universal .banner-btn {
-  background: #e0f7fa;
-  color: #01579b;
-  font-weight: 700;
-}
-.carousel-slide--universal .banner-btn:hover {
-  background: #fff;
-  color: #013a63;
-}
 
-/* Cinemex / Snoopy */
-.carousel-slide--cinemex {
-  background: linear-gradient(135deg, #b71c1c 0%, #c62828 40%, #f9a825 100%);
-  border-color: rgba(249, 168, 37, 0.3);
-}
-.carousel-slide--cinemex .banner-btn {
-  background: #fff;
-  color: #b71c1c;
-  font-weight: 700;
-}
-.carousel-slide--cinemex .banner-btn:hover {
-  background: #ffe0e0;
-  color: #7f0000;
-}
+
 
 .carousel-slide--generic {
   background: linear-gradient(135deg, #1a1a1a 0%, #2d1a1a 50%, #1a1a2d 100%);

@@ -19,7 +19,8 @@ const SAGAS = {
         cuando: '1943–1945',
         fase: 'Fase 1',
         nota: 'Segunda Guerra Mundial. Origen de Steve Rogers.',
-        resena: null // ej: 'blog.html#capitan-america-primer-vengador'
+        poster: 'imgs/sagas/ucm/capitan.jpeg',
+        resena: 'review.html?id='
       },
       {
         id: 'capitana-marvel',
@@ -28,7 +29,8 @@ const SAGAS = {
         cuando: '1995',
         fase: 'Fase 3',
         nota: 'Ambientada décadas antes del resto del UCM moderno.',
-        resena: null
+        poster: 'imgs/sagas/ucm/marvel.jpeg',
+        resena: 'review.html?id='
       },
       {
         id: 'iron-man',
@@ -37,7 +39,8 @@ const SAGAS = {
         cuando: '2008',
         fase: 'Fase 1',
         nota: 'El punto de partida del UCM moderno. “Yo soy Iron Man”.',
-        resena: null
+        poster: 'imgs/sagas/ucm/ironman.jpeg',
+        resena: 'review.html?id='
       },
       {
         id: 'increible-hulk',
@@ -46,7 +49,8 @@ const SAGAS = {
         cuando: '2008 / Semana de Furia',
         fase: 'Fase 1',
         nota: 'Paralela al arranque de la era Stark; encaja cerca de Iron Man 2 / Thor.',
-        resena: null
+        poster: 'imgs/sagas/ucm/hulk.jpeg',
+        resena: 'review.html?id='
       },
       {
         id: 'iron-man-2',
@@ -55,7 +59,8 @@ const SAGAS = {
         cuando: '2010–2011',
         fase: 'Fase 1',
         nota: 'Semana de Furia: se cruza con Hulk y Thor.',
-        resena: null
+        poster: 'imgs/sagas/ucm/ironman2.jpeg',
+        resena: 'review.html?id='
       },
       {
         id: 'thor',
@@ -64,7 +69,8 @@ const SAGAS = {
         cuando: '2011',
         fase: 'Fase 1',
         nota: 'Cierra la Semana de Furia antes de Los Vengadores.',
-        resena: null
+        poster: 'imgs/sagas/ucm/thor.jpeg',
+        resena: 'review.html?id='
       },
       {
         id: 'vengadores',
@@ -73,7 +79,8 @@ const SAGAS = {
         cuando: '2012',
         fase: 'Fase 1',
         nota: 'Batalla de Nueva York. Cierre de la Fase 1.',
-        resena: null
+        poster: 'imgs/sagas/ucm/avengers.jpeg',
+        resena: 'review.html?id='
       },
       {
         id: 'iron-man-3',
@@ -82,7 +89,8 @@ const SAGAS = {
         cuando: '2012–2013',
         fase: 'Fase 2',
         nota: 'Poco después de Nueva York.',
-        resena: null
+        poster: 'imgs/sagas/ucm/ironman3.jpeg',
+        resena: 'review.html?id='
       },
       {
         id: 'thor-mundo-oscuro',
@@ -91,7 +99,8 @@ const SAGAS = {
         cuando: '2013',
         fase: 'Fase 2',
         nota: 'Éter / Gema de la Realidad.',
-        resena: null
+        poster: 'imgs/sagas/ucm/thor2.jpeg',
+        resena: 'review.html?id='
       },
       {
         id: 'cap-soldado-invierno',
@@ -100,7 +109,8 @@ const SAGAS = {
         cuando: '2014',
         fase: 'Fase 2',
         nota: 'Caída de S.H.I.E.L.D. y Hydra.',
-        resena: null
+        poster: 'imgs/sagas/ucm/capitan2.jpeg',
+        resena: 'review.html?id='
       },
       {
         id: 'guardianes',
@@ -109,7 +119,8 @@ const SAGAS = {
         cuando: '2014',
         fase: 'Fase 2',
         nota: 'Gema del Poder. Historia paralela en el espacio.',
-        resena: null
+        poster: 'imgs/sagas/ucm/guardianes.jpeg',
+        resena: 'review.html?id='
       },
       {
         id: 'guardianes-2',
@@ -118,7 +129,8 @@ const SAGAS = {
         cuando: '2014 (+meses)',
         fase: 'Fase 3',
         nota: 'Pocos meses después del Vol. 1 (aunque se estrenó en 2017).',
-        resena: null
+        poster: 'imgs/sagas/ucm/guardianes2.jpeg',
+        resena: 'review.html?id='
       },
       {
         id: 'era-ultron',
@@ -127,7 +139,8 @@ const SAGAS = {
         cuando: '2015',
         fase: 'Fase 2',
         nota: 'Sokovia. Visión y gemas.',
-        resena: null
+        poster: 'imgs/sagas/ucm/ultron.jpeg',
+        resena: 'review.html?id='
       },
       {
         id: 'ant-man',
@@ -136,7 +149,8 @@ const SAGAS = {
         cuando: '2015',
         fase: 'Fase 2',
         nota: 'Después de Ultrón; reino cuántico.',
-        resena: null
+        poster: 'imgs/sagas/ucm/antman.jpeg',
+        resena: 'review.html?id='
       },
       {
         id: 'civil-war',
@@ -145,7 +159,8 @@ const SAGAS = {
         cuando: '2016',
         fase: 'Fase 3',
         nota: 'Acuerdos de Sokovia. Debut de Spider-Man y Black Panther.',
-        resena: null
+        poster: 'imgs/sagas/ucm/capitan3.jpeg',
+        resena: 'review.html?id='
       },
       {
         id: 'doctor-strange',
@@ -154,7 +169,8 @@ const SAGAS = {
         cuando: '2016–2017',
         fase: 'Fase 3',
         nota: 'Kamar-Taj y la Gema del Tiempo.',
-        resena: null
+        poster: 'imgs/sagas/ucm/strange.jpeg',
+        resena: 'review.html?id='
       },
       {
         id: 'homecoming',
@@ -163,7 +179,8 @@ const SAGAS = {
         cuando: '2016 (post Civil War)',
         fase: 'Fase 3',
         nota: 'Poco después de Civil War.',
-        resena: null
+        poster: 'imgs/sagas/ucm/spiderman.jpeg',
+        resena: 'review.html?id='
       },
       {
         id: 'black-panther',
@@ -172,7 +189,8 @@ const SAGAS = {
         cuando: '2016–2018',
         fase: 'Fase 3',
         nota: 'Tras la muerte de T’Chaka en Civil War.',
-        resena: null
+        poster: 'imgs/sagas/ucm/pantera.jpeg',
+        resena: 'review.html?id='
       },
       {
         id: 'ragnarok',
@@ -181,7 +199,8 @@ const SAGAS = {
         cuando: '2017',
         fase: 'Fase 3',
         nota: 'Camino directo a Infinity War.',
-        resena: null
+        poster: 'imgs/sagas/ucm/thor3.jpeg',
+        resena: 'review.html?id='
       },
       {
         id: 'ant-man-avispa',
@@ -190,7 +209,8 @@ const SAGAS = {
         cuando: '2018',
         fase: 'Fase 3',
         nota: 'Paralela / justo antes del chasquido.',
-        resena: null
+        poster: 'imgs/sagas/ucm/antman2.jpeg',
+        resena: 'review.html?id='
       },
       {
         id: 'infinity-war',
@@ -199,7 +219,8 @@ const SAGAS = {
         cuando: '2018',
         fase: 'Fase 3',
         nota: 'Thanos y el chasquido.',
-        resena: null
+        poster: 'imgs/sagas/ucm/infinity.jpeg',
+        resena: 'review.html?id='
       },
       {
         id: 'endgame',
@@ -208,7 +229,8 @@ const SAGAS = {
         cuando: '2018–2023',
         fase: 'Fase 3',
         nota: 'Cierre de la Infinity Saga.',
-        resena: null
+        poster: 'imgs/sagas/ucm/endgame.jpeg',
+        resena: 'review.html?id='
       }
     ]
   }
@@ -240,55 +262,44 @@ function renderSaga(sagaId) {
     '</span>';
 
   timeline.innerHTML = saga.items
-    .map(function (item, i) {
-      var n = i + 1;
-      var tieneResena = item.resena && String(item.resena).trim();
-      var tag = tieneResena ? 'a' : 'div';
-      var href = tieneResena
-        ? ' href="' + escapeHTML(item.resena) + '"'
-        : '';
-      var disabled = tieneResena ? '' : ' is-disabled';
-      var cta = tieneResena
-        ? '<span class="saga-cta">Ver reseña →</span>'
-        : '<span class="saga-cta">Reseña pendiente</span>';
+       .map(function (item, i) {
+         var n = i + 1;
+         var tieneResena = item.resena && String(item.resena).trim();
+         var tag = tieneResena ? 'a' : 'div';
+         var href = tieneResena ? ' href="' + escapeHTML(item.resena) + '"' : '';
+         var disabled = tieneResena ? '' : ' is-disabled';
+         var cta = tieneResena
+           ? '<span class="saga-cta">Ver reseña →</span>'
+           : '<span class="saga-cta">Reseña pendiente</span>';
 
-      return (
-        '<' +
-        tag +
-        ' class="saga-item' +
-        disabled +
-        '"' +
-        href +
-        (tieneResena ? '' : ' aria-disabled="true"') +
-        '>' +
-        '<div class="saga-num">' +
-        n +
-        '</div>' +
-        '<div class="saga-body">' +
-        '<h2>' +
-        escapeHTML(item.titulo) +
-        '</h2>' +
-        '<div class="saga-meta-row">' +
-        '<span class="saga-fase">' +
-        escapeHTML(item.fase) +
-        '</span>' +
-        '<span>' +
-        escapeHTML(item.cuando) +
-        '</span>' +
-        '<span>Estreno ' +
-        escapeHTML(String(item.anio)) +
-        '</span>' +
-        '</div>' +
-        (item.nota
-          ? '<p class="saga-nota">' + escapeHTML(item.nota) + '</p>'
-          : '') +
-        cta +
-        '</div>' +
-        '</' +
-        tag +
-        '>'
-      );
-    })
+         var poster = item.poster
+           ? '<img class="saga-poster" src="' + escapeHTML(item.poster) + '" alt="" loading="lazy" onerror="this.style.visibility=\'hidden\'">'
+           : '<div class="saga-poster saga-poster--empty" aria-hidden="true"></div>';
+
+         return (
+           '<' +
+           tag +
+           ' class="saga-item' +
+           disabled +
+           '"' +
+           href +
+           (tieneResena ? '' : ' aria-disabled="true"') +
+           '>' +
+           '<div class="saga-num">' + n + '</div>' +
+           poster +
+           '<div class="saga-body">' +
+           '<h2>' + escapeHTML(item.titulo) + '</h2>' +
+           '<div class="saga-meta-row">' +
+           '<span class="saga-fase">' + escapeHTML(item.fase) + '</span>' +
+           '<span>' + escapeHTML(item.cuando) + '</span>' +
+           '<span>Estreno ' + escapeHTML(String(item.anio)) + '</span>' +
+           '</div>' +
+           (item.nota ? '<p class="saga-nota">' + escapeHTML(item.nota) + '</p>' : '') +
+           cta +
+           '</div>' +
+           '</' + tag + '>'
+         );
+       })
     .join('');
 }
 
