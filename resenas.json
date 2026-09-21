@@ -1124,5 +1124,132 @@
     ],
     "cita": "La historia está hecha una verdadera licuadora.",
     "veredicto": "Nostalgia y soundtrack ochentero genial, pero demasiados personajes y una resolución apresurada. Interesante por el contexto de época, nada más. Neutral, pero olvidable."
+  },
+  {
+    "id": "capitan-america-el-primer-vengador",
+    "titulo": "Capitán América: El primer vengador",
+    "anio": 2011,
+    "fecha": "2026-09-21",
+    "duracion": "124 min",
+    "generos": ["Acción", "Aventuras", "Ciencia ficción"],
+    "puntaje": 3.5,
+    "destacada": false,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "Buen origen de Steve Rogers y la época de la Segunda Guerra Mundial con Hydra. La parte de la guerra funciona, la propaganda baja el ritmo, pero la química con Peggy y el contexto del maratón lo hacen disfrutable.",
+    "poster": "imgs/sagas/ucm/capitan.jpeg",
+    "posterFallback": {
+      "linea1": "Capitán América:",
+      "linea2": "El primer vengador"
+    },
+    "letterboxd": "https://letterboxd.com/film/captain-america-the-first-avenger",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt0458339/",
+      "rating": "6.9"
+    },
+    "lead": "Buena película para conocer los inicios de Steve Rogers. La guerra es lo mejor, la propaganda sobra un poco, pero la química con Peggy y el valor dentro del maratón la elevan.",
+    "contenido": [
+      "Ya vi Capitán América: El primer vengador (2011) y la verdad sí me gustó. Me parece una buena película para conocer los inicios de Steve Rogers como Capitán América y entender un poco mejor esa época de la Segunda Guerra Mundial, pero con Hydra como el enemigo principal. Tiene un buen comienzo y la parte de la guerra es, para mí, lo que más funciona.",
+      "Lo que no me gustó fue toda la parte de la propaganda. Ver al Capitán América haciendo shows y recorriendo diferentes ciudades para vender bonos de guerra hizo que la película perdiera bastante fuerza. Siento que pudieron aprovechar mucho más esa parte para mantener el ritmo y mostrarnos al personaje en acción.",
+      "También me gustó mucho la relación entre Steve y Peggy Carter. Es de esas relaciones que sí me hubiera gustado que tuvieran más tiempo juntos, porque hay química entre los dos y el final pega más por lo que pudo haber sido. Y ahora que estoy haciendo el maratón de camino a Avengers: Doomsday, está chido volver a ver a Peggy, Bucky y Steve desde sus comienzos y recordar cómo empezó todo."
+    ],
+    "cita": "La parte de la guerra es, para mí, lo que más funciona.",
+    "veredicto": "Sólido origen de Capitán América. La guerra y la química con Peggy destacan, aunque la propaganda baja un poco el ritmo. Buen arranque para el maratón."
+  },
+  {
+    "id": "capitana-marvel",
+    "titulo": "Capitana Marvel",
+    "anio": 2019,
+    "fecha": "2026-09-21",
+    "duracion": "123 min",
+    "generos": ["Acción", "Ciencia ficción", "Aventuras"],
+    "puntaje": 2.5,
+    "destacada": false,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "Historia sencilla del origen de Carol Danvers. Efectos irregulares, poderes demasiado fáciles y una protagonista que termina alejándose del resto del universo. No es mala, pero tampoco es la gran cosa.",
+    "poster": "imgs/sagas/ucm/marvel.jpeg",
+    "posterFallback": {
+      "linea1": "Capitana",
+      "linea2": "Marvel"
+    },
+    "letterboxd": "https://letterboxd.com/film/captain-marvel-2019",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt4154664/",
+      "rating": "6.7"
+    },
+    "lead": "No me gustó tanto. Origen poco convincente, poderes demasiado fáciles y una heroína que se aleja del resto de Marvel. Cumple, pero no es la gran cosa.",
+    "contenido": [
+      "Ya vi Capitana Marvel (2019) y la verdad no me gustó tanto. La película se ve bonita en cuanto a efectos, aunque hay momentos donde algunos efectos se sienten bastante chafas. La historia es sencilla y nos cuenta cómo Carol Danvers obtiene sus poderes, su regreso a la Tierra y su relación con los Kree y los Skrull durante la guerra entre ambas especies.",
+      "Lo que menos me gustó fue precisamente el origen de Capitana Marvel. Un accidente con el motor de un avión y prácticamente de ahí obtiene unos poderes increíbles y se convierte en una de las personajes más poderosas de todo Marvel. Entiendo que posteriormente vemos por qué es tan importante cuando ayuda a los Vengadores contra Thanos, pero su presentación como heroína no me terminó de convencer.",
+      "Tampoco me gustó que después de pasar tanto tiempo en la Tierra decidiera irse al espacio. Siento que eso terminó alejándola demasiado del resto de los personajes. Y aunque sabemos que es muy poderosa, después de esta película tampoco tiene tanto protagonismo: aparece en Endgame, donde destruye la nave de Thanos, y posteriormente en The Marvels, pero sigue dividida entre la Tierra y el espacio.",
+      "En general, Capitana Marvel no me parece una mala película, simplemente siento que no es la gran cosa. Tiene una historia sencilla, una protagonista demasiado poderosa desde el principio y, para mí, no aprovechó todo lo que podía haber significado Carol Danvers dentro del universo de Marvel."
+    ],
+    "cita": "Su presentación como heroína no me terminó de convencer.",
+    "veredicto": "Historia sencilla y origen poco convincente. Efectos irregulares y una protagonista demasiado poderosa que termina alejándose. No es mala, pero no es la gran cosa."
+  },
+  {
+    "id": "iron-man",
+    "titulo": "Iron Man",
+    "anio": 2008,
+    "fecha": "2026-09-21",
+    "duracion": "126 min",
+    "generos": ["Acción", "Ciencia ficción", "Aventuras"],
+    "puntaje": 3.5,
+    "destacada": false,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "El origen de Tony Stark y el verdadero inicio del MCU. Historia sencilla pero efectiva, armaduras progresivas y la primera escena postcréditos. Funciona muy bien como arranque.",
+    "poster": "imgs/sagas/ucm/ironman.jpeg",
+    "posterFallback": {
+      "linea1": "Iron Man",
+      "linea2": ""
+    },
+    "letterboxd": "https://letterboxd.com/film/iron-man-2008",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt0371746/",
+      "rating": "7.9"
+    },
+    "lead": "Sí me gustó. Tony Stark engreído que se transforma en héroe, armaduras progresivas y el nacimiento del MCU. Historia sencilla pero efectiva.",
+    "contenido": [
+      "Ya vi Iron Man (2008) y la verdad sí me gustó. Aquí conocemos a un Tony Stark engreído, millonario, fiestero y que vive prácticamente haciendo lo que quiere. Pero todo cambia cuando se da cuenta de que la tecnología de Stark está siendo utilizada para hacer daño y comienza a cuestionarse lo que está haciendo con su empresa.",
+      "Me gusta mucho ver cómo comienza a convertirse en Iron Man, desde la primera armadura que construye hasta llegar al traje que conocemos. El villano es bastante sencillo: simplemente quiere quedarse con la empresa y con la tecnología de Tony. No me parece la gran cosa como villano, pero cumple para esta historia.",
+      "También está muy chido volver a ver a Tony junto a Pepper Potts y Rhodey, aunque aquí Rhodey todavía es interpretado por Terrence Howard. Y obviamente tenemos algo histórico para el MCU: la primera escena postcréditos, donde Nick Fury aparece para hablarle a Tony sobre la iniciativa de los Vengadores.",
+      "Y es que aquí fue donde comenzó todo el Universo Cinematográfico de Marvel. Puede que la historia sea sencilla, pero como inicio funciona muy bien. Ver nuevamente a Tony Stark desde el principio, cuando apenas está construyendo su camino para convertirse en Iron Man, hace que este maratón rumbo a Avengers: Doomsday se sienta todavía más interesante."
+    ],
+    "cita": "Aquí fue donde comenzó todo el Universo Cinematográfico de Marvel.",
+    "veredicto": "Origen sólido de Tony Stark y verdadero punto de partida del MCU. Historia sencilla pero efectiva, con buen progreso de armaduras y la primera postcréditos. Funciona muy bien."
+  },
+  {
+    "id": "iron-man-2",
+    "titulo": "Iron Man 2",
+    "anio": 2010,
+    "fecha": "2026-09-21",
+    "duracion": "124 min",
+    "generos": ["Acción", "Ciencia ficción", "Aventuras"],
+    "puntaje": 3.0,
+    "destacada": false,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "Un escalón por debajo de la primera. Tony lidia con el reactor que lo mata, la tecnología de Stark sigue causando problemas y se introducen piezas clave del MCU. Funciona, pero más sencilla.",
+    "poster": "imgs/sagas/ucm/ironman2.jpeg",
+    "posterFallback": {
+      "linea1": "Iron Man",
+      "linea2": "2"
+    },
+    "letterboxd": "https://letterboxd.com/film/iron-man-2",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt1228705/",
+      "rating": "6.9"
+    },
+    "lead": "Sí me gustó, aunque está un escalón por debajo de la primera. Consecuencias, nuevas piezas del MCU y una historia sencilla que funciona para seguir construyendo el universo.",
+    "contenido": [
+      "Ya vi Iron Man 2 (2010) y la verdad sí me gustó, aunque siento que está un escalón por debajo de la primera. Aquí vemos directamente las consecuencias de lo ocurrido anteriormente: Tony ya sabe que el reactor que tiene en el pecho lo está matando y se obsesiona con encontrar una nueva fuente de energía que pueda mantenerlo con vida. Al mismo tiempo, su propia tecnología vuelve a convertirse en el problema, porque ahora otros están utilizándola para crear armas y robots.",
+      "Y es curioso porque, desde esta película hasta las más recientes de Spider-Man dentro del MCU, la tecnología de Stark sigue siendo prácticamente la principal fuente de problemas para los villanos. Aquí tenemos a Justin Hammer intentando competir con Tony, mientras Whiplash utiliza la tecnología para crear sus propios robots y buscar venganza. La historia es sencilla y siento que pudieron hacer algo más interesante, pero funciona.",
+      "Lo que sí me gusta es todo lo que introduce para el futuro del universo: tenemos a War Machine con Don Cheadle tomando el lugar de Rhodey, Pepper Potts haciéndose cargo de Stark Industries, la relación entre Tony y Pepper, y por supuesto la llegada de Viuda Negra, que cada vez que aparece en pantalla parece que le cae un rayito de luz encima. También empezamos a ver más la relación de Tony con Nick Fury, Coulson y S.H.I.E.L.D.",
+      "Las peleas tienen algunos momentos buenos, especialmente la batalla con los robots, pero tampoco me parece que sean la gran cosa. Y nuevamente tenemos una escena postcréditos que prepara lo siguiente: el martillo de Thor. Es una película más sencilla que la primera, pero sigue siendo importante para entender cómo comenzó a crecer este universo."
+    ],
+    "cita": "La tecnología de Stark sigue siendo prácticamente la principal fuente de problemas para los villanos.",
+    "veredicto": "Un escalón por debajo de la primera, pero importante para el MCU. Introduce piezas clave y funciona, aunque la historia es más sencilla y el villano no destaca."
   }
 ]

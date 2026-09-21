@@ -20,7 +20,7 @@ const SAGAS = {
         fase: 'Fase 1',
         nota: 'Segunda Guerra Mundial. Origen de Steve Rogers.',
         poster: 'imgs/sagas/ucm/capitan.jpeg',
-        resena: 'review.html?id='
+        resena: 'review.html?id=capitan-america-el-primer-vengador'
       },
       {
         id: 'capitana-marvel',
@@ -30,7 +30,7 @@ const SAGAS = {
         fase: 'Fase 3',
         nota: 'Ambientada décadas antes del resto del UCM moderno.',
         poster: 'imgs/sagas/ucm/marvel.jpeg',
-        resena: 'review.html?id='
+        resena: 'review.html?id=capitana-marvel'
       },
       {
         id: 'iron-man',
@@ -40,7 +40,7 @@ const SAGAS = {
         fase: 'Fase 1',
         nota: 'El punto de partida del UCM moderno. “Yo soy Iron Man”.',
         poster: 'imgs/sagas/ucm/ironman.jpeg',
-        resena: 'review.html?id='
+        resena: 'review.html?id=iron-man'
       },
       {
         id: 'increible-hulk',
@@ -60,7 +60,7 @@ const SAGAS = {
         fase: 'Fase 1',
         nota: 'Semana de Furia: se cruza con Hulk y Thor.',
         poster: 'imgs/sagas/ucm/ironman2.jpeg',
-        resena: 'review.html?id='
+        resena: 'review.html?id=iron-man-2'
       },
       {
         id: 'thor',
