@@ -1548,16 +1548,6 @@ document.addEventListener("touchend", (e) => {
    ========================================================= */
 const PREVENTAS_ACTIVAS = [
   {
-    id: "avengers-doomsday",
-    active: true,
-    emoji: "🦸",
-    titulo: "Preventa Avengers Endageme: Encore",
-   texto: "Ya puedes apartar el <strong>coleccionable de Iron Man</strong>.<br><br>Ediciones limitadas: reserva la tuya antes de que se agoten.",
-    link: "preventas.html",
-    linkTexto: "Ver términos de preventa",
-    tema: "marvel",
-  },
-  {
     id: "mercado-libre",
     active: true,
     emoji: "🛒",

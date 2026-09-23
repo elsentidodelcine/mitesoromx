@@ -2,7 +2,7 @@
 
   { "nombre": "Preventa Palomera Scream Cinemex", "categoria": "Peliculas", "precio": 999, "imagen": "imgs/scream.jpg" ,"badge": "preventa", "stock": 3},
   { "nombre": "Palomera Snoopy Cinemex", "categoria": "Infantil", "precio": 720, "imagen": "imgs/snoopy.jpg" ,"badge": "preventa", "stock": 1},
-  { "nombre": "Palomera La Isla Cinepolis", "categoria": "Infantil", "precio": 520, "imagen": "imgs/isla.jpg" ,"badge": "preventa", "stock": },
+  { "nombre": "Palomera La Isla Cinepolis", "categoria": "Infantil", "precio": 520, "imagen": "imgs/isla.jpg" ,"badge": "preventa", "stock": 1},
   { "nombre": "Palomera Rapido y Furioso Cinemex", "categoria": "Marvel", "precio": 790, "imagen": "imgs/rapido100.jpg" ,"badge": "preventa", "stock": 0},
   { "nombre": "Vaso 100 Años Cocacola Cinemex", "categoria": "Marvel", "precio": 360, "imagen": "imgs/coca100.jpg" ,"badge": "preventa", "stock": 1},
   { "nombre": "Palomera Iron Man Encore Cinepolis", "categoria": "Marvel", "precio": 950, "imagen": "imgs/encore.jpg" ,"badge": "preventa", "stock": 1},
