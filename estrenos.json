@@ -31,7 +31,7 @@
     "id": "transformers",
     "titulo": "Transformers: La película",
     "tipo": "estreno",
-    "estadoCartelera": "estreno",
+    "estadoCartelera": "cartelera",
     "fecha": "2026-09-17",
     "fechaTexto": "Jueves 17 de Septiembre 2026",
     "poster": "imgs/estrenos/transformers.jpg",
@@ -53,7 +53,7 @@
     "id": "one",
     "titulo": "One Piece: La Película (2000)",
     "tipo": "estreno",
-    "estadoCartelera": "estreno",
+    "estadoCartelera": "cartelera",
     "fecha": "2026-09-17",
     "fechaTexto": "Miércoles 16 de Septiembre 2026",
     "poster": "imgs/estrenos/one.jpg",
@@ -119,7 +119,7 @@
     "id": "zoe",
     "titulo": "ZOÉ: Memorex + Rexsexex Y Más",
     "tipo": "estreno",
-    "estadoCartelera": "estreno",
+    "estadoCartelera": "cartelera",
     "fecha": "2026-09-17",
     "fechaTexto": "Jueves 17 de Septiembre del 2026",
     "poster": "imgs/estrenos/zoe.jpg",
@@ -129,8 +129,8 @@
   {
     "id": "pulp",
     "titulo": "PULP: ¿Qué harías por una canción más?",
-    "tipo": "preventa",
-    "estadoCartelera": "preventa",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
     "fecha": "2026-09-24",
     "fechaTexto": "Jueves 24 de Septiembre del 2026",
     "poster": "imgs/estrenos/pulp.jpg",
@@ -181,7 +181,7 @@
     "id": "madre",
     "titulo": "A Toda Madre",
     "tipo": "estreno",
-    "estadoCartelera": "estreno",
+    "estadoCartelera": "cartelera",
     "fecha": "2026-09-16",
     "fechaTexto": "Miércoles 16 de Septiembre del 2026",
     "poster": "imgs/estrenos/madre.jpg",
@@ -212,20 +212,12 @@
   {
     "id": "hija",
     "titulo": "Él Me Llama Su Hija",
-    "tipo": "preventa",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
     "fecha": "2026-09-24",
     "fechaTexto": "Jueves 24 de Septiembre 2026",
     "poster": "imgs/estrenos/hija.jpg",
-    "cines": ["Cinemex", "Cinepolis"],
-    "links": [
-      {
-        "cine": "Cinemex",
-        "url": "https://cinemex.com"
-      },
-      {
-        "cine": "Cinepolis",
-        "url": "https://www.cinepolis.com"
-      }
+    "cines": ["Cinepolis"],
     ],
     "nota": "Preventa ya disponible"
   },
@@ -249,30 +241,30 @@
   {
     "id": "encore",
     "titulo": "Avengers: Endgame Bonus",
-    "tipo": "preventa",
-    "estadoCartelera": "preventa",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
     "fecha": "2026-09-24",
     "fechaTexto": "Jueves 24 de Septiembre del 2026",
     "poster": "imgs/estrenos/encore.jpg",
-    "cines": ["Cinepolis", "Cinemex"],
+    "cines": ["Cinepolis", "Cinemex", "Movie Center"],
     "nota": "Estados Unidos"
   },
   {
     "id": "encore",
     "titulo": "Avengers: Endgame Bonus Infinity Vision",
-    "tipo": "preventa",
-    "estadoCartelera": "preventa",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
     "fecha": "2026-09-24",
     "fechaTexto": "Jueves 24 de Septiembre del 2026",
     "poster": "imgs/estrenos/infinity.jpg",
-    "cines": ["Cinepolis", "Cinemex"],
+    "cines": ["Cinepolis", "Cinemex", "Movie Center"],
     "nota": "Estados Unidos"
   },
   {
     "id": "terminator",
     "titulo": "Terminator 2: El Juicio Final",
     "tipo": "estreno",
-    "estadoCartelera": "estreno",
+    "estadoCartelera": "fuera",
     "fecha": "2026-09-16",
     "fechaTexto": "Miércoles 16 de Septiembre del 2026",
     "poster": "imgs/estrenos/terminator.jpg",
@@ -325,7 +317,7 @@
     "id": "vecino",
     "titulo": "Mi Vecino Totoro",
     "tipo": "estreno",
-    "estadoCartelera": "cartelera",
+    "estadoCartelera": "fuera",
     "fecha": "2026-09-10",
     "fechaTexto": "Jueves 10 de Septiembre del 2026",
     "poster": "imgs/estrenos/vecino.jpg",
@@ -336,7 +328,7 @@
     "id": "akira",
     "titulo": "AKIRA 4K",
     "tipo": "estreno",
-    "estadoCartelera": "cartelera",
+    "estadoCartelera": "fuera",
     "fecha": "2026-09-10",
     "fechaTexto": "Jueves 10 de Septiembre del 2026",
     "poster": "imgs/estrenos/akira.jpg",
@@ -346,17 +338,12 @@
   {
     "id": "nct",
     "titulo": "NCT 127 5TH TOUR 'NEO CITY: SEOUL THE REDLINE’ in CINEMAS",
-    "tipo": "preventa",
+    "tipo": "estreno",
+    "estadoCartelera": "fuera",
     "fecha": "2026-09-20",
     "fechaTexto": "Domingo 20 de Septiembre del 2026",
     "poster": "imgs/estrenos/nct.jpg",
     "cines": ["Cinepolis"],
-    "links": [
-      {
-        "cine": "Cinepolis",
-        "url": "https://www.cinepolis.com"
-      }
-    ],
     "nota": "Preventa ya disponible"
   },
   {
@@ -547,7 +534,7 @@
     "id": "oasis",
     "titulo": "Oasis: Don't Look Back In Anger",
     "tipo": "estreno",
-    "estadoCartelera": "cartelera",
+    "estadoCartelera": "fuera",
     "fecha": "2026-09-10",
     "fechaTexto": "Jueves 10 de Septiembre 2026",
     "poster": "imgs/estrenos/reseñas.jpg",
@@ -569,7 +556,7 @@
     "id": "resident",
     "titulo": "Resident Evil: Noche Cero",
     "tipo": "estreno",
-    "estadoCartelera": "estreno",
+    "estadoCartelera": "cartelera",
     "fecha": "2026-09-16",
     "fechaTexto": "Miércoles 16 de Septiembre 2026",
     "poster": "imgs/estrenos/resident.jpg",
@@ -602,7 +589,7 @@
     "id": "evelyn",
     "titulo": "La Maldición De Evelyn",
     "tipo": "estreno",
-    "estadoCartelera": "cartelera",
+    "estadoCartelera": "fuera",
     "fecha": "2026-09-10",
     "fechaTexto": "Jueves 10 de Septiembre 2026",
     "poster": "imgs/estrenos/evelyn.jpg",
@@ -634,8 +621,8 @@
   {
     "id": "coraline",
     "titulo": "Coraline y la Puerta Secreta (Re-estreno 2026)",
-    "tipo": "preventa",
-    "estadoCartelera": "preventa",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
     "fecha": "2026-09-24",
     "fechaTexto": "Jueves 24 de Septiembre 2026",
     "poster": "imgs/estrenos/coraline.jpg",
@@ -645,8 +632,8 @@
   {
     "id": "tren",
     "titulo": "Detengan Ese Tren",
-    "tipo": "preventa",
-    "estadoCartelera": "preventa",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
     "fecha": "2026-09-24",
     "fechaTexto": "Jueves 24 de Septiembre 2026",
     "poster": "imgs/estrenos/tren.jpg",
@@ -678,12 +665,12 @@
   {
     "id": "bestia",
     "titulo": "El Corazón De La Bestia",
-    "tipo": "preventa",
-    "estadoCartelera": "preventa",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
     "fecha": "2026-09-24",
     "fechaTexto": "Jueves 24 de Septiembre del 2026",
     "poster": "imgs/estrenos/bestia.jpg",
-    "cines": ["Cinepolis", "Cinemex"],
+    "cines": ["Cinepolis", "Cinemex", "Movie Center"],
     "nota": "Estados Unidos"
   },
   {
@@ -712,7 +699,7 @@
     "id": "isla",
     "titulo": "La Isla Olvidada",
     "tipo": "estreno",
-    "estadoCartelera": "estreno",
+    "estadoCartelera": "preventa",
     "fecha": "2026-09-16",
     "fechaTexto": "Miércoles 16 de Septiembre 2026",
     "poster": "imgs/estrenos/isla.jpg",
@@ -723,7 +710,7 @@
     "id": "precio",
     "titulo": "A Cualquier Precio",
     "tipo": "estreno",
-    "estadoCartelera": "estreno",
+    "estadoCartelera": "cartelera",
     "fecha": "2026-09-16",
     "fechaTexto": "Miércoles 16 de Septiembre 2026",
     "poster": "imgs/estrenos/precio.jpg",
@@ -734,7 +721,7 @@
     "id": "paranorman",
     "titulo": "Paranorman (Re Estreno)",
     "tipo": "estreno",
-    "estadoCartelera": "estreno",
+    "estadoCartelera": "fuera",
     "fecha": "2026-09-16",
     "fechaTexto": "Miércoles 16 de Septiembre 2026",
     "poster": "imgs/estrenos/paranorman.jpg",
@@ -745,7 +732,7 @@
     "id": "viaje",
     "titulo": "Jikuri: Viaje al País de los Tarahumaras",
     "tipo": "estreno",
-    "estadoCartelera": "estreno",
+    "estadoCartelera": "cartelera",
     "fecha": "2026-09-16",
     "fechaTexto": "Miércoles 16 de Septiembre 2026",
     "poster": "imgs/estrenos/viaje.jpg",
@@ -766,8 +753,8 @@
   {
     "id": "mary-y-max",
     "titulo": "Mary y Max (2009)",
-    "tipo": "preventa",
-    "estadoCartelera": "preventa",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
     "fecha": "2026-09-24",
     "fechaTexto": "Jueves 24 de Septiembre 2026",
     "poster": "imgs/estrenos/mary.jpg",
@@ -777,12 +764,12 @@
   {
     "id": "vertigo2",
     "titulo": "Vertigo 2: Punto Muerto",
-    "tipo": "preventa",
-    "estadoCartelera": "preventa",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
     "fecha": "2026-09-24",
     "fechaTexto": "Jueves 24 de Septiembre 2026",
     "poster": "imgs/estrenos/vertigo2.jpg",
-    "cines": ["Cinemex", "Cinepolis"],
+    "cines": ["Cinemex", "Cinepolis", "Movie Center"],
     "nota": "Australia"
   },
   {
@@ -799,8 +786,8 @@
   {
     "id": "descenso",
     "titulo": "El Descenso (2005)",
-    "tipo": "preventa",
-    "estadoCartelera": "preventa",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
     "fecha": "2026-09-24",
     "fechaTexto": "Jueves 24 de Septiembre 2026",
     "poster": "imgs/estrenos/descenso.jpg",
@@ -810,12 +797,12 @@
   {
     "id": "tesoros",
     "titulo": "Guardianes del Museo 2: Los Tesoros de Egipto",
-    "tipo": "preventa",
-    "estadoCartelera": "preventa",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
     "fecha": "2026-09-24",
     "fechaTexto": "Jueves 24 de Septiembre 2026",
     "poster": "imgs/estrenos/tesoros.jpg",
-    "cines": ["Cinemex"],
+    "cines": ["Cinemex", "Cinepolis", "Movie Center"],
     "nota": "Rusia"
   },
   {
@@ -905,5 +892,38 @@
     "poster": "imgs/estrenos/carrie.jpg",
     "cines": ["Cinemex"],
     "nota": "Estados Unidos"
+  },
+  {
+    "id": "hombre-agua",
+    "titulo": "Hombre Al Agua",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
+    "fecha": "2026-09-24",
+    "fechaTexto": "Jueves 24 de Septiembre 2026",
+    "poster": "imgs/estrenos/agua.jpg",
+    "cines": [ "Cinepolis"],
+    "nota": "México"
+  },
+  {
+    "id": "rammstein",
+    "titulo": "Rammstein Live in Mexico City",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-04",
+    "fechaTexto": "Miércoles 04 de Noviembre 2026",
+    "poster": "imgs/estrenos/rammstein.jpg",
+    "cines": [ "Cinepolis"],
+    "nota": "México"
+  },
+  {
+    "id": "josef",
+    "titulo": "La Desaparicion de Josef Mengele",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
+    "fecha": "2026-09-24",
+    "fechaTexto": "Jueves 24 de Septiembre 2026",
+    "poster": "imgs/estrenos/josef.jpg",
+    "cines": [ "Cinepolis"],
+    "nota": "Alemania"
   }
 ]
