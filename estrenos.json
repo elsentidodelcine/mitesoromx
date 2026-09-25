@@ -452,7 +452,7 @@
     "id": "rapidos",
     "titulo": "Rapido y Furioso (25 Aniversario)",
     "tipo": "estreno",
-    "estadoCartelera": "cartelera",
+    "estadoCartelera": "fuera",
     "fecha": "2026-09-03",
     "fechaTexto": "Jueves 3 de Septiembre del 2026",
     "poster": "imgs/estrenos/rapidos.jpg",
@@ -864,8 +864,8 @@
     "titulo": "El Poder de la Red",
     "tipo": "preventa",
     "estadoCartelera": "preventa",
-    "fecha": "2026-10-08",
-    "fechaTexto": "Jueves 08 de Octubre 2026",
+    "fecha": "2026-10-22",
+    "fechaTexto": "Jueves 22 de Octubre 2026",
     "poster": "imgs/estrenos/red.jpg",
     "cines": ["Cinemex"],
     "nota": "Estados Unidos"
@@ -924,5 +924,115 @@
     "poster": "imgs/estrenos/josef.jpg",
     "cines": [ "Cinepolis"],
     "nota": "Alemania"
+  },
+  {
+    "id": "ozzy",
+    "titulo": "Ozzy y black sabbath back to the beginning",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-28",
+    "fechaTexto": "Miércoles 28 de Octubre 2026",
+    "poster": "imgs/estrenos/ozzy.jpg",
+    "cines": [ "Cinepolis"],
+    "nota": "Reino Unido"
+  },
+  {
+    "id": "digger",
+    "titulo": "Digger",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-09-29",
+    "fechaTexto": "Jueves 29 de Septiembre 2026",
+    "poster": "imgs/estrenos/digger.jpg",
+    "cines": ["Cinemex", "Cinepolis", "Movie Center"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "banco",
+    "titulo": "Gracias Por Operar Nuestro Banco",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-01",
+    "fechaTexto": "Jueves 01 de Octubre 2026",
+    "poster": "imgs/estrenos/banco.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Palestina"
+  },
+  {
+    "id": "tadeo",
+    "titulo": "Tadeo El Explorador y La Lámpara Maravillosa",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-01",
+    "fechaTexto": "Jueves 01 de Octubre 2026",
+    "poster": "imgs/estrenos/tadeo.jpg",
+    "cines": ["Cinemex"],
+    "nota": "España"
+  },
+  {
+    "id": "hope",
+    "titulo": "Hope: El Primer Impacto",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-01",
+    "fechaTexto": "Jueves 01 de Octubre 2026",
+    "poster": "imgs/estrenos/hope.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Corea del Sur"
+  },
+  {
+    "id": "ballena",
+    "titulo": "La Caída de la Ballena",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-01",
+    "fechaTexto": "Jueves 01 de Octubre 2026",
+    "poster": "imgs/estrenos/ballena.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "muneca",
+    "titulo": "La Isla de las Muñecas",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-15",
+    "fechaTexto": "Jueves 15 de Octubre 2026",
+    "poster": "imgs/estrenos/muneca.jpg",
+    "cines": ["Cinemex"],
+    "nota": "México"
+  },
+  {
+    "id": "amarte",
+    "titulo": "Amarte",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-22",
+    "fechaTexto": "Jueves 22 de Octubre 2026",
+    "poster": "imgs/estrenos/amarte.jpg",
+    "cines": ["Cinemex"],
+    "nota": "México"
+  },
+  {
+    "id": "tierra",
+    "titulo": "Tierra de mi Padre",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-22",
+    "fechaTexto": "Jueves 22 de Octubre 2026",
+    "poster": "imgs/estrenos/tierra.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Polonia"
+  },
+  {
+    "id": "silencio",
+    "titulo": "El Silencio de los Inocentes",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-22",
+    "fechaTexto": "Jueves 22 de Octubre 2026",
+    "poster": "imgs/estrenos/silencio.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Estados Unidos"
   }
 ]
