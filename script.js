@@ -1576,6 +1576,16 @@ const PREVENTAS_ACTIVAS = [
     link: "preventas.html",
     linkTexto: "Ver términos de preventa",
     tema: "cinemex",
+  },
+  {
+    id: "street-fighter-arcade",
+    active: true,
+    emoji: "🕹️",
+    titulo: "Preventa: Street Fighter Arcade",
+    texto: "Ya puedes apartar el <strong>promocional Street Fighter</strong> con vibe arcade.<br><br>Edición para fans del 1v1: reserva antes de que se agote.",
+    link: "preventas.html",
+    linkTexto: "Ver términos de preventa",
+    tema: "streetfighter",
   }
 ];
 

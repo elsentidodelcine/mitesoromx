@@ -3159,6 +3159,20 @@ body.dark .btn-wishlist {
   color: #000;
 }
 
+.carousel-slide--streetfighter {
+  background: linear-gradient(135deg, #050510 0%, #1b0033 40%, #7b2cbf 70%, #ff006e 100%);
+  border-color: rgba(0, 245, 255, 0.35);
+}
+.carousel-slide--streetfighter .banner-btn {
+  background: #00f5ff;
+  color: #050510;
+  font-weight: 700;
+}
+.carousel-slide--streetfighter .banner-btn:hover {
+  background: #fff;
+  color: #7b2cbf;
+}
+
 /* FedEx / envíos */
 .carousel-slide--envio {
   background: linear-gradient(135deg, #4a148c 0%, #6a1b9a 40%, #e65100 100%);
