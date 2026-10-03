@@ -31,7 +31,7 @@
     "id": "transformers",
     "titulo": "Transformers: La película",
     "tipo": "estreno",
-    "estadoCartelera": "cartelera",
+    "estadoCartelera": "fuera",
     "fecha": "2026-09-17",
     "fechaTexto": "Jueves 17 de Septiembre 2026",
     "poster": "imgs/estrenos/transformers.jpg",
@@ -53,7 +53,7 @@
     "id": "one",
     "titulo": "One Piece: La Película (2000)",
     "tipo": "estreno",
-    "estadoCartelera": "cartelera",
+    "estadoCartelera": "fuera",
     "fecha": "2026-09-17",
     "fechaTexto": "Miércoles 16 de Septiembre 2026",
     "poster": "imgs/estrenos/one.jpg",
@@ -64,6 +64,7 @@
     "id": "linkin",
     "titulo": "Linkin Park: Unshatter En Cines",
     "tipo": "preventa",
+    "estadoCartelera": "cartelera",
     "fecha": "2026-09-30",
     "fechaTexto": "Miércoles 30 de Septiembre del 2026",
     "poster": "imgs/estrenos/linkin.jpg",
@@ -119,7 +120,7 @@
     "id": "zoe",
     "titulo": "ZOÉ: Memorex + Rexsexex Y Más",
     "tipo": "estreno",
-    "estadoCartelera": "cartelera",
+    "estadoCartelera": "fuera",
     "fecha": "2026-09-17",
     "fechaTexto": "Jueves 17 de Septiembre del 2026",
     "poster": "imgs/estrenos/zoe.jpg",
@@ -130,17 +131,11 @@
     "id": "pulp",
     "titulo": "PULP: ¿Qué harías por una canción más?",
     "tipo": "estreno",
-    "estadoCartelera": "estreno",
+    "estadoCartelera": "fuera",
     "fecha": "2026-09-24",
     "fechaTexto": "Jueves 24 de Septiembre del 2026",
     "poster": "imgs/estrenos/pulp.jpg",
     "cines": ["Cinemex"],
-    "links": [
-      {
-        "cine": "Cinemex",
-        "url": "https://cinemex.com/pelicula/72534/pulp-que-harias-por-una-cancion-mas"
-      }
-    ],
     "nota": "Proximamente"
   },
   {
@@ -152,12 +147,6 @@
     "fechaTexto": "Jueves 3 de Septiembre 2026",
     "poster": "imgs/estrenos/lost.jpg",
     "cines": ["Cinépolis"],
-    "links": [
-      {
-        "cine": "Cinépolis",
-        "url": "https://www.cinepolis.com"
-      }
-    ],
     "nota": "Ciclo de David Lynch's"
   },
   {
@@ -169,12 +158,6 @@
     "fechaTexto": "Jueves 3 de Septiembre 2026",
     "poster": "imgs/estrenos/blue.jpg",
     "cines": ["Cinépolis"],
-    "links": [
-      {
-        "cine": "Cinépolis",
-        "url": "https://www.cinepolis.com"
-      }
-    ],
     "nota": "Ciclo de David Lynch's"
   },
   {
@@ -197,23 +180,13 @@
     "fechaTexto": "Jueves 27 de Agosto 2026",
     "poster": "imgs/estrenos/sagrado.jpg",
     "cines": ["Cinemex", "Cinepolis"],
-    "links": [
-      {
-        "cine": "Cinemex",
-        "url": "https://cinemex.com"
-      },
-      {
-        "cine": "Cinepolis",
-        "url": "https://www.cinepolis.com"
-      }
-    ],
     "nota": "Preventa ya disponible"
   },
   {
     "id": "hija",
     "titulo": "Él Me Llama Su Hija",
     "tipo": "estreno",
-    "estadoCartelera": "estreno",
+    "estadoCartelera": "cartelera",
     "fecha": "2026-09-24",
     "fechaTexto": "Jueves 24 de Septiembre 2026",
     "poster": "imgs/estrenos/hija.jpg",
@@ -229,19 +202,13 @@
     "fechaTexto": "Jueves 3 de Septiembre del 2026",
     "poster": "imgs/estrenos/puella3.jpg",
     "cines": ["Cinepolis"],
-    "links": [
-      {
-        "cine": "Cinepolis",
-        "url": "https://www.cinepolis.com"
-      }
-    ],
     "nota": "Japón"
   },
   {
     "id": "encore",
     "titulo": "Avengers: Endgame Bonus",
     "tipo": "estreno",
-    "estadoCartelera": "estreno",
+    "estadoCartelera": "cartelera",
     "fecha": "2026-09-24",
     "fechaTexto": "Jueves 24 de Septiembre del 2026",
     "poster": "imgs/estrenos/encore.jpg",
@@ -252,7 +219,7 @@
     "id": "encore",
     "titulo": "Avengers: Endgame Bonus Infinity Vision",
     "tipo": "estreno",
-    "estadoCartelera": "estreno",
+    "estadoCartelera": "cartelera",
     "fecha": "2026-09-24",
     "fechaTexto": "Jueves 24 de Septiembre del 2026",
     "poster": "imgs/estrenos/infinity.jpg",
@@ -274,27 +241,18 @@
     "id": "queen",
     "titulo": "Queen: Budapest",
     "tipo": "preventa",
+    "estadoCartelera": "preventa",
     "fecha": "2026-10-07",
     "fechaTexto": "Miércoles 7 de Octubre del 2026",
     "poster": "imgs/estrenos/queen.jpg",
     "cines": ["Cinepolis", "Cinemex"],
-    "links": [
-      {
-        "cine": "Cinemex",
-        "url": "https://cinemex.com/pelicula/72643/queen-budapest"
-      },
-      {
-        "cine": "Cinepolis",
-        "url": "https://www.cinepolis.com"
-      }
-    ],
     "nota": "Preventa ya disponible"
   },
   {
     "id": "ocho",
     "titulo": "Día Ocho",
     "tipo": "estreno",
-    "estadoCartelera": "cartelera",
+    "estadoCartelera": "fuera",
     "fecha": "2026-09-10",
     "fechaTexto": "Jueves 10 de Septiembre del 2026",
     "poster": "imgs/estrenos/ocho.jpg",
@@ -376,12 +334,6 @@
     "fechaTexto": "Jueves 03 de Septiembre del 2026",
     "poster": "imgs/estrenos/historia.jpg",
     "cines": ["Cinemex"],
-    "links": [
-      {
-        "cine": "Cinemex",
-        "url": "https://cinemex.com/proximamente/4531/la-historia-sin-fin"
-      }
-    ],
     "nota": "Próximamente"
   },
   {
@@ -404,16 +356,6 @@
     "fechaTexto": "Jueves 3 de Septiembre del 2026",
     "poster": "imgs/estrenos/zonacero.jpg",
     "cines": ["Cinepolis", "Cinemex", "MovieCenter"],
-    "links": [
-      {
-        "cine": "Cinemex",
-        "url": "https://cinemex.com/proximamente/4450/zona-cero"
-      },
-      {
-        "cine": "Cinepolis",
-        "url": "https://www.cinepolis.com"
-      }
-    ],
     "nota": "Corea del Sur"
   },
   {
@@ -436,16 +378,6 @@
     "fechaTexto": "Jueves 3 de Septiembre del 2026",
     "poster": "imgs/estrenos/ice.jpg",
     "cines": ["Cinepolis", "Cinemex"],
-    "links": [
-      {
-        "cine": "Cinemex",
-        "url": "https://cinemex.com/proximamente/4495/el-heladero-dulce-sabor-a-muerte"
-      },
-      {
-        "cine": "Cinepolis",
-        "url": "https://www.cinepolis.com"
-      }
-    ],
     "nota": "Estados Unidos"
   },
   {
@@ -468,16 +400,6 @@
     "fechaTexto": "Jueves 3 de Septiembre del 2026",
     "poster": "imgs/estrenos/ifiotas.jpg",
     "cines": ["Cinepolis", "Cinemex"],
-    "links": [
-      {
-        "cine": "Cinemex",
-        "url": "https://cinemex.com/proximamente/4511/idiotas"
-      },
-      {
-        "cine": "Cinepolis",
-        "url": "https://www.cinepolis.com"
-      }
-    ],
     "nota": "Estados Unidos"
   },
   {
@@ -489,12 +411,6 @@
     "fechaTexto": "Jueves 3 de Septiembre del 2026",
     "poster": "imgs/estrenos/desaire.jpg",
     "cines": ["Cinemex"],
-    "links": [
-      {
-        "cine": "Cinemex",
-        "url": "https://cinemex.com/proximamente/4490/el-desaire"
-      }
-    ],
     "nota": "México"
   },
   {
@@ -506,16 +422,6 @@
     "fechaTexto": "Miércoles 2 de Septiembre 2026",
     "poster": "imgs/estrenos/katy.jpg",
     "cines": ["Cinemex", "Cinepolis"],
-    "links": [
-      {
-        "cine": "Cinemex",
-        "url": "https://cinemex.com/pelicula/72351/katy-perry-the-lifetimes-tour-live-from-paris"
-      },
-      {
-        "cine": "Cinepolis",
-        "url": "https://www.cinepolis.com"
-      }
-    ],
     "nota": "Estados Unidos"
   },
   {
@@ -621,7 +527,7 @@
     "id": "coraline",
     "titulo": "Coraline y la Puerta Secreta (Re-estreno 2026)",
     "tipo": "estreno",
-    "estadoCartelera": "estreno",
+    "estadoCartelera": "cartelera",
     "fecha": "2026-09-24",
     "fechaTexto": "Jueves 24 de Septiembre 2026",
     "poster": "imgs/estrenos/coraline.jpg",
@@ -632,7 +538,7 @@
     "id": "tren",
     "titulo": "Detengan Ese Tren",
     "tipo": "estreno",
-    "estadoCartelera": "estreno",
+    "estadoCartelera": "fuera",
     "fecha": "2026-09-24",
     "fechaTexto": "Jueves 24 de Septiembre 2026",
     "poster": "imgs/estrenos/tren.jpg",
@@ -653,8 +559,8 @@
   {
     "id": "puella4",
     "titulo": "Puella Magi Madoka Magica: Walpurgisnacht Rising",
-    "tipo": "preventa",
-    "estadoCartelera": "preventa",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
     "fecha": "2026-10-01",
     "fechaTexto": "Jueves 01 de Octubre del 2026",
     "poster": "imgs/estrenos/puella4.jpg",
@@ -665,7 +571,7 @@
     "id": "bestia",
     "titulo": "El Corazón De La Bestia",
     "tipo": "estreno",
-    "estadoCartelera": "estreno",
+    "estadoCartelera": "cartelera",
     "fecha": "2026-09-24",
     "fechaTexto": "Jueves 24 de Septiembre del 2026",
     "poster": "imgs/estrenos/bestia.jpg",
@@ -709,7 +615,7 @@
     "id": "precio",
     "titulo": "A Cualquier Precio",
     "tipo": "estreno",
-    "estadoCartelera": "cartelera",
+    "estadoCartelera": "fuera",
     "fecha": "2026-09-16",
     "fechaTexto": "Miércoles 16 de Septiembre 2026",
     "poster": "imgs/estrenos/precio.jpg",
@@ -731,7 +637,7 @@
     "id": "viaje",
     "titulo": "Jikuri: Viaje al País de los Tarahumaras",
     "tipo": "estreno",
-    "estadoCartelera": "cartelera",
+    "estadoCartelera": "fuera",
     "fecha": "2026-09-16",
     "fechaTexto": "Miércoles 16 de Septiembre 2026",
     "poster": "imgs/estrenos/viaje.jpg",
@@ -753,7 +659,7 @@
     "id": "mary-y-max",
     "titulo": "Mary y Max (2009)",
     "tipo": "estreno",
-    "estadoCartelera": "estreno",
+    "estadoCartelera": "cartelera",
     "fecha": "2026-09-24",
     "fechaTexto": "Jueves 24 de Septiembre 2026",
     "poster": "imgs/estrenos/mary.jpg",
@@ -764,7 +670,7 @@
     "id": "vertigo2",
     "titulo": "Vertigo 2: Punto Muerto",
     "tipo": "estreno",
-    "estadoCartelera": "estreno",
+    "estadoCartelera": "cartelera",
     "fecha": "2026-09-24",
     "fechaTexto": "Jueves 24 de Septiembre 2026",
     "poster": "imgs/estrenos/vertigo2.jpg",
@@ -774,8 +680,8 @@
   {
     "id": "verity",
     "titulo": "VERITY: La Sombra De Un Engaño",
-    "tipo": "preventa",
-    "estadoCartelera": "preventa",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
     "fecha": "2026-10-01",
     "fechaTexto": "Jueves 01 de Octubre 2026",
     "poster": "imgs/estrenos/verity.jpg",
@@ -786,7 +692,7 @@
     "id": "descenso",
     "titulo": "El Descenso (2005)",
     "tipo": "estreno",
-    "estadoCartelera": "estreno",
+    "estadoCartelera": "fuera",
     "fecha": "2026-09-24",
     "fechaTexto": "Jueves 24 de Septiembre 2026",
     "poster": "imgs/estrenos/descenso.jpg",
@@ -797,7 +703,7 @@
     "id": "tesoros",
     "titulo": "Guardianes del Museo 2: Los Tesoros de Egipto",
     "tipo": "estreno",
-    "estadoCartelera": "estreno",
+    "estadoCartelera": "cartelera",
     "fecha": "2026-09-24",
     "fechaTexto": "Jueves 24 de Septiembre 2026",
     "poster": "imgs/estrenos/tesoros.jpg",
@@ -808,7 +714,7 @@
     "id": "gran-golpe",
     "titulo": "El Último Gran Golpe",
     "tipo": "preventa",
-    "estadoCartelera": "preventa",
+    "estadoCartelera": "fuera",
     "fecha": "2026-10-01",
     "fechaTexto": "Jueves 01 de Octubre 2026",
     "poster": "imgs/estrenos/golpe.jpg",
@@ -818,8 +724,8 @@
   {
     "id": "sorop",
     "titulo": "Sorop Herencia Diabólica",
-    "tipo": "preventa",
-    "estadoCartelera": "preventa",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
     "fecha": "2026-10-01",
     "fechaTexto": "Jueves 01 de Octubre 2026",
     "poster": "imgs/estrenos/sorop.jpg",
@@ -829,12 +735,12 @@
   {
     "id": "pinocho",
     "titulo": "Pinocho: El Lado Oscuro",
-    "tipo": "preventa",
-    "estadoCartelera": "preventa",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
     "fecha": "2026-10-01",
     "fechaTexto": "Jueves 01 de Octubre 2026",
     "poster": "imgs/estrenos/pinocho.jpg",
-    "cines": ["Cinemex"],
+    "cines": ["Cinemex", "Cinepolis", "Movie Center"],
     "nota": "Estados Unidos"
   },
   {
@@ -842,8 +748,8 @@
     "titulo": "Volcán: Fuego Bajo Tierra",
     "tipo": "preventa",
     "estadoCartelera": "preventa",
-    "fecha": "2026-10-01",
-    "fechaTexto": "Jueves 01 de Octubre 2026",
+    "fecha": "2026-10-08",
+    "fechaTexto": "Jueves 08 de Octubre 2026",
     "poster": "imgs/estrenos/volcan.jpg",
     "cines": ["Cinemex"],
     "nota": "Islandia"
@@ -853,8 +759,8 @@
     "titulo": "Kraken: Terror En lo Profundo",
     "tipo": "preventa",
     "estadoCartelera": "preventa",
-    "fecha": "2026-10-08",
-    "fechaTexto": "Jueves 08 de Octubre 2026",
+    "fecha": "2026-10-22",
+    "fechaTexto": "Jueves 22 de Octubre 2026",
     "poster": "imgs/estrenos/kraken.jpg",
     "cines": ["Cinemex"],
     "nota": "Noruega"
@@ -896,7 +802,7 @@
     "id": "hombre-agua",
     "titulo": "Hombre Al Agua",
     "tipo": "estreno",
-    "estadoCartelera": "estreno",
+    "estadoCartelera": "cartelera",
     "fecha": "2026-09-24",
     "fechaTexto": "Jueves 24 de Septiembre 2026",
     "poster": "imgs/estrenos/agua.jpg",
@@ -918,7 +824,7 @@
     "id": "josef",
     "titulo": "La Desaparicion de Josef Mengele",
     "tipo": "estreno",
-    "estadoCartelera": "estreno",
+    "estadoCartelera": "fuera",
     "fecha": "2026-09-24",
     "fechaTexto": "Jueves 24 de Septiembre 2026",
     "poster": "imgs/estrenos/josef.jpg",
@@ -939,10 +845,10 @@
   {
     "id": "digger",
     "titulo": "Digger",
-    "tipo": "preventa",
-    "estadoCartelera": "preventa",
-    "fecha": "2026-09-29",
-    "fechaTexto": "Jueves 29 de Septiembre 2026",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
+    "fecha": "2026-10-01",
+    "fechaTexto": "Jueves 01 de Octubre 2026",
     "poster": "imgs/estrenos/digger.jpg",
     "cines": ["Cinemex", "Cinepolis", "Movie Center"],
     "nota": "Estados Unidos"
@@ -950,8 +856,8 @@
   {
     "id": "banco",
     "titulo": "Gracias Por Operar Nuestro Banco",
-    "tipo": "preventa",
-    "estadoCartelera": "preventa",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
     "fecha": "2026-10-01",
     "fechaTexto": "Jueves 01 de Octubre 2026",
     "poster": "imgs/estrenos/banco.jpg",
@@ -961,12 +867,12 @@
   {
     "id": "tadeo",
     "titulo": "Tadeo El Explorador y La Lámpara Maravillosa",
-    "tipo": "preventa",
-    "estadoCartelera": "preventa",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
     "fecha": "2026-10-01",
     "fechaTexto": "Jueves 01 de Octubre 2026",
     "poster": "imgs/estrenos/tadeo.jpg",
-    "cines": ["Cinemex"],
+    "cines": ["Cinemex", "Cinepolis", "Movie Center"],
     "nota": "España"
   },
   {
@@ -974,8 +880,8 @@
     "titulo": "Hope: El Primer Impacto",
     "tipo": "preventa",
     "estadoCartelera": "preventa",
-    "fecha": "2026-10-01",
-    "fechaTexto": "Jueves 01 de Octubre 2026",
+    "fecha": "2026-10-08",
+    "fechaTexto": "Jueves 08 de Octubre 2026",
     "poster": "imgs/estrenos/hope.jpg",
     "cines": ["Cinemex"],
     "nota": "Corea del Sur"
@@ -985,8 +891,8 @@
     "titulo": "La Caída de la Ballena",
     "tipo": "preventa",
     "estadoCartelera": "preventa",
-    "fecha": "2026-10-01",
-    "fechaTexto": "Jueves 01 de Octubre 2026",
+    "fecha": "2026-10-18",
+    "fechaTexto": "Jueves 18 de Octubre 2026",
     "poster": "imgs/estrenos/ballena.jpg",
     "cines": ["Cinemex"],
     "nota": "Estados Unidos"
@@ -1034,5 +940,115 @@
     "poster": "imgs/estrenos/silencio.jpg",
     "cines": ["Cinemex"],
     "nota": "Estados Unidos"
+  },
+  {
+    "id": "sexo",
+    "titulo": "Quiero Tu Sexo",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
+    "fecha": "2026-10-01",
+    "fechaTexto": "Jueves 01 de Octubre 2026",
+    "poster": "imgs/estrenos/sexo.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "doomsday",
+    "titulo": "Avengers Doomsday Infinity Version",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-12-16",
+    "fechaTexto": "Miércoles 16 de Diciembre 2026",
+    "poster": "imgs/estrenos/doomsday.jpg",
+    "cines": ["Cinemex", "Cinepolis", "Movie Center"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "doomsday",
+    "titulo": "Avengers Doomsday",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-12-16",
+    "fechaTexto": "Miércoles 16 de Diciembre 2026",
+    "poster": "imgs/estrenos/doomsday2.jpg",
+    "cines": ["Cinemex", "Cinepolis", "Movie Center"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "street",
+    "titulo": "Street Fighter",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-15",
+    "fechaTexto": "Jueves 15 de Octubre 2026",
+    "poster": "imgs/estrenos/street.jpg",
+    "cines": ["Cinemex", "Cinepolis", "Movie Center"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "hcf",
+    "titulo": "HCF: Seventeen World Tour New",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-26",
+    "fechaTexto": "Lunes 26 de Octubre 2026",
+    "poster": "imgs/estrenos/hcf.jpg",
+    "cines": ["Cinepolis"],
+    "nota": "Corea del Sur"
+  },
+  {
+    "id": "hcf2",
+    "titulo": "HCF: Hybe Cheering Party",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-24",
+    "fechaTexto": "Sábado 24 de Octubre 2026",
+    "poster": "imgs/estrenos/hcf2.jpg",
+    "cines": ["Cinepolis"],
+    "nota": "Corea del Sur"
+  },
+  {
+    "id": "hcf3",
+    "titulo": "HCF: Tomorrow x Together World",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-26",
+    "fechaTexto": "Lunes 26 de Octubre 2026",
+    "poster": "imgs/estrenos/hcf3.jpg",
+    "cines": ["Cinepolis"],
+    "nota": "Corea del Sur"
+  },
+  {
+    "id": "hcf4",
+    "titulo": "HCF: Enhypen World Tour Blood Saga",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-26",
+    "fechaTexto": "Lunes 26 de Octubre 2026",
+    "poster": "imgs/estrenos/hcf4.jpg",
+    "cines": ["Cinepolis"],
+    "nota": "Corea del Sur"
+  },
+  {
+    "id": "arbol",
+    "titulo": "El Árbol Mágico",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-08",
+    "fechaTexto": "Jueves 08 de Octubre 2026",
+    "poster": "imgs/estrenos/arbol.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Reino Unido"
+  },
+  {
+    "id": "partido",
+    "titulo": "Un Mal Partido",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-08",
+    "fechaTexto": "Jueves 08 de Octubre 2026",
+    "poster": "imgs/estrenos/partido.jpg",
+    "cines": ["Cinemex"],
+    "nota": "México"
   }
 ]
