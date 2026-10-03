@@ -63,7 +63,7 @@
   {
     "id": "linkin",
     "titulo": "Linkin Park: Unshatter En Cines",
-    "tipo": "preventa",
+    "tipo": "estreno",
     "estadoCartelera": "cartelera",
     "fecha": "2026-09-30",
     "fechaTexto": "Miércoles 30 de Septiembre del 2026",
@@ -709,17 +709,6 @@
     "poster": "imgs/estrenos/tesoros.jpg",
     "cines": ["Cinemex", "Cinepolis", "Movie Center"],
     "nota": "Rusia"
-  },
-  {
-    "id": "gran-golpe",
-    "titulo": "El Último Gran Golpe",
-    "tipo": "preventa",
-    "estadoCartelera": "fuera",
-    "fecha": "2026-10-01",
-    "fechaTexto": "Jueves 01 de Octubre 2026",
-    "poster": "imgs/estrenos/golpe.jpg",
-    "cines": ["Cinemex"],
-    "nota": "Estados Unidos"
   },
   {
     "id": "sorop",
