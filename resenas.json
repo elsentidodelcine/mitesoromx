@@ -1251,5 +1251,776 @@
     ],
     "cita": "La tecnología de Stark sigue siendo prácticamente la principal fuente de problemas para los villanos.",
     "veredicto": "Un escalón por debajo de la primera, pero importante para el MCU. Introduce piezas clave y funciona, aunque la historia es más sencilla y el villano no destaca."
+  },
+  {
+    "id": "los-vengadores",
+    "titulo": "Los Vengadores",
+    "anio": 2012,
+    "fecha": "2026-10-05",
+    "duracion": "143 min",
+    "generos": ["Acción", "Ciencia ficción", "Aventuras"],
+    "puntaje": 5.0,
+    "destacada": true,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "La reunión definitiva del equipo. Historia sencilla pero perfecta, personajes que chocan y se unen, y una batalla de Nueva York legendaria. Además, la primera película que vi en el cine.",
+    "poster": "imgs/sagas/ucm/avengers.jpg",
+    "posterFallback": {
+      "linea1": "Los",
+      "linea2": "Vengadores"
+    },
+    "letterboxd": "https://letterboxd.com/film/the-avengers-2012",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt0848228/",
+      "rating": "8.0"
+    },
+    "lead": "La película con la que descubrí el cine. Sigue funcionando años después: sencilla, emocionante, divertida y con una batalla final inolvidable. Cine legendario.",
+    "contenido": [
+      "Sin duda, hay películas que uno disfruta y hay otras que se quedan marcadas por el momento en el que las viste. Los Vengadores es de esas para mí. Esta fue la primera película que vi en el cine en mi vida. Justo cuando salí de la universidad, era la película que estaba en cartelera y me fui a verla con unos amigos. Me gustó muchísimo en ese momento y volver a verla ahora me hizo recordar perfectamente esa etapa.",
+      "Después de varias películas en solitario, por fin tenemos reunidos a los principales personajes que Marvel nos había estado presentando: Iron Man, Capitán América, Thor, Hulk, Black Widow y Hawkeye. Y me gusta que no simplemente se juntan y ya. Al principio no funcionan como equipo, tienen sus diferencias y cada uno va por su lado, pero poco a poco entienden que juntos pueden hacer algo que individualmente no podrían. Además, Black Widow y Hawkeye son importantes porque, a diferencia de varios de sus compañeros, no tienen poderes ni armaduras, pero aun así forman parte de este equipo de superhéroes y tienen momentos importantes dentro de la historia.",
+      "También me gusta que aquí Loki tiene mucho más peso. Después de haberlo conocido en Thor, ahora vemos cómo se convierte en la amenaza que termina provocando que todos estos personajes tengan que reunirse. La película tampoco intenta complicarse demasiado: tiene una historia sencilla, pero está muy bien ejecutada. El ritmo funciona, los personajes tienen momentos para destacar y el humor entre ellos hace que el equipo se sienta realmente divertido de ver.",
+      "Y luego está la batalla de Nueva York. Todo ese tercer acto se me hace increíble. La acción, los Vengadores peleando juntos, Hulk haciendo de Hulk, Iron Man, Thor, Capitán América, Black Widow, Hawkeye y toda la invasión hacen que la película llegue exactamente al punto al que tenía que llegar. La música de Alan Silvestri también ayuda muchísimo a darle esa sensación de que estamos viendo algo grande. Y como si todo eso fuera poco, esa escena postcréditos con Thanos fue otro de esos momentos que en su momento nos dejaron pensando qué demonios iba a pasar después.",
+      "Volver a verla tantos años después, ahora dentro de un maratón rumbo a Avengers: Doomsday, solamente me confirmó que sigue funcionando. Es sencilla, sí, pero no necesita complicarse para ser entretenida, emocionante y memorable. Y en mi caso tiene además ese valor especial de haber sido la película con la que descubrí lo que se sentía ir al cine por primera vez. Sin duda, es de esas que nunca voy a olvidar."
+    ],
+    "cita": "Esta fue la primera película que vi en el cine en mi vida.",
+    "veredicto": "Sencilla, perfecta y legendaria. La reunión del equipo, la batalla de Nueva York y ese valor personal la convierten en cine que nunca se olvida. 5/5."
+  },
+  {
+    "id": "iron-man-3",
+    "titulo": "Iron Man 3",
+    "anio": 2013,
+    "fecha": "2026-10-05",
+    "duracion": "130 min",
+    "generos": ["Acción", "Ciencia ficción", "Aventuras"],
+    "puntaje": 2.5,
+    "destacada": false,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "La más floja de la trilogía de Iron Man. Buenas consecuencias para Tony y acción entretenida, pero el giro del Mandarín y un villano demasiado simple la dejan por debajo.",
+    "poster": "imgs/sagas/ucm/ironman3.jpg",
+    "posterFallback": {
+      "linea1": "Iron Man",
+      "linea2": "3"
+    },
+    "letterboxd": "https://letterboxd.com/film/iron-man-3",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt1300854/",
+      "rating": "7.1"
+    },
+    "lead": "No es mala, pero sí la más floja de las tres. El giro del Mandarín se siente como una falta de respeto y el verdadero villano es demasiado simple, aunque las consecuencias en Tony funcionan.",
+    "contenido": [
+      "Para mí, esta no es una mala película, pero sí es la más floja de las tres de Iron Man. Después de volver a ver la trilogía, siento que tiene cosas bastante buenas, pero también varias decisiones que hacen que se quede por debajo de las anteriores.",
+      "Y para mí, lo del Mandarín sí fue una falta de respeto. Primero te construyen la idea de que finalmente vamos a conocer a este gran villano, te hacen creer que Ben Kingsley realmente es el Mandarín y después resulta que no, que todo era una especie de montaje. Entiendo lo que quisieron hacer con el giro y en su momento pudo resultar inesperado, pero personalmente sentí que terminaron troleando al personaje y a quienes esperábamos verlo.",
+      "También la motivación del verdadero villano se me hizo demasiado simple. Básicamente es como: “me ignoraste, entonces ahora me voy a hacer malo”. Y ya. Para todo lo que la película intenta construir alrededor de él, esperaba algo mucho más interesante. Incluso la pelea final se siente como que tiene que llegar porque ya estamos llegando al final, pero el villano nunca terminó de convencerme.",
+      "Lo que sí me gustó fue todo lo relacionado con Tony Stark después de Los Vengadores. Aquí empezamos a ver las consecuencias de lo que vivió en Nueva York, sus ataques de ansiedad y cómo todo aquello sigue afectándolo. Y eso me parece importante porque esas consecuencias no desaparecen simplemente al terminar esta película; las vamos viendo posteriormente en Civil War, Infinity War y Endgame. En ese sentido, Iron Man 3 sí aporta algo importante al desarrollo de Tony dentro del UCM.",
+      "Además, tiene buenas escenas de acción, la música de Brian Tyler me gustó bastante y hay momentos muy entretenidos con las diferentes armaduras. No me parece una película mala ni mucho menos, simplemente siento que tiene una historia bastante sencilla y un villano que se queda muy corto. De las tres de Iron Man, para mí es la que menos funciona, aunque todavía tiene suficientes cosas buenas para hacerla entretenida."
+    ],
+    "cita": "Lo del Mandarín sí fue una falta de respeto.",
+    "veredicto": "La más floja de la trilogía. Buenas consecuencias para Tony y acción entretenida, pero el giro del Mandarín y un villano simple la dejan en neutral y olvidable."
+  },
+  {
+    "id": "thor-un-mundo-oscuro",
+    "titulo": "Thor: Un Mundo Oscuro",
+    "anio": 2013,
+    "fecha": "2026-10-05",
+    "duracion": "112 min",
+    "generos": ["Acción", "Fantasía", "Aventuras"],
+    "puntaje": 2.0,
+    "destacada": false,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "La más floja de las primeras de Thor. Malekith genérico, relación forzada con Jane y demasiado humor que resta peso. Solo aporta mitología y Gemas del Infinito al MCU.",
+    "poster": "imgs/sagas/ucm/thor2.jpg",
+    "posterFallback": {
+      "linea1": "Thor:",
+      "linea2": "Un Mundo Oscuro"
+    },
+    "letterboxd": "https://letterboxd.com/film/thor-the-dark-world",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt1981115/",
+      "rating": "6.7"
+    },
+    "lead": "Todavía peor que la primera de Thor. Villano genérico, relación forzada y demasiado humor que quita peso a todo. Solo se ve por el maratón.",
+    "contenido": [
+      "Sin duda, Thor es de los personajes que menos me gustan dentro del MCU, al menos en sus primeras películas. La primera ya se me hizo bastante simple y esta segunda me parece todavía peor. Siento que el humor, la comedia y la forma en la que está construido el personaje hacen que muchas situaciones pierdan completamente el peso que deberían tener.",
+      "Y luego tenemos a Malekith, que para mí es un villano bastante X. Es simple, no tiene mucho carisma y su plan de destruirlo prácticamente todo porque sí tampoco ayuda demasiado. De hecho, me pareció más interesante todo el asunto del Mandarín en Iron Man 3 que este villano, y eso ya es decir bastante. Varias críticas coinciden precisamente en que Malekith termina siendo un antagonista genérico y con muy poco peso dentro de la historia.",
+      "Lo de Jane Foster tampoco mejora. Su relación con Thor sigue sintiéndose muy forzada y esta vez la película necesita hacer demasiadas coincidencias para volver a juntarlos. Aquí Jane encuentra el Éter, que después descubrimos que es una de las Gemas del Infinito, y aunque esto sirve para conectar la película con la historia más grande del MCU y empezar a construir el tema de Thanos y las Gemas, siento que la propia película no es suficientemente interesante por sí sola.",
+      "Lo que sí rescato es toda esa parte de la mitología del MCU que empieza a expandirse: conocemos más sobre los Nueve Reinos, el Éter y las Gemas del Infinito. También tenemos la muerte de Frigga, la mamá de Thor, y otra supuesta muerte de Loki, porque este personaje parece tener más vidas que un gato. Curiosamente, las partes que más funcionan suelen estar relacionadas con Loki y su dinámica con Thor, algo que incluso varias críticas destacaron por encima de la trama principal.",
+      "Visualmente cumple con lo que uno espera de Marvel de esa época, especialmente en las secuencias de Asgard y en la batalla final, donde juegan bastante con los portales y los diferentes mundos. La fotografía de Kramer Morgenthau y la música de Brian Tyler ayudan a darle ese tono más fantástico y épico, aunque para mí no alcanzan a compensar una historia que se siente demasiado sencilla y con muy poco interés.",
+      "En general, no encuentro demasiado que me interese de esta película más allá de lo que aporta al universo compartido. Y para mí eso es justamente el problema: siento que estoy viendo una película de Thor solamente porque necesito avanzar hacia lo siguiente, no porque realmente tenga ganas de volver a verla."
+    ],
+    "cita": "Siento que estoy viendo una película de Thor solamente porque necesito avanzar hacia lo siguiente.",
+    "veredicto": "Villano genérico, relación forzada y demasiado humor que resta peso. Solo aporta mitología al MCU. Conjuro mal ejecutado."
+  },
+  {
+    "id": "capitan-america-el-soldado-de-invierno",
+    "titulo": "Capitán América: El Soldado de Invierno",
+    "anio": 2014,
+    "fecha": "2026-10-05",
+    "duracion": "136 min",
+    "generos": ["Acción", "Ciencia ficción", "Thriller"],
+    "puntaje": 4.5,
+    "destacada": true,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "Excelente secuela de espionaje dentro del MCU. Desconfianza, traiciones, el regreso de Bucky y consecuencias reales que cambian el universo. Supera claramente a la primera.",
+    "poster": "imgs/sagas/ucm/capitan2.jpg",
+    "posterFallback": {
+      "linea1": "Capitán América:",
+      "linea2": "El Soldado de Invierno"
+    },
+    "letterboxd": "https://letterboxd.com/film/captain-america-the-winter-soldier",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt1843866/",
+      "rating": "7.7"
+    },
+    "lead": "Excelente secuela. Película de espionaje con tensión, traiciones y una relación Steve-Bucky que le da mucho peso emocional. De las mejores del MCU.",
+    "contenido": [
+      "La primera de Capitán América le puse 3.5 y, aunque no me pareció mala, tampoco me encantó. Pero esta segunda parte es otra cosa. Para mí es una excelente secuela y de esas películas del MCU que realmente hacen que el personaje avance y que la historia se sienta mucho más grande.",
+      "Aquí tenemos prácticamente una película de espionaje dentro del universo de Marvel. SHIELD empieza a descubrir que Hydra sigue operando desde dentro y, de repente, ya no sabes quién está trabajando para los buenos y quién está del otro lado. Todo ese juego de desconfianza, persecuciones, infiltraciones y traiciones hace que la película tenga mucho más interés que la primera.",
+      "Y obviamente está el Soldado de Invierno. Lo mejor para mí es toda la relación entre Steve Rogers y Bucky. Steve no solamente tiene que enfrentarse a un enemigo muy poderoso, también tiene que decidir hasta dónde está dispuesto a llegar para salvar a su amigo. Aunque Bucky ya no sea la misma persona que conoció, el Capitán sigue creyendo que todavía puede recuperarlo. Eso le da mucho más peso emocional a toda la historia.",
+      "También me gusta que aquí conocemos más de Hydra y personajes como Arnim Zola, además de que tenemos a otros agentes y enemigos que hacen que la amenaza se sienta mucho más grande. Y luego llega toda la destrucción de SHIELD, los helicarriers cayendo y el caos por todos lados. Es de esas partes donde realmente sientes que las cosas están cambiando dentro del MCU y que después de esto ya nada va a ser igual.",
+      "Sam Wilson aparece por primera vez como Falcon y se convierte rápidamente en un gran compañero para Steve. La Viuda Negra también tiene bastante peso y funciona muy bien junto al Capitán, mientras que Maria Hill sigue siendo parte importante de todo este conflicto. Y sí, solamente faltó el buen agente Coulson, pero pues ya, bye.",
+      "Además, la película tiene una acción mucho más física y aterrizada que otras entregas de Marvel, con peleas cuerpo a cuerpo, persecuciones y combates que se sienten más contundentes. La dirección de los hermanos Russo y la música de Henry Jackman ayudan a construir ese ambiente de thriller político y espionaje, haciendo que la película se sienta distinta dentro del MCU.",
+      "Para mí, esta sí es una secuela que supera claramente a su primera parte. Tiene una historia mucho más interesante, mejores personajes, más tensión y consecuencias que se sienten importantes para todo lo que viene después. Definitivamente, de las películas que más he disfrutado volver a ver dentro de este recorrido por el MCU."
+    ],
+    "cita": "Después de esto ya nada va a ser igual.",
+    "veredicto": "Excelente secuela de espionaje. Tensión, traiciones, Bucky y consecuencias reales. Supera claramente a la primera. Magia mayor."
+  },
+  {
+    "id": "guardianes-de-la-galaxia",
+    "titulo": "Guardianes de la Galaxia",
+    "anio": 2014,
+    "fecha": "2026-10-05",
+    "duracion": "121 min",
+    "generos": ["Acción", "Ciencia ficción", "Aventuras", "Comedia"],
+    "puntaje": 3.5,
+    "destacada": false,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "Buen inicio de los Guardianes. Inadaptados que se convierten en equipo, expansión del universo cósmico, gran banda sonora y humor. La derrota de Ronan se siente un poco fácil, pero funciona.",
+    "poster": "imgs/sagas/ucm/guardianes.jpg",
+    "posterFallback": {
+      "linea1": "Guardianes de",
+      "linea2": "la Galaxia"
+    },
+    "letterboxd": "https://letterboxd.com/film/guardians-of-the-galaxy",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt2015381/",
+      "rating": "8.0"
+    },
+    "lead": "Buen inicio para los Guardianes. Dinámica de inadaptados, expansión del universo y una banda sonora que se vuelve parte de la identidad. Funciona y se disfruta.",
+    "contenido": [
+      "Aquí tenemos otra vez a un grupo de inadaptados que terminan uniéndose para formar un equipo. Al principio prácticamente todos están juntos por conveniencia y dinero, pero poco a poco empiezan a llevarse bien hasta convertirse en los Guardianes de la Galaxia. Y creo que justamente esa dinámica es lo que hace que la película funcione.",
+      "Aquí conocemos mucho más del universo de Marvel fuera de la Tierra: nuevos planetas, otras especies, personajes y toda una parte de la galaxia que hasta este momento no habíamos visto. También conocemos a Gamora, hija de Thanos, y a Ronan el Acusador, que aquí hace su primera aparición, aunque dentro del orden cronológico del MCU ya lo habíamos visto en Capitana Marvel. También está esa parte donde Ronan desafía directamente a Thanos, dejando claro que no todos están dispuestos a obedecerlo.",
+      "Además, aquí aparece otra de las Gemas del Infinito, la Gema del Poder. Me gusta que la película nos muestre desde el principio lo peligrosa que es: prácticamente cualquiera que intenta tocarla termina destruido. Y cuando finalmente Quill consigue sostenerla, se entiende que puede hacerlo por su conexión con su padre celestial y por la naturaleza especial de sus poderes.",
+      "Lo que sí se me hizo demasiado simple fue la forma en la que derrotan a Ronan. Después de ver todo el poder de la Gema y construir a Ronan como una amenaza enorme, esperaba algo un poco más complicado. Termina siendo básicamente Quill y los demás agarrando la gema entre todos y resistiendo su poder hasta derrotarlo. Funciona dentro de la película, pero para mí se siente demasiado fácil.",
+      "También está la música, que es de lo mejor. Las canciones que lleva Quill en su reproductor no solamente son buenas, sino que terminan formando parte de la identidad de la película. Y técnicamente James Gunn logra darle una personalidad muy particular a este rincón del MCU, con mundos y criaturas que hacen que realmente parezca que estamos viajando por una galaxia completamente distinta.",
+      "En general, me parece un buen inicio para los Guardianes. Tiene personajes interesantes, una buena mezcla de acción, humor y aventura, expande muchísimo el universo de Marvel y deja muy claro que estos inadaptados pueden terminar convirtiéndose en un verdadero equipo. No es de mis favoritas del MCU, pero sí es una película que funciona y que se disfruta."
+    ],
+    "cita": "Las canciones que lleva Quill en su reproductor terminan formando parte de la identidad de la película.",
+    "veredicto": "Buen inicio de los Guardianes. Dinámica de equipo, expansión cósmica y banda sonora genial. La resolución es un poco fácil, pero funciona y se disfruta. Buen embrujo."
+  },
+  {
+    "id": "guardianes-de-la-galaxia-vol-2",
+    "titulo": "Guardianes de la Galaxia Vol. 2",
+    "anio": 2017,
+    "fecha": "2026-10-05",
+    "duracion": "136 min",
+    "generos": ["Acción", "Ciencia ficción", "Aventuras", "Comedia"],
+    "puntaje": 3.0,
+    "destacada": false,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "Baja de nivel respecto a la primera. Más comedia forzada y una historia de Ego demasiado simple, aunque la relación Quill-Yondu y la música siguen funcionando.",
+    "poster": "imgs/sagas/ucm/guardianes2.jpg",
+    "posterFallback": {
+      "linea1": "Guardianes de",
+      "linea2": "la Galaxia Vol. 2"
+    },
+    "letterboxd": "https://letterboxd.com/film/guardians-of-the-galaxy-vol-2",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt3896198/",
+      "rating": "7.6"
+    },
+    "lead": "Baja de nivel. Más chistes forzados y una historia más sencilla, aunque Yondu y la música siguen salvando momentos. Palomera ritual.",
+    "contenido": [
+      "Aquí, para mí, Guardianes de la Galaxia baja de nivel. La primera me pareció un buen inicio para este grupo de personajes, pero en esta segunda parte sentí que James Gunn se fue todavía más por el camino de la comedia y, la verdad, no es algo que me guste demasiado. Hay chistes que simplemente no me causaron gracia y varias situaciones se sienten demasiado forzadas.",
+      "Y sí, se nota muchísimo que es una película de James Gunn. Tiene ese estilo que después vamos a encontrar en muchas de sus producciones: personajes haciendo cosas absurdas, humor prácticamente todo el tiempo y momentos que buscan quitarle seriedad a situaciones que podrían tener mucho más peso. A mí particularmente no me funciona. Siento que incluso cuando la película intenta ponerse seria, de repente mete un chiste y le cambia completamente el tono.",
+      "La historia de Ego, el planeta que resulta ser el padre de Quill, tampoco me gustó. Todo ese asunto de que Ego tiene un plan enorme relacionado con sus hijos, sus poderes y la expansión por otros mundos se me hizo demasiado simple. La película intenta convertirlo en una gran revelación y en una amenaza importante, pero para mí nunca terminó de interesarme demasiado. Si acaso, lo que más rescato de toda esta parte es la relación entre Quill y Yondu.",
+      "Porque ahí sí siento que hay algo de corazón. Poco a poco entendemos que, aunque Yondu no haya sido precisamente un buen padre, sí quería a Quill y, a su manera, siempre estuvo protegiéndolo. El funeral y la forma en la que los demás reconocen lo que hizo por él me parece de los momentos que realmente funcionan y que tienen más peso emocional dentro de toda la película.",
+      "También conocemos a Mantis, que se incorpora al grupo y que personalmente siempre se me ha hecho un personaje bastante equis. Tiene sus momentos, pero tampoco es alguien que me haya generado demasiado interés. En general, siento que esta secuela perdió parte de lo que me había gustado de la primera: la novedad de conocer a estos personajes y descubrir este lado del universo Marvel. Aquí hay más chistes, más situaciones absurdas y una historia que para mí resulta mucho más sencilla.",
+      "No me parece una película terrible porque todavía tiene buenos momentos, buena música, personajes que funcionan y ese estilo visual tan particular de Guardianes, pero para mí sí representa una bajada respecto a la primera. Es de esas secuelas donde siento que hicieron más grande todo, pero no necesariamente mejor."
+    ],
+    "cita": "Hicieron más grande todo, pero no necesariamente mejor.",
+    "veredicto": "Baja de nivel. Más comedia forzada y trama más simple, aunque Yondu y la música salvan momentos. Palomera ritual."
+  },
+  {
+    "id": "avengers-era-de-ultron",
+    "titulo": "Avengers: Era de Ultrón",
+    "anio": 2015,
+    "fecha": "2026-10-05",
+    "duracion": "141 min",
+    "generos": ["Acción", "Ciencia ficción", "Aventuras"],
+    "puntaje": 4.0,
+    "destacada": false,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "Buena continuación de Los Vengadores. Consecuencias reales, llegada de Wanda, Quicksilver y Vision, y Ultron como amenaza nacida de los propios héroes. Funciona y prepara el futuro.",
+    "poster": "imgs/sagas/ucm/ultron.jpg",
+    "posterFallback": {
+      "linea1": "Avengers:",
+      "linea2": "Era de Ultrón"
+    },
+    "letterboxd": "https://letterboxd.com/film/avengers-age-of-ultron",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt2395427/",
+      "rating": "7.3"
+    },
+    "lead": "A mí sí me gusta. Buena continuación con consecuencias, nuevos personajes y acción. Ultron pudo dar más, pero la película funciona y prepara mucho del futuro del MCU.",
+    "contenido": [
+      "La verdad, a mí sí me gusta esta película. No sé por qué tanta gente la tiene tan abajo o por qué se quejan de que se llama Era de Ultrón si la dichosa era dura apenas unos días. Pues sí, no es una era, pero tampoco por eso voy a decir que la película es mala. Para mí sigue siendo una buena continuación de lo que vimos en la primera de Los Vengadores.",
+      "Aquí ya empezamos a ver más claramente las consecuencias de lo que pasó en Nueva York. Los Vengadores salvaron al mundo, sí, pero también dejaron una ciudad destruida y un montón de daños que después van a tener consecuencias. Y justamente esa idea me gusta: cada vez que estos personajes se enfrentan a una amenaza más grande, también provocan más destrucción, y eso poco a poco va generando problemas para ellos y para el futuro del MCU.",
+      "También tenemos la llegada de Wanda Maximoff y Quicksilver. Al principio están del lado contrario, pero poco a poco Wanda comienza a acercarse a los Vengadores y termina formando parte del equipo. Y obviamente tenemos a Ultron, que nace precisamente de ese intento de crear algo que pueda proteger al mundo en el futuro. La idea de que los propios Vengadores creen algo que termina convirtiéndose en una amenaza me parece bastante interesante, aunque la ejecución no sea perfecta.",
+      "Y luego está Vision, que para mí es de las mejores cosas que deja esta película. Me gusta cómo se conecta todo para terminar creando a este nuevo personaje y cómo desde aquí empieza a tomar importancia algo que después será todavía más grande dentro del MCU. Además, tenemos nuevamente a los Vengadores juntos, agarrándose a trancazos contra robots por todos lados, y aunque la película tiene bastante acción, para mí funciona precisamente porque ya estamos viendo las consecuencias de todo lo que han hecho anteriormente.",
+      "También creo que aquí empieza a sentirse que el MCU ya no solamente está contando historias individuales, sino que todo tiene consecuencias para lo que viene. La destrucción, Wanda, Vision, Ultron y las decisiones de Tony Stark van dejando piezas que después tendrán mucho peso. Puede que no sea la película más querida de Marvel, pero yo sí la disfruto y me parece una buena parte de este recorrido.",
+      "Para mí, está lejos de ser una mala película. Tiene sus problemas, algunas cosas pudieron estar mejor desarrolladas y Ultron pudo haber dado mucho más, pero entre los Vengadores, los nuevos personajes, la acción y todo lo que empieza a preparar para el futuro, me parece bastante chida."
+    ],
+    "cita": "Cada vez que estos personajes se enfrentan a una amenaza más grande, también provocan más destrucción.",
+    "veredicto": "Buena continuación con consecuencias reales, nuevos personajes y Vision. Ultron pudo dar más, pero funciona y prepara el futuro. Hechizo bien logrado."
+  },
+  {
+    "id": "ant-man",
+    "titulo": "Ant-Man",
+    "anio": 2015,
+    "fecha": "2026-10-05",
+    "duracion": "117 min",
+    "generos": ["Acción", "Ciencia ficción", "Comedia"],
+    "puntaje": 2.5,
+    "destacada": false,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "No conecté con el personaje. Tono demasiado ligero y caricaturesco, villano olvidable y comedia que no me funcionó. Correcta, pero olvidable dentro del MCU.",
+    "poster": "imgs/sagas/ucm/antman.jpg",
+    "posterFallback": {
+      "linea1": "Ant-Man",
+      "linea2": ""
+    },
+    "letterboxd": "https://letterboxd.com/film/ant-man-2015",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt0478970/",
+      "rating": "7.2"
+    },
+    "lead": "No conecté con este personaje. Tono demasiado tonto y caricaturesco para mí. Correcta, pero de las que menos me han gustado del MCU.",
+    "contenido": [
+      "La verdad, yo no conecté con este personaje. De las películas del MCU que llevo hasta ahora, esta se me hizo bastante tonta y siento que el tono no es mucho para mí. Incluso Thor, que tampoco me ha gustado demasiado, se me hace un poquito más interesante que Ant-Man.",
+      "Aquí conocemos a Hank Pym, el Ant-Man original, quien termina pasando el traje a Scott Lang para convertirlo en el nuevo Ant-Man. Y aunque entiendo que la película busca presentar a un héroe diferente, con una historia más ligera y bastante comedia, para mí simplemente no terminó de funcionar. Scott como personaje nunca me terminó de convencer y varias situaciones se sienten demasiado caricaturescas.",
+      "El villano, Darren Cross, tampoco ayuda demasiado. Su transformación en Yellowjacket y todo el conflicto alrededor de la tecnología de Hank Pym se me hizo bastante simple. Es de esos villanos que están ahí porque tiene que haber un villano y ya, pero no sentí que tuviera el peso suficiente para hacer que la historia me interesara más.",
+      "Las escenas de acción tienen algunas ideas interesantes por el hecho de que Ant-Man puede cambiar de tamaño y aprovechar objetos cotidianos de una manera diferente. Hay momentos visualmente curiosos y algunas escenas sí están bien hechas, pero para mí eso no fue suficiente para conectar con la película. Todo ese estilo más caricaturesco y de comedia terminó alejándome todavía más.",
+      "En general, entiendo por qué puede funcionar para otras personas y tampoco diría que es una película terrible, pero definitivamente no es de las que más me han gustado del MCU. Para mí es simplemente correcta, con un personaje con el que no conecté, un villano bastante olvidable y un tono que no terminó de convencerme."
+    ],
+    "cita": "Incluso Thor se me hace un poquito más interesante que Ant-Man.",
+    "veredicto": "No conecté con el personaje ni con el tono. Villano olvidable y comedia que no funciona para mí. Correcta, pero neutral y olvidable."
+  },
+  {
+    "id": "capitan-america-civil-war",
+    "titulo": "Capitán América: Civil War",
+    "anio": 2016,
+    "fecha": "2026-10-05",
+    "duracion": "147 min",
+    "generos": ["Acción", "Ciencia ficción", "Aventuras"],
+    "puntaje": 5.0,
+    "destacada": true,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "La mejor trilogía del MCU llega a su cima. Conflicto real entre héroes, Zemo como villano inteligente y consecuencias que cambian todo. Fenomenal de principio a fin.",
+    "poster": "imgs/sagas/ucm/capitan3.jpg",
+    "posterFallback": {
+      "linea1": "Capitán América:",
+      "linea2": "Civil War"
+    },
+    "letterboxd": "https://letterboxd.com/film/captain-america-civil-war",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt3498820/",
+      "rating": "7.8"
+    },
+    "lead": "Fenomenal. El Capitán América se lleva la mejor trilogía del MCU. Conflicto real, Zemo brillante y consecuencias que cambian todo para siempre.",
+    "contenido": [
+      "Después de quedar fascinado con El Soldado de Invierno, esta tercera parte del Capitán América me parece igual de fenomenal. Para mí, sin duda, el Capitán América se lleva la mejor trilogía del MCU. Las tres películas son muy diferentes entre sí, pero siento que cada una va haciendo crecer al personaje hasta llegar a este conflicto enorme.",
+      "Aquí lo interesante es que el gran enemigo realmente no necesita estar lanzando rayos ni tener superpoderes. El Barón Zemo es una persona bastante simple comparado con otros villanos, pero justamente ahí está lo bueno: encuentra la manera de corromper y dividir a los Vengadores desde dentro. No intenta derrotarlos a golpes, sino hacer que ellos mismos terminen enfrentándose. Y funciona.",
+      "Todo el conflicto entre los que están del lado de Iron Man y los que apoyan al Capitán América está muy bien llevado. Por momentos no sabes ni de qué lado ponerte, porque ambos tienen argumentos y entiendes por qué están tomando esas decisiones. Ya no se trata simplemente de buenos contra malos, sino de dos grupos de héroes que creen estar haciendo lo correcto. Y eso hace que las peleas tengan mucho más peso.",
+      "Además, esta película se siente como un evento enorme del MCU. Tenemos el regreso de personajes que ya conocemos, la presentación de Spider-Man, que para mí está muy bien hecha y rápidamente se roba varias escenas, y Ant-Man ahora mucho más metido en todo este desastre. La pelea entre los dos grupos de Vengadores es de esas escenas que se disfrutan simplemente por ver a todos estos personajes enfrentándose entre ellos.",
+      "Y aunque Zemo es un villano bastante sencillo, me gusta que su plan no dependa de tener más poder que los héroes. Su verdadera arma es conocer dónde están las heridas y utilizarlas para destruir la relación entre ellos. Y el final, con todo lo que provoca entre Steve, Tony y Bucky, deja claro que el problema no se resuelve simplemente porque hayan terminado de pelear.",
+      "Para mí, Civil War es una película que funciona prácticamente en todos los aspectos. Tiene acción, personajes, consecuencias, buenos momentos y, sobre todo, un conflicto que realmente importa para lo que viene después. Después de esta película, los Vengadores ya no vuelven a ser los mismos. Y por eso, junto con El Soldado de Invierno, sigue siendo de lo mejor que ha hecho el MCU."
+    ],
+    "cita": "Después de esta película, los Vengadores ya no vuelven a ser los mismos.",
+    "veredicto": "Fenomenal. Mejor trilogía del MCU. Conflicto real entre héroes, Zemo inteligente y consecuencias enormes. Cine legendario."
+  },
+  {
+    "id": "doctor-strange",
+    "titulo": "Doctor Strange",
+    "anio": 2016,
+    "fecha": "2026-10-05",
+    "duracion": "115 min",
+    "generos": ["Acción", "Fantasía", "Aventuras"],
+    "puntaje": 3.5,
+    "destacada": false,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "Buen inicio mágico del MCU. Strange aprende de su arrogancia, conocemos la Gema del Tiempo y visualmente es distinto. Kaecilius y Dormammu se sienten un poco simples, pero funciona.",
+    "poster": "imgs/sagas/ucm/strange.jpg",
+    "posterFallback": {
+      "linea1": "Doctor",
+      "linea2": "Strange"
+    },
+    "letterboxd": "https://letterboxd.com/film/doctor-strange-2016",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt1211837/",
+      "rating": "7.5"
+    },
+    "lead": "Me gustó mucho más que Ant-Man y Thor. Introduce la magia y las dimensiones de forma interesante, con buena evolución de personaje y visuales distintos.",
+    "contenido": [
+      "Este inicio de Doctor Strange me gustó mucho más que Ant-Man y Thor. Aquí sí sentí que estábamos conociendo algo diferente dentro del MCU. Ya habíamos visto bastante sobre el universo, las galaxias, otros planetas y las Gemas del Infinito, pero ahora nos meten de lleno en el lado de la magia, las dimensiones y todo este nuevo concepto dentro de Marvel.",
+      "Lo que más me gustó fue precisamente ver cómo Stephen Strange va aprendiendo poco a poco. Al principio es bastante engreído, arrogante y acostumbrado a tener siempre la razón, pero después de perder lo que más valoraba tiene que empezar prácticamente desde cero. Me gusta cómo va aprendiendo a controlar sus habilidades, se va fortaleciendo y, sobre todo, empieza a convertirse en una mejor persona. No solamente aprende magia, también tiene que quitarse ese ego que trae desde el principio.",
+      "Además, aquí conocemos la Gema del Tiempo, que está dentro del Ojo de Agamotto, y eso vuelve a conectar esta historia con todo lo que ya venimos viendo sobre las Gemas del Infinito. También tenemos un reparto bastante bueno, con Benedict Cumberbatch como Strange, además de Mads Mikkelsen, Tilda Swinton y Chiwetel Ejiofor. Y visualmente sí se siente como algo diferente dentro de Marvel: las dimensiones, los edificios doblándose, los portales y las secuencias de magia hacen que la película tenga una identidad muy particular.",
+      "El villano, Kaecilius, no me pareció de lo mejor de la película. Cumple con su función y ayuda a introducir toda esta parte de la magia, pero tampoco sentí que fuera un personaje especialmente memorable. Donde sí me gustó más la película fue en todo lo relacionado con Dormammu y la forma en la que Strange intenta enfrentarlo.",
+      "Eso sí, para ser una entidad cósmica de semejante nivel, la manera en la que Strange consigue derrotarlo se me hizo bastante simple. Básicamente encuentra una forma de repetir el mismo momento una y otra vez hasta que Dormammu se desespera. La idea está interesante y funciona dentro de la lógica de la película, pero esperaba algo un poquito más espectacular para una entidad como Dormammu.",
+      "Aun así, me parece un muy buen inicio para Doctor Strange. Introduce una nueva parte del MCU, tiene una evolución de personaje que sí me gustó, conocemos otra Gema del Infinito y visualmente ofrece cosas que no habíamos visto antes. No es de mis favoritas, pero definitivamente me funcionó mucho más que Ant-Man y Thor."
+    ],
+    "cita": "No solamente aprende magia, también tiene que quitarse ese ego que trae desde el principio.",
+    "veredicto": "Buen inicio mágico. Evolución de Strange, Gema del Tiempo y visuales distintos. Villanos un poco simples, pero funciona. Buen embrujo."
+  },
+  {
+    "id": "pantera-negra",
+    "titulo": "Pantera Negra",
+    "anio": 2018,
+    "fecha": "2026-10-05",
+    "duracion": "134 min",
+    "generos": ["Acción", "Ciencia ficción", "Aventuras"],
+    "puntaje": 4.0,
+    "destacada": false,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "Buena introducción a Wakanda. Tecnología avanzada vs tradiciones, Killmonger interesante y personajes sólidos. No es la gran maravilla, pero tiene identidad y peso.",
+    "poster": "imgs/sagas/ucm/pantera.jpg",
+    "posterFallback": {
+      "linea1": "Pantera",
+      "linea2": "Negra"
+    },
+    "letterboxd": "https://letterboxd.com/film/black-panther-2018",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt1825683/",
+      "rating": "7.3"
+    },
+    "lead": "Buena película con un mundo bien construido. Killmonger funciona, Wakanda tiene identidad y el peso de Chadwick Boseman se siente. No es la gran maravilla, pero sí un buen embrujo.",
+    "contenido": [
+      "Después de pasar por dioses, guerreros, galaxias, Gemas del Infinito y magia, ahora nos vamos a Wakanda y conocemos mucho más del mundo de T'Challa. Después de las consecuencias de la muerte de su padre, aquí lo vemos tomando el liderazgo como el nuevo rey y Pantera Negra. Y la verdad, me parece una buena película, aunque tampoco diría que es la gran maravilla que mucha gente dice.",
+      "Lo que más me llamó la atención es todo lo que hay detrás de Wakanda. Tenemos un país que durante mucho tiempo se hizo pasar por una nación prácticamente atrasada, cuando en realidad tiene una de las tecnologías más avanzadas del mundo gracias al vibranio. Tienen armas, vehículos y tecnología de primera, pero al mismo tiempo mantienen tradiciones y costumbres que parecen de otra época. Es como decir: “tenemos tecnología para conquistar el mundo, pero vamos a seguir peleándonos a golpes por las tradiciones”. Y justamente ese contraste me parece interesante.",
+      "También tenemos a Killmonger, que para mí funciona bastante bien como villano. Su llegada pone en duda la forma en la que Wakanda ha manejado su relación con el resto del mundo y termina provocando que T'Challa tenga que enfrentarse no solamente a un enemigo, sino también a las decisiones y tradiciones de su propio pueblo. Killmonger consigue apoderarse de Wakanda y durante buena parte de la película parece que realmente va ganando.",
+      "Además, me gustaron varios de los personajes que acompañan a T'Challa, especialmente Shuri, Okoye y Nakia. Cada uno aporta algo diferente y ayudan a que Wakanda se sienta como un mundo mucho más grande que solamente el lugar donde vive Pantera Negra. También visualmente la película tiene bastante personalidad, desde el diseño de Wakanda hasta los vestuarios y toda la combinación entre tecnología futurista y tradiciones africanas.",
+      "Y obviamente, viéndola ahora, también está ese sentimiento diferente al ver a Chadwick Boseman como T'Challa. Todos sabemos lo que pasó con el actor y eso inevitablemente hace que sus escenas tengan otro peso. Es difícil no verla también desde esa perspectiva y pensar en todo lo que pudo haber sido su recorrido dentro del MCU.",
+      "En general, me parece una buena película y una parte importante del MCU, especialmente por todo lo que aporta sobre Wakanda y T'Challa. No la considero la gran maravilla que muchos dicen, pero sí tiene buenos personajes, un villano interesante, un mundo muy bien construido y una identidad propia."
+    ],
+    "cita": "Tenemos tecnología para conquistar el mundo, pero vamos a seguir peleándonos a golpes por las tradiciones.",
+    "veredicto": "Buena introducción a Wakanda. Killmonger interesante, contraste tecnológico-tradicional y peso emocional. No es la gran maravilla, pero sí un buen embrujo."
+  },
+  {
+    "id": "thor-ragnarok",
+    "titulo": "Thor: Ragnarok",
+    "anio": 2017,
+    "fecha": "2026-10-05",
+    "duracion": "130 min",
+    "generos": ["Acción", "Fantasía", "Comedia", "Aventuras"],
+    "puntaje": 2.0,
+    "destacada": false,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "Un poco mejor que Un Mundo Oscuro, pero sigue sin convencerme. Demasiado humor, Hela desaprovechada y un Ragnarok que no se siente épico. La saga de Thor nunca termina de subir de nivel.",
+    "poster": "imgs/sagas/ucm/thor3.jpg",
+    "posterFallback": {
+      "linea1": "Thor:",
+      "linea2": "Ragnarok"
+    },
+    "letterboxd": "https://letterboxd.com/film/thor-ragnarok",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt3501632/",
+      "rating": "7.9"
+    },
+    "lead": "Un poco mejor que la segunda, pero sigue sin convencerme. Demasiado humor que quita peso y un Ragnarok que no se siente épico. La saga de Thor nunca termina de subir.",
+    "contenido": [
+      "Aquí tenemos la tercera película de Thor y, no sé cómo siguen sacando tantas de este personaje. Si Ant-Man ya lleva tres, pues supongo que Thor también tenía derecho a seguir, aunque para mí Ant-Man todavía está peor. Esta tercera parte está un poquito mejor que Thor: Un Mundo Oscuro, pero ni siquiera supera a la primera. Es como si las películas de Thor nunca lograran subir realmente de nivel y simplemente fueran bajando poco a poco.",
+      "Aquí tenemos la muerte de Odín y descubrimos que Thor tiene una hermana que nunca supimos que existía: Hela. Y ella llega para apoderarse de Asgard y reclamar lo que considera suyo. La idea me parece interesante, pero otra vez siento que la película no aprovecha todo lo que podría haber hecho con ella.",
+      "Y luego está el famoso Ragnarok. Yo esperaba algo mucho más grande: una verdadera destrucción, Thor enfrentándose al ser del Ragnarok y tratando de impedirlo o algo por el estilo. Pero resulta que básicamente lo que tienen que hacer es dejar que suceda porque, según la película, Asgard no es la ciudad, sino su gente. Pues sí, está bonito el mensaje, pero después de tanto hablar del Ragnarok esperaba algo mucho más espectacular.",
+      "La pelea de Thor contra Hulk sí está chida y tenemos a Valkiria y varios personajes nuevos que aportan bastante comedia. El problema es que, otra vez, la película se va demasiado por los chistes. Hay momentos graciosos, pero para mí terminan quitándole peso a situaciones que deberían sentirse mucho más importantes. Y justamente ese tono es una de las razones por las que no termino de conectar con estas películas de Thor.",
+      "Además, hay algo que se me hizo bastante raro: prácticamente todos los amigos de Thor que lo acompañaron durante las dos películas anteriores terminan muertos. Y Thor simplemente continúa con nuevos amigos como si nada. Nunca hay realmente un momento de “oye, ¿qué pasó con mis amigos?”. Pues ya no están y seguimos con la película. Al final consiguen salvar a la gente de Asgard, pero todo lo demás queda un poco de lado.",
+      "Eso sí, la escena final con la nave de Thanos llegando es importante porque conecta directamente con lo que viene después y deja la situación bastante interesante. Pero fuera de eso, para mí Thor: Ragnarok sigue demostrando que esta saga nunca termina de convencerme. Es un poco mejor que la segunda, pero sigue sin llegar a ser una película que realmente disfrute."
+    ],
+    "cita": "Asgard no es la ciudad, sino su gente. Pues sí, está bonito el mensaje, pero esperaba algo mucho más espectacular.",
+    "veredicto": "Un poco mejor que Un Mundo Oscuro, pero sigue sin convencerme. Demasiado humor y un Ragnarok que no se siente épico. Conjuro mal ejecutado."
+  },
+  {
+    "id": "ant-man-y-la-avispa",
+    "titulo": "Ant-Man y la Avispa",
+    "anio": 2018,
+    "fecha": "2026-10-05",
+    "duracion": "118 min",
+    "generos": ["Acción", "Ciencia ficción", "Comedia"],
+    "puntaje": 2.0,
+    "destacada": false,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "Repetitiva y simple. Huir, recuperar maletín, esconderse y repetir. El Reino Cuántico y la postcréditos son lo más interesante, pero la película en sí me aburrió.",
+    "poster": "imgs/sagas/ucm/antman2.jpg",
+    "posterFallback": {
+      "linea1": "Ant-Man y",
+      "linea2": "la Avispa"
+    },
+    "letterboxd": "https://letterboxd.com/film/ant-man-and-the-wasp",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt5095030/",
+      "rating": "7.0"
+    },
+    "lead": "Otra de Ant-Man que me aburre. Historia repetitiva de huir y recuperar cosas. El Reino Cuántico y la postcréditos salvan un poco, pero no suficiente.",
+    "contenido": [
+      "Después de Thor, para mí Ant-Man es de los superhéroes cuyas películas más me aburren de todo el UCM. Y con Ant-Man y la Avispa me volvió a pasar. La película tiene cosas nuevas e interesantes, pero prácticamente toda la historia se siente como estar viendo a los personajes huir, recuperar un maletín, esconderse, volver a huir, recuperar otra vez lo mismo y repetir la jugada. Se me hizo demasiado simple y repetitiva.",
+      "Aquí conocemos a Ghost como una de las principales amenazas, además de otros personajes que también quieren quedarse con la tecnología y las partículas Pym. Mientras tanto, Scott, Hope y Hank están buscando la manera de rescatar a Janet van Dyne, la mamá de Hope, quien quedó atrapada durante años en el Reino Cuántico. Y justamente aquí conocemos por fin ese lugar, que termina siendo una de las cosas más interesantes de toda la película, aunque tampoco es que expliquen demasiado sobre lo que existe ahí.",
+      "También me gustó que finalmente conocemos a toda la familia de Hank Pym y vemos reunidos a los personajes que se habían ido presentando desde la primera película. El problema es que toda esta historia del rescate se me hizo muy equis. Hay persecuciones, cambios de tamaño, el edificio que va de un lado para otro y varios personajes buscando las mismas partículas, pero para mí nunca termina de despegar.",
+      "Y aunque al final tenemos a Janet de regreso y aparentemente todo queda con un final feliz, el Reino Cuántico todavía se siente como algo que apenas nos están mostrando. Sabemos que Scott puede entrar ahí y que existe todo un mundo por descubrir, pero prácticamente eso es todo. La verdadera importancia llega con la escena postcréditos, cuando Scott regresa al Reino Cuántico para investigar más y, mientras está ahí, ocurre el chasquido de Thanos y desaparecen Scott, Hope y Hank.",
+      "Y justamente esa escena postcréditos es, para mí, lo más interesante de toda la película. Es una muy buena conexión con Infinity War y deja claro que lo que acabamos de ver tendrá consecuencias, pero fuera de eso, la película se me hizo bastante aburrida. Para mí, Ant-Man y la Avispa sigue confirmando que Ant-Man es de los personajes del UCM que menos me interesan."
+    ],
+    "cita": "Huir, recuperar un maletín, esconderse, volver a huir y repetir la jugada.",
+    "veredicto": "Repetitiva y simple. El Reino Cuántico y la postcréditos son lo mejor, pero la película en sí me aburrió. Conjuro mal ejecutado."
+  },
+  {
+    "id": "avengers-endgame",
+    "titulo": "Avengers: Endgame",
+    "anio": 2019,
+    "fecha": "2026-10-05",
+    "duracion": "181 min",
+    "generos": ["Acción", "Ciencia ficción", "Aventuras"],
+    "puntaje": 5.0,
+    "destacada": true,
+    "etiqueta": "REESTRENO",
+    "plataformas": ["Cines"],
+    "resumen": "La culminación de 11 años y 29 películas. Momentos legendarios, peso emocional y el cierre perfecto de la Saga del Infinito. Volver a verla en el cine sigue siendo una experiencia increíble.",
+    "poster": "imgs/sagas/ucm/endgame.jpg",
+    "posterFallback": {
+      "linea1": "Avengers:",
+      "linea2": "Endgame"
+    },
+    "letterboxd": "https://letterboxd.com/film/avengers-endgame",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt4154796/",
+      "rating": "8.4"
+    },
+    "lead": "Cine legendario. La culminación perfecta de la Saga del Infinito. Momentos que siguen pegando igual aunque ya te sepas la película de memoria.",
+    "contenido": [
+      "Después de 29 películas en este camino rumbo a Doomsday, llegamos a Avengers: Endgame, ahora en su versión Bonus por este reestreno de 2026. Y aunque ya me la sé prácticamente de memoria, volverla a ver en el cine después de tantos años fue una experiencia increíble. En 2019 la vi como cuatro veces en el cine y, aunque ya la había vuelto a ver cuando hice mi maratón de Spider-Man, regresar a verla en pantalla grande hizo que se sintiera diferente otra vez.",
+      "Esta vez los cines la están proyectando con algunas escenas extras, pero lo más importante para mí sigue siendo la experiencia de volver a vivir todo esto en una sala llena. Ver los esfuerzos de los Vengadores por recuperar a todos los que desaparecieron, después de todo lo que pasó en Infinity War, sigue teniendo muchísimo peso. Y aunque ya sé perfectamente qué va a suceder, hay momentos que todavía me pegan igual.",
+      "Alerta de spoilers. La muerte de Natasha volvió a sacarme las lágrimas. Y luego llega toda esa parte que ya es historia del cine de superhéroes: el Capitán América levantando el martillo de Thor, el “Vengadores, unidos”, el “te quiero tres millones”, Iron Man diciendo “yo soy Iron Man” y haciendo el chasquido, y después el funeral de Tony. Todos esos momentos volvieron a sentirse como si fuera la primera vez que los veía.",
+      "Creo que eso es justamente lo que hace tan especial a esta película. No solamente estás viendo una película de superhéroes, estás viendo la culminación de todo lo que Marvel construyó durante 11 años y 29 películas. Personajes, historias y momentos que fuimos siguiendo durante años terminan reuniéndose en una sola película. Puede tener sus detalles y decisiones que se pueden discutir, pero como evento cinematográfico es difícil negar lo que consiguió.",
+      "Para mí, Avengers: Endgame sigue siendo una de las mejores películas de superhéroes que existen y, sin duda, lo mejor de Marvel. Después de tantos años, volver a verla en el cine confirmó que la Saga del Infinito tuvo un cierre enorme y que esta película sigue teniendo esa capacidad de hacerte sentir lo mismo aunque ya sepas exactamente lo que va a pasar. Es un megaevento que todavía funciona."
+    ],
+    "cita": "Yo soy Iron Man.",
+    "veredicto": "Culminación perfecta de 11 años y 29 películas. Momentos legendarios que siguen pegando igual. Cine legendario."
+  },
+  {
+    "id": "oasis-live-25",
+    "titulo": "Oasis: Live ’25",
+    "anio": 2026,
+    "fecha": "2026-10-05",
+    "duracion": "123 min",
+    "generos": ["Documental", "Música"],
+    "puntaje": 3.0,
+    "destacada": false,
+    "etiqueta": "ESTRENO",
+    "plataformas": ["Cines"],
+    "resumen": "Documental del regreso de Oasis. Interesante como registro del reencuentro, pero demasiada plática y pocas canciones. Funciona más para fans que como experiencia de concierto.",
+    "poster": "imgs/resenias/oasislive25.jpg",
+    "posterFallback": {
+      "linea1": "Oasis:",
+      "linea2": "Live ’25"
+    },
+    "letterboxd": "https://letterboxd.com/film/oasis-dont-look-back-in-anger",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt36150957/",
+      "rating": "8.3"
+    },
+    "lead": "No soy fan de Oasis y se nota. Demasiada plática y pocas canciones. Funciona como documento del regreso, pero se queda corto como experiencia de concierto.",
+    "contenido": [
+      "La verdad, no me gusta mucho calificar documentales de conciertos porque siento que la calificación también depende bastante del fanatismo de la persona que lo está viendo. Yo no soy fan de Oasis; conozco dos o tres canciones que me gustan y ya. Aun así, decidí ver este documental y compararlo con otros conciertos que he visto para tratar de dar una opinión más allá de simplemente ser fan de la banda.",
+      "Y para mí, el principal problema es que hay demasiada plática y muy pocas canciones. Entiendo que el documental quiere contar el regreso de los hermanos Gallagher, cómo volvieron a juntarse y todo lo que rodea este reencuentro, pero yo iba esperando principalmente escuchar a Oasis.",
+      "La historia del regreso está bien y sí es interesante ver nuevamente juntos a los hermanos después de todo lo que ha pasado entre ellos. Pero llega un punto en el que sentí que prefería que dejaran de hablar y simplemente pusieran más partes del concierto.",
+      "Precisamente por eso, comparándolo con otros documentales y películas de conciertos, para mí se queda corto. Si eres muy fan de Oasis probablemente vas a disfrutar mucho más toda la parte del reencuentro y las conversaciones, porque seguramente esos momentos tienen un valor emocional mucho mayor. Pero como yo no tengo ese vínculo con la banda, me interesaba mucho más escuchar las canciones.",
+      "No me pareció malo, pero tampoco fue algo que me sorprendiera. Para mí funciona más como un documento del regreso de Oasis que como una experiencia de concierto que realmente me hiciera querer volver a verla. Hubiera preferido menos plática y muchas más canciones."
+    ],
+    "cita": "Hubiera preferido menos plática y muchas más canciones.",
+    "veredicto": "Interesante como registro del regreso, pero demasiada plática y pocas canciones. Funciona más para fans. Palomera ritual."
+  },
+  {
+    "id": "hombre-al-agua",
+    "titulo": "Hombre al Agua",
+    "anio": 2026,
+    "fecha": "2026-10-05",
+    "duracion": "116 min",
+    "generos": ["Comedia", "Drama"],
+    "puntaje": 2.0,
+    "destacada": false,
+    "etiqueta": "ESTRENO",
+    "plataformas": ["Cines"],
+    "resumen": "Quiere abarcar demasiados temas y no desarrolla bien ninguno. Lenta, acentos poco convincentes y un final caótico. Propuesta interesante en papel, pero aburre en pantalla.",
+    "poster": "imgs/resenias/agua.jpg",
+    "posterFallback": {
+      "linea1": "Hombre",
+      "linea2": "al Agua"
+    },
+    "letterboxd": "https://letterboxd.com/film/hombre-al-agua-2026",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt39019415/",
+      "rating": "6.2"
+    },
+    "lead": "Quiere tocar demasiados temas y no desarrolla ninguno. Lenta, acentos malos y final caótico. Me aburrió demasiado.",
+    "contenido": [
+      "Te pasas, Gael García, ¿cómo vas a criticar La Odisea de Christopher Nolan? Desde ahí la película ya me estaba dando una idea de por dónde iba. Hombre al Agua es una película muy mexicana que quiere abarcar demasiados temas al mismo tiempo, pero para mí termina sin desarrollar bien ninguno.",
+      "La historia tiene varias ideas interesantes, pero el problema es que realmente no sucede demasiado. La película avanza, pasan algunas cosas, pero yo sentí que estaba esperando a que realmente arrancara. Hay momentos en los que simplemente me estaba aburriendo porque no encontraba algo que me mantuviera interesado.",
+      "También está el tema de los acentos. El cubano y el yucateco se me hicieron bastante malos y, en lugar de ayudar a que los personajes se sintieran más naturales, para mí terminaban sacándome de la película. No sé por qué no pudieron simplemente manejar personajes hablando en español mexicano o utilizar acentos que sonaran más convincentes.",
+      "Y cuando llegamos al final, todo se vuelve todavía más caótico. Parece que la película quiere juntar de golpe todos los temas que estuvo planteando durante el camino y termina siendo un desastre difícil de seguir. Entiendo lo que intenta hacer y las ideas que quiere tocar, pero la ejecución no me convenció.",
+      "Para mí, Hombre al Agua es de esas películas que tienen una propuesta interesante en papel, pero cuando las ves en pantalla no terminan de funcionar. Quiere hablar de demasiadas cosas, se siente lenta, los acentos me sacaron bastante de la historia y el final termina de hacerla todavía más complicada. La verdad, sí me aburrió demasiado."
+    ],
+    "cita": "Quiere abarcar demasiados temas al mismo tiempo, pero termina sin desarrollar bien ninguno.",
+    "veredicto": "Propuesta interesante en papel, pero lenta, con acentos malos y un final caótico. Me aburrió. Conjuro mal ejecutado."
+  },
+  {
+    "id": "rapidos-y-furiosos-reto-tokio",
+    "titulo": "Rápidos y Furiosos: Reto Tokio",
+    "anio": 2006,
+    "fecha": "2026-10-05",
+    "duracion": "104 min",
+    "generos": ["Acción", "Crimen", "Drama"],
+    "puntaje": 2.5,
+    "destacada": false,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "Copia de la primera con drifting en Tokio. Sean sin carisma, Han todavía no se entiende por qué es tan querido y una historia sencilla. Correcta, pero olvidable.",
+    "poster": "imgs/resenias/tokyo.jpg",
+    "posterFallback": {
+      "linea1": "Rápidos y Furiosos:",
+      "linea2": "Reto Tokio"
+    },
+    "letterboxd": "https://letterboxd.com/film/the-fast-and-the-furious-tokyo-drift",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt0463985/",
+      "rating": "6.1"
+    },
+    "lead": "No entiendo el amor que le tienen. Parece una copia de la primera con drifting. Sean sin carisma y Han todavía no convence. Neutral y olvidable.",
+    "contenido": [
+      "La verdad no entiendo por qué tanta gente dice que Rápidos y Furiosos: Reto Tokio es de las mejores de toda la saga, incluso que es la segunda mejor. Obviamente es cuestión de gustos, pero para mí está muy lejos de eso. Yo la sentí como una vil copia de la primera película, solamente cambiando las carreras callejeras por el drifting y llevando la historia a Tokio.",
+      "Sean, para mí, es prácticamente una copia de Brian O'Conner. Otra vez tenemos al muchacho que llega al mundo de las carreras, se mete en problemas y termina involucrándose con este ambiente. El problema es que no le encontré nada de carisma. Se me hizo un personaje bastante seco y no conecté con él. Además, se supone que va a la escuela, pero físicamente se ve mucho mayor que todos los demás. Todos parecen jóvenes y él parece que ya lleva varios años pagando impuestos.",
+      "Y luego está Han, que por lo que he escuchado es uno de los personajes más queridos de toda la saga. Pero como yo estoy viendo las películas en orden, aquí no entiendo todavía por qué tiene tanta fama. En esta película prácticamente lo vemos aparecer, hacer sus caritas, comer y estar ahí con Sean. Y ya. No sentí que tuviera algo particularmente especial que me hiciera encariñarme con él.",
+      "También entiendo que para mucha gente esta película tiene un estilo diferente por el drifting, Tokio y toda la cultura de los autos modificados. Las carreras sí tienen su encanto y visualmente hay cosas que funcionan, pero para mí eso no es suficiente para levantar toda la película. La historia sigue siendo bastante sencilla y los personajes no me terminaron de convencer.",
+      "Así que, por ahora, sigo sin entender todo ese amor que tiene Reto Tokio. Para mí es una repetición de la fórmula de la primera, con un protagonista que no me cae bien, personajes con los que no conecté y una historia que no me dejó demasiado. Quizá conforme avance en la saga entienda mejor por qué Han es tan querido, pero viéndola en el orden en que fueron saliendo, esta película me parece simplemente correcta y bastante olvidable."
+    ],
+    "cita": "Sean parece que ya lleva varios años pagando impuestos.",
+    "veredicto": "Copia de la primera con drifting. Protagonista sin carisma y Han todavía no convence. Correcta, pero neutral y olvidable."
+  },
+  {
+    "id": "the-hunt",
+    "titulo": "The Hunt",
+    "anio": 2012,
+    "fecha": "2026-10-05",
+    "duracion": "115 min",
+    "generos": ["Drama", "Thriller"],
+    "puntaje": 3.5,
+    "destacada": false,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "Una acusación falsa crece hasta destruir la vida de un hombre. Incómoda, triste y muy actual. Muestra lo fácil que es condenar socialmente a alguien sin pruebas.",
+    "poster": "imgs/resenias/caza.jpg",
+    "posterFallback": {
+      "linea1": "The Hunt",
+      "linea2": ""
+    },
+    "letterboxd": "https://letterboxd.com/film/the-hunt-2012",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt2106476/",
+      "rating": "8.3"
+    },
+    "lead": "CTM, Clara. Una acusación falsa que se descontrola y destruye una vida. Incómoda, triste y todavía muy actual en 2026.",
+    "contenido": [
+      "Desde el principio esta película me hizo decir: CTM, como “chinga tu madre”, Clara. Porque todo empieza con una acusación que va creciendo hasta convertirse en algo muchísimo más grande de lo que realmente es. Y sobre todo dan ganas de decirle eso a la directora del preescolar, porque por culpa de ella el problema se hace enorme: en lugar de manejar la situación con cuidado, termina dándola a conocer prácticamente a todo el pueblo, y eso hace que todo se salga de control.",
+      "Lo que más me desesperó es que prácticamente todo el pueblo se hace bien tonto. Todos empiezan a creer la acusación sin realmente cuestionarla y actúan como si ya estuviera comprobado que el protagonista es culpable. Es impresionante cómo una sola acusación puede destruir la vida de una persona cuando los demás simplemente deciden creerla sin escuchar la otra versión.",
+      "Y eso es justamente lo más triste de la película. No solamente muestra lo fácil que puede ser acusar falsamente a alguien, sino también lo difícil que puede ser para esa persona demostrar que es inocente cuando prácticamente todos ya decidieron qué pensar de ella. El protagonista queda completamente aislado de la sociedad y parece que cualquier cosa que haga solamente empeora la situación.",
+      "Y aunque es una película de 2012, lo más fuerte es que el tema sigue siendo muy actual en 2026. Todavía suceden casos en los que alguien acusa falsamente a otra persona y la sociedad reacciona inmediatamente sin darle oportunidad de defenderse o de explicar lo que realmente pasó. Y cuando la gente ya decidió que eres culpable, demostrar lo contrario puede ser muchísimo más complicado.",
+      "Me pareció una película bastante triste y muy incómoda por todo lo que provoca. No es una película que disfrute precisamente por lo agradable de su historia, pero sí me parece que funciona muy bien para mostrar cómo una acusación puede crecer hasta convertirse en una especie de condena social."
+    ],
+    "cita": "CTM, Clara.",
+    "veredicto": "Incómoda y triste. Muestra cómo una acusación falsa puede destruir una vida cuando la sociedad decide creerla sin cuestionar. Sigue muy actual. Buen embrujo."
+  },
+  {
+    "id": "verity",
+    "titulo": "Verity",
+    "anio": 2026,
+    "fecha": "2026-10-05",
+    "duracion": "117 min",
+    "generos": ["Thriller", "Drama", "Misterio"],
+    "puntaje": 1.5,
+    "destacada": false,
+    "etiqueta": "ESTRENO",
+    "plataformas": ["Cines"],
+    "resumen": "Drama tipo novela de Televisa. Demasiado aburrida fuera de los manuscritos, Anne Hathaway desaprovechada y un final sin chiste. Decepción.",
+    "poster": "imgs/resenias/verity.jpg",
+    "posterFallback": {
+      "linea1": "Verity",
+      "linea2": ""
+    },
+    "letterboxd": "https://letterboxd.com/film/verity-2026",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt32261958/",
+      "rating": "6.0"
+    },
+    "lead": "Parece novela de Televisa. Aburrida, Anne Hathaway casi inmóvil y un final que no aporta nada. Conmigo no funcionó.",
+    "contenido": [
+      "En mi sala había cuatro mujeres: dos jóvenes y otras dos adultas mayores, y estaban encantadas con todo lo que sucedía. Se sorprendían, se reían y reaccionaban a cada cosa que pasaba. Y la verdad, viendo la película, entendí perfectamente por qué: Verity parece una de esas novelas de Televisa, de esas donde todo es drama, secretos, personajes haciendo cosas absurdas y giros cada cinco minutos.",
+      "El problema es que a mí me pareció muy aburrida. De hecho, lo que más interesante se me hacía era cuando Dakota Johnson estaba leyendo los manuscritos de Verity y descubríamos lo que supuestamente había hecho este personaje. Ahí sí sentía que había algo de misterio y quería saber hasta dónde iba a llegar todo. Pero fuera de eso, sentía que no sucedía gran cosa.",
+      "Y luego tenemos el final. Después de todo lo que pasa, resulta que se salen con la suya y todavía nos meten ese último giro que, sinceramente, para mí no tiene ningún chiste. Podían haberlo quitado completamente y prácticamente quedaba igual. En lugar de hacer que el final fuera más interesante, solamente sentí que alargaron una película que ya de por sí se me estaba haciendo eterna.",
+      "Y Ana Hathaway… bueno, creo que ya estaba harta de hacer cinco películas en un año, porque prácticamente toda la película se la pasa inmóvil. Siento que está súper desaprovechada. Tienes a Anne Hathaway en una película y decides tenerla ahí casi como parte del mobiliario. Dakota Johnson es quien carga prácticamente con toda la película.",
+      "Entiendo perfectamente que haya gente a la que este tipo de historias le encanten y, viendo las reacciones de mi sala, claramente hay público para esto. Pero conmigo no funcionó. Entre el drama tipo novela, una trama que prometía más de lo que terminó entregando y un final que para mí no aporta prácticamente nada, Verity terminó siendo una decepción."
+    ],
+    "cita": "Anne Hathaway está casi como parte del mobiliario.",
+    "veredicto": "Drama tipo novela de Televisa. Aburrida fuera de los manuscritos, Hathaway desaprovechada y final sin chiste. Brujería oscura."
+  },
+  {
+    "id": "el-corazon-de-la-bestia",
+    "titulo": "El Corazón de la Bestia",
+    "anio": 2026,
+    "fecha": "2026-10-05",
+    "duracion": "101 min",
+    "generos": ["Acción", "Aventuras", "Drama", "Thriller"],
+    "puntaje": 2.5,
+    "destacada": false,
+    "etiqueta": "ESTRENO",
+    "plataformas": ["Cines"],
+    "resumen": "Historia sencilla y predecible de supervivencia con Brad Pitt y su perro Odin. El perro es el verdadero protagonista. Se disfruta, pero se siente larga y repetitiva.",
+    "poster": "imgs/resenias/bestia.jpg",
+    "posterFallback": {
+      "linea1": "El Corazón",
+      "linea2": "de la Bestia"
+    },
+    "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt7526136/",
+      "rating": "7.3"
+    },
+    "lead": "Mucho mejor que La guerra de los últimos. Odin se roba la película, la historia es simple y predecible, pero se disfruta. Neutral, pero olvidable.",
+    "contenido": [
+      "Esta es la segunda película que veo este mes sobre la relación entre un perro y un humano. La primera fue La guerra de los últimos días, que para mí estuvo del asco total, y ahora tenemos El corazón de la bestia, que es mucho más tranquila, disfrutable y, por suerte, bastante mejor. Aunque también hay que decirlo: se me hizo un poco larga.",
+      "Aquí tenemos prácticamente a dos protagonistas: Brad Pitt y Odin, el perro. Y sin duda alguna, Odin se lleva el papel principal; Brad Pitt yo lo pondría como actor de reparto. El perro es prácticamente el corazón de la película y es quien termina cargando con buena parte de la historia.",
+      "La película nos cuenta cómo dos soldados retirados, Brad Pitt y Odin, terminan varados en una zona completamente alejada después de un accidente de avión. A partir de ahí tienen que atravesar la naturaleza para poder regresar a la sociedad, y durante ese trayecto se enfrentan a diferentes situaciones y peligros. Básicamente es llegar del punto A al punto B, y ver todo lo que sucede en el camino.",
+      "Y ahí está mi principal problema: desde el inicio hasta el final la historia es bastante sencilla y predecible. Sabes más o menos hacia dónde va y, como el trayecto es tan largo, llega un momento en que algunas situaciones se sienten repetitivas. Son casi dos horas siguiendo prácticamente el mismo objetivo, y creo que con un poco menos de duración habría funcionado mejor.",
+      "Eso sí, la parte final me pareció bastante conmovedora. Incluso me sacó algunas lágrimas, aunque curiosamente no fue precisamente por el final. Pero que una película consiga hacerte sentir algo no significa automáticamente que sea una gran película. Para mí sigue siendo una historia simple, predecible y algo repetitiva, pero también es una película que se disfruta y que tiene en Odin a su verdadero protagonista."
+    ],
+    "cita": "Odin se lleva el papel principal; Brad Pitt yo lo pondría como actor de reparto.",
+    "veredicto": "Simple y predecible, pero disfrutable. Odin es el verdadero protagonista. Un poco larga y repetitiva. Neutral, pero olvidable."
+  },
+  {
+    "id": "unabomber",
+    "titulo": "Unabomber",
+    "anio": 2026,
+    "fecha": "2026-10-05",
+    "duracion": "100 min",
+    "generos": ["Drama", "Crimen", "Thriller"],
+    "puntaje": 2.5,
+    "destacada": false,
+    "etiqueta": "ESTRENO",
+    "plataformas": ["Streaming"],
+    "resumen": "Palomera seca. Interesante ver el origen de Kaczynski, pero no explica realmente su transformación. La parte del FBI es simple y sin tensión. Correcta, pero olvidable.",
+    "poster": "imgs/resenias/unabomber.jpg",
+    "posterFallback": {
+      "linea1": "Unabomber",
+      "linea2": ""
+    },
+    "letterboxd": "https://letterboxd.com/film/unabomber-2026",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt6933238/",
+      "rating": "6.2"
+    },
+    "lead": "Palomera seca. Interesante el origen de Ted, pero no explica su transformación real. La investigación del FBI se siente simple y sin tensión.",
+    "contenido": [
+      "Esta es una palomera seca. La historia se divide principalmente en dos partes: por un lado vemos a Theodore Kaczynski desde adolescente, cuando entra a la universidad, se desarrolla como matemático y tiene interés por convertirse en filósofo. También vemos cómo entra a un entrenamiento relacionado con los debates y cómo poco a poco empieza a cambiar. Y por otro lado tenemos la investigación del FBI, después de que The New York Times publica el manifiesto de Unabomber y las autoridades finalmente consiguen acercarse a él.",
+      "La parte de Kaczynski es la que me parecía más interesante, porque vemos cómo era antes de convertirse en Unabomber y cómo se va corrompiendo. El problema es que la película no termina de explicar algo que para mí era fundamental: ¿por qué llegó al punto de fabricar bombas y enviárselas a personas? ¿Por qué decidió aislarse durante tantos años en una cabaña? Entiendo lo que la película quiere mostrar, pero no siento que explique realmente su transformación.",
+      "Y luego tenemos toda la parte de los policías y el FBI, que se me hace demasiado simple. Después de 18 años de búsqueda, finalmente llegan hasta Kaczynski porque su propio hermano lo delata. Y sí, así fue como pudieron encontrarlo, pero cinematográficamente me faltó mucho más. No hay esa sensación de riesgo o de estar persiguiendo a alguien que podría escaparse. Simplemente llega el momento y ya lo encuentran.",
+      "Por eso tampoco pude evitar compararla con Zodiac. Las dos historias tienen investigaciones relacionadas con criminales que durante años no pudieron ser identificados, pero en Zodiac sentía mucho más esa tensión de seguir una investigación que parece no llevar a ningún lado. Aquí, en cambio, la parte del FBI se siente muy equis, especialmente cuando llegamos al desenlace.",
+      "En general, está bien para pasar el rato, pero me quedé con la sensación de que había una historia mucho más interesante que contar. Me hubiera gustado entender mejor qué pasó con Ted para convertirse en Unabomber y qué lo llevó realmente a hacer todo lo que hizo. Como está planteada, termina siendo una película correcta, pero bastante seca y olvidable."
+    ],
+    "cita": "¿Por qué llegó al punto de fabricar bombas y enviárselas a personas?",
+    "veredicto": "Palomera seca. Interesante el origen, pero no explica la transformación real. La parte del FBI carece de tensión. Neutral, pero olvidable."
+  },
+  {
+    "id": "como-perder-a-un-hombre-en-diez-dias",
+    "titulo": "Cómo Perder A Un Hombre En Diez Días",
+    "anio": 2003,
+    "fecha": "2026-10-05",
+    "duracion": "116 min",
+    "generos": ["Comedia", "Romance"],
+    "puntaje": 4.0,
+    "destacada": false,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "Súper predecible, pero divertida y entretenida. Kate Hudson y Matthew McConaughey tienen buena química. Comedia romántica clásica de los 2000 que funciona.",
+    "poster": "imgs/resenias/hombre.jpg",
+    "posterFallback": {
+      "linea1": "Cómo Perder A Un",
+      "linea2": "Hombre En Diez Días"
+    },
+    "letterboxd": "https://letterboxd.com/film/how-to-lose-a-guy-in-10-days",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt0251127/",
+      "rating": "6.6"
+    },
+    "lead": "No soy fan de las románticas, pero esta sí me gustó. Predecible, sí, pero divertida, con buena química y se disfruta de principio a fin.",
+    "contenido": [
+      "No soy fanático de las películas románticas, pero no sé qué tiene Cómo Perder A Un Hombre En Diez Días que esta sí me gustó. Obviamente es súper predecible y desde el principio sabes perfectamente que los protagonistas van a terminar juntos, pero aun así me pareció bastante divertida y entretenida.",
+      "La historia parte de dos apuestas completamente diferentes. Andie tiene que conseguir que Benjamin se vaya de su vida en diez días, mientras que Benjamin apuesta que puede hacer que ella se enamore de él durante ese mismo tiempo. El problema es que ninguno sabe realmente que el otro está jugando. Entonces empiezan a hacer todo tipo de cosas para conseguir sus respectivos objetivos, y ahí es donde está buena parte de la diversión.",
+      "Kate Hudson y Matthew McConaughey funcionan muy bien juntos. Los dos personajes tienen bastante personalidad y se nota la química entre ellos, especialmente porque cada uno está intentando manipular la situación mientras nosotros sabemos lo que realmente está pasando. Kate Hudson hace muy bien la parte de Andie, sobre todo cuando lleva las cosas al extremo para intentar que Benjamin termine huyendo, mientras que McConaughey funciona como el tipo que intenta mantener la relación a pesar de todas las locuras que ella hace.",
+      "La dirección de Donald Petrie es bastante sencilla, pero creo que eso le queda bien a la película. No intenta hacer algo demasiado complicado: mantiene el ritmo ligero, aprovecha las situaciones cómicas y deja que la química entre los protagonistas sea lo que lleve la historia. La música también acompaña muy bien ese tono de comedia romántica de los 2000, con canciones que ayudan a darle esa sensación de película ligera y entretenida.",
+      "Y sí, al final todo termina exactamente como sabes que va a terminar: se enamoran. No hay ningún gran giro ni nada que cambie el género. Pero creo que aquí eso no importa demasiado, porque la gracia está en ver hasta dónde van a llegar para cumplir sus apuestas y cómo poco a poco lo que comenzó como un juego se les empieza a salir de las manos.",
+      "No es que de repente me haya convertido en fanático de las películas románticas, pero esta sí me funcionó. Es sencilla, predecible y completamente palomera, pero también es divertida, tiene buenos protagonistas y se disfruta de principio a fin."
+    ],
+    "cita": "Desde el principio sabes perfectamente que van a terminar juntos, pero aun así me pareció bastante divertida.",
+    "veredicto": "Súper predecible, pero divertida y con buena química. Comedia romántica clásica de los 2000 que se disfruta. Hechizo bien logrado."
+  },
+  {
+    "id": "que-nada-nos-separe",
+    "titulo": "Que Nada Nos Separe",
+    "anio": 1995,
+    "fecha": "2026-10-05",
+    "duracion": "97 min",
+    "generos": ["Drama"],
+    "puntaje": 5.0,
+    "destacada": true,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "Historia conmovedora sobre la amistad entre dos niños frente al SIDA. Predecible, pero llena de inocencia, emoción y un final que pesa. Cine que se queda contigo.",
+    "poster": "imgs/resenias/thecure.jpg",
+    "posterFallback": {
+      "linea1": "Que Nada",
+      "linea2": "Nos Separe"
+    },
+    "letterboxd": "https://letterboxd.com/film/the-cure-1995",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt0112757/",
+      "rating": "7.7"
+    },
+    "lead": "Bonita, conmovedora y desgarradora. Amistad inocente frente a algo mucho más grande. Sabes cómo termina, pero igual te pega. Cine legendario.",
+    "contenido": [
+      "Esta es una película muy bonita, pero también de esas que sabes desde el principio que te van a romper el corazón. Aquí seguimos la amistad de Dexter y Eric, dos niños que terminan formando un vínculo muy especial mientras enfrentan algo que ninguno de los dos realmente alcanza a comprender por completo: Dexter tiene SIDA después de haberlo contraído por una transfusión de sangre.",
+      "Y lo bonito de la película es justamente ver la inocencia de los dos. Ellos no entienden completamente la gravedad de lo que está pasando y simplemente quieren encontrar una manera de que Dexter se cure. Eric hace todo lo posible por ayudar a su amigo, desde darle plantas que encuentra en el bosque —que por cierto terminan envenenándolo— hasta emprender un viaje con él hacia otro estado después de leer en un periódico sobre una posible cura.",
+      "Obviamente, la película es predecible porque desde el principio sabemos que Dexter va a morir. No había una cura para el SIDA en esa época y la historia prácticamente nos prepara para ese desenlace. Pero eso no le quita fuerza a lo que vemos durante el camino, porque lo importante no es tanto descubrir qué va a pasar, sino ver todo lo que Eric está dispuesto a hacer por su amigo.",
+      "Y la parte final en el hospital está muy bien lograda. Ese momento en el que juegan con la idea de que Dexter murió y después resulta ser una broma es bastante predecible, porque ya entendemos hacia dónde va la historia, pero aun así funciona. Y también me gustó mucho el detalle del zapato: cuando Eric se lo deja para que Dexter no tenga miedo al abrir los ojos en la oscuridad. Es un detalle sencillo, pero dice muchísimo de la amistad que construyeron.",
+      "Creo que precisamente ahí está lo bonito de la película. No necesita hacer algo demasiado complicado para funcionar. Es una historia sencilla sobre dos niños que, desde su propia inocencia, intentan enfrentarse a algo que es mucho más grande que ellos. Y aunque sabes perfectamente cómo va a terminar, la película consigue que te importe lo que les pasa y que el final tenga peso emocional.",
+      "Es una película muy bonita, conmovedora y de esas que se quedan contigo después de terminarla. Para mí, esta sí fue una de esas historias que merecen la máxima calificación."
+    ],
+    "cita": "El detalle del zapato dice muchísimo de la amistad que construyeron.",
+    "veredicto": "Bonita, conmovedora y desgarradora. Amistad inocente frente a lo inevitable. Cine que se queda contigo. Cine legendario."
   }
 ]
