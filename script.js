@@ -41,6 +41,7 @@ const CUPONES = {
   "TESORO50": { descuento: 50, tipo: "fijo", min: 300 },      // $50 de descuento
   "COLECCION10": { descuento: 10, tipo: "porcentaje", min: 500 }, // 10%
   "ENVIO0": { descuento: 0, tipo: "envio_gratis", min: 0 }    // fuerza envío gratis (opcional)
+  "LOSENTIMOS": { descuento: 80, tipo: "fijo", min: 300 },      // $80 de descuento
 };
 
 let cuponAplicado = null; // { codigo, descuento, tipo }
@@ -1547,6 +1548,16 @@ document.addEventListener("touchend", (e) => {
    Solo marca active: true en las que quieras mostrar.
    ========================================================= */
 const PREVENTAS_ACTIVAS = [
+    {
+      id: "blog-los-brujos-del-cine",
+      active: true,
+      emoji: "🎬",
+      titulo: "Los Brujos del Cine",
+      texto: "Reseñas honestas, estrenos, precios y taquilla.<br><br>Entra al blog y descubre qué <strong>sí vale la pena ver</strong> en la sala.",
+      link: "https://losbrujosdelcine.com/blog.html",
+      linkTexto: "Visitar el blog",
+      tema: "brujos",
+    },
   {
     id: "mercado-libre",
     active: true,

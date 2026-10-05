@@ -3159,6 +3159,20 @@ body.dark .btn-wishlist {
   color: #000;
 }
 
+.carousel-slide--brujos {
+  background: linear-gradient(135deg, #0a0a0c 0%, #1a1218 45%, #5c1520 85%, #1a0a0c 100%);
+  border-color: rgba(196, 30, 58, 0.3);
+}
+.carousel-slide--brujos .banner-btn {
+  background: #e8e8ec;
+  color: #121214;
+  font-weight: 700;
+}
+.carousel-slide--brujos .banner-btn:hover {
+  background: #c9a227;
+  color: #030304;
+}
+
 .carousel-slide--streetfighter {
   background: linear-gradient(135deg, #050510 0%, #1b0033 40%, #7b2cbf 70%, #ff006e 100%);
   border-color: rgba(0, 245, 255, 0.35);
