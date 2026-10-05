@@ -1256,7 +1256,7 @@
     "id": "los-vengadores",
     "titulo": "Los Vengadores",
     "anio": 2012,
-    "fecha": "2026-10-05",
+    "fecha": "2026-10-01",
     "duracion": "143 min",
     "generos": ["Acción", "Ciencia ficción", "Aventuras"],
     "puntaje": 5.0,
@@ -1264,7 +1264,7 @@
     "etiqueta": "",
     "plataformas": ["Streaming"],
     "resumen": "La reunión definitiva del equipo. Historia sencilla pero perfecta, personajes que chocan y se unen, y una batalla de Nueva York legendaria. Además, la primera película que vi en el cine.",
-    "poster": "imgs/sagas/ucm/avengers.jpg",
+    "poster": "imgs/sagas/ucm/avengers.jpeg",
     "posterFallback": {
       "linea1": "Los",
       "linea2": "Vengadores"
@@ -1289,7 +1289,7 @@
     "id": "iron-man-3",
     "titulo": "Iron Man 3",
     "anio": 2013,
-    "fecha": "2026-10-05",
+    "fecha": "2026-10-01",
     "duracion": "130 min",
     "generos": ["Acción", "Ciencia ficción", "Aventuras"],
     "puntaje": 2.5,
@@ -1297,7 +1297,7 @@
     "etiqueta": "",
     "plataformas": ["Streaming"],
     "resumen": "La más floja de la trilogía de Iron Man. Buenas consecuencias para Tony y acción entretenida, pero el giro del Mandarín y un villano demasiado simple la dejan por debajo.",
-    "poster": "imgs/sagas/ucm/ironman3.jpg",
+    "poster": "imgs/sagas/ucm/ironman3.jpeg",
     "posterFallback": {
       "linea1": "Iron Man",
       "linea2": "3"
@@ -1322,7 +1322,7 @@
     "id": "thor-un-mundo-oscuro",
     "titulo": "Thor: Un Mundo Oscuro",
     "anio": 2013,
-    "fecha": "2026-10-05",
+    "fecha": "2026-10-01",
     "duracion": "112 min",
     "generos": ["Acción", "Fantasía", "Aventuras"],
     "puntaje": 2.0,
@@ -1330,7 +1330,7 @@
     "etiqueta": "",
     "plataformas": ["Streaming"],
     "resumen": "La más floja de las primeras de Thor. Malekith genérico, relación forzada con Jane y demasiado humor que resta peso. Solo aporta mitología y Gemas del Infinito al MCU.",
-    "poster": "imgs/sagas/ucm/thor2.jpg",
+    "poster": "imgs/sagas/ucm/thor2.jpeg",
     "posterFallback": {
       "linea1": "Thor:",
       "linea2": "Un Mundo Oscuro"
@@ -1356,7 +1356,7 @@
     "id": "capitan-america-el-soldado-de-invierno",
     "titulo": "Capitán América: El Soldado de Invierno",
     "anio": 2014,
-    "fecha": "2026-10-05",
+    "fecha": "2026-10-01",
     "duracion": "136 min",
     "generos": ["Acción", "Ciencia ficción", "Thriller"],
     "puntaje": 4.5,
@@ -1364,7 +1364,7 @@
     "etiqueta": "",
     "plataformas": ["Streaming"],
     "resumen": "Excelente secuela de espionaje dentro del MCU. Desconfianza, traiciones, el regreso de Bucky y consecuencias reales que cambian el universo. Supera claramente a la primera.",
-    "poster": "imgs/sagas/ucm/capitan2.jpg",
+    "poster": "imgs/sagas/ucm/capitan2.jpeg",
     "posterFallback": {
       "linea1": "Capitán América:",
       "linea2": "El Soldado de Invierno"
@@ -1391,7 +1391,7 @@
     "id": "guardianes-de-la-galaxia",
     "titulo": "Guardianes de la Galaxia",
     "anio": 2014,
-    "fecha": "2026-10-05",
+    "fecha": "2026-10-01",
     "duracion": "121 min",
     "generos": ["Acción", "Ciencia ficción", "Aventuras", "Comedia"],
     "puntaje": 3.5,
@@ -1399,7 +1399,7 @@
     "etiqueta": "",
     "plataformas": ["Streaming"],
     "resumen": "Buen inicio de los Guardianes. Inadaptados que se convierten en equipo, expansión del universo cósmico, gran banda sonora y humor. La derrota de Ronan se siente un poco fácil, pero funciona.",
-    "poster": "imgs/sagas/ucm/guardianes.jpg",
+    "poster": "imgs/sagas/ucm/guardianes.jpeg",
     "posterFallback": {
       "linea1": "Guardianes de",
       "linea2": "la Galaxia"
@@ -1425,7 +1425,7 @@
     "id": "guardianes-de-la-galaxia-vol-2",
     "titulo": "Guardianes de la Galaxia Vol. 2",
     "anio": 2017,
-    "fecha": "2026-10-05",
+    "fecha": "2026-10-01",
     "duracion": "136 min",
     "generos": ["Acción", "Ciencia ficción", "Aventuras", "Comedia"],
     "puntaje": 3.0,
@@ -1433,7 +1433,7 @@
     "etiqueta": "",
     "plataformas": ["Streaming"],
     "resumen": "Baja de nivel respecto a la primera. Más comedia forzada y una historia de Ego demasiado simple, aunque la relación Quill-Yondu y la música siguen funcionando.",
-    "poster": "imgs/sagas/ucm/guardianes2.jpg",
+    "poster": "imgs/sagas/ucm/guardianes2.jpeg",
     "posterFallback": {
       "linea1": "Guardianes de",
       "linea2": "la Galaxia Vol. 2"
@@ -1459,7 +1459,7 @@
     "id": "avengers-era-de-ultron",
     "titulo": "Avengers: Era de Ultrón",
     "anio": 2015,
-    "fecha": "2026-10-05",
+    "fecha": "2026-10-01",
     "duracion": "141 min",
     "generos": ["Acción", "Ciencia ficción", "Aventuras"],
     "puntaje": 4.0,
@@ -1467,7 +1467,7 @@
     "etiqueta": "",
     "plataformas": ["Streaming"],
     "resumen": "Buena continuación de Los Vengadores. Consecuencias reales, llegada de Wanda, Quicksilver y Vision, y Ultron como amenaza nacida de los propios héroes. Funciona y prepara el futuro.",
-    "poster": "imgs/sagas/ucm/ultron.jpg",
+    "poster": "imgs/sagas/ucm/ultron.jpeg",
     "posterFallback": {
       "linea1": "Avengers:",
       "linea2": "Era de Ultrón"
@@ -1493,7 +1493,7 @@
     "id": "ant-man",
     "titulo": "Ant-Man",
     "anio": 2015,
-    "fecha": "2026-10-05",
+    "fecha": "2026-10-01",
     "duracion": "117 min",
     "generos": ["Acción", "Ciencia ficción", "Comedia"],
     "puntaje": 2.5,
@@ -1501,7 +1501,7 @@
     "etiqueta": "",
     "plataformas": ["Streaming"],
     "resumen": "No conecté con el personaje. Tono demasiado ligero y caricaturesco, villano olvidable y comedia que no me funcionó. Correcta, pero olvidable dentro del MCU.",
-    "poster": "imgs/sagas/ucm/antman.jpg",
+    "poster": "imgs/sagas/ucm/antman.jpeg",
     "posterFallback": {
       "linea1": "Ant-Man",
       "linea2": ""
@@ -1526,7 +1526,7 @@
     "id": "capitan-america-civil-war",
     "titulo": "Capitán América: Civil War",
     "anio": 2016,
-    "fecha": "2026-10-05",
+    "fecha": "2026-10-01",
     "duracion": "147 min",
     "generos": ["Acción", "Ciencia ficción", "Aventuras"],
     "puntaje": 5.0,
@@ -1534,7 +1534,7 @@
     "etiqueta": "",
     "plataformas": ["Streaming"],
     "resumen": "La mejor trilogía del MCU llega a su cima. Conflicto real entre héroes, Zemo como villano inteligente y consecuencias que cambian todo. Fenomenal de principio a fin.",
-    "poster": "imgs/sagas/ucm/capitan3.jpg",
+    "poster": "imgs/sagas/ucm/capitan3.jpeg",
     "posterFallback": {
       "linea1": "Capitán América:",
       "linea2": "Civil War"
@@ -1560,7 +1560,7 @@
     "id": "doctor-strange",
     "titulo": "Doctor Strange",
     "anio": 2016,
-    "fecha": "2026-10-05",
+    "fecha": "2026-10-01",
     "duracion": "115 min",
     "generos": ["Acción", "Fantasía", "Aventuras"],
     "puntaje": 3.5,
@@ -1568,7 +1568,7 @@
     "etiqueta": "",
     "plataformas": ["Streaming"],
     "resumen": "Buen inicio mágico del MCU. Strange aprende de su arrogancia, conocemos la Gema del Tiempo y visualmente es distinto. Kaecilius y Dormammu se sienten un poco simples, pero funciona.",
-    "poster": "imgs/sagas/ucm/strange.jpg",
+    "poster": "imgs/sagas/ucm/strange.jpeg",
     "posterFallback": {
       "linea1": "Doctor",
       "linea2": "Strange"
@@ -1594,7 +1594,7 @@
     "id": "pantera-negra",
     "titulo": "Pantera Negra",
     "anio": 2018,
-    "fecha": "2026-10-05",
+    "fecha": "2026-10-01",
     "duracion": "134 min",
     "generos": ["Acción", "Ciencia ficción", "Aventuras"],
     "puntaje": 4.0,
@@ -1602,7 +1602,7 @@
     "etiqueta": "",
     "plataformas": ["Streaming"],
     "resumen": "Buena introducción a Wakanda. Tecnología avanzada vs tradiciones, Killmonger interesante y personajes sólidos. No es la gran maravilla, pero tiene identidad y peso.",
-    "poster": "imgs/sagas/ucm/pantera.jpg",
+    "poster": "imgs/sagas/ucm/pantera.jpeg",
     "posterFallback": {
       "linea1": "Pantera",
       "linea2": "Negra"
@@ -1628,7 +1628,7 @@
     "id": "thor-ragnarok",
     "titulo": "Thor: Ragnarok",
     "anio": 2017,
-    "fecha": "2026-10-05",
+    "fecha": "2026-10-01",
     "duracion": "130 min",
     "generos": ["Acción", "Fantasía", "Comedia", "Aventuras"],
     "puntaje": 2.0,
@@ -1636,7 +1636,7 @@
     "etiqueta": "",
     "plataformas": ["Streaming"],
     "resumen": "Un poco mejor que Un Mundo Oscuro, pero sigue sin convencerme. Demasiado humor, Hela desaprovechada y un Ragnarok que no se siente épico. La saga de Thor nunca termina de subir de nivel.",
-    "poster": "imgs/sagas/ucm/thor3.jpg",
+    "poster": "imgs/sagas/ucm/thor3.jpeg",
     "posterFallback": {
       "linea1": "Thor:",
       "linea2": "Ragnarok"
@@ -1662,7 +1662,7 @@
     "id": "ant-man-y-la-avispa",
     "titulo": "Ant-Man y la Avispa",
     "anio": 2018,
-    "fecha": "2026-10-05",
+    "fecha": "2026-10-01",
     "duracion": "118 min",
     "generos": ["Acción", "Ciencia ficción", "Comedia"],
     "puntaje": 2.0,
@@ -1670,7 +1670,7 @@
     "etiqueta": "",
     "plataformas": ["Streaming"],
     "resumen": "Repetitiva y simple. Huir, recuperar maletín, esconderse y repetir. El Reino Cuántico y la postcréditos son lo más interesante, pero la película en sí me aburrió.",
-    "poster": "imgs/sagas/ucm/antman2.jpg",
+    "poster": "imgs/sagas/ucm/antman2.jpeg",
     "posterFallback": {
       "linea1": "Ant-Man y",
       "linea2": "la Avispa"
@@ -1703,7 +1703,7 @@
     "etiqueta": "REESTRENO",
     "plataformas": ["Cines"],
     "resumen": "La culminación de 11 años y 29 películas. Momentos legendarios, peso emocional y el cierre perfecto de la Saga del Infinito. Volver a verla en el cine sigue siendo una experiencia increíble.",
-    "poster": "imgs/sagas/ucm/endgame.jpg",
+    "poster": "imgs/sagas/ucm/endgame.jpeg",
     "posterFallback": {
       "linea1": "Avengers:",
       "linea2": "Endgame"
@@ -1736,7 +1736,7 @@
     "etiqueta": "ESTRENO",
     "plataformas": ["Cines"],
     "resumen": "Documental del regreso de Oasis. Interesante como registro del reencuentro, pero demasiada plática y pocas canciones. Funciona más para fans que como experiencia de concierto.",
-    "poster": "imgs/resenias/oasislive25.jpg",
+    "poster": "imgs/resenias/oasis.jpg",
     "posterFallback": {
       "linea1": "Oasis:",
       "linea2": "Live ’25"
