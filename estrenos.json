@@ -517,8 +517,8 @@
     "titulo": "Your Name (Re-Estreno)",
     "tipo": "preventa",
     "estadoCartelera": "preventa",
-    "fecha": "2026-10-04",
-    "fechaTexto": "Domingo 04 de Octubre 2026",
+    "fecha": "2026-10-08",
+    "fechaTexto": "Jueves 08 de Octubre 2026",
     "poster": "imgs/estrenos/your.jpg",
     "cines": ["Cinepolis"],
     "nota": "Japón"
@@ -880,8 +880,8 @@
     "titulo": "La Caída de la Ballena",
     "tipo": "preventa",
     "estadoCartelera": "preventa",
-    "fecha": "2026-10-18",
-    "fechaTexto": "Jueves 18 de Octubre 2026",
+    "fecha": "2026-10-15",
+    "fechaTexto": "Jueves 15 de Octubre 2026",
     "poster": "imgs/estrenos/ballena.jpg",
     "cines": ["Cinemex"],
     "nota": "Estados Unidos"
@@ -1039,5 +1039,126 @@
     "poster": "imgs/estrenos/partido.jpg",
     "cines": ["Cinemex"],
     "nota": "México"
+  },
+  {
+    "id": "canino",
+    "titulo": "Super Canino",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-15",
+    "fechaTexto": "Jueves 15 de Octubre 2026",
+    "poster": "imgs/estrenos/canino.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Canadá"
+  },
+  {
+    "id": "klara",
+    "titulo": "Klara y El Sol",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-22",
+    "fechaTexto": "Jueves 22 de Octubre 2026",
+    "poster": "imgs/estrenos/klara.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "ali",
+    "titulo": "Ali G Kien ez yo?",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-22",
+    "fechaTexto": "Jueves 22 de Octubre 2026",
+    "poster": "imgs/estrenos/ali.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "charro",
+    "titulo": "La Venganza del Charro Negro",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-22",
+    "fechaTexto": "Jueves 22 de Octubre 2026",
+    "poster": "imgs/estrenos/charro.jpg",
+    "cines": ["Cinemex"],
+    "nota": "México"
+  },
+  {
+    "id": "sensatez",
+    "titulo": "Sensatez y Sentimiento",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-29",
+    "fechaTexto": "Jueves 29 de Octubre 2026",
+    "poster": "imgs/estrenos/sensatez.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "muertos",
+    "titulo": "Ciudad de Muertos",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-29",
+    "fechaTexto": "Jueves 29 de Octubre 2026",
+    "poster": "imgs/estrenos/muertos.jpg",
+    "cines": ["Cinemex"],
+    "nota": "México"
+  },
+  {
+    "id": "wildwood",
+    "titulo": "El Bosque Salvaje: Wildwood",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-29",
+    "fechaTexto": "Jueves 29 de Octubre 2026",
+    "poster": "imgs/estrenos/wildwood.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "entrega",
+    "titulo": "Entrega Al Límite",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-29",
+    "fechaTexto": "Jueves 29 de Octubre 2026",
+    "poster": "imgs/estrenos/entrega.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "minus",
+    "titulo": "Godzilla Minus Zero",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-05",
+    "fechaTexto": "Jueves 05 de Noviembre 2026",
+    "poster": "imgs/estrenos/minus.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Japón"
+  },
+  {
+    "id": "rocky",
+    "titulo": "Yo Soy Rocky",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-12",
+    "fechaTexto": "Jueves 12 de Noviembre 2026",
+    "poster": "imgs/estrenos/rocky.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "minotauro",
+    "titulo": "Minotauro",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-19",
+    "fechaTexto": "Jueves 19 de Noviembre 2026",
+    "poster": "imgs/estrenos/minotauro.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Francia"
   }
 ]

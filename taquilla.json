@@ -5,6 +5,17 @@
   "historia": [
     {
       "puesto": 1,
+      "titulo": "Avengers: Endgame",
+      "anio": 2019,
+      "taquilla": 295566085,
+      "enCartel": true,
+      "taquillaTexto": "$2,925 M",
+      "distribuidora": "Walt Disney Studios Motion Pictures",
+      "director": "Anthony y Joe Russo",
+      "poster": "imgs/taquilla/endgame.jpg"
+    },
+    {
+      "puesto": 2,
       "titulo": "Avatar",
       "anio": 2009,
       "taquilla": 2923710708,
@@ -15,23 +26,12 @@
       "poster": "imgs/taquilla/avatar.jpg"
     },
     {
-      "puesto": 2,
-      "titulo": "Avengers: Endgame",
-      "anio": 2019,
-      "taquilla": 2890253820,
-      "enCartel": true,
-      "taquillaTexto": "$2,890 M",
-      "distribuidora": "Walt Disney Studios Motion Pictures",
-      "director": "Anthony y Joe Russo",
-      "poster": "imgs/taquilla/endgame.jpg"
-    },
-    {
       "puesto": 3,
       "titulo": "Spider-Man: Brand New Day",
       "anio": 2026,
-      "taquilla": 2496384465,
+      "taquilla": 2505476970,
       "enCartel": true,
-      "taquillaTexto": "$2,496 M",
+      "taquillaTexto": "$2,505 M",
       "distribuidora": "Sony Pictures / Columbia Pictures",
       "director": "Destin Daniel Cretton",
       "poster": "imgs/taquilla/spidermanday.jpg"
@@ -117,9 +117,9 @@
       "puesto": 11,
       "titulo": "La Odisea",
       "anio": 2026,
-      "taquilla": 1757257504,
+      "taquilla": 1767801510,
       "enCartel": true,
-      "taquillaTexto": "$1,757 M",
+      "taquillaTexto": "$1,767 M",
       "distribuidora": "Universal Pictures",
       "director": "Christopher Nolan",
       "poster": "imgs/taquilla/laodisea.jpg"
@@ -230,11 +230,11 @@
         {
           "puesto": 1,
           "titulo": "Spider-Man: Brand New Day",
-          "taquilla": 2497014154,
-          "taquillaTexto": "$2,497 M",
+          "taquilla": 2505476970,
+          "taquillaTexto": "$2,505 M",
           "presupuesto": 225000000,
           "presupuestoTexto": "$225 M",
-          "multiplicador": 11.09,
+          "multiplicador": 11.13,
           "resultado": "exito",
           "genero": "general",
           "distribuidora": "Sony Pictures / Columbia Pictures",
@@ -243,11 +243,11 @@
         {
           "puesto": 2,
           "titulo": "The Odyssey",
-          "taquilla": 1753877510,
-          "taquillaTexto": "$1,753 M",
+          "taquilla": 1767801510,
+          "taquillaTexto": "$1,767 M",
           "presupuesto": 250000000,
           "presupuestoTexto": "$250 M",
-          "multiplicador": 7.01,
+          "multiplicador": 7.07,
           "resultado": "exito",
           "genero": "general",
           "distribuidora": "Universal Pictures",
