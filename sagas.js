@@ -80,7 +80,7 @@ const SAGAS = {
         fase: 'Fase 1',
         nota: 'Batalla de Nueva York. Cierre de la Fase 1.',
         poster: 'imgs/sagas/ucm/avengers.jpeg',
-        resena: 'review.html?id='
+        resena: 'review.html?id=los-vengadores'
       },
       {
         id: 'iron-man-3',
@@ -90,7 +90,7 @@ const SAGAS = {
         fase: 'Fase 2',
         nota: 'Poco después de Nueva York.',
         poster: 'imgs/sagas/ucm/ironman3.jpeg',
-        resena: 'review.html?id='
+        resena: 'review.html?id=iron-man-3'
       },
       {
         id: 'thor-mundo-oscuro',
@@ -100,7 +100,7 @@ const SAGAS = {
         fase: 'Fase 2',
         nota: 'Éter / Gema de la Realidad.',
         poster: 'imgs/sagas/ucm/thor2.jpeg',
-        resena: 'review.html?id='
+        resena: 'review.html?id=thor-un-mundo-oscuro'
       },
       {
         id: 'cap-soldado-invierno',
@@ -110,7 +110,7 @@ const SAGAS = {
         fase: 'Fase 2',
         nota: 'Caída de S.H.I.E.L.D. y Hydra.',
         poster: 'imgs/sagas/ucm/capitan2.jpeg',
-        resena: 'review.html?id='
+        resena: 'review.html?id=capitan-america-el-soldado-de-invierno'
       },
       {
         id: 'guardianes',
@@ -120,7 +120,7 @@ const SAGAS = {
         fase: 'Fase 2',
         nota: 'Gema del Poder. Historia paralela en el espacio.',
         poster: 'imgs/sagas/ucm/guardianes.jpeg',
-        resena: 'review.html?id='
+        resena: 'review.html?id=guardianes-de-la-galaxia'
       },
       {
         id: 'guardianes-2',
@@ -130,7 +130,7 @@ const SAGAS = {
         fase: 'Fase 3',
         nota: 'Pocos meses después del Vol. 1 (aunque se estrenó en 2017).',
         poster: 'imgs/sagas/ucm/guardianes2.jpeg',
-        resena: 'review.html?id='
+        resena: 'review.html?id=guardianes-de-la-galaxia-vol-2'
       },
       {
         id: 'era-ultron',
@@ -140,7 +140,7 @@ const SAGAS = {
         fase: 'Fase 2',
         nota: 'Sokovia. Visión y gemas.',
         poster: 'imgs/sagas/ucm/ultron.jpeg',
-        resena: 'review.html?id='
+        resena: 'review.html?id=avengers-era-de-ultron'
       },
       {
         id: 'ant-man',
@@ -150,7 +150,7 @@ const SAGAS = {
         fase: 'Fase 2',
         nota: 'Después de Ultrón; reino cuántico.',
         poster: 'imgs/sagas/ucm/antman.jpeg',
-        resena: 'review.html?id='
+        resena: 'review.html?id=ant-man'
       },
       {
         id: 'civil-war',
@@ -160,7 +160,7 @@ const SAGAS = {
         fase: 'Fase 3',
         nota: 'Acuerdos de Sokovia. Debut de Spider-Man y Black Panther.',
         poster: 'imgs/sagas/ucm/capitan3.jpeg',
-        resena: 'review.html?id='
+        resena: 'review.html?id=capitan-america-civil-war'
       },
       {
         id: 'doctor-strange',
@@ -170,7 +170,7 @@ const SAGAS = {
         fase: 'Fase 3',
         nota: 'Kamar-Taj y la Gema del Tiempo.',
         poster: 'imgs/sagas/ucm/strange.jpeg',
-        resena: 'review.html?id='
+        resena: 'review.html?id=doctor-strange'
       },
       {
         id: 'homecoming',
@@ -190,7 +190,7 @@ const SAGAS = {
         fase: 'Fase 3',
         nota: 'Tras la muerte de T’Chaka en Civil War.',
         poster: 'imgs/sagas/ucm/pantera.jpeg',
-        resena: 'review.html?id='
+        resena: 'review.html?id=pantera-negra'
       },
       {
         id: 'ragnarok',
@@ -200,7 +200,7 @@ const SAGAS = {
         fase: 'Fase 3',
         nota: 'Camino directo a Infinity War.',
         poster: 'imgs/sagas/ucm/thor3.jpeg',
-        resena: 'review.html?id='
+        resena: 'review.html?id=thor-ragnarok'
       },
       {
         id: 'ant-man-avispa',
@@ -210,7 +210,7 @@ const SAGAS = {
         fase: 'Fase 3',
         nota: 'Paralela / justo antes del chasquido.',
         poster: 'imgs/sagas/ucm/antman2.jpeg',
-        resena: 'review.html?id='
+        resena: 'review.html?id=ant-man-y-la-avispa'
       },
       {
         id: 'infinity-war',
@@ -230,7 +230,7 @@ const SAGAS = {
         fase: 'Fase 3',
         nota: 'Cierre de la Infinity Saga.',
         poster: 'imgs/sagas/ucm/endgame.jpeg',
-        resena: 'review.html?id='
+        resena: 'review.html?id=avengers-endgame'
       }
     ]
   }

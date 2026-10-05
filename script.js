@@ -40,8 +40,8 @@ const closeImageModal = document.getElementById("closeImageModal");
 const CUPONES = {
   "TESORO50": { descuento: 50, tipo: "fijo", min: 300 },      // $50 de descuento
   "COLECCION10": { descuento: 10, tipo: "porcentaje", min: 500 }, // 10%
-  "ENVIO0": { descuento: 0, tipo: "envio_gratis", min: 0 }    // fuerza envío gratis (opcional)
-  "LOSENTIMOS": { descuento: 80, tipo: "fijo", min: 300 },      // $80 de descuento
+  "ENVIO0": { descuento: 0, tipo: "envio_gratis", min: 0 },    // fuerza envío gratis (opcional)
+  "LOSENTIMOS": { descuento: 80, tipo: "fijo", min: 300 }     // $80 de descuento
 };
 
 let cuponAplicado = null; // { codigo, descuento, tipo }
