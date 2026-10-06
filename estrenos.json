@@ -1160,5 +1160,27 @@
     "poster": "imgs/estrenos/minotauro.jpg",
     "cines": ["Cinemex"],
     "nota": "Francia"
+  },
+  {
+    "id": "fauno",
+    "titulo": "El Laberinto del Fauno",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-15",
+    "fechaTexto": "Jueves 15 de Octubre 2026",
+    "poster": "imgs/estrenos/fauno.jpg",
+    "cines": ["Cinepolis"],
+    "nota": "México"
+  },
+  {
+    "id": "madresiniestra",
+    "titulo": "Madre Siniestra",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-08",
+    "fechaTexto": "Jueves 8 de Octubre 2026",
+    "poster": "imgs/estrenos/madresiniestra.jpg",
+    "cines": ["Cinepolis"],
+    "nota": "Estados Unidos"
   }
 ]
