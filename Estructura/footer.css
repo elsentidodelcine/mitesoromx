@@ -1,4 +1,5 @@
 /* ===== FOOTER ===== */
+
 .site-footer {
   padding: 28px 20px 36px;
   border-top: 1px solid var(--border);
@@ -6,18 +7,18 @@
 }
 
 .footer-inner {
-  max-width: 1100px;   /* mismo ancho que el resto del sitio */
+  max-width: 1100px;
   margin: 0 auto;
   width: 100%;
 }
 
-/* Siempre 2 columnas, a todo el ancho del footer */
+/* Enlaces del footer */
 .footer-links {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8px 32px;
   width: 100%;
-  max-width: none;     /* sin caja estrecha */
+  max-width: none;
   margin: 0 0 20px;
   padding: 0;
   list-style: none;
@@ -29,21 +30,32 @@
   padding: 10px 8px;
   font-size: 0.9rem;
   line-height: 1.35;
-  color: var(--text-muted);   /* visible en claro y oscuro */
+
+  /* Color oscuro para que tenga buen contraste en modo claro */
+  color: #555;
+
   text-decoration: none;
   border-radius: 8px;
   transition: color 0.15s ease, background 0.15s ease;
 }
 
 .footer-links a:hover {
-  color: var(--text);
-  background: rgba(0, 0, 0, 0.04);
+  color: #111;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* ===== MODO OSCURO ===== */
+
+body.dark .footer-links a {
+  color: #bdbdbd;
 }
 
 body.dark .footer-links a:hover {
+  color: #fff;
   background: rgba(255, 255, 255, 0.06);
 }
 
+/* Copyright */
 .footer-copy {
   text-align: center;
   padding-top: 16px;
@@ -53,14 +65,22 @@ body.dark .footer-links a:hover {
 .footer-copy p {
   margin: 0;
   font-size: 0.78rem;
-  color: var(--text-muted);
+
+  /* Más oscuro en modo claro */
+  color: #666;
 }
 
-/* Móvil: un poco más compacto, sigue en 2 */
+body.dark .footer-copy p {
+  color: #aaa;
+}
+
+/* ===== MÓVIL ===== */
+
 @media (max-width: 480px) {
   .footer-links {
     gap: 4px 12px;
   }
+
   .footer-links a {
     font-size: 0.82rem;
     padding: 8px 4px;
