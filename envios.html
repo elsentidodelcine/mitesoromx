@@ -72,6 +72,8 @@
     </script>
 
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Estructura/footer.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -238,23 +240,7 @@
 
 
 <!-- FOOTER -->
-<footer class="site-footer">
-    <div class="footer-inner">
-        <nav class="footer-links" aria-label="Enlaces del sitio">
-            <a href="nosotros.html">¿Quiénes Somos?</a>
-            <a href="faq.html">Dudas (FAQ)</a>
-            <a href="politica-privacidad.html">Aviso de Privacidad</a>
-            <a href="terminos-y-condiciones.html">Términos y Condiciones</a>
-            <a href="preventas.html">Términos de Preventas</a>
-            <a href="aviso-legal-apartado.htm">Términos de Apartados</a>
-            <a href="https://facebook.com/..." target="_blank" rel="noopener">Facebook</a>
-            <a href="https://wa.me/..." target="_blank" rel="noopener">WhatsApp</a>
-        </nav>
-        <div class="footer-copy">
-            <p>© 2026 Mi Tesoro MX</p>
-        </div>
-    </div>
-</footer>
+<div id="footer"></div>
 
 <!-- Script mínimo: menú + tema (sin catálogo/carrito) -->
 <script>
@@ -295,5 +281,7 @@
       localStorage.setItem("tema", oscuro ? "dark" : "light");
     });
 </script>
+
+<script src="Estructura/footer.js"></script>
 </body>
 </html>

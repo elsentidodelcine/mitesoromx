@@ -76,6 +76,8 @@
     </script>
 
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Estructura/footer.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -191,40 +193,7 @@
 </section>
 
 <!-- FOOTER -->
-<footer class="site-footer">
-    <div class="footer-inner">
-        <nav class="footer-links" aria-label="Enlaces del sitio">
-            <a href="nosotros.html">¿Quiénes Somos?</a>
-            <a href="faq.html">Dudas (FAQ)</a>
-            <a href="politica-privacidad.html">Aviso de Privacidad</a>
-            <a href="terminos-y-condiciones.html">Términos y Condiciones</a>
-            <a href="preventas.html">Términos de Preventas</a>
-            <a href="aviso-legal-apartado.htm">Términos de Apartados</a>
-            <a href="https://facebook.com/..." target="_blank" rel="noopener">Facebook</a>
-            <a href="https://wa.me/..." target="_blank" rel="noopener">WhatsApp</a>
-        </nav>
-        <div class="footer-copy">
-            <p>© 2026 Mi Tesoro MX</p>
-        </div>
-    </div>
-</footer>
-
-<!-- CARRITO DRAWER (igual – para que el contador y el tema funcionen) -->
-<aside id="cartDrawer" class="cart-drawer" aria-label="Carrito de compras">
-    <div class="cart-header">
-        <h2>🛒 Tu carrito</h2>
-        <button id="cerrarDrawer" aria-label="Cerrar carrito">✕</button>
-    </div>
-    <div id="cartItems" class="cart-items"></div>
-    <div class="cart-footer">
-        <p id="cartTotal">Tu carrito está vacío</p>
-        <a id="whatsBtn" class="btn-whatsapp" href="https://wa.me/524761002824" target="_blank" rel="noopener">
-            Confirmar por WhatsApp
-        </a>
-        <button id="vaciarCarrito" class="btn-vaciar" type="button" disabled>Vaciar carrito</button>
-    </div>
-</aside>
-<div id="cartOverlay"></div>
+<div id="footer"></div>
 
 <!-- WHATSAPP FLOAT -->
 <div id="waFloatWrap" class="wa-float-wrap">
@@ -245,5 +214,6 @@
 
 <script src="script.js"></script>
 <script src="referencias.js"></script>
+<script src="Estructura/footer.js"></script>
 </body>
 </html>
