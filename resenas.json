@@ -1591,6 +1591,39 @@
     "veredicto": "Buen inicio mágico. Evolución de Strange, Gema del Tiempo y visuales distintos. Villanos un poco simples, pero funciona. Buen embrujo."
   },
   {
+    "id": "avengers-infinity-war",
+    "titulo": "Avengers: Infinity War",
+    "anio": 2018,
+    "fecha": "2026-10-01",
+    "duracion": "149 min",
+    "generos": ["Acción", "Ciencia ficción", "Aventuras"],
+    "puntaje": 5.0,
+    "destacada": true,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "Obra maestra. El verdadero evento cinematográfico del MCU. Thanos como el mejor villano, la batalla de Wakanda legendaria y ese silencio en la sala cuando el villano gana. Sigue emocionando igual.",
+    "poster": "imgs/sagas/ucm/infinity.jpeg",
+    "posterFallback": {
+      "linea1": "Avengers:",
+      "linea2": "Infinity War"
+    },
+    "letterboxd": "https://letterboxd.com/film/avengers-infinity-war",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt4154756/",
+      "rating": "8.4"
+    },
+    "lead": "Obra maestra. El verdadero evento cinematográfico. Thanos, Wakanda y ese silencio en la sala cuando el villano gana. Sigue emocionando igual después de diez veces.",
+    "contenido": [
+      "Ya volví a ver Avengers: Infinity War (2018) y esta es mi opinión. Continuando con mi maratón de Spider-Man, hoy tocó volver a ver Avengers: Infinity War, ya que aquí vemos cómo Peter Parker forma parte de la batalla contra Thanos y termina desapareciendo con el famoso chasquido. Y la verdad, por más veces que la vea, sigue pareciéndome una auténtica obra maestra.",
+      "Todavía recuerdo cuando se estrenó en el cine. Eran los tiempos en los que existían las funciones de medianoche y fui a verla desde el primer minuto que estuvo disponible. Cuando terminaron los créditos, toda la sala quedó en completo silencio. Nadie hablaba. Todos estábamos procesando lo que acabábamos de ver porque, por primera vez en el UCM, el villano realmente había ganado. Ese momento fue algo que difícilmente volveré a vivir en un cine.",
+      "Thanos sigue siendo, para mí, el mejor villano que ha tenido Marvel. Incluso antes de conseguir el Guantelete del Infinito ya era una amenaza impresionante, pero una vez que reunió las Gemas se convirtió en alguien prácticamente invencible. La batalla de Wakanda sigue siendo una de las mejores secuencias de acción que he visto en una película de superhéroes. En ese momento pensé que nadie podría superar algo así, y la verdad es que, hasta hoy, sigo sintiendo lo mismo.",
+      "Sí, Avengers: Endgame nos regaló el inolvidable \"¡Vengadores, unidos!\" y una de las escenas más épicas de la historia del cine comercial. Pero todo eso no habría tenido el mismo impacto sin lo que construyó Infinity War. Para mí, este fue el verdadero evento cinematográfico. Han pasado años y ni Marvel, ni ninguna otra franquicia, ha logrado replicar esa emoción colectiva que se vivió en 2018.",
+      "La he visto fácilmente unas diez, y aun así sigue emocionándome. Todavía se me salen las lágrimas en varias escenas porque inevitablemente me transporta a aquella noche en el cine. Más que una película, fue una experiencia que marcó a toda una generación de fans y que, sinceramente, no sé si volveremos a vivir."
+    ],
+    "cita": "Por primera vez en el UCM, el villano realmente había ganado.",
+    "veredicto": "Obra maestra. El verdadero evento cinematográfico del MCU. Thanos, Wakanda y esa experiencia colectiva irrepetible. Cine legendario."
+  },
+  {
     "id": "pantera-negra",
     "titulo": "Pantera Negra",
     "anio": 2018,

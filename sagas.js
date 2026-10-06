@@ -220,7 +220,7 @@ const SAGAS = {
         fase: 'Fase 3',
         nota: 'Thanos y el chasquido.',
         poster: 'imgs/sagas/ucm/infinity.jpeg',
-        resena: 'review.html?id='
+        resena: 'review.html?id=avengers-infinity-war'
       },
       {
         id: 'endgame',
