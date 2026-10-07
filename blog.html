@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reseñas de películas | Los Brujos del Cine </title>
+    <title>Reseñas de películas | Los Brujos del Cine · Halloween</title>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0RVV6RWHTS"></script>
     <script>
@@ -13,12 +13,12 @@
 
         gtag('config', 'G-0RVV6RWHTS');
     </script>
-    <meta name="description" content="Los Brujos del Cine: reseñas honestas de estrenos, clásicos y películas que vale la pena descubrir.">
-    <meta name="theme-color" content="#030304">
+    <meta name="description" content="Los Brujos del Cine: reseñas honestas de estrenos, clásicos y películas que vale la pena descubrir. Edición especial Halloween.">
+    <meta name="theme-color" content="#0D0D0D">
     <!-- <link rel="canonical" href="https://elsentidodelcine.github.io/"> -->
 
-    <meta property="og:title" content="Reseñas de películas | Los Brujos del Cine">
-    <meta property="og:description" content="Reseñas honestas de estrenos, clásicos y películas que vale la pena descubrir.">
+    <meta property="og:title" content="Reseñas de películas | Los Brujos del Cine · Halloween">
+    <meta property="og:description" content="Reseñas honestas de estrenos, clásicos y películas que vale la pena descubrir. Edición Halloween.">
     <meta property="og:type" content="website">
     <!-- <meta property="og:url" content="https://elsentidodelcine.github.io/">
     <meta property="og:image" content="https://elsentidodelcine.github.io/og-image.jpg"> -->
@@ -40,162 +40,378 @@
           if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
         } catch (e) {}
     </script>
+
+    <!-- ===== HALLOWEEN THEME OVERRIDES ===== -->
+    <style>
+        :root {
+            --hw-orange: #FF7518;
+            --hw-orange-dark: #E65C00;
+            --hw-purple: #6A0DAD;
+            --hw-purple-deep: #3B0A57;
+            --hw-black: #0D0D0D;
+            --hw-cream: #F2E9D8;
+            --hw-glow: rgba(255, 117, 24, 0.4);
+            --hw-purple-glow: rgba(106, 13, 173, 0.35);
+        }
+
+        /* Banner superior de temporada */
+        .halloween-banner {
+            background: linear-gradient(90deg, var(--hw-purple-deep), #1a0a12 35%, var(--hw-black) 65%, var(--hw-purple-deep));
+            color: var(--hw-cream);
+            text-align: center;
+            padding: 0.55rem 1rem;
+            font-size: 0.88rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            border-bottom: 2px solid var(--hw-orange);
+            position: relative;
+            z-index: 200;
+            overflow: hidden;
+        }
+        .halloween-banner span {
+            display: inline-block;
+            animation: hw-pulse 2.4s ease-in-out infinite;
+        }
+        @keyframes hw-pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.88; transform: scale(1.02); }
+        }
+
+        /* Header */
+        .site-header {
+            border-bottom: 1px solid rgba(255, 117, 24, 0.25) !important;
+            box-shadow: 0 2px 20px rgba(255, 117, 24, 0.08);
+        }
+        .logo-text h1 {
+            color: var(--hw-orange) !important;
+        }
+        .logo-text span {
+            color: #c9a0e8 !important;
+        }
+        .main-nav a:hover {
+            color: var(--hw-orange) !important;
+        }
+        .theme-toggle:hover {
+            color: var(--hw-orange) !important;
+        }
+
+        /* Hero más sombrío / Halloween */
+        .hero {
+            position: relative;
+        }
+        .hero::after {
+            content: "🎃  👻  🦇  🕷️  🎃";
+            position: absolute;
+            top: 1.2rem;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 1.35rem;
+            letter-spacing: 0.55rem;
+            opacity: 0.55;
+            z-index: 5;
+            pointer-events: none;
+            animation: hw-float 4.5s ease-in-out infinite;
+        }
+        @keyframes hw-float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-7px); }
+        }
+        .hero-glow-one {
+            background: radial-gradient(ellipse at 30% 40%, var(--hw-purple-glow), transparent 60%) !important;
+        }
+        .hero-glow-two {
+            background: radial-gradient(ellipse at 70% 60%, var(--hw-glow), transparent 55%) !important;
+        }
+        .eyebrow {
+            color: var(--hw-orange) !important;
+        }
+        .eyebrow span::before {
+            content: "🎃 ";
+        }
+        .hero h1 em {
+            color: var(--hw-orange) !important;
+            text-shadow: 0 0 28px var(--hw-glow);
+        }
+        .button-primary {
+            background: linear-gradient(135deg, var(--hw-orange), var(--hw-orange-dark)) !important;
+            border: none !important;
+            box-shadow: 0 4px 20px var(--hw-glow) !important;
+            color: #fff !important;
+        }
+        .button-primary:hover {
+            filter: brightness(1.08);
+            box-shadow: 0 6px 28px var(--hw-glow) !important;
+        }
+
+        /* Intro strip */
+        .intro-kicker {
+            color: var(--hw-orange) !important;
+        }
+        .intro-strip {
+            border-top: 1px solid rgba(255, 117, 24, 0.15);
+            border-bottom: 1px solid rgba(255, 117, 24, 0.15);
+        }
+
+        /* Section headings */
+        .section-kicker {
+            color: var(--hw-orange) !important;
+        }
+        .section-heading h2 {
+            /* deja el color base; el kicker ya da el toque */
+        }
+
+        /* Ranking / grimorio */
+        .ranking-section .section-kicker::before {
+            content: "🎃 ";
+        }
+
+        /* Quote */
+        .cinema-quote blockquote em {
+            color: var(--hw-orange) !important;
+        }
+        .cinema-quote > span {
+            color: #c9a0e8 !important;
+        }
+        .quote-line {
+            background: linear-gradient(90deg, transparent, var(--hw-orange), transparent) !important;
+            opacity: 0.5;
+        }
+
+        /* Store CTA */
+        .store-cta {
+            position: relative;
+            overflow: hidden;
+        }
+        .store-cta::before {
+            content: "🎃";
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            opacity: 0.2;
+            pointer-events: none;
+        }
+        .store-cta h2 em {
+            color: var(--hw-orange) !important;
+        }
+
+        /* Footer */
+        .site-footer {
+            border-top: 1px solid rgba(255, 117, 24, 0.2) !important;
+        }
+        .footer-links a:hover {
+            color: var(--hw-orange) !important;
+        }
+
+        /* Skeleton cards con borde sutil */
+        .skeleton-card {
+            border: 1px solid rgba(255, 117, 24, 0.1);
+        }
+
+        /* Arañas decorativas (desktop) */
+        @media (min-width: 768px) {
+            body::before,
+            body::after {
+                content: "🕷️";
+                position: fixed;
+                font-size: 1.15rem;
+                opacity: 0.3;
+                z-index: 50;
+                pointer-events: none;
+            }
+            body::before {
+                top: 90px;
+                left: 14px;
+                animation: hw-crawl 9s ease-in-out infinite;
+            }
+            body::after {
+                bottom: 120px;
+                right: 18px;
+                animation: hw-crawl-flip 9s ease-in-out infinite;
+                animation-delay: -4.5s;
+            }
+            @keyframes hw-crawl {
+                0%, 100% { transform: translateY(0) rotate(0deg); }
+                25% { transform: translateY(14px) rotate(10deg); }
+                75% { transform: translateY(-10px) rotate(-7deg); }
+            }
+            @keyframes hw-crawl-flip {
+                0%, 100% { transform: scaleX(-1) translateY(0) rotate(0deg); }
+                25% { transform: scaleX(-1) translateY(14px) rotate(-10deg); }
+                75% { transform: scaleX(-1) translateY(-10px) rotate(7deg); }
+            }
+        }
+
+        /* Paginación activa */
+        .reviews-pagination button.active,
+        .reviews-pagination .active {
+            background: var(--hw-orange) !important;
+            border-color: var(--hw-orange) !important;
+            color: #fff !important;
+        }
+    </style>
 </head>
 <body>
-    <header class="site-header">
-        <div class="header-inner">
-            <a href="blog.html" class="brand-link" aria-label="Los Brujos del Cine, inicio">
-                <img src="imgs/logoLB.png" alt="Los Brujos del Cine" class="site-logo">
-                <div class="logo-text">
-                    <h1>Los Brujos del Cine</h1>
-                    <span>Mi Tesoro MX</span>
-                </div>
-            </a>
-            <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
-                <a href="blog.html#resenas">Reseñas</a>
-                <a href="estrenos.html">Estrenos</a>
-                <a href="precios.html">Precios</a>
-                <a href="taquilla-historia.html">Taquilla</a>
-                <a href="formatos.html">Formatos</a>
-                <a href="sagas.html">Sagas</a>
-                <a href="maratones.html">Maratones</a>
-            </nav>
-            <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema" title="Modo claro / oscuro">
-                <span class="theme-icon theme-icon-moon" aria-hidden="true">☾</span>
-                <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
-            </button>
-        </div>
-    </header>
-    <main id="main-content">
-        <!-- HERO -->
-        <section class="hero">
-            <div class="hero-glow hero-glow-one"></div>
-            <div class="hero-glow hero-glow-two"></div>
-            <div class="hero-film-grain"></div>
-            <div class="hero-vignette"></div>
+<!-- BANNER HALLOWEEN -->
+<div class="halloween-banner" role="banner">
+    <span>🎃 Edición Halloween · Reseñas desde las sombras · Los Brujos del Cine 👻</span>
+</div>
 
-            <div class="hero-inner">
-                <div class="eyebrow">
-                    <span aria-hidden="true"></span>
-                    Cine desde las sombras
+<header class="site-header">
+    <div class="header-inner">
+        <a href="blog.html" class="brand-link" aria-label="Los Brujos del Cine, inicio">
+            <img src="imgs/logoLB.png" alt="Los Brujos del Cine" class="site-logo">
+            <div class="logo-text">
+                <h1>Los Brujos del Cine</h1>
+                <span>Mi Tesoro MX 🎃</span>
+            </div>
+        </a>
+        <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+            <a href="blog.html#resenas">Reseñas</a>
+            <a href="estrenos.html">Estrenos</a>
+            <a href="precios.html">Precios</a>
+            <a href="taquilla-historia.html">Taquilla</a>
+            <a href="formatos.html">Formatos</a>
+            <a href="sagas.html">Sagas</a>
+            <a href="maratones.html">Maratones</a>
+        </nav>
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema" title="Modo claro / oscuro">
+            <span class="theme-icon theme-icon-moon" aria-hidden="true">☾</span>
+            <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
+        </button>
+    </div>
+</header>
+<main id="main-content">
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-glow hero-glow-one"></div>
+        <div class="hero-glow hero-glow-two"></div>
+        <div class="hero-film-grain"></div>
+        <div class="hero-vignette"></div>
+
+        <div class="hero-inner">
+            <div class="eyebrow">
+                <span aria-hidden="true"></span>
+                Cine desde las sombras
+            </div>
+            <h1>
+                Películas que<br>
+                <em>merecen ser vistas.</em>
+            </h1>
+            <p class="hero-description">
+                Estrenos, clásicos y grandes historias contadas desde la butaca.
+                Reseñas honestas, directas y con personalidad. Esta temporada… también desde el terror. 🎃
+            </p>
+            <div class="hero-actions">
+                <a href="#resenas" class="button button-primary">
+                    Explorar reseñas
+                    <span aria-hidden="true">↓</span>
+                </a>
+            </div>
+            <div class="hero-stats" aria-label="Información del blog" aria-live="polite">
+                <div>
+                    <strong id="hero-count">00</strong>
+                    <span id="hero-label">Reseñas publicadas</span>
                 </div>
-                <h1>
-                    Películas que<br>
-                    <em>merecen ser vistas.</em>
-                </h1>
-                <p class="hero-description">
-                    Estrenos, clásicos y grandes historias contadas desde la butaca.
-                    Reseñas honestas, directas y con personalidad.
-                </p>
-                <div class="hero-actions">
-                    <a href="#resenas" class="button button-primary">
-                        Explorar reseñas
-                        <span aria-hidden="true">↓</span>
-                    </a>
+                <span class="stat-divider" aria-hidden="true"></span>
+                <div>
+                    <strong>100%</strong>
+                    <span>Opinión personal</span>
                 </div>
-                <div class="hero-stats" aria-label="Información del blog" aria-live="polite">
-                    <div>
-                        <strong id="hero-count">00</strong>
-                        <span id="hero-label">Reseñas publicadas</span>
-                    </div>
-                    <span class="stat-divider" aria-hidden="true"></span>
-                    <div>
-                        <strong>100%</strong>
-                        <span>Opinión personal</span>
-                    </div>
-                    <span class="stat-divider" aria-hidden="true"></span>
-                    <div>
-                        <strong>MX</strong>
-                        <span>Desde México</span>
-                    </div>
+                <span class="stat-divider" aria-hidden="true"></span>
+                <div>
+                    <strong>MX</strong>
+                    <span>Desde México</span>
                 </div>
             </div>
-        </section>
-        <!-- INTRO -->
-        <section class="intro-strip" id="sobre-el-blog">
-            <div class="intro-inner">
-                <div class="intro-kicker">LOS BRUJOS DEL CINE</div>
+        </div>
+    </section>
+    <!-- INTRO -->
+    <section class="intro-strip" id="sobre-el-blog">
+        <div class="intro-inner">
+            <div class="intro-kicker">LOS BRUJOS DEL CINE 🎃</div>
+            <p>
+                Porque ir al cine no termina cuando aparecen los créditos.
+                <strong>Aquí empieza la conversación.</strong>
+            </p>
+        </div>
+    </section>
+    <!-- REVIEWS -->
+    <section class="reviews-section" id="resenas">
+        <div class="section-heading">
+            <div>
+                <span class="section-kicker">EN CARTELERA DEL BLOG</span>
+                <h2>Últimas reseñas</h2>
+            </div>
+            <p id="reviews-subtitle">Cargando reseñas...</p>
+        </div>
+        <p id="reviews-count" class="resultados-count" aria-live="polite"></p>
+        <div class="review-grid" id="reviews-grid">
+            <div class="skeleton-card" aria-hidden="true"></div>
+            <div class="skeleton-card" aria-hidden="true"></div>
+            <div class="skeleton-card" aria-hidden="true"></div>
+            <div class="skeleton-card" aria-hidden="true"></div>
+            <div class="skeleton-card" aria-hidden="true"></div>
+            <div class="skeleton-card" aria-hidden="true"></div>
+        </div>
+        <div id="reviews-pagination" class="reviews-pagination" aria-label="Paginación de reseñas"></div>
+    </section>
+    <section class="ranking-section" id="ranking">
+        <div class="section-heading">
+            <div>
+                <span class="section-kicker">EL GRIMORIO ORDENADO</span>
+                <h2>Ranking de reseñas</h2>
+            </div>
+            <p>Top 10 según el grimorio.</p>
+        </div>
+        <div id="ranking-list" class="ranking-list"></div>
+    </section>
+    <!-- QUOTE -->
+    <section class="cinema-quote">
+        <div class="quote-line" aria-hidden="true"></div>
+        <blockquote>
+            “No todas las películas tienen que gustarte.<br>
+            Pero <em>todas</em> tienen algo que decir.”
+        </blockquote>
+        <span>— LOS BRUJOS DEL CINE</span>
+        <div class="quote-line" aria-hidden="true"></div>
+    </section>
+    <!-- CTA -->
+    <section class="store-cta">
+        <div class="store-cta-inner">
+            <div>
+                <span class="section-kicker">DEL CINE A TU COLECCIÓN</span>
+                <h2>¿También coleccionas<br><em>los coleccionables de tus películas favoritas?</em></h2>
                 <p>
-                    Porque ir al cine no termina cuando aparecen los créditos.
-                    <strong>Aquí empieza la conversación.</strong>
+                    Descubre vasos, palomeras, coleccionables y artículos inspirados
+                    en el mundo del cine en Mi Tesoro MX.
                 </p>
             </div>
-        </section>
-        <!-- REVIEWS -->
-        <section class="reviews-section" id="resenas">
-            <div class="section-heading">
-                <div>
-                    <span class="section-kicker">EN CARTELERA DEL BLOG</span>
-                    <h2>Últimas reseñas</h2>
-                </div>
-                <p id="reviews-subtitle">Cargando reseñas...</p>
-            </div>
-            <p id="reviews-count" class="resultados-count" aria-live="polite"></p>
-            <div class="review-grid" id="reviews-grid">
-                <div class="skeleton-card" aria-hidden="true"></div>
-                <div class="skeleton-card" aria-hidden="true"></div>
-                <div class="skeleton-card" aria-hidden="true"></div>
-                <div class="skeleton-card" aria-hidden="true"></div>
-                <div class="skeleton-card" aria-hidden="true"></div>
-                <div class="skeleton-card" aria-hidden="true"></div>
-            </div>
-            <div id="reviews-pagination" class="reviews-pagination" aria-label="Paginación de reseñas"></div>
-        </section>
-        <section class="ranking-section" id="ranking">
-            <div class="section-heading">
-                <div>
-                    <span class="section-kicker">EL GRIMORIO ORDENADO</span>
-                    <h2>Ranking de reseñas</h2>
-                </div>
-                <p>Top 10 según el grimorio.</p>
-            </div>
-            <div id="ranking-list" class="ranking-list"></div>
-        </section>
-        <!-- QUOTE -->
-        <section class="cinema-quote">
-            <div class="quote-line" aria-hidden="true"></div>
-            <blockquote>
-                “No todas las películas tienen que gustarte.<br>
-                Pero <em>todas</em> tienen algo que decir.”
-            </blockquote>
-            <span>— LOS BRUJOS DEL CINE</span>
-            <div class="quote-line" aria-hidden="true"></div>
-        </section>
-        <!-- CTA -->
-        <section class="store-cta">
-            <div class="store-cta-inner">
-                <div>
-                    <span class="section-kicker">DEL CINE A TU COLECCIÓN</span>
-                    <h2>¿También coleccionas<br><em>los coleccionables de tus películas favoritas?</em></h2>
-                    <p>
-                        Descubre vasos, palomeras, coleccionables y artículos inspirados
-                        en el mundo del cine en Mi Tesoro MX.
-                    </p>
-                </div>
-                <a href="https://losbrujosdelcine.com/#catalogo"  class="button button-primary" target="_blank" rel="noopener noreferrer"> Visitar Mi Tesoro MX <span aria-hidden="true">↗</span> </a>
-            </div>
-        </section>
-    </main>
-    <footer class="site-footer">
-        <div class="footer-inner">
-            <div class="footer-links">
-                <a href="aviso-de-privacidad-LBDC.html">Política de Privacidad</a>
-                <a href="https://losbrujosdelcine.com/#catalogo" target="_blank" rel="noopener noreferrer">Mi Tesoro MX</a>
-                <a href="https://www.facebook.com/LosBrujosDelCine" target="_blank" rel="noopener noreferrer">Facebook</a>
-                <a href="https://boxd.it/8uSCV" target="_blank" rel="noopener noreferrer">Letterboxd</a>
-            </div>
-            <div class="footer-copy">
-                <p>© 2026 Los Brujos del Cine</p>
-            </div>
+            <a href="https://losbrujosdelcine.com/#catalogo"  class="button button-primary" target="_blank" rel="noopener noreferrer"> Visitar Mi Tesoro MX <span aria-hidden="true">↗</span> </a>
         </div>
-    </footer>
+    </section>
+</main>
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-links">
+            <a href="aviso-de-privacidad-LBDC.html">Política de Privacidad</a>
+            <a href="https://losbrujosdelcine.com/#catalogo" target="_blank" rel="noopener noreferrer">Mi Tesoro MX</a>
+            <a href="https://www.facebook.com/LosBrujosDelCine" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://boxd.it/8uSCV" target="_blank" rel="noopener noreferrer">Letterboxd</a>
+        </div>
+        <div class="footer-copy">
+            <p>© 2026 Los Brujos del Cine</p>
+        </div>
+    </div>
+</footer>
 
-    <script src="scriptResena.js"></script>
+<script src="scriptResena.js"></script>
 
 </body>
 </html>
