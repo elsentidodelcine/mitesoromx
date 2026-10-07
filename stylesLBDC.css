@@ -255,7 +255,7 @@ button:focus-visible {
   content: "";
   position: absolute;
   inset: auto 0 0;
-  height: 200px;
+  height: 100px;
   background: linear-gradient(transparent, var(--bg));
   pointer-events: none;
   z-index: 0;
