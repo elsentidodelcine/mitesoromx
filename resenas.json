@@ -2101,7 +2101,7 @@
     "etiqueta": "",
     "plataformas": ["Streaming"],
     "resumen": "Clásico que envejece como el buen vino. Atmósfera elegante y oscura, Gregory Peck impecable y la banda sonora de Jerry Goldsmith es una joya absoluta. Obra maestra del terror.",
-    "poster": "imgs/maratones/halloween/laprofecia.jpg",
+    "poster": "imgs/maratones/halloween/omen.jpg",
     "posterFallback": {
       "linea1": "La",
       "linea2": "Profecía"
@@ -2119,5 +2119,392 @@
     ],
     "cita": "“Ave Satani” es simplemente magistral.",
     "veredicto": "Clásico elegante y oscuro. Gregory Peck impecable y la banda sonora de Jerry Goldsmith es una joya. Obra maestra que sigue dando escalofríos. Cine legendario."
+  },
+  {
+    "id": "chucky",
+    "titulo": "Chucky",
+    "anio": 1988,
+    "fecha": "2026-10-03",
+    "duracion": "87 min",
+    "generos": ["Terror", "Comedia"],
+    "puntaje": 4.0,
+    "destacada": false,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "El muñeco pelirrojo con complejo de asesino serial. Mezcla miedo, risas involuntarias y vudú absurdo. Da más risa que sustos, pero tiene carisma de sobra y se ganó su lugar en el cine.",
+    "poster": "imgs/maratones/halloween/childs-play.jpg",
+    "posterFallback": {
+      "linea1": "Chucky",
+      "linea2": ""
+    },
+    "letterboxd": "https://letterboxd.com/film/childs-play",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt0094862/",
+      "rating": "6.7"
+    },
+    "lead": "El muñeco pelirrojo con complejo de asesino serial y risa molesta. Da más risa que sustos, pero tiene tanto carisma que se ganó su lugar en la historia del cine.",
+    "contenido": [
+      "Ah, Chucky. La película que nos enseñó que no hay nada más aterrador que un muñeco pelirrojo con complejo de asesino serial y una risa más molesta que el timbre de la escuela. Todo empieza con Charles Lee Ray, un criminal que, en vez de aceptar su destino y morir como la gente decente, decide hacer un ritual vudú en plena tienda de juguetes. Resultado: reencarna en el muñeco Good Guy más desafortunado del planeta.",
+      "Luego aparece Andy, un niño inocente que solo quería un amigo nuevo y terminó con un muñeco homicida que insulta más que un taxista en hora pico. Nadie le cree, por supuesto, porque ¿quién va a pensar que el muñeco habla, camina y asesina? La mamá hace lo que toda madre haría: comprar el juguete en un callejón oscuro a mitad de la noche. Calidad garantizada.",
+      "A partir de ahí, Chucky se dedica a eliminar a todo el que se le cruza, usando su tamaño “compacto” a su favor. No necesita fuerza: solo una buena navaja y cero sentido de la discreción. Cada asesinato tiene ese encanto ochentero entre lo sangriento y lo ridículamente divertido.",
+      "El clímax es glorioso: Chucky prende fuego, recibe balazos, pierde partes del cuerpo… y aún así sigue insultando. Es como el espíritu navideño, no se rinde jamás. Finalmente lo “matan” (por tercera vez en diez minutos), pero todos sabemos que un muñeco poseído no se va sin secuela.",
+      "Chucky es esa joya del terror ochentero que mezcla miedo, risas involuntarias y un toque de vudú absurdo. Da más risa que sustos, pero tiene tanto carisma que se ganó su propio lugar en la historia del cine.",
+      "Un 4/5 por enseñarnos que no se debe comprar nada usado de un vagabundo... ni confiar en un muñeco que habla demasiado."
+    ],
+    "cita": "No se debe comprar nada usado de un vagabundo... ni confiar en un muñeco que habla demasiado.",
+    "veredicto": "Joya del terror ochentero. Más risa que sustos, pero con carisma de sobra. Hechizo bien logrado."
+  },
+  {
+    "id": "carrie",
+    "titulo": "Carrie",
+    "anio": 1976,
+    "fecha": "2026-10-03",
+    "duracion": "98 min",
+    "generos": ["Terror", "Drama"],
+    "puntaje": 4.0,
+    "destacada": false,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "Terror, bullying y fanatismo religioso en una mezcla explosiva. Sissy Spacek magistral y Brian De Palma con estilo setentero. Más psicológico que sangriento, y sigue doliendo lo actual que se siente.",
+    "poster": "imgs/maratones/halloween/carrie.jpg",
+    "posterFallback": {
+      "linea1": "Carrie",
+      "linea2": ""
+    },
+    "letterboxd": "https://letterboxd.com/film/carrie",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt0074285/",
+      "rating": "7.4"
+    },
+    "lead": "Terror, bullying y fanatismo religioso en una mezcla explosiva. Sissy Spacek se merece un altar. Más psicológico que sangriento y sigue doliendo lo actual que se siente.",
+    "contenido": [
+      "Ah, Carrie, esa joyita donde el terror, el bullying y el fanatismo religioso hacen una mezcla explosiva… literalmente. Es la historia de una chica tímida, incomprendida y con poderes telequinéticos que solo necesitaba una buena terapia y unos padres normales para evitar una masacre escolar. Pero no, tenía que tener a la madre más fanática de la Biblia que cree que todo es pecado, incluso existir.",
+      "Desde el principio ya sabes que algo va a salir mal. Carrie sufre bullying en el colegio porque, pobrecita, no sabe lo que es la menstruación (gracias mamá, excelente educación sexual). Y claro, las compañeras deciden hacerle pasar el peor momento de su vida lanzándole toallas sanitarias al grito de “¡en pecado naciste!”. Un clásico de la empatía adolescente.",
+      "Luego, una chica se siente mal por todo el desastre y convence a su novio de invitar a Carrie al baile de graduación. Suena bonito, ¿no? Pero otra, con alma de villana de telenovela, tiene un plan mejor: un balde de sangre de cerdo sobre la cabeza de la pobre Carrie. Y ahí es cuando todo se va al infierno… o mejor dicho, Carrie trae el infierno a la fiesta.",
+      "Entre fuego, gritos y una mirada fija de puro trauma, la chica desata sus poderes y convierte el gimnasio en un buffet de tragedias. Y cuando crees que ya nada puede ser peor, regresa a casa y su madre decide “exorcizarla” a cuchillazos. Spoiler: no termina bien para ninguna de las dos.",
+      "Lo irónico de todo esto es que, al final, la película no solo te asusta por los poderes de Carrie, sino por lo enfermo que puede llegar a ser el fanatismo religioso y el bullying disfrazado de diversión. Es un terror más psicológico que sangriento, y aunque pasaron décadas, sigue doliendo lo actual que se siente.",
+      "Así que sí: 4 de 5 baldes de sangre. No solo porque Brian De Palma dirigió con puro estilo setentero y Sissy Spacek se merece un altar (ironías de la vida), sino porque Carrie nos recuerda que a veces los verdaderos monstruos no tienen poderes… solo una Biblia y muchos prejuicios."
+    ],
+    "cita": "Los verdaderos monstruos no tienen poderes… solo una Biblia y muchos prejuicios.",
+    "veredicto": "Terror psicológico con bullying y fanatismo. Sissy Spacek magistral y De Palma con estilo. Sigue doliendo lo actual que se siente. Hechizo bien logrado."
+  },
+  {
+    "id": "la-masacre-de-texas",
+    "titulo": "La Masacre de Texas",
+    "anio": 1974,
+    "fecha": "2026-10-03",
+    "duracion": "83 min",
+    "generos": ["Terror"],
+    "puntaje": 4.0,
+    "destacada": false,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "Ridícula, grotesca y perturbadora... y justo por eso funciona. Atmósfera sucia y sofocante, Leatherface inolvidable y un clímax que se te queda grabado. Joya sucia del terror de los 70.",
+    "poster": "imgs/maratones/halloween/texas-chainsaw.jpg",
+    "posterFallback": {
+      "linea1": "La Masacre",
+      "linea2": "de Texas"
+    },
+    "letterboxd": "https://letterboxd.com/film/the-texas-chain-saw-massacre",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt0072271/",
+      "rating": "7.4"
+    },
+    "lead": "Ridícula, grotesca y perturbadora... y justo por eso funciona. Atmósfera sofocante, Leatherface inolvidable y un clímax que se te queda grabado como pesadilla.",
+    "contenido": [
+      "Ridícula, grotesca y perturbadora... y justo por eso funciona. Ah, los 70’s. Época en la que el horror no necesitaba CGI ni actores guapos; bastaba con una cámara temblando, un calor infernal y un grupo de jóvenes tan ingenuos que daban ganas de gritarles “¡no se metan ahí!” desde el sofá. Así nace The Texas Chainsaw Massacre, la joya sucia de Tobe Hooper que parece filmada con el sudor y el polvo del mismísimo infierno texano.",
+      "La trama es simple pero efectiva: un grupo de amigos va de paseo (porque siempre empiezan igual), se pierden y deciden visitar una casa donde claramente huele a tragedia y carne vieja. Lo que encuentran es a Leatherface, un señor grandote con más problemas mentales que máscaras en el clóset, y una familia tan disfuncional que haría llorar a cualquier terapeuta.",
+      "A partir de ahí, todo se convierte en una danza de gritos, persecuciones y motosierras. Literalmente. La famosa escena del martillazo y la carne colgando sigue siendo brutal, pero lo más inquietante es la atmósfera: no hay música épica, solo ruido, jadeos y el sonido de la sierra taladrándote el alma.",
+      "¿Grotesca? Totalmente. ¿Ridícula en momentos? También. Hay escenas donde Leatherface parece niño regañado corriendo con la motosierra como si le hubieran robado el lunch. Pero esa mezcla de horror y absurdo es justo lo que la hace tan inolvidable.",
+      "El clímax, con Sally escapando cubierta en sangre y riéndose histéricamente mientras el sol sale y Leatherface baila su frustración con la motosierra, es puro cine: una imagen tan rara y perturbadora que se te queda grabada en el cerebro como una pesadilla con olor a gasolina."
+    ],
+    "cita": "Ridícula, grotesca y perturbadora... y justo por eso funciona.",
+    "veredicto": "Joya sucia del terror de los 70. Atmósfera sofocante, mezcla de horror y absurdo, y un clímax inolvidable. Hechizo bien logrado."
+  },
+  {
+    "id": "scream",
+    "titulo": "Scream",
+    "anio": 1996,
+    "fecha": "2026-10-03",
+    "duracion": "111 min",
+    "generos": ["Terror", "Misterio"],
+    "puntaje": 4.0,
+    "destacada": false,
+    "etiqueta": "",
+    "plataformas": ["Cines"],
+    "resumen": "Verla por primera vez en el cine fue una experiencia buenísima. Clásico meta del terror noventero que juega con las reglas y las celebra. Sigue funcionando y la experiencia en pantalla grande la eleva.",
+    "poster": "imgs/maratones/halloween/scream.jpg",
+    "posterFallback": {
+      "linea1": "Scream",
+      "linea2": ""
+    },
+    "letterboxd": "https://letterboxd.com/film/scream",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt0117571/",
+      "rating": "7.4"
+    },
+    "lead": "Verla por primera vez en el cine fue una experiencia buenísima. Clásico meta del terror noventero que sigue funcionando y se siente todavía mejor en pantalla grande.",
+    "contenido": [
+      "Hoy por fin vi Scream por primera vez en el cine, en Cinemex, y la verdad fue una experiencia buenísima. Es una película que siempre me ha gustado, pero verla en pantalla grande, con sonido envolvente y con público, fue otro nivel. Me sentí muy feliz, como si estuviera reviviendo un pedazo del cine noventero que marcó toda una generación.",
+      "La historia ya la sabemos: un asesino enmascarado empieza a matar adolescentes en un pequeño pueblo, y Sidney Prescott (Neve Campbell) tiene que sobrevivir mientras todos a su alrededor parecen sospechosos. Lo que sigue siendo genial es cómo Wes Craven juega con las reglas del cine de terror, rompiendo clichés y al mismo tiempo celebrándolos.",
+      "Lo curioso es que en varias escenas no podía evitar reírme —pero no porque la película sea mala, sino porque Scary Movie me vino a la mente mil veces. Hay momentos que ya tengo tan asociados a la parodia que fue imposible no pensar en ellos, y eso le dio un toque cómico involuntario a mi experiencia.",
+      "Aun así, Scream sigue siendo un clásico. Tiene suspenso, humor negro y una vibra meta que la hace única. La escena inicial con Drew Barrymore sigue siendo una joya del terror moderno, y el final con Billy y Stu revelando que son los asesinos sigue siendo brutal, literal y emocionalmente."
+    ],
+    "cita": "Verla en pantalla grande, con sonido envolvente y con público, fue otro nivel.",
+    "veredicto": "Clásico meta del terror noventero. Verla en el cine eleva la experiencia. Sigue funcionando y se siente especial. Hechizo bien logrado."
+  },
+  {
+    "id": "tren-a-busan",
+    "titulo": "Tren a Busan",
+    "anio": 2016,
+    "fecha": "2026-10-03",
+    "duracion": "118 min",
+    "generos": ["Terror", "Acción", "Drama"],
+    "puntaje": 2.5,
+    "destacada": false,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "Premisa buena y momentos de tensión logrados, pero personajes increíblemente estúpidos y actuaciones irregulares. Me dejó un sabor agridulce.",
+    "poster": "imgs/maratones/halloween/train-busan.jpg",
+    "posterFallback": {
+      "linea1": "Tren a",
+      "linea2": "Busan"
+    },
+    "letterboxd": "https://letterboxd.com/film/train-to-busan",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt5700672/",
+      "rating": "7.6"
+    },
+    "lead": "Premisa buena y tensión lograda, pero personajes demasiado tontos y actuaciones que me desesperaron. Sabor agridulce.",
+    "contenido": [
+      "Vi Train to Busan y, la verdad, me dejó un sabor agridulce. La premisa es buena: un apocalipsis zombie en un tren hacia Busan suena emocionante, y hay momentos de tensión bastante logrados. Sin embargo, hubo varias cosas que me frustraron. Primero, los personajes son increíblemente estúpidos; en serio, muchas de las muertes podrían haberse evitado si la gente pensara un poquito. Y sí, los zombies son rápidos y peligrosos, pero me pasaba más tiempo pensando “¿cómo alguien es tan tonto?”.",
+      "Otro detalle que me sacaba de onda es la actuación muy exagerada de algunos, mientras que otros —sobre todo los personajes coreanos principales— parecían demasiado contenidos y poco expresivos. No sé si es cuestión de estilo cultural, pero me desesperaba que no mostraran emociones más claras en momentos dramáticos, sobre todo en escenas donde deberían estar gritando o llorando a todo pulmón."
+    ],
+    "cita": "Me pasaba más tiempo pensando “¿cómo alguien es tan tonto?”.",
+    "veredicto": "Premisa interesante y tensión lograda, pero personajes estúpidos y actuaciones irregulares. Sabor agridulce. Neutral, pero olvidable."
+  },
+  {
+    "id": "el-aro",
+    "titulo": "El Aro",
+    "anio": 1998,
+    "fecha": "2026-10-03",
+    "duracion": "96 min",
+    "generos": ["Terror", "Misterio"],
+    "puntaje": 3.0,
+    "destacada": false,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "Palomera con estilo fantasma japonés. Video maldito, incomodidad silenciosa y Sadako icónica. Ideal para un sábado por la noche con las luces apagadas.",
+    "poster": "imgs/maratones/halloween/ringu.jpg",
+    "posterFallback": {
+      "linea1": "El Aro",
+      "linea2": ""
+    },
+    "letterboxd": "https://letterboxd.com/film/ringu",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt0178868/",
+      "rating": "7.2"
+    },
+    "lead": "Palomera con estilo fantasma japonés. Incomodidad silenciosa, video maldito y Sadako icónica. Perfecta para un sábado con las luces apagadas.",
+    "contenido": [
+      "Le doy un 3 de 5, o sea, palomera con estilo fantasma japonés. Es de esas pelis que puedes ver un sábado por la noche con las luces apagadas y una cobija medio subida “por si acaso”. La historia va de una periodista que investiga un video maldito que mata a quien lo ve en siete días. Ya sabes, típico: ves el VHS, te suena el teléfono, y listo, tu vida se va al carajo con estilo noventero.",
+      "Visualmente tiene ese encanto retro de imagen lavada y peinados que parecen tener más spray que sentido. No hay sustos baratos, pero sí esa incomodidad silenciosa que solo el cine japonés logra. Sadako (la chica del pozo) se volvió tan icónica que ahora hasta verla salir del televisor parece casi entrañable… casi.",
+      "No es una joya de terror moderna, pero sirve perfecto para pasar el rato sin pensar demasiado, sobre todo si te gustan las historias raras, los fantasmas con rencor y la tecnología maldita. Ideal para verla, comentar “qué rara está esta peli” y luego fingir que no te da miedo prender la tele."
+    ],
+    "cita": "Ideal para verla, comentar “qué rara está esta peli” y luego fingir que no te da miedo prender la tele.",
+    "veredicto": "Palomera con estilo fantasma japonés. Incomodidad silenciosa y Sadako icónica. Perfecta para un sábado con las luces apagadas. Palomera ritual."
+  },
+  {
+    "id": "la-cosa",
+    "titulo": "La Cosa",
+    "anio": 1982,
+    "fecha": "2026-10-03",
+    "duracion": "109 min",
+    "generos": ["Terror", "Ciencia ficción"],
+    "puntaje": 5.0,
+    "destacada": true,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "John Carpenter se rifó. No envejece, tensión constante, efectos prácticos brutales y paranoia perfecta. El verdadero enemigo es la desconfianza. Obra maestra del terror.",
+    "poster": "imgs/maratones/halloween/thing.jpg",
+    "posterFallback": {
+      "linea1": "La Cosa",
+      "linea2": ""
+    },
+    "letterboxd": "https://letterboxd.com/film/the-thing",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt0084787/",
+      "rating": "8.2"
+    },
+    "lead": "John Carpenter se rifó. No envejece, tensión constante, efectos prácticos de puro arte ochentero y un final que te deja con la duda. Obra maestra.",
+    "contenido": [
+      "John Carpenter se rifó con La Cosa. Es de esas pelis que no envejecen, y que cada vez que la ves, encuentras un detalle nuevo. Desde el inicio ya te pone incómodo.",
+      "La ambientación en la base de investigación en la Antártida es brutal. Ese aislamiento, el frío, la paranoia… Carpenter lo maneja perfecto. No necesitas muchos jumpscares, porque la tensión se siente todo el tiempo. Y cuando la criatura se revela por completo —esas mezclas grotescas de carne, tentáculos y caras deformadas—, se nota el amor por los efectos prácticos. Nada de CGI, puro arte de terror ochentero hecho con tripas de látex y litros de sangre falsa.",
+      "Lo que más me gusta es cómo el verdadero enemigo no es solo el monstruo, sino la desconfianza entre ellos. Nadie sabe quién es humano y quién no, y eso los va destruyendo más rápido que la propia criatura. Kurt Russell está genial como MacReady, el tipo duro pero con cara de “yo tampoco entiendo nada”.",
+      "Y ese final… uff. El fuego consumiendo todo, y una pregunta sin respuesta: ¿alguno de ellos sigue siendo la cosa? Carpenter te deja con la duda, y eso lo hace todavía más perturbador."
+    ],
+    "cita": "El verdadero enemigo no es solo el monstruo, sino la desconfianza entre ellos.",
+    "veredicto": "No envejece. Tensión, paranoia y efectos prácticos brutales. Carpenter se rifó. Obra maestra. Cine legendario."
+  },
+  {
+    "id": "el-proyecto-de-la-bruja-de-blair",
+    "titulo": "El Proyecto de la Bruja de Blair",
+    "anio": 1999,
+    "fecha": "2026-10-03",
+    "duracion": "81 min",
+    "generos": ["Terror", "Misterio"],
+    "puntaje": 1.5,
+    "destacada": false,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "Pura caminata, llanto, gritos y cámara temblando. Esperé sustos y no pasó nada. Original en su época, pero hoy se siente vacía, sin ritmo y sin payoff. Hora y media perdida.",
+    "poster": "imgs/maratones/halloween/blair-witch.jpg",
+    "posterFallback": {
+      "linea1": "El Proyecto de",
+      "linea2": "la Bruja de Blair"
+    },
+    "letterboxd": "https://letterboxd.com/film/the-blair-witch-project",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt0185937/",
+      "rating": "6.5"
+    },
+    "lead": "Pura caminata, llanto y cámara temblando. Esperé sustos y no pasó nada. Original en su época, pero hoy se siente vacía y sin payoff.",
+    "contenido": [
+      "Bueno… ya terminé de verla, y la verdad no pasa nada, ni en los últimos 10 minutos. Toda la película es pura caminata, llanto, gritos y una cámara que no deja de moverse. Me habían dicho que era una joya del terror, que daba miedo por su realismo y su “falso documental”, pero la verdad me aburrió muchísimo.",
+      "Esperé todo el tiempo a que pasara algo interesante, algún susto, una aparición, algo, y nada. Ni una sola escena que realmente dé miedo. Yo que no la quería ver de noche por si me asustaba… y terminó siendo la película más tranquila que he visto últimamente.",
+      "Entiendo que fue original en su época y que tuvo buena idea, pero hoy en día se siente vacía, sin ritmo y sin payoff. Todo el supuesto “terror” está en imaginar cosas que nunca muestran.",
+      "En resumen: una hora y media perdida, sin sustos, sin bruja y sin emoción."
+    ],
+    "cita": "Una hora y media perdida, sin sustos, sin bruja y sin emoción.",
+    "veredicto": "Pura caminata y cámara temblando. Original en su época, pero hoy vacía y sin payoff. Brujería oscura."
+  },
+  {
+    "id": "midsommar",
+    "titulo": "Midsommar",
+    "anio": 2019,
+    "fecha": "2026-10-03",
+    "duracion": "148 min",
+    "generos": ["Terror", "Drama"],
+    "puntaje": 5.0,
+    "destacada": true,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "Horror a plena luz del día. Impresionante visualmente, Florence Pugh espectacular y un viaje emocional sobre el dolor y el renacimiento. Incómoda, rara y hermosa. Se te queda dando vueltas.",
+    "poster": "imgs/maratones/halloween/midsommar.jpg",
+    "posterFallback": {
+      "linea1": "Midsommar",
+      "linea2": ""
+    },
+    "letterboxd": "https://letterboxd.com/film/midsommar",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt8772262/",
+      "rating": "7.1"
+    },
+    "lead": "Impresionante. Horror a plena luz del día, estética hermosa y perturbadora, Florence Pugh espectacular. Un viaje emocional que se te queda dando vueltas.",
+    "contenido": [
+      "La verdad, Midsommar (2019) me pareció una película impresionante. Es una de esas que te dejan con una mezcla rara entre incomodidad y fascinación total. Ari Aster logró hacer un horror completamente a plena luz del día, y eso ya es un logro brutal. Todo el ambiente, los colores, la estética del festival sueco… es tan bonito visualmente que da miedo, porque sabes que algo horrible se esconde debajo de tanta perfección.",
+      "La historia de Dani, interpretada por Florence Pugh (que está espectacular, por cierto), me encantó. Ella empieza la película destruida emocionalmente, con una pérdida familiar terrible y un novio que básicamente ya no la quiere, pero se queda con ella por lástima. Y de ahí, ver cómo todo se desarrolla en ese festival donde al principio parece que solo están en una comuna hippie feliz, y poco a poco todo se vuelve más perturbador, es una locura.",
+      "Cuando llegan los rituales, especialmente la escena del suicidio de los ancianos, es un punto de quiebre total. Te das cuenta de que no hay marcha atrás, que ese lugar está regido por reglas completamente distintas, y lo aterrador es cómo todos lo aceptan con naturalidad.",
+      "Y el final… uff. Ver a Dani coronada como la Reina de Mayo, llorando y riendo al mismo tiempo mientras su novio arde dentro del templo, es tan poderoso como retorcido. Es como si finalmente encontrara una familia que la acepta, aunque sea dentro de un culto que quema gente viva.",
+      "En resumen, Midsommar no solo es una película de terror; es un viaje emocional, visual y psicológico sobre el dolor, la dependencia y el renacimiento. Es incómoda, lenta, rara… pero hermosa. De esas películas que se te quedan dando vueltas en la cabeza mucho tiempo después."
+    ],
+    "cita": "Es tan bonito visualmente que da miedo, porque sabes que algo horrible se esconde debajo de tanta perfección.",
+    "veredicto": "Horror a plena luz del día. Visualmente hermoso, emocionalmente devastador y perturbador. Florence Pugh espectacular. Se te queda dando vueltas. Cine legendario."
+  },
+  {
+    "id": "el-sexto-sentido",
+    "titulo": "El Sexto Sentido",
+    "anio": 1999,
+    "fecha": "2026-10-03",
+    "duracion": "107 min",
+    "generos": ["Terror", "Misterio", "Drama"],
+    "puntaje": 5.0,
+    "destacada": true,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "Joya del cine. Aunque ya sepas el giro, te atrapa por cómo está contada. Haley Joel Osment se roba la película y el final legendario te hace querer volver a verla. Inteligente, emotiva y elegante.",
+    "poster": "imgs/maratones/halloween/sixth-sense.jpg",
+    "posterFallback": {
+      "linea1": "El Sexto",
+      "linea2": "Sentido"
+    },
+    "letterboxd": "https://letterboxd.com/film/the-sixth-sense",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt0167404/",
+      "rating": "8.2"
+    },
+    "lead": "Joya del cine. Aunque ya sepas el giro, te atrapa. Haley Joel Osment se roba la película y el final legendario te hace querer verla otra vez. Una de las mejores de suspenso psicológico.",
+    "contenido": [
+      "La verdad, El sexto sentido (1999) sigue siendo una joya del cine. Es de esas películas que aunque ya sepas el giro final, igual te atrapan por cómo está contada. Bruce Willis está increíble como el psicólogo Malcolm Crowe, y Haley Joel Osment… ese niño se roba la película. Su actuación como Cole, el pequeño que ve gente muerta, todavía pone la piel de gallina.",
+      "La historia empieza como una película de misterio sobrenatural más, pero poco a poco se va volviendo algo muy humano, muy triste. Todo el tema de la culpa, la soledad y el miedo está súper bien manejado. Y M. Night Shyamalan dirigió con una calma que hace que cada escena parezca tener un propósito. No hay sustos baratos, sino tensión pura y una atmósfera que te deja incómodo todo el tiempo.",
+      "Y bueno, ese final legendario… cuando descubres que Malcolm estaba muerto todo el tiempo, simplemente te vuela la cabeza. Es uno de esos momentos que te hacen querer volver a ver la película desde el principio para notar todas las pistas que estaban ahí.",
+      "En resumen: El sexto sentido no solo es una gran historia de fantasmas, sino también una historia sobre dejar ir y aceptar la muerte. Es inteligente, emotiva y elegante. Una de las mejores películas de suspenso psicológico que se han hecho, sin duda."
+    ],
+    "cita": "Ese niño se roba la película.",
+    "veredicto": "Joya. Aunque ya sepas el giro, te atrapa. Haley Joel Osment magistral y final legendario. Inteligente, emotiva y elegante. Cine legendario."
+  },
+  {
+    "id": "hellraiser",
+    "titulo": "Hellraiser",
+    "anio": 1987,
+    "fecha": "2026-10-03",
+    "duracion": "94 min",
+    "generos": ["Terror"],
+    "puntaje": 3.5,
+    "destacada": false,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "Atmósfera enfermiza y visualmente perturbadora. Cenobitas icónicos, horror corporal y mezcla de erotismo y dolor. Rara pero interesante. Se entiende por qué es de culto.",
+    "poster": "imgs/maratones/halloween/hellraiser.jpg",
+    "posterFallback": {
+      "linea1": "Hellraiser",
+      "linea2": ""
+    },
+    "letterboxd": "https://letterboxd.com/film/hellraiser",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt0093177/",
+      "rating": "6.9"
+    },
+    "lead": "Particular dentro del terror. Atmósfera enfermiza, Cenobitas icónicos y horror corporal. Rara pero interesante. Se entiende por qué se volvió de culto.",
+    "contenido": [
+      "Hellraiser (1987) es una película bastante particular dentro del terror. No es de sustos fáciles, sino más bien de atmósfera enfermiza y visualmente perturbadora. La historia gira en torno a un tipo llamado Frank, que abre una caja misteriosa y termina siendo destrozado y arrastrado al infierno por unos seres conocidos como los Cenobitas, encabezados por el famoso Pinhead.",
+      "Después, el tipo logra regresar a la vida de una forma horrible, sin piel, gracias a unas gotas de sangre que caen donde murió. A partir de ahí, su excuñada Julia lo ayuda a “reconstruirse” matando a hombres para que se los coma, literal. Todo mientras la esposa y la hija del hermano (Kirsty) empiezan a sospechar.",
+      "Lo que destaca mucho es el diseño de los Cenobitas: retorcidos, sádicos, casi elegantes en su manera de torturar. Pero curiosamente, no salen tanto; la película se enfoca más en el drama familiar y la culpa.",
+      "En general, Hellraiser es rara pero interesante. Tiene un ritmo lento, pero su mezcla de erotismo, dolor y horror corporal la hace diferente a cualquier otra cosa de los 80. No es para todos, pero se entiende por qué se volvió una cinta de culto."
+    ],
+    "cita": "Su mezcla de erotismo, dolor y horror corporal la hace diferente a cualquier otra cosa de los 80.",
+    "veredicto": "Atmósfera enfermiza y Cenobitas icónicos. Rara, lenta pero interesante. Horror corporal distinto. Se entiende el culto. Buen embrujo."
+  },
+  {
+    "id": "the-grudge",
+    "titulo": "The Grudge",
+    "anio": 2004,
+    "fecha": "2026-10-03",
+    "duracion": "91 min",
+    "generos": ["Terror", "Misterio"],
+    "puntaje": 3.5,
+    "destacada": false,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "Estilo de terror japonés adaptado al americano. Atmósfera tensa e inquietante, aunque algunas escenas provocan risas involuntarias por la parodia de Scary Movie 4. Buena y efectiva.",
+    "poster": "imgs/maratones/halloween/grudge.jpg",
+    "posterFallback": {
+      "linea1": "The Grudge",
+      "linea2": ""
+    },
+    "letterboxd": "https://letterboxd.com/film/the-grudge",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt0391198/",
+      "rating": "5.9"
+    },
+    "lead": "Me gustó bastante. Atmósfera tensa e inquietante, aunque algunas partes me hicieron reír por la parodia de Scary Movie 4. Buena mezcla de sobrenatural e inquietante.",
+    "contenido": [
+      "Acabo de ver The Grudge (2004) y la verdad me gustó bastante. Tiene ese estilo de terror japonés adaptado al cine americano, con una atmósfera súper tensa y escenas que te ponen incómodo desde el primer minuto. La historia de la maldición en la casa, donde cada persona que entra termina siendo perseguida por el espíritu de Kayako y su hijo Toshio, sigue siendo inquietante, aunque ya conozcas el concepto.",
+      "Sarah Michelle Gellar hace un buen papel como la protagonista, atrapada en algo que no entiende, y la película mantiene ese tono sombrío, con sustos que no dependen tanto de gritos o música fuerte, sino de lo perturbador que es ver a los fantasmas aparecer en los lugares más inesperados.",
+      "Eso sí, no pude evitar reírme un poco en algunas partes, porque me acordé de Scary Movie 4, que parodia justo esta película. Cada vez que salía el niño o Kayako arrastrándose por las escaleras, me venía a la mente la versión cómica, y ya no podía tomarlo tan en serio.",
+      "Aun así, The Grudge logra mantener ese miedo psicológico y visual que la hace especial. Es una buena mezcla entre lo sobrenatural y lo inquietante, y aunque hoy en día algunos efectos ya se notan viejos, el ambiente sigue siendo efectivo. En resumen: buena, tensa y con un toque involuntario de humor si ya viste la parodia."
+    ],
+    "cita": "Cada vez que salía el niño o Kayako arrastrándose por las escaleras, me venía a la mente la versión cómica.",
+    "veredicto": "Atmósfera tensa e inquietante. Buena adaptación del terror japonés, aunque la parodia de Scary Movie 4 le quita algo de seriedad. Buen embrujo."
   }
 ]
