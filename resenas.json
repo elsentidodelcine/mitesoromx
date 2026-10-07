@@ -2088,5 +2088,36 @@
     ],
     "cita": "Candyman no es solo un asesino con gancho en la mano, sino el resultado del odio y la injusticia.",
     "veredicto": "Terror distinto y con peso social. Atmósfera inquietante y Tony Todd imponente. No da sustos fáciles, pero deja huella. Buen embrujo."
+  },
+  {
+    "id": "la-profecia",
+    "titulo": "La Profecía",
+    "anio": 1976,
+    "fecha": "2026-10-03",
+    "duracion": "111 min",
+    "generos": ["Terror", "Misterio", "Drama"],
+    "puntaje": 5.0,
+    "destacada": true,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "Clásico que envejece como el buen vino. Atmósfera elegante y oscura, Gregory Peck impecable y la banda sonora de Jerry Goldsmith es una joya absoluta. Obra maestra del terror.",
+    "poster": "imgs/maratones/halloween/laprofecia.jpg",
+    "posterFallback": {
+      "linea1": "La",
+      "linea2": "Profecía"
+    },
+    "letterboxd": "https://letterboxd.com/film/the-omen",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt0075005/",
+      "rating": "7.5"
+    },
+    "lead": "Envejece como el buen vino. Atmósfera elegante, Gregory Peck impecable y “Ave Satani” de Jerry Goldsmith es magistral. Obra maestra que sigue dando escalofríos.",
+    "contenido": [
+      "La Profecía de 1976 es una de esas películas que envejecen como el buen vino. Desde el inicio tiene ese aire elegante y oscuro que te atrapa sin necesidad de sustos baratos. Gregory Peck está impecable, serio, convincente, y hace que todo el asunto del “niño del demonio” se sienta más real de lo que debería. Lo mejor es cómo la historia se va construyendo con calma, dejando que la tensión te muerda poco a poco.",
+      "Y claro, la joya absoluta es su banda sonora. “Ave Satani”, compuesta por Jerry Goldsmith, es simplemente magistral. Ese coro en latín, con ese tono casi religioso pero perverso, pone los pelos de punta y convierte cada escena en algo solemne y diabólico al mismo tiempo. Es de esas piezas que no solo acompañan a la película, sino que la elevan completamente.",
+      "En conjunto, La Profecía no solo es un clásico del cine de terror, sino una lección de cómo el sonido, la atmósfera y el suspenso bien medido pueden crear algo verdaderamente inquietante. Una obra maestra que sigue dando escalofríos casi 50 años después."
+    ],
+    "cita": "“Ave Satani” es simplemente magistral.",
+    "veredicto": "Clásico elegante y oscuro. Gregory Peck impecable y la banda sonora de Jerry Goldsmith es una joya. Obra maestra que sigue dando escalofríos. Cine legendario."
   }
 ]
