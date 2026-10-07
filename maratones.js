@@ -84,11 +84,25 @@ function cardHTML(p, num, compact) {
   );
 }
 
+function shuffle(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const t = a[i]; a[i] = a[j]; a[j] = t;
+  }
+  return a;
+}
+
+function pickN(arr, n) {
+  return shuffle(arr).slice(0, Math.min(n, arr.length));
+}
+
+/** Misma lógica de filtros para todo el maratón */
 function listaFiltrada() {
   if (!maratonActivo) return [];
-  return (maratonActivo.peliculas || []).filter(p => {
+  return (maratonActivo.peliculas || []).filter(function (p) {
     if (filtroSub !== 'todos' && p.subgenero !== filtroSub) return false;
-    if (filtroInt !== 'todos' && p.intensidad !== filtroInt) return false;
+    if (filtroInt !== 'todos' && (p.intensidad || '') !== filtroInt) return false;
     if (filtroDec !== 'todos' && String(decadeOf(p.anio)) !== filtroDec) return false;
     if (soloResena && !(p.resena && String(p.resena).trim())) return false;
     return true;
@@ -132,53 +146,135 @@ function llenarFiltros(peliculas) {
 function renderEmpieza() {
   const wrap = document.getElementById('maraton-empieza');
   const grid = document.getElementById('maraton-empieza-grid');
-  if (!wrap || !grid || !maratonActivo) return;
-  const ids = maratonActivo.empiezaAqui || [];
-  const map = mapPelisById(maratonActivo);
-  const items = ids.map(id => map[id]).filter(Boolean);
-  if (!items.length) { wrap.hidden = true; return; }
+  if (!wrap || !grid) return;
+
+  const lista = listaFiltrada();
+  if (lista.length < 3) {
+    wrap.hidden = true;
+    grid.innerHTML = '';
+    return;
+  }
+
+  // 6–8 al azar de la lista filtrada
+  const n = Math.min(8, Math.max(5, Math.floor(lista.length / 6)));
+  const items = pickN(lista, n);
+
   wrap.hidden = false;
-  grid.innerHTML = items.map((p, i) => cardHTML(p, i + 1, true)).join('');
+  grid.innerHTML = items.map(function (p, i) {
+    return cardHTML(p, i + 1, true);
+  }).join('');
 }
 
 function renderNoches() {
   const sec = document.getElementById('maraton-noches');
-  if (!sec || !maratonActivo) return;
-  const noches = maratonActivo.noches || [];
-  const map = mapPelisById(maratonActivo);
-  if (!noches.length) { sec.hidden = true; sec.innerHTML = ''; return; }
+  if (!sec) return;
+
+  const lista = listaFiltrada();
+  if (lista.length < 6) {
+    sec.hidden = true;
+    sec.innerHTML = '';
+    return;
+  }
+
+  // Agrupar por subgénero
+  const porSub = {};
+  lista.forEach(function (p) {
+    const key = p.subgenero || 'Otros';
+    (porSub[key] || (porSub[key] = [])).push(p);
+  });
+
+  // Solo grupos con ≥ 3 pelis; mezclar y tomar hasta 4 “noches”
+  let grupos = Object.keys(porSub)
+    .map(function (k) { return { nombre: k, pelis: shuffle(porSub[k]) }; })
+    .filter(function (g) { return g.pelis.length >= 3; });
+
+  grupos = shuffle(grupos).slice(0, 4);
+
+  // Si casi no hay grupos, armar noches por intensidad
+  if (grupos.length < 2) {
+    const porInt = { suave: [], medio: [], extremo: [] };
+    lista.forEach(function (p) {
+      const k = p.intensidad || 'medio';
+      if (porInt[k]) porInt[k].push(p);
+    });
+    grupos = ['suave', 'medio', 'extremo']
+      .map(function (k) {
+        return {
+          nombre: k === 'suave' ? 'Noche suave' : k === 'medio' ? 'Noche media' : 'Noche extrema',
+          pelis: shuffle(porInt[k] || [])
+        };
+      })
+      .filter(function (g) { return g.pelis.length >= 2; });
+  }
+
+  if (!grupos.length) {
+    sec.hidden = true;
+    sec.innerHTML = '';
+    return;
+  }
+
   sec.hidden = false;
-  sec.innerHTML = '<h2 class="maraton-grid-title">Por noches</h2>' + noches.map(n => {
-    const pelis = (n.ids || []).map(id => map[id]).filter(Boolean);
-    if (!pelis.length) return '';
-    return (
-      `<div class="noche-block">` +
-      `<h3>${escapeHTML(n.nombre)}</h3>` +
-      `<div class="noche-grid">${pelis.map((p, i) => cardHTML(p, i + 1, true)).join('')}</div>` +
-      `</div>`
-    );
-  }).join('');
+  sec.innerHTML =
+    '<h2 class="maraton-grid-title">Por noches <span style="font-size:.75rem;font-weight:500;opacity:.6">(aleatorio según filtros)</span></h2>' +
+    grupos.map(function (g, idx) {
+      const pelis = g.pelis.slice(0, 6); // máx 6 por noche
+      return (
+        '<div class="noche-block">' +
+        '<h3>Noche ' + (idx + 1) + ' · ' + escapeHTML(g.nombre) + '</h3>' +
+        '<div class="noche-grid">' +
+        pelis.map(function (p, i) { return cardHTML(p, i + 1, true); }).join('') +
+        '</div></div>'
+      );
+    }).join('');
 }
 
 function renderParejas() {
   const sec = document.getElementById('maraton-parejas');
   const list = document.getElementById('maraton-parejas-list');
-  if (!sec || !list || !maratonActivo) return;
-  const pares = maratonActivo.parejas || [];
-  const map = mapPelisById(maratonActivo);
-  if (!pares.length) { sec.hidden = true; return; }
+  if (!sec || !list) return;
+
+  const lista = listaFiltrada();
+  if (lista.length < 4) {
+    sec.hidden = true;
+    list.innerHTML = '';
+    return;
+  }
+
+  const pool = shuffle(lista);
+  const pares = [];
+  const usados = {};
+
+  // Hasta 5 parejas sin repetir película
+  for (let i = 0; i < pool.length - 1 && pares.length < 5; i++) {
+    const a = pool[i];
+    if (usados[a.id]) continue;
+    for (let j = i + 1; j < pool.length; j++) {
+      const b = pool[j];
+      if (usados[b.id]) continue;
+      // Preferir distinto subgénero si se puede
+      if (a.subgenero && b.subgenero && a.subgenero === b.subgenero && Math.random() > 0.35) continue;
+      usados[a.id] = true;
+      usados[b.id] = true;
+      pares.push({ a: a, b: b });
+      break;
+    }
+  }
+
+  if (!pares.length) {
+    sec.hidden = true;
+    return;
+  }
+
   sec.hidden = false;
-  list.innerHTML = pares.map(par => {
-    const a = map[par.de];
-    const b = map[par.a];
-    if (!a || !b) return '';
+  list.innerHTML = pares.map(function (par) {
     return (
-      `<div class="pareja-item">` +
-      `<strong>${escapeHTML(a.titulo)}</strong>` +
-      `<span class="pareja-arrow">→</span>` +
-      `<strong>${escapeHTML(b.titulo)}</strong>` +
-      (par.texto ? `<span style="opacity:.7">· ${escapeHTML(par.texto)}</span>` : '') +
-      `</div>`
+      '<div class="pareja-item">' +
+      '<strong>' + escapeHTML(par.a.titulo) + '</strong>' +
+      '<span class="pareja-arrow">→</span>' +
+      '<strong>' + escapeHTML(par.b.titulo) + '</strong>' +
+      '<span style="opacity:.65">· ' +
+      escapeHTML((par.a.subgenero || '') + (par.b.subgenero ? ' + ' + par.b.subgenero : '')) +
+      '</span></div>'
     );
   }).join('');
 }
@@ -235,6 +331,13 @@ function renderHero(m) {
   renderCountdown(m);
 }
 
+function renderTodoFiltrado() {
+  renderEmpieza();
+  renderNoches();
+  renderParejas();
+  renderGrid();
+}
+
 function seleccionarMaraton(id) {
   const m = getMaraton(id);
   if (!m) return;
@@ -242,11 +345,10 @@ function seleccionarMaraton(id) {
   renderHero(m);
   renderTabs();
   llenarFiltros(m.peliculas || []);
-  renderEmpieza();
-  renderNoches();
-  renderParejas();
-  renderGrid();
-  try { history.replaceState(null, '', '#' + (m.slug || m.id)); } catch (e) {}
+  renderTodoFiltrado(); // ← empieza/noches/parejas/grid con shuffle fresco
+  try {
+    history.replaceState(null, '', '#' + (m.slug || m.id));
+  } catch (e) {}
 }
 
 function copiarLista() {
@@ -281,24 +383,29 @@ function sorpresa() {
 document.addEventListener('DOMContentLoaded', async () => {
   mostrarSkeleton(8);
 
-  document.getElementById('filtro-subgenero')?.addEventListener('change', e => {
-    filtroSub = e.target.value; renderGrid();
-  });
-  document.getElementById('filtro-intensidad')?.addEventListener('change', e => {
-    filtroInt = e.target.value; renderGrid();
-  });
-  document.getElementById('filtro-decada')?.addEventListener('change', e => {
-    filtroDec = e.target.value; renderGrid();
-  });
-  document.getElementById('filtro-resena')?.addEventListener('change', e => {
-    soloResena = e.target.checked; renderGrid();
-  });
-  document.getElementById('btn-random')?.addEventListener('click', sorpresa);
-  document.getElementById('btn-copiar-lista')?.addEventListener('click', copiarLista);
-  document.getElementById('btn-limpiar-filtros')?.addEventListener('click', () => {
-    llenarFiltros(maratonActivo?.peliculas || []);
-    renderGrid();
-  });
+ document.getElementById('filtro-subgenero')?.addEventListener('change', function (e) {
+   filtroSub = e.target.value;
+   renderTodoFiltrado();
+ });
+ document.getElementById('filtro-intensidad')?.addEventListener('change', function (e) {
+   filtroInt = e.target.value;
+   renderTodoFiltrado();
+ });
+ document.getElementById('filtro-decada')?.addEventListener('change', function (e) {
+   filtroDec = e.target.value;
+   renderTodoFiltrado();
+ });
+ document.getElementById('filtro-resena')?.addEventListener('change', function (e) {
+   soloResena = e.target.checked;
+   renderTodoFiltrado();
+ });
+ document.getElementById('btn-limpiar-filtros')?.addEventListener('click', function () {
+   llenarFiltros(maratonActivo?.peliculas || []);
+   renderTodoFiltrado();
+ });
+ document.getElementById('btn-reshuffle')?.addEventListener('click', function () {
+   renderTodoFiltrado();
+ });
 
   document.getElementById('theme-toggle')?.addEventListener('click', () => {
     const html = document.documentElement;

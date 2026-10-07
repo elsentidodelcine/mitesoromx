@@ -12,21 +12,6 @@
       "titulo": "+60 películas de terror",
       "descripcion": "Slashers, posesiones, folk horror y clásicos. Elige por subgénero o ve en orden suelto: la idea es pasar octubre con luces apagadas.",
       "fechaObjetivo": "2026-10-31",
-      "empiezaAqui": ["halloween-1978", "scream", "exorcist", "get-out", "hereditary", "thing", "alien", "cabin-woods"],
-      "noches": [
-        { "id": "noche-clasicos", "nombre": "Noche 1 · Clásicos", "ids": ["psycho", "night-living-dead", "exorcist", "halloween-1978", "texas-chainsaw", "rosemarys-baby"] },
-        { "id": "noche-slasher", "nombre": "Noche 2 · Slasher", "ids": ["halloween-1978", "friday-13", "nightmare-elm", "scream", "childs-play"] },
-        { "id": "noche-elevado", "nombre": "Noche 3 · Terror elevado", "ids": ["hereditary", "midsommar", "the-witch", "get-out", "babadook", "it-follows"] },
-        { "id": "noche-recientes", "nombre": "Noche 4 · Recientes", "ids": ["weapons", "evil-dead-burn", "28-anos-despues", "exit-8", "leviticus", "obsession"] }
-      ],
-      "parejas": [
-        { "de": "halloween-1978", "a": "scream", "texto": "Del origen al meta-slasher" },
-        { "de": "exorcist", "a": "conjuring", "texto": "Posesión clásica → moderna" },
-        { "de": "alien", "a": "thing", "texto": "Sci-fi horror en el vacío" },
-        { "de": "get-out", "a": "hereditary", "texto": "Tensión social → folk ritual" },
-        { "de": "28-days", "a": "28-anos-despues", "texto": "La rabia, dos décadas después" },
-        { "de": "ringu", "a": "ring", "texto": "Original japonés → remake US" }
-      ],
       "peliculas": [
           { "id": "halloween-1978", "titulo": "Halloween", "anio": 1978, "subgenero": "Slasher", "nota": "El origen del slasher moderno. Myers y la noche de Todos los Santos.", "poster": "imgs/maratones/halloween/halloween.jpg", "resena": null, "intensidad": "medio", "duracion": 91, "enCartelera": false, "destacada": true },
           { "id": "psycho", "titulo": "Psicosis", "anio": 1960, "subgenero": "Thriller", "nota": "Hitchcock redefine el suspense y el motel al borde de la carretera.", "poster": "imgs/maratones/halloween/psycho.jpg", "resena": null, "intensidad": "medio", "duracion": 109, "enCartelera": false, "destacada": true },
