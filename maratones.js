@@ -353,31 +353,75 @@ function seleccionarMaraton(id) {
 
 function copiarLista() {
   const lista = listaFiltrada();
-  if (!lista.length) return;
-  const texto = lista.map((p, i) =>
-    `${i + 1}. ${p.titulo} (${p.anio || '?'})${p.intensidad ? ' · ' + p.intensidad : ''}`
-  ).join('\n');
-  const full = `${maratonActivo.titulo || 'Maratón'}\n\n${texto}\n\n— Los Brujos del Cine`;
-  navigator.clipboard.writeText(full).then(() => {
+  if (!lista.length) {
+    alert('No hay películas con estos filtros.');
+    return;
+  }
+  const texto = lista.map(function (p, i) {
+    return (i + 1) + '. ' + p.titulo + ' (' + (p.anio || '?') + ')' +
+      (p.intensidad ? ' · ' + p.intensidad : '');
+  }).join('\n');
+
+  const full = (maratonActivo && maratonActivo.titulo ? maratonActivo.titulo : 'Maratón') +
+    '\n\n' + texto + '\n\n— Los Brujos del Cine';
+
+  function ok() {
     const btn = document.getElementById('btn-copiar-lista');
-    if (btn) {
-      const t = btn.textContent;
-      btn.textContent = '✓ Copiado';
-      setTimeout(() => { btn.textContent = t; }, 1600);
-    }
-  }).catch(() => alert('No se pudo copiar'));
+    if (!btn) return;
+    const t = btn.textContent;
+    btn.textContent = '✓ Copiado';
+    setTimeout(function () { btn.textContent = t; }, 1600);
+  }
+
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(full).then(ok).catch(function () {
+      // fallback
+      const ta = document.createElement('textarea');
+      ta.value = full;
+      ta.style.position = 'fixed';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand('copy');
+        ok();
+      } catch (e) {
+        alert('Copia manual:\n\n' + full.slice(0, 400) + '…');
+      }
+      document.body.removeChild(ta);
+    });
+  } else {
+    const ta = document.createElement('textarea');
+    ta.value = full;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    ok();
+  }
 }
 
 function sorpresa() {
   const lista = listaFiltrada();
   if (!lista.length) return;
+
   const p = lista[Math.floor(Math.random() * lista.length)];
-  const el = document.querySelector(`.maraton-card[data-id="${p.id}"]`);
-  if (el) {
-    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    el.style.outline = '2px solid var(--maraton-accent)';
-    setTimeout(() => { el.style.outline = ''; }, 1800);
+
+  // Buscar en el grid principal primero
+  let el = document.querySelector('#maraton-grid .maraton-card[data-id="' + p.id + '"]');
+  if (!el) {
+    el = document.querySelector('.maraton-card[data-id="' + p.id + '"]');
   }
+  if (!el) {
+    // si no está en DOM (raro), re-render y reintentar
+    renderGrid();
+    el = document.querySelector('#maraton-grid .maraton-card[data-id="' + p.id + '"]');
+  }
+  if (!el) return;
+
+  el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  el.classList.add('maraton-flash');
+  setTimeout(function () { el.classList.remove('maraton-flash'); }, 1800);
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -406,6 +450,11 @@ document.addEventListener('DOMContentLoaded', async () => {
  document.getElementById('btn-reshuffle')?.addEventListener('click', function () {
    renderTodoFiltrado();
  });
+  document.getElementById('btn-copiar-lista')?.addEventListener('click', copiarLista);
+   document.getElementById('btn-random')?.addEventListener('click', sorpresa);
+   document.getElementById('btn-reshuffle')?.addEventListener('click', function () {
+     renderTodoFiltrado();
+   });
 
   document.getElementById('theme-toggle')?.addEventListener('click', () => {
     const html = document.documentElement;

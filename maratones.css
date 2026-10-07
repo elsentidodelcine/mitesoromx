@@ -553,3 +553,9 @@ html[data-theme="light"] .maraton-num {
   .maraton-filters-row { gap: 8px; }
   .maraton-filters-sticky { top: 56px; }
 }
+
+.maraton-card.maraton-flash {
+  outline: 2px solid var(--maraton-accent, #ff6b35);
+  box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.35);
+  transition: outline 0.2s, box-shadow 0.2s;
+}
