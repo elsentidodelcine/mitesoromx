@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maratones | Los Brujos del Cine</title>
+    <meta name="description" content="Maratones temáticos: 50 películas de terror para Halloween y más fechas del año.">
+    <meta name="theme-color" content="#0a0508">
+    <link rel="icon" href="imgs/logoLB.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesLBDC.css">
+    <link rel="stylesheet" href="maratones.css">
+    <script>
+        try {
+          var t = localStorage.getItem('lbdc-theme');
+          if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+    </script>
+</head>
+<body class="page-maratones">
+<!-- Pega aquí tu mismo header del blog -->
+<header class="site-header">
+    <div class="header-inner">
+        <a href="blog.html" class="brand-link">
+            <img src="imgs/logoLB.png" alt="Los Brujos del Cine" class="site-logo">
+            <div class="logo-text">
+                <h1>Los Brujos del Cine</h1>
+                <span>Mi Tesoro MX</span>
+            </div>
+        </a>
+        <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-label="Abrir menú">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="main-nav" id="main-nav">
+            <a href="blog.html">Reseñas</a>
+            <a href="estrenos.html">Estrenos</a>
+            <a href="precios.html">Precios</a>
+            <a href="sagas.html">Sagas</a>
+            <a href="maratones.html" aria-current="page">Maratones</a>
+        </nav>
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">☾</button>
+    </div>
+</header>
+
+<main class="maratones-page">
+    <section class="maraton-hero" id="maraton-hero">
+        <div class="maraton-hero-inner">
+            <div class="eyebrow" id="maraton-eyebrow">🎃 Temporada de sustos</div>
+            <h1 id="maraton-titulo">Maratones</h1>
+            <p id="maraton-desc">Listas temáticas para ver en las fechas que importan.</p>
+        </div>
+    </section>
+
+    <div class="maraton-tabs" id="maraton-tabs" role="tablist" aria-label="Elegir maratón"></div>
+
+    <div class="maraton-toolbar">
+        <div class="maraton-count" id="maraton-count"></div>
+        <label class="maraton-filter-label">
+            Subgénero
+            <select id="filtro-subgenero">
+                <option value="todos">Todos</option>
+            </select>
+        </label>
+    </div>
+
+    <div class="maraton-grid" id="maraton-grid" aria-live="polite"></div>
+    <div class="maraton-empty" id="maraton-empty" hidden>
+        <p>Este maratón llega pronto. Mientras tanto, disfruta el de Halloween.</p>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-links">
+            <a href="aviso-de-privacidad-LBDC.html">Política de Privacidad</a>
+            <a href="https://losbrujosdelcine.com/#catalogo" target="_blank" rel="noopener">Mi Tesoro MX</a>
+        </div>
+        <div class="footer-copy"><p>© 2026 Los Brujos del Cine</p></div>
+    </div>
+</footer>
+
+<button type="button" id="btn-top" class="btn-top" aria-label="Volver arriba">↑</button>
+<script src="maratones.js"></script>
+</body>
+</html>
