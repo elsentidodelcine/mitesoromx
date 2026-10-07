@@ -2055,5 +2055,38 @@
     ],
     "cita": "El detalle del zapato dice muchísimo de la amistad que construyeron.",
     "veredicto": "Bonita, conmovedora y desgarradora. Amistad inocente frente a lo inevitable. Cine que se queda contigo. Cine legendario."
+  },
+  {
+    "id": "candyman",
+    "titulo": "Candyman",
+    "anio": 1992,
+    "fecha": "2026-10-03",
+    "duracion": "99 min",
+    "generos": ["Terror", "Misterio", "Drama"],
+    "puntaje": 3.5,
+    "destacada": false,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "Terror distinto al slasher típico de los 90. Mezcla sobrenatural con temas sociales de pobreza y racismo. Atmósfera inquietante y Tony Todd imponente. No da miedo tradicional, pero deja huella.",
+    "poster": "imgs/maratones/halloween/candyman.jpg",
+    "posterFallback": {
+      "linea1": "Candyman",
+      "linea2": ""
+    },
+    "letterboxd": "https://letterboxd.com/film/candyman",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt0103919/",
+      "rating": "6.8"
+    },
+    "lead": "Terror distinto al típico slasher de los 90. Atmósfera inquietante, temas sociales y Tony Todd imponente. No da miedo tradicional, pero deja una sensación fuerte.",
+    "contenido": [
+      "Acabo de ver Candyman (1992) y la verdad es una película de terror bastante distinta a lo que uno espera del típico slasher de los 90. La historia sigue a Helen Lyle, una estudiante universitaria que está haciendo una tesis sobre leyendas urbanas. En su investigación termina en los proyectos Cabrini-Green, donde la gente cree en la historia de “Candyman”, un espíritu que aparece si dices su nombre cinco veces frente al espejo.",
+      "Lo que empieza como curiosidad académica se convierte en una pesadilla cuando Helen realmente invoca a Candyman (interpretado por Tony Todd, que tiene una presencia impresionante). A partir de ahí, comienzan los asesinatos y Helen empieza a perder el control de su vida, ya que todos piensan que ella es la responsable.",
+      "Lo interesante es que la película mezcla el terror sobrenatural con temas sociales: la pobreza, el racismo y cómo las leyendas nacen del sufrimiento colectivo. Candyman no es solo un asesino con gancho en la mano, sino el resultado del odio y la injusticia, lo cual le da mucha más profundidad.",
+      "El final es trágico y simbólico: Helen muere, pero termina convirtiéndose en una especie de nueva leyenda, igual que Candyman. Es como si el ciclo continuara.",
+      "En general, Candyman tiene momentos lentos y una atmósfera muy diferente a otros slashers, pero eso es justo lo que la hace destacar. No da miedo en el sentido tradicional, pero sí deja una sensación inquietante y un trasfondo más serio de lo que uno espera."
+    ],
+    "cita": "Candyman no es solo un asesino con gancho en la mano, sino el resultado del odio y la injusticia.",
+    "veredicto": "Terror distinto y con peso social. Atmósfera inquietante y Tony Todd imponente. No da sustos fáciles, pero deja huella. Buen embrujo."
   }
 ]

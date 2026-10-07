@@ -47,27 +47,82 @@
         <div class="maraton-hero-inner">
             <div class="eyebrow" id="maraton-eyebrow">🎃 Temporada de sustos</div>
             <h1 id="maraton-titulo">Maratones</h1>
-            <p id="maraton-desc">Listas temáticas para ver en las fechas que importan.</p>
+            <p id="maraton-desc"></p>
+            <p class="maraton-countdown" id="maraton-countdown" hidden></p>
         </div>
     </section>
 
-    <div class="maraton-tabs" id="maraton-tabs" role="tablist" aria-label="Elegir maratón"></div>
+    <div class="maraton-tabs" id="maraton-tabs" role="tablist"></div>
 
-    <div class="maraton-toolbar">
-        <div class="maraton-count" id="maraton-count"></div>
-        <label class="maraton-filter-label">
-            Subgénero
-            <select id="filtro-subgenero">
-                <option value="todos">Todos</option>
-            </select>
-        </label>
+    <!-- Sticky filters -->
+    <div class="maraton-filters-sticky" id="maraton-filters">
+        <div class="maraton-filters-inner">
+            <div class="maraton-count" id="maraton-count"></div>
+            <div class="maraton-filters-row">
+                <label>
+                    Subgénero
+                    <select id="filtro-subgenero"><option value="todos">Todos</option></select>
+                </label>
+                <label>
+                    Intensidad
+                    <select id="filtro-intensidad">
+                        <option value="todos">Todas</option>
+                        <option value="suave">Suave</option>
+                        <option value="medio">Media</option>
+                        <option value="extremo">Extrema</option>
+                    </select>
+                </label>
+                <label>
+                    Década
+                    <select id="filtro-decada"><option value="todos">Todas</option></select>
+                </label>
+                <label class="check-label">
+                    <input type="checkbox" id="filtro-resena"> Solo con reseña
+                </label>
+                <button type="button" class="btn-ghost" id="btn-random">🎲 Sorpréndeme</button>
+                <button type="button" class="btn-ghost" id="btn-copiar-lista">📋 Copiar lista</button>
+            </div>
+        </div>
     </div>
 
-    <div class="maraton-grid" id="maraton-grid" aria-live="polite"></div>
+    <!-- Empieza aquí -->
+    <section class="maraton-empieza" id="maraton-empieza" hidden>
+        <h2>Empieza por estas</h2>
+        <div class="maraton-empieza-grid" id="maraton-empieza-grid"></div>
+    </section>
+
+    <!-- Noches -->
+    <section class="maraton-noches" id="maraton-noches" hidden></section>
+
+    <!-- Parejas -->
+    <section class="maraton-parejas" id="maraton-parejas" hidden>
+        <h2>Si te gustó… sigue con</h2>
+        <div class="maraton-parejas-list" id="maraton-parejas-list"></div>
+    </section>
+
+    <h2 class="maraton-grid-title" id="maraton-grid-title">Todas las películas</h2>
+    <div class="maraton-grid" id="maraton-grid" aria-live="polite">
+        <!-- skeleton -->
+    </div>
     <div class="maraton-empty" id="maraton-empty" hidden>
-        <p>Este maratón llega pronto. Mientras tanto, disfruta el de Halloween.</p>
+        <p>No hay películas con estos filtros.</p>
+        <button type="button" class="btn-ghost" id="btn-limpiar-filtros">Limpiar filtros</button>
     </div>
+
+    <!-- CTA Mi Tesoro -->
+    <section class="maraton-cta-store">
+        <div class="maraton-cta-store-inner">
+            <span class="section-kicker">DEL SUSTO A LA COLECCIÓN</span>
+            <h2>¿Coleccionas terror?</h2>
+            <p>Vasos, palomeras y piezas inspiradas en el cine de miedo en Mi Tesoro MX.</p>
+            <a href="https://losbrujosdelcine.com/#catalogo" class="button button-primary" target="_blank" rel="noopener">
+                Visitar Mi Tesoro MX <span aria-hidden="true">↗</span>
+            </a>
+        </div>
+    </section>
 </main>
+
+<button type="button" id="btn-top" class="btn-top btn-top--pumpkin" aria-label="Volver arriba">🎃</button>
 
 <footer class="site-footer">
     <div class="footer-inner">
