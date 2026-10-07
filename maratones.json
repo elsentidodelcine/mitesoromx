@@ -61,7 +61,18 @@
         { "id": "omen", "titulo": "La profecía", "anio": 1976, "subgenero": "Posesión", "nota": "El niño Damien y el 666.", "poster": "imgs/maratones/halloween/omen.jpg", "resena": null },
         { "id": "omen-hell", "titulo": "Hellraiser", "anio": 1987, "subgenero": "Sobrenatural", "nota": "Placer, dolor y la caja de Lemarchand.", "poster": "imgs/maratones/halloween/hellraiser.jpg", "resena": null },
         { "id": "candyman", "titulo": "Candyman", "anio": 1992, "subgenero": "Sobrenatural", "nota": "Di su nombre cinco veces frente al espejo.", "poster": "imgs/maratones/halloween/candyman.jpg", "resena": null },
-        { "id": "childs-play", "titulo": "Chucky: el muñeco diabólico", "anio": 1988, "subgenero": "Slasher", "nota": "Juguete poseído y humor negro.", "poster": "imgs/maratones/halloween/childs-play.jpg", "resena": null }
+        { "id": "childs-play", "titulo": "Chucky: el muñeco diabólico", "anio": 1988, "subgenero": "Slasher", "nota": "Juguete poseído y humor negro.", "poster": "imgs/maratones/halloween/childs-play.jpg", "resena": null },
+
+        { "id": "evil-dead-burn", "titulo": "Evil Dead Burn", "anio": 2026, "subgenero": "Posesión", "nota": "Nueva entrega de la saga: Deadites, familia y gore extremo. En LATAM: Evil Dead: en llamas.", "poster": "imgs/maratones/halloween/evil-dead-burn.jpg", "resena": null },
+        { "id": "exit-8", "titulo": "Exit 8", "anio": 2025, "subgenero": "Psicológico", "nota": "Adaptación del juego: pasillo de metro infinito y anomalías. Terror liminal japonés.", "poster": "imgs/maratones/halloween/exit-8.jpg", "resena": null },
+        { "id": "no-dejes-ninos-solos", "titulo": "No dejes a los niños solos", "anio": 2025, "subgenero": "Thriller", "nota": "Terror mexicano de Emilio Portes. Dos hermanos solos en casa… y algo los enfrenta.", "poster": "imgs/maratones/halloween/no-dejes-ninos-solos.jpg", "resena": null },
+        { "id": "leviticus", "titulo": "Leviticus", "anio": 2026, "subgenero": "Sobrenatural", "nota": "Ritual de conversión y una entidad que toma la forma de quien más deseas. Folk horror australiano.", "poster": "imgs/maratones/halloween/leviticus.jpg", "resena": null },
+        { "id": "weapons", "titulo": "Weapons (La hora de la desaparición)", "anio": 2025, "subgenero": "Misterio", "nota": "Zach Cregger (Barbarian). Una clase entera de niños desaparece a la misma hora.", "poster": "imgs/maratones/halloween/weapons.jpg", "resena": null },
+        { "id": "obsession", "titulo": "Obsession", "anio": 2026, "subgenero": "Sobrenatural", "nota": "Amor platónico, deseo y un hechizo que se vuelve pesadilla. Thriller de Curry Barker.", "poster": "imgs/maratones/halloween/obsession.jpg", "resena": null },
+        { "id": "resident-evil-noche-cero", "titulo": "Resident Evil: noche cero", "anio": 2026, "subgenero": "Zombis", "nota": "Reinicio de Zach Cregger. Una noche de brote en Raccoon City, lejos de las cintas anteriores.", "poster": "imgs/maratones/halloween/resident-evil-noche-cero.jpg", "resena": null },
+        { "id": "insaciable", "titulo": "Insaciable", "anio": 2026, "subgenero": "Body horror", "nota": "Obsesión por adelgazar y un fantasma hambriento. De la directora de Relic (Saccharine).", "poster": "imgs/maratones/halloween/insaciable.jpg", "resena": null },
+        { "id": "28-anos-despues", "titulo": "28 años después", "anio": 2025, "subgenero": "Zombis", "nota": "Danny Boyle regresa al Reino Unido infectado. Padre, hijo y la rabia décadas después.", "poster": "imgs/maratones/halloween/28-anos-despues.jpg", "resena": null },
+        { "id": "el-heladero", "titulo": "El heladero: dulce sabor a muerte", "anio": 2026, "subgenero": "Slasher", "nota": "Eli Roth. Helados malditos y un pueblo de verano que pierde la cabeza.", "poster": "imgs/maratones/halloween/el-heladero.jpg", "resena": null }
       ]
     },
     {
