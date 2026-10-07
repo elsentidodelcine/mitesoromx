@@ -231,42 +231,44 @@ document.addEventListener('DOMContentLoaded', async () => {
     `;
   }
 
-  function renderRanking(resenas) {
-    if (!rankingBox) return;
+ function renderRanking(resenas) {
+   if (!rankingBox) return;
 
-    const top = resenas
-      .slice()
-      .sort(
-        (a, b) =>
-          Number(b.puntaje) - Number(a.puntaje) ||
-          (a.titulo || '').localeCompare(b.titulo || '', 'es')
-      )
-      .slice(0, 10);
+   // Solo reseñas del año 2026
+   const del2026 = resenas.filter(r => Number(r.anio) === 2026);
 
-    if (!top.length) {
-      rankingBox.innerHTML = `<p class="empty-state">Aún no hay reseñas.</p>`;
-      return;
-    }
+   const top = del2026
+     .slice()
+     .sort(
+       (a, b) =>
+         Number(b.puntaje) - Number(a.puntaje) ||
+         (a.titulo || '').localeCompare(b.titulo || '', 'es')
+     )
+     .slice(0, 10);
 
-    rankingBox.innerHTML = top
-      .map((r, i) => {
-        const grim = obtenerGrimorio(r.puntaje).titulo;
-        return `
-          <a class="ranking-row" href="review.html?id=${encodeURIComponent(r.id)}">
-            <span class="ranking-pos">${i + 1}</span>
-            <img src="${escapeHTML(r.poster || '')}" alt="" class="ranking-poster" loading="lazy"
-                 onerror="this.style.visibility='hidden'">
-            <div class="ranking-info">
-              <strong>${escapeHTML(r.titulo)}</strong>
-              <span class="ranking-meta">${escapeHTML(String(r.anio || ''))} · ${escapeHTML(grim)}</span>
-            </div>
-            <span class="ranking-score">${escapeHTML(String(r.puntaje))}<small>/5</small></span>
-          </a>
-        `;
-      })
-      .join('');
-  }
-});
+   if (!top.length) {
+     rankingBox.innerHTML = `<p class="empty-state">Aún no hay reseñas de 2026.</p>`;
+     return;
+   }
+
+   rankingBox.innerHTML = top
+     .map((r, i) => {
+       const grim = obtenerGrimorio(r.puntaje).titulo;
+       return `
+         <a class="ranking-row" href="review.html?id=${encodeURIComponent(r.id)}">
+           <span class="ranking-pos">${i + 1}</span>
+           <img src="${escapeHTML(r.poster || '')}" alt="" class="ranking-poster" loading="lazy"
+                onerror="this.style.visibility='hidden'">
+           <div class="ranking-info">
+             <strong>${escapeHTML(r.titulo)}</strong>
+             <span class="ranking-meta">${escapeHTML(String(r.anio || ''))} · ${escapeHTML(grim)}</span>
+           </div>
+           <span class="ranking-score">${escapeHTML(String(r.puntaje))}<small>/5</small></span>
+         </a>
+       `;
+     })
+     .join('');
+ }
 
 /* ===== Helpers ===== */
 function escapeHTML(str) {
