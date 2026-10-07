@@ -269,7 +269,7 @@ document.addEventListener('DOMContentLoaded', async () => {
      })
      .join('');
  }
-
+});
 /* ===== Helpers ===== */
 function escapeHTML(str) {
   if (str == null) return '';
