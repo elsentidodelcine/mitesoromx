@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Política de Privacidad de Mi Tesoro MX. Qué datos pedimos, para qué los usamos y cómo protegerlos. Solo lo necesario para WhatsApp y envíos.">
+    <meta name="description"
+          content="Política de Privacidad de Mi Tesoro MX. Qué datos pedimos, para qué los usamos y cómo protegerlos. Solo lo necesario para WhatsApp y envíos.">
     <title>Política de Privacidad | Mi Tesoro MX</title>
 
     <!-- Google tag (gtag.js) -->
@@ -23,7 +24,8 @@
     <!-- Open Graph (WhatsApp / Facebook / Telegram) -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Política de Privacidad | Mi Tesoro MX">
-    <meta property="og:description" content="Cómo tratamos tu información en Mi Tesoro MX: solo lo necesario para atenderte y enviar tu pedido.">
+    <meta property="og:description"
+          content="Cómo tratamos tu información en Mi Tesoro MX: solo lo necesario para atenderte y enviar tu pedido.">
     <meta property="og:url" content="https://mitesoromx.com/politica-privacidad.html">
     <meta property="og:locale" content="es_MX">
     <meta property="og:site_name" content="Mi Tesoro MX">
@@ -73,6 +75,8 @@
     </script>
 
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Estructura/footer.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -262,7 +266,8 @@
             Dudas sobre privacidad o solicitud para borrar datos:
         </p>
         <p>
-            <a href="https://wa.me/524761002824?text=Hola%2C%20tengo%20una%20consulta%20sobre%20privacidad" target="_blank" rel="noopener">
+            <a href="https://wa.me/524761002824?text=Hola%2C%20tengo%20una%20consulta%20sobre%20privacidad"
+               target="_blank" rel="noopener">
                 WhatsApp +52 476 100 28 24
             </a>
         </p>
@@ -283,23 +288,7 @@
 </main>
 
 <!-- FOOTER -->
-<footer class="site-footer">
-    <div class="footer-inner">
-        <nav class="footer-links" aria-label="Enlaces del sitio">
-            <a href="nosotros.html">¿Quiénes Somos?</a>
-            <a href="faq.html">Dudas (FAQ)</a>
-            <a href="politica-privacidad.html">Aviso de Privacidad</a>
-            <a href="terminos-y-condiciones.html">Términos y Condiciones</a>
-            <a href="preventas.html">Términos de Preventas</a>
-            <a href="aviso-legal-apartado.htm">Términos de Apartados</a>
-            <a href="https://facebook.com/..." target="_blank" rel="noopener">Facebook</a>
-            <a href="https://wa.me/..." target="_blank" rel="noopener">WhatsApp</a>
-        </nav>
-        <div class="footer-copy">
-            <p>© 2026 Mi Tesoro MX</p>
-        </div>
-    </div>
-</footer>
+<div id="footer"></div>
 
 <!-- Script mínimo: menú + tema (sin catálogo/carrito) -->
 <script>
@@ -340,5 +329,6 @@
       localStorage.setItem("tema", oscuro ? "dark" : "light");
     });
 </script>
+<script src="Estructura/footer.js"></script>
 </body>
 </html>
