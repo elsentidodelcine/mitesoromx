@@ -242,11 +242,11 @@
     "titulo": "Queen: Budapest",
     "tipo": "preventa",
     "estadoCartelera": "preventa",
-    "fecha": "2026-10-07",
-    "fechaTexto": "Miércoles 7 de Octubre del 2026",
+    "fecha": "2026-10-10",
+    "fechaTexto": "Sábado 10 de Octubre del 2026",
     "poster": "imgs/estrenos/queen.jpg",
     "cines": ["Cinepolis", "Cinemex"],
-    "nota": "Preventa ya disponible"
+    "nota": "Budapest"
   },
   {
     "id": "ocho",
@@ -703,7 +703,7 @@
     "id": "tesoros",
     "titulo": "Guardianes del Museo 2: Los Tesoros de Egipto",
     "tipo": "estreno",
-    "estadoCartelera": "fuera",
+    "estadoCartelera": "cartelera",
     "fecha": "2026-09-24",
     "fechaTexto": "Jueves 24 de Septiembre 2026",
     "poster": "imgs/estrenos/tesoros.jpg",
@@ -779,8 +779,8 @@
   {
     "id": "carrie",
     "titulo": "Carrie. Extraño Presentimiento (Re-Estreno)",
-    "tipo": "preventa",
-    "estadoCartelera": "preventa",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
     "fecha": "2026-10-08",
     "fechaTexto": "Jueves 08 de Octubre 2026",
     "poster": "imgs/estrenos/carrie.jpg",
