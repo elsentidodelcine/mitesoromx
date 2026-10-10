@@ -2145,12 +2145,14 @@ function actualizarStickyEnvio(t) {
   const text = document.getElementById("stickyEnvioText");
   const fill = document.getElementById("stickyEnvioFill");
 
+  // Si no existe el elemento, salir silenciosamente
+  if (!bar || !text || !fill) return;
+
+  // Si hay póster → ocultar
   if (t?.tienePoster) {
     bar.hidden = true;
     return;
   }
-  
-  if (!bar || !text || !fill) return;
 
   // No mostrar si vacío o solo preventas
   if (!t || carrito.length === 0 || t.tienePreventa) {
@@ -2188,12 +2190,14 @@ function actualizarEnvioGratisBar(t) {
   const text = document.getElementById("envioGratisText");
   const fill = document.getElementById("envioGratisFill");
 
+  // Si no existe el elemento, salir silenciosamente
+  if (!bar || !text || !fill) return;
+
+  // Si hay póster → ocultar
   if (t?.tienePoster) {
     bar.hidden = true;
     return;
   }
-
-  if (!bar || !text || !fill) return;
 
   if (!t || carrito.length === 0) {
     bar.hidden = true;
