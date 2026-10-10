@@ -858,74 +858,59 @@ function actualizarCarritoUI() {
   const whatsBtn = document.getElementById("whatsBtn");
 
   // ===== CARRITO VACÍO =====
- // ===== CARRITO VACÍO =====
- if (carrito.length === 0) {
-   const whatsBtn = document.getElementById("whatsBtn");
-   if (whatsBtn) {
-     whatsBtn.style.display = "none";
-     whatsBtn.href = `https://wa.me/${WA_NUMERO}`;
-     whatsBtn.textContent = "Confirmar por WhatsApp";
-   }
+  if (carrito.length === 0) {
+    if (whatsBtn) {
+      whatsBtn.style.display = "none";
+      whatsBtn.href = `https://wa.me/${WA_NUMERO}`;
+      whatsBtn.textContent = "Confirmar por WhatsApp";
+    }
 
-   //const btnWishlist = document.getElementById("btnCompartirWishlist");
-   //if (btnWishlist) btnWishlist.style.display = "none";
+    totalEl.innerHTML = `
+      <div class="cart-empty">
+        <p class="cart-empty-title">Tu carrito está vacío</p>
+        <p class="cart-empty-sub">Explora el catálogo y agrega tus coleccionables favoritos.</p>
+        <button type="button" id="btnVerCatalogoDesdeCarrito" class="btn-ver-catalogo">
+          Ver catálogo
+        </button>
+      </div>
+    `;
 
-   // Limpiar completamente el resumen
-   totalEl.innerHTML = `
-     <div class="cart-empty">
-       <p class="cart-empty-title">Tu carrito está vacío</p>
-       <p class="cart-empty-sub">Explora el catálogo y agrega tus coleccionables favoritos.</p>
-       <button type="button" id="btnVerCatalogoDesdeCarrito" class="btn-ver-catalogo">
-         Ver catálogo
-       </button>
-     </div>
-   `;
+    // Limpiar elementos viejos
+    document.querySelector(".cart-envio-datos")?.remove();
+    document.querySelector(".cart-coupon")?.remove();
+    document.querySelector(".cart-coupon-activo")?.remove();
+    document.querySelector(".cart-notas")?.remove();
+    document.getElementById("envioDatosError")?.remove();
 
-   ${tienePoster ? `
-     <p class="cart-summary-note">
-       📦 Este pedido incluye póster(es): se envía por <strong>Mexpost, Estafeta o FedEx</strong> (no por Correos de México).
-     </p>
-   ` : ""}
+    document.getElementById("btnVerCatalogoDesdeCarrito")?.addEventListener("click", () => {
+      if (typeof closeDrawerWithFocus === "function") closeDrawerWithFocus();
+      else {
+        drawer?.classList.remove("open");
+        overlay?.classList.remove("show");
+      }
+      scrollToCatalogo();
+    });
 
-   // Por si quedaron elementos viejos flotando
-   document.querySelector(".cart-envio-datos")?.remove();
-   document.querySelector(".cart-coupon")?.remove();
-   document.querySelector(".cart-coupon-activo")?.remove();
-   document.querySelector(".cart-notas")?.remove();
-   document.getElementById("envioDatosError")?.remove();
+    const pagoOps = document.querySelector(".cart-pago-opciones");
+    if (pagoOps) pagoOps.style.display = "none";
 
-   document.getElementById("btnVerCatalogoDesdeCarrito")?.addEventListener("click", () => {
-     if (typeof closeDrawerWithFocus === "function") closeDrawerWithFocus();
-     else {
-       drawer?.classList.remove("open");
-       overlay?.classList.remove("show");
-     }
-     scrollToCatalogo();
-   });
+    window._tipoPagoSeleccionado = "Pago total";
+    document.querySelectorAll(".btn-pago-opcion").forEach((b) => {
+      b.classList.toggle("active", b.dataset.pago === "Pago total");
+    });
 
-   const pagoOps = document.querySelector(".cart-pago-opciones");
-   if (pagoOps) pagoOps.style.display = "none";
+    cuponAplicado = null;
 
-   window._tipoPagoSeleccionado = "Pago total";
-   document.querySelectorAll(".btn-pago-opcion").forEach((b) => {
-     b.classList.toggle("active", b.dataset.pago === "Pago total");
-   });
-
-   cuponAplicado = null;
-
-   actualizarEnvioGratisBar(null);
-   actualizarStickyEnvio(null);
-   actualizarEstadoVaciar();
-   if (btnSeguir) btnSeguir.style.display = "none";
-   return;
- }
+    actualizarEnvioGratisBar(null);
+    actualizarStickyEnvio(null);
+    actualizarEstadoVaciar();
+    if (btnSeguir) btnSeguir.style.display = "none";
+    return;
+  }
 
   // ===== HAY PRODUCTOS =====
   if (btnSeguir) btnSeguir.style.display = "block";
   if (whatsBtn) whatsBtn.style.display = "block";
-
-  //const btnWishlistShow = document.getElementById("btnCompartirWishlist");
-  //if (btnWishlistShow) btnWishlistShow.style.display = "block";
 
   // Dibujar items
   carrito.forEach((p, index) => {
@@ -982,7 +967,7 @@ function actualizarCarritoUI() {
     }
   }
 
-  // Resumen + cupón + CP  + notas
+  // Resumen + cupón + CP + nota de póster
   totalEl.innerHTML = `
     <div class="cart-summary">
       <div class="cart-summary-row">
@@ -1001,6 +986,11 @@ function actualizarCarritoUI() {
       </div>
       ${t.tienePreventa ? `
         <p class="cart-summary-note">* En preventas no aplica envío gratis ni cupones</p>
+      ` : ""}
+      ${tienePoster ? `
+        <p class="cart-summary-note">
+          📦 Este pedido incluye póster(es): se envía por <strong>Mexpost, Estafeta o FedEx</strong> (no por Correos de México).
+        </p>
       ` : ""}
       <div class="cart-summary-row cart-summary-total">
         <span>Total</span>
@@ -1027,17 +1017,9 @@ function actualizarCarritoUI() {
     <div class="cart-envio-datos">
       <label for="inputCP">Código Postal *</label>
       <input type="text" id="inputCP" inputmode="numeric" maxlength="5" placeholder="Ej. 37000" autocomplete="postal-code">
-
       <p id="envioDatosError" class="envio-datos-error" hidden>Completa Código Postal para continuar</p>
     </div>
-
   `;
-
-${tienePoster ? `
-  <p class="cart-summary-note">
-    📦 Este pedido incluye póster(es): se envía por <strong>Mexpost, Estafeta o FedEx</strong> (no por Correos de México).
-  </p>
-` : ""}
 
   // Eventos del cupón
   document.getElementById("btnAplicarCupon")?.addEventListener("click", aplicarCupon);
