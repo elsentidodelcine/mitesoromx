@@ -56,7 +56,8 @@ function calcularTotalesCarrito() {
   let subtotal = 0;
   let elegibleEnvioGratis = 0;
   let tienePreventa = false;
-  let cantidadTotal = 0; // todas las unidades del carrito
+  let cantidadTotal = 0;
+  let tienePoster = false;
 
   carrito.forEach((item) => {
     const prod = productosGlobal.find((p) => p.nombre === item.nombre) || item;
@@ -64,52 +65,71 @@ function calcularTotalesCarrito() {
     subtotal += sub;
     cantidadTotal += item.cantidad;
 
+    if (esPoster(prod)) {
+      tienePoster = true;
+    }
+
     if (esPreventa(prod)) {
       tienePreventa = true;
-    } else {
+    } else if (!esPoster(prod)) {
+      // Solo productos que NO son póster cuentan para envío gratis
       elegibleEnvioGratis += sub;
     }
   });
 
-  let descuento = 0;
-
-  // Preventas: ningún cupón aplica
-  if (tienePreventa) {
+  // Si hay póster → no se permiten cupones
+  if (tienePoster || tienePreventa) {
     cuponAplicado = null;
-  } else if (cuponAplicado) {
+  }
+
+  let descuento = 0;
+  if (cuponAplicado && !tienePoster && !tienePreventa) {
     if (cuponAplicado.tipo === "fijo") {
       descuento = Math.min(cuponAplicado.descuento, subtotal);
     } else if (cuponAplicado.tipo === "porcentaje") {
       descuento = Math.round(subtotal * (cuponAplicado.descuento / 100));
     }
-    // envio_gratis ya se maneja más abajo; si hay preventa, cuponAplicado ya es null
   }
 
   const subtotalConDescuento = Math.max(0, subtotal - descuento);
   const tipoPago = window._tipoPagoSeleccionado || "Pago total";
 
-  // $100 si hay más de 4 piezas en total (cualquier tipo)
-  const costoBase = cantidadTotal >= 4 ? 100 : ENVIO_COSTO_DEFAULT;
-
-  let costoEnvio = costoBase;
+  let costoEnvio = 0;
   let envioGratisPosible = false;
+  let esEnvioPoster = false;
+  let costoEnvioTexto = "";
 
-  if (cuponAplicado?.tipo === "envio_gratis") {
-    costoEnvio = 0;
-    envioGratisPosible = true;
-  } else if (
-    tipoPago === "Pago total" &&
-    !tienePreventa &&
-    elegibleEnvioGratis >= ENVIO_GRATIS_MIN
-  ) {
-    costoEnvio = 0;
-    envioGratisPosible = true;
-  } else if (tipoPago === "Apartado 30%") {
-    costoEnvio = costoBase;
+  if (tienePoster) {
+    // Póster → rango estimado Mexpost / Estafeta / FedEx
+    esEnvioPoster = true;
+    costoEnvio = 0; // no sumamos un número fijo al total
+    costoEnvioTexto = "$150 – $600";
     envioGratisPosible = false;
+  } else {
+    // Lógica normal de Correos
+    const costoBase = cantidadTotal >= 4 ? 100 : ENVIO_COSTO_DEFAULT;
+
+    if (cuponAplicado?.tipo === "envio_gratis") {
+      costoEnvio = 0;
+      envioGratisPosible = true;
+      costoEnvioTexto = "GRATIS";
+    } else if (
+      tipoPago === "Pago total" &&
+      !tienePreventa &&
+      elegibleEnvioGratis >= ENVIO_GRATIS_MIN
+    ) {
+      costoEnvio = 0;
+      envioGratisPosible = true;
+      costoEnvioTexto = "GRATIS";
+    } else {
+      costoEnvio = costoBase;
+      costoEnvioTexto = `$${costoEnvio.toLocaleString("es-MX")}`;
+      envioGratisPosible = false;
+    }
   }
 
-  const total = subtotalConDescuento + costoEnvio;
+  // El total solo suma el costo fijo cuando NO es póster
+  const total = subtotalConDescuento + (esEnvioPoster ? 0 : costoEnvio);
 
   return {
     subtotal,
@@ -117,8 +137,11 @@ function calcularTotalesCarrito() {
     subtotalConDescuento,
     elegibleEnvioGratis,
     tienePreventa,
+    tienePoster,
     cantidadTotal,
     costoEnvio,
+    costoEnvioTexto,
+    esEnvioPoster,
     envioGratisPosible,
     total,
     faltaParaGratis: Math.max(0, ENVIO_GRATIS_MIN - elegibleEnvioGratis),
@@ -981,15 +1004,23 @@ function actualizarCarritoUI() {
         </div>
       ` : ""}
       <div class="cart-summary-row">
-        <span>Envío estimado (Correos)</span>
-        <span>${t.costoEnvio === 0 ? "<strong class='text-success'>GRATIS</strong>" : `$${t.costoEnvio.toLocaleString("es-MX")} MXN`}</span>
+        <span>${t.esEnvioPoster ? "Envío estimado (paquetería privada)" : "Envío estimado (Correos)"}</span>
+        <span>
+          ${t.esEnvioPoster
+            ? `<strong>${t.costoEnvioTexto} MXN</strong>`
+            : t.costoEnvio === 0
+              ? "<strong class='text-success'>GRATIS</strong>"
+              : `$${t.costoEnvio.toLocaleString("es-MX")} MXN`
+          }
+        </span>
       </div>
       ${t.tienePreventa ? `
         <p class="cart-summary-note">* En preventas no aplica envío gratis ni cupones</p>
       ` : ""}
-      ${tienePoster ? `
+      ${t.tienePoster ? `
         <p class="cart-summary-note">
-          📦 Este pedido incluye póster(es): se envía por <strong>Mexpost, Estafeta o FedEx</strong> (no por Correos de México).
+          📦 Este pedido incluye póster(es): se envía por <strong>Mexpost, Estafeta o FedEx</strong>.
+          El costo exacto se cotiza según tu CP (aprox. $150 – $600).
         </p>
       ` : ""}
       <div class="cart-summary-row cart-summary-total">
@@ -2046,11 +2077,26 @@ function aplicarCupon() {
 
     const codigo = (input.value || "").trim().toUpperCase();
 
+    // ¿Hay póster o preventa?
+      const hayPoster = carrito.some((item) => {
+        const prod = productosGlobal.find((p) => p.nombre === item.nombre) || item;
+        return esPoster(prod);
+      });
+
     // Si hay preventa en el carrito → no permitir cupón
     const hayPreventa = carrito.some((item) => {
       const prod = productosGlobal.find((p) => p.nombre === item.nombre) || item;
       return esPreventa(prod);
     });
+
+    if (hayPoster) {
+        cuponAplicado = null;
+        msg.hidden = false;
+        msg.textContent = "Los cupones no aplican en pedidos con póster";
+        msg.className = "cupon-msg error";
+        actualizarCarritoUI();
+        return;
+      }
 
     if (hayPreventa) {
         cuponAplicado = null;
@@ -2098,6 +2144,12 @@ function actualizarStickyEnvio(t) {
   const bar = document.getElementById("stickyEnvioBar");
   const text = document.getElementById("stickyEnvioText");
   const fill = document.getElementById("stickyEnvioFill");
+
+  if (t?.tienePoster) {
+    bar.hidden = true;
+    return;
+  }
+  
   if (!bar || !text || !fill) return;
 
   // No mostrar si vacío o solo preventas
@@ -2135,6 +2187,12 @@ function actualizarEnvioGratisBar(t) {
   const bar = document.getElementById("envioGratisBar");
   const text = document.getElementById("envioGratisText");
   const fill = document.getElementById("envioGratisFill");
+
+  if (t?.tienePoster) {
+    bar.hidden = true;
+    return;
+  }
+
   if (!bar || !text || !fill) return;
 
   if (!t || carrito.length === 0) {
