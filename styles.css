@@ -4583,3 +4583,29 @@ body.dark .paso-funciona .paso-num {
   }
 }
 
+/* Badge de pósters */
+.badge-poster {
+  background: #1e3a5f;
+  color: #e8f1ff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 4px;
+  letter-spacing: 0.01em;
+  line-height: 1.3;
+}
+
+body.dark .badge-poster {
+  background: #2a4a75;
+  color: #d6e6ff;
+}
+
+/* Nota en el carrito */
+.cart-summary-note {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  margin: 8px 0 0;
+  line-height: 1.4;
+}

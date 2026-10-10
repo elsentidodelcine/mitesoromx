@@ -609,6 +609,7 @@ function mostrarProductos() {
 
     card.innerHTML = `
       ${p.badge ? `<span class="badge ${badgeClass}">${p.badge}</span>` : ""}
+      ${esPoster(p) ? `<span class="badge badge-poster">📦 Mexpost / Estafeta / FedEx</span>` : ""}
       <div class="img-wrapper">
         <img
           src="${thumb}"
@@ -880,6 +881,12 @@ function actualizarCarritoUI() {
      </div>
    `;
 
+   ${tienePoster ? `
+     <p class="cart-summary-note">
+       📦 Este pedido incluye póster(es): se envía por <strong>Mexpost, Estafeta o FedEx</strong> (no por Correos de México).
+     </p>
+   ` : ""}
+
    // Por si quedaron elementos viejos flotando
    document.querySelector(".cart-envio-datos")?.remove();
    document.querySelector(".cart-coupon")?.remove();
@@ -953,6 +960,11 @@ function actualizarCarritoUI() {
 
   const t = calcularTotalesCarrito();
 
+  const tienePoster = carrito.some((item) => {
+    const prod = productosGlobal.find((p) => p.nombre === item.nombre) || item;
+    return esPoster(prod);
+  });
+
   // Opciones de pago
   const pagoOps = document.querySelector(".cart-pago-opciones");
   const btnApartado = document.querySelector('.btn-pago-opcion[data-pago="Apartado 30%"]');
@@ -1020,6 +1032,12 @@ function actualizarCarritoUI() {
     </div>
 
   `;
+
+${tienePoster ? `
+  <p class="cart-summary-note">
+    📦 Este pedido incluye póster(es): se envía por <strong>Mexpost, Estafeta o FedEx</strong> (no por Correos de México).
+  </p>
+` : ""}
 
   // Eventos del cupón
   document.getElementById("btnAplicarCupon")?.addEventListener("click", aplicarCupon);
@@ -2001,6 +2019,29 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
+function esPoster(producto) {
+  if (!producto) return false;
+
+  const nombre = (producto.nombre || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+
+  const categoria = (producto.categoria || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+
+  return (
+    nombre.includes("poster") ||
+    nombre.includes("poster") ||
+    nombre.includes("cartel") ||
+    categoria.includes("poster") ||
+    categoria.includes("posters") ||
+    categoria.includes("carteles")
+  );
+}
+
 function detectarFranquicia(nombre) {
   const n = (nombre || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
@@ -2050,6 +2091,12 @@ function aplicarCupon() {
   }
 
   const t = calcularTotalesCarrito();
+
+  const tienePoster = carrito.some((item) => {
+    const prod = productosGlobal.find((p) => p.nombre === item.nombre) || item;
+    return esPoster(prod);
+  });
+
   if (t.subtotal < (cupon.min || 0)) {
     cuponAplicado = null;
     msg.hidden = false;
