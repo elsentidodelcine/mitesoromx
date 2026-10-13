@@ -450,7 +450,7 @@
     "id": "lalisa",
     "titulo": "Always Lalisa",
     "tipo": "preventa",
-    "estadoCartelera": "fuera",
+    "estadoCartelera": "cartelera",
     "fecha": "2026-10-12",
     "fechaTexto": "Lunes 12 de Octubre 2026",
     "poster": "imgs/estrenos/lisa.jpg",
@@ -1215,5 +1215,27 @@
     "poster": "imgs/estrenos/elegidos.jpg",
     "cines": ["Cinemex", "Cinepolis"],
     "nota": "Reino Unido"
+  },
+  {
+    "id": "stray",
+    "titulo": "Stray Kids World Tour Run IT Live",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-07",
+    "fechaTexto": "Sábado 7 de Noviembre 2026",
+    "poster": "imgs/estrenos/stray.jpg",
+    "cines": ["Cinemex", "Cinepolis"],
+    "nota": "Korea"
+  },
+  {
+    "id": "hoshimachi",
+    "titulo": "Hoshimachi Suisei Arena Tour 2026 Once Upon A Stellar Live",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-13",
+    "fechaTexto": "Viernes 13 de Noviembre 2026",
+    "poster": "imgs/estrenos/hoshimachi.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Japón"
   }
 ]

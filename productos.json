@@ -1,8 +1,9 @@
 [
 
   { "nombre": "Preventa Palomera Scream Cinemex", "categoria": "Peliculas", "precio": 999, "imagen": "imgs/scream.jpg" ,"badge": "preventa", "stock": 3},
-  { "nombre": "Preventa Vaso Godzilla Cinepolis", "categoria": "Peliculas", "precio": 999, "imagen": "imgs/godzy.jpg" ,"badge": "preventa", "stock": 3},
-  { "nombre": "Preventa Palomera Doom Cinepolis", "categoria": "Peliculas", "precio": 999, "imagen": "imgs/doom.jpg" ,"badge": "preventa", "stock": 3},
+  { "nombre": "Preventa Vaso Godzilla Cinepolis", "categoria": "Peliculas", "precio": 999, "imagen": "imgs/godzy.jpeg" ,"badge": "preventa", "stock": 3},
+  { "nombre": "Preventa Palomera Doom Cinepolis", "categoria": "Peliculas", "precio": 999, "imagen": "imgs/doom.jpeg" ,"badge": "preventa", "stock": 3},
+  { "nombre": "Preventa Palomera Pochita Cinemex", "categoria": "Peliculas", "precio": 999, "imagen": "imgs/pochy.jpeg" ,"badge": "preventa", "stock": 3},
   { "nombre": "Preventa Palomera Queen Cinepolis", "categoria": "Peliculas", "precio": 299, "imagen": "imgs/queen.jpg" ,"badge": "preventa", "stock": 0},
   { "nombre": "Preventa Palomera Street Fighter Cinepolis", "categoria": "Peliculas", "precio": 550, "imagen": "imgs/street.jpg" ,"badge": "preventa", "stock": 3},
   { "nombre": "Palomera La Isla Cinepolis", "categoria": "Infantil", "precio": 520, "imagen": "imgs/isla.jpg" ,"badge": "exclusivo", "stock": 1},
