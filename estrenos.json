@@ -451,10 +451,10 @@
     "titulo": "Always Lalisa",
     "tipo": "preventa",
     "estadoCartelera": "cartelera",
-    "fecha": "2026-10-12",
-    "fechaTexto": "Lunes 12 de Octubre 2026",
+    "fecha": "2026-10-14",
+    "fechaTexto": "Miércoles 14 de Octubre 2026",
     "poster": "imgs/estrenos/lisa.jpg",
-    "cines": ["Cinemex"],
+    "cines": ["Cinemex", "Cinepolis"],
     "nota": "Estados Unidos"
   },
   {
@@ -780,7 +780,7 @@
     "id": "carrie",
     "titulo": "Carrie. Extraño Presentimiento (Re-Estreno)",
     "tipo": "estreno",
-    "estadoCartelera": "estreno",
+    "estadoCartelera": "fuera",
     "fecha": "2026-10-08",
     "fechaTexto": "Jueves 08 de Octubre 2026",
     "poster": "imgs/estrenos/carrie.jpg",
@@ -1164,7 +1164,7 @@
   {
     "id": "fauno",
     "titulo": "El Laberinto del Fauno",
-    "tipo": "preventa",
+    "tipo": "estreno",
     "estadoCartelera": "estreno",
     "fecha": "2026-10-15",
     "fechaTexto": "Jueves 15 de Octubre 2026",
