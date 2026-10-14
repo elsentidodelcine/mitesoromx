@@ -3187,6 +3187,51 @@ body.dark .btn-wishlist {
   color: #7b2cbf;
 }
 
+/* Godzilla Minus One */
+.carousel-slide--godzilla {
+  background: linear-gradient(135deg, #0a0f0a 0%, #1a2e1a 35%, #3d5c3d 70%, #0d1a0d 100%);
+  border-color: rgba(120, 180, 80, 0.35);
+}
+.carousel-slide--godzilla .banner-btn {
+  background: #c8e6a0;
+  color: #0a0f0a;
+  font-weight: 700;
+}
+.carousel-slide--godzilla .banner-btn:hover {
+  background: #fff;
+  color: #1a3d1a;
+}
+
+/* Pochita / Chainsaw Man */
+.carousel-slide--chainsaw {
+  background: linear-gradient(135deg, #1a0a08 0%, #4a1c0a 40%, #e85d04 75%, #9b2226 100%);
+  border-color: rgba(255, 140, 50, 0.4);
+}
+.carousel-slide--chainsaw .banner-btn {
+  background: #ffb703;
+  color: #1a0a08;
+  font-weight: 700;
+}
+.carousel-slide--chainsaw .banner-btn:hover {
+  background: #fff;
+  color: #9b2226;
+}
+
+/* Avengers: Doomsday */
+.carousel-slide--doomsday {
+  background: linear-gradient(135deg, #050510 0%, #0a1628 35%, #1a3a6b 65%, #4a0a0a 100%);
+  border-color: rgba(100, 149, 237, 0.35);
+}
+.carousel-slide--doomsday .banner-btn {
+  background: #e8e8ec;
+  color: #0a1628;
+  font-weight: 700;
+}
+.carousel-slide--doomsday .banner-btn:hover {
+  background: #c41e3a;
+  color: #fff;
+}
+
 /* FedEx / envíos */
 .carousel-slide--envio {
   background: linear-gradient(135deg, #4a148c 0%, #6a1b9a 40%, #e65100 100%);
