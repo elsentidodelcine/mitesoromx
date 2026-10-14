@@ -2610,7 +2610,7 @@
     "id": "madre-siniestra",
     "titulo": "Madre Siniestra",
     "anio": 2026,
-    "fecha": "2026-10-03",
+    "fecha": "2026-10-15",
     "duracion": "93 min",
     "generos": ["Terror"],
     "puntaje": 2.0,
@@ -2618,7 +2618,7 @@
     "etiqueta": "ESTRENO",
     "plataformas": ["Cines"],
     "resumen": "Buena premisa de terror familiar demoníaco, pero la ejecución la arruina. Situaciones absurdas que dan más risa que miedo y decisiones de personajes poco creíbles. Conjuro mal ejecutado.",
-    "poster": "imgs/maratones/halloween/madresiniestra.jpg",
+    "poster": "imgs/resenias/madresiniestra.jpg",
     "posterFallback": {
       "linea1": "Madre",
       "linea2": "Siniestra"
@@ -2709,7 +2709,7 @@
     "id": "pinocho-unstrung",
     "titulo": "Pinocho: Unstrung",
     "anio": 2026,
-    "fecha": "2026-10-03",
+    "fecha": "2026-10-15",
     "duracion": "82 min",
     "generos": ["Terror"],
     "puntaje": 2.0,
@@ -2717,7 +2717,7 @@
     "etiqueta": "ESTRENO",
     "plataformas": ["Streaming"],
     "resumen": "Otra versión sangrienta de un cuento infantil. Idea con potencial, pero efectos visuales malos y desarrollo absurdo. Se queda lejos de ser memorable. Conjuro mal ejecutado.",
-    "poster": "imgs/maratones/halloween/pinocho.jpg",
+    "poster": "imgs/resenias/pinocho.jpg",
     "posterFallback": {
       "linea1": "Pinocho:",
       "linea2": "Unstrung"
