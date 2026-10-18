@@ -2,6 +2,21 @@
    MI TESORO MX – Script (Clean Professional)
    ============================================ */
 
+   /* ---------- PROMO HALLOWEEN (19 oct – 2 nov) ---------- */
+   function esPromoHalloweenActiva() {
+     try {
+       const ahora = new Date(
+         new Date().toLocaleString("en-US", { timeZone: "America/Mexico_City" })
+       );
+       // 19 oct 00:00 → 2 nov 23:59 (Centro de México)
+       const inicio = new Date(ahora.getFullYear(), 9, 19); // mes 9 = octubre
+       const fin = new Date(ahora.getFullYear(), 10, 3);    // 3 nov exclusivo
+       return ahora >= inicio && ahora < fin;
+     } catch {
+       return false;
+     }
+   }
+
 let productosGlobal = [];
 let productosFiltrados = [];
 let paginaActual = 1;
@@ -13,8 +28,13 @@ let ordenActual = "default";
 let franquiciaActual = "todas";
 let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 
-const ENVIO_GRATIS_MIN = 550; // MXN — Correos de México, productos participantes
-const ENVIO_COSTO_DEFAULT = 85; // Correos de México
+const ENVIO_GRATIS_MIN_NORMAL = 550;
+const ENVIO_GRATIS_MIN_HALLOWEEN = 350;
+const ENVIO_GRATIS_MIN = esPromoHalloweenActiva()
+  ? ENVIO_GRATIS_MIN_HALLOWEEN
+  : ENVIO_GRATIS_MIN_NORMAL;
+
+const ENVIO_COSTO_DEFAULT = 85;
 const WA_NUMERO = "524761002824";
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
@@ -1052,6 +1072,19 @@ function actualizarCarritoUI() {
     </div>
   `;
 
+  // Contar vasos en el carrito (nombre contiene "vaso")
+  const cantidadVasos = carrito.reduce((acc, item) => {
+    const n = (item.nombre || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    return n.includes("vaso") ? acc + item.cantidad : acc;
+  }, 0);
+
+  const avisoHalloweenVasos = esPromoHalloweenActiva() && cantidadVasos >= 4
+    ? `<p class="cart-summary-note cart-promo-halloween">🎃 Promo Halloween: al comprar 4 vasos te llevas <strong>uno extra</strong> con etiqueta Último. Se confirma por WhatsApp.</p>`
+    : esPromoHalloweenActiva() && cantidadVasos > 0 && cantidadVasos < 4
+      ? `<p class="cart-summary-note cart-promo-halloween">🎃 Te faltan <strong>${4 - cantidadVasos}</strong> vaso${4 - cantidadVasos === 1 ? "" : "s"} para el regalo extra (etiqueta Último).</p>`
+      : "";
+
+
   // Eventos del cupón
   document.getElementById("btnAplicarCupon")?.addEventListener("click", aplicarCupon);
   document.getElementById("inputCupon")?.addEventListener("keydown", (e) => {
@@ -1061,6 +1094,8 @@ function actualizarCarritoUI() {
     cuponAplicado = null;
     actualizarCarritoUI();
   });
+
+  ${avisoHalloweenVasos}
 
   // Actualizar WhatsApp al escribir
   ["inputCP"].forEach((id) => {
@@ -1579,6 +1614,16 @@ document.addEventListener("touchend", (e) => {
    Solo marca active: true en las que quieras mostrar.
    ========================================================= */
 const PREVENTAS_ACTIVAS = [
+    {
+      id: "halloween-temporada",
+      active: true,
+      emoji: "🎃",
+      titulo: "Promoción de temporada Halloween",
+      texto: "Del <strong>19 de octubre al 2 de noviembre</strong>:<br><br>• En compras mayores a <strong>$350</strong> el envío es <strong>gratis</strong> por Correos de México.<br>• Al comprar <strong>4 vasos</strong> te llevas <strong>uno extra</strong> con etiqueta <em>Último</em>.",
+      link: "envios.html",
+      linkTexto: "Ver detalles de la promo",
+      tema: "halloween",
+    },
     {
       id: "blog-los-brujos-del-cine",
       active: true,

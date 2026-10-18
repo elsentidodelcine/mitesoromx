@@ -3202,6 +3202,21 @@ body.dark .btn-wishlist {
   color: #1a3d1a;
 }
 
+/* Halloween Temporada */
+.carousel-slide--halloween {
+  background: linear-gradient(135deg, #0a0a0f 0%, #1a0a14 25%, #2d0a1f 55%, #3d1a0a 85%, #0d0a0a 100%);
+  border-color: rgba(255, 117, 24, 0.45);
+}
+.carousel-slide--halloween .banner-btn {
+  background: #ff7518;
+  color: #0a0a0f;
+  font-weight: 700;
+}
+.carousel-slide--halloween .banner-btn:hover {
+  background: #fff;
+  color: #2d0a1f;
+}
+
 /* Pochita / Chainsaw Man */
 .carousel-slide--chainsaw {
   background: linear-gradient(135deg, #1a0a08 0%, #4a1c0a 40%, #e85d04 75%, #9b2226 100%);
@@ -4653,4 +4668,30 @@ body.dark .badge-poster {
   opacity: 0.9;
   margin: 8px 0 0;
   line-height: 1.4;
+}
+
+
+/* Halloween Temporada – carrusel */
+.carousel-slide--halloween {
+  background: linear-gradient(135deg, #0d0a0a 0%, #1a0f0a 25%, #3d1a0a 55%, #1a0a14 80%, #0a0a0f 100%);
+  border-color: rgba(255, 117, 24, 0.45);
+}
+.carousel-slide--halloween .banner-btn {
+  background: #ff7518;
+  color: #0d0a0a;
+  font-weight: 700;
+}
+.carousel-slide--halloween .banner-btn:hover {
+  background: #fff;
+  color: #3d1a0a;
+}
+
+/* Aviso de promo en el carrito */
+.cart-promo-halloween {
+  background: rgba(255, 117, 24, 0.12);
+  border-left: 3px solid #ff7518;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
 }
