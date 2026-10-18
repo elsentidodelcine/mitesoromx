@@ -1005,10 +1005,6 @@ function actualizarCarritoUI() {
       return esPoster(prod);
     });
 
-  const tienePoster = carrito.some((item) => {
-    const prod = productosGlobal.find((p) => p.nombre === item.nombre) || item;
-    return esPoster(prod);
-  });
 
   // Opciones de pago
   const pagoOps = document.querySelector(".cart-pago-opciones");
