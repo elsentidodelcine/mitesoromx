@@ -2771,5 +2771,204 @@
     ],
     "cita": "El final me dejó con muchísimas más preguntas que respuestas.",
     "veredicto": "Rara, ambiciosa y con gran trabajo de cámara. Se alarga en la investigación, pero el tramo final y la intriga la salvan. Hechizo bien logrado."
+  },
+  {
+    "id": "street-fighter",
+    "titulo": "Street Fighter",
+    "anio": 2026,
+    "fecha": "2026-10-18",
+    "duracion": "120 min",
+    "generos": ["Acción", "Aventuras"],
+    "puntaje": 1.0,
+    "destacada": false,
+    "etiqueta": "ESTRENO",
+    "plataformas": ["Cines"],
+    "resumen": "Adaptación de videojuego con demasiado trama y pocas peleas. Personajes desaprovechados, demasiado larga y mal ejecutada. Decepción y oportunidad perdida.",
+    "poster": "imgs/resenias/street.jpg",
+    "posterFallback": {
+      "linea1": "Street",
+      "linea2": "Fighter"
+    },
+    "letterboxd": "https://letterboxd.com/film/street-fighter-2026",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt27419420/",
+      "rating": "6.3"
+    },
+    "lead": "Tenía potencial, pero está muy mal ejecutada. Más historia que peleas, personajes desaprovechados y demasiado larga. Decepción total.",
+    "contenido": [
+      "Ya vi Street Fighter (2026) y esta es mi opinión. De niño y adolescente jugué Street Fighter en las maquinitas, así que la franquicia me trae recuerdos, aunque desconozco por completo el lore de sus personajes. Aun así, no creo que necesites conocer toda la historia para disfrutar una buena película de peleas. Si Mortal Kombat me pareció una película palomera y bastante regular, esta me resultó todavía peor. Es una adaptación que tenía mucho potencial, pero que para mí está muy mal ejecutada.",
+      "Aunque aparecen un montón de personajes conocidos del videojuego, la mayoría termina en segundo plano. Los que realmente destacan son Ryu, Chun-Li y Ken, pero de los demás apenas llegamos a conocer algo. La película se concentra principalmente en la historia de los dos protagonistas y deja de lado a buena parte del elenco que podría haber hecho más interesante la experiencia.",
+      "Y ese es precisamente uno de mis mayores problemas: hay más historia que peleas. Entiendo que hace falta desarrollar una trama, pero estamos hablando de Street Fighter, una franquicia cuyo principal atractivo son los combates. Me hubiera gustado ver más enfrentamientos entre los personajes, no solamente las peleas relacionadas con los protagonistas. Para eso existe el torneo, y siento que pudieron aprovecharlo muchísimo mejor.",
+      "Personalmente, me habría gustado que Ryu participara de lleno en el torneo, que avanzara hasta una pelea final contra Ken y que, en medio de ese enfrentamiento, apareciera el verdadero villano para llevar la historia hacia otro rumbo. Incluso personajes como Blanka podrían haber tenido una participación mucho más interesante. Pero las decisiones que toma la película no terminan de convencerme y todo se siente desaprovechado.",
+      "Además, se me hizo demasiado larga para lo poco que consigue ofrecer en cuanto a acción y desarrollo de sus personajes. Al final, me quedo con la sensación de que quisieron contar una historia cuando lo que realmente necesitábamos era ver a estos luchadores enfrentándose en combates memorables. Para mí, es una decepción y una oportunidad perdida de hacer una adaptación que le hiciera justicia al videojuego."
+    ],
+    "cita": "Hay más historia que peleas.",
+    "veredicto": "Potencial desaprovechado. Demasiada trama, pocas peleas y personajes en segundo plano. Decepción total. Mal augurio."
+  },
+  {
+    "id": "la-caida-de-la-ballena",
+    "titulo": "La Caída de la Ballena",
+    "anio": 2026,
+    "fecha": "2026-10-18",
+    "duracion": "106 min",
+    "generos": ["Suspenso", "Drama", "Aventuras"],
+    "puntaje": 3.5,
+    "destacada": false,
+    "etiqueta": "ESTRENO",
+    "plataformas": ["Cines"],
+    "resumen": "Supervivencia intensa dentro de una ballena combinada con drama emocional de culpa y pérdida. Angustiante y con buena profundidad. Cumple expectativas.",
+    "poster": "imgs/resenias/ballena.jpg",
+    "posterFallback": {
+      "linea1": "La Caída de",
+      "linea2": "la Ballena"
+    },
+    "letterboxd": "https://letterboxd.com/film/whalefall",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt28535715/",
+      "rating": "6.8"
+    },
+    "lead": "Cumplió expectativas. Angustia real de estar atrapado, combinada con el drama emocional de la culpa y la pérdida. Buena película de supervivencia.",
+    "contenido": [
+      "La verdad, tenía expectativas bastante altas con esta película y me alegra decir que sí me gustó. La historia de Jay parte de una situación dolorosa: su papá se suicida en el océano y él se queda con la culpa de que el último día que estuvieron juntos terminaron peleados. Esa sensación de no haber podido arreglar las cosas antes de perderlo es lo que lo lleva a tomar la decisión de buscar su cuerpo buceando.",
+      "Pero las cosas se complican y Jay termina atrapado dentro de una ballena. A partir de ahí, la película se convierte en una lucha desesperada por sobrevivir, mientras los recuerdos de su relación con su padre nos permiten conocer mejor su pasado y entender todo lo que carga emocionalmente. Los flashbacks ayudan a darle más profundidad a una historia que podría haberse limitado a mostrar a alguien intentando escapar.",
+      "Lo que más me gustó es la angustia que consigue transmitir. Estar encerrado en un espacio tan reducido, sin saber cómo salir, con problemas para respirar, el ácido gástrico y hasta la pérdida de la audición, hace que te pongas en el lugar del protagonista. La película consigue que sientas parte de su desesperación y que cada intento por sobrevivir se vuelva más angustiante.",
+      "También me gustó que la lucha de Jay no sea solamente física, sino emocional. Mientras intenta encontrar la manera de escapar, tiene que enfrentarse a sus recuerdos, a la culpa y a todo lo que quedó pendiente con su papá. Para mí, esa combinación entre supervivencia y drama es lo que hace que la película funcione y que no se sienta como una simple historia de alguien atrapado dentro de un animal.",
+      "En general, me pareció una muy buena película que cumplió con mis expectativas. Tiene momentos bastante intensos y consigue mantenerte pendiente de lo que le sucederá al protagonista. Quizá no sea una experiencia que quiera repetir pronto por todo el sufrimiento que muestra, pero sí me dejó satisfecho y considero que vale la pena darle una oportunidad."
+    ],
+    "cita": "La lucha de Jay no sea solamente física, sino emocional.",
+    "veredicto": "Supervivencia angustiante combinada con drama emocional de culpa y pérdida. Cumple expectativas. Buen embrujo."
+  },
+  {
+    "id": "heel",
+    "titulo": "Heel",
+    "anio": 2025,
+    "fecha": "2026-10-18",
+    "duracion": "110 min",
+    "generos": ["Thriller", "Drama", "Crimen"],
+    "puntaje": 5.0,
+    "destacada": true,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "Thriller psicológico intenso. Secuestro y “rehabilitación” de un joven problemático. Tensión entre cuatro paredes, evolución de personajes y final potente. Cumple y deja pensando.",
+    "poster": "imgs/resenias/heel.jpg",
+    "posterFallback": {
+      "linea1": "Heel",
+      "linea2": ""
+    },
+    "letterboxd": "https://letterboxd.com/film/heel-2025",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt34381258/",
+      "rating": "6.8"
+    },
+    "lead": "Pensé que era terror y terminó siendo un thriller psicológico que me encantó. Premisa fuerte, tensión constante y personajes difíciles de juzgar. Cine legendario.",
+    "contenido": [
+      "Tenía muchas ganas de ver Heel y por fin se me hizo. Pensé que iba a ser una película de terror, pero terminó siendo un thriller psicológico que me gustó muchísimo. La historia sigue a un joven adinerado, problemático y bastante destructivo, que se droga y parece no tener ningún respeto por los demás. Hasta que una familia decide secuestrarlo con la intención de convertirlo en una mejor persona. Una premisa bastante fuerte que me atrapó desde el principio.",
+      "Gran parte de la película transcurre dentro de una casa, con el protagonista encadenado y obligado a convivir con esta familia. Lo interesante es ver cómo va evolucionando poco a poco y cómo empieza a cambiar su comportamiento. Aunque sabes que lo que le están haciendo está mal, la película consigue que le agarres cariño al muchacho y que te involucres en su transformación. Es incómodo, pero justo ahí está buena parte de su encanto.",
+      "También me gustó cómo desarrolla los temas del duelo, la dinámica familiar y la relación con el otro hijo. No necesita grandes escenarios ni demasiados personajes para mantener el interés; prácticamente todo sucede entre cuatro paredes, pero la tensión y los conflictos están muy bien trabajados. Cada integrante de la familia aporta algo a la historia y ayuda a entender mejor el ambiente tan particular en el que se desarrolla.",
+      "El final también me gustó. Aunque llegué a esperarme hacia dónde podían ir las cosas, eso no le quitó fuerza a la experiencia. Al contrario, sentí que la película había construido bien su historia para llegar a ese desenlace. Jan Komasa demuestra que puede mantenerte enganchado con una premisa incómoda y personajes que no son tan fáciles de juzgar como parecen.",
+      "Después de ver Aniversario y ahora Heel, definitivamente tengo ganas de seguir explorando la filmografía de este director. Por lo pronto, esta película me encantó por su desarrollo, su tensión psicológica y la manera en que consigue que termines involucrándote emocionalmente con alguien que, en otras circunstancias, probablemente no te caería nada bien. Para mí, es una de esas películas que cumplen con las expectativas y hasta te dejan pensando después de verlas."
+    ],
+    "cita": "Aunque sabes que lo que le están haciendo está mal, la película consigue que le agarres cariño al muchacho.",
+    "veredicto": "Thriller psicológico intenso y bien construido. Tensión entre cuatro paredes, evolución de personajes y final potente. Cine legendario."
+  },
+  {
+    "id": "el-cadaver-de-la-novia",
+    "titulo": "El Cadáver de la Novia",
+    "anio": 2005,
+    "fecha": "2026-10-18",
+    "duracion": "77 min",
+    "generos": ["Animación", "Fantasía", "Romance", "Musical"],
+    "puntaje": 5.0,
+    "destacada": true,
+    "etiqueta": "REESTRENO",
+    "plataformas": ["Cines"],
+    "resumen": "Joya de Tim Burton. Romance, humor negro y stop-motion impecable. El contraste entre el mundo de los vivos y los muertos, la música de Elfman y una historia que nunca pierde el encanto. Cine legendario.",
+    "poster": "imgs/resenias/novia.jpg",
+    "posterFallback": {
+      "linea1": "El Cadáver",
+      "linea2": "de la Novia"
+    },
+    "letterboxd": "https://letterboxd.com/film/corpse-bride",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt0121164/",
+      "rating": "7.4"
+    },
+    "lead": "Tercera vez en el cine y sigue igual de mágica. Desde la canción inicial ya estoy dentro. Obra maravillosa de Tim Burton que nunca pierde el encanto. Cine legendario.",
+    "contenido": [
+      "Este octubre, Cinemex trajo de vuelta El cadáver de la novia a sus salas y, si no recuerdo mal, esta es la tercera vez que tengo la oportunidad de verla en el cine. Y es que hay películas que, por más veces que las veas, nunca pierden su encanto, y esta es una de ellas. Desde la canción inicial ya estoy completamente dentro de su mundo.",
+      "La historia de Víctor, Victoria y Emily sigue siendo una maravilla. Entre el romance, el humor negro y ese toque macabro tan característico de Tim Burton, la película consigue crear una historia divertida, melancólica y hasta conmovedora. Aunque ya me sé prácticamente todo de memoria, sigo disfrutando cada momento como si fuera la primera vez.",
+      "Visualmente es una joya. La animación stop-motion, los diseños de los personajes y el contraste entre el mundo de los vivos, tan gris y apagado, y el de los muertos, lleno de color y personalidad, hacen que la película tenga una identidad única. Además, la música de Danny Elfman acompaña perfectamente esta historia y tiene canciones que se te quedan grabadas.",
+      "Algo que siempre me ha gustado es que, detrás de toda esa estética gótica, hay una historia sobre el amor, la libertad y la posibilidad de encontrar tu lugar en el mundo. Emily es un personaje que logra ganarse tu cariño, mientras que Víctor, con su torpeza y buen corazón, termina atrapado en una situación que jamás imaginó. Y aunque la historia tiene momentos tristes, conserva ese encanto que la hace tan especial.",
+      "Para mí, El cadáver de la novia es una de esas películas que merecen disfrutarse en pantalla grande cada vez que se presenta la oportunidad. Tim Burton creó una obra maravillosa que combina una estética inconfundible con una historia inolvidable. Podré verla diez veces más y seguramente seguiré disfrutándola igual. ¡Cine legendario!"
+    ],
+    "cita": "Hay películas que, por más veces que las veas, nunca pierden su encanto.",
+    "veredicto": "Joya stop-motion de Tim Burton. Romance, humor negro, estética única y música inolvidable. Se disfruta igual cada vez. Cine legendario."
+  },
+  {
+    "id": "la-isla-de-las-munecas",
+    "titulo": "La Isla de las Muñecas",
+    "anio": 2026,
+    "fecha": "2026-10-18",
+    "duracion": "80 min",
+    "generos": ["Terror"],
+    "puntaje": 0.5,
+    "destacada": false,
+    "etiqueta": "ESTRENO",
+    "plataformas": ["Cines"],
+    "resumen": "La peor película mexicana que he visto en el cine. Guion, actuaciones, edición y efectos de terror son un desastre. Parece proyecto universitario. Hechizo fallido.",
+    "poster": "imgs/resenias/muneca.jpg",
+    "posterFallback": {
+      "linea1": "La Isla de",
+      "linea2": "las Muñecas"
+    },
+    "letterboxd": "https://letterboxd.com/film/la-isla-de-las-munecas-2026",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt9764804/",
+      "rating": "5.4"
+    },
+    "lead": "Si pudiera poner cero estrellas, lo haría. Peor película mexicana que he visto en cine. Desastre total de principio a fin.",
+    "contenido": [
+      "Si pudiera ponerle cero estrellas o incluso menos, lo haría, pero Letterboxd no me deja. Sin duda, esta es la peor película mexicana que he visto en el cine. Por momentos parece un proyecto universitario hecho entre cuatro amigos que se juntaron para grabar una película sin tener muy claro qué estaban haciendo. Lo único que puedo rescatar es que la imagen se ve bien en HD, porque de ahí en fuera, el guion, las actuaciones, la historia, la banda sonora y prácticamente todo lo demás me parecieron un desastre.",
+      "La película toma la leyenda de la Isla de las Muñecas, en Xochimilco, y la convierte en una historia de un culto satánico que secuestra y sacrifica a una niña para Satanás. Después, su padre comienza a colgar muñecas por toda la isla para que el alma de su hija descanse, pero fracasa y termina prendiéndose fuego. A partir de ahí, las muñecas comienzan a comportarse de manera extraña. Lo peor es que, por lo que muestra la historia, pareciera que el verdadero villano es el propio padre, mientras que el culto satánico termina siendo una parte absurda y mal aprovechada de toda esta trama.",
+      "Pero si el guion ya es malo, la edición termina de hundir la película. Las escenas parecen estar pegadas sin ningún sentido de continuidad: te muestran algo, cambian repentinamente a otra situación y después vuelven a cambiar sin que todo termine de conectar. Hay momentos en los que un personaje tiene una antorcha y, de repente, ya tiene dos. Son detalles que te sacan por completo de la historia y que hacen pensar que nadie se tomó el tiempo de revisar el montaje antes de estrenar.",
+      "Y los efectos de terror tampoco ayudan. La niña convertida en una especie de entidad maligna parece una copia de Sadako, de la versión japonesa de El aro: cabello largo, vestido blanco y movimientos extraños, caminando de espaldas o en cuatro patas. En lugar de provocar miedo, termina dando vergüenza ajena. La posesión de una de las amigas está igual de mal ejecutada y hay escenas que parecen estar ahí simplemente porque alguien tuvo una idea y decidió grabarla, sin preocuparse por si tenía sentido dentro de la historia.",
+      "Hay una escena en particular en la que uno de los personajes prende fuego a una cabaña prácticamente porque sí, poniendo en peligro a sus propios amigos, cuando se supone que el verdadero problema es la entidad que los acecha. ¿Qué aporta eso a la historia? Es el tipo de situación que resume perfectamente lo que me pareció esta película: decisiones absurdas, escenas sin sentido y una historia que nunca consigue funcionar.",
+      "De verdad, no entiendo cómo esta película llegó a las salas de cine ni quién decidió invertir dinero en ella. Para mí, es un desastre de principio a fin, una película que falla en prácticamente todos sus apartados y que ni siquiera consigue ser divertida por lo mala que es. Salí con la sensación de haber desperdiciado mi tiempo y mi dinero. Si esta es la clase de terror que nos ofrecen, prefiero mantenerme lejos de la isla."
+    ],
+    "cita": "Si pudiera ponerle cero estrellas o incluso menos, lo haría.",
+    "veredicto": "Desastre total. Guion, edición, actuaciones y efectos fallan. Parece proyecto universitario. La peor mexicana que he visto en cine. Hechizo fallido."
+  },
+  {
+    "id": "sacrificio-los-elegidos",
+    "titulo": "Sacrificio: Los Elegidos",
+    "anio": 2025,
+    "fecha": "2026-10-18",
+    "duracion": "103 min",
+    "generos": ["Acción", "Aventuras", "Comedia"],
+    "puntaje": 3.0,
+    "destacada": false,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "Premisa interesante de secta y sacrificio, buena música y tramo final que recupera interés. Algunas partes confusas hacen que pierda el hilo. Palomera que se disfruta, pero no aprovecha todo su potencial.",
+    "poster": "imgs/resenias/elegidos.jpg",
+    "posterFallback": {
+      "linea1": "Sacrificio:",
+      "linea2": "Los Elegidos"
+    },
+    "letterboxd": "https://letterboxd.com/film/sacrifice-2025",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt32268992/",
+      "rating": "5.0"
+    },
+    "lead": "Premisa interesante y buena música, pero se pierde un poco a mitad. El final recupera la atención. Palomera entretenida sin más.",
+    "contenido": [
+      "Ya vi Sacrificio: Los elegidos y, aunque la premisa me pareció bastante interesante, terminó siendo una película palomera que tiene sus buenos momentos, pero también algunas partes que me hicieron perder el hilo. La historia nos presenta a una secta convencida de que el mundo se acabará en tres días y que, para cumplir una antigua profecía, debe sacrificar a tres personas que representan al rey, al héroe y al amante. Una idea que desde el comienzo consigue despertar la curiosidad.",
+      "Con Anya Taylor-Joy y Chris Evans entre sus protagonistas, la película nos lleva al viaje de tres personas elegidas por los descendientes de los fundadores de esta secta. Todo comienza con el secuestro de las víctimas durante un evento benéfico de gente adinerada y continúa con su traslado hacia un volcán, donde supuestamente tendrá lugar el sacrificio que salvará al mundo. El planteamiento me gustó y creo que tenía potencial para construir una historia bastante inquietante.",
+      "Algo que disfruté mucho fue la música, con ese estilo que le da una personalidad especial a la película y acompaña muy bien la atmósfera de la secta. Sin embargo, conforme avanza el viaje hacia el volcán, hubo una parte en la que me perdí por completo. Entre lo que sucede con el padre y ciertas situaciones que aparecen en la historia, ya no sabía si había pasado el tiempo, si estábamos viendo una ilusión o qué estaba ocurriendo exactamente. Ahí fue donde la película dejó de engancharme tanto.",
+      "Por fortuna, cuando los personajes finalmente llegan al volcán y comienza el desenlace relacionado con el sacrificio, volvió a captar mi atención. Esa parte recupera algo de la fuerza que había perdido durante el recorrido y me recordó por qué me había interesado la propuesta desde el principio. No diría que es una película extraordinaria, pero sí tiene elementos que la hacen entretenida.",
+      "Al final, me quedo con una película de buenas ideas, una banda sonora que destaca y un desarrollo que por momentos se vuelve confuso. Me habría gustado que algunas escenas estuvieran mejor explicadas, pero el cierre consiguió recuperar mi interés. Para mí, es una opción palomera que se disfruta, aunque está lejos de aprovechar todo su potencial."
+    ],
+    "cita": "Hubo una parte en la que me perdí por completo.",
+    "veredicto": "Premisa interesante y buena música, pero se confunde a mitad. El final recupera. Palomera ritual."
   }
 ]
