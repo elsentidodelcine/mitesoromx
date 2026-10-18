@@ -2970,5 +2970,37 @@
     ],
     "cita": "Hubo una parte en la que me perdí por completo.",
     "veredicto": "Premisa interesante y buena música, pero se confunde a mitad. El final recupera. Palomera ritual."
+  },
+  {
+    "id": "paranorman",
+    "titulo": "ParaNorman",
+    "anio": 2012,
+    "fecha": "2026-10-18",
+    "duracion": "92 min",
+    "generos": ["Animación", "Fantasía", "Comedia", "Terror"],
+    "puntaje": 2.0,
+    "destacada": false,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "Stop-motion con fantasmas, zombis y bruja. Animación buena, pero historia demasiado sencilla y aburrida para adultos. Decepción después de tanta espera.",
+    "poster": "imgs/resenias/paranorman.jpg",
+    "posterFallback": {
+      "linea1": "ParaNorman",
+      "linea2": ""
+    },
+    "letterboxd": "https://letterboxd.com/film/paranorman",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt1623288/",
+      "rating": "7.0"
+    },
+    "lead": "Le tenía ganas desde el reestreno, pero me aburrió. Historia sencilla para niños y no logró engancharme. Conjuro mal ejecutado.",
+    "contenido": [
+      "Desde hace un año tenía ganas de ver esta película, cuando Cinemex la reestrenó y me quedé con las ganas. Este año volvió a pasar lo mismo, así que finalmente me animé a verla en casa. La verdad, le tenía bastantes expectativas, pero terminó aburriéndome.",
+      "La historia sigue a Norman, un niño que tiene la capacidad de ver y hablar con los muertos, y que debe enfrentarse a una antigua maldición para salvar a su pueblo de una bruja. La propuesta me parecía interesante, sobre todo por esa combinación de fantasmas, zombis y misterio.",
+      "Sin embargo, conforme avanzaba la película, mi interés fue decayendo. Entiendo que está dirigida principalmente al público infantil, pero a mí la historia se me hizo demasiado sencilla y no logró engancharme como esperaba.",
+      "La animación en stop motion sí me gustó y se nota el trabajo que hay detrás de cada escena, pero fuera de eso no encontré mucho que me atrapara. Simplemente, no es el tipo de película animada que más disfruto y, después de tanta espera, me quedé con una sensación de decepción."
+    ],
+    "cita": "La historia se me hizo demasiado sencilla y no logró engancharme.",
+    "veredicto": "Stop-motion decente, pero historia demasiado infantil y aburrida. Decepción. Conjuro mal ejecutado."
   }
 ]
