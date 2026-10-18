@@ -988,6 +988,23 @@ function actualizarCarritoUI() {
 
   const t = calcularTotalesCarrito();
 
+  // Contar vasos (promo Halloween)
+    const cantidadVasos = carrito.reduce((acc, item) => {
+      const n = (item.nombre || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      return n.includes("vaso") ? acc + item.cantidad : acc;
+    }, 0);
+
+    const avisoHalloweenVasos = esPromoHalloweenActiva() && cantidadVasos >= 4
+      ? `<p class="cart-summary-note cart-promo-halloween">🎃 Promo Halloween: al comprar 4 vasos te llevas <strong>uno extra</strong> con etiqueta Último. Se confirma por WhatsApp.</p>`
+      : esPromoHalloweenActiva() && cantidadVasos > 0 && cantidadVasos < 4
+        ? `<p class="cart-summary-note cart-promo-halloween">🎃 Te faltan <strong>${4 - cantidadVasos}</strong> vaso${4 - cantidadVasos === 1 ? "" : "s"} para el regalo extra (etiqueta Último).</p>`
+        : "";
+
+    const tienePoster = carrito.some((item) => {
+      const prod = productosGlobal.find((p) => p.nombre === item.nombre) || item;
+      return esPoster(prod);
+    });
+
   const tienePoster = carrito.some((item) => {
     const prod = productosGlobal.find((p) => p.nombre === item.nombre) || item;
     return esPoster(prod);
@@ -1012,103 +1029,88 @@ function actualizarCarritoUI() {
 
   // Resumen + cupón + CP + nota de póster
   totalEl.innerHTML = `
-    <div class="cart-summary">
-      <div class="cart-summary-row">
-        <span>Subtotal</span>
-        <span>$${t.subtotal.toLocaleString("es-MX")} MXN</span>
-      </div>
-      ${t.descuento > 0 ? `
-        <div class="cart-summary-row cart-discount">
-          <span>Descuento${cuponAplicado ? ` (${cuponAplicado.codigo})` : ""}</span>
-          <span>-$${t.descuento.toLocaleString("es-MX")} MXN</span>
+      <div class="cart-summary">
+        <div class="cart-summary-row">
+          <span>Subtotal</span>
+          <span>$${t.subtotal.toLocaleString("es-MX")} MXN</span>
         </div>
-      ` : ""}
-      <div class="cart-summary-row">
-        <span>${t.esEnvioPoster ? "Envío estimado (paquetería privada)" : "Envío estimado (Correos)"}</span>
-        <span>
-          ${t.esEnvioPoster
-            ? `<strong>${t.costoEnvioTexto} MXN</strong>`
-            : t.costoEnvio === 0
-              ? "<strong class='text-success'>GRATIS</strong>"
-              : `$${t.costoEnvio.toLocaleString("es-MX")} MXN`
-          }
-        </span>
-      </div>
-      ${t.tienePreventa ? `
-        <p class="cart-summary-note">* En preventas no aplica envío gratis ni cupones</p>
-      ` : ""}
-      ${t.tienePoster ? `
-        <p class="cart-summary-note">
-          📦 Este pedido incluye póster(es): se envía por <strong>Mexpost, Estafeta o FedEx</strong>.
-          El costo exacto se cotiza según tu CP (aprox. $150 – $600).
-        </p>
-      ` : ""}
-      <div class="cart-summary-row cart-summary-total">
-        <span>Total</span>
-        <span>$${t.total.toLocaleString("es-MX")} MXN</span>
-      </div>
-    </div>
-
-    ${cuponAplicado ? `
-      <div class="cart-coupon-activo">
-        <span>Cupón <strong>${cuponAplicado.codigo}</strong> aplicado</span>
-        <button type="button" id="btnBorrarCupon" class="btn-borrar-cupon">Borrar cupón</button>
-      </div>
-    ` : `
-      <div class="cart-coupon">
-        <label class="cupon-label">¿Tienes un cupón?</label>
-        <div class="cupon-row">
-          <input type="text" id="inputCupon" placeholder="Código de cupón" maxlength="20" autocomplete="off">
-          <button type="button" id="btnAplicarCupon">Aplicar</button>
+        ${t.descuento > 0 ? `
+          <div class="cart-summary-row cart-discount">
+            <span>Descuento${cuponAplicado ? ` (${cuponAplicado.codigo})` : ""}</span>
+            <span>-$${t.descuento.toLocaleString("es-MX")} MXN</span>
+          </div>
+        ` : ""}
+        <div class="cart-summary-row">
+          <span>${t.esEnvioPoster ? "Envío estimado (paquetería privada)" : "Envío estimado (Correos)"}</span>
+          <span>
+            ${t.esEnvioPoster
+              ? `<strong>${t.costoEnvioTexto} MXN</strong>`
+              : t.costoEnvio === 0
+                ? "<strong class='text-success'>GRATIS</strong>"
+                : `$${t.costoEnvio.toLocaleString("es-MX")} MXN`
+            }
+          </span>
+        </div>
+        ${t.tienePreventa ? `
+          <p class="cart-summary-note">* En preventas no aplica envío gratis ni cupones</p>
+        ` : ""}
+        ${t.tienePoster ? `
+          <p class="cart-summary-note">
+            📦 Este pedido incluye póster(es): se envía por <strong>Mexpost, Estafeta o FedEx</strong>.
+            El costo exacto se cotiza según tu CP (aprox. $150 – $600).
+          </p>
+        ` : ""}
+        ${avisoHalloweenVasos}
+        <div class="cart-summary-row cart-summary-total">
+          <span>Total</span>
+          <span>$${t.total.toLocaleString("es-MX")} MXN</span>
         </div>
       </div>
-      <p id="cuponMsg" class="cupon-msg" hidden></p>
-    `}
 
-    <div class="cart-envio-datos">
-      <label for="inputCP">Código Postal *</label>
-      <input type="text" id="inputCP" inputmode="numeric" maxlength="5" placeholder="Ej. 37000" autocomplete="postal-code">
-      <p id="envioDatosError" class="envio-datos-error" hidden>Completa Código Postal para continuar</p>
-    </div>
-  `;
+      ${cuponAplicado ? `
+        <div class="cart-coupon-activo">
+          <span>Cupón <strong>${cuponAplicado.codigo}</strong> aplicado</span>
+          <button type="button" id="btnBorrarCupon" class="btn-borrar-cupon">Borrar cupón</button>
+        </div>
+      ` : `
+        <div class="cart-coupon">
+          <label class="cupon-label">¿Tienes un cupón?</label>
+          <div class="cupon-row">
+            <input type="text" id="inputCupon" placeholder="Código de cupón" maxlength="20" autocomplete="off">
+            <button type="button" id="btnAplicarCupon">Aplicar</button>
+          </div>
+        </div>
+        <p id="cuponMsg" class="cupon-msg" hidden></p>
+      `}
 
-  // Contar vasos en el carrito (nombre contiene "vaso")
-  const cantidadVasos = carrito.reduce((acc, item) => {
-    const n = (item.nombre || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-    return n.includes("vaso") ? acc + item.cantidad : acc;
-  }, 0);
+      <div class="cart-envio-datos">
+        <label for="inputCP">Código Postal *</label>
+        <input type="text" id="inputCP" inputmode="numeric" maxlength="5" placeholder="Ej. 37000" autocomplete="postal-code">
+        <p id="envioDatosError" class="envio-datos-error" hidden>Completa Código Postal para continuar</p>
+      </div>
+    `;
 
-  const avisoHalloweenVasos = esPromoHalloweenActiva() && cantidadVasos >= 4
-    ? `<p class="cart-summary-note cart-promo-halloween">🎃 Promo Halloween: al comprar 4 vasos te llevas <strong>uno extra</strong> con etiqueta Último. Se confirma por WhatsApp.</p>`
-    : esPromoHalloweenActiva() && cantidadVasos > 0 && cantidadVasos < 4
-      ? `<p class="cart-summary-note cart-promo-halloween">🎃 Te faltan <strong>${4 - cantidadVasos}</strong> vaso${4 - cantidadVasos === 1 ? "" : "s"} para el regalo extra (etiqueta Último).</p>`
-      : "";
-
-
-  // Eventos del cupón
-  document.getElementById("btnAplicarCupon")?.addEventListener("click", aplicarCupon);
-  document.getElementById("inputCupon")?.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") aplicarCupon();
-  });
-  document.getElementById("btnBorrarCupon")?.addEventListener("click", () => {
-    cuponAplicado = null;
-    actualizarCarritoUI();
-  });
-
-  ${avisoHalloweenVasos}
-
-  // Actualizar WhatsApp al escribir
-  ["inputCP"].forEach((id) => {
-    document.getElementById(id)?.addEventListener("input", () => {
-      actualizarWhats(calcularTotalesCarrito());
+    // Eventos del cupón (después del innerHTML)
+    document.getElementById("btnAplicarCupon")?.addEventListener("click", aplicarCupon);
+    document.getElementById("inputCupon")?.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") aplicarCupon();
     });
-  });
+    document.getElementById("btnBorrarCupon")?.addEventListener("click", () => {
+      cuponAplicado = null;
+      actualizarCarritoUI();
+    });
 
-  actualizarWhats(t);
-  actualizarEnvioGratisBar(t);
-  actualizarStickyEnvio(t);
-  actualizarEstadoVaciar();
-}
+    ["inputCP"].forEach((id) => {
+      document.getElementById(id)?.addEventListener("input", () => {
+        actualizarWhats(calcularTotalesCarrito());
+      });
+    });
+
+    actualizarWhats(t);
+    actualizarEnvioGratisBar(t);
+    actualizarStickyEnvio(t);
+    actualizarEstadoVaciar();
+  }
 
 function cambiarCantidad(index, action) {
   const item = carrito[index];
