@@ -3173,20 +3173,6 @@ body.dark .btn-wishlist {
   color: #030304;
 }
 
-.carousel-slide--streetfighter {
-  background: linear-gradient(135deg, #050510 0%, #1b0033 40%, #7b2cbf 70%, #ff006e 100%);
-  border-color: rgba(0, 245, 255, 0.35);
-}
-.carousel-slide--streetfighter .banner-btn {
-  background: #00f5ff;
-  color: #050510;
-  font-weight: 700;
-}
-.carousel-slide--streetfighter .banner-btn:hover {
-  background: #fff;
-  color: #7b2cbf;
-}
-
 /* Godzilla Minus One */
 .carousel-slide--godzilla {
   background: linear-gradient(135deg, #0a0f0a 0%, #1a2e1a 35%, #3d5c3d 70%, #0d1a0d 100%);
