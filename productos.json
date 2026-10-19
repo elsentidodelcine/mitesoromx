@@ -161,7 +161,7 @@
   { "nombre": "Palomera Bugs Bunny Cinepolis", "categoria": "Infantil", "precio": 600, "imagen": "imgs/bugs.png" ,"badge": "ultimo", "stock": 1},
   { "nombre": "2 Vasos de Mickey y Mini Cinemex", "categoria": "Infantil", "precio": 300, "imagen": "imgs/mickey.png" ,"badge": "nuevo", "stock": 1},
   { "nombre": "Vaso Shrek 2 Cinemex", "categoria": "Infantil", "precio": 150, "imagen": "imgs/coleccionable74.jpg" ,"badge": "nuevo", "stock": 1},
-  { "nombre": "Vaso Cerveza Duff Los Simpson con Autografo", "categoria": "Infantil", "precio": 500, "imagen": "imgs/simpson.png" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Vaso Cerveza Duff Los Simpson con Autografo", "categoria": "Infantil", "precio": 500, "imagen": "imgs/simpson.png" ,"badge": "exclusivo", "stock": 1},
   { "nombre": "Cubeta Garfield Cinemex", "categoria": "Infantil", "precio": 30, "imagen": "imgs/coleccionable47.jpg" ,"badge": "ultimo", "stock": 1},
   { "nombre": "Vaso Paw Patrol Movie Center", "categoria": "Infantil", "precio": 80, "imagen": "imgs/coleccionable63.jpg" ,"badge": "ultimo", "stock": 1},
   { "nombre": "Vaso Como Entrenar a tu Dragon Movie Center", "categoria": "Infantil", "precio": 400, "imagen": "imgs/coleccionable76.jpg" ,"badge": "exclusivo", "stock": 1},
@@ -211,7 +211,7 @@
 
   { "nombre": "Vaso Mario Bros Movie Center", "categoria": "Mario Bros", "precio": 100, "imagen": "imgs/coleccionable82.jpg" ,"badge": "nuevo", "stock": 1},
   { "nombre": "Vaso Mario Bros Cinemex", "categoria": "Mario Bros", "precio": 30, "imagen": "imgs/coleccionable80.jpg" ,"badge": "oferta", "stock": 1, "descripcion":  "Despintado de atrás"},
-  { "nombre": "3 Cubos Mario Bros Cinemex + Postal Cinepolis", "categoria": "Mario Bros", "precio": 500, "imagen": "imgs/bmario.png" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "3 Cubos Mario Bros Cinemex + Postal Cinepolis", "categoria": "Mario Bros", "precio": 500, "imagen": "imgs/bmario.png" ,"badge": "exclusivo", "stock": 1},
 
   { "nombre": "Vaso Los 4 Fantasticos La Mole Cinepolis Marvel", "categoria": "Marvel", "precio": 250, "imagen": "imgs/coleccionable2.jpg" ,"badge": "exclusivo", "stock": 1},
   { "nombre": "Vaso Los 4 Fantasticos La Antorcha Cinepolis Marvel", "categoria": "Marvel", "precio": 350, "imagen": "imgs/coleccionable4.jpg" ,"badge": "exclusivo", "stock": 1},
@@ -225,14 +225,14 @@
   { "nombre": "Palomera Thanos Cinemex Marvel", "categoria": "Marvel", "precio": 300, "imagen": "imgs/davengers9.png" ,"badge": "ultimo", "stock": 1},
   { "nombre": "Funko Thanos 533 Marvel", "categoria": "Marvel", "precio": 300, "imagen": "imgs/davengers10.png" ,"badge": "funko", "stock": 1},
   { "nombre": "Figura Thanos Marvel", "categoria": "Marvel", "precio": 230, "imagen": "imgs/davengers3.png" ,"badge": "figura", "stock": 1},
-  { "nombre": "Lego Thanos", "categoria": "Marvel", "precio": 300, "imagen": "imgs/fantastico31.jpeg" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Lego Thanos", "categoria": "Marvel", "precio": 300, "imagen": "imgs/fantastico31.jpeg" ,"badge": "figura", "stock": 1},
   { "nombre": "Funko Scarlet Witch Marvel 1034", "categoria": "Marvel", "precio": 500, "imagen": "imgs/wanda.png" ,"badge": "funko", "stock": 1},
   { "nombre": "Funko Scarlet Witch Marvel 823", "categoria": "Marvel", "precio": 700, "imagen": "imgs/wanda.png" ,"badge": "funko", "stock": 1},
   { "nombre": "Funko Jean Grey 645 Marvel", "categoria": "Marvel", "precio": 200, "imagen": "imgs/xmen.png" ,"badge": "funko", "stock": 1},
   { "nombre": "Vaso Eternal con Figura Marvel", "categoria": "Marvel", "precio": 50, "imagen": "imgs/coleccionable95.jpg" ,"badge": "ultimo", "stock": 1},
-  { "nombre": "3 Vasos Ms Marvel Kamala Khan y Monica Cinepolis Marvel", "categoria": "Marvel", "precio": 500, "imagen": "imgs/coleccionable88.jpg" ,"badge": "ultimo", "stock": 1},
-  { "nombre": "Vaso Doctor Strange Marvel Cinepolis", "categoria": "Marvel", "precio": 60, "imagen": "imgs/coleccionable6.jpg" ,"badge": "ultimo", "stock": 1},
-  { "nombre": "Doctor Strange Ojo de Agamoto Marvel", "categoria": "Marvel", "precio": 1300, "imagen": "imgs/davengers2.png" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "3 Vasos Ms Marvel Kamala Khan y Monica Cinepolis Marvel", "categoria": "Marvel", "precio": 500, "imagen": "imgs/coleccionable88.jpg" ,"badge": "nuevo", "stock": 1},
+  { "nombre": "Vaso Doctor Strange Marvel Cinepolis", "categoria": "Marvel", "precio": 60, "imagen": "imgs/coleccionable6.jpg" ,"badge": "ultimo", "stock": 0},
+  { "nombre": "Doctor Strange Ojo de Agamoto Marvel", "categoria": "Marvel", "precio": 1300, "imagen": "imgs/davengers2.png" ,"badge": "exclusivo", "stock": 1},
   { "nombre": "Funko Doctor Strange 1008 Marvel", "categoria": "Marvel", "precio": 350, "imagen": "imgs/doc2.png" ,"badge": "funko", "stock": 1},
   { "nombre": "Funko Doctor Strange 1032 Marvel", "categoria": "Marvel", "precio": 300, "imagen": "imgs/doc3.png" ,"badge": "funko", "stock": 1},
   { "nombre": "Funko Doctor Strange 874 Marvel", "categoria": "Marvel", "precio": 300, "imagen": "imgs/doc.png" ,"badge": "funko", "stock": 1},
@@ -256,7 +256,7 @@
   { "nombre": "Vaso Minion Cinepolis Model3 Minions", "categoria": "Minions", "precio": 30, "imagen": "imgs/coleccionable41.jpg" ,"badge": "ultimo", "stock": 1},
   { "nombre": "Mini Cubeta Minion Cinemex Minions", "categoria": "Minions", "precio": 30, "imagen": "imgs/coleccionable44.jpg" ,"badge": "ultimo", "stock": 1},
 
-  { "nombre": "Calendario Nacion Grita 2017", "categoria": "Musica", "precio": 200, "imagen": "imgs/jfigura6.png" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Calendario Nacion Grita 2017", "categoria": "Musica", "precio": 200, "imagen": "imgs/jfigura6.png" ,"badge": "libro", "stock": 1},
   { "nombre": "Funko Pop Freddie Mercury Queen 184", "categoria": "Musica", "precio": 300, "imagen": "imgs/queen.png" ,"badge": "oferta", "stock": 1, "descripcion": "Detalle en caja"},
   { "nombre": "Póster Cinepólis Queen Rock Montreal", "categoria": "Musica", "precio": 300, "imagen": "imgs/queen2.png" ,"badge": "poster", "stock": 1},
   { "nombre": "Funko Iron Maiden 250", "categoria": "Musica", "precio": 400, "imagen": "imgs/iron.png" ,"badge": "funko", "stock": 1},
@@ -442,10 +442,10 @@
   { "nombre": "Vaso Assassins Creed Cinepolis", "categoria": "Videojuegos", "precio": 80, "imagen": "imgs/coleccionable70.jpg" ,"badge": "ultimo", "stock": 1},
   { "nombre": "Figura Mortal Kombat 11 Command Spawn", "categoria": "Videojuegos", "precio": 1500, "imagen": "imgs/ifunko13.png" ,"badge": "figura", "stock": 1},
 
-  { "nombre": "Nintendo 64", "categoria": "Vintage", "precio": 5000, "imagen": "imgs/nintendo.png" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Nintendo 64", "categoria": "Vintage", "precio": 5000, "imagen": "imgs/nintendo.png" ,"badge": "exclusivo", "stock": 1},
   { "nombre": "5 Figuras Alien Remix Mattel", "categoria": "Vintage", "precio": 1000, "imagen": "imgs/jfigura3.png" ,"badge": "figura", "stock": 1},
   { "nombre": "1 Figura Winnie Pooh Mattel", "categoria": "Vintage", "precio": 500, "imagen": "imgs/jfigura4.png" ,"badge": "figura", "stock": 1},
-  { "nombre": "Pepsilindro Los Picapiedra", "categoria": "Vintage", "precio": 200, "imagen": "imgs/jfigura7.png" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Pepsilindro Los Picapiedra", "categoria": "Vintage", "precio": 200, "imagen": "imgs/jfigura7.png" ,"badge": "exclusivo", "stock": 1},
 
 
   { "nombre": "Figura Villano Oloccons O3", "categoria": "Vintage", "precio": 100, "imagen": "imgs/vintage11.jpeg" ,"badge": "figura", "stock": 1},
