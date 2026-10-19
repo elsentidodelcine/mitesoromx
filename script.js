@@ -98,9 +98,10 @@ function calcularTotalesCarrito() {
   });
 
   // Si hay póster → no se permiten cupones
-  if (tienePoster || tienePreventa) {
-    cuponAplicado = null;
-  }
+    // Si hay póster, preventa o promo Halloween → no se permiten cupones
+    if (tienePoster || tienePreventa || esPromoHalloweenActiva()) {
+      cuponAplicado = null;
+    }
 
   let descuento = 0;
   if (cuponAplicado && !tienePoster && !tienePreventa) {
@@ -250,6 +251,7 @@ function aplicarFiltros() {
 // Filtros extra
 // En todos los filtros excepto "agotados" se ocultan productos sin stock
 // (y los de precio 999/666 = próximamente / en espera)
+// Filtros extra
 if (filtroExtra === "disponibles") {
   lista = lista.filter((p) => p.stock > 0 && p.precio != 999 && p.precio != 666);
 } else if (filtroExtra === "preventa") {
@@ -262,11 +264,16 @@ if (filtroExtra === "disponibles") {
   lista = lista.filter((p) => badgeTexto(p).includes("exclusivo") && p.stock > 0 && p.precio != 999 && p.precio != 666);
 } else if (filtroExtra === "nuevo") {
   lista = lista.filter((p) => badgeTexto(p).includes("nuevo") && p.stock > 0 && p.precio != 999 && p.precio != 666);
+} else if (filtroExtra === "poster") {
+  lista = lista.filter((p) => badgeTexto(p).includes("poster") && p.stock > 0 && p.precio != 999 && p.precio != 666);
+} else if (filtroExtra === "figura") {
+  lista = lista.filter((p) => badgeTexto(p).includes("figura") && p.stock > 0 && p.precio != 999 && p.precio != 666);
+} else if (filtroExtra === "funko") {
+  lista = lista.filter((p) => badgeTexto(p).includes("funko") && p.stock > 0 && p.precio != 999 && p.precio != 666);
 } else if (filtroExtra === "agotados") {
-  // Solo productos sin stock (no próximamente)
   lista = lista.filter((p) => p.stock <= 0 && p.precio != 999 && p.precio != 666);
 } else {
-  // "todos" y cualquier otro → ocultar agotados
+  // "todos" → ocultar agotados (salvo próximamente / en espera)
   lista = lista.filter((p) => p.stock > 0 || p.precio == 999 || p.precio == 666);
 }
 
@@ -1063,21 +1070,25 @@ function actualizarCarritoUI() {
         </div>
       </div>
 
-      ${cuponAplicado ? `
-        <div class="cart-coupon-activo">
-          <span>Cupón <strong>${cuponAplicado.codigo}</strong> aplicado</span>
-          <button type="button" id="btnBorrarCupon" class="btn-borrar-cupon">Borrar cupón</button>
-        </div>
-      ` : `
-        <div class="cart-coupon">
-          <label class="cupon-label">¿Tienes un cupón?</label>
-          <div class="cupon-row">
-            <input type="text" id="inputCupon" placeholder="Código de cupón" maxlength="20" autocomplete="off">
-            <button type="button" id="btnAplicarCupon">Aplicar</button>
+        ${esPromoHalloweenActiva() ? `
+          <p class="cart-summary-note cart-promo-halloween">
+            🎃 Promo Halloween activa: no aplican cupones. Envío gratis desde $350 y 4 vasos = 1 extra.
+          </p>
+        ` : cuponAplicado ? `
+          <div class="cart-coupon-activo">
+            <span>Cupón <strong>${cuponAplicado.codigo}</strong> aplicado</span>
+            <button type="button" id="btnBorrarCupon" class="btn-borrar-cupon">Borrar cupón</button>
           </div>
-        </div>
-        <p id="cuponMsg" class="cupon-msg" hidden></p>
-      `}
+        ` : `
+          <div class="cart-coupon">
+            <label class="cupon-label">¿Tienes un cupón?</label>
+            <div class="cupon-row">
+              <input type="text" id="inputCupon" placeholder="Código de cupón" maxlength="20" autocomplete="off">
+              <button type="button" id="btnAplicarCupon">Aplicar</button>
+            </div>
+          </div>
+          <p id="cuponMsg" class="cupon-msg" hidden></p>
+        `}
 
       <div class="cart-envio-datos">
         <label for="inputCP">Código Postal *</label>
@@ -2108,8 +2119,10 @@ function esPoster(producto) {
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "");
 
+  const badge = badgeTexto(producto);
+
   return (
-    nombre.includes("poster") ||
+    badge.includes("poster") ||
     nombre.includes("poster") ||
     nombre.includes("cartel") ||
     categoria.includes("poster") ||
@@ -2135,10 +2148,20 @@ function detectarFranquicia(nombre) {
 
 function aplicarCupon() {
     const input = document.getElementById("inputCupon");
-    const msg = document.getElementById("cuponMsg");
-    if (!input || !msg) return;
+      const msg = document.getElementById("cuponMsg");
+      if (!input || !msg) return;
 
-    const codigo = (input.value || "").trim().toUpperCase();
+      const codigo = (input.value || "").trim().toUpperCase();
+
+      // Bloqueo por promo Halloween
+      if (esPromoHalloweenActiva()) {
+        cuponAplicado = null;
+        msg.hidden = false;
+        msg.textContent = "🎃 Durante la promo Halloween no aplican cupones";
+        msg.className = "cupon-msg error";
+        actualizarCarritoUI();
+        return;
+      }
 
     // ¿Hay póster o preventa?
       const hayPoster = carrito.some((item) => {

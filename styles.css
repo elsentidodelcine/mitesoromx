@@ -4681,3 +4681,16 @@ body.dark .badge-poster {
   margin-top: 0.5rem;
   font-size: 0.9rem;
 }
+
+.badge.poster {
+  background: #3d5a80;
+  color: #fff;
+}
+.badge.figura {
+  background: #6a0dad;
+  color: #fff;
+}
+.badge.funko {
+  background: #e63946;
+  color: #fff;
+}
