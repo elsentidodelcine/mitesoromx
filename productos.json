@@ -282,7 +282,7 @@
   { "nombre": "Funko Naruto Anbu Itachi 1027", "categoria": "Naruto", "precio": 500, "imagen": "imgs/enaruto10.png" ,"badge": "funko", "stock": 1},
   { "nombre": "Funko Naruto As Nine Tails 1233", "categoria": "Naruto", "precio": 1000, "imagen": "imgs/enaruto11.png" ,"badge": "funko", "stock": 1},
   { "nombre": "Mangas de Naruto (1-42, 44-57) y 3 especiales", "categoria": "Naruto", "precio": 4720, "imagen": "imgs/enaruto1.png" ,"badge": "libro", "stock": 1},
-  { "nombre": "Peluche Minato Namikaze", "categoria": "Naruto", "precio": 150, "imagen": "imgs/naruto30.jpeg" ,"badge": "exclusivo", "stock": 1},
+  { "nombre": "Peluche Minato Namikaze", "categoria": "Naruto", "precio": 150, "imagen": "imgs/naruto30.jpeg" ,"badge": "figura", "stock": 1},
 
 
   { "nombre": "Funko Aang on Airscooter 541 Avatar", "categoria": "Peliculas", "precio": 250, "imagen": "imgs/ifunko2.png" ,"badge": "funko", "stock": 1},
@@ -353,9 +353,9 @@
 
   { "nombre": "Postal MacroXE SpiderMan Cinepolis", "categoria": "SpiderMan", "precio": 150, "imagen": "imgs/spidern25.jpg" ,"badge": "exclusivo", "stock": 0},
   { "nombre": "Postal 3D SpiderMan Cinepolis", "categoria": "SpiderMan", "precio": 100, "imagen": "imgs/spidern24.jpg" ,"badge": "exclusivo", "stock": 0},
-  { "nombre": "Palomera SpiderMan Cinepolis", "categoria": "SpiderMan", "precio": 500, "imagen": "imgs/spidern2.jpg" ,"badge": "exclusivo", "stock": 1},
+  { "nombre": "Palomera SpiderMan Cinepolis", "categoria": "SpiderMan", "precio": 500, "imagen": "imgs/spidern2.jpg" ,"badge": "exclusivo", "stock": 0},
   { "nombre": "Vaso SpiderMan Movie Center", "categoria": "SpiderMan", "precio": 200, "imagen": "imgs/spidern17.jpg" ,"badge": "nurvo", "stock": 1},
-  { "nombre": "Vaso Modelo 1 SpiderMan Cinepolis", "categoria": "SpiderMan", "precio": 500, "imagen": "imgs/spidern15.jpg" ,"badge": "exclusivo", "stock": 1},
+  { "nombre": "Vaso Modelo 1 SpiderMan Cinepolis", "categoria": "SpiderMan", "precio": 500, "imagen": "imgs/spidern15.jpg" ,"badge": "exclusivo", "stock": 0},
   { "nombre": "Vaso Modelo 2 SpiderMan Cinepolis", "categoria": "SpiderMan", "precio": 400, "imagen": "imgs/spidern26.jpg" ,"badge": "exclusivo", "stock": 0},
   { "nombre": "Vaso 3D SpiderMan Cinemex", "categoria": "SpiderMan", "precio": 500, "imagen": "imgs/spidern14.jpg" ,"badge": "exclusivo", "stock": 1},
   { "nombre": "Peon SpiderMan", "categoria": "SpiderMan", "precio": 150, "imagen": "imgs/spider30.jpeg" ,"badge": "exclusivo", "stock": 1},
@@ -364,7 +364,7 @@
   { "nombre": "Vaso SpiderMan Busto Cinepolis", "categoria": "SpiderMan", "precio": 300, "imagen": "imgs/spidern19.jpg" ,"badge": "exclusivo", "stock": 1},
   { "nombre": "Palomera SpiderMan Busto Cinepolis", "categoria": "SpiderMan", "precio": 600, "imagen": "imgs/spidern22.jpg" ,"badge": "exclusivo", "stock":1},
   { "nombre": "Palomera SpiderMan Cinemex", "categoria": "SpiderMan", "precio": 500, "imagen": "imgs/spidern23.jpg" ,"badge": "exclusivo", "stock": 1},
-  { "nombre": "5 Vasos SpiderMan Multiverso Cinemex", "categoria": "SpiderMan", "precio": 1000, "imagen": "imgs/spidern13.jpg" ,"badge": "exclusivo", "stock": 1},
+  { "nombre": "5 Vasos SpiderMan Multiverso Cinemex", "categoria": "SpiderMan", "precio": 1000, "imagen": "imgs/spidern13.jpg" ,"badge": "exclusivo", "stock": 0},
   { "nombre": "Vaso SpiderMan Multiverso Cinepolis", "categoria": "SpiderMan", "precio": 200, "imagen": "imgs/spidern16.jpg" ,"badge": "exclusivo", "stock": 1},
   { "nombre": "Palomera SpiderMan Mano Cinepolis", "categoria": "SpiderMan", "precio": 600, "imagen": "imgs/spidern21.jpg" ,"badge": "exclusivo", "stock": 1},
   { "nombre": "Vaso SpiderMan Cinepolis", "categoria": "SpiderMan", "precio": 200, "imagen": "imgs/spidern18.jpg" ,"badge": "exclusivo", "stock": 1},

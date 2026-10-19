@@ -270,8 +270,8 @@ if (filtroExtra === "disponibles") {
   lista = lista.filter((p) => badgeTexto(p).includes("figura") && p.stock > 0 && p.precio != 999 && p.precio != 666);
 } else if (filtroExtra === "funko") {
   lista = lista.filter((p) => badgeTexto(p).includes("funko") && p.stock > 0 && p.precio != 999 && p.precio != 666);
-} else if (filtroExtra === "YuGiOh") {
-  lista = lista.filter((p) => badgeTexto(p).includes("YuGiOh") && p.stock > 0 && p.precio != 999 && p.precio != 666);
+} else if (filtroExtra === "yugioh") {
+  lista = lista.filter((p) => badgeTexto(p).includes("yugioh") && p.stock > 0 && p.precio != 999 && p.precio != 666);
 } else if (filtroExtra === "libros") {
   lista = lista.filter((p) => badgeTexto(p).includes("libros") && p.stock > 0 && p.precio != 999 && p.precio != 666);
 } else if (filtroExtra === "agotados") {
