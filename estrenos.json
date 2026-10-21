@@ -1111,8 +1111,8 @@
     "titulo": "El Bosque Salvaje: Wildwood",
     "tipo": "preventa",
     "estadoCartelera": "preventa",
-    "fecha": "2026-10-29",
-    "fechaTexto": "Jueves 29 de Octubre 2026",
+    "fecha": "2026-10-23",
+    "fechaTexto": "Viernes 23 de Octubre 2026",
     "poster": "imgs/estrenos/wildwood.jpg",
     "cines": ["Cinemex"],
     "nota": "Estados Unidos"
@@ -1270,5 +1270,137 @@
     "poster": "imgs/estrenos/naza.jpg",
     "cines": ["Cinemex"],
     "nota": "Reino Unido"
+  },
+  {
+    "id": "irregular",
+    "titulo": "The irregular at Magic High School La Película",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-03",
+    "fechaTexto": "Martes 03 de Noviembre 2026",
+    "poster": "imgs/estrenos/irregular.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Japón"
+  },
+  {
+    "id": "golpe",
+    "titulo": "El Último Gran Golpe",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-29",
+    "fechaTexto": "Jueves 29 de Octubre 2026",
+    "poster": "imgs/estrenos/golpe.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "arco",
+    "titulo": "El Desconocido Del Gran Arco",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-29",
+    "fechaTexto": "Jueves 29 de Octubre 2026",
+    "poster": "imgs/estrenos/arco.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Francia"
+  },
+  {
+    "id": "gabacho",
+    "titulo": "Campeon Gabacho",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-29",
+    "fechaTexto": "Jueves 29 de Octubre 2026",
+    "poster": "imgs/estrenos/gabacho.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Mexico"
+  },
+  {
+    "id": "everest",
+    "titulo": "Everest La Otra Cara",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-29",
+    "fechaTexto": "Jueves 29 de Octubre 2026",
+    "poster": "imgs/estrenos/everest.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "lock",
+    "titulo": "Blue Lock",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-29",
+    "fechaTexto": "Jueves 29 de Octubre 2026",
+    "poster": "imgs/estrenos/lock.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Japón"
+  },
+  {
+    "id": "sombrero",
+    "titulo": "El Gato con Sombrero",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-05",
+    "fechaTexto": "Jueves 05 de Noviembre 2026",
+    "poster": "imgs/estrenos/sombrero.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "grin",
+    "titulo": "Grin El Juego de la Ouija",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-05",
+    "fechaTexto": "Jueves 05 de Noviembre 2026",
+    "poster": "imgs/estrenos/grin.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Reino Unido"
+  },
+  {
+    "id": "caballo",
+    "titulo": "Caballo Salvaje Nueve",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-05",
+    "fechaTexto": "Jueves 05 de Noviembre 2026",
+    "poster": "imgs/estrenos/caballo.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Reino Unido"
+  },
+  {
+    "id": "robar",
+    "titulo": "Como Robar un Banco",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-12",
+    "fechaTexto": "Jueves 12 de Noviembre 2026",
+    "poster": "imgs/estrenos/robar.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "fumo",
+    "titulo": "No, Gracias, Ya no Fumo",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-16",
+    "fechaTexto": "Lunes 16 de Noviembre 2026",
+    "poster": "imgs/estrenos/fumo.jpg",
+    "cines": ["Cinemex"],
+    "nota": "México"
+  },
+  {
+    "id": "cosecha",
+    "titulo": "Los Juegos del Hambre: Amanecer en la Cosecha",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-19",
+    "fechaTexto": "Jueves 19 de Noviembre 2026",
+    "poster": "imgs/estrenos/cosecha.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Estados Unidos"
   }
 ]
