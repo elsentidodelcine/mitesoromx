@@ -5,6 +5,16 @@
 (function () {
   // Más recientes primero (refer altos al inicio)
   const FOTOS = [
+    "imgs/referencias/ref1230.jpeg",
+    "imgs/referencias/ref1231.jpeg",
+    "imgs/referencias/ref1232.jpeg",
+    "imgs/referencias/ref1233.jpeg",
+    "imgs/referencias/ref1234.jpeg",
+    "imgs/referencias/ref1235.jpeg",
+    "imgs/referencias/ref1236.jpeg",
+    "imgs/referencias/ref1237.jpeg",
+    "imgs/referencias/ref1238.jpeg",
+    "imgs/referencias/ref1239.jpeg",
     "imgs/referencias/refxx1.jpg",
     "imgs/referencias/refxx2.jpg",
     "imgs/referencias/refxx3.jpg",
