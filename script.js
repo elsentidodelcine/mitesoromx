@@ -1068,11 +1068,12 @@ function actualizarCarritoUI() {
       return n.includes("vaso") ? acc + item.cantidad : acc;
     }, 0);
 
-    const avisoHalloweenVasos = esPromoHalloweenActiva() && cantidadVasos >= 4
-      ? `<p class="cart-summary-note cart-promo-halloween">🎃 Promo Halloween: al comprar 4 vasos te llevas <strong>uno extra</strong> con etiqueta Último. Se confirma por WhatsApp.</p>`
-      : esPromoHalloweenActiva() && cantidadVasos > 0 && cantidadVasos < 4
-        ? `<p class="cart-summary-note cart-promo-halloween">🎃 Te faltan <strong>${4 - cantidadVasos}</strong> vaso${4 - cantidadVasos === 1 ? "" : "s"} para el regalo extra (etiqueta Último).</p>`
-        : "";
+    const avisoHalloweenVasos =
+      !t.tienePreventa && esPromoHalloweenActiva() && cantidadVasos >= 4
+        ? `<p class="cart-summary-note cart-promo-halloween">🎃 Promo Halloween: al comprar 4 vasos te llevas <strong>uno extra</strong> con etiqueta Último. Se confirma por WhatsApp.</p>`
+        : !t.tienePreventa && esPromoHalloweenActiva() && cantidadVasos > 0 && cantidadVasos < 4
+          ? `<p class="cart-summary-note cart-promo-halloween">🎃 Te faltan <strong>${4 - cantidadVasos}</strong> vaso${4 - cantidadVasos === 1 ? "" : "s"} para el regalo extra (etiqueta Último).</p>`
+          : "";
 
     const tienePoster = carrito.some((item) => {
       const prod = productosGlobal.find((p) => p.nombre === item.nombre) || item;
@@ -1137,13 +1138,15 @@ function actualizarCarritoUI() {
         </div>
       </div>
 
-       ${esPromoHalloweenActiva() || esPromoNavidadActiva() ? `
+       ${(esPromoHalloweenActiva() || esPromoNavidadActiva()) && !t.tienePreventa ? `
          <p class="cart-summary-note cart-promo-halloween">
            ${esPromoNavidadActiva()
              ? "🎄 Promo Navidad activa: no aplican cupones. Envío gratis desde $350."
              : "🎃 Promo Halloween activa: no aplican cupones. Envío gratis desde $350 y 4 vasos = 1 extra."}
          </p>
-        ` : cuponAplicado ? `
+       ` : t.tienePreventa ? `
+         <p class="cart-summary-note">⚠️ En preventas no aplican promo de envío, cupones ni vasos de regalo.</p>
+       ` : cuponAplicado ? `
           <div class="cart-coupon-activo">
             <span>Cupón <strong>${cuponAplicado.codigo}</strong> aplicado</span>
             <button type="button" id="btnBorrarCupon" class="btn-borrar-cupon">Borrar cupón</button>
@@ -2311,16 +2314,16 @@ function aplicarCupon() {
       const codigo = (input.value || "").trim().toUpperCase();
 
       // Bloqueo por promo Halloween
-    if (t.promoTemporadaActiva && !t.tienePreventa) {
-       cuponAplicado = null;
-       msg.hidden = false;
-       msg.textContent = esPromoNavidadActiva()
-         ? "🎄 Durante la promo de Navidad no aplican cupones"
-         : "🎃 Durante la promo Halloween no aplican cupones";
-       msg.className = "cupon-msg error";
-       actualizarCarritoUI();
-       return;
-     }
+    if (esPromoHalloweenActiva() || esPromoNavidadActiva()) {
+      cuponAplicado = null;
+      msg.hidden = false;
+      msg.textContent = esPromoNavidadActiva()
+        ? "🎄 Durante la promo de Navidad no aplican cupones"
+        : "🎃 Durante la promo Halloween no aplican cupones";
+      msg.className = "cupon-msg error";
+      actualizarCarritoUI();
+      return;
+    }
 
     // ¿Hay póster o preventa?
       const hayPoster = carrito.some((item) => {
