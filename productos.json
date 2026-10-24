@@ -208,7 +208,7 @@
   { "nombre": "Vaso Jurassic World Cinemex Model2 Jurassic World", "categoria": "Jurassic World", "precio": 80, "imagen": "imgs/coleccionable56.jpg" ,"badge": "ultimo", "stock": 1},
   { "nombre": "Vaso Jurassic World Cinepolis Jurassic World", "categoria": "Jurassic World", "precio": 80, "imagen": "imgs/coleccionable57.jpg" ,"badge": "ultimo", "stock": 1},
 
-  { "nombre": "Libro The Legend of Zelda", "categoria": "Libros", "precio": 170, "imagen": "imgs/zelda.png" ,"badge": "libro", "stock": 1},
+  { "nombre": "Libro The Legend of Zelda", "categoria": "Libros", "precio": 170, "imagen": "imgs/zelda.png" ,"badge": "libro", "stock": 0},
 
   { "nombre": "Vaso Mario Bros Movie Center", "categoria": "Mario Bros", "precio": 100, "imagen": "imgs/coleccionable82.jpg" ,"badge": "nuevo", "stock": 1},
   { "nombre": "Vaso Mario Bros Cinemex", "categoria": "Mario Bros", "precio": 30, "imagen": "imgs/coleccionable80.jpg" ,"badge": "oferta", "stock": 1, "descripcion":  "Despintado de atrás"},

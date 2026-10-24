@@ -131,13 +131,6 @@ body.dark .main-header {
   letter-spacing: -0.02em;
 }
 
-.logo-text span {
-  display: block;
-  font-size: 0.7rem;
-  color: var(--text-muted);
-  margin-top: 1px;
-}
-
 .header-center {
   display: flex;
   align-items: center;
@@ -331,6 +324,40 @@ body.dark .cart-btn {
 
 .trust-card strong {
   display: block;
+}
+
+/* Trust más compacto en móvil */
+@media (max-width: 640px) {
+  .trust-section {
+    margin: 14px auto 0;
+    padding: 0 12px;
+  }
+
+  .trust-section h2 {
+    font-size: 0.95rem;
+    margin: 0 0 8px;
+  }
+
+  .trust-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+
+  .trust-card {
+    padding: 8px 6px;
+    font-size: 0.72rem;
+    line-height: 1.25;
+    border-radius: 10px;
+  }
+
+  .trust-card:hover {
+    transform: none; /* menos “salto” en touch */
+  }
+
+  .trust-card strong {
+    display: inline;
+    font-weight: 600;
+  }
 }
 
 /* ================= BANNERS ================= */
@@ -1540,9 +1567,34 @@ body.dark .btn-cancelar {
     display: none;
   }
 
-  .logo-text span {
-    display: none;
-  }
+ .logo-text {
+   display: flex;
+   flex-direction: column;
+   line-height: 1.15;
+   min-width: 0; /* evita que se comprima mal en flex */
+ }
+
+ .logo-text h1 {
+   margin: 0;
+   font-size: 1.05rem;
+ }
+
+ .logo-text span {
+   display: block;        /* forzar visible */
+   font-size: 0.68rem;
+   opacity: 0.75;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   max-width: 42vw;       /* que no empuje el menú */
+ }
+
+ @media (max-width: 480px) {
+   .logo-text span {
+     font-size: 0.62rem;
+     max-width: 36vw;
+   }
+ }
 
   .hero {
     padding: 40px 16px 36px;
@@ -3188,6 +3240,59 @@ body.dark .btn-wishlist {
   color: #1a3d1a;
 }
 
+/* Vende con Mi Tesoro MX */
+.carousel-slide--vende {
+  background: linear-gradient(135deg, #0a1628 0%, #1a3a5c 40%, #0d4f3c 75%, #0a1a14 100%);
+  border-color: rgba(0, 200, 150, 0.35);
+}
+.carousel-slide--vende .banner-btn {
+  background: #00c2a8;
+  color: #0a1628;
+  font-weight: 700;
+}
+.carousel-slide--vende .banner-btn:hover {
+  background: #fff;
+  color: #0d4f3c;
+}
+
+/* El Gato con Sombrero 2026 */
+.carousel-slide--gatosombrero {
+  background: linear-gradient(
+    135deg,
+    #1a0508 0%,
+    #5c0a12 30%,
+    #c41e3a 55%,
+    #f5f5f5 78%,
+    #0d3b66 100%
+  );
+  border-color: rgba(196, 30, 58, 0.4);
+}
+.carousel-slide--gatosombrero .banner-btn {
+  background: #fff;
+  color: #c41e3a;
+  font-weight: 700;
+}
+.carousel-slide--gatosombrero .banner-btn:hover {
+  background: #0d3b66;
+  color: #fff;
+}
+
+/* Navidad */
+.carousel-slide--navidad {
+  background: linear-gradient(135deg, #0a1a0f 0%, #1a2e1a 30%, #3d1a1a 60%, #0d0a0a 100%);
+  border-color: rgba(200, 40, 40, 0.45);
+}
+.carousel-slide--navidad .banner-btn {
+  background: #c62828;
+  color: #fff;
+  font-weight: 700;
+}
+.carousel-slide--navidad .banner-btn:hover {
+  background: #fff;
+  color: #1a2e1a;
+}
+
+
 /* Halloween Temporada */
 .carousel-slide--halloween {
   background: linear-gradient(135deg, #0a0a0f 0%, #1a0a14 25%, #2d0a1f 55%, #3d1a0a 85%, #0d0a0a 100%);
@@ -4694,3 +4799,4 @@ body.dark .badge-poster {
   background: #e63946;
   color: #fff;
 }
+

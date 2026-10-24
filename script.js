@@ -17,6 +17,26 @@
      }
    }
 
+    /* ---------- PROMO NAVIDAD / AÑO NUEVO (13 dic – 2 ene) ---------- */
+    function esPromoNavidadActiva() {
+      try {
+        const ahora = new Date(
+          new Date().toLocaleString("en-US", { timeZone: "America/Mexico_City" })
+        );
+        const m = ahora.getMonth(); // 0 = ene … 11 = dic
+        const d = ahora.getDate();
+
+        // 13–31 de diciembre
+        if (m === 11 && d >= 13) return true;
+        // 1–2 de enero
+        if (m === 0 && d < 3) return true;
+
+        return false;
+      } catch {
+        return false;
+      }
+    }
+
 let productosGlobal = [];
 let productosFiltrados = [];
 let paginaActual = 1;
@@ -29,10 +49,12 @@ let franquiciaActual = "todas";
 let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 
 const ENVIO_GRATIS_MIN_NORMAL = 550;
-const ENVIO_GRATIS_MIN_HALLOWEEN = 350;
-const ENVIO_GRATIS_MIN = esPromoHalloweenActiva()
-  ? ENVIO_GRATIS_MIN_HALLOWEEN
-  : ENVIO_GRATIS_MIN_NORMAL;
+const ENVIO_GRATIS_MIN_PROMO = 350; // mismo umbral Halloween/Navidad (cámbialo si quieres otro)
+
+const ENVIO_GRATIS_MIN =
+  esPromoHalloweenActiva() || esPromoNavidadActiva()
+    ? ENVIO_GRATIS_MIN_PROMO
+    : ENVIO_GRATIS_MIN_NORMAL;
 
 const ENVIO_COSTO_DEFAULT = 85;
 const WA_NUMERO = "524761002824";
@@ -99,9 +121,9 @@ function calcularTotalesCarrito() {
 
   // Si hay póster → no se permiten cupones
     // Si hay póster, preventa o promo Halloween → no se permiten cupones
-    if (tienePoster || tienePreventa || esPromoHalloweenActiva()) {
-      cuponAplicado = null;
-    }
+   if (tienePoster || tienePreventa || esPromoHalloweenActiva() || esPromoNavidadActiva()) {
+     cuponAplicado = null;
+   }
 
   let descuento = 0;
   if (cuponAplicado && !tienePoster && !tienePreventa) {
@@ -1074,10 +1096,12 @@ function actualizarCarritoUI() {
         </div>
       </div>
 
-        ${esPromoHalloweenActiva() ? `
-          <p class="cart-summary-note cart-promo-halloween">
-            🎃 Promo Halloween activa: no aplican cupones. Envío gratis desde $350 y 4 vasos = 1 extra.
-          </p>
+       ${esPromoHalloweenActiva() || esPromoNavidadActiva() ? `
+         <p class="cart-summary-note cart-promo-halloween">
+           ${esPromoNavidadActiva()
+             ? "🎄 Promo Navidad activa: no aplican cupones. Envío gratis desde $350."
+             : "🎃 Promo Halloween activa: no aplican cupones. Envío gratis desde $350 y 4 vasos = 1 extra."}
+         </p>
         ` : cuponAplicado ? `
           <div class="cart-coupon-activo">
             <span>Cupón <strong>${cuponAplicado.codigo}</strong> aplicado</span>
@@ -1638,6 +1662,16 @@ const PREVENTAS_ACTIVAS = [
       tema: "halloween",
     },
     {
+      id: "navidad-temporada",
+      active: false,
+      emoji: "🎄",
+      titulo: "Promoción de Navidad",
+      texto: "Del <strong>13 de diciembre al 2 de enero</strong>:<br><br>• En compras mayores a <strong>$350</strong> el envío es <strong>gratis</strong> por Correos de México.<br>• (Ajusta aquí si hay otra oferta: vasos, descuento, etc.)",
+      link: "envios.html",
+      linkTexto: "Ver detalles de la promo",
+      tema: "navidad",
+    },
+    {
       id: "blog-los-brujos-del-cine",
       active: true,
       emoji: "🎬",
@@ -1706,7 +1740,27 @@ const PREVENTAS_ACTIVAS = [
     link: "preventas.html",
     linkTexto: "Ver términos de preventa",
     tema: "doomsday",
-  }
+  },
+  {
+    id: "vende-con-mi-tesoro",
+    active: true,
+    emoji: "💰",
+    titulo: "Vende tus coleccionables",
+    texto: "¿Tienes piezas guardadas que ya no usas?<br><br><strong>Te ayudo a venderlas</strong> con Mi Tesoro MX: exposición, difusión y atención a compradores.",
+    link: "https://elsentidodelcine.github.io/mitesoromx/vende.html",
+    linkTexto: "Quiero vender",
+    tema: "vende",
+  },
+  {
+    id: "gato-con-sombrero-2026",
+    active: true,
+    emoji: "🎩",
+    titulo: "El Gato con Sombrero · 2026",
+    texto: "Preventa de los <strong>coleccionables de El Gato con Sombrero</strong>.<br><br>Edición 2026 para fans del clásico.",
+    link: "#catalogo",
+    linkTexto: "Ver coleccionables",
+    tema: "gatosombrero",
+  },
 ];
 
 function initCarouselPreventas() {
@@ -2158,14 +2212,16 @@ function aplicarCupon() {
       const codigo = (input.value || "").trim().toUpperCase();
 
       // Bloqueo por promo Halloween
-      if (esPromoHalloweenActiva()) {
-        cuponAplicado = null;
-        msg.hidden = false;
-        msg.textContent = "🎃 Durante la promo Halloween no aplican cupones";
-        msg.className = "cupon-msg error";
-        actualizarCarritoUI();
-        return;
-      }
+     if (esPromoHalloweenActiva() || esPromoNavidadActiva()) {
+       cuponAplicado = null;
+       msg.hidden = false;
+       msg.textContent = esPromoNavidadActiva()
+         ? "🎄 Durante la promo de Navidad no aplican cupones"
+         : "🎃 Durante la promo Halloween no aplican cupones";
+       msg.className = "cupon-msg error";
+       actualizarCarritoUI();
+       return;
+     }
 
     // ¿Hay póster o preventa?
       const hayPoster = carrito.some((item) => {
