@@ -100,6 +100,8 @@ function calcularTotalesCarrito() {
   let tienePreventa = false;
   let cantidadTotal = 0;
   let tienePoster = false;
+  // Promo de temporada NO aplica si hay preventa en el carrito
+  const promoTemporada = hayPromoTemporada();
 
   carrito.forEach((item) => {
     const prod = productosGlobal.find((p) => p.nombre === item.nombre) || item;
@@ -119,9 +121,15 @@ function calcularTotalesCarrito() {
     }
   });
 
+  // Con preventa: siempre umbral normal ($550). Sin preventa: promo $350 si aplica.
+  const umbralEnvioGratis =
+    tienePreventa || !promoTemporada
+      ? ENVIO_GRATIS_MIN_NORMAL
+      : ENVIO_GRATIS_MIN_PROMO;
+
   // Si hay póster → no se permiten cupones
     // Si hay póster, preventa o promo Halloween → no se permiten cupones
-   if (tienePoster || tienePreventa || esPromoHalloweenActiva() || esPromoNavidadActiva()) {
+   if (tienePoster || tienePreventa || promoTemporada) {
      cuponAplicado = null;
    }
 
@@ -150,24 +158,24 @@ function calcularTotalesCarrito() {
     envioGratisPosible = false;
   } else {
     // Lógica normal de Correos
-    const costoBase = cantidadTotal >= 4 ? 100 : ENVIO_COSTO_DEFAULT;
+   const costoBase = costoEnvioCorreosDesdeCarrito();
 
     if (cuponAplicado?.tipo === "envio_gratis") {
       costoEnvio = 0;
       envioGratisPosible = true;
       costoEnvioTexto = "GRATIS";
     } else if (
-      tipoPago === "Pago total" &&
-      !tienePreventa &&
-      elegibleEnvioGratis >= ENVIO_GRATIS_MIN
+     tipoPago === "Pago total" &&
+       !tienePreventa &&
+       elegibleEnvioGratis >= umbralEnvioGratis
     ) {
       costoEnvio = 0;
-      envioGratisPosible = true;
-      costoEnvioTexto = "GRATIS";
+        envioGratisPosible = true;
+        costoEnvioTexto = "GRATIS";
     } else {
       costoEnvio = costoBase;
-      costoEnvioTexto = `$${costoEnvio.toLocaleString("es-MX")}`;
-      envioGratisPosible = false;
+        costoEnvioTexto = `$${costoEnvio.toLocaleString("es-MX")}`;
+        envioGratisPosible = false;
     }
   }
 
@@ -187,7 +195,10 @@ function calcularTotalesCarrito() {
     esEnvioPoster,
     envioGratisPosible,
     total,
-    faltaParaGratis: Math.max(0, ENVIO_GRATIS_MIN - elegibleEnvioGratis),
+    faltaParaGratis: Math.max(0, umbralEnvioGratis - elegibleEnvioGratis),
+    umbralEnvioGratis,           // opcional, útil en la UI
+    promoTemporadaActiva: promoTemporada && !tienePreventa,
+    tienePreventa,
     tipoPago
   };
 }
@@ -2189,6 +2200,64 @@ function esPoster(producto) {
   );
 }
 
+function esVaso(producto) {
+  if (!producto) return false;
+  const n = (producto.nombre || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  const c = (producto.categoria || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  const b = badgeTexto(producto);
+  return n.includes("vaso") || c.includes("vaso") || b.includes("vaso");
+}
+
+function esPalomera(producto) {
+  if (!producto) return false;
+  const n = (producto.nombre || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  const c = (producto.categoria || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  const b = badgeTexto(producto);
+  return n.includes("palomera") || c.includes("palomera") || b.includes("palomera");
+}
+
+/** Costo Correos según vasos / palomeras */
+function costoEnvioCorreosDesdeCarrito() {
+  let qtyVaso = 0;
+  let qtyPalomera = 0;
+  let qtyOtros = 0;
+  let qtyTotal = 0;
+
+  carrito.forEach((item) => {
+    const prod = productosGlobal.find((p) => p.nombre === item.nombre) || item;
+    const q = Number(item.cantidad) || 0;
+    qtyTotal += q;
+
+    if (esPalomera(prod)) qtyPalomera += q;
+    else if (esVaso(prod)) qtyVaso += q;
+    else qtyOtros += q;
+  });
+
+  // Vasos + palomeras (1 de cada uno o más) → siempre $100
+  if (qtyVaso > 0 && qtyPalomera > 0) return 100;
+
+  // Solo palomeras (sin vasos): 1 = $85, 2+ = $100
+  if (qtyPalomera > 0 && qtyVaso === 0) {
+    // si también hay “otros”, con 2+ piezas en total suele ir $100
+    if (qtyPalomera >= 2) return 100;
+    if (qtyOtros > 0) return 100; // 1 palomera + otra cosa
+    return 85; // exactamente 1 palomera
+  }
+
+  // Solo vasos (sin palomeras): 1–3 = $85, 4+ = $100
+  if (qtyVaso > 0 && qtyPalomera === 0) {
+    const cuenta = qtyVaso + qtyOtros; // vasos + resto (funko, etc.)
+    return cuenta >= 4 ? 100 : 85;
+  }
+
+  // Sin vasos ni palomeras: regla general
+  return qtyTotal >= 4 ? 100 : ENVIO_COSTO_DEFAULT;
+}
+
+function hayPromoTemporada() {
+  return esPromoHalloweenActiva() || esPromoNavidadActiva();
+}
+
 function detectarFranquicia(nombre) {
   const n = (nombre || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
@@ -2324,7 +2393,8 @@ function actualizarStickyEnvio(t) {
     return;
   }
 
-  const pct = Math.min(100, Math.round((t.elegibleEnvioGratis / ENVIO_GRATIS_MIN) * 100));
+  const umbral = t.umbralEnvioGratis || ENVIO_GRATIS_MIN;
+  const pct = Math.min(100, Math.round((t.elegibleEnvioGratis / umbral) * 100));
   fill.style.width = pct + "%";
   fill.classList.remove("completo");
   text.innerHTML = `Te faltan <strong>$${t.faltaParaGratis.toLocaleString("es-MX")}</strong> para envío gratis`;
@@ -2336,10 +2406,8 @@ function actualizarEnvioGratisBar(t) {
   const text = document.getElementById("envioGratisText");
   const fill = document.getElementById("envioGratisFill");
 
-  // Si no existe el elemento, salir silenciosamente
   if (!bar || !text || !fill) return;
 
-  // Si hay póster → ocultar
   if (t?.tienePoster) {
     bar.hidden = true;
     return;
@@ -2352,7 +2420,6 @@ function actualizarEnvioGratisBar(t) {
 
   bar.hidden = false;
 
-  // Apartado → mensaje fijo
   if (t.tipoPago === "Apartado 30%") {
     text.innerHTML = `📦 En apartados <strong>no aplica envío gratis</strong>`;
     fill.style.width = "0%";
@@ -2360,7 +2427,7 @@ function actualizarEnvioGratisBar(t) {
     return;
   }
 
-  // Solo preventas → no mostrar progreso de envío gratis
+  // Preventa → sin promo Halloween/Navidad ni cupones
   if (t.tienePreventa) {
     text.innerHTML = `⚠️ En preventas <strong>no aplica</strong> envío gratis ni cupones`;
     fill.style.width = "0%";
@@ -2368,14 +2435,22 @@ function actualizarEnvioGratisBar(t) {
     return;
   }
 
-  const pct = Math.min(100, Math.round((t.elegibleEnvioGratis / ENVIO_GRATIS_MIN) * 100));
+  const umbral = t.umbralEnvioGratis || ENVIO_GRATIS_MIN;
+  const pct = Math.min(100, Math.round((t.elegibleEnvioGratis / umbral) * 100));
   fill.style.width = pct + "%";
 
   if (t.envioGratisPosible) {
     text.innerHTML = `🎉 ¡Tienes <strong>envío gratis</strong> por Correos!`;
     fill.classList.add("completo");
+  } else if (t.promoTemporadaActiva) {
+    const etiqueta = esPromoNavidadActiva() ? "🎄 Promo Navidad" : "🎃 Promo Halloween";
+    text.innerHTML =
+      `${etiqueta}: te faltan <strong>$${t.faltaParaGratis.toLocaleString("es-MX")} MXN</strong> ` +
+      `para envío gratis (desde $${umbral})`;
+    fill.classList.remove("completo");
   } else {
-    text.innerHTML = `Te faltan <strong>$${t.faltaParaGratis.toLocaleString("es-MX")} MXN</strong> para envío gratis`;
+    text.innerHTML =
+      `Te faltan <strong>$${t.faltaParaGratis.toLocaleString("es-MX")} MXN</strong> para envío gratis`;
     fill.classList.remove("completo");
   }
 }
