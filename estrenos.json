@@ -1402,5 +1402,27 @@
     "poster": "imgs/estrenos/cosecha.jpg",
     "cines": ["Cinemex"],
     "nota": "Estados Unidos"
+  },
+  {
+    "id": "babadook",
+    "titulo": "RE: El Babadook",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-12",
+    "fechaTexto": "Jueves 12 de Noviembre 2026",
+    "poster": "imgs/estrenos/babadook.jpg",
+    "cines": ["Cinepolis"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "pagana",
+    "titulo": "Fiesta Pagana",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-06",
+    "fechaTexto": "Viernes 06 de Noviembre 2026",
+    "poster": "imgs/estrenos/pagana.jpg",
+    "cines": ["Cinepolis"],
+    "nota": "España"
   }
 ]
