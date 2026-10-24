@@ -1145,7 +1145,7 @@ function actualizarCarritoUI() {
              : "🎃 Promo Halloween activa: no aplican cupones. Envío gratis desde $350 y 4 vasos = 1 extra."}
          </p>
        ` : t.tienePreventa ? `
-         <p class="cart-summary-note">⚠️ En preventas no aplican promo de envío, cupones ni vasos de regalo.</p>
+         <p class="cart-summary-note">⚠️ En preventas no aplican promo de envío, cupones ni promociones por temporada.</p>
        ` : cuponAplicado ? `
           <div class="cart-coupon-activo">
             <span>Cupón <strong>${cuponAplicado.codigo}</strong> aplicado</span>
