@@ -90,8 +90,27 @@ let cuponAplicado = null; // { codigo, descuento, tipo }
 
 function esPreventa(producto) {
   if (!producto) return false;
+
   const b = badgeTexto(producto);
-  return b.includes("preventa");
+  const n = (producto.nombre || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+  const c = (producto.categoria || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+  const tipo = String(producto.tipo || producto.etiqueta || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+
+  return (
+    b.includes("preventa") ||
+    n.includes("preventa") ||
+    c.includes("preventa") ||
+    tipo.includes("preventa")
+  );
 }
 
 function calcularTotalesCarrito() {
@@ -1031,6 +1050,17 @@ function actualizarCarritoUI() {
   });
 
   const t = calcularTotalesCarrito();
+
+    // Quitar aviso de promo del DOM si hay preventa
+    const promoEl = document.querySelector(
+      ".cart-promo-halloween, .cart-promo-navidad, #cartPromoTemporada"
+    );
+    if (promoEl) {
+      promoEl.hidden = t.tienePreventa || !t.promoTemporadaActiva;
+    }
+
+    actualizarEnvioGratisBar(t);
+    actualizarStickyEnvio(t);
 
   // Contar vasos (promo Halloween)
     const cantidadVasos = carrito.reduce((acc, item) => {
@@ -2281,7 +2311,7 @@ function aplicarCupon() {
       const codigo = (input.value || "").trim().toUpperCase();
 
       // Bloqueo por promo Halloween
-     if (esPromoHalloweenActiva() || esPromoNavidadActiva()) {
+    if (t.promoTemporadaActiva && !t.tienePreventa) {
        cuponAplicado = null;
        msg.hidden = false;
        msg.textContent = esPromoNavidadActiva()
