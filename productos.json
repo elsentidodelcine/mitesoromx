@@ -1,6 +1,6 @@
 [
 
-  { "nombre": "Preventa Palomera Scream Cinemex", "categoria": "Peliculas", "precio": 750, "imagen": "imgs/scream.jpg" ,"badge": "preventa", "stock": 6},
+  { "nombre": "Preventa Palomera Scream Cinemex", "categoria": "Peliculas", "precio": 750, "imagen": "imgs/scream.jpeg" ,"badge": "preventa", "stock": 6},
   { "nombre": "Preventa Palomera Pochita Cinemex", "categoria": "Peliculas", "precio": 740, "imagen": "imgs/pochy.jpeg" ,"badge": "preventa", "stock": 5},
   { "nombre": "Preventa 2 Vasos Pochita Cinemex", "categoria": "Peliculas", "precio": 480, "imagen": "imgs/pochi123.jpeg" ,"badge": "preventa", "stock": 6},
 
