@@ -3277,6 +3277,28 @@ body.dark .btn-wishlist {
   color: #fff;
 }
 
+/* Los Juegos del Hambre – Amanecer en la Cosecha */
+.carousel-slide--juegoshambre {
+  background: linear-gradient(
+    135deg,
+    #0a0a0a 0%,
+    #1a1208 25%,
+    #3d2914 50%,
+    #8b6914 75%,
+    #1a0a0a 100%
+  );
+  border-color: rgba(212, 175, 55, 0.4);
+}
+.carousel-slide--juegoshambre .banner-btn {
+  background: #d4af37;
+  color: #0a0a0a;
+  font-weight: 700;
+}
+.carousel-slide--juegoshambre .banner-btn:hover {
+  background: #fff;
+  color: #3d2914;
+}
+
 /* Navidad */
 .carousel-slide--navidad {
   background: linear-gradient(135deg, #0a1a0f 0%, #1a2e1a 30%, #3d1a1a 60%, #0d0a0a 100%);

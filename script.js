@@ -1753,16 +1753,6 @@ const PREVENTAS_ACTIVAS = [
     tema: "cinemex",
   },
   {
-    id: "godzilla-minus-one",
-    active: true,
-    emoji: "🦖",
-    titulo: "Godzilla Minus One",
-    texto: "Preventa de <strong>coleccionables de Godzilla Minus One</strong>.<br><br>El rey de los monstruos, en edición para fans y coleccionistas.",
-    link: "#catalogo",
-    linkTexto: "Ver coleccionables",
-    tema: "godzilla",
-  },
-  {
     id: "pochita-chainsaw-man",
     active: true,
     emoji: "🐶",
@@ -1771,16 +1761,6 @@ const PREVENTAS_ACTIVAS = [
     link: "#catalogo",
     linkTexto: "Ver Pochita",
     tema: "chainsaw",
-  },
-  {
-    id: "avengers-doomsday",
-    active: true,
-    emoji: "🛡️",
-    titulo: "Avengers: Doomsday",
-    texto: "Preventa de <strong>coleccionables de Avengers: Doomsday</strong>.<br><br>Aparta los tuyos antes de que se agoten.",
-    link: "preventas.html",
-    linkTexto: "Ver términos de preventa",
-    tema: "doomsday",
   },
   {
     id: "vende-con-mi-tesoro",
@@ -1793,6 +1773,16 @@ const PREVENTAS_ACTIVAS = [
     tema: "vende",
   },
   {
+      id: "godzilla-minus-one",
+      active: true,
+      emoji: "🦖",
+      titulo: "Godzilla Minus One",
+      texto: "Preventa de <strong>coleccionables de Godzilla Minus One</strong>.<br><br>El rey de los monstruos, en edición para fans y coleccionistas.",
+      link: "#catalogo",
+      linkTexto: "Ver coleccionables",
+      tema: "godzilla",
+    },
+  {
     id: "gato-con-sombrero-2026",
     active: true,
     emoji: "🎩",
@@ -1802,6 +1792,26 @@ const PREVENTAS_ACTIVAS = [
     linkTexto: "Ver coleccionables",
     tema: "gatosombrero",
   },
+  {
+    id: "juegos-hambre-amanecer-cosecha",
+    active: true,
+    emoji: "🔥",
+    titulo: "Los Juegos del Hambre: Amanecer en la Cosecha",
+    texto: "Cinemex tendrá <strong>vasos oficiales</strong> de <em>Amanecer en la Cosecha</em>.<br><br>Aparta el tuyo antes de que se agoten.",
+    link: "#catalogo",
+    linkTexto: "Ver vasos",
+    tema: "juegoshambre",
+  },
+  {
+      id: "avengers-doomsday",
+      active: true,
+      emoji: "🛡️",
+      titulo: "Avengers: Doomsday",
+      texto: "Preventa de <strong>coleccionables de Avengers: Doomsday</strong>.<br><br>Aparta los tuyos antes de que se agoten.",
+      link: "preventas.html",
+      linkTexto: "Ver términos de preventa",
+      tema: "doomsday",
+    }
 ];
 
 function initCarouselPreventas() {
