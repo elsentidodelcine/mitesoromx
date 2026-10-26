@@ -3,30 +3,156 @@
   { "nombre": "Preventa Palomera Scream Cinemex", "categoria": "Peliculas", "precio": 750, "imagen": "imgs/scream.jpeg" ,"badge": "preventa", "stock": 6},
   { "nombre": "Preventa Palomera Pochita Cinemex", "categoria": "Peliculas", "precio": 740, "imagen": "imgs/pochy.jpeg" ,"badge": "preventa", "stock": 5},
   { "nombre": "Preventa 2 Vasos Pochita Cinemex", "categoria": "Peliculas", "precio": 480, "imagen": "imgs/pochi123.jpeg" ,"badge": "preventa", "stock": 6},
-
   { "nombre": "Preventa Vaso Godzilla Cinepolis", "categoria": "Peliculas", "precio": 999, "imagen": "imgs/godzy.jpeg" ,"badge": "preventa", "stock": 4},
   { "nombre": "Preventa 2 Vasos El Gato con Sombrero Cinemex", "categoria": "Peliculas", "precio": 999, "imagen": "imgs/gato.jpeg" ,"badge": "preventa", "stock": 6},
   { "nombre": "Preventa Palomera Doom Cinepolis", "categoria": "Peliculas", "precio": 999, "imagen": "imgs/doom.jpeg" ,"badge": "preventa", "stock": 4},
-
   { "nombre": "Palomera Queen Cinepolis", "categoria": "Peliculas", "precio": 299, "imagen": "imgs/queen.jpg" ,"badge": "preventa", "stock": 1},
   { "nombre": "Palomera Street Fighter Cinepolis", "categoria": "Peliculas", "precio": 550, "imagen": "imgs/street.jpg" ,"badge": "preventa", "stock": 3},
   { "nombre": "Palomera La Isla Cinepolis", "categoria": "Infantil", "precio": 520, "imagen": "imgs/isla.jpg" ,"badge": "exclusivo", "stock": 1},
 
+
+
+
+
+
+
+
+
+
+
   { "nombre": "Funko Jack Skellington 69 Disney", "categoria": "Peliculas", "precio": 500, "imagen": "imgs/ifunko1.png" ,"badge": "funko", "stock": 1},
   { "nombre": "Funko Jack Skellington Firmado", "categoria": "Peliculas", "precio": 1000, "imagen": "imgs/ifunko15.png" ,"badge": "funko", "stock": 1},
-  { "nombre": "Vaso Beetlejuice Movie Center Beetle Juice", "categoria": "Peliculas", "precio": 50, "imagen": "imgs/coleccionable79.jpg" ,"badge": "ultimo", "stock": 1},
-  { "nombre": "Vaso Beetlejuice Figura Cinemex Beetle Juice", "categoria": "Peliculas", "precio": 100, "imagen": "imgs/coleccionable77.jpg" ,"badge": "ultimo", "stock": 1},
-  { "nombre": "Vaso Beetlejuice Figura Cinepolis Beetle Juice", "categoria": "Peliculas", "precio": 130, "imagen": "imgs/coleccionable78.jpg" ,"badge": "nuevo", "stock": 1},
-  { "nombre": "Palomera Ecto Caza Fantasmas Cinepolis", "categoria": "CazaFantasmas", "precio": 750, "imagen": "imgs/coleccionable16.jpg" ,"badge": "exclusivo", "stock": 1},
-  { "nombre": "Vaso Modelo 1 Caza Fantasmas Cinemex", "categoria": "CazaFantasmas", "precio": 250, "imagen": "imgs/coleccionable17.jpg" ,"badge": "exclusivo", "stock": 1},
-  { "nombre": "Vaso Modelo 2 Caza Fantasmas Cinemex", "categoria": "CazaFantasmas", "precio": 250, "imagen": "imgs/coleccionable18.jpg" ,"badge": "exclusivo", "stock": 1},
-  { "nombre": "Vaso Modelo 3 Caza Fantasmas Cinemex", "categoria": "CazaFantasmas", "precio": 180, "imagen": "imgs/coleccionable19.jpg" ,"badge": "exclusivo", "stock": 1},
-  { "nombre": "Vaso Modelo 4 Caza Fantasmas Cinemex", "categoria": "CazaFantasmas", "precio": 200, "imagen": "imgs/coleccionable20.jpg" ,"badge": "exclusivo", "stock": 1},
-  { "nombre": "Vaso Led Caza Fantasmas Cinepolis", "categoria": "CazaFantasmas", "precio": 150, "imagen": "imgs/coleccionable21.jpg" ,"badge": "exclusivo", "stock": 1},
+
+  { "nombre": "Palomera Ecto Caza Fantasmas Cinepolis", "categoria": "CazaFantasmas", "precio": 700, "imagen": "imgs/coleccionable16.jpg" ,"badge": "exclusivo", "stock": 1},
+  { "nombre": "Vaso Modelo 1 Caza Fantasmas Cinemex", "categoria": "CazaFantasmas", "precio": 250, "imagen": "imgs/coleccionable17.jpg" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Vaso Modelo 2 Caza Fantasmas Cinemex", "categoria": "CazaFantasmas", "precio": 250, "imagen": "imgs/coleccionable18.jpg" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Vaso Modelo 3 Caza Fantasmas Cinemex", "categoria": "CazaFantasmas", "precio": 150, "imagen": "imgs/coleccionable19.jpg" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Vaso Modelo 4 Caza Fantasmas Cinemex", "categoria": "CazaFantasmas", "precio": 250, "imagen": "imgs/coleccionable20.jpg" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Vaso Led Caza Fantasmas Cinepolis", "categoria": "CazaFantasmas", "precio": 180, "imagen": "imgs/coleccionable21.jpg" ,"badge": "ultimo", "stock": 1},
+
+  { "nombre": "2 Vasos Coca Cola Navideño Cinemex", "categoria": "CocaCola", "precio": 600, "imagen": "imgs/coca30.jpeg" ,"badge": "exclusivo", "stock": 1},
+  { "nombre": "3 Figuras Coca Cola Navideña", "categoria": "CocaCola", "precio": 100, "imagen": "imgs/vintage10.jpeg" ,"badge": "figura", "stock": 1},
+
+  { "nombre": "Postal Godzilla Minus One", "categoria": "Godzilla", "precio": 200, "imagen": "imgs/nuevo5.jpg" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "3 Vasos Godzilla Figuras Cinemex", "categoria": "Godzilla", "precio": 1000, "imagen": "imgs/godzilla30.jpeg" ,"badge": "exclusivo", "stock": 1},
+  { "nombre": "Palomera Metalica Godzilla Cinemex", "categoria": "Godzilla", "precio": 500, "imagen": "imgs/coleccionable1.jpg" ,"badge": "exclusivo", "stock": 1},
+  { "nombre": "Vaso Godzilla Carls Jr Model2 ", "categoria": "Godzilla", "precio": 60, "imagen": "imgs/coleccionable120.jpg" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Vaso Godzilla Movie Center ", "categoria": "Godzilla", "precio": 60, "imagen": "imgs/coleccionable121.jpg" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Vaso Godzilla Cinemex Incluye Figura King Kong", "categoria": "Godzilla", "precio": 130, "imagen": "imgs/coleccionable122.jpg" ,"badge": "ultimo", "stock": 1},
+
+  { "nombre": "Postal SpiderMan 3D", "categoria": "SpiderMan", "precio": 100, "imagen": "imgs/nuevo2.jpg" ,"badge": "nuevo", "stock": 1},
+  { "nombre": "Postal SpiderMan MacroXE", "categoria": "SpiderMan", "precio": 150, "imagen": "imgs/nuevo3.jpg" ,"badge": "nuevo", "stock": 1},
+  { "nombre": "Palomera SpiderMan Cinemex", "categoria": "SpiderMan", "precio": 500, "imagen": "imgs/spidern23.jpg" ,"badge": "exclusivo", "stock": 1},
+  { "nombre": "Vaso SpiderMan Busto Cinepolis", "categoria": "SpiderMan", "precio": 300, "imagen": "imgs/spidern19.jpg" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Vaso 3D SpiderMan Cinemex", "categoria": "SpiderMan", "precio": 500, "imagen": "imgs/spidern14.jpg" ,"badge": "exclusivo", "stock": 1},
+  { "nombre": "Vaso SpiderMan Multiverso Cinepolis", "categoria": "SpiderMan", "precio": 200, "imagen": "imgs/spidern16.jpg" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Vaso SpiderMan Movie Center", "categoria": "SpiderMan", "precio": 200, "imagen": "imgs/spider8.png" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Vaso SpiderMan Cinepolis", "categoria": "SpiderMan", "precio": 200, "imagen": "imgs/spidern18.jpg" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Vaso SpiderMan Busto Cinemex", "categoria": "SpiderMan", "precio": 300, "imagen": "imgs/spidern20.jpg" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Palomera SpiderMan Busto Cinepolis", "categoria": "SpiderMan", "precio": 600, "imagen": "imgs/spidern22.jpg" ,"badge": "exclusivo", "stock":1},
+  { "nombre": "Palomera SpiderMan Mano Cinepolis", "categoria": "SpiderMan", "precio": 600, "imagen": "imgs/spidern21.jpg" ,"badge": "exclusivo", "stock": 1},
+  { "nombre": "Peon SpiderMan", "categoria": "SpiderMan", "precio": 150, "imagen": "imgs/spider30.jpeg" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Funko SpiderMan SE", "categoria": "SpiderMan", "precio": 500, "imagen": "imgs/spidern8.jpg" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko 1560 SpiderMan", "categoria": "SpiderMan", "precio": 500, "imagen": "imgs/spidern7.jpg" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko SpiderMan 1160", "categoria": "SpiderMan", "precio": 500, "imagen": "imgs/spidern3.jpg" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko SpiderMan 1159", "categoria": "SpiderMan", "precio": 500, "imagen": "imgs/spidern5.jpg" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko SpiderMan 913", "categoria": "SpiderMan", "precio": 500, "imagen": "imgs/spidern3.jpg" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko SpiderMan 1073", "categoria": "SpiderMan", "precio": 500, "imagen": "imgs/spidern6.jpg" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko SpiderMan 923", "categoria": "SpiderMan", "precio": 500, "imagen": "imgs/spidern12.jpg" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko SpiderMan 574", "categoria": "SpiderMan", "precio": 500, "imagen": "imgs/spidern11.jpg" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko SpiderMan 395", "categoria": "SpiderMan", "precio": 500, "imagen": "imgs/spidern10.jpg" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko SpiderGirl 955", "categoria": "SpiderMan", "precio": 500, "imagen": "imgs/spidern9.jpg" ,"badge": "funko", "stock": 1},
+  { "nombre": "Album de Estampas SpiderMan Panini Model3", "categoria": "SpiderMan", "precio": 50, "imagen": "imgs/aspiderman3.png" ,"badge": "libro", "stock": 1},
+  { "nombre": "Album de Estampas SpiderMan Panini Model5", "categoria": "SpiderMan", "precio": 20, "imagen": "imgs/aspiderman5.png" ,"badge": "libro", "stock": 1},
+  { "nombre": "Album de Estampas SpiderMan Panini Model6", "categoria": "SpiderMan", "precio": 25, "imagen": "imgs/aspiderman6.png" ,"badge": "libro", "stock": 1},
+  { "nombre": "Figura SpiderMan", "categoria": "SpiderMan", "precio": 150, "imagen": "imgs/aspiderman7.png" ,"badge": "figura", "stock": 1},
+  { "nombre": "Figura Iron Spider", "categoria": "SpiderMan", "precio": 150, "imagen": "imgs/aspiderman8.png" ,"badge": "figura", "stock": 1},
+  { "nombre": "Figura Venom", "categoria": "SpiderMan", "precio": 150, "imagen": "imgs/aspiderman18.png" ,"badge": "figura", "stock": 1},
+
+  { "nombre": "1 Gorra Batman Model 1 Cinepolis", "categoria": "DC", "precio": 100, "imagen": "imgs/gorra2.jpeg" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "1 Gorra Batman Model 2 Cinepolis", "categoria": "DC", "precio": 100, "imagen": "imgs/gorra4.jpeg" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "1 Gorra Batman Model 3 Cinepolis", "categoria": "DC", "precio": 100, "imagen": "imgs/gorra5.jpeg" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Album de Estampas Batman Panini Model1", "categoria": "DC", "precio": 100, "imagen": "imgs/fdc1.png" ,"badge": "libro", "stock": 1},
+  { "nombre": "Album de Estampas Batman Panini Model2", "categoria": "DC", "precio": 20, "imagen": "imgs/fdc2.png" ,"badge": "libro", "stock": 1},
+  { "nombre": "Poster de Batman", "categoria": "Posters", "precio": 400, "imagen": "imgs/20.jpeg" ,"badge": "poster", "stock": 1},
+
+  { "nombre": "Termo Superman Cinepolis DC", "categoria": "DC", "precio": 200, "imagen": "imgs/coleccionable108.jpg" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Vaso Superman Cinepolis DC", "categoria": "DC", "precio": 150, "imagen": "imgs/coleccionable109.jpg" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Vaso Supergirl Cinepolis DC", "categoria": "DC", "precio": 450, "imagen": "imgs/coleccionable110.jpg" ,"badge": "exclusivo", "stock": 1},
+
+  { "nombre": "Palomera Iron Man 100 Disney Cinemex Marvel", "categoria": "Iron Man", "precio": 400, "imagen": "imgs/ironman1.png" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Palomera Guantelete Iron Man Cinemex Marvel", "categoria": "Iron Man", "precio": 400, "imagen": "imgs/guante2.png" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Funko Iron Man 626 Marvel", "categoria": "Iron Man", "precio": 150, "imagen": "imgs/davengers11.png" ,"badge": "oferta", "stock": 1, "descripcion":  "Detalle en caja"},
+  { "nombre": "Funko 580 Iron Man Marvel", "categoria": "Iron Man", "precio": 500, "imagen": "imgs/funko6.png" ,"badge": "funko", "stock": 1},
+  { "nombre": "Vaso Civil War Cinepolis Marvel", "categoria": "Iron Man", "precio": 130, "imagen": "imgs/coleccionable13.jpg" ,"badge": "ultimo", "stock": 1},
+
+  { "nombre": "Vaso Thanos Avengers Cinepolis Marvel", "categoria": "Marvel", "precio": 150, "imagen": "imgs/coleccionable12.jpg" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Palomera Guantelete Thanos Cinemex Marvel", "categoria": "Marvel", "precio": 400, "imagen": "imgs/guante.png" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Palomera Thanos Cinemex + Funko Thanos 533 Marvel", "categoria": "Marvel", "precio": 600, "imagen": "imgs/thanos1.png" ,"badge": "exclusivo", "stock": 1},
+  { "nombre": "Palomera Thanos Cinemex Marvel", "categoria": "Marvel", "precio": 300, "imagen": "imgs/davengers9.png" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Funko Thanos 533 Marvel", "categoria": "Marvel", "precio": 300, "imagen": "imgs/davengers10.png" ,"badge": "funko", "stock": 1},
+  { "nombre": "Figura Thanos Marvel", "categoria": "Marvel", "precio": 300, "imagen": "imgs/davengers3.png" ,"badge": "figura", "stock": 1},
+  { "nombre": "Lego Thanos", "categoria": "Marvel", "precio": 300, "imagen": "imgs/fantastico31.jpeg" ,"badge": "figura", "stock": 1},
+
+  { "nombre": "Funko Deadpool 320 Marvel", "categoria": "Deadpool", "precio": 500, "imagen": "imgs/dead1.png" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko Deadpool 777 Marvel", "categoria": "Deadpool", "precio": 500, "imagen": "imgs/dead2.png" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko Deadpool 1343 Marvel", "categoria": "Deadpool", "precio": 500, "imagen": "imgs/dead3.png" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko Deadpool 779 Marvel", "categoria": "Deadpool", "precio": 400, "imagen": "imgs/dead4.png" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko Scarlet Witch Marvel 1034", "categoria": "Marvel", "precio": 500, "imagen": "imgs/wanda.png" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko Scarlet Witch Marvel 823", "categoria": "Marvel", "precio": 700, "imagen": "imgs/wanda.png" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko Jean Grey 645 Marvel", "categoria": "Marvel", "precio": 200, "imagen": "imgs/xmen.png" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko Doctor Strange 1008 Marvel", "categoria": "Marvel", "precio": 350, "imagen": "imgs/doc2.png" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko Doctor Strange 1032 Marvel", "categoria": "Marvel", "precio": 300, "imagen": "imgs/doc3.png" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko Doctor Strange 874 Marvel", "categoria": "Marvel", "precio": 300, "imagen": "imgs/doc.png" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko Black Widow 609 Marvel", "categoria": "Marvel", "precio": 150, "imagen": "imgs/davengers14.png" ,"badge": "funko", "stock": 1},
+  { "nombre": "Vaso Hulk Avengers Cinepolis Marvel", "categoria": "Marvel", "precio": 130, "imagen": "imgs/coleccionable10.jpg" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Vaso Deadpool Wolverine Cinemex Buy Me Marvel", "categoria": "Deadpool", "precio": 400, "imagen": "imgs/deadpool5.png" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Vaso Deadpool Wolverine Cinemex Zombie Marvel", "categoria": "Deadpool", "precio": 400, "imagen": "imgs/deadpool6.png" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Vaso Deadpool Wolverine Carls Jr Marvel", "categoria": "Deadpool", "precio": 80, "imagen": "imgs/deadpool8.png" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Palomera Deadpool Cinepolis Marvel", "categoria": "Deadpool", "precio": 500, "imagen": "imgs/deadpool10.png" ,"badge": "exclusivo", "stock": 1},
+
+  { "nombre": "Funko Terminator 820", "categoria": "Peliculas", "precio": 300, "imagen": "imgs/ifunko4.png" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko 991 Green Goblin Marvel", "categoria": "Marvel", "precio": 300, "imagen": "imgs/davengers7.png" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko Madam Hel 862 Marvel", "categoria": "Marvel", "precio": 150, "imagen": "imgs/davengers15.png" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko Wonder Woman 393 DC", "categoria": "DC", "precio": 200, "imagen": "imgs/fdc5.png" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko Loki 985 y Kid Loki 900 Marvel", "categoria": "Marvel", "precio": 500, "imagen": "imgs/davengers16.png" ,"badge": "funko", "stock": 1},
+  { "nombre": "Vaso Deadpool y Wolverine Cinemex Marvel", "categoria": "Deadpool", "precio": 100, "imagen": "imgs/coleccionable14.jpg" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Vaso Deadpool Wolverine Movie Center Marvel", "categoria": "Deadpool", "precio": 130, "imagen": "imgs/deadpool7.png" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Vaso Deadpool Cinepolis Marvel", "categoria": "Deadpool", "precio": 130, "imagen": "imgs/deadpool9.png" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Vaso Deadpool Wolverine Cinemex Marvel Model2", "categoria": "Deadpool", "precio": 130, "imagen": "imgs/deadpool11.png" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Funko Peacemaker Eagly 1236", "categoria": "DC", "precio": 400, "imagen": "imgs/fdc10.png" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko Peacemaker With Eagly 1232", "categoria": "DC", "precio": 400, "imagen": "imgs/fdc11.png" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko Peacemaker 1237", "categoria": "DC", "precio": 600, "imagen": "imgs/fdc12.png" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko Peacemaker Vigilante 1234", "categoria": "DC", "precio": 400, "imagen": "imgs/fdc13.png" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko Robin DC 377", "categoria": "DC", "precio": 200, "imagen": "imgs/robin.png" ,"badge": "oferta", "stock": 1, "descripcion":  "Detalle en caja"},
+  { "nombre": "Funko Joker 375", "categoria": "Joker", "precio": 500, "imagen": "imgs/fdc9.png" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko Joker 414", "categoria": "Joker", "precio": 400, "imagen": "imgs/joker6.png" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko Harley Quinn 371", "categoria": "Joker", "precio": 500, "imagen": "imgs/fdc14.png" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko Harley Quinn 352", "categoria": "Joker", "precio": 500, "imagen": "imgs/harley1.png" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko Harley Quinn 376", "categoria": "Joker", "precio": 500, "imagen": "imgs/fdc8.png" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko Harley Quinn 299", "categoria": "Joker", "precio": 400, "imagen": "imgs/harley2.png" ,"badge": "oferta", "stock": 1, "descripcion":  "Detalle en caja (tapa)"},
+  { "nombre": "Funko Harley Quinn 1111", "categoria": "Joker", "precio": 150, "imagen": "imgs/harley3.png" ,"badge": "oferta", "stock": 1, "descripcion":  "Detalle en caja"},
+  { "nombre": "Funko Joker 535", "categoria": "Joker", "precio": 500, "imagen": "imgs/joker8.png" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko Joker 337", "categoria": "Joker", "precio": 500, "imagen": "imgs/joker11.png" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko Joker 53", "categoria": "Joker", "precio": 450, "imagen": "imgs/joker7.png" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko Joker 36", "categoria": "Joker", "precio": 700, "imagen": "imgs/joker9.png" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko Joker 359", "categoria": "Joker", "precio": 500, "imagen": "imgs/joker10.png" ,"badge": "funko", "stock": 1},
+  { "nombre": "Funko Joker 358", "categoria": "Joker", "precio": 500, "imagen": "imgs/fdc7.png" ,"badge": "funko", "stock": 1},
+
+  { "nombre": "Vaso Hulk Guinness Cinepolis Marvel", "categoria": "Marvel", "precio": 150, "imagen": "imgs/coleccionable9.jpg" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Vaso Thanos Guinness Cinepolis Marvel", "categoria": "Marvel", "precio": 150, "imagen": "imgs/coleccionable11.jpg" ,"badge": "ultimo", "stock": 1},
+
+
+
+
+
+
+
+
+
   { "nombre": "Funko Skeletor on Night Stalker", "categoria": "Peliculas", "precio": 1000, "imagen": "imgs/ifunko12.png" ,"badge": "funko", "stock": 1},
   { "nombre": "Funko Night King Juego de Tronos 74", "categoria": "Peliculas", "precio": 500, "imagen": "imgs/ifunko11.png" ,"badge": "funko", "stock": 1},
   { "nombre": "Album de Estampas Calaveritas Panini", "categoria": "Album Estampas", "precio": 500, "imagen": "imgs/halbum18.png" ,"badge": "libro", "stock": 1},
-
   { "nombre": "3 Sobres Album de Estampas La Liga de la Justicia Panini", "categoria": "Album Estampas", "precio": 45, "imagen": "imgs/sobres1.jpg" ,"badge": "libro", "stock": 1},
   { "nombre": "3 Sobres Album de Estampas La Bella y la Bestia Panini", "categoria": "Album Estampas", "precio": 45, "imagen": "imgs/sobres2.jpg" ,"badge": "libro", "stock": 1},
   { "nombre": "3 Sobres Album de Estampas Gravity Falls Panini", "categoria": "Album Estampas", "precio": 45, "imagen": "imgs/sobres3.jpg" ,"badge": "libro", "stock": 1},
@@ -40,19 +166,20 @@
   { "nombre": "Póster El Heladero", "categoria": "Poster", "precio": 150, "imagen": "imgs/pos2.png" ,"badge": "poster", "stock": 1},
   { "nombre": "Póster Avengers Doomsday", "categoria": "Poster", "precio": 500, "imagen": "imgs/pos3.png" ,"badge": "poster", "stock": 1},
 
-
+  { "nombre": "Vaso Beetlejuice Movie Center Beetle Juice", "categoria": "Peliculas", "precio": 50, "imagen": "imgs/coleccionable79.jpg" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Vaso Beetlejuice Figura Cinemex Beetle Juice", "categoria": "Peliculas", "precio": 100, "imagen": "imgs/coleccionable77.jpg" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Vaso Beetlejuice Figura Cinepolis Beetle Juice", "categoria": "Peliculas", "precio": 130, "imagen": "imgs/coleccionable78.jpg" ,"badge": "nuevo", "stock": 1},
 
   { "nombre": "3 Vasos Paw Patrol Dino Movie Cinepolis", "categoria": "Paw Patrol", "precio": 300, "imagen": "imgs/paw100.jpeg" ,"badge": "exclusivo", "stock": 1},
   { "nombre": "1 Gorra The Flash Cinepolis", "categoria": "DC", "precio": 100, "imagen": "imgs/gorra1.jpeg" ,"badge": "nuevo", "stock": 1},
-  { "nombre": "1 Gorra Batman Model 1 Cinepolis", "categoria": "DC", "precio": 100, "imagen": "imgs/gorra2.jpeg" ,"badge": "nuevo", "stock": 1},
-  { "nombre": "1 Gorra Wonder Woman Cinepolis", "categoria": "DC", "precio": 100, "imagen": "imgs/gorra3.jpeg" ,"badge": "nuevo", "stock": 1},
-  { "nombre": "1 Gorra Batman Model 2 Cinepolis", "categoria": "DC", "precio": 100, "imagen": "imgs/gorra4.jpeg" ,"badge": "nuevo", "stock": 1},
-  { "nombre": "1 Gorra Batman Model 3 Cinepolis", "categoria": "DC", "precio": 100, "imagen": "imgs/gorra5.jpeg" ,"badge": "nuevo", "stock": 1},
+
+
   { "nombre": "4 Figuras Looney Toons", "categoria": "Infantil", "precio": 160, "imagen": "imgs/nuevo1.jpg" ,"badge": "figura", "stock": 1},
-  { "nombre": "Postal SpiderMan 3D", "categoria": "SpiderMan", "precio": 100, "imagen": "imgs/nuevo2.jpg" ,"badge": "nuevo", "stock": 1},
-  { "nombre": "Postal SpiderMan MacroXE", "categoria": "SpiderMan", "precio": 150, "imagen": "imgs/nuevo3.jpg" ,"badge": "nuevo", "stock": 1},
+
+  { "nombre": "1 Gorra Wonder Woman Cinepolis", "categoria": "DC", "precio": 100, "imagen": "imgs/gorra3.jpeg" ,"badge": "nuevo", "stock": 1},
+
   { "nombre": "Postal El Señor de los Anillos", "categoria": "Peliculas", "precio": 100, "imagen": "imgs/nuevo4.jpg" ,"badge": "nuevo", "stock": 1},
-  { "nombre": "Postal Godzilla Minus One", "categoria": "Godzilla", "precio": 200, "imagen": "imgs/nuevo5.jpg" ,"badge": "nuevo", "stock": 1},
+
   { "nombre": "Postal Uranus", "categoria": "Pelicula", "precio": 50, "imagen": "imgs/nuevo6.jpg" ,"badge": "nuevo", "stock": 1},
   { "nombre": "Postal Mario Bros", "categoria": "Mario Bros", "precio": 100, "imagen": "imgs/nuevo7.jpg" ,"badge": "nuevo", "stock": 1},
   { "nombre": "Postal Harry Potter 25 Años", "categoria": "Harry Potter", "precio": 150, "imagen": "imgs/nuevo8.jpg" ,"badge": "nuevo", "stock": 1},
@@ -83,47 +210,39 @@
   { "nombre": "5 Figuras Patricio Vuala y Marinela", "categoria": "Bob Esponja", "precio": 500, "imagen": "imgs/cesponja12.png" ,"badge": "figura", "stock": 1},
   { "nombre": "Figura Llavero Plankton", "categoria": "Bob Esponja", "precio": 100, "imagen": "imgs/bob30.jpeg" ,"badge": "figura", "stock": 1},
 
-  { "nombre": "2 Vasos Coca Cola Navideño Cinemex", "categoria": "CocaCola", "precio": 700, "imagen": "imgs/coca30.jpeg" ,"badge": "nuevo", "stock": 1},
-  { "nombre": "3 Figuras Coca Cola Navideña", "categoria": "CocaCola", "precio": 100, "imagen": "imgs/vintage10.jpeg" ,"badge": "figura", "stock": 1},
 
-  { "nombre": "Vaso Supergirl Cinepolis DC", "categoria": "DC", "precio": 450, "imagen": "imgs/coleccionable110.jpg" ,"badge": "exclusivo", "stock": 1},
 
-  { "nombre": "Funko Peacemaker Eagly 1236", "categoria": "DC", "precio": 400, "imagen": "imgs/fdc10.png" ,"badge": "funko", "stock": 1},
-  { "nombre": "Funko Peacemaker With Eagly 1232", "categoria": "DC", "precio": 400, "imagen": "imgs/fdc11.png" ,"badge": "funko", "stock": 1},
-  { "nombre": "Funko Peacemaker 1237", "categoria": "DC", "precio": 600, "imagen": "imgs/fdc12.png" ,"badge": "funko", "stock": 1},
-  { "nombre": "Funko Peacemaker Vigilante 1234", "categoria": "DC", "precio": 400, "imagen": "imgs/fdc13.png" ,"badge": "funko", "stock": 1},
+
   { "nombre": "Vaso Shazam Cinemex y 1 Vaso Cinepoilis DC", "categoria": "DC", "precio": 200, "imagen": "imgs/coleccionable97.jpg" ,"badge": "nuevo", "stock": 1},
-  { "nombre": "Termo Superman Cinepolis DC", "categoria": "DC", "precio": 200, "imagen": "imgs/coleccionable108.jpg" ,"badge": "nuevo", "stock": 1},
-  { "nombre": "Vaso Superman Cinepolis DC", "categoria": "DC", "precio": 150, "imagen": "imgs/coleccionable109.jpg" ,"badge": "nuevo", "stock": 1},
+
   { "nombre": "Vaso Blue Beetle con Figura Cinemex DC", "categoria": "DC", "precio": 130, "imagen": "imgs/coleccionable95.jpg" ,"badge": "nuevo", "stock": 1},
   { "nombre": "Vaso The Flash Cinemex DC", "categoria": "DC", "precio": 100, "imagen": "imgs/coleccionable103.jpg" ,"badge": "nuevo", "stock": 1},
   { "nombre": "Termo The Flash Cinepolis DC", "categoria": "DC", "precio": 150, "imagen": "imgs/coleccionable101.jpg" ,"badge": "nuevo", "stock": 1},
   { "nombre": "Palomera The Flash Cinepolis DC", "categoria": "DC", "precio": 300, "imagen": "imgs/coleccionable100.jpg" ,"badge": "nuevo", "stock": 1},
   { "nombre": "Figura The Flash", "categoria": "DC", "precio": 150, "imagen": "imgs/fdc4.png" ,"badge": "figura", "stock": 1},
-  { "nombre": "Funko Robin DC 377", "categoria": "DC", "precio": 200, "imagen": "imgs/robin.png" ,"badge": "oferta", "stock": 1, "descripcion":  "Detalle en caja"},
-  { "nombre": "Album de Estampas Batman Panini Model1", "categoria": "DC", "precio": 100, "imagen": "imgs/fdc1.png" ,"badge": "libro", "stock": 1},
-  { "nombre": "Album de Estampas Batman Panini Model2", "categoria": "DC", "precio": 20, "imagen": "imgs/fdc2.png" ,"badge": "libro", "stock": 1},
-  { "nombre": "Funko Wonder Woman 393 DC", "categoria": "DC", "precio": 200, "imagen": "imgs/fdc5.png" ,"badge": "funko", "stock": 1},
-  { "nombre": "Funko Wonder Woman 393 + Sin Vaso + Llavero Cinepolis DC", "categoria": "DC", "precio": 300, "imagen": "imgs/fdc6.png" ,"badge": "funko", "stock": 1},
+
+
+
+
+
+  { "nombre": "Funko Wonder Woman 393 + Sin Vaso + Llavero Cinepolis DC", "categoria": "DC", "precio": 300, "imagen": "imgs/fdc6.png" ,"badge": "funko", "stock": 0},
   { "nombre": "Figura Mr Freeze", "categoria": "DC", "precio": 100, "imagen": "imgs/dc31.jpeg" ,"badge": "figura", "stock": 1},
   { "nombre": "Figuras Robin", "categoria": "DC", "precio": 200, "imagen": "imgs/dc32.jpeg" ,"badge": "figura", "stock": 1},
 
 
 
-  { "nombre": "Vaso Deadpool y Wolverine Cinemex Marvel", "categoria": "Deadpool", "precio": 100, "imagen": "imgs/coleccionable14.jpg" ,"badge": "exclusivo", "stock": 1},
+
   { "nombre": "Vaso Deadpool y Wolverine Figura Baby Deadpool Cinemex Marvel", "categoria": "Deadpool", "precio": 150, "imagen": "imgs/coleccionable15.jpg" ,"badge": "exclusivo", "stock": 1},
 
-  { "nombre": "Vaso Deadpool Wolverine Cinemex Buy Me Marvel", "categoria": "Deadpool", "precio": 400, "imagen": "imgs/deadpool5.png" ,"badge": "exclusivo", "stock": 1},
-  { "nombre": "Vaso Deadpool Wolverine Cinemex Zombie Marvel", "categoria": "Deadpool", "precio": 200, "imagen": "imgs/deadpool6.png" ,"badge": "exclusivo", "stock": 1},
-  { "nombre": "Vaso Deadpool Wolverine Movie Center Marvel", "categoria": "Deadpool", "precio": 100, "imagen": "imgs/deadpool7.png" ,"badge": "ultimo", "stock": 1},
-  { "nombre": "Vaso Deadpool Wolverine Carls Jr Marvel", "categoria": "Deadpool", "precio": 80, "imagen": "imgs/deadpool8.png" ,"badge": "ultimo", "stock": 1},
-  { "nombre": "Vaso Deadpool Cinepolis Marvel", "categoria": "Deadpool", "precio": 100, "imagen": "imgs/deadpool9.png" ,"badge": "ultimo", "stock": 1},
-  { "nombre": "Palomera Deadpool Cinepolis Marvel", "categoria": "Deadpool", "precio": 400, "imagen": "imgs/deadpool10.png" ,"badge": "ultimo", "stock": 1},
-  { "nombre": "Vaso Deadpool Wolverine Cinemex Marvel Model2", "categoria": "Deadpool", "precio": 100, "imagen": "imgs/deadpool11.png" ,"badge": "ultimo", "stock": 1},
-  { "nombre": "Funko Deadpool 320 Marvel", "categoria": "Deadpool", "precio": 500, "imagen": "imgs/dead1.png" ,"badge": "funko", "stock": 1},
-  { "nombre": "Funko Deadpool 777 Marvel", "categoria": "Deadpool", "precio": 400, "imagen": "imgs/dead2.png" ,"badge": "funko", "stock": 1},
-  { "nombre": "Funko Deadpool 1343 Marvel", "categoria": "Deadpool", "precio": 400, "imagen": "imgs/dead3.png" ,"badge": "funko", "stock": 1},
-  { "nombre": "Funko Deadpool 779 Marvel", "categoria": "Deadpool", "precio": 400, "imagen": "imgs/dead4.png" ,"badge": "funko", "stock": 1},
+
+
+
+
+
+
+
+
+
 
   { "nombre": "Vaso Dragon Ball Cinepolis", "categoria": "Dragon Ball", "precio": 150, "imagen": "imgs/coleccionable72.jpg" ,"badge": "nuevo", "stock": 1},
   { "nombre": "Funko Dragon Dragon Ball Goku Black 1279", "categoria": "Dragon Ball", "precio": 700, "imagen": "imgs/goku2.png" ,"badge": "funko", "stock": 1},
@@ -132,19 +251,12 @@
   { "nombre": "Album de Estampas Dragon Ball Model1", "categoria": "Dragon Ball", "precio": 1000, "imagen": "imgs/halbum19.png" ,"badge": "libro", "stock": 1},
   { "nombre": "Album de Estampas Dragon Ball Model2", "categoria": "Dragon Ball", "precio": 1000, "imagen": "imgs/halbum20.png" ,"badge": "libro", "stock": 1},
   { "nombre": "Album de Estampas Dragon Ball Model3", "categoria": "Dragon Ball", "precio": 1000, "imagen": "imgs/halbum21.png" ,"badge": "libro", "stock": 1},
-
   { "nombre": "Funko Muzan Demon Slayer 871", "categoria": "Funko", "precio": 500, "imagen": "imgs/muzan.png" ,"badge": "funko", "stock": 1},
   { "nombre": "Funko YuGiOh 1061 Yami Bakura", "categoria": "Funko", "precio": 300, "imagen": "imgs/yugi3.png" ,"badge": "funko", "stock": 1},
   { "nombre": "Funko YuGiOh 716 Maximillion Pegasus", "categoria": "Funko", "precio": 300, "imagen": "imgs/yugi1.png" ,"badge": "funko", "stock": 1},
   { "nombre": "Funko YuGiOh 389 Blue Eyes White Dragon", "categoria": "Funko", "precio": 300, "imagen": "imgs/yugi2.png" ,"badge": "funko", "stock": 1},
 
 
-  { "nombre": "3 Vasos Godzilla Figuras Cinemex", "categoria": "Godzilla", "precio": 1200, "imagen": "imgs/godzilla30.jpeg" ,"badge": "exclusivo", "stock": 1},
-  { "nombre": "Palomera Metalica Godzilla Cinemex", "categoria": "Godzilla", "precio": 500, "imagen": "imgs/coleccionable1.jpg" ,"badge": "exclusivo", "stock": 1},
-
-  { "nombre": "Vaso Godzilla Carls Jr Model2 ", "categoria": "Godzilla", "precio": 50, "imagen": "imgs/coleccionable120.jpg" ,"badge": "ultimo", "stock": 1},
-  { "nombre": "Vaso Godzilla Movie Center ", "categoria": "Godzilla", "precio": 50, "imagen": "imgs/coleccionable121.jpg" ,"badge": "nuevo", "stock": 1},
-  { "nombre": "Vaso Godzilla Cinemex Incluye Figura King Kong", "categoria": "Godzilla", "precio": 130, "imagen": "imgs/coleccionable122.jpg" ,"badge": "nuevo", "stock": 1},
 
 
 
@@ -155,7 +267,6 @@
   { "nombre": "5 Carros Hot Wheels", "categoria": "Hot Wheels", "precio": 750, "imagen": "imgs/cars10.jpeg" ,"badge": "exclusivo", "stock": 1},
   { "nombre": "5 Carros Hot Wheels", "categoria": "Hot Wheels", "precio": 750, "imagen": "imgs/cars3.jpeg" ,"badge": "exclusivo", "stock": 1},
   { "nombre": "5 Carros Hot Wheels", "categoria": "Hot Wheels", "precio": 750, "imagen": "imgs/cars4.jpeg" ,"badge": "exclusivo", "stock": 1},
-
   { "nombre": "Cubeta Kung Fu Panda Cinemex", "categoria": "Infantil", "precio": 30, "imagen": "imgs/coleccionable22.jpg" ,"badge": "ultimo", "stock": 1},
   { "nombre": "Funko Pinocchio Disney 1029", "categoria": "Infantil", "precio": 1000, "imagen": "imgs/pinocho.png" ,"badge": "funko", "stock": 1},
   { "nombre": "Funko 1130 Tigger Disney", "categoria": "Infantil", "precio": 300, "imagen": "imgs/funko8.png" ,"badge": "funko", "stock": 1},
@@ -181,28 +292,10 @@
 
 
 
-  { "nombre": "Vaso Civil War Cinepolis Marvel", "categoria": "Iron Man", "precio": 130, "imagen": "imgs/coleccionable13.jpg" ,"badge": "exclusivo", "stock": 1},
-  { "nombre": "Palomera Iron Man 100 Disney Cinemex Marvel", "categoria": "Iron Man", "precio": 400, "imagen": "imgs/ironman1.png" ,"badge": "ultimo", "stock": 1},
-  { "nombre": "Palomera Guantelete Iron Man Cinemex Marvel", "categoria": "Iron Man", "precio": 400, "imagen": "imgs/guante2.png" ,"badge": "ultimo", "stock": 1},
-  { "nombre": "Funko Iron Man 626 Marvel", "categoria": "Iron Man", "precio": 150, "imagen": "imgs/davengers11.png" ,"badge": "oferta", "stock": 1, "descripcion":  "Detalle en caja"},
-  { "nombre": "Funko 580 Iron Man Marvel", "categoria": "Iron Man", "precio": 500, "imagen": "imgs/funko6.png" ,"badge": "funko", "stock": 1},
-
 
   { "nombre": "Vaso Joker Cinepolis DC", "categoria": "Joker", "precio": 100, "imagen": "imgs/coleccionable105.jpg" ,"badge": "ultimo", "stock": 1},
   { "nombre": "Palomera Joker Cinemex DC", "categoria": "Joker", "precio": 600, "imagen": "imgs/coleccionable104.jpg" ,"badge": "ultimo", "stock": 1},
-  { "nombre": "Funko Joker 414", "categoria": "Joker", "precio": 300, "imagen": "imgs/joker6.png" ,"badge": "funko", "stock": 1},
-  { "nombre": "Funko Joker 53", "categoria": "Joker", "precio": 450, "imagen": "imgs/joker7.png" ,"badge": "funko", "stock": 1},
-  { "nombre": "Funko Joker 535", "categoria": "Joker", "precio": 500, "imagen": "imgs/joker8.png" ,"badge": "funko", "stock": 1},
-  { "nombre": "Funko Joker 36", "categoria": "Joker", "precio": 500, "imagen": "imgs/joker9.png" ,"badge": "funko", "stock": 1},
-  { "nombre": "Funko Joker 359", "categoria": "Joker", "precio": 500, "imagen": "imgs/joker10.png" ,"badge": "funko", "stock": 1},
-  { "nombre": "Funko Joker 337", "categoria": "Joker", "precio": 500, "imagen": "imgs/joker11.png" ,"badge": "funko", "stock": 1},
-  { "nombre": "Funko Joker 358", "categoria": "Joker", "precio": 500, "imagen": "imgs/fdc7.png" ,"badge": "funko", "stock": 1},
-  { "nombre": "Funko Joker 375", "categoria": "Joker", "precio": 500, "imagen": "imgs/fdc9.png" ,"badge": "funko", "stock": 1},
-  { "nombre": "Funko Harley Quinn 352", "categoria": "Joker", "precio": 500, "imagen": "imgs/harley1.png" ,"badge": "funko", "stock": 1},
-  { "nombre": "Funko Harley Quinn 299", "categoria": "Joker", "precio": 400, "imagen": "imgs/harley2.png" ,"badge": "oferta", "stock": 1, "descripcion":  "Detalle en caja (tapa)"},
-  { "nombre": "Funko Harley Quinn 1111", "categoria": "Joker", "precio": 150, "imagen": "imgs/harley3.png" ,"badge": "oferta", "stock": 1, "descripcion":  "Detalle en caja"},
-  { "nombre": "Funko Harley Quinn 376", "categoria": "Joker", "precio": 500, "imagen": "imgs/fdc8.png" ,"badge": "funko", "stock": 1},
-  { "nombre": "Funko Harley Quinn 371", "categoria": "Joker", "precio": 500, "imagen": "imgs/fdc14.png" ,"badge": "funko", "stock": 1},
+
 
 
   { "nombre": "Vaso Jurassic World Cinemex Model1 Jurassic World", "categoria": "Jurassic World", "precio": 80, "imagen": "imgs/coleccionable58.jpg" ,"badge": "ultimo", "stock": 1},
@@ -218,34 +311,27 @@
   { "nombre": "Vaso Los 4 Fantasticos La Mole Cinepolis Marvel", "categoria": "Marvel", "precio": 250, "imagen": "imgs/coleccionable2.jpg" ,"badge": "exclusivo", "stock": 1},
   { "nombre": "Vaso Los 4 Fantasticos La Antorcha Cinepolis Marvel", "categoria": "Marvel", "precio": 350, "imagen": "imgs/coleccionable4.jpg" ,"badge": "exclusivo", "stock": 1},
   { "nombre": "Vaso Thor Guinness Cinepolis Marvel", "categoria": "Marvel", "precio": 100, "imagen": "imgs/coleccionable8.jpg" ,"badge": "ultimo", "stock": 1},
-  { "nombre": "Vaso Hulk Guinness Cinepolis Marvel", "categoria": "Marvel", "precio": 100, "imagen": "imgs/coleccionable9.jpg" ,"badge": "ultimo", "stock": 1},
-  { "nombre": "Vaso Hulk Avengers Cinepolis Marvel", "categoria": "Marvel", "precio": 130, "imagen": "imgs/coleccionable10.jpg" ,"badge": "nuevo", "stock": 1},
-  { "nombre": "Vaso Thanos Guinness Cinepolis Marvel", "categoria": "Marvel", "precio": 100, "imagen": "imgs/coleccionable11.jpg" ,"badge": "ultimo", "stock": 1},
-  { "nombre": "Vaso Thanos Avengers Cinepolis Marvel", "categoria": "Marvel", "precio": 130, "imagen": "imgs/coleccionable12.jpg" ,"badge": "nuevo", "stock": 1},
-  { "nombre": "Palomera Guantelete Thanos Cinemex Marvel", "categoria": "Marvel", "precio": 400, "imagen": "imgs/guante.png" ,"badge": "ultimo", "stock": 1},
-  { "nombre": "Palomera Thanos Cinemex + Funko Thanos 533 Marvel", "categoria": "Marvel", "precio": 600, "imagen": "imgs/thanos1.png" ,"badge": "exclusivo", "stock": 1},
-  { "nombre": "Palomera Thanos Cinemex Marvel", "categoria": "Marvel", "precio": 300, "imagen": "imgs/davengers9.png" ,"badge": "ultimo", "stock": 1},
-  { "nombre": "Funko Thanos 533 Marvel", "categoria": "Marvel", "precio": 300, "imagen": "imgs/davengers10.png" ,"badge": "funko", "stock": 1},
-  { "nombre": "Figura Thanos Marvel", "categoria": "Marvel", "precio": 230, "imagen": "imgs/davengers3.png" ,"badge": "figura", "stock": 1},
-  { "nombre": "Lego Thanos", "categoria": "Marvel", "precio": 300, "imagen": "imgs/fantastico31.jpeg" ,"badge": "figura", "stock": 1},
-  { "nombre": "Funko Scarlet Witch Marvel 1034", "categoria": "Marvel", "precio": 500, "imagen": "imgs/wanda.png" ,"badge": "funko", "stock": 1},
-  { "nombre": "Funko Scarlet Witch Marvel 823", "categoria": "Marvel", "precio": 700, "imagen": "imgs/wanda.png" ,"badge": "funko", "stock": 1},
-  { "nombre": "Funko Jean Grey 645 Marvel", "categoria": "Marvel", "precio": 200, "imagen": "imgs/xmen.png" ,"badge": "funko", "stock": 1},
+
+
+
+
+
+
   { "nombre": "Vaso Eternal con Figura Marvel", "categoria": "Marvel", "precio": 50, "imagen": "imgs/coleccionable95.jpg" ,"badge": "ultimo", "stock": 1},
   { "nombre": "3 Vasos Ms Marvel Kamala Khan y Monica Cinepolis Marvel", "categoria": "Marvel", "precio": 500, "imagen": "imgs/coleccionable88.jpg" ,"badge": "nuevo", "stock": 1},
   { "nombre": "Vaso Doctor Strange Marvel Cinepolis", "categoria": "Marvel", "precio": 60, "imagen": "imgs/coleccionable6.jpg" ,"badge": "ultimo", "stock": 0},
   { "nombre": "Doctor Strange Ojo de Agamoto Marvel", "categoria": "Marvel", "precio": 1300, "imagen": "imgs/davengers2.png" ,"badge": "exclusivo", "stock": 1},
-  { "nombre": "Funko Doctor Strange 1008 Marvel", "categoria": "Marvel", "precio": 350, "imagen": "imgs/doc2.png" ,"badge": "funko", "stock": 1},
-  { "nombre": "Funko Doctor Strange 1032 Marvel", "categoria": "Marvel", "precio": 300, "imagen": "imgs/doc3.png" ,"badge": "funko", "stock": 1},
-  { "nombre": "Funko Doctor Strange 874 Marvel", "categoria": "Marvel", "precio": 300, "imagen": "imgs/doc.png" ,"badge": "funko", "stock": 1},
-  { "nombre": "Funko Black Widow 609 Marvel", "categoria": "Marvel", "precio": 150, "imagen": "imgs/davengers14.png" ,"badge": "funko", "stock": 1},
+
+
+
+
+
 
   { "nombre": "Figura Capitan America Marvel", "categoria": "Marvel", "precio": 150, "imagen": "imgs/davengers6.png" ,"badge": "figura", "stock": 1},
   { "nombre": "Figura Moon Knight Marvel", "categoria": "Marvel", "precio": 150, "imagen": "imgs/davengers4.png" ,"badge": "figura", "stock": 1},
   { "nombre": "Figura Black Panter Marvel", "categoria": "Marvel", "precio": 150, "imagen": "imgs/davengers5.png" ,"badge": "figura", "stock": 1},
-  { "nombre": "Funko 991 Green Goblin Marvel", "categoria": "Marvel", "precio": 300, "imagen": "imgs/davengers7.png" ,"badge": "funko", "stock": 1},
-  { "nombre": "Funko Madam Hel 862 Marvel", "categoria": "Marvel", "precio": 150, "imagen": "imgs/davengers15.png" ,"badge": "funko", "stock": 1},
-  { "nombre": "Funko Loki 985 y Kid Loki 900 Marvel", "categoria": "Marvel", "precio": 400, "imagen": "imgs/davengers16.png" ,"badge": "funko", "stock": 1},
+
+
 
 
   { "nombre": "Palomera MVF4 Cinemex Minions", "categoria": "Minions", "precio": 200, "imagen": "imgs/coleccionable38.jpg" ,"badge": "ultimo", "stock": 1},
@@ -300,7 +386,7 @@
   { "nombre": "Vaso Piratas del Caribe Cinepolis", "categoria": "Peliculas", "precio": 80, "imagen": "imgs/coleccionable69.jpg" ,"badge": "ultimo", "stock": 1},
   { "nombre": "Vaso La Momia Cinepolis", "categoria": "Peliculas", "precio": 50, "imagen": "imgs/coleccionable65.jpg" ,"badge": "ultimo", "stock": 1},
   { "nombre": "Vaso Furiosa Cinemex", "categoria": "Peliculas", "precio": 50, "imagen": "imgs/coleccionable64.jpg" ,"badge": "ultimo", "stock": 1},
-  { "nombre": "Funko Terminator 820", "categoria": "Peliculas", "precio": 300, "imagen": "imgs/ifunko4.png" ,"badge": "funko", "stock": 1},
+
 
 
 
@@ -340,7 +426,8 @@
   { "nombre": "Poster de Cine Winnie The Pooh", "categoria": "Posters", "precio": 200, "imagen": "imgs/poster33.jpeg" ,"badge": "oferta", "stock": 1, "descripcion":  "Detalles"},
   { "nombre": "Poster de Cine Late Night with The Devil", "categoria": "Posters", "precio": 300, "imagen": "imgs/poster34.jpeg" ,"badge": "poster", "stock": 1},
   { "nombre": "Poster de Cine Primate", "categoria": "Posters", "precio": 150, "imagen": "imgs/poster35.jpeg" ,"badge": "poster", "stock": 1},
-  { "nombre": "Poster de Batman", "categoria": "Posters", "precio": 400, "imagen": "imgs/20.jpeg" ,"badge": "poster", "stock": 1},
+
+
 
   { "nombre": "Poster de Boulevard", "categoria": "Posters", "precio": 100, "imagen": "imgs/poster40.jpeg" ,"badge": "poster", "stock": 1},
   { "nombre": "Poster de Exit 8", "categoria": "Posters", "precio": 30, "imagen": "imgs/poster41.jpeg" ,"badge": "oferta", "stock": 1, "descripcion":  "Detalles"},
@@ -350,47 +437,6 @@
   { "nombre": "Vaso FastX Cinemex Model1 RapidosyFuriosos", "categoria": "RapidosyFuriosos", "precio": 80, "imagen": "imgs/coleccionable90.jpg" ,"badge": "ultimo", "stock": 1},
   { "nombre": "Vaso FastX Cinemex Model2 RapidosyFuriosos", "categoria": "RapidosyFuriosos", "precio": 80, "imagen": "imgs/coleccionable91.jpg" ,"badge": "ultimo", "stock": 1},
   { "nombre": "Vaso FastX Cinemex Model3 RapidosyFuriosos", "categoria": "RapidosyFuriosos", "precio": 80, "imagen": "imgs/coleccionable92.jpg" ,"badge": "ultimo", "stock": 1},
-
-
-
-  { "nombre": "Postal MacroXE SpiderMan Cinepolis", "categoria": "SpiderMan", "precio": 150, "imagen": "imgs/spidern25.jpg" ,"badge": "exclusivo", "stock": 0},
-  { "nombre": "Postal 3D SpiderMan Cinepolis", "categoria": "SpiderMan", "precio": 100, "imagen": "imgs/spidern24.jpg" ,"badge": "exclusivo", "stock": 0},
-  { "nombre": "Palomera SpiderMan Cinepolis", "categoria": "SpiderMan", "precio": 500, "imagen": "imgs/spidern2.jpg" ,"badge": "exclusivo", "stock": 0},
-  { "nombre": "Vaso SpiderMan Movie Center", "categoria": "SpiderMan", "precio": 200, "imagen": "imgs/spidern17.jpg" ,"badge": "nurvo", "stock": 1},
-  { "nombre": "Vaso Modelo 1 SpiderMan Cinepolis", "categoria": "SpiderMan", "precio": 500, "imagen": "imgs/spidern15.jpg" ,"badge": "exclusivo", "stock": 0},
-  { "nombre": "Vaso Modelo 2 SpiderMan Cinepolis", "categoria": "SpiderMan", "precio": 400, "imagen": "imgs/spidern26.jpg" ,"badge": "exclusivo", "stock": 0},
-  { "nombre": "Vaso 3D SpiderMan Cinemex", "categoria": "SpiderMan", "precio": 500, "imagen": "imgs/spidern14.jpg" ,"badge": "exclusivo", "stock": 1},
-  { "nombre": "Peon SpiderMan", "categoria": "SpiderMan", "precio": 150, "imagen": "imgs/spider30.jpeg" ,"badge": "exclusivo", "stock": 1},
-  { "nombre": "Funko 1560 SpiderMan", "categoria": "SpiderMan", "precio": 500, "imagen": "imgs/spidern7.jpg" ,"badge": "funko", "stock": 1},
-  { "nombre": "Vaso SpiderMan Busto Cinemex", "categoria": "SpiderMan", "precio": 300, "imagen": "imgs/spidern20.jpg" ,"badge": "exclusivo", "stock": 1},
-  { "nombre": "Vaso SpiderMan Busto Cinepolis", "categoria": "SpiderMan", "precio": 300, "imagen": "imgs/spidern19.jpg" ,"badge": "exclusivo", "stock": 1},
-  { "nombre": "Palomera SpiderMan Busto Cinepolis", "categoria": "SpiderMan", "precio": 600, "imagen": "imgs/spidern22.jpg" ,"badge": "exclusivo", "stock":1},
-  { "nombre": "Palomera SpiderMan Cinemex", "categoria": "SpiderMan", "precio": 500, "imagen": "imgs/spidern23.jpg" ,"badge": "exclusivo", "stock": 1},
-  { "nombre": "5 Vasos SpiderMan Multiverso Cinemex", "categoria": "SpiderMan", "precio": 1000, "imagen": "imgs/spidern13.jpg" ,"badge": "exclusivo", "stock": 0},
-  { "nombre": "Vaso SpiderMan Multiverso Cinepolis", "categoria": "SpiderMan", "precio": 200, "imagen": "imgs/spidern16.jpg" ,"badge": "exclusivo", "stock": 1},
-  { "nombre": "Palomera SpiderMan Mano Cinepolis", "categoria": "SpiderMan", "precio": 600, "imagen": "imgs/spidern21.jpg" ,"badge": "exclusivo", "stock": 1},
-  { "nombre": "Vaso SpiderMan Cinepolis", "categoria": "SpiderMan", "precio": 200, "imagen": "imgs/spidern18.jpg" ,"badge": "exclusivo", "stock": 1},
-  { "nombre": "Vaso SpiderMan Movie Center", "categoria": "SpiderMan", "precio": 200, "imagen": "imgs/spider8.png" ,"badge": "ultimo", "stock": 1},
-  { "nombre": "Album de Estampas SpiderMan Panini Model1", "categoria": "SpiderMan", "precio": 20, "imagen": "imgs/aspiderman1.png" ,"badge": "libro", "stock": 0},
-  { "nombre": "Album de Estampas SpiderMan Panini Model2", "categoria": "SpiderMan", "precio": 25, "imagen": "imgs/aspiderman2.png" ,"badge": "libro", "stock": 0},
-  { "nombre": "Album de Estampas SpiderMan Panini Model3", "categoria": "SpiderMan", "precio": 50, "imagen": "imgs/aspiderman3.png" ,"badge": "libro", "stock": 1},
-  { "nombre": "Album de Estampas SpiderMan Panini Model4", "categoria": "SpiderMan", "precio": 25, "imagen": "imgs/aspiderman4.png" ,"badge": "libro", "stock": 0},
-  { "nombre": "Album de Estampas SpiderMan Panini Model5", "categoria": "SpiderMan", "precio": 20, "imagen": "imgs/aspiderman5.png" ,"badge": "libro", "stock": 1},
-  { "nombre": "Album de Estampas SpiderMan Panini Model6", "categoria": "SpiderMan", "precio": 25, "imagen": "imgs/aspiderman6.png" ,"badge": "libro", "stock": 1},
-  { "nombre": "Figura SpiderMan", "categoria": "SpiderMan", "precio": 150, "imagen": "imgs/aspiderman7.png" ,"badge": "figura", "stock": 1},
-  { "nombre": "Figura Iron Spider", "categoria": "SpiderMan", "precio": 150, "imagen": "imgs/aspiderman8.png" ,"badge": "figura", "stock": 1},
-  { "nombre": "Figura Venom", "categoria": "SpiderMan", "precio": 150, "imagen": "imgs/aspiderman18.png" ,"badge": "figura", "stock": 1},
-  { "nombre": "Funko SpiderMan 574", "categoria": "SpiderMan", "precio": 500, "imagen": "imgs/spidern11.jpg" ,"badge": "funko", "stock": 1},
-  { "nombre": "Funko SpiderMan 1160", "categoria": "SpiderMan", "precio": 500, "imagen": "imgs/spidern3.jpg" ,"badge": "funko", "stock": 1},
-  { "nombre": "Funko SpiderGirl 955", "categoria": "SpiderMan", "precio": 500, "imagen": "imgs/spidern9.jpg" ,"badge": "funko", "stock": 1},
-  { "nombre": "Funko SpiderMan 1159", "categoria": "SpiderMan", "precio": 500, "imagen": "imgs/spidern5.jpg" ,"badge": "funko", "stock": 1},
-  { "nombre": "Funko SpiderMan 913", "categoria": "SpiderMan", "precio": 500, "imagen": "imgs/spidern3.jpg" ,"badge": "funko", "stock": 1},
-  { "nombre": "Funko SpiderMan 923", "categoria": "SpiderMan", "precio": 500, "imagen": "imgs/spidern12.jpg" ,"badge": "funko", "stock": 1},
-  { "nombre": "Funko SpiderMan 395", "categoria": "SpiderMan", "precio": 500, "imagen": "imgs/spidern10.jpg" ,"badge": "funko", "stock": 1},
-  { "nombre": "Funko SpiderMan 1073", "categoria": "SpiderMan", "precio": 500, "imagen": "imgs/spidern6.jpg" ,"badge": "funko", "stock": 1},
-  { "nombre": "Funko SpiderMan SE", "categoria": "SpiderMan", "precio": 500, "imagen": "imgs/spidern8.jpg" ,"badge": "funko", "stock": 1},
-
-
 
   { "nombre": "Vaso The Mandalorian and Grogu Cinepolis", "categoria": "Star Wars", "precio": 350, "imagen": "imgs/coleccionable86.jpg" ,"badge": "exclusivo", "stock": 1},
   { "nombre": "Vaso Rogue One Cinepolis Star Wars", "categoria": "Star Wars", "precio": 100, "imagen": "imgs/coleccionable83.jpg" ,"badge": "ultimo", "stock": 1},
@@ -709,5 +755,15 @@
   { "nombre": "Vaso Animales Fantasticos Cinepolis", "categoria": "Peliculas", "precio": 100, "imagen": "imgs/harry.png" ,"badge": "oferta", "stock": 0, "descripcion":  "Detalle en boca de la tapa"},
   { "nombre": "Album de Estampas Liga Bancomer Panini Model1", "categoria": "Album Estampas", "precio": 20, "imagen": "imgs/halbum3.png" ,"badge": "libro", "stock": 0},
   { "nombre": "Album de Estampas Toy Story 4 Panini Model1", "categoria": "Toy Story", "precio": 20, "imagen": "imgs/halbum5.png" ,"badge": "libro", "stock": 0},
-  { "nombre": "Album de Estampas Lightyear Panini Model1", "categoria": "Toy Story", "precio": 25, "imagen": "imgs/halbum6.png" ,"badge": "libro", "stock": 0}
+  { "nombre": "Album de Estampas Lightyear Panini Model1", "categoria": "Toy Story", "precio": 25, "imagen": "imgs/halbum6.png" ,"badge": "libro", "stock": 0},
+  { "nombre": "Postal MacroXE SpiderMan Cinepolis", "categoria": "SpiderMan", "precio": 150, "imagen": "imgs/spidern25.jpg" ,"badge": "exclusivo", "stock": 0},
+  { "nombre": "Postal 3D SpiderMan Cinepolis", "categoria": "SpiderMan", "precio": 100, "imagen": "imgs/spidern24.jpg" ,"badge": "exclusivo", "stock": 0},
+  { "nombre": "Palomera SpiderMan Cinepolis", "categoria": "SpiderMan", "precio": 500, "imagen": "imgs/spidern2.jpg" ,"badge": "exclusivo", "stock": 0},
+  { "nombre": "Vaso SpiderMan Movie Center", "categoria": "SpiderMan", "precio": 200, "imagen": "imgs/spidern17.jpg" ,"badge": "nuevo", "stock": 0},
+  { "nombre": "Vaso Modelo 1 SpiderMan Cinepolis", "categoria": "SpiderMan", "precio": 500, "imagen": "imgs/spidern15.jpg" ,"badge": "exclusivo", "stock": 0},
+  { "nombre": "Vaso Modelo 2 SpiderMan Cinepolis", "categoria": "SpiderMan", "precio": 400, "imagen": "imgs/spidern26.jpg" ,"badge": "exclusivo", "stock": 0},
+  { "nombre": "5 Vasos SpiderMan Multiverso Cinemex", "categoria": "SpiderMan", "precio": 1000, "imagen": "imgs/spidern13.jpg" ,"badge": "exclusivo", "stock": 0},
+  { "nombre": "Album de Estampas SpiderMan Panini Model1", "categoria": "SpiderMan", "precio": 20, "imagen": "imgs/aspiderman1.png" ,"badge": "libro", "stock": 0},
+  { "nombre": "Album de Estampas SpiderMan Panini Model2", "categoria": "SpiderMan", "precio": 25, "imagen": "imgs/aspiderman2.png" ,"badge": "libro", "stock": 0},
+  { "nombre": "Album de Estampas SpiderMan Panini Model4", "categoria": "SpiderMan", "precio": 25, "imagen": "imgs/aspiderman4.png" ,"badge": "libro", "stock": 0}
 ]

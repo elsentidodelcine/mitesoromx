@@ -1122,36 +1122,33 @@ function actualizarCarritoUI() {
             }
           </span>
         </div>
-        ${t.tienePreventa ? `
-          <p class="cart-summary-note">* En preventas no aplica envío gratis ni cupones</p>
-        ` : ""}
         ${t.tienePoster ? `
           <p class="cart-summary-note">
             📦 Este pedido incluye póster(es): se envía por <strong>Mexpost, Estafeta o FedEx</strong>.
             El costo exacto se cotiza según tu CP (aprox. $150 – $600).
           </p>
         ` : ""}
-        ${avisoHalloweenVasos}
+        ${!t.tienePreventa ? avisoHalloweenVasos : ""}
         <div class="cart-summary-row cart-summary-total">
           <span>Total</span>
           <span>$${t.total.toLocaleString("es-MX")} MXN</span>
         </div>
-      </div>
+        </div>
 
-       ${(esPromoHalloweenActiva() || esPromoNavidadActiva()) && !t.tienePreventa ? `
-         <p class="cart-summary-note cart-promo-halloween">
-           ${esPromoNavidadActiva()
-             ? "🎄 Promo Navidad activa: no aplican cupones. Envío gratis desde $350."
-             : "🎃 Promo Halloween activa: no aplican cupones. Envío gratis desde $350 y 4 vasos = 1 extra."}
-         </p>
-       ` : t.tienePreventa ? `
-         <p class="cart-summary-note">⚠️ En preventas no aplican promo de envío, cupones ni promociones por temporada.</p>
-       ` : cuponAplicado ? `
-          <div class="cart-coupon-activo">
-            <span>Cupón <strong>${cuponAplicado.codigo}</strong> aplicado</span>
-            <button type="button" id="btnBorrarCupon" class="btn-borrar-cupon">Borrar cupón</button>
-          </div>
-        ` : `
+      ${t.tienePreventa ? `
+        <p class="cart-summary-note">⚠️ En preventas no aplican envío gratis, cupones ni promociones de temporada.</p>
+      ` : (esPromoHalloweenActiva() || esPromoNavidadActiva()) ? `
+        <p class="cart-summary-note cart-promo-halloween">
+          ${esPromoNavidadActiva()
+            ? "🎄 Promo Navidad activa: no aplican cupones. Envío gratis desde $350."
+            : "🎃 Promo Halloween activa: no aplican cupones. Envío gratis desde $350 y 4 vasos = 1 extra."}
+        </p>
+      ` : cuponAplicado ? `
+        <div class="cart-coupon-activo">
+          <span>Cupón <strong>${cuponAplicado.codigo}</strong> aplicado</span>
+          <button type="button" id="btnBorrarCupon" class="btn-borrar-cupon">Borrar cupón</button>
+        </div>
+      ` : `
           <div class="cart-coupon">
             <label class="cupon-label">¿Tienes un cupón?</label>
             <div class="cupon-row">
