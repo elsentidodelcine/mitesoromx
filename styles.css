@@ -3299,6 +3299,28 @@ body.dark .btn-wishlist {
   color: #3d2914;
 }
 
+/* Coca-Cola – Esferas Navideñas */
+.carousel-slide--cocanavidad {
+  background: linear-gradient(
+    135deg,
+    #1a0000 0%,
+    #6b0000 30%,
+    #e61a27 55%,
+    #0d3b2a 80%,
+    #0a1a12 100%
+  );
+  border-color: rgba(230, 26, 39, 0.4);
+}
+.carousel-slide--cocanavidad .banner-btn {
+  background: #fff;
+  color: #e61a27;
+  font-weight: 700;
+}
+.carousel-slide--cocanavidad .banner-btn:hover {
+  background: #0d3b2a;
+  color: #fff;
+}
+
 /* Navidad */
 .carousel-slide--navidad {
   background: linear-gradient(135deg, #0a1a0f 0%, #1a2e1a 30%, #3d1a1a 60%, #0d0a0a 100%);

@@ -592,8 +592,8 @@
   {
     "id": "btsargentina",
     "titulo": "BTS WORLD TOUR 'ARIRANG' IN BUENOS AIRES: LIVE VIEWING",
-    "tipo": "preventa",
-    "estadoCartelera": "preventa",
+    "tipo": "estreno",
+    "estadoCartelera": "fuera",
     "fecha": "2026-10-24",
     "fechaTexto": "Sábado 24 de Octubre del 2026",
     "poster": "imgs/estrenos/btsargentina.jpg",
@@ -988,10 +988,10 @@
   {
     "id": "hcf",
     "titulo": "HCF: Seventeen World Tour New",
-    "tipo": "preventa",
-    "estadoCartelera": "preventa",
-    "fecha": "2026-10-26",
-    "fechaTexto": "Lunes 26 de Octubre 2026",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
+    "fecha": "2026-10-27",
+    "fechaTexto": "Martes 27 de Octubre 2026",
     "poster": "imgs/estrenos/hcf.jpg",
     "cines": ["Cinepolis"],
     "nota": "Corea del Sur"
@@ -999,10 +999,10 @@
   {
     "id": "hcf2",
     "titulo": "HCF: Hybe Cheering Party",
-    "tipo": "preventa",
-    "estadoCartelera": "preventa",
-    "fecha": "2026-10-25",
-    "fechaTexto": "Domingo 25 de Octubre 2026",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
+    "fecha": "2026-10-27",
+    "fechaTexto": "Martes 27 de Octubre 2026",
     "poster": "imgs/estrenos/hcf2.jpg",
     "cines": ["Cinepolis"],
     "nota": "Corea del Sur"
@@ -1010,10 +1010,10 @@
   {
     "id": "hcf3",
     "titulo": "HCF: Tomorrow x Together World",
-    "tipo": "preventa",
-    "estadoCartelera": "preventa",
-    "fecha": "2026-10-26",
-    "fechaTexto": "Lunes 26 de Octubre 2026",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
+    "fecha": "2026-10-27",
+    "fechaTexto": "Martes 27 de Octubre 2026",
     "poster": "imgs/estrenos/hcf3.jpg",
     "cines": ["Cinepolis"],
     "nota": "Corea del Sur"
@@ -1021,10 +1021,10 @@
   {
     "id": "hcf4",
     "titulo": "HCF: Enhypen World Tour Blood Saga",
-    "tipo": "preventa",
-    "estadoCartelera": "preventa",
-    "fecha": "2026-10-26",
-    "fechaTexto": "Lunes 26 de Octubre 2026",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
+    "fecha": "2026-10-27",
+    "fechaTexto": "Martes 27 de Octubre 2026",
     "poster": "imgs/estrenos/hcf4.jpg",
     "cines": ["Cinepolis"],
     "nota": "Corea del Sur"
@@ -1111,8 +1111,8 @@
     "titulo": "El Bosque Salvaje: Wildwood",
     "tipo": "preventa",
     "estadoCartelera": "preventa",
-    "fecha": "2026-10-23",
-    "fechaTexto": "Viernes 23 de Octubre 2026",
+    "fecha": "2026-10-29",
+    "fechaTexto": "Jueves 29 de Octubre 2026",
     "poster": "imgs/estrenos/wildwood.jpg",
     "cines": ["Cinemex"],
     "nota": "Estados Unidos"
@@ -1424,5 +1424,27 @@
     "poster": "imgs/estrenos/pagana.jpg",
     "cines": ["Cinepolis"],
     "nota": "España"
+  },
+  {
+    "id": "exo",
+    "titulo": "Exo Planet #6 Exhorizon Dot In Cines",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-08",
+    "fechaTexto": "Domingo 08 de Noviembre 2026",
+    "poster": "imgs/estrenos/exo.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Corea del Sur"
+  },
+  {
+    "id": "reze",
+    "titulo": "Chainsawman La Película - Arco de Reze",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-10-29",
+    "fechaTexto": "Jueves 29 de Octubre 2026",
+    "poster": "imgs/estrenos/reze.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Japón"
   }
 ]

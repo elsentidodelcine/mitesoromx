@@ -1703,6 +1703,16 @@ const PREVENTAS_ACTIVAS = [
       tema: "halloween",
     },
     {
+      id: "coca-cola-esferas-navidad",
+      active: true,
+      emoji: "🎄",
+      titulo: "Coca-Cola · Esferas Navideñas",
+      texto: "Ya a la venta la <strong>edición Navidad de Coca-Cola</strong>: <strong>5 esferas navideñas</strong> coleccionables.<br><br>Aparta tu set antes de que se agote.",
+      link: "#catalogo",
+      linkTexto: "Ver esferas",
+      tema: "cocanavidad",
+    },
+    {
       id: "navidad-temporada",
       active: false,
       emoji: "🎄",
