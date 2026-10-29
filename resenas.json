@@ -3170,5 +3170,73 @@
     ],
     "cita": "Verla en pantalla grande, con sonido envolvente y con público, fue otro nivel.",
     "veredicto": "Clásico meta que sigue funcionando. Experiencia de cine inolvidable. Cine legendario."
+  },
+  {
+    "id": "aniquilacion",
+    "titulo": "Aniquilación",
+    "anio": 2026,
+    "fecha": "2026-10-28",
+    "duracion": "92 min",
+    "generos": ["Acción", "Terror", "Suspenso"],
+    "puntaje": 3.5,
+    "destacada": false,
+    "etiqueta": "ESTRENO",
+    "plataformas": ["Cines"],
+    "resumen": "Estética ochentera de serie B que funciona. Supersoldados, Adria Arjona sólida y buen misterio, pero el desenlace se siente demasiado simple. Buen embrujo.",
+    "poster": "imgs/resenias/aniquilacion.jpg",
+    "posterFallback": {
+      "linea1": "Aniquilación",
+      "linea2": ""
+    },
+    "letterboxd": "https://letterboxd.com/film/onslaught-2026",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt32268691/",
+      "rating": "5.4"
+    },
+    "lead": "Me ganó por su estilo visual ochentero de serie B. Entretenida y con personalidad, aunque el final le resta. Buen embrujo.",
+    "contenido": [
+      "Aniquilación me pareció una película bastante entretenida que me ganó principalmente por su estilo visual. Esa estética de serie B, con toda la vibra del cine de acción y terror de los años ochenta, me encantó. Tiene una personalidad muy marcada y creo que es de esas películas que saben perfectamente qué tipo de experiencia quieren ofrecer, sin intentar aparentar ser algo más complicado de lo que son.",
+      "La historia nos presenta a un científico que crea tres supersoldados prácticamente imparables, máquinas de matar que atacan a cualquiera que se les cruce en el camino. Me gustó cómo se va desarrollando el misterio alrededor de estos experimentos y cómo poco a poco descubrimos la amenaza que representan. No necesitas una trama demasiado elaborada para engancharte cuando tienes a tres tipos así sueltos y a todo el mundo en peligro.",
+      "También me gustó mucho el trabajo de Adria Arjona como Celeste, una madre que tiene que proteger a su hija y a las personas que la rodean mientras se enfrenta a estos supersoldados. Me parece que hace un buen papel, porque consigue transmitir esa desesperación de alguien que está intentando mantener a salvo a su familia mientras todo se convierte en un auténtico caos. Sus enfrentamientos con los soldados son de los aspectos que más disfruté.",
+      "Alerta de spoilers. Mi principal problema llegó con el desenlace. Después de todo el misterio y la amenaza que representan estos tres supersoldados, esperaba una resolución mucho más interesante. La forma en que terminan muriendo se me hizo demasiado simple, como si la película ya no supiera qué hacer con ellos y necesitara quitárselos de encima cuanto antes. Para mí, fue una manera bastante decepcionante de cerrar un conflicto que había funcionado muy bien durante el resto de la historia.",
+      "Yo habría preferido que dejaran algunas cosas a la imaginación o que se atrevieran a preparar el terreno para una segunda parte. No necesitaba que me explicaran absolutamente todo, y creo que conservar un poco de ese misterio habría beneficiado mucho más a la película. Es una lástima que justo el desenlace sea lo que más me hizo ruido, porque venía disfrutando bastante de todo lo anterior.",
+      "A pesar de eso, Aniquilación me parece una buena película de acción y terror con una identidad muy particular. Me gustó su estética ochentera, el misterio de los experimentos y la manera en que Celeste intenta sobrevivir junto a su hija. No es perfecta y ese final le resta puntos, pero sí me dejó una experiencia entretenida. Para mí, es un buen embrujo que pudo haber sido todavía mejor si hubiera encontrado una forma más satisfactoria de terminar."
+    ],
+    "cita": "La forma en que terminan muriendo se me hizo demasiado simple.",
+    "veredicto": "Estética ochentera y entretenida, Adria Arjona sólida. El final simple le resta. Buen embrujo."
+  },
+  {
+    "id": "chainsaw-man-reze-arc",
+    "titulo": "Chainsaw Man: Arco de Reze",
+    "anio": 2025,
+    "fecha": "2026-10-28",
+    "duracion": "100 min",
+    "generos": ["Animación", "Acción", "Terror", "Romance"],
+    "puntaje": 2.5,
+    "destacada": false,
+    "etiqueta": "",
+    "plataformas": ["Cines", "Streaming"],
+    "resumen": "Romance trágico con motosierras y trauma. Animación brutal de MAPPA, pero ritmo apresurado y confuso si no leíste el manga. Arranca bien y se apaga. Neutral, pero olvidable.",
+    "poster": "imgs/resenias/reze.jpg",
+    "posterFallback": {
+      "linea1": "Chainsaw Man:",
+      "linea2": "Arco de Reze"
+    },
+    "letterboxd": "https://letterboxd.com/film/chainsaw-man-the-movie-reze-arc",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt28211616/",
+      "rating": "8.3"
+    },
+    "lead": "Romance con motosierras y trauma. Animación brutal, pero ritmo apresurado. Arranca bien y se apaga a mitad. 2.5.",
+    "contenido": [
+      "Bueno, bueno, bueno… Chainsaw Man volvió, ahora en modo “película seria” con su arco más trágico y, según los fans, más romántico. Y sí, el romance llegó… pero con motosierras, explosiones y un nivel de trauma que ni las telenovelas de Televisa se atreven.",
+      "La trama va así: Denji, nuestro protagonista con más suerte que neuronas, conoce a Reze, una chica tan tierna que desde el minuto uno sabes que va a romperle el corazón (y algo más). Spoiler obvio: no todo es amor y café bajo la lluvia, porque claro, ella resulta ser otra híbrida asesina enviada para hacerlo papilla. Así que el “te quiero” termina en “te corto en pedacitos”. Literal.",
+      "MAPPA, como siempre, decidió que el presupuesto se fuera en animar cada gota de sangre y cada pestañeo con realismo absurdo. Hermoso, sí, pero llega un punto donde uno ya no sabe si está viendo una obra de arte o un ataque de epilepsia con presupuesto de Hollywood.",
+      "¿Lo bueno? El drama entre Denji y Reze tiene chispas, la acción está brutal y hay momentos donde casi se siente poesía en medio del caos.",
+      "¿Lo malo? Si no has leído el manga, probablemente no entiendas nada. Y si sí lo leíste, te preguntarás por qué todo pasa tan rápido, como si MAPPA tuviera prisa por llegar al ending.",
+      "En resumen, Reze Arc es como esa cita que empieza increíble pero termina con lágrimas, confusión y un “¿por qué hice esto?”. Bonita, intensa, pero al final del día… una motosierra emocional que arranca bien y se apaga a mitad del corte."
+    ],
+    "cita": "El “te quiero” termina en “te corto en pedacitos”. Literal.",
+    "veredicto": "Animación brutal y drama con chispas, pero ritmo apresurado y confuso sin el manga. Arranca bien y se apaga. Neutral, pero olvidable."
   }
 ]
