@@ -4,12 +4,13 @@
 
   { "nombre": "Preventa Palomera Scream Cinemex", "categoria": "Peliculas", "precio": 790, "imagen": "imgs/scream.jpeg" ,"badge": "preventa", "stock": 3},
 
-  { "nombre": "Preventa Palomera Pochita Cinemex", "categoria": "Peliculas", "precio": 740, "imagen": "imgs/pochy.jpeg" ,"badge": "preventa", "stock": 2},
+  { "nombre": "Preventa Palomera Pochita Cinemex", "categoria": "Peliculas", "precio": 740, "imagen": "imgs/pochy.jpeg" ,"badge": "preventa", "stock": 1},
   { "nombre": "Preventa 2 Vasos Pochita Cinemex", "categoria": "Peliculas", "precio": 480, "imagen": "imgs/pochi123.jpeg" ,"badge": "preventa", "stock": 3},
 
   { "nombre": "Preventa 1 de 5 Esferas Coca Cola", "categoria": "Peliculas", "precio": 300, "imagen": "imgs/coca26.jpeg" ,"badge": "preventa", "stock": 3},
 
   { "nombre": "Preventa Vaso Godzilla Cinepolis", "categoria": "Peliculas", "precio": 399, "imagen": "imgs/godzy.jpeg" ,"badge": "preventa", "stock": 1},
+  { "nombre": "Preventa Vaso Godzilla Cinemex", "categoria": "Peliculas", "precio": 399, "imagen": "imgs/godzy2.jpeg" ,"badge": "preventa", "stock": 1},
 
   { "nombre": "Preventa 2 Vasos El Gato con Sombrero Cinemex", "categoria": "Peliculas", "precio": 999, "imagen": "imgs/gato.jpeg" ,"badge": "preventa", "stock": 3},
 

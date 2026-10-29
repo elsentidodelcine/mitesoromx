@@ -3251,7 +3251,7 @@
     "etiqueta": "ESTRENO",
     "plataformas": ["Cines"],
     "resumen": "Intenta ser inteligente y termina confusa y pesada. Demasiados tecnicismos, actores desaprovechados y juicio sin impacto. Enorme decepción comparada con La red social. Mal augurio.",
-    "poster": "imgs/resenias/elpoderdelared.jpg",
+    "poster": "imgs/resenias/red.jpg",
     "posterFallback": {
       "linea1": "El Poder",
       "linea2": "de la Red"
