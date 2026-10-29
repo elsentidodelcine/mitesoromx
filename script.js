@@ -666,16 +666,28 @@ function mostrarProductos() {
     const rutas = resolverRutasImagen(p.imagen);
     const thumb = rutas.thumb;
     const fullImg = rutas.full;
-    const badgeClass = p.badge
-      ? p.badge
-          .toLowerCase()
-          .normalize("NFD")
-          .replace(/[\u0300-\u036f]/g, "")
-          .replace(/\s+/g, "")
-      : "";
+        const badgeClass = p.badge
+          ? p.badge
+              .toLowerCase()
+              .normalize("NFD")
+              .replace(/[\u0300-\u036f]/g, "")
+              .replace(/\s+/g, "")
+          : "";
 
-    let precioHTML = "";
-    let accionHTML = "";
+        // ===== LEYENDA PREVENTA (stock 1 / 0) =====
+        const esPrev = esPreventa(p);
+        let leyendaPreventa = "";
+        if (esPrev && Number(p.stock) === 1) {
+          leyendaPreventa =
+            '<span class="badge-preventa-urgente">⚠ Preventa por agotarse</span>';
+        } else if (esPrev && Number(p.stock) <= 0) {
+          leyendaPreventa =
+            '<span class="badge-preventa-agotada">Preventa agotada</span>';
+        }
+        // ===== fin leyenda preventa =====
+
+        let precioHTML = "";
+        let accionHTML = "";
     const esFavorito = wishlist.includes(p.nombre);
 
     if (p.precio == 999) {
@@ -716,19 +728,20 @@ function mostrarProductos() {
     card.innerHTML = `
       ${p.badge ? `<span class="badge ${badgeClass}">${p.badge}</span>` : ""}
       ${esPoster(p) ? `<span class="badge badge-poster">📦 Mexpost / Estafeta / FedEx</span>` : ""}
-      <div class="img-wrapper">
-        <img
-          src="${thumb}"
-          alt="${escapeHtml(p.nombre)}"
-          class="producto-img"
-          loading="lazy"
-          decoding="async"
-          width="300"
-          height="300"
-          data-full="${fullImg}"
-          onerror="this.onerror=null;this.src='${fullImg || "imgs/placeholder.png"}'"
-        >
-      </div>
+           <div class="img-wrapper">
+             ${leyendaPreventa}
+             <img
+               src="${thumb}"
+               alt="${escapeHtml(p.nombre)}"
+               class="producto-img"
+               loading="lazy"
+               decoding="async"
+               width="300"
+               height="300"
+               data-full="${fullImg}"
+               onerror="this.onerror=null;this.src='${fullImg || "imgs/placeholder.png"}'"
+             >
+           </div>
       <div class="info">
         <h2>${escapeHtml(p.nombre)}</h2>
         ${

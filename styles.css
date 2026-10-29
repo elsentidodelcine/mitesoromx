@@ -4880,3 +4880,34 @@ body.dark .badge-poster {
     font-size: inherit !important;
   }
 }
+
+.img-wrapper {
+  position: relative;
+}
+
+.badge-preventa-urgente,
+.badge-preventa-agotada {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  text-align: center;
+  padding: 6px 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.badge-preventa-urgente {
+  background: rgba(230, 126, 0, 0.92);
+  color: #fff;
+}
+
+.badge-preventa-agotada {
+  background: rgba(40, 40, 40, 0.88);
+  color: #f0f0f0;
+}
+
+/* Si prefieres arriba, en lugar de bottom: 0 → top: 0 */
