@@ -3138,5 +3138,37 @@
     ],
     "cita": "El principal requisito para formar parte de esta historia es tomar decisiones estúpidas.",
     "veredicto": "Absurda, floja y con humor que no funciona. Desenlace milagroso y personajes que toman decisiones ridículas. Hechizo fallido."
+  },
+  {
+    "id": "scream",
+    "titulo": "Scream",
+    "anio": 1996,
+    "fecha": "2026-10-28",
+    "duracion": "111 min",
+    "generos": ["Terror", "Suspenso", "Misterio"],
+    "puntaje": 5.0,
+    "destacada": true,
+    "etiqueta": "REESTRENO",
+    "plataformas": ["Cines"],
+    "resumen": "Clásico meta de Wes Craven. Verlo en cine es otro nivel. Suspenso, humor negro y reglas del terror que aún funcionan. Cine legendario.",
+    "poster": "imgs/resenias/scream.jpg",
+    "posterFallback": {
+      "linea1": "Scream",
+      "linea2": ""
+    },
+    "letterboxd": "https://letterboxd.com/film/scream-1996",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt0117571/",
+      "rating": "7.4"
+    },
+    "lead": "Primera vez en cine y fue una experiencia buenísima. Clásico que sigue funcionando. Cine legendario.",
+    "contenido": [
+      "Hoy por fin vi Scream por primera vez en el cine, en Cinemex, y la verdad fue una experiencia buenísima. Es una película que siempre me ha gustado, pero verla en pantalla grande, con sonido envolvente y con público, fue otro nivel. Me sentí muy feliz, como si estuviera reviviendo un pedazo del cine noventero que marcó toda una generación.",
+      "La historia ya la sabemos: un asesino enmascarado empieza a matar adolescentes en un pequeño pueblo, y Sidney Prescott (Neve Campbell) tiene que sobrevivir mientras todos a su alrededor parecen sospechosos. Lo que sigue siendo genial es cómo Wes Craven juega con las reglas del cine de terror, rompiendo clichés y al mismo tiempo celebrándolos.",
+      "Lo curioso es que en varias escenas no podía evitar reírme —pero no porque la película sea mala, sino porque Scary Movie me vino a la mente mil veces. Hay momentos que ya tengo tan asociados a la parodia que fue imposible no pensar en ellos, y eso le dio un toque cómico involuntario a mi experiencia.",
+      "Aun así, Scream sigue siendo un clásico. Tiene suspenso, humor negro y una vibra meta que la hace única. La escena inicial con Drew Barrymore sigue siendo una joya del terror moderno, y el final con Billy y Stu revelando que son los asesinos sigue siendo brutal, literal y emocionalmente."
+    ],
+    "cita": "Verla en pantalla grande, con sonido envolvente y con público, fue otro nivel.",
+    "veredicto": "Clásico meta que sigue funcionando. Experiencia de cine inolvidable. Cine legendario."
   }
 ]
