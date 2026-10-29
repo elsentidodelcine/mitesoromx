@@ -10,13 +10,14 @@
   { "nombre": "Preventa 1 de 5 Esferas Coca Cola", "categoria": "Peliculas", "precio": 300, "imagen": "imgs/coca26.jpeg" ,"badge": "preventa", "stock": 3},
 
   { "nombre": "Preventa Vaso Godzilla Cinepolis", "categoria": "Peliculas", "precio": 399, "imagen": "imgs/godzy.jpeg" ,"badge": "preventa", "stock": 1},
-  { "nombre": "Preventa Vaso Godzilla Cinemex", "categoria": "Peliculas", "precio": 399, "imagen": "imgs/godzy2.jpeg" ,"badge": "preventa", "stock": 1},
+  { "nombre": "Preventa Vaso Godzilla Cinemex", "categoria": "Peliculas", "precio": 399, "imagen": "imgs/godzy2.jpeg" ,"badge": "preventa", "stock": 3},
 
   { "nombre": "Preventa 2 Vasos El Gato con Sombrero Cinemex", "categoria": "Peliculas", "precio": 999, "imagen": "imgs/gato.jpeg" ,"badge": "preventa", "stock": 3},
 
   { "nombre": "Preventa 2 Vasos Los Juegos del Hambre Cinemex", "categoria": "Peliculas", "precio": 480, "imagen": "imgs/juegos.jpeg" ,"badge": "preventa", "stock": 3},
 
   { "nombre": "Preventa Vaso Doom Cinepolis", "categoria": "Peliculas", "precio": 999, "imagen": "imgs/doom.jpeg" ,"badge": "preventa", "stock": 3},
+  { "nombre": "Preventa Vaso Centinela Cinepolis", "categoria": "Peliculas", "precio": 999, "imagen": "imgs/centinela.jpeg" ,"badge": "preventa", "stock": 3},
   { "nombre": "Preventa Palomera Doom Cinepolis", "categoria": "Peliculas", "precio": 999, "imagen": "imgs/doom26.jpeg" ,"badge": "preventa", "stock": 3},
 
   { "nombre": "Palomera Queen Cinepolis", "categoria": "Peliculas", "precio": 299, "imagen": "imgs/queen.jpg" ,"badge": "preventa", "stock": 1},
