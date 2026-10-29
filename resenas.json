@@ -3238,5 +3238,39 @@
     ],
     "cita": "El “te quiero” termina en “te corto en pedacitos”. Literal.",
     "veredicto": "Animación brutal y drama con chispas, pero ritmo apresurado y confuso sin el manga. Arranca bien y se apaga. Neutral, pero olvidable."
+  },
+  {
+    "id": "el-poder-de-la-red",
+    "titulo": "El Poder de la Red",
+    "anio": 2026,
+    "fecha": "2026-10-28",
+    "duracion": "112 min",
+    "generos": ["Drama", "Biografía", "Suspenso"],
+    "puntaje": 1.0,
+    "destacada": false,
+    "etiqueta": "ESTRENO",
+    "plataformas": ["Cines"],
+    "resumen": "Intenta ser inteligente y termina confusa y pesada. Demasiados tecnicismos, actores desaprovechados y juicio sin impacto. Enorme decepción comparada con La red social. Mal augurio.",
+    "poster": "imgs/resenias/elpoderdelared.jpg",
+    "posterFallback": {
+      "linea1": "El Poder",
+      "linea2": "de la Red"
+    },
+    "letterboxd": "https://letterboxd.com/film/the-social-reckoning",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt32200000/",
+      "rating": "6.5"
+    },
+    "lead": "Nos vendieron una secuela de La red social y resultó una pesadilla confusa de tecnicismos. Actores desaprovechados y juicio sin impacto. Mal augurio.",
+    "contenido": [
+      "Primero nos vendieron esta película como si fuera una especie de secuela de La red social, la película de David Fincher sobre el nacimiento de Facebook, y la verdad es que no tiene nada que ver con lo que yo esperaba. Me sorprende que Aaron Sorkin, guionista de la primera película, ahora se haya encargado de dirigir esta historia y que el resultado me haya parecido tan decepcionante. Para mí, es una película que intenta ser demasiado inteligente y termina haciendo que seguirle el ritmo sea una auténtica pesadilla.",
+      "Me pasó algo parecido a lo que sentí con La gran apuesta: hay tantos términos, explicaciones y tecnicismos que, si no estás familiarizado con los temas que se están tratando, es muy fácil perderte. En este caso tenemos asuntos relacionados con Facebook, la tecnología, los algoritmos, el periodismo y la política. Yo soy informático y pude entender buena parte de las conversaciones, pero eso no significa que la película sea fácil de seguir. Hay demasiada información presentada de una manera que termina volviéndose confusa y pesada.",
+      "Y qué desperdicio de actores. Jeremy Allen White y el resto del elenco me parecieron muy desaprovechados. Venía de ver a Jeremy en otros trabajos donde me había gustado mucho, pero aquí no conseguí conectar con su actuación. El personaje de Mark Zuckerberg tampoco me convenció. El actor que lo interpreta me pareció inexpresivo, casi como una roca, y no encontré esa personalidad tan particular que Jesse Eisenberg le dio al personaje en La red social. Para mí, la comparación termina perjudicando todavía más a esta película.",
+      "Otro problema es la manera en que juega con el tiempo y presenta los acontecimientos. En lugar de ayudarme a comprender lo que pasó con Facebook y las revelaciones que rodean la historia, sentí que todo se iba acumulando sin ofrecer suficiente claridad. El periodismo se me hizo aburridísimo y la película parece confiar demasiado en que el espectador ya conoce todos los detalles del caso. De hecho, terminé buscando información en Wikipedia para entender mejor todo este asunto. Si necesito investigar por mi cuenta para comprender lo que acabo de ver, creo que algo está fallando en la manera de contar la historia.",
+      "Yo esperaba algo mucho más contundente, quizá un juicio que llevara el conflicto al límite, con enfrentamientos fuertes y personajes dándose con todo, como una batalla legal de esas que te mantienen pegado a la pantalla. Pero no. El juicio llega prácticamente en los últimos minutos y, cuando finalmente aparece, no tiene el impacto que esperaba. Para mí, no termina de justificar todo lo que la película estuvo construyendo antes.",
+      "El poder de la red me pareció una enorme decepción. Tiene temas interesantes y una historia que podría haber dado para una película mucho más entretenida y clara, pero termina sepultada entre tecnicismos, saltos temporales y actuaciones que no me convencieron. Y lo que más me molesta es que, teniendo una historia relacionada con una de las plataformas más influyentes del mundo, consiga hacer que todo resulte tan aburrido. Para mí, es una película que no logra estar a la altura de La red social y que no recomendaría."
+    ],
+    "cita": "Si necesito investigar por mi cuenta para comprender lo que acabo de ver, creo que algo está fallando.",
+    "veredicto": "Confusa, pesada y decepcionante. Tecnicismos, actores desaprovechados y juicio sin impacto. Mal augurio."
   }
 ]
