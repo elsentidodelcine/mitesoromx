@@ -19,6 +19,7 @@
   { "nombre": "Preventa Vaso Doom Cinepolis", "categoria": "Peliculas", "precio": 999, "imagen": "imgs/doom.jpeg" ,"badge": "preventa", "stock": 3},
   { "nombre": "Preventa Vaso Centinela Cinepolis", "categoria": "Peliculas", "precio": 999, "imagen": "imgs/centinela.jpeg" ,"badge": "preventa", "stock": 3},
   { "nombre": "Preventa Palomera Doom Cinepolis", "categoria": "Peliculas", "precio": 999, "imagen": "imgs/doom26.jpeg" ,"badge": "preventa", "stock": 3},
+  { "nombre": "Preventa Palomera Doom Cinemex", "categoria": "Peliculas", "precio": 999, "imagen": "imgs/doom27.jpeg" ,"badge": "preventa", "stock": 3},
 
   { "nombre": "Palomera Queen Cinepolis", "categoria": "Peliculas", "precio": 299, "imagen": "imgs/queen.jpg" ,"badge": "preventa", "stock": 1},
 
