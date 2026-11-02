@@ -326,6 +326,8 @@ if (filtroExtra === "disponibles") {
   lista = lista.filter((p) => badgeTexto(p).includes("yugioh") && p.stock > 0 && p.precio != 999 && p.precio != 666);
 } else if (filtroExtra === "libro") {
   lista = lista.filter((p) => badgeTexto(p).includes("libro") && p.stock > 0 && p.precio != 999 && p.precio != 666);
+} else if (filtroExtra === "vendeconmigo") {
+  lista = lista.filter((p) => badgeTexto(p).includes("vende conmigo") && p.stock > 0 && p.precio != 999 && p.precio != 666);
 } else if (filtroExtra === "agotados") {
   lista = lista.filter((p) => p.stock <= 0 && p.precio != 999 && p.precio != 666);
 } else {

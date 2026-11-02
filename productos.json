@@ -547,6 +547,36 @@
   { "nombre": "Consola Sony Play station 2 Slim Plateada 1 Control", "categoria": "Vintage", "precio": 5000, "imagen": "imgs/vintage48.jpeg" ,"badge": "exclusivo", "stock": 1},
 
 
+
+  { "nombre": "Palomera Avatar La Forma del Agua Cinepolis", "categoria": "Ricardo", "precio": 50, "imagen": "imgs/vendeconmigo/ricardo/coleccionable1.jpg" ,"badge": "Vende conmigo", "stock": 1},
+  { "nombre": "Palomera Los Juegos del Hambre Cinepolis", "categoria": "Ricardo", "precio": 200, "imagen": "imgs/vendeconmigo/ricardo/coleccionable2.jpg" ,"badge": "Vende conmigo", "stock": 1},
+  { "nombre": "Nachera Rápidos y Furiosos Cinepolis", "categoria": "Ricardo", "precio": 200, "imagen": "imgs/vendeconmigo/ricardo/coleccionable3.jpg" ,"badge": "Vende conmigo", "stock": 1},
+  { "nombre": "Palomera Guardianes de la Galaxia 3 Marvel Cinepolis", "categoria": "Ricardo", "precio": 300, "imagen": "imgs/vendeconmigo/ricardo/coleccionable4.jpg" ,"badge": "Vende conmigo", "stock": 1},
+  { "nombre": "Palomera Aquaman 2 DC Cinepolis", "categoria": "Ricardo", "precio": 150, "imagen": "imgs/vendeconmigo/ricardo/coleccionable5.jpg" ,"badge": "Vende conmigo", "stock": 1},
+  { "nombre": "Vaso Transformers Cinepolis", "categoria": "Ricardo", "precio": 70, "imagen": "imgs/vendeconmigo/ricardo/coleccionable6.jpg" ,"badge": "Vende conmigo", "stock": 1},
+  { "nombre": "Vaso Shark Tiburon Cinepolis", "categoria": "Ricardo", "precio": 300, "imagen": "imgs/vendeconmigo/ricardo/coleccionable7.jpg" ,"badge": "Vende conmigo", "stock": 1},
+  { "nombre": "Vaso Aquaman 2 DC Cinepolis", "categoria": "Ricardo", "precio": 250, "imagen": "imgs/vendeconmigo/ricardo/coleccionable8.jpg" ,"badge": "Vende conmigo", "stock": 1},
+  { "nombre": "Vaso SpiderMan Atraves del Spiderverse Cinepolis", "categoria": "Ricardo", "precio": 400, "imagen": "imgs/vendeconmigo/ricardo/coleccionable9.jpg" ,"badge": "Vende conmigo", "stock": 1},
+  { "nombre": "Postal Ado Special Live Cinepolis", "categoria": "Ricardo", "precio": 100, "imagen": "imgs/vendeconmigo/ricardo/postal3.jpg" ,"badge": "Vende conmigo", "stock": 2},
+  { "nombre": "Postal BTS World Tour Arirang Cinepolis", "categoria": "Ricardo", "precio": 100, "imagen": "imgs/vendeconmigo/ricardo/postal4.jpg" ,"badge": "Vende conmigo", "stock": 7},
+  { "nombre": "Postal SpiderMan Un Nuevo Dia Cinepolis", "categoria": "Ricardo", "precio": 100, "imagen": "imgs/vendeconmigo/ricardo/postal5.jpg" ,"badge": "Vende conmigo", "stock": 14},
+  { "nombre": "Póster No Te Olvidaré Cinepolis", "categoria": "Ricardo", "precio": 50, "imagen": "imgs/vendeconmigo/ricardo/poster1.jpg" ,"badge": "Vende conmigo", "stock": 1},
+  { "nombre": "Póster The Amazing Digital Circus Cinepolis", "categoria": "Ricardo", "precio": 400, "imagen": "imgs/vendeconmigo/ricardo/poster2.jpg" ,"badge": "Vende conmigo", "stock": 1},
+  { "nombre": "Póster John Wick 4 Cinepolis", "categoria": "Ricardo", "precio": 100, "imagen": "imgs/vendeconmigo/ricardo/poster3.jpg" ,"badge": "Vende conmigo", "stock": 1},
+  { "nombre": "Póster Guardines de la Galaxia 3 Cinepolis", "categoria": "Ricardo", "precio": 150, "imagen": "imgs/vendeconmigo/ricardo/poster4.jpg" ,"badge": "Vende conmigo", "stock": 1},
+  { "nombre": "Póster Sonic 3 Cinepolis", "categoria": "Ricardo", "precio": 300, "imagen": "imgs/vendeconmigo/ricardo/poster5.jpg" ,"badge": "Vende conmigo", "stock": 1},
+  { "nombre": "Póster Sonríe 2 Cinepolis", "categoria": "Ricardo", "precio": 300, "imagen": "imgs/vendeconmigo/ricardo/poster6.jpg" ,"badge": "Vende conmigo", "stock": 1},
+  { "nombre": "Póster SAW 10 Cinepolis", "categoria": "Ricardo", "precio": 100, "imagen": "imgs/vendeconmigo/ricardo/poster7.jpg" ,"badge": "Vende conmigo", "stock": 1},
+  { "nombre": "Póster Wolverine y Deadpool Cinepolis", "categoria": "Ricardo", "precio": 100, "imagen": "imgs/vendeconmigo/ricardo/poster8.jpg" ,"badge": "Vende conmigo", "stock": 1},
+  { "nombre": "Póster Terror en Silent Hill Cinepolis", "categoria": "Ricardo", "precio": 100, "imagen": "imgs/vendeconmigo/ricardo/poster9.jpg" ,"badge": "Vende conmigo", "stock": 1},
+  { "nombre": "Póster Toy Story 5 Cinepolis", "categoria": "Ricardo", "precio": 300, "imagen": "imgs/vendeconmigo/ricardo/poster10.jpg" ,"badge": "Vende conmigo", "stock": 1},
+  { "nombre": "Póster Miss Kobayashis Dragon Maid Cinepolis", "categoria": "Ricardo", "precio": 150, "imagen": "imgs/vendeconmigo/ricardo/poster11.jpg" ,"badge": "Vende conmigo", "stock": 1},
+  { "nombre": "Póster Sonic 2 Cinepolis", "categoria": "Ricardo", "precio": 300, "imagen": "imgs/vendeconmigo/ricardo/poster12.jpg" ,"badge": "Vende conmigo", "stock": 1},
+  { "nombre": "Póster De Noche con el Diablo Cinepolis", "categoria": "Ricardo", "precio": 100, "imagen": "imgs/vendeconmigo/ricardo/poster13.jpg" ,"badge": "Vende conmigo", "stock": 1},
+  { "nombre": "Póster Zombieland Saga Paraíso de la Galaxia Cinepolis", "categoria": "Ricardo", "precio": 150, "imagen": "imgs/vendeconmigo/ricardo/poster14.jpg" ,"badge": "Vende conmigo", "stock": 1},
+
+
+
   { "nombre": "Cartas YuGiOh Trampa Model1", "categoria": "YuGiOh", "precio": 50, "imagen": "imgs/trampa1.jpg" ,"badge": "YuGiOh", "stock": 1},
   { "nombre": "Cartas YuGiOh Trampa Model2", "categoria": "YuGiOh", "precio": 50, "imagen": "imgs/trampa2.jpg" ,"badge": "YuGiOh", "stock": 1},
   { "nombre": "Cartas YuGiOh Trampa Model3", "categoria": "YuGiOh", "precio": 50, "imagen": "imgs/trampa3.jpg" ,"badge": "YuGiOh", "stock": 1},
