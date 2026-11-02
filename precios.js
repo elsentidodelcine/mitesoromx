@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   const selectComplejo = document.getElementById('filtro-complejo');
   const complejoWrap = document.getElementById('complejo-filter-wrap');
   const ciudadTabs = document.getElementById('ciudad-tabs');
-  let filtroPreset = '1'; // 1 | pareja | familia
 
   let data = [];
   let metaActualizado = null;
@@ -17,6 +16,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   let filtroModo = 'combo';
   let filtroCat = 'todos';
   let usarClub = false;
+  let filtroPreset = '1';
 
   const DIAS = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo'];
   const DIAS_LABEL = {
@@ -57,15 +57,22 @@ document.addEventListener('DOMContentLoaded', async () => {
     const sk = document.getElementById('precios-skeleton');
     if (sk) sk.remove();
 
-    // Listeners (ANTES estaban faltando)
     bindTabs();
     bindHerramientas();
-    // --- Día de hoy en el filtro ---
+    bindQtyButtons();
+    bindPresets();
+
     marcarDiaHoyEnSelect();
     filtroDia = diaDeHoy();
     const selDia = document.getElementById('filtro-dia');
     if (selDia) selDia.value = filtroDia;
-    // --------------------------------
+
+    const simDia = document.getElementById('sim-dia');
+    if (simDia) {
+      simDia.value = filtroDia;
+      marcarDiaHoyEnSimSelect();
+    }
+
     cargarComplejos();
     render();
     actualizarNotaFecha();
@@ -82,8 +89,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         </div>`;
     }
   }
-
-
 
   function normalizarData(raw) {
     if (Array.isArray(raw)) {
@@ -197,7 +202,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     let boletos = complejo.boletos || [];
     if (!Array.isArray(boletos)) boletos = [boletos];
     const diasLabel = ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'];
-    const hoyKey = diaDeHoy(); // lunes, martes...
+    const hoyKey = diaDeHoy();
 
     const filas = boletos.map(b => `
       <tr>
@@ -355,30 +360,30 @@ document.addEventListener('DOMContentLoaded', async () => {
     return base * adultos + (ninos > 0 ? Math.round(base * 0.85) * ninos : 0);
   }
 
- function renderResumenRapido() {
-   const el = document.getElementById('resumen-rapido');
-   if (!el) return;
+  function renderResumenRapido() {
+    const el = document.getElementById('resumen-rapido');
+    if (!el) return;
 
-   const ciudadKey = ciudadActiva === 'leon-cadenas' ? 'leon' : (ciudadActiva || 'sfr');
-   const ids = CIUDADES[ciudadKey]?.complejos || CIUDADES.sfr.complejos;
-   const lista = filtrarLista(ids)
-     .map(c => ({ c, score: scoreComplejo(c) }))
-     .filter(x => x.score != null)
-     .sort((a, b) => a.score - b.score);
+    const ciudadKey = ciudadActiva === 'leon-cadenas' ? 'leon' : (ciudadActiva || 'sfr');
+    const ids = CIUDADES[ciudadKey]?.complejos || CIUDADES.sfr.complejos;
+    const lista = filtrarLista(ids)
+      .map(c => ({ c, score: scoreComplejo(c) }))
+      .filter(x => x.score != null)
+      .sort((a, b) => a.score - b.score);
 
-   if (!lista.length) {
-     el.hidden = true;
-     return;
-   }
+    if (!lista.length) {
+      el.hidden = true;
+      return;
+    }
 
-   const g = lista[0];
-   const diaTxt = filtroDia === 'promedio' ? 'promedio semanal' : (DIAS_LABEL[filtroDia] || filtroDia);
-   el.innerHTML = `
-     Hoy conviene <strong>${escapeHTML(g.c.nombreCadena)} · ${escapeHTML(g.c.nombre)}</strong>
-     con <strong>${fmt(g.score)}</strong> (${escapeHTML(diaTxt)}, modo actual).
-   `;
-   el.hidden = false;
- }
+    const g = lista[0];
+    const diaTxt = filtroDia === 'promedio' ? 'promedio semanal' : (DIAS_LABEL[filtroDia] || filtroDia);
+    el.innerHTML = `
+      Hoy conviene <strong>${escapeHTML(g.c.nombreCadena)} · ${escapeHTML(g.c.nombre)}</strong>
+      con <strong>${fmt(g.score)}</strong> (${escapeHTML(diaTxt)}, modo actual).
+    `;
+    el.hidden = false;
+  }
 
   function mejorDiaDe(complejo) {
     let best = null;
@@ -396,157 +401,155 @@ document.addEventListener('DOMContentLoaded', async () => {
       .filter(c => filtroCat === 'todos' || c.categoria === filtroCat);
   }
 
- function renderComparativa(ciudadKey) {
-   const box = document.getElementById('comparativa-container');
-   if (!box) return;
+  function renderComparativa(ciudadKey) {
+    const box = document.getElementById('comparativa-container');
+    if (!box) return;
 
-   const ciudad = CIUDADES[ciudadKey];
-   if (!ciudad) {
-     box.innerHTML = `<div class="error-state">Ciudad no configurada.</div>`;
-     return;
-   }
+    const ciudad = CIUDADES[ciudadKey];
+    if (!ciudad) {
+      box.innerHTML = `<div class="error-state">Ciudad no configurada.</div>`;
+      return;
+    }
 
-   let lista = flatComplejos().filter(c => ciudad.complejos.includes(c.id));
-   if (filtroCat !== 'todos') lista = lista.filter(c => c.categoria === filtroCat);
+    let lista = flatComplejos().filter(c => ciudad.complejos.includes(c.id));
+    if (filtroCat !== 'todos') lista = lista.filter(c => c.categoria === filtroCat);
 
-   if (!lista.length) {
-     box.innerHTML = `
-       <div class="empty-state-box">
-         <p>No hay datos suficientes con estos filtros.</p>
-         <p style="font-size:.85rem">Prueba cambiar a <strong>Solo boleto</strong> o quitar el filtro de categoría.</p>
-         <button type="button" class="filter-btn" id="btn-solo-boleto">Usar Solo boleto</button>
-       </div>`;
-     document.getElementById('btn-solo-boleto')?.addEventListener('click', () => {
-       const sel = document.getElementById('filtro-modo');
-       if (sel) { sel.value = 'boleto'; filtroModo = 'boleto'; }
-       refreshTools();
-     });
-     return;
-   }
+    if (!lista.length) {
+      box.innerHTML = `
+        <div class="empty-state-box">
+          <p>No hay datos suficientes con estos filtros.</p>
+          <p style="font-size:.85rem">Prueba cambiar a <strong>Solo boleto</strong> o quitar el filtro de categoría.</p>
+          <button type="button" class="filter-btn" id="btn-solo-boleto">Usar Solo boleto</button>
+        </div>`;
+      document.getElementById('btn-solo-boleto')?.addEventListener('click', () => {
+        const sel = document.getElementById('filtro-modo');
+        if (sel) { sel.value = 'boleto'; filtroModo = 'boleto'; }
+        refreshTools();
+      });
+      return;
+    }
 
-   // ----- Modo León por cadena -----
-   if (ciudad.modo === 'cadenas') {
-     const porCadena = {};
-     lista.forEach(c => {
-       const prom = scoreConPreset(c);
-       if (prom == null) return;
-       if (!porCadena[c.cadena] || prom < porCadena[c.cadena].prom) {
-         porCadena[c.cadena] = { complejo: c, prom };
-       }
-     });
-     const filas = Object.values(porCadena).sort((a, b) => a.prom - b.prom);
+    if (ciudad.modo === 'cadenas') {
+      const porCadena = {};
+      lista.forEach(c => {
+        const prom = scoreConPreset(c);
+        if (prom == null) return;
+        if (!porCadena[c.cadena] || prom < porCadena[c.cadena].prom) {
+          porCadena[c.cadena] = { complejo: c, prom };
+        }
+      });
+      const filas = Object.values(porCadena).sort((a, b) => a.prom - b.prom);
 
-     if (!filas.length) {
-       box.innerHTML = `
-         <div class="empty-state-box">
-           <p>No hay datos suficientes con estos filtros.</p>
-           <p style="font-size:.85rem">Prueba cambiar a <strong>Solo boleto</strong>.</p>
-           <button type="button" class="filter-btn" id="btn-solo-boleto">Usar Solo boleto</button>
-         </div>`;
-       document.getElementById('btn-solo-boleto')?.addEventListener('click', () => {
-         const sel = document.getElementById('filtro-modo');
-         if (sel) { sel.value = 'boleto'; filtroModo = 'boleto'; }
-         refreshTools();
-       });
-       return;
-     }
+      if (!filas.length) {
+        box.innerHTML = `
+          <div class="empty-state-box">
+            <p>No hay datos suficientes con estos filtros.</p>
+            <p style="font-size:.85rem">Prueba cambiar a <strong>Solo boleto</strong>.</p>
+            <button type="button" class="filter-btn" id="btn-solo-boleto">Usar Solo boleto</button>
+          </div>`;
+        document.getElementById('btn-solo-boleto')?.addEventListener('click', () => {
+          const sel = document.getElementById('filtro-modo');
+          if (sel) { sel.value = 'boleto'; filtroModo = 'boleto'; }
+          refreshTools();
+        });
+        return;
+      }
 
-     const mejor = filas[0];
-     box.innerHTML = `
-       <div class="comp-winner">
-         En León, la cadena más barata es
-         <strong>${escapeHTML(mejor.complejo.nombreCadena)}</strong>
-         con <strong>$${mejor.prom}</strong> en ${escapeHTML(mejor.complejo.nombre)}.
-       </div>
-       <div class="table-block">
-         <h3><span>★</span> Mejor complejo por cadena</h3>
-         <div class="table-scroll">
-           <table class="precios-table">
-             <thead><tr><th>Cadena</th><th>Mejor complejo</th><th>Total</th></tr></thead>
-             <tbody>
-               ${filas.map((f, i) => `
-                 <tr class="${i === 0 ? 'mejor' : ''}">
-                   <td>${escapeHTML(f.complejo.nombreCadena)}</td>
-                   <td>${escapeHTML(f.complejo.nombre)}</td>
-                   <td class="precio">$${f.prom}</td>
-                 </tr>`).join('')}
-             </tbody>
-           </table>
-         </div>
-       </div>
-       <div style="text-align:center;padding:12px">
-         <button type="button" class="btn-export" id="btn-export-comp">Exportar imagen</button>
-       </div>`;
-     document.getElementById('btn-export-comp')?.addEventListener('click', exportarComparativa);
-     return;
-   }
+      const mejor = filas[0];
+      box.innerHTML = `
+        <div class="comp-winner">
+          En León, la cadena más barata es
+          <strong>${escapeHTML(mejor.complejo.nombreCadena)}</strong>
+          con <strong>$${mejor.prom}</strong> en ${escapeHTML(mejor.complejo.nombre)}.
+        </div>
+        <div class="table-block">
+          <h3><span>★</span> Mejor complejo por cadena</h3>
+          <div class="table-scroll">
+            <table class="precios-table">
+              <thead><tr><th>Cadena</th><th>Mejor complejo</th><th>Total</th></tr></thead>
+              <tbody>
+                ${filas.map((f, i) => `
+                  <tr class="${i === 0 ? 'mejor' : ''}">
+                    <td>${escapeHTML(f.complejo.nombreCadena)}</td>
+                    <td>${escapeHTML(f.complejo.nombre)}</td>
+                    <td class="precio">$${f.prom}</td>
+                  </tr>`).join('')}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div style="text-align:center;padding:12px">
+          <button type="button" class="btn-export" id="btn-export-comp">Exportar imagen</button>
+        </div>`;
+      document.getElementById('btn-export-comp')?.addEventListener('click', exportarComparativa);
+      return;
+    }
 
-   // ----- Comparativa normal -----
-   const diasLabel = ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'];
-   const ranked = lista
-     .map(c => ({ c, prom: scoreConPreset(c) }))
-     .filter(x => x.prom != null)
-     .sort((a, b) => a.prom - b.prom);
-   const ganador = ranked[0];
+    const diasLabel = ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'];
+    const ranked = lista
+      .map(c => ({ c, prom: scoreConPreset(c) }))
+      .filter(x => x.prom != null)
+      .sort((a, b) => a.prom - b.prom);
+    const ganador = ranked[0];
 
-   const filas = lista.map(c => {
-     const pal = getSnackGrande(c, /palomitas/i);
-     const ref = getSnackGrande(c, /refresco/i);
-     const prom = scoreConPreset(c);
-     const esMejor = ganador && c.id === ganador.c.id;
-     return `
-       <tr class="${esMejor ? 'mejor' : ''}">
-         <td>
-           <strong>${escapeHTML(c.nombre)}</strong><br>
-           <span style="color:var(--muted-2);font-size:.72rem;">
-             ${escapeHTML(c.nombreCadena)}${c.categoria === 'premium' ? ' · VIP/Platino' : ''}
-           </span>
-         </td>
-         <td class="precio">${fmt(precioBoleto(c, 'viernes', { club: usarClub }))}</td>
-         <td class="precio">${fmt(pal)}</td>
-         <td class="precio">${fmt(ref)}</td>
-         ${DIAS.map(d => {
-           const t = costoPersona(c, d);
-           return `<td class="${t == null ? 'na' : 'precio'}">${t == null ? '—' : '$' + t}</td>`;
-         }).join('')}
-         <td class="precio"><strong>${prom == null ? '—' : '$' + prom}</strong></td>
-       </tr>`;
-   }).join('');
+    const filas = lista.map(c => {
+      const pal = getSnackGrande(c, /palomitas/i);
+      const ref = getSnackGrande(c, /refresco/i);
+      const prom = scoreConPreset(c);
+      const esMejor = ganador && c.id === ganador.c.id;
+      return `
+        <tr class="${esMejor ? 'mejor' : ''}">
+          <td>
+            <strong>${escapeHTML(c.nombre)}</strong><br>
+            <span style="color:var(--muted-2);font-size:.72rem;">
+              ${escapeHTML(c.nombreCadena)}${c.categoria === 'premium' ? ' · VIP/Platino' : ''}
+            </span>
+          </td>
+          <td class="precio">${fmt(precioBoleto(c, 'viernes', { club: usarClub }))}</td>
+          <td class="precio">${fmt(pal)}</td>
+          <td class="precio">${fmt(ref)}</td>
+          ${DIAS.map(d => {
+            const t = costoPersona(c, d);
+            return `<td class="${t == null ? 'na' : 'precio'}">${t == null ? '—' : '$' + t}</td>`;
+          }).join('')}
+          <td class="precio"><strong>${prom == null ? '—' : '$' + prom}</strong></td>
+        </tr>`;
+    }).join('');
 
-   box.innerHTML = `
-     ${ganador ? `
-       <div class="comp-winner">
-         En <strong>${escapeHTML(ciudad.nombre)}</strong> conviene más
-         <strong>${escapeHTML(ganador.c.nombreCadena)} · ${escapeHTML(ganador.c.nombre)}</strong>
-         con <strong>$${ganador.prom}</strong>.
-       </div>` : ''}
-     <div class="table-block">
-       <h3><span>★</span> Comparativa de gasto adulto</h3>
-       <div class="table-scroll">
-         <table class="precios-table">
-           <thead>
-             <tr>
-               <th>Complejo</th>
-               <th>Boleto*</th>
-               <th>Pal G</th>
-               <th>Ref G</th>
-               ${diasLabel.map(d => `<th>${d}</th>`).join('')}
-               <th>Score</th>
-             </tr>
-           </thead>
-           <tbody>${filas}</tbody>
-         </table>
-       </div>
-       <p style="padding:12px 18px;color:var(--muted);font-size:.78rem;margin:0;">
-         * Viernes (o membresía). Si ves muchos “—”, cambia el modo a “Solo boleto”.
-       </p>
-     </div>
-     <div style="text-align:center;padding:12px">
-       <button type="button" class="btn-export" id="btn-export-comp">Exportar imagen</button>
-     </div>`;
+    box.innerHTML = `
+      ${ganador ? `
+        <div class="comp-winner">
+          En <strong>${escapeHTML(ciudad.nombre)}</strong> conviene más
+          <strong>${escapeHTML(ganador.c.nombreCadena)} · ${escapeHTML(ganador.c.nombre)}</strong>
+          con <strong>$${ganador.prom}</strong>.
+        </div>` : ''}
+      <div class="table-block">
+        <h3><span>★</span> Comparativa de gasto adulto</h3>
+        <div class="table-scroll">
+          <table class="precios-table">
+            <thead>
+              <tr>
+                <th>Complejo</th>
+                <th>Boleto*</th>
+                <th>Pal G</th>
+                <th>Ref G</th>
+                ${diasLabel.map(d => `<th>${d}</th>`).join('')}
+                <th>Score</th>
+              </tr>
+            </thead>
+            <tbody>${filas}</tbody>
+          </table>
+        </div>
+        <p style="padding:12px 18px;color:var(--muted);font-size:.78rem;margin:0;">
+          * Viernes (o membresía). Si ves muchos “—”, cambia el modo a “Solo boleto”.
+        </p>
+      </div>
+      <div style="text-align:center;padding:12px">
+        <button type="button" class="btn-export" id="btn-export-comp">Exportar imagen</button>
+      </div>`;
 
-   document.getElementById('btn-export-comp')?.addEventListener('click', exportarComparativa);
- }
+    document.getElementById('btn-export-comp')?.addEventListener('click', exportarComparativa);
+  }
 
   function renderTipYTop3() {
     const tip = document.getElementById('tip-mejor-dia');
@@ -622,6 +625,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       </div>`;
   }
 
+  // ========== SIMULADOR MEJORADO ==========
   function renderSimulador() {
     const box = document.getElementById('sim-resultados');
     if (!box) return;
@@ -629,76 +633,156 @@ document.addEventListener('DOMContentLoaded', async () => {
     const ciudadKey = document.getElementById('sim-ciudad')?.value || 'sfr';
     const adultos = Number(document.getElementById('sim-adultos')?.value || 0);
     const ninos = Number(document.getElementById('sim-ninos')?.value || 0);
+    const palQty = Number(document.getElementById('sim-pal-qty')?.value || 0);
     const palOpt = document.getElementById('sim-pal')?.value || '0';
     const nRef = Number(document.getElementById('sim-ref')?.value || 0);
     const nAgua = Number(document.getElementById('sim-agua')?.value || 0);
-    const dia = filtroDia === 'promedio' ? 'viernes' : filtroDia;
+    const simDiaVal = document.getElementById('sim-dia')?.value || 'viernes';
+    const dia = simDiaVal === 'promedio' ? 'viernes' : simDiaVal;
+    const club = document.getElementById('sim-usar-club')?.checked || false;
 
     const lista = filtrarLista(CIUDADES[ciudadKey]?.complejos || []);
 
-    const filas = lista.map(c => {
+    const resultados = lista.map(c => {
       let total = 0;
       let ok = true;
+      let desglose = { boletos: 0, palomitas: 0, refrescos: 0, aguas: 0 };
 
       for (let i = 0; i < adultos; i++) {
-        const b = precioBoleto(c, dia, { club: usarClub });
+        const b = precioBoleto(c, dia, { club });
         if (b == null) { ok = false; break; }
         total += b;
+        desglose.boletos += b;
       }
       for (let i = 0; i < ninos; i++) {
         const b = precioBoleto(c, dia, { nino: true }) ?? precioBoleto(c, dia, {});
         if (b == null) { ok = false; break; }
         total += b;
+        desglose.boletos += b;
       }
-      if (palOpt !== '0') {
+
+      if (palOpt !== '0' && palQty > 0) {
         const p = snackSize(c, /palomitas/i, palOpt) ?? snackSize(c, /palomitas/i, 'grande');
-        if (p == null) ok = false; else total += p;
+        if (p == null) ok = false;
+        else {
+          total += p * palQty;
+          desglose.palomitas = p * palQty;
+        }
       }
+
       for (let i = 0; i < nRef; i++) {
         const r = snackSize(c, /refresco/i, 'grande');
-        if (r == null) ok = false; else total += r;
+        if (r == null) ok = false;
+        else {
+          total += r;
+          desglose.refrescos += r;
+        }
       }
       for (let i = 0; i < nAgua; i++) {
         const a = snackSize(c, /agua/i, 'grande') ?? snackSize(c, /agua/i, 'chica');
-        if (a == null) ok = false; else total += a;
+        if (a == null) ok = false;
+        else {
+          total += a;
+          desglose.aguas += a;
+        }
       }
-      return { c, total: ok ? total : null };
+
+      return { c, total: ok ? total : null, desglose };
     }).filter(x => x.total != null).sort((a, b) => a.total - b.total);
 
-    if (!lista.length) {
+    if (!resultados.length) {
       box.innerHTML = `
         <div class="empty-state-box">
           <p>No hay datos suficientes con estos filtros.</p>
-          <p style="font-size:.85rem">Prueba cambiar a <strong>Solo boleto</strong> o quitar el filtro de categoría.</p>
-          <button type="button" class="filter-btn" id="btn-solo-boleto">Usar Solo boleto</button>
+          <p style="font-size:.85rem">Prueba otra ciudad o quita el filtro de categoría en “Filtros avanzados”.</p>
         </div>`;
-
-      document.getElementById('btn-solo-boleto')?.addEventListener('click', () => {
-        const sel = document.getElementById('filtro-modo');
-        if (sel) {
-          sel.value = 'boleto';
-          filtroModo = 'boleto';
-        }
-        refreshTools();
-      });
       return;
     }
 
+    const winner = resultados[0];
+    const second = resultados[1];
+    const ahorro = second ? second.total - winner.total : 0;
+    const diaTxt = DIAS_LABEL[dia] || dia;
+
+    const personasTxt = [
+      adultos > 0 ? `${adultos} adulto${adultos > 1 ? 's' : ''}` : '',
+      ninos > 0 ? `${ninos} niño${ninos > 1 ? 's' : ''}` : ''
+    ].filter(Boolean).join(' + ');
+
+    let snacksTxt = [];
+    if (palOpt !== '0' && palQty > 0) snacksTxt.push(`${palQty}× palomitas ${palOpt}`);
+    if (nRef > 0) snacksTxt.push(`${nRef}× refresco G`);
+    if (nAgua > 0) snacksTxt.push(`${nAgua}× agua`);
+
     box.innerHTML = `
+      <div class="sim-winner-card">
+        <div class="label">🏆 Mejor opción · ${escapeHTML(diaTxt)}</div>
+        <div class="nombre">${escapeHTML(winner.c.nombreCadena)} · ${escapeHTML(winner.c.nombre)}</div>
+        <div class="total">${fmt(winner.total)}</div>
+        ${ahorro > 0 ? `<div class="ahorro">Ahorras ${fmt(ahorro)} vs el segundo más barato</div>` : ''}
+        <div class="desglose">
+          <div><span>Boletos (${personasTxt || '0'})</span><span>${fmt(winner.desglose.boletos)}</span></div>
+          ${winner.desglose.palomitas ? `<div><span>Palomitas</span><span>${fmt(winner.desglose.palomitas)}</span></div>` : ''}
+          ${winner.desglose.refrescos ? `<div><span>Refrescos</span><span>${fmt(winner.desglose.refrescos)}</span></div>` : ''}
+          ${winner.desglose.aguas ? `<div><span>Aguas</span><span>${fmt(winner.desglose.aguas)}</span></div>` : ''}
+        </div>
+        <div class="sim-actions">
+          <button type="button" class="btn-copy" id="btn-copy-sim">Copiar resumen</button>
+          <button type="button" class="btn-ver-detalle" id="btn-ver-detalle" data-id="${escapeHTML(winner.c.id)}" data-cadena="${escapeHTML(winner.c.cadena)}">Ver precios detallados</button>
+        </div>
+        <div class="copy-feedback" id="copy-feedback"></div>
+      </div>
+
       <div class="table-scroll">
         <table class="precios-table">
           <thead>
-            <tr><th>Complejo</th><th>Total (${DIAS_LABEL[dia] || dia})</th></tr>
+            <tr><th>#</th><th>Complejo</th><th>Total (${escapeHTML(diaTxt)})</th></tr>
           </thead>
           <tbody>
-            ${filas.map((x, i) => `
+            ${resultados.slice(0, 8).map((x, i) => `
               <tr class="${i === 0 ? 'mejor' : ''}">
+                <td>${i + 1}</td>
                 <td>${escapeHTML(x.c.nombreCadena)} · ${escapeHTML(x.c.nombre)}</td>
                 <td class="precio"><strong>${fmt(x.total)}</strong></td>
               </tr>`).join('')}
           </tbody>
         </table>
-      </div>`;
+      </div>
+    `;
+
+    document.getElementById('btn-copy-sim')?.addEventListener('click', () => {
+      const txt = `Salida cine (${personasTxt}${snacksTxt.length ? ' + ' + snacksTxt.join(', ') : ''})\n` +
+        `${winner.c.nombreCadena} · ${winner.c.nombre}: ${fmt(winner.total)} (${diaTxt})` +
+        (ahorro > 0 ? `\nAhorro vs 2º: ${fmt(ahorro)}` : '');
+      navigator.clipboard?.writeText(txt).then(() => {
+        const fb = document.getElementById('copy-feedback');
+        if (fb) {
+          fb.textContent = '¡Copiado!';
+          setTimeout(() => fb.textContent = '', 2000);
+        }
+      }).catch(() => {
+        const fb = document.getElementById('copy-feedback');
+        if (fb) fb.textContent = 'No se pudo copiar';
+      });
+    });
+
+    document.getElementById('btn-ver-detalle')?.addEventListener('click', (e) => {
+      const id = e.currentTarget.dataset.id;
+      const cadena = e.currentTarget.dataset.cadena;
+      const tab = document.querySelector(`.cine-tab[data-cadena="${cadena}"]`);
+      if (tab) {
+        document.querySelectorAll('.cine-tab').forEach(b => b.classList.remove('active'));
+        tab.classList.add('active');
+        cadenaActiva = cadena;
+        cargarComplejos();
+        if (selectComplejo) {
+          selectComplejo.value = id;
+          complejoActivo = id;
+        }
+        render();
+        document.getElementById('precios-container')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
   }
 
   function llenarVersusSelects() {
@@ -765,16 +849,60 @@ document.addEventListener('DOMContentLoaded', async () => {
       </p>` : ''}`;
   }
 
-  function simSet(a, n, pal, ref, agua) {
+  function simSet(adultos, ninos, palQty, palSize, ref, agua) {
     const set = (id, val) => {
       const el = document.getElementById(id);
       if (el) el.value = val;
     };
-    set('sim-adultos', a);
-    set('sim-ninos', n);
-    set('sim-pal', pal);
+    set('sim-adultos', adultos);
+    set('sim-ninos', ninos);
+    set('sim-pal-qty', palQty);
+    set('sim-pal', palSize);
     set('sim-ref', ref);
     set('sim-agua', agua);
+  }
+
+  function bindQtyButtons() {
+    document.querySelectorAll('.qty-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.dataset.target;
+        const delta = Number(btn.dataset.delta);
+        const input = document.getElementById(id);
+        if (!input) return;
+        let val = Number(input.value || 0) + delta;
+        const min = Number(input.min || 0);
+        const max = Number(input.max || 99);
+        val = Math.max(min, Math.min(max, val));
+        input.value = val;
+
+        if (id === 'sim-pal-qty' && val === 0) {
+          const sel = document.getElementById('sim-pal');
+          if (sel) sel.value = '0';
+        }
+        if (id === 'sim-pal-qty' && val > 0) {
+          const sel = document.getElementById('sim-pal');
+          if (sel && sel.value === '0') sel.value = 'grande';
+        }
+        renderSimulador();
+      });
+    });
+  }
+
+  function bindPresets() {
+    const box = document.getElementById('preset-btns');
+    if (!box) return;
+    box.addEventListener('click', (e) => {
+      const btn = e.target.closest('.preset-btn');
+      if (!btn) return;
+      box.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const p = btn.dataset.preset;
+      if (p === 'solo') simSet(1, 0, 1, 'grande', 1, 0);
+      else if (p === 'pareja') simSet(2, 0, 1, 'jumbo', 2, 0);
+      else if (p === 'familia') simSet(2, 2, 2, 'jumbo', 3, 1);
+      else if (p === 'grupo') simSet(4, 0, 2, 'jumbo', 4, 0);
+      renderSimulador();
+    });
   }
 
   function bindHerramientas() {
@@ -788,35 +916,24 @@ document.addEventListener('DOMContentLoaded', async () => {
     on('filtro-cat', e => { filtroCat = e.target.value; refreshTools(); });
     on('usar-club', e => { usarClub = e.target.checked; refreshTools(); });
 
-    on('sim-ciudad', () => refreshTools());
+    on('sim-ciudad', () => renderSimulador());
+    on('sim-dia', () => renderSimulador());
     on('sim-adultos', () => renderSimulador());
     on('sim-ninos', () => renderSimulador());
-    on('sim-pal', () => renderSimulador());
+    on('sim-pal', () => {
+      const qty = document.getElementById('sim-pal-qty');
+      const sel = document.getElementById('sim-pal');
+      if (sel?.value === '0' && qty) qty.value = 0;
+      if (sel?.value !== '0' && qty && Number(qty.value) === 0) qty.value = 1;
+      renderSimulador();
+    });
+    on('sim-pal-qty', () => renderSimulador());
     on('sim-ref', () => renderSimulador());
     on('sim-agua', () => renderSimulador());
+    on('sim-usar-club', () => renderSimulador());
+
     on('vs-a', () => renderVersus());
     on('vs-b', () => renderVersus());
-      on('filtro-preset', e => {
-          filtroPreset = e.target.value;
-          // sincronizar simulador
-          if (filtroPreset === '1') simSet(1, 0, 'grande', 1, 0);
-          else if (filtroPreset === 'pareja') simSet(2, 0, 'jumbo', 2, 0);
-          else if (filtroPreset === 'familia') simSet(2, 2, 'jumbo', 3, 1);
-          refreshTools();
-        });
-
-    const preset = document.getElementById('sim-preset');
-    if (preset) {
-      preset.addEventListener('change', () => {
-        const v = preset.value;
-        if (v === 'solo') simSet(1, 0, 'grande', 1, 0);
-        else if (v === 'pareja') simSet(2, 0, 'jumbo', 2, 0);
-        else if (v === 'familia') simSet(2, 2, 'jumbo', 3, 1);
-        renderSimulador();
-      });
-    }
-
-
   }
 
   function refreshTools() {
@@ -827,31 +944,30 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderResumenRapido();
   }
 
- function actualizarNotaFecha() {
-   const el = document.getElementById('precios-actualizado');
-   if (!el) return;
+  function actualizarNotaFecha() {
+    const el = document.getElementById('precios-actualizado');
+    if (!el) return;
 
-   if (!metaActualizado) {
-     el.textContent = 'Precios sujetos a cambio según sucursal y promociones.';
-     el.classList.remove('viejo');
-     return;
-   }
+    if (!metaActualizado) {
+      el.textContent = 'Precios sujetos a cambio según sucursal y promociones.';
+      el.classList.remove('viejo');
+      return;
+    }
 
-   el.textContent = `Precios actualizados: ${metaActualizado}. Sujetos a cambio por sucursal y promociones.`;
+    el.textContent = `Precios actualizados: ${metaActualizado}. Sujetos a cambio por sucursal y promociones.`;
 
-   // Si la fecha es string tipo "2026-09-10" o similar
-   const m = String(metaActualizado).match(/(\d{4})-(\d{2})-(\d{2})/);
-   if (m) {
-     const fecha = new Date(`${m[1]}-${m[2]}-${m[3]}T12:00:00`);
-     const dias = Math.floor((Date.now() - fecha.getTime()) / 86400000);
-     if (dias > 14) {
-       el.classList.add('viejo');
-       el.textContent += ` ⚠️ Hace ${dias} días — pueden estar desactualizados.`;
-     } else {
-       el.classList.remove('viejo');
-     }
-   }
- }
+    const m = String(metaActualizado).match(/(\d{4})-(\d{2})-(\d{2})/);
+    if (m) {
+      const fecha = new Date(`${m[1]}-${m[2]}-${m[3]}T12:00:00`);
+      const dias = Math.floor((Date.now() - fecha.getTime()) / 86400000);
+      if (dias > 14) {
+        el.classList.add('viejo');
+        el.textContent += ` ⚠️ Hace ${dias} días — pueden estar desactualizados.`;
+      } else {
+        el.classList.remove('viejo');
+      }
+    }
+  }
 
   function fmt(valor) {
     if (valor == null || valor === '') return '—';
@@ -867,7 +983,6 @@ document.addEventListener('DOMContentLoaded', async () => {
       .replace(/"/g, '&quot;')
       .replace(/'/g, '&#39;');
   }
-
 
   function tieneDulcero(complejo) {
     const snacks = complejo.snacks || [];
@@ -894,67 +1009,45 @@ document.addEventListener('DOMContentLoaded', async () => {
     `).join('');
   }
 
-
   function diaDeHoy() {
-    // getDay(): 0=domingo ... 6=sábado
     const map = ['domingo', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado'];
     return map[new Date().getDay()];
   }
 
   function marcarDiaHoyEnSelect() {
-      const sel = document.getElementById('filtro-dia');
-      if (!sel) return;
-      const hoy = diaDeHoy();
-      [...sel.options].forEach(opt => {
-        if (opt.value === 'promedio') {
-          opt.textContent = 'Promedio semanal';
-          return;
-        }
-        const labels = {
-          lunes: 'Lunes',
-          martes: 'Martes',
-          miercoles: 'Miércoles',
-          jueves: 'Jueves',
-          viernes: 'Viernes',
-          sabado: 'Sábado',
-          domingo: 'Domingo'
-        };
-        opt.textContent = (labels[opt.value] || opt.value) + (opt.value === hoy ? ' · hoy' : '');
-      });
-    }
-
-}); // ← ÚNICO cierre del DOMContentLoaded
-
-document.addEventListener('DOMContentLoaded', () => {
-  const toggle = document.getElementById('nav-toggle');
-  const nav = document.getElementById('main-nav');
-  if (!toggle || !nav) return;
-
-  toggle.addEventListener('click', () => {
-    const open = nav.classList.toggle('is-open');
-    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
-  });
-
-  // Cerrar al tocar un link
-  nav.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      nav.classList.remove('is-open');
-      toggle.setAttribute('aria-expanded', 'false');
-      toggle.setAttribute('aria-label', 'Abrir menú');
+    const sel = document.getElementById('filtro-dia');
+    if (!sel) return;
+    const hoy = diaDeHoy();
+    [...sel.options].forEach(opt => {
+      if (opt.value === 'promedio') {
+        opt.textContent = 'Promedio semanal';
+        return;
+      }
+      const labels = {
+        lunes: 'Lunes', martes: 'Martes', miercoles: 'Miércoles',
+        jueves: 'Jueves', viernes: 'Viernes', sabado: 'Sábado', domingo: 'Domingo'
+      };
+      opt.textContent = (labels[opt.value] || opt.value) + (opt.value === hoy ? ' · hoy' : '');
     });
-  });
+  }
 
-  // Cerrar al hacer click fuera
-  document.addEventListener('click', (e) => {
-    if (!nav.classList.contains('is-open')) return;
-    if (nav.contains(e.target) || toggle.contains(e.target)) return;
-    nav.classList.remove('is-open');
-    toggle.setAttribute('aria-expanded', 'false');
-    toggle.setAttribute('aria-label', 'Abrir menú');
-  });
+  function marcarDiaHoyEnSimSelect() {
+    const sel = document.getElementById('sim-dia');
+    if (!sel) return;
+    const hoy = diaDeHoy();
+    [...sel.options].forEach(opt => {
+      if (opt.value === 'promedio') {
+        opt.textContent = 'Promedio semanal';
+        return;
+      }
+      const labels = {
+        lunes: 'Lunes', martes: 'Martes', miercoles: 'Miércoles',
+        jueves: 'Jueves', viernes: 'Viernes', sabado: 'Sábado', domingo: 'Domingo'
+      };
+      opt.textContent = (labels[opt.value] || opt.value) + (opt.value === hoy ? ' · hoy' : '');
+    });
+  }
 });
-
 
 // ===== Menú móvil =====
 document.addEventListener('DOMContentLoaded', () => {
@@ -973,6 +1066,7 @@ document.addEventListener('DOMContentLoaded', () => {
     a.addEventListener('click', () => {
       nav.classList.remove('is-open');
       toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Abrir menú');
     });
   });
 
@@ -981,6 +1075,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (nav.contains(e.target) || toggle.contains(e.target)) return;
     nav.classList.remove('is-open');
     toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Abrir menú');
   });
 });
 
@@ -1017,7 +1112,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 });
-
 
 async function exportarComparativa() {
   const target = document.getElementById('comparativa-container');

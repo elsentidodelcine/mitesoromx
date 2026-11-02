@@ -1,40 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Precios de Cine | Los Brujos del Cine</title>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0RVV6RWHTS"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Precios de Cine | Los Brujos del Cine</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0RVV6RWHTS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0RVV6RWHTS');
+  </script>
+  <meta name="description" content="Los Brujos del Cine: compara precios de boletos y dulcero en Cinépolis, Cinemex y Movie Center. Arma tu salida y calcula cuánto te cuesta.">
+  <meta name="theme-color" content="#030304">
+  <link rel="canonical" href="https://elsentidodelcine.github.io/precios.html">
 
-        gtag('config', 'G-0RVV6RWHTS');
-    </script>
-    <meta name="description" content="Los Brujos del Cine: reseñas honestas de estrenos, clásicos y películas que vale la pena descubrir.">
-    <meta name="theme-color" content="#030304">
-    <link rel="canonical" href="https://elsentidodelcine.github.io/">
+  <meta property="og:title" content="Precios de Cine | Los Brujos del Cine">
+  <meta property="og:description" content="Arma tu salida: calcula boletos + dulcero en Cinépolis, Cinemex y Movie Center.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://elsentidodelcine.github.io/precios.html">
+  <meta property="og:image" content="https://elsentidodelcine.github.io/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
-    <meta property="og:title" content="Precios de Cine | Los Brujos del Cine">
-    <meta property="og:description" content="Reseñas honestas de estrenos, clásicos y películas que vale la pena descubrir.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://elsentidodelcine.github.io/">
-    <meta property="og:image" content="https://elsentidodelcine.github.io/og-image.jpg">
-    <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="imgs/logoLB.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="imgs/logoLB.png">
 
-    <link rel="icon" href="imgs/logoLB.png" type="image/png" sizes="32x32">
-    <link rel="apple-touch-icon" href="imgs/logoLB.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
-
-
-    <style>
-
-        /* ===== VARIABLES Y BASE (necesarias sin stylesLBDC.css) ===== */
+  <style>
+/* ===== VARIABLES Y BASE ===== */
 :root {
   --bg: #030304;
   --text: #e8e8ec;
@@ -60,10 +57,7 @@ html[data-theme="light"] {
   --border: rgba(0, 0, 0, 0.1);
 }
 
-*,
-*::before,
-*::after { box-sizing: border-box; }
-
+*, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
 body {
@@ -194,8 +188,15 @@ html[data-theme="light"] .theme-icon-sun { display: inline; }
     border-bottom: 1px solid var(--border);
     padding: 16px 20px;
     gap: 14px;
+    z-index: 1001;
   }
   .main-nav.is-open { display: flex; }
+  .main-nav a {
+    padding: 12px 8px;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .header-inner { position: relative; }
 }
 
 /* ===== FOOTER ===== */
@@ -205,9 +206,7 @@ html[data-theme="light"] .theme-icon-sun { display: inline; }
   padding: 32px 20px 24px;
   text-align: center;
 }
-html[data-theme="light"] .site-footer {
-  background: #eeeef0;
-}
+html[data-theme="light"] .site-footer { background: #eeeef0; }
 .footer-inner { max-width: var(--max); margin: 0 auto; }
 .footer-links {
   display: flex;
@@ -242,469 +241,397 @@ html[data-theme="light"] .site-footer {
   margin-bottom: 8px;
 }
 
-        .precios-page { padding-bottom: 120px; }
+.precios-page { padding-bottom: 120px; }
 
-        .precios-hero {
-          position: relative;
-          padding: 70px 0 50px;
-          border-bottom: 1px solid var(--border);
-          text-align: center;
-          overflow: hidden;
-        }
-        .precios-hero::before {
-          content: "";
-          position: absolute;
-          inset: 0;
-          background:
-            radial-gradient(ellipse 80% 60% at 50% -20%, rgba(196,30,58,.14), transparent 55%),
-            radial-gradient(ellipse 50% 40% at 80% 30%, rgba(201,162,39,.05), transparent 50%);
-          pointer-events: none;
-        }
-        .precios-hero-inner {
-          position: relative;
-          width: min(700px, calc(100% - 48px));
-          margin: 0 auto;
-        }
-        .precios-hero h1 {
-          font-family: 'Playfair Display', Georgia, serif;
-          font-size: clamp(2.5rem, 6vw, 3.8rem);
-          font-weight: 800;
-          line-height: 1.05;
-          letter-spacing: -.03em;
-          margin: 16px 0;
-        }
-        .precios-hero h1 em { font-style: italic; color: var(--gold); }
-        .precios-hero p {
-          color: var(--muted);
-          font-size: 1.02rem;
-          line-height: 1.7;
-          max-width: 520px;
-          margin: 0 auto;
-        }
+.precios-hero {
+  position: relative;
+  padding: 70px 0 50px;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+  overflow: hidden;
+}
+.precios-hero--mini {
+  padding: 40px 0 28px;
+}
+.precios-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% -20%, rgba(196,30,58,.14), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 80% 30%, rgba(201,162,39,.05), transparent 50%);
+  pointer-events: none;
+}
+.precios-hero-inner {
+  position: relative;
+  width: min(700px, calc(100% - 48px));
+  margin: 0 auto;
+}
+.precios-hero h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.5rem, 6vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -.03em;
+  margin: 16px 0;
+}
+.precios-hero--mini h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+.precios-hero h1 em { font-style: italic; color: var(--gold); }
+.precios-hero p {
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 0 auto;
+}
 
-        .precios-note {
-          width: min(var(--max), calc(100% - 48px));
-          margin: 28px auto 0;
-          padding: 14px 18px;
-          border-radius: 12px;
-          border: 1px solid rgba(201,162,39,.15);
-          background: rgba(201,162,39,.04);
-          color: #c8c8d0;
-          font-size: .85rem;
-          text-align: center;
-        }
+.precios-note {
+  width: min(var(--max), calc(100% - 48px));
+  margin: 28px auto 0;
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(201,162,39,.15);
+  background: rgba(201,162,39,.04);
+  color: #c8c8d0;
+  font-size: .85rem;
+  text-align: center;
+}
 
-        /* Tabs */
-        .cine-tabs, .ciudad-tabs {
-          width: min(var(--max), calc(100% - 48px));
-          margin: 36px auto 20px;
-          display: flex;
-          flex-wrap: wrap;
-          gap: 10px;
-          justify-content: center;
-        }
-        .cine-tab, .ciudad-tab, .filter-btn {
-          padding: 10px 18px;
-          border-radius: 999px;
-          border: 1px solid rgba(255,255,255,.18);
-          background: #1a1a22;
-          color: #e8e8ec;
-          font-size: .78rem;
-          font-weight: 600;
-          cursor: pointer;
-          transition: all .22s ease;
-        }
-        .cine-tab:hover, .ciudad-tab:hover, .filter-btn:hover {
-          border-color: rgba(255,255,255,.35);
-          color: #fff;
-        }
-        .cine-tab.active, .ciudad-tab.active, .filter-btn.active {
-          background: linear-gradient(135deg, var(--red), var(--red-dark));
-          border-color: transparent;
-          color: #fff;
-          box-shadow: 0 6px 20px rgba(196,30,58,.25);
-        }
-        .ciudad-tab.active {
-          background: linear-gradient(135deg, var(--gold-soft), var(--gold));
-          color: #111;
-          box-shadow: 0 6px 20px rgba(201,162,39,.25);
-        }
+/* Tabs */
+.cine-tabs, .ciudad-tabs {
+  width: min(var(--max), calc(100% - 48px));
+  margin: 36px auto 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+.cine-tab, .ciudad-tab, .filter-btn {
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: #1a1a22;
+  color: #e8e8ec;
+  font-size: .78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .22s ease;
+}
+.cine-tab:hover, .ciudad-tab:hover, .filter-btn:hover {
+  border-color: rgba(255,255,255,.35);
+  color: #fff;
+}
+.cine-tab.active, .ciudad-tab.active, .filter-btn.active {
+  background: linear-gradient(135deg, var(--red), var(--red-dark));
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(196,30,58,.25);
+}
+.ciudad-tab.active {
+  background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+  color: #111;
+  box-shadow: 0 6px 20px rgba(201,162,39,.25);
+}
 
-        .complejo-filter {
-          width: min(var(--max), calc(100% - 48px));
-          margin: 0 auto 28px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 12px;
-          flex-wrap: wrap;
-        }
-        .complejo-filter.hidden { display: none; }
-        .complejo-filter label {
-          font-size: .78rem;
-          font-weight: 600;
-          color: #c8c8d0;
-        }
-        .complejo-filter select {
-          appearance: none;
-          -webkit-appearance: none;
-          min-width: 260px;
-          padding: 10px 40px 10px 16px;
-          border-radius: 999px;
-          border: 1px solid rgba(255,255,255,.18);
-          background: #1a1a22 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23e8e8ec' d='M1 1l5 5 5-5'/%3E%3C/svg%3E") no-repeat right 14px center;
-          color: #e8e8ec;
-          font-size: .82rem;
-          font-weight: 500;
-          cursor: pointer;
-        }
-        .complejo-filter select option { background: #121218; color: #e8e8ec; }
+.complejo-filter {
+  width: min(var(--max), calc(100% - 48px));
+  margin: 0 auto 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.complejo-filter.hidden { display: none; }
+.complejo-filter label {
+  font-size: .78rem;
+  font-weight: 600;
+  color: #c8c8d0;
+}
+.complejo-filter select {
+  appearance: none;
+  -webkit-appearance: none;
+  min-width: 260px;
+  padding: 10px 40px 10px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: #1a1a22 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23e8e8ec' d='M1 1l5 5 5-5'/%3E%3C/svg%3E") no-repeat right 14px center;
+  color: #e8e8ec;
+  font-size: .82rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.complejo-filter select option { background: #121218; color: #e8e8ec; }
 
-        .cine-section { width: min(var(--max), calc(100% - 48px)); margin: 0 auto 40px; }
+.cine-section { width: min(var(--max), calc(100% - 48px)); margin: 0 auto 40px; }
 
-        .table-block {
-          margin-bottom: 28px;
-          border: 1px solid var(--border);
-          border-radius: var(--radius);
-          background: var(--surface);
-          overflow: hidden;
-          box-shadow: var(--shadow-soft);
-        }
-        .table-block h3 {
-          padding: 16px 20px;
-          border-bottom: 1px solid var(--border);
-          font-family: 'Playfair Display', Georgia, serif;
-          font-size: 1.15rem;
-          color: #fff;
-          display: flex; align-items: center; gap: 10px;
-        }
-        .table-block h3 span { color: var(--gold); }
-        .table-scroll { overflow-x: auto; }
+.table-block {
+  margin-bottom: 28px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+.table-block h3 {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.15rem;
+  color: #fff;
+  display: flex; align-items: center; gap: 10px;
+}
+.table-block h3 span { color: var(--gold); }
+.table-scroll { overflow-x: auto; }
 
-        table.precios-table {
-          width: 100%;
-          border-collapse: collapse;
-          min-width: 640px;
-        }
-        table.precios-table th,
-        table.precios-table td {
-          padding: 14px 12px;
-          text-align: center;
-          font-size: .88rem;
-          border-bottom: 1px solid var(--border);
-        }
-        table.precios-table th {
-          background: rgba(255,255,255,.03);
-          color: #c8c8d0;
-          font-size: .68rem;
-          font-weight: 700;
-          letter-spacing: .1em;
-          text-transform: uppercase;
-        }
-        table.precios-table th:first-child,
-        table.precios-table td:first-child {
-          text-align: left;
-          padding-left: 20px;
-          color: #e8e8ec;
-          font-weight: 600;
-        }
-        table.precios-table .precio { color: var(--gold); font-weight: 700; }
-        table.precios-table .na { color: var(--muted-2); }
+table.precios-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+table.precios-table th,
+table.precios-table td {
+  padding: 14px 12px;
+  text-align: center;
+  font-size: .88rem;
+  border-bottom: 1px solid var(--border);
+}
+table.precios-table th {
+  background: rgba(255,255,255,.03);
+  color: #c8c8d0;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+table.precios-table th:first-child,
+table.precios-table td:first-child {
+  text-align: left;
+  padding-left: 20px;
+  color: #e8e8ec;
+  font-weight: 600;
+}
+table.precios-table .precio { color: var(--gold); font-weight: 700; }
+table.precios-table .na { color: var(--muted-2); }
 
-        .sim-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-          gap: 12px;
-          padding: 16px 18px 8px;
-        }
-        .sim-grid label {
-          display: flex;
-          flex-direction: column;
-          gap: 6px;
-          font-size: .72rem;
-          color: #c8c8d0;
-          font-weight: 600;
-        }
-        .sim-grid input, .sim-grid select {
-          min-height: 42px;
-          padding: 8px 14px;
-          border-radius: 10px;
-          border: 1px solid rgba(255,255,255,.18);
-          background: #1a1a22;
-          color: #fff;
-          font-size: .85rem;
-        }
+.sim-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  padding: 16px 18px 8px;
+}
+.sim-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: .72rem;
+  color: #c8c8d0;
+  font-weight: 600;
+}
+.sim-grid input, .sim-grid select {
+  min-height: 42px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: #1a1a22;
+  color: #fff;
+  font-size: .85rem;
+}
 
-        .versus-row {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 12px;
-          align-items: center;
-          justify-content: center;
-          padding: 16px 18px 8px;
-        }
-        .versus-row select {
-          min-width: 220px;
-          padding: 10px 16px;
-          border-radius: 10px;
-          border: 1px solid rgba(255,255,255,.18);
-          background: #1a1a22;
-          color: #fff;
-        }
+.versus-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 18px 8px;
+}
+.versus-row select {
+  min-width: 220px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: #1a1a22;
+  color: #fff;
+}
 
-        .tool-bar select {
-          min-height: 42px;
-          padding: 8px 16px;
-          border-radius: 999px;
-          border: 1px solid rgba(255,255,255,.18);
-          background: #1a1a22;
-          color: #fff;
-        }
+.tool-bar select {
+  min-height: 42px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: #1a1a22;
+  color: #fff;
+}
 
-        .promo-box {
-          margin: 18px 0;
-          padding: 16px 18px;
-          border-radius: 12px;
-          border: 1px dashed rgba(196,30,58,.45);
-          background: rgba(196,30,58,.08);
-          color: #e8e8ec;
-          font-size: .9rem;
-        }
-        .promo-box strong { color: #ff6b81; }
+.promo-box {
+  margin: 18px 0;
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 1px dashed rgba(196,30,58,.45);
+  background: rgba(196,30,58,.08);
+  color: #e8e8ec;
+  font-size: .9rem;
+}
+.promo-box strong { color: #ff6b81; }
 
-        .loading-state, .error-state {
-          text-align: center;
-          padding: 80px 20px;
-          color: var(--muted);
-        }
+.loading-state, .error-state {
+  text-align: center;
+  padding: 80px 20px;
+  color: var(--muted);
+}
 
-        /* FAB Arma tu salida */
-        .fab-sim {
-          position: fixed;
-          right: 18px;
-          bottom: 18px;
-          z-index: 90;
-          display: inline-flex;
-          align-items: center;
-          gap: 8px;
-          padding: 14px 18px;
-          border-radius: 999px;
-          border: none;
-          background: linear-gradient(135deg, var(--red), var(--red-dark));
-          color: #fff;
-          font-size: .85rem;
-          font-weight: 700;
-          box-shadow: 0 12px 30px rgba(196,30,58,.35);
-          cursor: pointer;
-        }
-        .sim-panel {
-          position: fixed;
-          right: 18px;
-          bottom: 78px;
-          z-index: 91;
-          width: min(380px, calc(100% - 36px));
-          max-height: min(70vh, 560px);
-          overflow: auto;
-          border-radius: 16px;
-          border: 1px solid rgba(255,255,255,.12);
-          background: #0c0c10;
-          box-shadow: 0 20px 50px rgba(0,0,0,.55);
-          padding: 16px;
-          display: none;
-        }
-        .sim-panel.open { display: block; }
-        .sim-panel h3 {
-          font-family: 'Playfair Display', Georgia, serif;
-          margin-bottom: 12px;
-          color: #fff;
-        }
-        .sim-panel .sim-grid { padding: 0; margin-bottom: 12px; }
+.herramientas-precios {
+  width: min(var(--max), calc(100% - 48px));
+  margin: 28px auto 40px;
+}
+.tool-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+  align-items: end;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.tool-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.tool-group label,
+.check-club {
+  font-size: .72rem;
+  color: #c8c8d0;
+  font-weight: 600;
+}
+.check-club {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 8px;
+  cursor: pointer;
+  color: #e8e8ec;
+}
+.tip-box, .comp-winner {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(201,162,39,.25);
+  background: rgba(201,162,39,.08);
+  color: #e8e8ec;
+  font-size: .88rem;
+  text-align: center;
+}
+.comp-winner strong, .tip-box strong { color: var(--gold); }
+.rank-1, tr.mejor {
+  background: rgba(201,162,39,.12);
+}
+.cine-header {
+  text-align: center;
+  margin-bottom: 22px;
+}
+.cine-header h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: #fff;
+  margin-bottom: 6px;
+}
+.cine-header .ubicacion {
+  color: var(--muted);
+  font-size: .85rem;
+}
+.precios-divider {
+  width: min(var(--max), calc(100% - 48px));
+  margin: 40px auto;
+  border: none;
+  border-top: 1px solid var(--border);
+}
 
-        .herramientas-precios {
-          width: min(var(--max), calc(100% - 48px));
-          margin: 28px auto 40px;
-        }
-        .tool-bar {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 14px 18px;
-          align-items: end;
-          justify-content: center;
-          margin-bottom: 20px;
-        }
-        .tool-group {
-          display: flex;
-          flex-direction: column;
-          gap: 6px;
-        }
-        .tool-group label,
-        .check-club {
-          font-size: .72rem;
-          color: #c8c8d0;
-          font-weight: 600;
-        }
-        .check-club {
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          padding-bottom: 8px;
-          cursor: pointer;
-          color: #e8e8ec;
-        }
-        .tip-box, .comp-winner {
-          margin: 0 0 16px;
-          padding: 12px 16px;
-          border-radius: 12px;
-          border: 1px solid rgba(201,162,39,.25);
-          background: rgba(201,162,39,.08);
-          color: #e8e8ec;
-          font-size: .88rem;
-          text-align: center;
-        }
-        .comp-winner strong, .tip-box strong { color: var(--gold); }
-        .rank-1, tr.mejor {
-          background: rgba(201,162,39,.12);
-        }
-        .cine-header {
-          text-align: center;
-          margin-bottom: 22px;
-        }
-        .cine-header h2 {
-          font-family: 'Playfair Display', Georgia, serif;
-          font-size: clamp(1.4rem, 3vw, 2rem);
-          color: #fff;
-          margin-bottom: 6px;
-        }
-        .cine-header .ubicacion {
-          color: var(--muted);
-          font-size: .85rem;
-        }
-        .precios-divider {
-          width: min(var(--max), calc(100% - 48px));
-          margin: 40px auto;
-          border: none;
-          border-top: 1px solid var(--border);
-        }
+/* Badges */
+.badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  vertical-align: middle;
+  position: relative;
+  cursor: help;
+}
+.badge-economico {
+  background: rgba(125, 222, 160, .12);
+  color: #7ddea0;
+  border: 1px solid rgba(125, 222, 160, .25);
+}
+.badge-premium {
+  background: rgba(201, 162, 39, .12);
+  color: var(--gold);
+  border: 1px solid rgba(201, 162, 39, .3);
+}
+.badge-sin-dulcero {
+  background: rgba(196, 30, 58, .12);
+  color: #ff8a9a;
+  border: 1px solid rgba(196, 30, 58, .3);
+}
+.badge[data-tip]::after {
+  content: attr(data-tip);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translateX(-50%);
+  background: #1a1a22;
+  color: #fff;
+  font-size: .65rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s;
+  z-index: 20;
+  box-shadow: 0 4px 12px rgba(0,0,0,.4);
+}
+.badge[data-tip]:hover::after,
+.badge[data-tip]:focus-visible::after { opacity: 1; }
 
-        .fab-sim:hover { filter: brightness(1.08); }
+/* Promos */
+.promos-section {
+  width: min(var(--max), calc(100% - 48px));
+  margin: 24px auto 0;
+}
+.section-title-mini {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.promo-card {
+  margin-bottom: 10px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px dashed rgba(196,30,58,.4);
+  background: rgba(196,30,58,.08);
+  color: #e8e8ec;
+  font-size: .88rem;
+}
+.promo-card strong { color: #ff6b81; }
+.promo-card small {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: .75rem;
+}
 
-        .sim-panel {
-          position: fixed;
-          right: 18px;
-          bottom: 78px;
-          z-index: 91;
-          width: min(360px, calc(100% - 36px));
-          border-radius: 16px;
-          border: 1px solid rgba(255,255,255,.12);
-          background: #0c0c10;
-          box-shadow: 0 20px 50px rgba(0,0,0,.55);
-          padding: 16px;
-          display: none;
-        }
-        .sim-panel.open { display: block; }
-        .sim-panel-head {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin-bottom: 8px;
-        }
-        .sim-panel-head h3 {
-          font-family: 'Playfair Display', Georgia, serif;
-          color: #fff;
-          font-size: 1.15rem;
-          margin: 0;
-        }
-        .sim-close {
-          background: transparent;
-          border: none;
-          color: #c8c8d0;
-          font-size: 1.4rem;
-          cursor: pointer;
-          line-height: 1;
-        }
-        .sim-panel-hint {
-          color: var(--muted);
-          font-size: .8rem;
-          margin-bottom: 12px;
-        }
-        .btn-copy {
-          width: 100%;
-          padding: 12px 16px;
-          border-radius: 999px;
-          border: 1px solid rgba(201,162,39,.35);
-          background: rgba(201,162,39,.12);
-          color: var(--gold);
-          font-weight: 700;
-          font-size: .82rem;
-          cursor: pointer;
-        }
-        .btn-copy:hover { background: rgba(201,162,39,.2); }
-        .copy-feedback {
-          text-align: center;
-          margin-top: 8px;
-          color: #7ddea0;
-          font-size: .8rem;
-        }
-
-        /* Badges */
-        .badge {
-          display: inline-block;
-          margin-left: 8px;
-          padding: 3px 9px;
-          border-radius: 999px;
-          font-size: .65rem;
-          font-weight: 700;
-          letter-spacing: .04em;
-          text-transform: uppercase;
-          vertical-align: middle;
-        }
-        .badge-economico {
-          background: rgba(125, 222, 160, .12);
-          color: #7ddea0;
-          border: 1px solid rgba(125, 222, 160, .25);
-        }
-        .badge-premium {
-          background: rgba(201, 162, 39, .12);
-          color: var(--gold);
-          border: 1px solid rgba(201, 162, 39, .3);
-        }
-        .badge-sin-dulcero {
-          background: rgba(196, 30, 58, .12);
-          color: #ff8a9a;
-          border: 1px solid rgba(196, 30, 58, .3);
-        }
-
-        /* Promos */
-        .promos-section {
-          width: min(var(--max), calc(100% - 48px));
-          margin: 24px auto 0;
-        }
-        .section-title-mini {
-          font-family: 'Playfair Display', Georgia, serif;
-          font-size: 1.2rem;
-          color: #fff;
-          margin-bottom: 12px;
-          text-align: center;
-        }
-        .promo-card {
-          margin-bottom: 10px;
-          padding: 14px 16px;
-          border-radius: 12px;
-          border: 1px dashed rgba(196,30,58,.4);
-          background: rgba(196,30,58,.08);
-          color: #e8e8ec;
-          font-size: .88rem;
-        }
-        .promo-card strong { color: #ff6b81; }
-        .promo-card small {
-          display: block;
-          margin-top: 4px;
-          color: var(--muted);
-          font-size: .75rem;
-        }
-
-        /* ========== BOTÓN VOLVER ARRIBA ========== */
-       /* ========== BOTÓN VOLVER ARRIBA ========== */
+/* Botón volver arriba */
 .btn-top {
   position: fixed;
   bottom: 24px;
@@ -746,231 +673,235 @@ html[data-theme="light"] .btn-top {
   }
 }
 
-        /* ===== MODO CLARO - PRECIOS ===== */
-html[data-theme="light"] .cine-tab,
-html[data-theme="light"] .ciudad-tab,
-html[data-theme="light"] .filter-btn {
+/* ===== ARMA TU SALIDA ===== */
+.simulador-hero {
+  border: 1px solid rgba(201,162,39,.35);
+  background: linear-gradient(180deg, rgba(201,162,39,.06), transparent 40%), var(--surface);
+  box-shadow: 0 12px 40px rgba(0,0,0,.3);
+}
+.simulador-hero h3 {
+  font-size: 1.4rem;
+  color: var(--gold);
+}
+.sim-panel-hint {
+  color: var(--muted);
+  font-size: .88rem;
+  margin: -4px 0 16px;
+  padding: 0 20px;
+}
+
+.preset-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+  justify-content: center;
+  padding: 0 12px;
+}
+.preset-btn {
+  padding: 9px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: #1a1a22;
+  color: #e8e8ec;
+  font-size: .78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .2s;
+}
+.preset-btn:hover { border-color: rgba(255,255,255,.35); }
+.preset-btn.active {
+  background: linear-gradient(135deg, var(--red), var(--red-dark));
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(196,30,58,.3);
+}
+html[data-theme="light"] .preset-btn {
   background: #fff;
   border-color: rgba(0,0,0,.12);
   color: #3d3d46;
 }
-html[data-theme="light"] .cine-tab:hover,
-html[data-theme="light"] .ciudad-tab:hover,
-html[data-theme="light"] .filter-btn:hover {
-  border-color: rgba(0,0,0,.25);
-  color: #121214;
-}
-html[data-theme="light"] .cine-tab.active,
-html[data-theme="light"] .filter-btn.active {
+html[data-theme="light"] .preset-btn.active {
   background: linear-gradient(135deg, var(--red), var(--red-dark));
   color: #fff;
-  border-color: transparent;
-}
-html[data-theme="light"] .ciudad-tab.active {
-  background: linear-gradient(135deg, var(--gold-soft, #e8c547), var(--gold));
-  color: #111;
 }
 
-html[data-theme="light"] .complejo-filter select,
-html[data-theme="light"] .sim-grid input,
-html[data-theme="light"] .sim-grid select,
-html[data-theme="light"] .versus-row select,
-html[data-theme="light"] .tool-bar select {
-  background: #fff;
-  color: #121214;
-  border-color: rgba(0,0,0,.15);
+.qty-control {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #1a1a22;
 }
-html[data-theme="light"] .complejo-filter select option,
-html[data-theme="light"] .sim-grid select option,
-html[data-theme="light"] .versus-row select option {
-  background: #fff;
-  color: #121214;
+.qty-control input {
+  width: 52px;
+  min-height: 42px;
+  border: none !important;
+  border-radius: 0 !important;
+  text-align: center;
+  background: transparent !important;
+  color: #fff !important;
+  font-weight: 600;
+  -moz-appearance: textfield;
 }
-
-html[data-theme="light"] .table-block {
-  background: #fff;
-  border-color: rgba(0,0,0,.1);
+.qty-control input::-webkit-outer-spin-button,
+.qty-control input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
-html[data-theme="light"] .table-block h3 {
-  color: #121214;
-  border-bottom-color: rgba(0,0,0,.08);
-}
-html[data-theme="light"] table.precios-table th {
-  background: rgba(0,0,0,.03);
-  color: #5a5a66;
-}
-html[data-theme="light"] table.precios-table th:first-child,
-html[data-theme="light"] table.precios-table td:first-child {
-  color: #121214;
-}
-html[data-theme="light"] .cine-header h2 {
-  color: #121214;
-}
-
-html[data-theme="light"] .precios-note,
-html[data-theme="light"] .tip-box,
-html[data-theme="light"] .comp-winner {
-  background: rgba(201,162,39,.08);
-  border-color: rgba(201,162,39,.25);
-  color: #3d3d46;
-}
-html[data-theme="light"] .promo-card {
-  background: rgba(196,30,58,.06);
-  border-color: rgba(196,30,58,.25);
-  color: #3d3d46;
-}
-
-html[data-theme="light"] .complejo-filter label,
-html[data-theme="light"] .tool-group label,
-html[data-theme="light"] .check-club,
-html[data-theme="light"] .sim-grid label {
-  color: #5a5a66;
-}
-html[data-theme="light"] .check-club {
-  color: #121214;
-}
-
-        /* ========== FOCUS STATES ========== */
-.cine-tab:focus-visible,
-.ciudad-tab:focus-visible,
-.filter-btn:focus-visible,
-.complejo-filter select:focus-visible,
-.tool-bar select:focus-visible,
-.sim-grid input:focus-visible,
-.sim-grid select:focus-visible,
-.versus-row select:focus-visible,
-.btn-top:focus-visible {
-  outline: 2px solid var(--gold);
-  outline-offset: 3px;
-}
-
-/* Columna del día de hoy en tablas */
-table.precios-table th.hoy-col,
-table.precios-table td.hoy-col {
-  background: rgba(201, 162, 39, 0.1);
-}
-html[data-theme="light"] table.precios-table th.hoy-col,
-html[data-theme="light"] table.precios-table td.hoy-col {
-  background: rgba(201, 162, 39, 0.15);
-}
-
-/* ========== MODO CLARO - PRECIOS ========== */
-html[data-theme="light"] .cine-tab,
-html[data-theme="light"] .ciudad-tab,
-html[data-theme="light"] .filter-btn {
-  background: #fff;
-  border-color: rgba(0,0,0,.12);
-  color: #3d3d46;
-}
-html[data-theme="light"] .cine-tab:hover,
-html[data-theme="light"] .ciudad-tab:hover,
-html[data-theme="light"] .filter-btn:hover {
-  border-color: rgba(0,0,0,.25);
-  color: #121214;
-}
-html[data-theme="light"] .cine-tab.active,
-html[data-theme="light"] .filter-btn.active {
-  background: linear-gradient(135deg, var(--red), var(--red-dark));
+.qty-btn {
+  width: 40px;
+  height: 42px;
+  border: none;
+  background: rgba(255,255,255,.06);
   color: #fff;
-  border-color: transparent;
+  font-size: 1.15rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .15s;
 }
-html[data-theme="light"] .ciudad-tab.active {
-  background: linear-gradient(135deg, var(--gold-soft, #e8c547), var(--gold));
-  color: #111;
-}
-
-html[data-theme="light"] .complejo-filter select,
-html[data-theme="light"] .sim-grid input,
-html[data-theme="light"] .sim-grid select,
-html[data-theme="light"] .versus-row select,
-html[data-theme="light"] .tool-bar select {
+.qty-btn:hover { background: rgba(255,255,255,.12); }
+html[data-theme="light"] .qty-control {
   background: #fff;
-  color: #121214;
   border-color: rgba(0,0,0,.15);
 }
-html[data-theme="light"] .complejo-filter select option,
-html[data-theme="light"] .sim-grid select option,
-html[data-theme="light"] .versus-row select option,
-html[data-theme="light"] .tool-bar select option {
-  background: #fff;
+html[data-theme="light"] .qty-control input { color: #121214 !important; }
+html[data-theme="light"] .qty-btn {
+  background: rgba(0,0,0,.04);
   color: #121214;
 }
 
-html[data-theme="light"] .table-block {
-  background: #fff;
-  border-color: rgba(0,0,0,.1);
+.qty-size {
+  display: flex;
+  gap: 8px;
+  align-items: center;
 }
-html[data-theme="light"] .table-block h3 {
-  color: #121214;
-  border-bottom-color: rgba(0,0,0,.08);
-}
-html[data-theme="light"] table.precios-table th {
-  background: rgba(0,0,0,.03);
-  color: #5a5a66;
-}
-html[data-theme="light"] table.precios-table th:first-child,
-html[data-theme="light"] table.precios-table td:first-child {
-  color: #121214;
-}
-html[data-theme="light"] .cine-header h2 {
-  color: #121214;
-}
-html[data-theme="light"] .cine-header .ubicacion {
-  color: #6b6b76;
+.qty-size .qty-control { flex-shrink: 0; }
+.qty-size select {
+  flex: 1;
+  min-height: 42px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: #1a1a22;
+  color: #fff;
 }
 
-html[data-theme="light"] .precios-note,
-html[data-theme="light"] .tip-box,
-html[data-theme="light"] .comp-winner {
-  background: rgba(201,162,39,.08);
-  border-color: rgba(201,162,39,.25);
-  color: #3d3d46;
+.sim-grid-improved {
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
+  padding: 0 18px 12px;
 }
-html[data-theme="light"] .promo-card {
-  background: rgba(196,30,58,.06);
-  border-color: rgba(196,30,58,.25);
-  color: #3d3d46;
+.check-club-sim {
+  grid-column: 1 / -1;
+  margin-top: 4px;
 }
 
-html[data-theme="light"] .complejo-filter label,
-html[data-theme="light"] .tool-group label,
-html[data-theme="light"] .sim-grid label {
-  color: #5a5a66;
-}
-html[data-theme="light"] .check-club {
-  color: #121214;
-}
+.sim-resultados { margin-top: 18px; padding: 0 12px 16px; }
 
-html[data-theme="light"] .rank-1,
-html[data-theme="light"] tr.mejor {
+.sim-winner-card {
+  padding: 18px 20px;
+  border-radius: 14px;
+  border: 1px solid rgba(201,162,39,.4);
   background: rgba(201,162,39,.12);
+  margin-bottom: 16px;
+  text-align: center;
 }
-
-html[data-theme="light"] .loading-state,
-html[data-theme="light"] .error-state {
-  color: #6b6b76;
+.sim-winner-card .label {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 6px;
 }
-
-        /* ========== MODO CLARO - restauro completo precios ========== */
-html[data-theme="light"] body,
-html[data-theme="light"] .precios-page {
-  background: #f4f4f6;
-  color: #121214;
+.sim-winner-card .nombre {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.25rem;
+  color: #fff;
+  margin-bottom: 4px;
 }
-
-html[data-theme="light"] .precios-hero h1 {
-  color: #121214;
+.sim-winner-card .total {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--gold);
+  line-height: 1.1;
 }
-html[data-theme="light"] .precios-hero p {
-  color: #5a5a66;
+.sim-winner-card .ahorro {
+  font-size: .88rem;
+  color: #7ddea0;
+  margin-top: 6px;
 }
-
-html[data-theme="light"] .precios-note {
-  color: #3d3d46;
+.sim-winner-card .desglose {
+  margin-top: 12px;
+  font-size: .82rem;
+  color: var(--muted);
+  text-align: left;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,.1);
+}
+.sim-winner-card .desglose div {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 0;
+}
+.sim-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+.btn-copy, .btn-ver-detalle {
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: .8rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid rgba(201,162,39,.35);
+  background: rgba(201,162,39,.12);
+  color: var(--gold);
+}
+.btn-copy:hover, .btn-ver-detalle:hover {
+  background: rgba(201,162,39,.22);
+}
+.copy-feedback {
+  text-align: center;
+  margin-top: 8px;
+  color: #7ddea0;
+  font-size: .8rem;
+  min-height: 1.2em;
+}
+html[data-theme="light"] .sim-winner-card {
   background: rgba(201,162,39,.1);
-  border-color: rgba(201,162,39,.3);
+}
+html[data-theme="light"] .sim-winner-card .nombre {
+  color: #121214;
 }
 
+.filtros-avanzados {
+  width: 100%;
+  margin: 0 0 24px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 16px;
+  background: var(--surface);
+}
+.filtros-avanzados summary {
+  cursor: pointer;
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--muted);
+  list-style: none;
+}
+.filtros-avanzados summary::-webkit-details-marker { display: none; }
+.filtros-avanzados[open] summary { margin-bottom: 14px; color: var(--text); }
+
+.arma-tu-salida-section { margin-top: 8px; }
+
+/* ===== MODO CLARO ===== */
 html[data-theme="light"] .cine-tab,
 html[data-theme="light"] .ciudad-tab,
 html[data-theme="light"] .filter-btn {
@@ -993,7 +924,8 @@ html[data-theme="light"] .complejo-filter select,
 html[data-theme="light"] .sim-grid input,
 html[data-theme="light"] .sim-grid select,
 html[data-theme="light"] .versus-row select,
-html[data-theme="light"] .tool-bar select {
+html[data-theme="light"] .tool-bar select,
+html[data-theme="light"] .qty-size select {
   background: #fff !important;
   color: #121214 !important;
   border-color: rgba(0,0,0,.15) !important;
@@ -1007,9 +939,7 @@ html[data-theme="light"] .table-block h3 {
   color: #121214 !important;
   border-bottom-color: rgba(0,0,0,.08) !important;
 }
-html[data-theme="light"] .cine-header h2 {
-  color: #121214 !important;
-}
+html[data-theme="light"] .cine-header h2 { color: #121214 !important; }
 html[data-theme="light"] table.precios-table th {
   background: rgba(0,0,0,.04) !important;
   color: #5a5a66 !important;
@@ -1018,26 +948,60 @@ html[data-theme="light"] table.precios-table th:first-child,
 html[data-theme="light"] table.precios-table td:first-child {
   color: #121214 !important;
 }
+html[data-theme="light"] table.precios-table .precio { color: #8a7019 !important; }
+html[data-theme="light"] table.precios-table .na { color: #9a9aa6 !important; }
 
+html[data-theme="light"] .precios-note,
 html[data-theme="light"] .tip-box,
 html[data-theme="light"] .comp-winner {
-  background: rgba(201,162,39,.1) !important;
-  border-color: rgba(201,162,39,.3) !important;
-  color: #3d3d46 !important;
+  background: rgba(201,162,39,.08);
+  border-color: rgba(201,162,39,.25);
+  color: #3d3d46;
 }
-html[data-theme="light"] .tool-group label,
+html[data-theme="light"] .promo-card {
+  background: rgba(196,30,58,.06);
+  border-color: rgba(196,30,58,.25);
+  color: #3d3d46;
+}
 html[data-theme="light"] .complejo-filter label,
+html[data-theme="light"] .tool-group label,
 html[data-theme="light"] .sim-grid label {
   color: #5a5a66 !important;
 }
-html[data-theme="light"] .check-club {
-  color: #121214 !important;
+html[data-theme="light"] .check-club { color: #121214 !important; }
+html[data-theme="light"] .section-title-mini { color: #121214 !important; }
+html[data-theme="light"] .precios-hero h1 { color: #121214; }
+html[data-theme="light"] .precios-hero p { color: #5a5a66; }
+html[data-theme="light"] body,
+html[data-theme="light"] .precios-page {
+  background: #f4f4f6;
+  color: #121214;
 }
-html[data-theme="light"] .section-title-mini {
-  color: #121214 !important;
+html[data-theme="light"] tr.mejor,
+html[data-theme="light"] .rank-1 {
+  background: rgba(201,162,39,.18) !important;
 }
 
-        /* ===== SKELETON ===== */
+/* Focus */
+.cine-tab:focus-visible, .ciudad-tab:focus-visible, .filter-btn:focus-visible,
+.complejo-filter select:focus-visible, .tool-bar select:focus-visible,
+.sim-grid input:focus-visible, .sim-grid select:focus-visible,
+.versus-row select:focus-visible, .btn-top:focus-visible,
+.preset-btn:focus-visible, .qty-btn:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+table.precios-table th.hoy-col,
+table.precios-table td.hoy-col {
+  background: rgba(201, 162, 39, 0.1);
+}
+html[data-theme="light"] table.precios-table th.hoy-col,
+html[data-theme="light"] table.precios-table td.hoy-col {
+  background: rgba(201, 162, 39, 0.15);
+}
+
+/* Skeleton */
 .precios-skeleton {
   width: min(var(--max), calc(100% - 48px));
   margin: 24px auto;
@@ -1060,7 +1024,6 @@ html[data-theme="light"] .sk-block {
   100% { background-position: -200% 0; }
 }
 
-/* ===== RESUMEN RÁPIDO ===== */
 .resumen-rapido {
   width: min(var(--max), calc(100% - 48px));
   margin: 20px auto 0;
@@ -1079,7 +1042,6 @@ html[data-theme="light"] .resumen-rapido {
   color: #3d3d46;
 }
 
-/* ===== INDICADOR ACTUALIZADO ===== */
 .precios-note.viejo {
   border-color: rgba(196,30,58,.4);
   background: rgba(196,30,58,.1);
@@ -1090,22 +1052,16 @@ html[data-theme="light"] .precios-note.viejo {
   background: rgba(196,30,58,.08);
 }
 
-/* ===== EMPTY STATE ===== */
 .empty-state-box {
   text-align: center;
   padding: 40px 20px;
   color: var(--muted);
 }
 .empty-state-box p { margin: 0 0 14px; }
-.empty-state-box .filter-btn {
-  margin-top: 8px;
-}
 
-/* ===== DIFF VS PROMEDIO ===== */
 .diff-barato { color: #7ddea0; font-size: .75rem; font-weight: 600; }
 .diff-caro { color: #ff8a9a; font-size: .75rem; font-weight: 600; }
 
-/* ===== ANIMACIÓN AL CAMBIAR ===== */
 .cine-section, #comparativa-container, #top3-box, #sim-resultados, #vs-result {
   animation: fadeIn .3s ease;
 }
@@ -1114,66 +1070,22 @@ html[data-theme="light"] .precios-note.viejo {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ===== TOOLTIPS BADGES ===== */
-.badge {
-  position: relative;
-  cursor: help;
+.btn-export {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 12px auto 0;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(201,162,39,.35);
+  background: rgba(201,162,39,.12);
+  color: var(--gold);
+  font-size: .8rem;
+  font-weight: 700;
+  cursor: pointer;
 }
-.badge[data-tip]::after {
-  content: attr(data-tip);
-  position: absolute;
-  left: 50%;
-  bottom: calc(100% + 8px);
-  transform: translateX(-50%);
-  background: #1a1a22;
-  color: #fff;
-  font-size: .65rem;
-  font-weight: 600;
-  letter-spacing: 0;
-  text-transform: none;
-  padding: 6px 10px;
-  border-radius: 8px;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity .2s;
-  z-index: 20;
-  box-shadow: 0 4px 12px rgba(0,0,0,.4);
-}
-.badge[data-tip]:hover::after,
-.badge[data-tip]:focus-visible::after {
-  opacity: 1;
-}
+.btn-export:hover { background: rgba(201,162,39,.2); }
 
-/* ===== TABLAS MÓVIL + CONTRASTE CLARO ===== */
-html[data-theme="light"] table.precios-table {
-  color: #121214;
-}
-html[data-theme="light"] table.precios-table th {
-  background: #ececf0 !important;
-  color: #3d3d46 !important;
-  border-bottom-color: rgba(0,0,0,.12);
-}
-html[data-theme="light"] table.precios-table td {
-  border-bottom-color: rgba(0,0,0,.08);
-  color: #121214;
-}
-html[data-theme="light"] table.precios-table .precio {
-  color: #8a7019 !important;
-}
-html[data-theme="light"] table.precios-table .na {
-  color: #9a9aa6 !important;
-}
-html[data-theme="light"] tr.mejor,
-html[data-theme="light"] .rank-1 {
-  background: rgba(201,162,39,.18) !important;
-}
-html[data-theme="light"] table.precios-table th.hoy-col,
-html[data-theme="light"] table.precios-table td.hoy-col {
-  background: rgba(201,162,39,.22) !important;
-}
-
-/* Sticky primera columna en móvil */
 @media (max-width: 700px) {
   .table-scroll {
     overflow-x: auto;
@@ -1201,286 +1113,256 @@ html[data-theme="light"] table.precios-table td.hoy-col {
     padding: 10px 8px;
   }
 }
-
-/* ===== BOTÓN EXPORTAR ===== */
-.btn-export {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin: 12px auto 0;
-  padding: 10px 16px;
-  border-radius: 999px;
-  border: 1px solid rgba(201,162,39,.35);
-  background: rgba(201,162,39,.12);
-  color: var(--gold);
-  font-size: .8rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-.btn-export:hover { background: rgba(201,162,39,.2); }
-
-/* ===== MENÚ HAMBURGUESA (fix) ===== */
-.nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-  z-index: 1002;
-}
-.nav-toggle span {
-  display: block;
-  width: 22px;
-  height: 2px;
-  background: var(--text);
-  margin: 5px 0;
-  transition: .2s;
-}
-@media (max-width: 768px) {
-  .nav-toggle { display: block; }
-  .main-nav {
-    display: none;
-    position: absolute;
-    top: 64px;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    background: var(--bg);
-    border-bottom: 1px solid var(--border);
-    padding: 16px 20px 20px;
-    gap: 4px;
-    z-index: 1001;
-  }
-  .main-nav.is-open { display: flex; }
-  .main-nav a {
-    padding: 12px 8px;
-    font-size: 1rem;
-    border-bottom: 1px solid var(--border);
-  }
-  .header-inner { position: relative; }
-}
-    </style>
-    <script>
-        try {
-          var t = localStorage.getItem('lbdc-theme');
-          if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
-        } catch (e) {}
-    </script>
+  </style>
+  <script>
+    try {
+      var t = localStorage.getItem('lbdc-theme');
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  </script>
 </head>
 <body>
 
 <header class="site-header">
-    <div class="header-inner">
-        <a href="blog.html" class="brand-link" aria-label="Los Brujos del Cine, inicio">
-            <img src="imgs/logoLB.png" alt="Los Brujos del Cine" class="site-logo">
-            <div class="logo-text">
-                <h1>Los Brujos del Cine</h1>
-                <span>Mi Tesoro MX</span>
-            </div>
-        </a>
-        <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav"  aria-label="Abrir menú">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
-            <a href="blog.html#resenas">Reseñas</a>
-            <a href="estrenos.html">Estrenos</a>
-            <a href="maratones.html">Maratones</a>
-            <a href="sagas.html">Sagas</a>
-            <a href="taquilla-historia.html">Taquilla</a>
-            <a href="precios.html">Precios</a>
-            <a href="formatos.html">Formatos</a>
-        </nav>
-        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema" title="Modo claro / oscuro">
-            <span class="theme-icon theme-icon-moon" aria-hidden="true">☾</span>
-            <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
-        </button>
-    </div>
+  <div class="header-inner">
+    <a href="blog.html" class="brand-link" aria-label="Los Brujos del Cine, inicio">
+      <img src="imgs/logoLB.png" alt="Los Brujos del Cine" class="site-logo">
+      <div class="logo-text">
+        <h1>Los Brujos del Cine</h1>
+        <span>Mi Tesoro MX</span>
+      </div>
+    </a>
+    <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+      <a href="blog.html#resenas">Reseñas</a>
+      <a href="estrenos.html">Estrenos</a>
+      <a href="maratones.html">Maratones</a>
+      <a href="sagas.html">Sagas</a>
+      <a href="taquilla-historia.html">Taquilla</a>
+      <a href="precios.html">Precios</a>
+      <a href="formatos.html">Formatos</a>
+    </nav>
+    <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema" title="Modo claro / oscuro">
+      <span class="theme-icon theme-icon-moon" aria-hidden="true">☾</span>
+      <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
+    </button>
+  </div>
 </header>
 
 <main id="main-content" class="precios-page">
 
-    <!-- HERO -->
-    <section class="precios-hero">
-        <div class="precios-hero-inner">
-            <div class="eyebrow">
-                <span aria-hidden="true"></span>
-                Guía de precios
+  <!-- HERO MÍNIMO -->
+  <section class="precios-hero precios-hero--mini">
+    <div class="precios-hero-inner">
+      <div class="eyebrow">Guía de precios</div>
+      <h1>Arma tu <em>salida</em></h1>
+      <p>Calcula boletos + dulcero en Cinépolis, Cinemex y Movie Center.</p>
+    </div>
+  </section>
+
+  <p class="precios-note" id="precios-actualizado">
+    Precios sujetos a cambio según sucursal y promociones.
+  </p>
+
+  <div id="resumen-rapido" class="resumen-rapido" hidden></div>
+
+  <!-- ===================== ARMA TU SALIDA ===================== -->
+  <section class="herramientas-precios arma-tu-salida-section" id="arma-tu-salida">
+
+    <div class="table-block simulador simulador-hero">
+      <h3><span>★</span> Arma tu salida</h3>
+      <p class="sim-panel-hint">Elige cuántas personas y qué dulcero quieres. Te mostramos el complejo más barato.</p>
+
+      <div class="preset-btns" id="preset-btns">
+        <button type="button" class="preset-btn active" data-preset="solo">Solo yo</button>
+        <button type="button" class="preset-btn" data-preset="pareja">Pareja</button>
+        <button type="button" class="preset-btn" data-preset="familia">Familia (2+2)</button>
+        <button type="button" class="preset-btn" data-preset="grupo">Grupo (4)</button>
+        <button type="button" class="preset-btn" data-preset="custom">Personalizado</button>
+      </div>
+
+      <div class="sim-grid sim-grid-improved">
+        <label>Ciudad
+          <select id="sim-ciudad">
+            <option value="sfr">San Francisco del Rincón</option>
+            <option value="leon">León</option>
+          </select>
+        </label>
+
+        <label>Día
+          <select id="sim-dia">
+            <option value="promedio">Promedio semanal</option>
+            <option value="lunes">Lunes</option>
+            <option value="martes">Martes</option>
+            <option value="miercoles">Miércoles</option>
+            <option value="jueves">Jueves</option>
+            <option value="viernes">Viernes</option>
+            <option value="sabado">Sábado</option>
+            <option value="domingo">Domingo</option>
+          </select>
+        </label>
+
+        <label>Adultos
+          <div class="qty-control">
+            <button type="button" class="qty-btn" data-target="sim-adultos" data-delta="-1">−</button>
+            <input type="number" id="sim-adultos" min="0" max="20" value="1">
+            <button type="button" class="qty-btn" data-target="sim-adultos" data-delta="1">+</button>
+          </div>
+        </label>
+
+        <label>Niños
+          <div class="qty-control">
+            <button type="button" class="qty-btn" data-target="sim-ninos" data-delta="-1">−</button>
+            <input type="number" id="sim-ninos" min="0" max="20" value="0">
+            <button type="button" class="qty-btn" data-target="sim-ninos" data-delta="1">+</button>
+          </div>
+        </label>
+
+        <label>Palomitas
+          <div class="qty-size">
+            <div class="qty-control">
+              <button type="button" class="qty-btn" data-target="sim-pal-qty" data-delta="-1">−</button>
+              <input type="number" id="sim-pal-qty" min="0" max="10" value="1">
+              <button type="button" class="qty-btn" data-target="sim-pal-qty" data-delta="1">+</button>
             </div>
-            <h1>Boletos & <em>snacks</em></h1>
-            <p>
-                Compara precios de Cinépolis, Cinemex y Movie Center.
-               
-            </p>
-        </div>
-    </section>
+            <select id="sim-pal">
+              <option value="0">Ninguna</option>
+              <option value="chica">Chica</option>
+              <option value="mediana">Mediana</option>
+              <option value="grande" selected>Grande</option>
+              <option value="jumbo">Jumbo</option>
+            </select>
+          </div>
+        </label>
 
-    <!-- NOTA (una sola) -->
-    <p class="precios-note" id="precios-actualizado">
-        Precios sujetos a cambio según sucursal y promociones.
-    </p>
+        <label>Refrescos G
+          <div class="qty-control">
+            <button type="button" class="qty-btn" data-target="sim-ref" data-delta="-1">−</button>
+            <input type="number" id="sim-ref" min="0" max="20" value="1">
+            <button type="button" class="qty-btn" data-target="sim-ref" data-delta="1">+</button>
+          </div>
+        </label>
 
-    <div id="resumen-rapido" class="resumen-rapido" hidden></div>
-<!--
-    <section class="promos-section" id="promos-section">
-        <h2 class="section-title-mini">Promos del momento</h2>
-        <div id="promos-list"></div>
-    </section>
--->
-    <!-- HERRAMIENTAS -->
-    <section class="herramientas-precios">
-        <div class="tool-bar">
-            <div class="tool-group">
-                <label for="filtro-dia">Día</label>
-                <select id="filtro-dia">
-                    <option value="promedio">Promedio semanal</option>
-                    <option value="lunes">Lunes</option>
-                    <option value="martes">Martes</option>
-                    <option value="miercoles">Miércoles</option>
-                    <option value="jueves">Jueves</option>
-                    <option value="viernes">Viernes</option>
-                    <option value="sabado">Sábado</option>
-                    <option value="domingo">Domingo</option>
-                </select>
-            </div>
+        <label>Aguas
+          <div class="qty-control">
+            <button type="button" class="qty-btn" data-target="sim-agua" data-delta="-1">−</button>
+            <input type="number" id="sim-agua" min="0" max="20" value="0">
+            <button type="button" class="qty-btn" data-target="sim-agua" data-delta="1">+</button>
+          </div>
+        </label>
 
-            <div class="tool-group">
-                <label for="filtro-modo">Modo</label>
-                <select id="filtro-modo">
-                    <option value="combo">Boleto + dulcero</option>
-                    <option value="boleto">Solo boleto</option>
-                    <option value="premium">Snack premium</option>
-                </select>
-            </div>
+        <label class="check-club check-club-sim">
+          <input type="checkbox" id="sim-usar-club">
+          Usar membresía (Club / Tarjeta)
+        </label>
+      </div>
 
-            <div class="tool-group">
-                <label for="filtro-cat">Categoría</label>
-                <select id="filtro-cat">
-                    <option value="todos">Todos</option>
-                    <option value="economico">Económico</option>
-                    <option value="premium">VIP / Platino</option>
-                </select>
-            </div>
-
-            <div class="tool-group">
-                <label for="filtro-preset">Salida</label>
-                <select id="filtro-preset">
-                    <option value="1">1 adulto</option>
-                    <option value="pareja">Pareja (2)</option>
-                    <option value="familia">Familia (2+2)</option>
-                </select>
-            </div>
-
-            <label class="check-club">
-                <input type="checkbox" id="usar-club">
-                Usar membresía (Club / Tarjeta)
-            </label>
-        </div>
-
-        <div id="tip-mejor-dia" class="tip-box"></div>
-        <div id="top3-box" class="table-block"></div>
-
-        <!-- Simulador -->
-        <div class="table-block simulador">
-            <h3><span>★</span> Arma tu salida</h3>
-            <div class="sim-grid">
-                <label>Ciudad
-                    <select id="sim-ciudad">
-                        <option value="sfr">San Francisco del Rincón</option>
-                        <option value="leon">León</option>
-                    </select>
-                </label>
-                <label>Adultos
-                    <input type="number" id="sim-adultos" min="0" value="1">
-                </label>
-                <label>Niños
-                    <input type="number" id="sim-ninos" min="0" value="0">
-                </label>
-                <label>Palomitas
-                    <select id="sim-pal">
-                        <option value="0">Ninguna</option>
-                        <option value="grande" selected>Grande</option>
-                        <option value="jumbo">Jumbo</option>
-                    </select>
-                </label>
-                <label>Refrescos G
-                    <input type="number" id="sim-ref" min="0" value="1">
-                </label>
-                <label>Aguas
-                    <input type="number" id="sim-agua" min="0" value="0">
-                </label>
-                <label>Preset
-                    <select id="sim-preset">
-                        <option value="custom">Personalizado</option>
-                        <option value="solo">Solo yo</option>
-                        <option value="pareja">Pareja</option>
-                        <option value="familia">Familia (2+2)</option>
-                    </select>
-                </label>
-            </div>
-            <div id="sim-resultados"></div>
-        </div>
-
-        <!-- Versus -->
-        <div class="table-block">
-            <h3><span>★</span> Comparar 2 complejos</h3>
-            <div class="versus-row">
-                <select id="vs-a"></select>
-                <span>vs</span>
-                <select id="vs-b"></select>
-            </div>
-            <div id="vs-result"></div>
-        </div>
-
-        <!-- Comparativa por ciudad -->
-        <div class="ciudad-tabs" id="ciudad-tabs">
-            <button class="ciudad-tab active" data-ciudad="sfr">San Francisco del Rincón</button>
-            <button class="ciudad-tab" data-ciudad="leon">León</button>
-            <button class="ciudad-tab" data-ciudad="leon-cadenas">León · Cinépolis vs Cinemex</button>
-        </div>
-        <div id="comparativa-container"></div>
-    </section>
-
-    <hr class="precios-divider">
-
-    <!-- Tablas por cadena / complejo -->
-    <div class="cine-tabs" id="cine-tabs">
-        <button class="cine-tab active" data-cadena="cinepolis">Cinépolis</button>
-        <button class="cine-tab" data-cadena="cinemex">Cinemex</button>
-        <button class="cine-tab" data-cadena="moviecenter">Movie Center</button>
+      <div id="sim-resultados" class="sim-resultados"></div>
     </div>
 
-    <div class="complejo-filter" id="complejo-filter-wrap">
-        <label for="filtro-complejo">Complejo:</label>
-        <select id="filtro-complejo"></select>
+    <!-- FILTROS AVANZADOS -->
+    <details class="filtros-avanzados">
+      <summary>Filtros avanzados (modo, categoría…)</summary>
+      <div class="tool-bar">
+        <div class="tool-group">
+          <label for="filtro-dia">Día (ranking)</label>
+          <select id="filtro-dia">
+            <option value="promedio">Promedio semanal</option>
+            <option value="lunes">Lunes</option>
+            <option value="martes">Martes</option>
+            <option value="miercoles">Miércoles</option>
+            <option value="jueves">Jueves</option>
+            <option value="viernes">Viernes</option>
+            <option value="sabado">Sábado</option>
+            <option value="domingo">Domingo</option>
+          </select>
+        </div>
+        <div class="tool-group">
+          <label for="filtro-modo">Modo ranking</label>
+          <select id="filtro-modo">
+            <option value="combo">Boleto + dulcero</option>
+            <option value="boleto">Solo boleto</option>
+            <option value="premium">Snack premium</option>
+          </select>
+        </div>
+        <div class="tool-group">
+          <label for="filtro-cat">Categoría</label>
+          <select id="filtro-cat">
+            <option value="todos">Todos</option>
+            <option value="economico">Económico</option>
+            <option value="premium">VIP / Platino</option>
+          </select>
+        </div>
+        <label class="check-club">
+          <input type="checkbox" id="usar-club">
+          Usar membresía en rankings
+        </label>
+      </div>
+    </details>
+
+    <div id="tip-mejor-dia" class="tip-box"></div>
+    <div id="top3-box" class="table-block"></div>
+
+    <!-- Versus -->
+    <div class="table-block">
+      <h3><span>★</span> Comparar 2 complejos</h3>
+      <div class="versus-row">
+        <select id="vs-a"></select>
+        <span>vs</span>
+        <select id="vs-b"></select>
+      </div>
+      <div id="vs-result"></div>
     </div>
 
-    <div id="precios-container">
-        <div class="precios-skeleton" id="precios-skeleton">
-            <div class="sk-block"></div>
-            <div class="sk-block"></div>
-            <div class="sk-block" style="height:80px"></div>
-        </div>
+    <!-- Comparativa por ciudad -->
+    <div class="ciudad-tabs" id="ciudad-tabs">
+      <button class="ciudad-tab active" data-ciudad="sfr">San Francisco del Rincón</button>
+      <button class="ciudad-tab" data-ciudad="leon">León</button>
+      <button class="ciudad-tab" data-ciudad="leon-cadenas">León · Cinépolis vs Cinemex</button>
     </div>
+    <div id="comparativa-container"></div>
+  </section>
+
+  <hr class="precios-divider">
+
+  <!-- TABLAS DETALLADAS -->
+  <div class="cine-tabs" id="cine-tabs">
+    <button class="cine-tab active" data-cadena="cinepolis">Cinépolis</button>
+    <button class="cine-tab" data-cadena="cinemex">Cinemex</button>
+    <button class="cine-tab" data-cadena="moviecenter">Movie Center</button>
+  </div>
+
+  <div class="complejo-filter" id="complejo-filter-wrap">
+    <label for="filtro-complejo">Complejo:</label>
+    <select id="filtro-complejo"></select>
+  </div>
+
+  <div id="precios-container">
+    <div class="precios-skeleton" id="precios-skeleton">
+      <div class="sk-block"></div>
+      <div class="sk-block"></div>
+      <div class="sk-block" style="height:80px"></div>
+    </div>
+  </div>
 </main>
 
-
 <footer class="site-footer">
-    <div class="footer-inner">
-        <div class="footer-links">
-            <a href="aviso-de-privacidad-LBDC.html">Política de Privacidad</a>
-            <a href="https://losbrujosdelcine.com/#catalogo" target="_blank" rel="noopener noreferrer">Mi Tesoro MX</a>
-            <a href="https://www.facebook.com/LosBrujosDelCine" target="_blank" rel="noopener noreferrer">Facebook</a>
-            <a href="https://boxd.it/8uSCV" target="_blank" rel="noopener noreferrer">Letterboxd</a>
-        </div>
-        <div class="footer-copy">
-            <p>© 2026 Los Brujos del Cine</p>
-        </div>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="aviso-de-privacidad-LBDC.html">Política de Privacidad</a>
+      <a href="https://losbrujosdelcine.com/#catalogo" target="_blank" rel="noopener noreferrer">Mi Tesoro MX</a>
+      <a href="https://www.facebook.com/LosBrujosDelCine" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <a href="https://boxd.it/8uSCV" target="_blank" rel="noopener noreferrer">Letterboxd</a>
     </div>
+    <div class="footer-copy">
+      <p>© 2026 Los Brujos del Cine</p>
+    </div>
+  </div>
 </footer>
 
-    <button type="button" id="btn-top" class="btn-top" aria-label="Volver arriba">↑</button>
+<button type="button" id="btn-top" class="btn-top" aria-label="Volver arriba">↑</button>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script src="precios.js"></script>
