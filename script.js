@@ -759,7 +759,7 @@ function mostrarProductos() {
                    : ""
                }
 
-               ${p.stock > 0 && p.stock <= 5 && p.precio != 999 && p.precio != 666
+               ${p.stock > 0 && p.stock <= 20 && p.precio != 999 && p.precio != 666
                  ? `<p class="viendo-ahora">👀 ${Math.min(p.stock + 1, 4)} persona${p.stock === 1 ? "" : "s"} viendo esto</p>`
                  : ""
                }
