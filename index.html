@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mi Tesoro MX: palomeras, vasos, Funkos y coleccionables oficiales de cine. Envíos a todo México. Mejores precios que en Mercado Libre. Edición Día de Muertos.">
-    <title>Mi Tesoro MX | Coleccionables de Cine · Día de Muertos</title>
+    <meta name="description" content="Mi Tesoro MX: palomeras, vasos, Funkos y coleccionables oficiales de cine. Envíos a todo México. Mejores precios que en Mercado Libre.">
+    <title>Mi Tesoro MX | Coleccionables de Cine</title>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0RVV6RWHTS"></script>
@@ -12,7 +12,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-0RVV6RWHTS');
     </script>
 
@@ -21,8 +20,8 @@
     <link rel="apple-touch-icon" href="imgs/logo.png">
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Mi Tesoro MX | Coleccionables de Cine · Día de Muertos">
-    <meta property="og:description" content="Palomeras, vasos, Funkos y ediciones exclusivas. Envíos a todo México. Productos originales y atención por WhatsApp. Edición especial Día de Muertos.">
+    <meta property="og:title" content="Mi Tesoro MX | Coleccionables de Cine">
+    <meta property="og:description" content="Palomeras, vasos, Funkos y ediciones exclusivas. Envíos a todo México. Productos originales y atención por WhatsApp.">
     <meta property="og:url" content="https://mitesoromx.com/">
     <meta property="og:locale" content="es_MX">
     <meta property="og:site_name" content="Mi Tesoro MX">
@@ -31,13 +30,12 @@
     <meta property="og:image:height" content="630">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Mi Tesoro MX | Coleccionables de Cine · Día de Muertos">
-    <meta name="twitter:description" content="Palomeras, vasos, Funkos y coleccionables de cine. Envíos a todo México. Edición Día de Muertos.">
+    <meta name="twitter:title" content="Mi Tesoro MX | Coleccionables de Cine">
+    <meta name="twitter:description" content="Palomeras, vasos, Funkos y coleccionables de cine. Envíos a todo México.">
     <meta name="twitter:image" content="https://mitesoromx.com/og-image.jpg">
 
     <link rel="canonical" href="https://mitesoromx.com/">
 
-    <!-- Structured Data (Organization + WebSite) -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -65,259 +63,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- ===== DÍA DE MUERTOS THEME OVERRIDES ===== -->
-    <style>
-        :root {
-            --ddm-marigold: #F5A623;
-            --ddm-marigold-deep: #E8890C;
-            --ddm-pink: #E91E8C;
-            --ddm-pink-deep: #C2185B;
-            --ddm-magenta: #FF2D95;
-            --ddm-teal: #00B4A6;
-            --ddm-purple: #7B2D8E;
-            --ddm-cream: #FFF8F0;
-            --ddm-ink: #1A1210;
-            --ddm-glow: rgba(245, 166, 35, 0.45);
-            --ddm-pink-glow: rgba(233, 30, 140, 0.35);
-        }
-
-        /* Banner superior de temporada */
-        .ddm-banner {
-            background: linear-gradient(90deg, #7B2D8E, #C2185B 30%, #E8890C 50%, #C2185B 70%, #7B2D8E);
-            color: var(--ddm-cream);
-            text-align: center;
-            padding: 0.55rem 1rem;
-            font-size: 0.9rem;
-            font-weight: 600;
-            letter-spacing: 0.02em;
-            border-bottom: 2px solid var(--ddm-marigold);
-            position: relative;
-            overflow: hidden;
-            z-index: 100;
-        }
-        .ddm-banner span {
-            display: inline-block;
-            animation: ddm-pulse 2.4s ease-in-out infinite;
-        }
-        @keyframes ddm-pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.9; transform: scale(1.02); }
-        }
-
-        /* Header */
-        .main-header {
-            border-bottom: 2px solid var(--ddm-marigold) !important;
-            box-shadow: 0 2px 16px rgba(245, 166, 35, 0.18);
-        }
-        .logo-text h1 {
-            color: var(--ddm-marigold) !important;
-        }
-        .logo-text span {
-            color: var(--ddm-pink) !important;
-        }
-        .header-center a:hover {
-            color: var(--ddm-marigold) !important;
-        }
-        .cart-btn, .theme-btn, .menu-toggle {
-            transition: color 0.2s, filter 0.2s;
-        }
-        .cart-btn:hover, .theme-btn:hover {
-            filter: drop-shadow(0 0 6px var(--ddm-glow));
-        }
-
-        /* Hero festivo */
-        .hero.hero-with-image {
-            position: relative;
-        }
-        .hero.hero-with-image::before {
-            content: "💀  🌸  🏵️  🕯️  🌺  💀";
-            position: absolute;
-            top: 12px;
-            left: 0;
-            right: 0;
-            text-align: center;
-            font-size: 1.35rem;
-            letter-spacing: 0.5rem;
-            opacity: 0.75;
-            z-index: 2;
-            pointer-events: none;
-            animation: ddm-float 4s ease-in-out infinite;
-        }
-        @keyframes ddm-float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-6px); }
-        }
-        .hero-overlay {
-            background: linear-gradient(
-                180deg,
-                rgba(26, 18, 16, 0.72) 0%,
-                rgba(123, 45, 142, 0.4) 40%,
-                rgba(200, 24, 91, 0.35) 70%,
-                rgba(26, 18, 16, 0.82) 100%
-            ) !important;
-        }
-        .hero-content h2 {
-            text-shadow: 0 0 18px var(--ddm-glow), 0 2px 8px rgba(0,0,0,0.75);
-        }
-        .hero-cta {
-            background: linear-gradient(135deg, var(--ddm-marigold), var(--ddm-marigold-deep)) !important;
-            border: none !important;
-            box-shadow: 0 4px 18px var(--ddm-glow);
-            color: #1a1210 !important;
-            font-weight: 700;
-        }
-        .hero-cta:hover {
-            filter: brightness(1.08);
-            box-shadow: 0 6px 24px var(--ddm-glow);
-        }
-        .hero-cta-secondary {
-            background: transparent !important;
-            border: 2px solid var(--ddm-pink) !important;
-            color: var(--ddm-cream) !important;
-            box-shadow: none !important;
-        }
-        .hero-cta-secondary:hover {
-            background: rgba(233, 30, 140, 0.18) !important;
-        }
-
-        /* Trust section */
-        .trust-section h2 {
-            color: var(--ddm-marigold);
-        }
-        .trust-card {
-            border: 1px solid rgba(245, 166, 35, 0.28);
-            box-shadow: 0 2px 12px rgba(233, 30, 140, 0.1);
-        }
-
-        /* Catálogo title */
-        .catalogo-title h2 {
-            color: var(--ddm-marigold);
-        }
-        .catalogo-title p::before {
-            content: "🌸 ";
-        }
-        .catalogo-title p::after {
-            content: " 💀";
-        }
-
-        /* Filtros activos en magenta / marigold */
-        .filtro-extra.active {
-            background: linear-gradient(135deg, var(--ddm-pink), var(--ddm-pink-deep)) !important;
-            color: #fff !important;
-            border-color: var(--ddm-pink-deep) !important;
-        }
-        .filtro-extra:hover:not(.active) {
-            border-color: var(--ddm-marigold) !important;
-            color: var(--ddm-marigold) !important;
-        }
-
-        /* Cómo funciona / pagar / testimonios */
-        .como-funciona h2,
-        .como-pagar h2,
-        .testimonios h2 {
-            color: var(--ddm-marigold);
-        }
-        .paso-num {
-            background: linear-gradient(135deg, var(--ddm-marigold), var(--ddm-pink)) !important;
-            color: #fff !important;
-        }
-
-        /* Testimonios */
-        .stars {
-            filter: drop-shadow(0 0 4px rgba(245, 166, 35, 0.5));
-        }
-
-        /* WhatsApp float */
-        #whatsappFloat {
-            box-shadow: 0 0 16px var(--ddm-glow), 0 4px 12px rgba(0,0,0,0.3) !important;
-        }
-        #whatsappFloat:hover {
-            box-shadow: 0 0 24px var(--ddm-glow), 0 6px 16px rgba(0,0,0,0.4) !important;
-        }
-
-        /* Toast */
-        .cart-toast {
-            border-left: 4px solid var(--ddm-marigold) !important;
-        }
-
-        /* Botón volver arriba */
-        .btn-volver-arriba {
-            background: var(--ddm-purple) !important;
-            color: #fff !important;
-            border: 2px solid var(--ddm-marigold) !important;
-        }
-        .btn-volver-arriba:hover {
-            background: var(--ddm-marigold) !important;
-            color: #1a1210 !important;
-        }
-
-        /* Cart drawer */
-        .cart-header h2 {
-            color: var(--ddm-marigold);
-        }
-        .btn-whatsapp {
-            background: linear-gradient(135deg, #25D366, #128C7E) !important;
-            box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
-        }
-        .btn-pago-opcion.active {
-            background: linear-gradient(135deg, var(--ddm-pink), var(--ddm-pink-deep)) !important;
-            border-color: var(--ddm-pink-deep) !important;
-            color: #fff !important;
-        }
-
-        /* Decoración: flores / calaveras en esquinas (desktop) */
-        @media (min-width: 768px) {
-            body::before,
-            body::after {
-                content: "🌸";
-                position: fixed;
-                font-size: 1.25rem;
-                opacity: 0.4;
-                z-index: 50;
-                pointer-events: none;
-                animation: ddm-sway 7s ease-in-out infinite;
-            }
-            body::before {
-                top: 85px;
-                left: 12px;
-                content: "💀";
-            }
-            body::after {
-                bottom: 110px;
-                right: 16px;
-                content: "🏵️";
-                animation-delay: -3.5s;
-            }
-            @keyframes ddm-sway {
-                0%, 100% { transform: translateY(0) rotate(0deg); }
-                25% { transform: translateY(8px) rotate(6deg); }
-                75% { transform: translateY(-6px) rotate(-5deg); }
-            }
-        }
-
-        /* Skeleton */
-        .skeleton-card {
-            border: 1px solid rgba(245, 166, 35, 0.12);
-        }
-
-        /* Paginación */
-        .paginacion button.active,
-        .paginacion .active {
-            background: var(--ddm-marigold) !important;
-            border-color: var(--ddm-marigold-deep) !important;
-            color: #1a1210 !important;
-        }
-    </style>
 </head>
 <body>
 
-<!-- BANNER DÍA DE MUERTOS -->
-<div class="ddm-banner" role="banner">
-    <span>💀 ¡Edición Día de Muertos! Coleccionables, cine y cultura pop · Envíos a todo México 🌸</span>
-</div>
-
-<!-- LOADER (mínimo; el catálogo muestra skeleton) -->
+<!-- LOADER -->
 <div id="loader" class="loader-mini" hidden></div>
 
 <!-- HEADER -->
@@ -326,7 +75,7 @@
         <img src="imgs/logo.png" alt="Mi Tesoro MX" class="site-logo">
         <div class="logo-text">
             <h1>Mi Tesoro MX</h1>
-            <span>Los Brujos del Cine 💀</span>
+            <span>Los Brujos del Cine</span>
         </div>
     </div>
 
@@ -351,40 +100,36 @@
 <section class="hero hero-with-image">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-        <h2>💀 Coleccionables, Geek y Cultura Pop… en ofrenda al cine</h2>
+        <h2>Coleccionables, Geek y Cultura Pop</h2>
         <p>
-            Palomeras, Vasos, Funkos, Figuras, Carros, Cómics, Pósters, Libros, Tarjetas y Más.
+            Palomeras, vasos, Funkos, figuras, carros, cómics, pósters, libros, tarjetas y más.
+            Envíos a todo México.
         </p>
         <div class="hero-actions">
-            <a href="#catalogo" class="hero-cta">Ver Catálogo 🌸</a>
-            <a href="referencias.html" class="hero-cta hero-cta-secondary">Ver Referencias Reales</a>
+            <a href="#catalogo" class="hero-cta">Ver catálogo</a>
+            <a href="referencias.html" class="hero-cta hero-cta-secondary">Ver referencias reales</a>
         </div>
     </div>
 </section>
-<br>
+
 <!-- TRUST -->
 <section class="trust-section">
     <h2>¿Por qué comprar en Mi Tesoro MX?</h2>
     <div class="trust-grid">
-        <div class="trust-card">✅ <strong>Productos Originales</strong></div>
-        <div class="trust-card">📦 <strong>Empaque Seguro</strong></div>
-        <div class="trust-card">🚚 <strong>Envíos a Todo México</strong></div>
-        <div class="trust-card">💬 <strong>Atención Personalizada</strong></div>
+        <div class="trust-card">✅ <strong>Productos originales</strong></div>
+        <div class="trust-card">📦 <strong>Empaque seguro</strong></div>
+        <div class="trust-card">🚚 <strong>Envíos a todo México</strong></div>
+        <div class="trust-card">💬 <strong>Atención personalizada</strong></div>
     </div>
 </section>
-<br>
+
 <!-- CARRUSEL PREVENTAS -->
 <section class="carousel-preventas" aria-label="Preventas activas">
-    <div class="carousel-track" id="carouselTrack">
-        <!-- Se llena con JS -->
-    </div>
-
+    <div class="carousel-track" id="carouselTrack"></div>
     <button type="button" class="carousel-btn carousel-prev" id="carouselPrev" aria-label="Anterior">‹</button>
     <button type="button" class="carousel-btn carousel-next" id="carouselNext" aria-label="Siguiente">›</button>
-
     <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Indicadores de preventa"></div>
 </section>
-
 
 <!-- TÍTULO CATÁLOGO -->
 <div class="catalogo-title">
@@ -436,7 +181,7 @@
         <button type="button" class="filtro-extra" data-filtro="ultima" aria-pressed="false">Última pieza</button>
         <button type="button" class="filtro-extra" data-filtro="libro" aria-pressed="false">Libros</button>
         <button type="button" class="filtro-extra" data-filtro="yugioh" aria-pressed="false">YuGiOh</button>
-        <button type="button" class="filtro-extra" data-filtro="vendeconmigo" aria-pressed="false">Vende Conmigo </button>
+        <button type="button" class="filtro-extra" data-filtro="vendeconmigo" aria-pressed="false">Vende Conmigo</button>
         <button type="button" class="filtro-extra" data-filtro="agotados" aria-pressed="false">Agotados</button>
     </div>
 </div>
@@ -450,11 +195,9 @@
     </div>
 </div>
 
-
 <!-- CATÁLOGO -->
 <main>
     <section id="catalogo" class="catalogo-skeleton" aria-label="Catálogo de productos" aria-busy="true">
-        <!-- Skeleton mientras carga productos.json -->
         <div class="skeleton-card" aria-hidden="true"><div class="skeleton-img"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div><div class="skeleton-btn"></div></div>
         <div class="skeleton-card" aria-hidden="true"><div class="skeleton-img"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div><div class="skeleton-btn"></div></div>
         <div class="skeleton-card" aria-hidden="true"><div class="skeleton-img"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div><div class="skeleton-btn"></div></div>
@@ -500,14 +243,12 @@
     </p>
 </section>
 
-
-<!-- TESTIMONIOS / PRUEBA SOCIAL -->
+<!-- TESTIMONIOS -->
 <section class="testimonios">
     <h2>Lo que dicen nuestros clientes</h2>
     <p class="testimonios-sub">Coleccionistas reales de todo México · Reseñas verificadas</p>
 
     <div class="testimonios-grid">
-        <!-- 3 o 4 testimonios destacados -->
         <article class="testimonio">
             <div class="testimonio-header">
                 <img src="imgs/clientes/logo.png" alt="" class="testimonio-foto" loading="lazy">
@@ -519,11 +260,8 @@
             <div class="stars" aria-label="5 de 5 estrellas">⭐⭐⭐⭐⭐</div>
             <p>"Todo muy bien, confié en él y no me ha decepcionado. El producto llegó en excelentes condiciones."</p>
         </article>
-
-        <!-- más testimonios aquí... -->
     </div>
 
-    <!-- CTA a la página completa -->
     <div class="testimonios-cta">
         <a href="referencias.html" class="btn-ver-referencias">
             Ver todas las referencias
@@ -551,7 +289,6 @@
             <button type="button" class="btn-pago-opcion" data-pago="Apartado 30%">Apartar con 30%</button>
         </div>
 
-        <!-- Envío gratis dinámico -->
         <div id="envioGratisBar" class="envio-gratis-bar" hidden>
             <div class="envio-gratis-text" id="envioGratisText"></div>
             <div class="envio-gratis-track">
@@ -562,7 +299,6 @@
         <p id="envioDatosError" class="envio-datos-error" hidden>
             Completa Código Postal para continuar
         </p>
-
 
         <p class="cart-legal-mini">
             Al confirmar aceptas nuestros
@@ -584,7 +320,7 @@
 </aside>
 <div id="cartOverlay"></div>
 
-<!-- WHATSAPP FLOAT + estado de horario -->
+<!-- WHATSAPP FLOAT -->
 <div id="waFloatWrap" class="wa-float-wrap">
     <a id="whatsappFloat" href="https://wa.me/524761002824" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
         💬

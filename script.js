@@ -1709,7 +1709,7 @@ document.addEventListener("touchend", (e) => {
 const PREVENTAS_ACTIVAS = [
     {
       id: "halloween-temporada",
-      active: true,
+      active: false,
       emoji: "🎃",
       titulo: "Promoción de temporada Halloween",
       texto: "Del <strong>19 de octubre al 2 de noviembre</strong>:<br><br>• En compras mayores a <strong>$350</strong> el envío es <strong>gratis</strong> por Correos de México.<br>• Al comprar <strong>4 vasos</strong> te llevas <strong>uno extra</strong> con etiqueta <em>Último</em>.",
