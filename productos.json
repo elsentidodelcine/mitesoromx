@@ -13,6 +13,7 @@
   { "nombre": "Preventa Vaso Godzilla Cinemex", "categoria": "Peliculas", "precio": 399, "imagen": "imgs/godzy2.jpeg" ,"badge": "preventa", "stock": 3},
 
   { "nombre": "Preventa 2 Vasos El Gato con Sombrero Cinemex", "categoria": "Peliculas", "precio": 999, "imagen": "imgs/gato.jpeg" ,"badge": "preventa", "stock": 3},
+  { "nombre": "Preventa Vaso El Gato con Sombrero Cinepolis", "categoria": "Peliculas", "precio": 999, "imagen": "imgs/gato.jpeg" ,"badge": "preventa", "stock": 3},
 
   { "nombre": "Preventa 2 Vasos Los Juegos del Hambre Cinemex", "categoria": "Peliculas", "precio": 480, "imagen": "imgs/juegos.jpeg" ,"badge": "preventa", "stock": 3},
 
