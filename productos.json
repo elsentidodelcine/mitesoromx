@@ -1,7 +1,7 @@
 [
 
 
-  { "nombre": "Preventa Vaso Godzilla Cinepolis", "categoria": "Peliculas", "precio": 399, "imagen": "imgs/godzy.jpeg" ,"badge": "preventa", "stock": 1},
+  { "nombre": "Preventa Vaso Godzilla Cinepolis", "categoria": "Peliculas", "precio": 666, "imagen": "imgs/godzy.jpeg" ,"badge": "preventa", "stock": 0},
   { "nombre": "Preventa Vaso Godzilla Cinemex", "categoria": "Peliculas", "precio": 399, "imagen": "imgs/godzy2.jpeg" ,"badge": "preventa", "stock": 3},
 
   { "nombre": "Preventa 2 Vasos El Gato con Sombrero Cinemex", "categoria": "Peliculas", "precio": 999, "imagen": "imgs/gato.jpeg" ,"badge": "preventa", "stock": 3},

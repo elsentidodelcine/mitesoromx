@@ -102,52 +102,96 @@ $descCorta = $tienda['descripcion_corta'] ?: 'Coleccionables y piezas selecciona
       padding: 0 16px 48px;
     }
 
+    .tienda-hero-wrap {
+      position: relative;
+      margin: 12px auto 8px;
+      max-width: 820px;
+      padding: 0 16px;
+    }
     .tienda-hero {
       text-align: center;
-      padding: 36px 16px 12px;
-      max-width: 680px;
-      margin: 0 auto;
+      padding: 32px 22px 28px;
+      border-radius: 20px;
+      background:
+        radial-gradient(120% 80% at 50% 0%, color-mix(in srgb, var(--tienda-secondary) 22%, transparent), transparent 55%),
+        linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0));
+      border: 1px solid color-mix(in srgb, var(--tienda-secondary) 35%, rgba(255,255,255,.08));
+      box-shadow: 0 10px 40px rgba(0,0,0,.18);
+    }
+    body:not(.dark) .tienda-hero {
+      background:
+        radial-gradient(120% 80% at 50% 0%, color-mix(in srgb, var(--tienda-secondary) 16%, transparent), transparent 55%),
+        linear-gradient(180deg, #fff, #f7f7f9);
+      border: 1px solid color-mix(in srgb, var(--tienda-secondary) 28%, rgba(0,0,0,.08));
+      box-shadow: 0 10px 28px rgba(0,0,0,.08);
+    }
+    .tienda-hero-kicker {
+      display: inline-block;
+      margin: 0 0 12px;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--tienda-secondary);
+      opacity: .95;
     }
     .tienda-hero h2 {
-      margin: 0 0 8px;
-      font-size: clamp(1.5rem, 4vw, 2rem);
-      letter-spacing: -0.02em;
+      margin: 0 0 10px;
+      font-size: clamp(1.75rem, 5vw, 2.35rem);
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      font-weight: 700;
     }
     .tienda-hero p {
-      margin: 0;
-      opacity: .78;
-      font-size: 1.02rem;
-      line-height: 1.45;
+      margin: 0 auto;
+      max-width: 42ch;
+      opacity: .82;
+      font-size: 1.05rem;
+      line-height: 1.5;
     }
     .tienda-badge-red {
-      display: inline-block;
-      margin: 14px 0 0;
-      font-size: .72rem;
-      font-weight: 600;
-      letter-spacing: .03em;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin: 16px 0 0;
+      font-size: .74rem;
+      font-weight: 700;
+      letter-spacing: .04em;
       text-transform: uppercase;
-      padding: 6px 12px;
+      padding: 8px 14px;
       border-radius: 999px;
-      border: 1px solid rgba(0,0,0,.12);
-      opacity: .9;
-    }
-    body.dark .tienda-badge-red {
-      border-color: rgba(255,255,255,.16);
+      color: #fff;
+      background: linear-gradient(135deg, var(--tienda-primary), var(--tienda-secondary));
+      border: none;
+      box-shadow: 0 6px 16px color-mix(in srgb, var(--tienda-secondary) 35%, transparent);
     }
 
     .tienda-page .catalogo-title {
       text-align: center;
-      margin: 28px auto 8px;
+      margin: 34px auto 4px;
       padding: 0 16px;
     }
     .tienda-page .catalogo-title h2 {
-      margin: 0 0 4px;
-      font-size: 1.25rem;
+      margin: 0 0 6px;
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      opacity: .9;
     }
     .tienda-page .catalogo-title p {
       margin: 0;
-      opacity: .7;
-      font-size: .92rem;
+      opacity: .65;
+      font-size: .9rem;
+    }
+    .tienda-page .catalogo-title::after {
+      content: "";
+      display: block;
+      width: 48px;
+      height: 3px;
+      margin: 14px auto 0;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--tienda-primary), var(--tienda-secondary));
     }
 
     /* Grid de productos más profesional */
@@ -243,45 +287,167 @@ $descCorta = $tienda['descripcion_corta'] ?: 'Coleccionables y piezas selecciona
     .tienda-page .cart-header h2 {
       font-size: 1rem;
     }
+
+    /* ===== Header propio de la tienda ===== */
+    .store-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(10px);
+      background: color-mix(in srgb, var(--tienda-primary) 12%, rgba(10,10,12,.92));
+      border-bottom: 1px solid color-mix(in srgb, var(--tienda-secondary) 30%, rgba(255,255,255,.08));
+    }
+    body:not(.dark) .store-header {
+      background: color-mix(in srgb, var(--tienda-primary) 6%, #fff);
+      border-bottom: 1px solid color-mix(in srgb, var(--tienda-secondary) 22%, rgba(0,0,0,.08));
+    }
+    .store-header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .store-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+    .store-logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      object-fit: cover;
+      background: #111;
+      flex-shrink: 0;
+    }
+    .store-logo-fallback {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: #fff;
+      background: linear-gradient(135deg, var(--tienda-primary), var(--tienda-secondary));
+      flex-shrink: 0;
+    }
+    .store-brand-text {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+    .store-brand-text strong {
+      font-size: 1.02rem;
+      line-height: 1.2;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .store-brand-text span {
+      font-size: .75rem;
+      opacity: .7;
+    }
+    .store-header-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    /* ===== Footer propio ===== */
+    .store-footer {
+      margin-top: 24px;
+      border-top: 1px solid rgba(255,255,255,.08);
+      background: color-mix(in srgb, var(--tienda-primary) 10%, transparent);
+    }
+    body:not(.dark) .store-footer {
+      border-top: 1px solid rgba(0,0,0,.08);
+      background: color-mix(in srgb, var(--tienda-primary) 4%, #f6f6f8);
+    }
+    .store-footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px 16px 36px;
+      display: grid;
+      gap: 16px;
+    }
+    @media (min-width: 700px) {
+      .store-footer-inner {
+        grid-template-columns: 1.2fr 1fr;
+        align-items: start;
+      }
+    }
+    .store-footer-brand strong {
+      display: block;
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+    }
+    .store-footer-brand p,
+    .store-footer-meta p {
+      margin: 0;
+      opacity: .75;
+      font-size: .9rem;
+      line-height: 1.45;
+    }
+    .store-footer-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .store-footer-network {
+      font-size: .82rem !important;
+      opacity: .65 !important;
+    }
+    .store-footer-network a {
+      color: var(--tienda-secondary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .store-footer-network a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body class="tienda-page">
 
-<!-- HEADER -->
-<header class="main-header">
-  <div class="header-left">
-    <a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit">
-      <img src="/imgs/logo.png" alt="Mi Tesoro MX" class="site-logo">
-      <div class="logo-text">
-        <h1>Mi Tesoro MX</h1>
-        <span>Los Brujos del Cine</span>
+<!-- HEADER PROPIO DE LA TIENDA -->
+<header class="store-header">
+  <div class="store-header-inner">
+    <a class="store-brand" href="?slug=<?= e($slug) ?>" style="text-decoration:none;color:inherit">
+      <?php if (!empty($tienda['logo_ruta'])): ?>
+        <img src="/<?= e($tienda['logo_ruta']) ?>" alt="" class="store-logo" onerror="this.style.display='none'">
+      <?php else: ?>
+        <span class="store-logo-fallback" aria-hidden="true"><?= e(mb_strtoupper(mb_substr($nombreTienda, 0, 1))) ?></span>
+      <?php endif; ?>
+      <div class="store-brand-text">
+        <strong><?= e($nombreTienda) ?></strong>
+        <span>Tienda independiente</span>
       </div>
     </a>
-  </div>
 
-  <button id="menuToggle" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
-
-  <nav class="header-center" id="mainNav" aria-label="Navegación principal">
-    <a href="/">Catálogo principal</a>
-    <a href="/tiendas.html">Tiendas</a>
-    <a href="/envios.html">Envíos</a>
-    <a href="/vende.html">Vender</a>
-  </nav>
-
-  <div class="header-right">
-    <button id="verCarrito" class="cart-btn" aria-label="Ver carrito" type="button">
-      🛒 <span id="cartCount">0</span>
-    </button>
-    <button id="toggleTheme" class="theme-btn" aria-label="Cambiar tema" type="button">🌙</button>
+    <div class="store-header-actions">
+      <button id="verCarrito" class="cart-btn" aria-label="Ver carrito" type="button">
+        🛒 <span id="cartCount">0</span>
+      </button>
+      <button id="toggleTheme" class="theme-btn" aria-label="Cambiar tema" type="button">🌙</button>
+    </div>
   </div>
 </header>
 
 <!-- HERO TIENDA -->
-<section class="tienda-hero">
-  <h2><?= e($nombreTienda) ?></h2>
-  <p><?= e($descCorta) ?></p>
-  <div class="tienda-badge-red">Parte de Mi Tesoro MX | Tu Tienda</div>
-</section>
+<div class="tienda-hero-wrap">
+  <section class="tienda-hero">
+    <div class="tienda-hero-kicker">Tienda oficial de la red</div>
+    <h2><?= e($nombreTienda) ?></h2>
+    <p><?= e($descCorta) ?></p>
+    <div class="tienda-badge-red">Mi Tesoro MX | Tu Tienda</div>
+  </section>
+</div>
 
 <div class="catalogo-title">
   <h2>Catálogo</h2>
@@ -344,14 +510,21 @@ $descCorta = $tienda['descripcion_corta'] ?: 'Coleccionables y piezas selecciona
   </section>
 </main>
 
-<p class="tienda-back">
-  <a href="/tiendas.html">← Ver todas las tiendas de la red</a>
-  ·
-  <a href="/">Catálogo principal</a>
-</p>
-
-<!-- FOOTER -->
-<div id="footer"></div>
+<!-- FOOTER PROPIO DE LA TIENDA -->
+<footer class="store-footer">
+  <div class="store-footer-inner">
+    <div class="store-footer-brand">
+      <strong><?= e($nombreTienda) ?></strong>
+      <p><?= e($descCorta) ?></p>
+    </div>
+    <div class="store-footer-meta">
+      <p>Los pedidos se confirman por WhatsApp con esta tienda.</p>
+      <p class="store-footer-network">
+        Alojado en <a href="/tiendas.html">Mi Tesoro MX | Tu Tienda</a>
+      </p>
+    </div>
+  </div>
+</footer>
 
 <!-- CARRITO DRAWER -->
 <aside id="cartDrawer" class="cart-drawer" aria-label="Carrito de compras">
@@ -642,6 +815,5 @@ $descCorta = $tienda['descripcion_corta'] ?: 'Coleccionables y piezas selecciona
   syncButtons();
 })();
 </script>
-<script src="/Estructura/footer.js"></script>
 </body>
 </html>
