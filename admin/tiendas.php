@@ -20,6 +20,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nombre           = trim($_POST['nombre_comercial'] ?? '');
     $slug             = slugify(trim($_POST['slug'] ?? $nombre));
     $descripcion      = trim($_POST['descripcion_corta'] ?? '') ?: null;
+    $headerTagline    = trim($_POST['header_tagline'] ?? '') ?: 'Tienda independiente';
+    $footerTexto      = trim($_POST['footer_texto'] ?? '') ?: null;
+    $mostrarRed       = !empty($_POST['mostrar_red']) ? 1 : 0;
+    $logoRuta         = trim($_POST['logo_ruta'] ?? '') ?: null;
+    $bannerRuta       = trim($_POST['banner_ruta'] ?? '') ?: null;
     $whatsapp         = preg_replace('/\D+/', '', $_POST['whatsapp'] ?? '') ?: '';
     $colorPrincipal   = trim($_POST['color_principal'] ?? '#1a1a2e');
     $colorSecundario  = trim($_POST['color_secundario'] ?? '#e94560');
@@ -30,6 +35,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         ? $_POST['estado'] : 'borrador';
     $fechaActivacion  = $_POST['fecha_activacion'] ?: null;
     $fechaVencimiento = $_POST['fecha_vencimiento'] ?: null;
+
+
+    // Subida de logo (opcional)
+    if (!empty($_FILES['logo_file']['tmp_name']) && is_uploaded_file($_FILES['logo_file']['tmp_name'])) {
+        $file = $_FILES['logo_file'];
+        $allowed = ['image/jpeg' => 'jpg', 'image/png' => 'png', 'image/webp' => 'webp', 'image/gif' => 'gif'];
+        $finfo = finfo_open(FILEINFO_MIME_TYPE);
+        $mime = finfo_file($finfo, $file['tmp_name']);
+        finfo_close($finfo);
+        if (isset($allowed[$mime]) && $file['size'] <= 2 * 1024 * 1024) {
+            $dir = dirname(__DIR__) . '/uploads/tiendas';
+            if (!is_dir($dir)) {
+                @mkdir($dir, 0755, true);
+            }
+            $subdir = $dir . '/' . ($editId > 0 ? $editId : 'tmp');
+            if (!is_dir($subdir)) {
+                @mkdir($subdir, 0755, true);
+            }
+            $name = 'logo_' . time() . '.' . $allowed[$mime];
+            $dest = $subdir . '/' . $name;
+            if (move_uploaded_file($file['tmp_name'], $dest)) {
+                $logoRuta = 'uploads/tiendas/' . ($editId > 0 ? $editId : 'tmp') . '/' . $name;
+            }
+        }
+    }
 
     if ($nombre === '' || $whatsapp === '') {
         flash('error', 'Nombre comercial y WhatsApp son obligatorios.');
@@ -47,11 +77,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $pdo->prepare(
             'UPDATE tiendas SET
               vendedor_id=?, nombre_comercial=?, slug=?, descripcion_corta=?,
+              header_tagline=?, footer_texto=?, mostrar_red=?, logo_ruta=?, banner_ruta=?,
               whatsapp=?, color_principal=?, color_secundario=?, color_fondo=?,
               tipografia=?, max_productos=?, estado=?, fecha_activacion=?, fecha_vencimiento=?
              WHERE id=? AND es_principal = 0'
         )->execute([
             $vendedorId, $nombre, $slug, $descripcion,
+            $headerTagline, $footerTexto, $mostrarRed, $logoRuta, $bannerRuta,
             $whatsapp, $colorPrincipal, $colorSecundario, $colorFondo,
             $tipografia, $maxProductos, $estado, $fechaActivacion, $fechaVencimiento,
             $editId
@@ -61,16 +93,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         $pdo->prepare(
             'INSERT INTO tiendas (
-              vendedor_id, nombre_comercial, slug, descripcion_corta, whatsapp,
+              vendedor_id, nombre_comercial, slug, descripcion_corta,
+              header_tagline, footer_texto, mostrar_red, logo_ruta, banner_ruta, whatsapp,
               color_principal, color_secundario, color_fondo, tipografia,
               max_productos, es_principal, estado, fecha_activacion, fecha_vencimiento
-            ) VALUES (?,?,?,?,?,?,?,?,?,?,0,?,?,?)'
+            ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,0,?,?,?)'
         )->execute([
-            $vendedorId, $nombre, $slug, $descripcion, $whatsapp,
+            $vendedorId, $nombre, $slug, $descripcion,
+            $headerTagline, $footerTexto, $mostrarRed, $logoRuta, $bannerRuta, $whatsapp,
             $colorPrincipal, $colorSecundario, $colorFondo, $tipografia,
             $maxProductos, $estado, $fechaActivacion, $fechaVencimiento
         ]);
         $newId = (int) $pdo->lastInsertId();
+
+        // Si el logo se subió a tmp, moverlo a la carpeta de la tienda
+        if ($logoRuta && str_contains($logoRuta, '/tmp/')) {
+            $src = dirname(__DIR__) . '/' . $logoRuta;
+            $newRel = 'uploads/tiendas/' . $newId . '/' . basename($logoRuta);
+            $dstDir = dirname(__DIR__) . '/uploads/tiendas/' . $newId;
+            if (!is_dir($dstDir)) @mkdir($dstDir, 0755, true);
+            $dst = dirname(__DIR__) . '/' . $newRel;
+            if (is_file($src) && @rename($src, $dst)) {
+                $pdo->prepare('UPDATE tiendas SET logo_ruta = ? WHERE id = ?')->execute([$newRel, $newId]);
+            }
+        }
 
         // Suscripción inicial si está activa y tiene vencimiento
         if ($estado === 'activa' && $fechaActivacion && $fechaVencimiento) {
@@ -124,7 +170,7 @@ if ($accion === 'nueva' || $accion === 'editar'):
     <div class="alert alert-warning">Esta es la tienda principal (Mi Tesoro MX). Algunos campos están limitados.</div>
   <?php endif; ?>
 
-  <form class="admin-form" method="post">
+  <form class="admin-form" method="post" enctype="multipart/form-data">
     <?= csrf_field() ?>
     <input type="hidden" name="id" value="<?= (int)($tienda['id'] ?? 0) ?>">
 
@@ -148,8 +194,38 @@ if ($accion === 'nueva' || $accion === 'editar'):
       </label>
     </div>
 
-    <label>Descripción corta
+    <label>Descripción corta (hero y footer)
       <input type="text" name="descripcion_corta" maxlength="300" value="<?= e($tienda['descripcion_corta'] ?? '') ?>">
+    </label>
+
+    <label>Texto bajo el nombre en el header
+      <input type="text" name="header_tagline" maxlength="120" placeholder="Tienda independiente"
+             value="<?= e($tienda['header_tagline'] ?? 'Tienda independiente') ?>">
+    </label>
+
+    <label>Texto del footer
+      <textarea name="footer_texto" rows="3" placeholder="Los pedidos se confirman por WhatsApp con esta tienda."><?= e($tienda['footer_texto'] ?? '') ?></textarea>
+    </label>
+
+    <label style="flex-direction:row;align-items:center;gap:8px;color:var(--text)">
+      <input type="checkbox" name="mostrar_red" value="1" <?= !isset($tienda['mostrar_red']) || (int)($tienda['mostrar_red'] ?? 1) === 1 ? 'checked' : '' ?>>
+      Mostrar “Alojado en Mi Tesoro MX | Tu Tienda” en el footer
+    </label>
+
+    <label>Logo (subir imagen JPG/PNG/WebP, máx. 2 MB)
+      <input type="file" name="logo_file" accept="image/jpeg,image/png,image/webp,image/gif">
+    </label>
+    <?php if (!empty($tienda['logo_ruta'])): ?>
+      <p style="margin:0;font-size:.85rem;color:var(--muted)">
+        Logo actual: <code><?= e($tienda['logo_ruta']) ?></code><br>
+        <img src="/<?= e($tienda['logo_ruta']) ?>" alt="" style="max-height:64px;margin-top:8px;border-radius:8px">
+      </p>
+    <?php endif; ?>
+    <label>Ruta del logo (manual, opcional)
+      <input type="text" name="logo_ruta" placeholder="uploads/tiendas/2/logo.jpg" value="<?= e($tienda['logo_ruta'] ?? '') ?>">
+    </label>
+    <label>Ruta del banner (opcional)
+      <input type="text" name="banner_ruta" placeholder="uploads/tiendas/2/banner.jpg" value="<?= e($tienda['banner_ruta'] ?? '') ?>">
     </label>
 
     <label>WhatsApp (solo números, ej. 524761002824) *
