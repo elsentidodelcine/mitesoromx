@@ -1540,17 +1540,6 @@
     "titulo": "Los Juegos del Hambre: En Llamas",
     "tipo": "preventa",
     "estadoCartelera": "preventa",
-    "fecha": "2026-11-12",
-    "fechaTexto": "Jueves 12 de Noviembre del 2026",
-    "poster": "imgs/estrenos/llamas.jpg",
-    "cines": ["Cinepolis"],
-    "nota": "Estados Unidos"
-  },
-  {
-    "id": "llamas",
-    "titulo": "Los Juegos del Hambre: En Llamas",
-    "tipo": "preventa",
-    "estadoCartelera": "preventa",
     "fecha": "2026-11-15",
     "fechaTexto": "Domingo 15 de Noviembre del 2026",
     "poster": "imgs/estrenos/llamas.jpg",

@@ -355,8 +355,8 @@
 
   { "nombre": "Palomera MVF4 Cinemex Minions", "categoria": "Minions", "precio": 200, "imagen": "imgs/coleccionable38.jpg" ,"badge": "ultimo", "stock": 1},
 
-  { "nombre": "Vaso Minion Cinemex Model2 Minions", "categoria": "Minions", "precio": 50, "imagen": "imgs/coleccionable45.jpg" ,"badge": "ultimo", "stock": 1},
-  { "nombre": "Vaso Minion Cinemex Model3 Minions", "categoria": "Minions", "precio": 50, "imagen": "imgs/coleccionable46.jpg" ,"badge": "ultimo", "stock": 1},
+  { "nombre": "Vaso Minion Cinemex Model2 Minions", "categoria": "Minions", "precio": 50, "imagen": "imgs/coleccionable45.jpg" ,"badge": "ultimo", "stock": 0},
+  { "nombre": "Vaso Minion Cinemex Model3 Minions", "categoria": "Minions", "precio": 50, "imagen": "imgs/coleccionable46.jpg" ,"badge": "ultimo", "stock": 0},
   { "nombre": "Vaso Minion Cinepolis Model1 Minions", "categoria": "Minions", "precio": 80, "imagen": "imgs/coleccionable39.jpg" ,"badge": "ultimo", "stock": 1},
   { "nombre": "Vaso Minion Cinepolis Model2 Minions", "categoria": "Minions", "precio": 80, "imagen": "imgs/coleccionable40.jpg" ,"badge": "ultimo", "stock": 1},
   { "nombre": "Vaso Minion Movie Center Minions", "categoria": "Minions", "precio": 30, "imagen": "imgs/coleccionable42.jpg" ,"badge": "ultimo", "stock": 1},
