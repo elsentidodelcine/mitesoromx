@@ -1773,7 +1773,7 @@ const PREVENTAS_ACTIVAS = [
     emoji: "💰",
     titulo: "Vende tus coleccionables",
     texto: "¿Tienes piezas guardadas que ya no usas?<br><br><strong>Te ayudo a venderlas</strong> con Mi Tesoro MX: exposición, difusión y atención a compradores.",
-    link: "tiendas.html",
+    link: "https://losbrujosdelcine.com/tiendas.html",
     linkTexto: "Quiero vender",
     tema: "vende",
   },

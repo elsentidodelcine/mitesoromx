@@ -1,14 +1,13 @@
 <?php
 /**
- * Tienda pública de un vendedor
- * URL: /tiendas/{slug}/  o  /tiendas/?slug=xxx
+ * Tienda pública de un vendedor — estilo Mi Tesoro MX
+ * URL: /tiendas/{slug}
  */
 declare(strict_types=1);
 require_once __DIR__ . '/../includes/bootstrap.php';
 
 $slug = trim($_GET['slug'] ?? '');
 
-// Soporte path info / rewrite: /tiendas/ricardo
 if ($slug === '' && !empty($_SERVER['REQUEST_URI'])) {
     if (preg_match('#/tiendas/([a-z0-9\-]+)/?#i', $_SERVER['REQUEST_URI'], $m)) {
         $slug = strtolower($m[1]);
@@ -38,10 +37,30 @@ if ($tienda['estado'] !== 'activa') {
     $msg = $tienda['estado'] === 'suspendida'
         ? 'Esta tienda está temporalmente suspendida.'
         : 'Esta tienda aún no está disponible.';
-    echo '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>No disponible</title></head><body style="font-family:system-ui;text-align:center;padding:60px">';
-    echo '<h1>' . htmlspecialchars($tienda['nombre_comercial']) . '</h1>';
-    echo '<p>' . htmlspecialchars($msg) . '</p>';
-    echo '<p><a href="https://losbrujosdelcine.com/">Volver a Mi Tesoro MX</a></p></body></html>';
+    ?><!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>No disponible | Mi Tesoro MX</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-left">
+      <a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit">
+        <img src="/imgs/logo.png" alt="Mi Tesoro MX" class="site-logo">
+        <div class="logo-text"><h1>Mi Tesoro MX</h1><span>Los Brujos del Cine</span></div>
+      </a>
+    </div>
+  </header>
+  <main style="text-align:center;padding:60px 16px">
+    <h2><?= e($tienda['nombre_comercial']) ?></h2>
+    <p><?= e($msg) ?></p>
+    <p><a class="boton" href="/tiendas.html">Ver otras tiendas</a></p>
+  </main>
+</body>
+</html><?php
     exit;
 }
 
@@ -54,228 +73,575 @@ $productos = $ps->fetchAll();
 
 $colorP = $tienda['color_principal'] ?: '#1a1a2e';
 $colorS = $tienda['color_secundario'] ?: '#e94560';
-$colorF = $tienda['color_fondo'] ?: '#ffffff';
-$font   = $tienda['tipografia'] ?: 'system-ui';
+$wa = preg_replace('/\D+/', '', $tienda['whatsapp'] ?? '');
+$nombreTienda = $tienda['nombre_comercial'];
+$descCorta = $tienda['descripcion_corta'] ?: 'Coleccionables y piezas seleccionadas.';
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><?= e($tienda['nombre_comercial']) ?> · Mi Tesoro MX</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><?= e($nombreTienda) ?> | Mi Tesoro MX</title>
+  <meta name="description" content="<?= e($descCorta) ?>">
+  <link rel="icon" href="/imgs/logo.png" type="image/png" sizes="32x32">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/Estructura/footer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --c-primary: <?= e($colorP) ?>;
-      --c-secondary: <?= e($colorS) ?>;
-      --c-bg: <?= e($colorF) ?>;
-      --font: <?= e($font) ?>, system-ui, sans-serif;
+      --tienda-primary: <?= e($colorP) ?>;
+      --tienda-secondary: <?= e($colorS) ?>;
     }
-    * { box-sizing: border-box; }
-    body {
+
+    .tienda-page main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 16px 48px;
+    }
+
+    .tienda-hero {
+      text-align: center;
+      padding: 36px 16px 12px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .tienda-hero h2 {
+      margin: 0 0 8px;
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      letter-spacing: -0.02em;
+    }
+    .tienda-hero p {
       margin: 0;
-      font-family: var(--font);
-      background: var(--c-bg);
-      color: #1a1a1a;
+      opacity: .78;
+      font-size: 1.02rem;
       line-height: 1.45;
     }
-    header {
-      background: var(--c-primary);
-      color: #fff;
-      padding: 20px 16px;
-      text-align: center;
-    }
-    header h1 { margin: 0 0 6px; font-size: 1.5rem; }
-    header p { margin: 0; opacity: .85; font-size: .95rem; }
-    .badge-plataforma {
+    .tienda-badge-red {
       display: inline-block;
-      margin-top: 10px;
+      margin: 14px 0 0;
       font-size: .72rem;
-      background: rgba(255,255,255,.15);
-      padding: 4px 10px;
+      font-weight: 600;
+      letter-spacing: .03em;
+      text-transform: uppercase;
+      padding: 6px 12px;
       border-radius: 999px;
+      border: 1px solid rgba(0,0,0,.12);
+      opacity: .9;
     }
-    .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 16px 80px; }
-    .grid {
+    body.dark .tienda-badge-red {
+      border-color: rgba(255,255,255,.16);
+    }
+
+    .tienda-page .catalogo-title {
+      text-align: center;
+      margin: 28px auto 8px;
+      padding: 0 16px;
+    }
+    .tienda-page .catalogo-title h2 {
+      margin: 0 0 4px;
+      font-size: 1.25rem;
+    }
+    .tienda-page .catalogo-title p {
+      margin: 0;
+      opacity: .7;
+      font-size: .92rem;
+    }
+
+    /* Grid de productos más profesional */
+    .tienda-page #catalogo {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 18px;
+      gap: 20px;
+      justify-content: center;
+      padding: 16px 0 24px;
     }
-    .card {
-      background: #fff;
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 2px 12px rgba(0,0,0,.08);
-      display: flex;
-      flex-direction: column;
-      position: relative;
-    }
-    .card img {
+    /* Si hay pocos productos, no se estiran a todo el ancho */
+    .tienda-page #catalogo .producto {
+      max-width: 280px;
       width: 100%;
+      margin: 0 auto;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .tienda-page #catalogo .producto:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0,0,0,.14);
+    }
+    body.dark .tienda-page #catalogo .producto:hover {
+      box-shadow: 0 12px 28px rgba(0,0,0,.45);
+    }
+    .tienda-page #catalogo .producto .img-wrapper {
       aspect-ratio: 1;
+      overflow: hidden;
+      background: rgba(0,0,0,.04);
+    }
+    body.dark .tienda-page #catalogo .producto .img-wrapper {
+      background: rgba(255,255,255,.04);
+    }
+    .tienda-page #catalogo .producto .producto-img {
+      width: 100%;
+      height: 100%;
       object-fit: cover;
-      background: #f0f0f0;
+      display: block;
     }
-    .card .info { padding: 12px 14px 16px; flex: 1; display: flex; flex-direction: column; gap: 6px; }
-    .card h2 { margin: 0; font-size: 1rem; }
-    .card .precio { font-weight: 700; color: var(--c-secondary); font-size: 1.1rem; }
-    .card .badge {
-      position: absolute; top: 10px; left: 10px;
-      background: var(--c-secondary); color: #fff;
-      font-size: .7rem; font-weight: 600;
-      padding: 4px 8px; border-radius: 6px;
+    .tienda-page #catalogo .producto .info {
+      padding: 12px 14px 14px;
     }
-    .card button {
-      margin-top: auto;
-      background: var(--c-primary);
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      padding: 10px;
-      font: inherit;
-      font-weight: 600;
-      cursor: pointer;
+    .tienda-page #catalogo .producto .info h2 {
+      font-size: .98rem;
+      line-height: 1.3;
+      margin: 0 0 4px;
     }
-    .card button:disabled { opacity: .5; cursor: default; }
-    .cart-bar {
-      position: fixed; bottom: 0; left: 0; right: 0;
-      background: var(--c-primary); color: #fff;
-      padding: 12px 16px;
-      display: flex; justify-content: space-between; align-items: center;
-      gap: 12px;
-      box-shadow: 0 -4px 20px rgba(0,0,0,.2);
+    .tienda-page #catalogo .producto .descripcion-oferta {
+      font-size: .82rem;
+      opacity: .7;
+      margin: 0 0 6px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
-    .cart-bar button {
-      background: var(--c-secondary);
-      color: #fff; border: none; border-radius: 8px;
-      padding: 10px 16px; font-weight: 700; cursor: pointer;
+    .tienda-page #catalogo .producto .precio {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin: 4px 0 10px;
     }
-    .empty { text-align: center; padding: 40px; opacity: .7; }
-    footer { text-align: center; padding: 20px; font-size: .8rem; opacity: .6; }
+    .tienda-page #catalogo .producto .boton {
+      width: 100%;
+    }
+
+    /* Acento de color de la tienda (sutil) */
+    .tienda-page .boton:not(.proximamente):not(.apartado):not(:disabled) {
+      background: var(--tienda-primary);
+    }
+    .tienda-page .btn-whatsapp {
+      background: #25d366 !important;
+    }
+
+    .sin-productos {
+      text-align: center;
+      padding: 56px 16px;
+      opacity: .75;
+      grid-column: 1 / -1;
+    }
+
+    .tienda-back {
+      text-align: center;
+      padding: 8px 16px 32px;
+    }
+    .tienda-back a {
+      font-size: .9rem;
+      opacity: .75;
+    }
+    .tienda-back a:hover { opacity: 1; }
+
+    /* Carrito: título más claro */
+    .tienda-page .cart-header h2 {
+      font-size: 1rem;
+    }
   </style>
 </head>
-<body>
-  <header>
-    <?php if (!empty($tienda['logo_ruta'])): ?>
-      <img src="/<?= e($tienda['logo_ruta']) ?>" alt="" style="max-height:56px;margin-bottom:8px">
-    <?php endif; ?>
-    <h1><?= e($tienda['nombre_comercial']) ?></h1>
-    <?php if ($tienda['descripcion_corta']): ?>
-      <p><?= e($tienda['descripcion_corta']) ?></p>
-    <?php endif; ?>
-    <div class="badge-plataforma">Parte de Mi Tesoro MX | Tu Tienda</div>
-  </header>
+<body class="tienda-page">
 
-  <div class="wrap">
-    <?php if (!$productos): ?>
-      <p class="empty">Esta tienda aún no tiene productos publicados.</p>
-    <?php else: ?>
-      <div class="grid" id="catalogo">
-        <?php foreach ($productos as $p): ?>
-          <article class="card" data-id="<?= (int)$p['id'] ?>" data-nombre="<?= e($p['nombre']) ?>" data-precio="<?= e((string)$p['precio']) ?>" data-stock="<?= (int)$p['stock'] ?>">
-            <?php if ($p['badge']): ?><span class="badge"><?= e($p['badge']) ?></span><?php endif; ?>
-            <img src="/<?= e($p['imagen_principal'] ?: 'imgs/placeholder.png') ?>" alt="<?= e($p['nombre']) ?>" loading="lazy"
-                 onerror="this.src='/imgs/placeholder.png'">
-            <div class="info">
-              <h2><?= e($p['nombre']) ?></h2>
-              <?php if ($p['descripcion']): ?><p style="font-size:.85rem;opacity:.75;margin:0"><?= e($p['descripcion']) ?></p><?php endif; ?>
-              <div class="precio">$<?= number_format((float)$p['precio'], 2) ?> MXN</div>
-              <?php if ((int)$p['stock'] <= 0): ?>
-                <button type="button" disabled>Agotado</button>
-              <?php else: ?>
-                <button type="button" class="btn-add">Agregar al carrito</button>
-              <?php endif; ?>
-            </div>
-          </article>
-        <?php endforeach; ?>
+<!-- HEADER -->
+<header class="main-header">
+  <div class="header-left">
+    <a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit">
+      <img src="/imgs/logo.png" alt="Mi Tesoro MX" class="site-logo">
+      <div class="logo-text">
+        <h1>Mi Tesoro MX</h1>
+        <span>Los Brujos del Cine</span>
       </div>
+    </a>
+  </div>
+
+  <button id="menuToggle" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+  <nav class="header-center" id="mainNav" aria-label="Navegación principal">
+    <a href="/">Catálogo principal</a>
+    <a href="/tiendas.html">Tiendas</a>
+    <a href="/envios.html">Envíos</a>
+    <a href="/vende.html">Vender</a>
+  </nav>
+
+  <div class="header-right">
+    <button id="verCarrito" class="cart-btn" aria-label="Ver carrito" type="button">
+      🛒 <span id="cartCount">0</span>
+    </button>
+    <button id="toggleTheme" class="theme-btn" aria-label="Cambiar tema" type="button">🌙</button>
+  </div>
+</header>
+
+<!-- HERO TIENDA -->
+<section class="tienda-hero">
+  <h2><?= e($nombreTienda) ?></h2>
+  <p><?= e($descCorta) ?></p>
+  <div class="tienda-badge-red">Parte de Mi Tesoro MX | Tu Tienda</div>
+</section>
+
+<div class="catalogo-title">
+  <h2>Catálogo</h2>
+  <p><?= count($productos) ?> producto<?= count($productos) === 1 ? '' : 's' ?> disponible<?= count($productos) === 1 ? '' : 's' ?></p>
+</div>
+
+<main>
+  <section id="catalogo" aria-label="Catálogo de la tienda">
+    <?php if (!$productos): ?>
+      <p class="sin-productos">Esta tienda aún no tiene productos publicados.</p>
+    <?php else: ?>
+      <?php foreach ($productos as $p):
+        $badge = trim((string)($p['badge'] ?? ''));
+        $badgeClass = $badge
+          ? strtolower(preg_replace('/\s+/', '', iconv('UTF-8', 'ASCII//TRANSLIT//IGNORE', $badge) ?: $badge))
+          : '';
+        $img = $p['imagen_principal'] ?: 'imgs/placeholder.png';
+        if ($img && $img[0] !== '/') {
+          // rutas relativas desde raíz del sitio
+        }
+        $stock = (int)$p['stock'];
+        $precio = (float)$p['precio'];
+      ?>
+        <article class="producto"
+                 data-id="<?= (int)$p['id'] ?>"
+                 data-nombre="<?= e($p['nombre']) ?>"
+                 data-precio="<?= e((string)$precio) ?>"
+                 data-stock="<?= $stock ?>"
+                 data-imagen="<?= e($img) ?>">
+          <?php if ($badge): ?>
+            <span class="badge <?= e($badgeClass) ?>"><?= e($badge) ?></span>
+          <?php endif; ?>
+          <div class="img-wrapper">
+            <img src="/<?= e($img) ?>"
+                 alt="<?= e($p['nombre']) ?>"
+                 class="producto-img"
+                 loading="lazy"
+                 onerror="this.onerror=null;this.src='/imgs/placeholder.png'">
+          </div>
+          <div class="info">
+            <h2><?= e($p['nombre']) ?></h2>
+            <?php if (!empty($p['descripcion'])): ?>
+              <p class="descripcion-oferta"><?= e($p['descripcion']) ?></p>
+            <?php endif; ?>
+            <p class="precio">$<?= number_format($precio, 2) ?> MXN</p>
+            <?php if ($stock === 1): ?>
+              <p class="urgencia-real">🔥 ¡Última pieza disponible!</p>
+            <?php elseif ($stock > 1 && $stock <= 3): ?>
+              <p class="urgencia-real">⚡ Solo quedan <?= $stock ?> piezas</p>
+            <?php endif; ?>
+            <?php if ($stock <= 0): ?>
+              <span class="sin-stock">AGOTADO</span>
+            <?php else: ?>
+              <button class="boton" type="button">Agregar al carrito</button>
+            <?php endif; ?>
+          </div>
+        </article>
+      <?php endforeach; ?>
     <?php endif; ?>
+  </section>
+</main>
+
+<p class="tienda-back">
+  <a href="/tiendas.html">← Ver todas las tiendas de la red</a>
+  ·
+  <a href="/">Catálogo principal</a>
+</p>
+
+<!-- FOOTER -->
+<div id="footer"></div>
+
+<!-- CARRITO DRAWER -->
+<aside id="cartDrawer" class="cart-drawer" aria-label="Carrito de compras">
+  <div class="cart-header">
+    <h2>🛒 Carrito · <?= e($nombreTienda) ?></h2>
+    <button id="cerrarDrawer" type="button" aria-label="Cerrar carrito">✕</button>
   </div>
-
-  <div class="cart-bar" id="cartBar" hidden>
-    <span id="cartSummary">0 productos</span>
-    <button type="button" id="btnPedir">Pedir por WhatsApp</button>
+  <div id="cartItems" class="cart-items"></div>
+  <div class="cart-footer">
+    <p id="cartTotal">Tu carrito está vacío</p>
+    <button type="button" id="btnSeguirComprando" class="btn-seguir-comprando" style="display:none">
+      Seguir comprando
+    </button>
+    <button type="button" id="btnPedirWhats" class="btn-whatsapp" style="display:none">
+      Confirmar por WhatsApp
+    </button>
+    <button id="vaciarCarrito" class="btn-vaciar" type="button" disabled>Vaciar carrito</button>
   </div>
+</aside>
+<div id="cartOverlay"></div>
 
-  <footer>
-    Tienda alojada en <a href="https://losbrujosdelcine.com/">Mi Tesoro MX</a>
-  </footer>
+<!-- TOAST -->
+<div id="cartToast" class="cart-toast" role="status" style="display:none">
+  <strong id="toastTitle">Agregado al carrito</strong>
+  <p id="toastText"></p>
+  <div class="toast-actions">
+    <button id="toastVerCarrito" type="button">Ver carrito</button>
+    <button id="toastCerrar" type="button" aria-label="Cerrar">✕</button>
+  </div>
+</div>
 
-  <script>
-  (function () {
-    const SLUG = <?= json_encode($slug, JSON_UNESCAPED_UNICODE) ?>;
-    const KEY = 'carrito_tienda_' + SLUG;
-    let carrito = [];
-    try { carrito = JSON.parse(localStorage.getItem(KEY) || '[]'); } catch (e) { carrito = []; }
+<script>
+(function () {
+  const SLUG = <?= json_encode($slug, JSON_UNESCAPED_UNICODE) ?>;
+  const TIENDA_NOMBRE = <?= json_encode($nombreTienda, JSON_UNESCAPED_UNICODE) ?>;
+  const KEY = 'carrito_tienda_' + SLUG;
 
-    const bar = document.getElementById('cartBar');
-    const summary = document.getElementById('cartSummary');
+  let carrito = [];
+  try { carrito = JSON.parse(localStorage.getItem(KEY) || '[]'); } catch (e) { carrito = []; }
 
-    function save() {
-      localStorage.setItem(KEY, JSON.stringify(carrito));
-      renderBar();
+  const drawer = document.getElementById('cartDrawer');
+  const overlay = document.getElementById('cartOverlay');
+  const cartItems = document.getElementById('cartItems');
+  const cartTotal = document.getElementById('cartTotal');
+  const cartCount = document.getElementById('cartCount');
+  const btnPedir = document.getElementById('btnPedirWhats');
+  const btnSeguir = document.getElementById('btnSeguirComprando');
+  const btnVaciar = document.getElementById('vaciarCarrito');
+  const toast = document.getElementById('cartToast');
+  const toastTitle = document.getElementById('toastTitle');
+  const toastText = document.getElementById('toastText');
+
+  function save() {
+    localStorage.setItem(KEY, JSON.stringify(carrito));
+    renderCart();
+    updateCount();
+  }
+
+  function updateCount() {
+    const n = carrito.reduce((a, i) => a + i.cantidad, 0);
+    if (cartCount) cartCount.textContent = n;
+  }
+
+  function money(n) {
+    return '$' + Number(n).toLocaleString('es-MX', { minimumFractionDigits: 0, maximumFractionDigits: 2 }) + ' MXN';
+  }
+
+  function renderCart() {
+    if (!cartItems || !cartTotal) return;
+
+    if (carrito.length === 0) {
+      cartItems.innerHTML = '';
+      cartTotal.innerHTML = '<div class="cart-empty"><p class="cart-empty-title">Tu carrito está vacío</p><p class="cart-empty-sub">Agrega productos de esta tienda.</p></div>';
+      if (btnPedir) btnPedir.style.display = 'none';
+      if (btnSeguir) btnSeguir.style.display = 'none';
+      if (btnVaciar) btnVaciar.disabled = true;
+      return;
     }
 
-    function renderBar() {
-      const n = carrito.reduce((a, i) => a + i.cantidad, 0);
-      const total = carrito.reduce((a, i) => a + i.precio * i.cantidad, 0);
-      if (n === 0) { bar.hidden = true; return; }
-      bar.hidden = false;
-      summary.textContent = n + (n === 1 ? ' producto' : ' productos') + ' · $' + total.toFixed(2) + ' MXN';
-    }
+    if (btnPedir) btnPedir.style.display = 'block';
+    if (btnSeguir) btnSeguir.style.display = 'block';
+    if (btnVaciar) btnVaciar.disabled = false;
 
-    document.querySelectorAll('.btn-add').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const card = btn.closest('.card');
-        const id = Number(card.dataset.id);
-        const stock = Number(card.dataset.stock);
-        const nombre = card.dataset.nombre;
-        const precio = Number(card.dataset.precio);
-        const found = carrito.find(x => x.id === id);
-        if (found) {
-          if (found.cantidad >= stock) return;
-          found.cantidad++;
+    let subtotal = 0;
+    cartItems.innerHTML = carrito.map((item, index) => {
+      const sub = item.precio * item.cantidad;
+      subtotal += sub;
+      return `
+        <div class="cart-item">
+          <img src="/${item.imagen || 'imgs/placeholder.png'}" class="cart-img" alt="" onerror="this.src='/imgs/placeholder.png'">
+          <div class="cart-info">
+            <p class="cart-name">${escapeHtml(item.nombre)}</p>
+            <p class="cart-price">${money(item.precio)}</p>
+            <div class="cart-qty-row">
+              <button class="cart-qty-btn" data-action="minus" data-index="${index}" type="button">−</button>
+              <span class="cart-qty-num">${item.cantidad}</span>
+              <button class="cart-qty-btn" data-action="plus" data-index="${index}" type="button">+</button>
+            </div>
+          </div>
+          <button class="cart-remove" data-index="${index}" type="button" aria-label="Eliminar">✕</button>
+        </div>`;
+    }).join('');
+
+    cartTotal.innerHTML = `
+      <div class="cart-summary">
+        <div class="cart-summary-row cart-summary-total">
+          <span>Total</span>
+          <span>${money(subtotal)}</span>
+        </div>
+        <p class="cart-summary-note">El envío lo confirma el vendedor por WhatsApp.</p>
+      </div>`;
+
+    cartItems.querySelectorAll('.cart-qty-btn').forEach(btn => {
+      btn.onclick = () => {
+        const i = Number(btn.dataset.index);
+        const action = btn.dataset.action;
+        if (!carrito[i]) return;
+        if (action === 'plus') {
+          if (carrito[i].cantidad < (carrito[i].stock || 99)) carrito[i].cantidad++;
         } else {
-          carrito.push({ id, nombre, precio, cantidad: 1 });
+          if (carrito[i].cantidad <= 1) carrito.splice(i, 1);
+          else carrito[i].cantidad--;
         }
         save();
-        btn.textContent = 'En carrito';
-      });
+        syncButtons();
+      };
     });
-
-    document.getElementById('btnPedir').addEventListener('click', async () => {
-      if (!carrito.length) return;
-      const btn = document.getElementById('btnPedir');
-      btn.disabled = true;
-      btn.textContent = 'Procesando…';
-      try {
-        const res = await fetch('/api/pedido.php', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            slug: SLUG,
-            items: carrito.map(i => ({ id: i.id, cantidad: i.cantidad })),
-            tipo_pago: 'Pago total'
-          })
-        });
-        const data = await res.json();
-        if (!data.ok) {
-          alert(data.error || 'No se pudo crear el pedido');
-          btn.disabled = false;
-          btn.textContent = 'Pedir por WhatsApp';
-          return;
-        }
-        carrito = [];
+    cartItems.querySelectorAll('.cart-remove').forEach(btn => {
+      btn.onclick = () => {
+        carrito.splice(Number(btn.dataset.index), 1);
         save();
-        window.location.href = data.whatsapp;
-      } catch (e) {
-        alert('Error de conexión. Intenta de nuevo.');
+        syncButtons();
+      };
+    });
+  }
+
+  function escapeHtml(str) {
+    return String(str || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  function showToast(nombre) {
+    if (!toast) return;
+    toastTitle.textContent = 'Agregado al carrito';
+    toastText.textContent = '"' + nombre + '" se agregó al carrito';
+    toast.style.display = 'block';
+    toast.classList.add('show');
+    clearTimeout(toast._t);
+    toast._t = setTimeout(() => {
+      toast.classList.remove('show');
+      toast.style.display = 'none';
+    }, 3200);
+  }
+
+  function openDrawer() {
+    drawer?.classList.add('open');
+    overlay?.classList.add('show');
+  }
+  function closeDrawer() {
+    drawer?.classList.remove('open');
+    overlay?.classList.remove('show');
+  }
+
+  function syncButtons() {
+    document.querySelectorAll('.producto').forEach(card => {
+      const id = Number(card.dataset.id);
+      const btn = card.querySelector('.boton');
+      if (!btn) return;
+      const en = carrito.find(c => c.id === id);
+      if (en) {
+        btn.textContent = 'En carrito';
+        btn.classList.add('apartado');
+        btn.disabled = true;
+      } else {
+        btn.textContent = 'Agregar al carrito';
+        btn.classList.remove('apartado');
         btn.disabled = false;
-        btn.textContent = 'Pedir por WhatsApp';
       }
     });
+  }
 
-    renderBar();
-  })();
-  </script>
+  // Agregar al carrito
+  document.querySelectorAll('.producto .boton').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.producto');
+      const id = Number(card.dataset.id);
+      const stock = Number(card.dataset.stock);
+      const nombre = card.dataset.nombre;
+      const precio = Number(card.dataset.precio);
+      const imagen = card.dataset.imagen || '';
+
+      const found = carrito.find(x => x.id === id);
+      if (found) {
+        if (found.cantidad >= stock) return;
+        found.cantidad++;
+      } else {
+        carrito.push({ id, nombre, precio, cantidad: 1, stock, imagen });
+      }
+      save();
+      syncButtons();
+      showToast(nombre);
+      card.classList.add('added');
+      setTimeout(() => card.classList.remove('added'), 500);
+    });
+  });
+
+  document.getElementById('verCarrito')?.addEventListener('click', openDrawer);
+  document.getElementById('cerrarDrawer')?.addEventListener('click', closeDrawer);
+  overlay?.addEventListener('click', closeDrawer);
+  btnSeguir?.addEventListener('click', closeDrawer);
+
+  document.getElementById('toastVerCarrito')?.addEventListener('click', () => {
+    toast.style.display = 'none';
+    openDrawer();
+  });
+  document.getElementById('toastCerrar')?.addEventListener('click', () => {
+    toast.style.display = 'none';
+  });
+
+  btnVaciar?.addEventListener('click', () => {
+    if (!carrito.length) return;
+    if (!confirm('¿Vaciar el carrito de esta tienda?')) return;
+    carrito = [];
+    save();
+    syncButtons();
+  });
+
+  // Pedir por WhatsApp (valida stock en servidor)
+  btnPedir?.addEventListener('click', async () => {
+    if (!carrito.length) return;
+    btnPedir.disabled = true;
+    btnPedir.textContent = 'Procesando…';
+    try {
+      const res = await fetch('/api/pedido.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          slug: SLUG,
+          items: carrito.map(i => ({ id: i.id, cantidad: i.cantidad })),
+          tipo_pago: 'Pago total'
+        })
+      });
+      const data = await res.json();
+      if (!data.ok) {
+        alert(data.error || 'No se pudo crear el pedido');
+        btnPedir.disabled = false;
+        btnPedir.textContent = 'Confirmar por WhatsApp';
+        return;
+      }
+      carrito = [];
+      save();
+      syncButtons();
+      window.location.href = data.whatsapp;
+    } catch (e) {
+      alert('Error de conexión. Intenta de nuevo.');
+      btnPedir.disabled = false;
+      btnPedir.textContent = 'Confirmar por WhatsApp';
+    }
+  });
+
+  // Tema
+  const btnTheme = document.getElementById('toggleTheme');
+  if (localStorage.getItem('tema') === 'dark') {
+    document.body.classList.add('dark');
+    if (btnTheme) btnTheme.textContent = '☀️';
+  }
+  btnTheme?.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    const oscuro = document.body.classList.contains('dark');
+    btnTheme.textContent = oscuro ? '☀️' : '🌙';
+    localStorage.setItem('tema', oscuro ? 'dark' : 'light');
+  });
+
+  // Menú
+  const menuToggle = document.getElementById('menuToggle');
+  const headerMenu = document.querySelector('.header-center');
+  menuToggle?.addEventListener('click', () => {
+    const abierto = headerMenu.classList.toggle('open');
+    menuToggle.textContent = abierto ? '✕' : '☰';
+    menuToggle.setAttribute('aria-expanded', abierto);
+  });
+
+  renderCart();
+  updateCount();
+  syncButtons();
+})();
+</script>
+<script src="/Estructura/footer.js"></script>
 </body>
 </html>
