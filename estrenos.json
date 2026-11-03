@@ -1276,8 +1276,8 @@
     "titulo": "The irregular at Magic High School La Película",
     "tipo": "estreno",
     "estadoCartelera": "estreno",
-    "fecha": "2026-10-29",
-    "fechaTexto": "Jueves 29 de Octubre 2026",
+    "fecha": "2026-11-03",
+    "fechaTexto": "Miércoles 03 de Noviembre 2026",
     "poster": "imgs/estrenos/irregular.jpg",
     "cines": ["Cinemex"],
     "nota": "Japón"
@@ -1340,10 +1340,10 @@
   {
     "id": "sombrero",
     "titulo": "El Gato con Sombrero",
-    "tipo": "estreno",
-    "estadoCartelera": "estreno",
-    "fecha": "2026-11-01",
-    "fechaTexto": "Domingo 1 de Noviembre 2026",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-05",
+    "fechaTexto": "Jueves 5 de Noviembre 2026",
     "poster": "imgs/estrenos/sombrero.jpg",
     "cines": ["Cinemex"],
     "nota": "Estados Unidos"
@@ -1490,5 +1490,126 @@
     "poster": "imgs/estrenos/venus.jpg",
     "cines": ["Cinemex", "Cinepolis"],
     "nota": "Reino Unido"
+  },
+  {
+    "id": "btsjaka",
+    "titulo": "BTS WORLD TOUR 'ARIRANG' IN JAKARTA: LIVE VIEWING",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-12-29",
+    "fechaTexto": "Martes 29 de Diciembre del 2026",
+    "poster": "imgs/estrenos/btsjaka.jpg",
+    "cines": ["Cinepolis", "Cinemex"],
+    "nota": "Jakarta"
+  },
+  {
+    "id": "btskao",
+    "titulo": "BTS WORLD TOUR 'ARIRANG' IN KAOHSIUNG: LIVE VIEWING",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-21",
+    "fechaTexto": "Sábado 21 de Noviembre del 2026",
+    "poster": "imgs/estrenos/btskao.jpg",
+    "cines": ["Cinepolis", "Cinemex"],
+    "nota": "Kaohsiung"
+  },
+  {
+    "id": "ebenezer",
+    "titulo": "Ebenezer",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-12",
+    "fechaTexto": "Jueves 12 de Noviembre del 2026",
+    "poster": "imgs/estrenos/ebenezer.jpg",
+    "cines": ["Cinepolis", "Cinemex", "Movie Center"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "llamas",
+    "titulo": "Los Juegos del Hambre: En Llamas",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-12",
+    "fechaTexto": "Jueves 12 de Noviembre del 2026",
+    "poster": "imgs/estrenos/llamas.jpg",
+    "cines": ["Cinepolis"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "llamas",
+    "titulo": "Los Juegos del Hambre: En Llamas",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-12",
+    "fechaTexto": "Jueves 12 de Noviembre del 2026",
+    "poster": "imgs/estrenos/llamas.jpg",
+    "cines": ["Cinepolis"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "llamas",
+    "titulo": "Los Juegos del Hambre: En Llamas",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-15",
+    "fechaTexto": "Domingo 15 de Noviembre del 2026",
+    "poster": "imgs/estrenos/llamas.jpg",
+    "cines": ["Cinepolis"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "llamas",
+    "titulo": "Los Juegos del Hambre: En Llamas",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-17",
+    "fechaTexto": "Martes 17 de Noviembre del 2026",
+    "poster": "imgs/estrenos/llamas.jpg",
+    "cines": ["Cinepolis"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "sinsajo",
+    "titulo": "Los Juegos del Hambre: Sinsajo Parte 1",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-13",
+    "fechaTexto": "Viernes 13 de Noviembre del 2026",
+    "poster": "imgs/estrenos/sinsajo.jpg",
+    "cines": ["Cinepolis"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "sinsajo",
+    "titulo": "Los Juegos del Hambre: Sinsajo Parte 1",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-15",
+    "fechaTexto": "Domingo 15 de Noviembre del 2026",
+    "poster": "imgs/estrenos/sinsajo.jpg",
+    "cines": ["Cinepolis"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "sinsajo2",
+    "titulo": "Los Juegos del Hambre: Sinsajo Parte 2",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-13",
+    "fechaTexto": "Viernes 13 de Noviembre del 2026",
+    "poster": "imgs/estrenos/sinsajo2.jpg",
+    "cines": ["Cinepolis"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "sinsajo2",
+    "titulo": "Los Juegos del Hambre: Sinsajo Parte 2",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-16",
+    "fechaTexto": "Lunes 16 de Noviembre del 2026",
+    "poster": "imgs/estrenos/sinsajo2.jpg",
+    "cines": ["Cinepolis"],
+    "nota": "Estados Unidos"
   }
 ]
