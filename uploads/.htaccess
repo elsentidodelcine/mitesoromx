@@ -1,0 +1,5 @@
+# Permitir solo imágenes, bloquear ejecución de scripts
+Options -Indexes
+<FilesMatch "\.(php|phtml|php3|php4|php5|phar|pl|py|jsp|asp|aspx|sh)$">
+  Require all denied
+</FilesMatch>
