@@ -22,6 +22,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $descripcion      = trim($_POST['descripcion_corta'] ?? '') ?: null;
     $headerTagline    = trim($_POST['header_tagline'] ?? '') ?: 'Tienda independiente';
     $footerTexto      = trim($_POST['footer_texto'] ?? '') ?: null;
+    $enviosTexto      = trim($_POST['envios_texto'] ?? '') ?: null;
+    $terminosTexto    = trim($_POST['terminos_texto'] ?? '') ?: null;
+    $facebookUrl      = trim($_POST['facebook_url'] ?? '') ?: null;
+    $instagramUrl     = trim($_POST['instagram_url'] ?? '') ?: null;
+    $menuExtraLabel   = trim($_POST['menu_extra_label'] ?? '') ?: null;
+    $menuExtraTexto   = trim($_POST['menu_extra_texto'] ?? '') ?: null;
     $mostrarRed       = !empty($_POST['mostrar_red']) ? 1 : 0;
     $logoRuta         = trim($_POST['logo_ruta'] ?? '') ?: null;
     $bannerRuta       = trim($_POST['banner_ruta'] ?? '') ?: null;
@@ -77,13 +83,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $pdo->prepare(
             'UPDATE tiendas SET
               vendedor_id=?, nombre_comercial=?, slug=?, descripcion_corta=?,
-              header_tagline=?, footer_texto=?, mostrar_red=?, logo_ruta=?, banner_ruta=?,
+              header_tagline=?, footer_texto=?, envios_texto=?, terminos_texto=?,
+              facebook_url=?, instagram_url=?, menu_extra_label=?, menu_extra_texto=?,
+              mostrar_red=?, logo_ruta=?, banner_ruta=?,
               whatsapp=?, color_principal=?, color_secundario=?, color_fondo=?,
               tipografia=?, max_productos=?, estado=?, fecha_activacion=?, fecha_vencimiento=?
              WHERE id=? AND es_principal = 0'
         )->execute([
             $vendedorId, $nombre, $slug, $descripcion,
-            $headerTagline, $footerTexto, $mostrarRed, $logoRuta, $bannerRuta,
+            $headerTagline, $footerTexto, $enviosTexto, $terminosTexto,
+            $facebookUrl, $instagramUrl, $menuExtraLabel, $menuExtraTexto,
+            $mostrarRed, $logoRuta, $bannerRuta,
             $whatsapp, $colorPrincipal, $colorSecundario, $colorFondo,
             $tipografia, $maxProductos, $estado, $fechaActivacion, $fechaVencimiento,
             $editId
@@ -94,13 +104,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $pdo->prepare(
             'INSERT INTO tiendas (
               vendedor_id, nombre_comercial, slug, descripcion_corta,
-              header_tagline, footer_texto, mostrar_red, logo_ruta, banner_ruta, whatsapp,
+              header_tagline, footer_texto, envios_texto, terminos_texto,
+              facebook_url, instagram_url, menu_extra_label, menu_extra_texto,
+              mostrar_red, logo_ruta, banner_ruta, whatsapp,
               color_principal, color_secundario, color_fondo, tipografia,
               max_productos, es_principal, estado, fecha_activacion, fecha_vencimiento
-            ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,0,?,?,?)'
+            ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,0,?,?,?)'
         )->execute([
             $vendedorId, $nombre, $slug, $descripcion,
-            $headerTagline, $footerTexto, $mostrarRed, $logoRuta, $bannerRuta, $whatsapp,
+            $headerTagline, $footerTexto, $enviosTexto, $terminosTexto,
+            $facebookUrl, $instagramUrl, $menuExtraLabel, $menuExtraTexto,
+            $mostrarRed, $logoRuta, $bannerRuta, $whatsapp,
             $colorPrincipal, $colorSecundario, $colorFondo, $tipografia,
             $maxProductos, $estado, $fechaActivacion, $fechaVencimiento
         ]);
@@ -205,6 +219,30 @@ if ($accion === 'nueva' || $accion === 'editar'):
 
     <label>Texto del footer
       <textarea name="footer_texto" rows="3" placeholder="Los pedidos se confirman por WhatsApp con esta tienda."><?= e($tienda['footer_texto'] ?? '') ?></textarea>
+    </label>
+
+    <label>Condiciones de envío (menú hamburguesa + footer)
+      <textarea name="envios_texto" rows="4" placeholder="Envíos a todo México..."><?= e($tienda['envios_texto'] ?? '') ?></textarea>
+    </label>
+
+    <label>Términos y condiciones (menú + footer)
+      <textarea name="terminos_texto" rows="4" placeholder="Términos de esta tienda..."><?= e($tienda['terminos_texto'] ?? '') ?></textarea>
+    </label>
+
+    <div class="row">
+      <label>Facebook (URL)
+        <input type="url" name="facebook_url" placeholder="https://facebook.com/..." value="<?= e($tienda['facebook_url'] ?? '') ?>">
+      </label>
+      <label>Instagram (URL)
+        <input type="url" name="instagram_url" placeholder="https://instagram.com/..." value="<?= e($tienda['instagram_url'] ?? '') ?>">
+      </label>
+    </div>
+
+    <label>Pestaña extra del menú (nombre)
+      <input type="text" name="menu_extra_label" maxlength="80" placeholder="Ej. Sobre nosotros" value="<?= e($tienda['menu_extra_label'] ?? '') ?>">
+    </label>
+    <label>Pestaña extra (contenido)
+      <textarea name="menu_extra_texto" rows="3"><?= e($tienda['menu_extra_texto'] ?? '') ?></textarea>
     </label>
 
     <label style="flex-direction:row;align-items:center;gap:8px;color:var(--text)">
