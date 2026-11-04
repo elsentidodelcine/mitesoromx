@@ -51,13 +51,29 @@ if ($tienda['estado'] !== 'activa') {
 $tiendaId = (int) $tienda['id'];
 $porPagina = 12;
 $pagina = max(1, (int) ($_GET['p'] ?? 1));
+$q = trim((string) ($_GET['q'] ?? ''));
+// Limitar longitud de búsqueda
+if (mb_strlen($q) > 80) {
+    $q = mb_substr($q, 0, 80);
+}
 
-$totalStmt = db()->prepare(
-    "SELECT COUNT(*) FROM productos WHERE tienda_id = ? AND estado = 'publicado'"
-);
-$totalStmt->execute([$tiendaId]);
+$where = "tienda_id = ? AND estado = 'publicado'";
+$params = [$tiendaId];
+if ($q !== '') {
+    $where .= " AND (nombre LIKE ? OR descripcion LIKE ? OR badge LIKE ?)";
+    $like = '%' . $q . '%';
+    $params[] = $like;
+    $params[] = $like;
+    $params[] = $like;
+}
+
+$totalStmt = db()->prepare("SELECT COUNT(*) FROM productos WHERE {$where}");
+$totalStmt->execute($params);
 $totalProductos = (int) $totalStmt->fetchColumn();
-$totalPaginas = max(1, (int) ceil($totalProductos / $porPagina));
+$totalPaginas = max(1, (int) ceil(max($totalProductos, 1) / $porPagina));
+if ($totalProductos === 0) {
+    $totalPaginas = 1;
+}
 if ($pagina > $totalPaginas) {
     $pagina = $totalPaginas;
 }
@@ -66,11 +82,11 @@ $offset = ($pagina - 1) * $porPagina;
 $ps = db()->prepare(
     "SELECT id, nombre, descripcion, precio, stock, badge, imagen_principal, es_preventa
      FROM productos
-     WHERE tienda_id = ? AND estado = 'publicado'
+     WHERE {$where}
      ORDER BY orden, nombre
      LIMIT {$porPagina} OFFSET {$offset}"
 );
-$ps->execute([$tiendaId]);
+$ps->execute($params);
 $productos = $ps->fetchAll();
 
 $colorP = $tienda['color_principal'] ?: '#1a1a2e';
@@ -289,13 +305,44 @@ $bannerRuta = ltrim($bannerRuta, '/');
     }
     .store-footer-brand strong { display: block; font-size: 1.1rem; margin-bottom: 8px; }
     .store-footer p { margin: 0 0 8px; font-size: .9rem; opacity: .78; line-height: 1.45; }
-    .store-footer-links { display: flex; flex-direction: column; gap: 8px; }
+    .store-footer-links { display: flex; flex-direction: column; gap: 10px; }
     .store-footer-links button, .store-footer-links a {
       background: none; border: none; padding: 0; text-align: left;
-      color: inherit; font: inherit; font-size: .92rem; cursor: pointer; opacity: .85;
-      text-decoration: none;
+      color: var(--tienda-secondary); font: inherit; font-size: .92rem; font-weight: 600;
+      cursor: pointer; text-decoration: underline; text-underline-offset: 3px;
+      text-decoration-color: color-mix(in srgb, var(--tienda-secondary) 45%, transparent);
     }
-    .store-footer-links button:hover, .store-footer-links a:hover { opacity: 1; color: var(--tienda-secondary); }
+    .store-footer-links button:hover, .store-footer-links a:hover {
+      text-decoration-color: var(--tienda-secondary);
+      filter: brightness(1.1);
+    }
+
+    .store-search-wrap {
+      max-width: 520px; margin: 18px auto 6px; padding: 0 16px;
+    }
+    .store-search-box {
+      display: flex; align-items: center; gap: 8px;
+      border-radius: 12px; padding: 4px 4px 4px 14px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+    }
+    body:not(.dark) .store-search-box {
+      border-color: rgba(0,0,0,.1);
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,.05);
+    }
+    .store-search-box input {
+      flex: 1; border: none; background: transparent; color: inherit;
+      font: inherit; font-size: .95rem; padding: 10px 0; outline: none; min-width: 0;
+    }
+    .store-search-box button {
+      border: none; border-radius: 10px; padding: 10px 14px;
+      font-weight: 600; cursor: pointer; background: var(--tienda-primary); color: #fff;
+    }
+    .store-search-clear {
+      font-size: .85rem; text-align: center; margin: 8px 0 0;
+    }
+    .store-search-clear a { color: var(--tienda-secondary); font-weight: 600; }
     .store-social { display: flex; flex-wrap: wrap; gap: 10px; }
     .store-social a {
       display: inline-flex; align-items: center; gap: 6px;
@@ -402,15 +449,28 @@ $bannerRuta = ltrim($bannerRuta, '/');
   </section>
 </div>
 
+<div class="store-search-wrap">
+  <form class="store-search-box" method="get" action="/tiendas/<?= e(rawurlencode($slug)) ?>" role="search">
+    <input type="search" name="q" value="<?= e($q) ?>" placeholder="Buscar producto..." autocomplete="off" aria-label="Buscar productos">
+    <button type="submit">Buscar</button>
+  </form>
+  <?php if ($q !== ''): ?>
+    <p class="store-search-clear">
+      Resultados para “<?= e($q) ?>” ·
+      <a href="/tiendas/<?= e(rawurlencode($slug)) ?>">Ver todo</a>
+    </p>
+  <?php endif; ?>
+</div>
+
 <div class="catalogo-title">
   <h2>Catálogo</h2>
-  <p><?= (int)$totalProductos ?> producto<?= $totalProductos === 1 ? '' : 's' ?> disponible<?= $totalProductos === 1 ? '' : 's' ?><?= $totalPaginas > 1 ? ' · Página ' . (int)$pagina . ' de ' . (int)$totalPaginas : '' ?></p>
+  <p><?= (int)$totalProductos ?> producto<?= $totalProductos === 1 ? '' : 's' ?><?= $q !== '' ? ' encontrado' . ($totalProductos === 1 ? '' : 's') : ' disponible' . ($totalProductos === 1 ? '' : 's') ?><?= $totalPaginas > 1 ? ' · Página ' . (int)$pagina . ' de ' . (int)$totalPaginas : '' ?></p>
 </div>
 
 <main>
   <section id="catalogo" aria-label="Catálogo de la tienda">
     <?php if (!$productos): ?>
-      <p class="sin-productos">Esta tienda aún no tiene productos publicados.</p>
+      <p class="sin-productos"><?= $q !== '' ? 'No hay productos que coincidan con tu búsqueda.' : 'Esta tienda aún no tiene productos publicados.' ?></p>
     <?php else: foreach ($productos as $p):
       $badge = trim((string)($p['badge'] ?? ''));
       $badgeClass = $badge ? strtolower(preg_replace('/\s+/', '', iconv('UTF-8', 'ASCII//TRANSLIT//IGNORE', $badge) ?: $badge)) : '';
@@ -453,11 +513,11 @@ $bannerRuta = ltrim($bannerRuta, '/');
   <?php if ($totalPaginas > 1): ?>
   <nav class="store-paginacion" aria-label="Paginación">
     <?php
-      // Compatible con /tiendas/slug y /tiendas/index.php?slug=
       $basePage = '/tiendas/' . rawurlencode($slug);
+      $qParam = $q !== '' ? '&q=' . rawurlencode($q) : '';
     ?>
     <?php if ($pagina > 1): ?>
-      <a class="store-page-btn" href="<?= e($basePage) ?>?p=<?= $pagina - 1 ?>">← Anterior</a>
+      <a class="store-page-btn" href="<?= e($basePage) ?>?p=<?= $pagina - 1 ?><?= e($qParam) ?>">← Anterior</a>
     <?php else: ?>
       <span class="store-page-btn disabled">← Anterior</span>
     <?php endif; ?>
@@ -465,7 +525,7 @@ $bannerRuta = ltrim($bannerRuta, '/');
     <span class="store-page-info"><?= (int)$pagina ?> / <?= (int)$totalPaginas ?></span>
 
     <?php if ($pagina < $totalPaginas): ?>
-      <a class="store-page-btn" href="<?= e($basePage) ?>?p=<?= $pagina + 1 ?>">Siguiente →</a>
+      <a class="store-page-btn" href="<?= e($basePage) ?>?p=<?= $pagina + 1 ?><?= e($qParam) ?>">Siguiente →</a>
     <?php else: ?>
       <span class="store-page-btn disabled">Siguiente →</span>
     <?php endif; ?>
@@ -718,7 +778,9 @@ $bannerRuta = ltrim($bannerRuta, '/');
   });
   document.getElementById('cancelVaciar')?.addEventListener('click', () => confirmBox.classList.remove('show'));
   document.getElementById('confirmVaciarBtn')?.addEventListener('click', () => {
-    carrito = []; save(); syncButtons(); confirmBox.classList.remove('show');
+    carrito = []; save(); syncButtons();
+    confirmBox.classList.remove('show');
+    closeDrawer();
   });
 
   btnPedir?.addEventListener('click', async () => {
