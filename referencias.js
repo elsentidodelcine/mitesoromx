@@ -177,10 +177,21 @@
     "imgs/referencias/ref1.jpg"
   ];
 
-  const POR_PAGINA = 24;
-  const PEDIDOS_TOTAL = 198; // número del contador animado
+const POR_PAGINA = 24;
+  const PEDIDOS_TOTAL = 192;
   let paginaActual = 1;
   let indiceLightbox = 0;
+  let modoEmpaque = false;
+  let indiceEmpaque = 0;
+
+  const EMPAQUE_FOTOS = [
+    "imgs/empaque3.jpg",
+    "imgs/pochi28.jpg",
+    "imgs/pochi29.jpg",
+    "imgs/empaque2.jpg",
+    "imgs/empaque1.jpg",
+    "imgs/real.jpg"
+  ];
 
   const grid = document.getElementById("referenciasGrid");
   const paginacion = document.getElementById("refPaginacion");
@@ -236,7 +247,6 @@
     }
     renderPaginacion();
 
-    // Scroll suave solo al cambiar de página (no en la primera carga)
     if (paginaActual > 1 || document.body.dataset.refInit === "1") {
       grid.scrollIntoView({ behavior: "smooth", block: "start" });
     }
@@ -322,6 +332,7 @@
 
   // ========== LIGHTBOX ==========
   function openLightbox(index) {
+    modoEmpaque = false;
     indiceLightbox = index;
     lbImage.src = FOTOS[index];
     lbImage.alt = `Referencia ${index + 1} – pedido real Mi Tesoro MX`;
@@ -330,24 +341,44 @@
     document.body.style.overflow = "hidden";
   }
 
+  function openEmpaqueLightbox(index) {
+    modoEmpaque = true;
+    indiceEmpaque = index;
+    lbImage.src = EMPAQUE_FOTOS[index];
+    lbImage.alt = `Empaque – imagen ${index + 1}`;
+    if (lbCounter) lbCounter.textContent = `${index + 1} / ${EMPAQUE_FOTOS.length}`;
+    lightbox.classList.add("show");
+    document.body.style.overflow = "hidden";
+  }
+
   function closeLightbox() {
     lightbox.classList.remove("show");
     document.body.style.overflow = "";
+    modoEmpaque = false;
   }
 
   function navegarLightbox(dir) {
-    indiceLightbox = (indiceLightbox + dir + FOTOS.length) % FOTOS.length;
-    lbImage.src = FOTOS[indiceLightbox];
-    lbImage.alt = `Referencia ${indiceLightbox + 1} – pedido real Mi Tesoro MX`;
-    if (lbCounter) lbCounter.textContent = `${indiceLightbox + 1} / ${FOTOS.length}`;
+    if (modoEmpaque) {
+      indiceEmpaque = (indiceEmpaque + dir + EMPAQUE_FOTOS.length) % EMPAQUE_FOTOS.length;
+      lbImage.src = EMPAQUE_FOTOS[indiceEmpaque];
+      lbImage.alt = `Empaque – imagen ${indiceEmpaque + 1}`;
+      if (lbCounter) lbCounter.textContent = `${indiceEmpaque + 1} / ${EMPAQUE_FOTOS.length}`;
+    } else {
+      indiceLightbox = (indiceLightbox + dir + FOTOS.length) % FOTOS.length;
+      lbImage.src = FOTOS[indiceLightbox];
+      lbImage.alt = `Referencia ${indiceLightbox + 1} – pedido real Mi Tesoro MX`;
+      if (lbCounter) lbCounter.textContent = `${indiceLightbox + 1} / ${FOTOS.length}`;
+    }
   }
 
   async function compartirReferencia() {
     const url = window.location.href.split("#")[0];
-    const texto = `Mira esta referencia real de Mi Tesoro MX (${indiceLightbox + 1}/${FOTOS.length})`;
+    const texto = modoEmpaque
+      ? `Mira el empaque real de Mi Tesoro MX`
+      : `Mira esta referencia real de Mi Tesoro MX (${indiceLightbox + 1}/${FOTOS.length})`;
     try {
       if (navigator.share) {
-        await navigator.share({ title: "Referencia | Mi Tesoro MX", text: texto, url });
+        await navigator.share({ title: "Mi Tesoro MX", text: texto, url });
       } else {
         await navigator.clipboard.writeText(`${texto}\n${url}`);
         if (lbShare) {
@@ -356,9 +387,7 @@
           setTimeout(() => { lbShare.textContent = prev; }, 1800);
         }
       }
-    } catch (e) {
-      // usuario canceló o no hay soporte
-    }
+    } catch (e) {}
   }
 
   if (lbClose) lbClose.addEventListener("click", closeLightbox);
@@ -377,6 +406,21 @@
     if (e.key === "Escape") closeLightbox();
     if (e.key === "ArrowLeft") navegarLightbox(-1);
     if (e.key === "ArrowRight") navegarLightbox(1);
+  });
+
+  // ========== EMPAQUE SECTION ==========
+  document.querySelectorAll(".empaque-card img").forEach((img, index) => {
+    img.style.cursor = "pointer";
+    img.addEventListener("click", (e) => {
+      e.stopPropagation();
+      openEmpaqueLightbox(index);
+    });
+
+    const card = img.closest(".empaque-card");
+    if (card) {
+      card.style.cursor = "pointer";
+      card.addEventListener("click", () => openEmpaqueLightbox(index));
+    }
   });
 
   // ========== CONTADOR ANIMADO ==========
@@ -414,63 +458,3 @@
   }
   observarContador();
 })();
-
-  // ========== EMPAQUE SECTION (clic para ampliar) ==========
-  const EMPAQUE_FOTOS = [
-    "imgs/empaque3.jpg",
-    "imgs/pochi28.jpg",
-    "imgs/pochi29.jpg",
-    "imgs/empaque2.jpg",
-    "imgs/empaque1.jpg",
-    "imgs/real.jpg"
-  ];
-
-  let indiceEmpaque = 0;
-  let modoEmpaque = false; // true cuando el lightbox está mostrando fotos de empaque
-
-  function openEmpaqueLightbox(index) {
-    modoEmpaque = true;
-    indiceEmpaque = index;
-    lbImage.src = EMPAQUE_FOTOS[index];
-    lbImage.alt = `Empaque – imagen ${index + 1}`;
-    if (lbCounter) lbCounter.textContent = `${index + 1} / ${EMPAQUE_FOTOS.length}`;
-    lightbox.classList.add("show");
-    document.body.style.overflow = "hidden";
-  }
-
-  // Sobrescribimos la navegación para que respete el modo
-  const originalNavegar = navegarLightbox;
-  navegarLightbox = function (dir) {
-    if (modoEmpaque) {
-      indiceEmpaque = (indiceEmpaque + dir + EMPAQUE_FOTOS.length) % EMPAQUE_FOTOS.length;
-      lbImage.src = EMPAQUE_FOTOS[indiceEmpaque];
-      lbImage.alt = `Empaque – imagen ${indiceEmpaque + 1}`;
-      if (lbCounter) lbCounter.textContent = `${indiceEmpaque + 1} / ${EMPAQUE_FOTOS.length}`;
-    } else {
-      originalNavegar(dir);
-    }
-  };
-
-  // Al cerrar, salimos del modo empaque
-  const originalClose = closeLightbox;
-  closeLightbox = function () {
-    modoEmpaque = false;
-    originalClose();
-  };
-
-  // Asignar clics a las tarjetas de empaque
-  document.querySelectorAll(".empaque-card img").forEach((img, index) => {
-    img.style.cursor = "pointer";
-    img.addEventListener("click", () => openEmpaqueLightbox(index));
-
-    // También hacer clicable toda la tarjeta
-    const card = img.closest(".empaque-card");
-    if (card) {
-      card.style.cursor = "pointer";
-      card.addEventListener("click", (e) => {
-        // Evitar doble disparo si ya se hizo clic en la img
-        if (e.target === img) return;
-        openEmpaqueLightbox(index);
-      });
-    }
-  });

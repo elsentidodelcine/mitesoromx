@@ -3210,21 +3210,6 @@ body.dark .btn-wishlist {
   color: #030304;
 }
 
-/* Godzilla Minus One */
-.carousel-slide--godzilla {
-  background: linear-gradient(135deg, #0a0f0a 0%, #1a2e1a 35%, #3d5c3d 70%, #0d1a0d 100%);
-  border-color: rgba(120, 180, 80, 0.35);
-}
-.carousel-slide--godzilla .banner-btn {
-  background: #c8e6a0;
-  color: #0a0f0a;
-  font-weight: 700;
-}
-.carousel-slide--godzilla .banner-btn:hover {
-  background: #fff;
-  color: #1a3d1a;
-}
-
 /* Vende con Mi Tesoro MX */
 .carousel-slide--vende {
   background: linear-gradient(135deg, #0a1628 0%, #1a3a5c 40%, #0d4f3c 75%, #0a1a14 100%);
@@ -3284,27 +3269,6 @@ body.dark .btn-wishlist {
   color: #3d2914;
 }
 
-/* Coca-Cola – Esferas Navideñas */
-.carousel-slide--cocanavidad {
-  background: linear-gradient(
-    135deg,
-    #1a0000 0%,
-    #6b0000 30%,
-    #e61a27 55%,
-    #0d3b2a 80%,
-    #0a1a12 100%
-  );
-  border-color: rgba(230, 26, 39, 0.4);
-}
-.carousel-slide--cocanavidad .banner-btn {
-  background: #fff;
-  color: #e61a27;
-  font-weight: 700;
-}
-.carousel-slide--cocanavidad .banner-btn:hover {
-  background: #0d3b2a;
-  color: #fff;
-}
 
 /* Navidad */
 .carousel-slide--navidad {

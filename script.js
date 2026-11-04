@@ -1718,16 +1718,6 @@ const PREVENTAS_ACTIVAS = [
       tema: "halloween",
     },
     {
-      id: "coca-cola-esferas-navidad",
-      active: true,
-      emoji: "🎄",
-      titulo: "Coca-Cola · Esferas Navideñas",
-      texto: "Ya a la venta la <strong>edición Navidad de Coca-Cola</strong>: <strong>5 esferas navideñas</strong> coleccionables.<br><br>Aparta tu set antes de que se agote.",
-      link: "#catalogo",
-      linkTexto: "Ver esferas",
-      tema: "cocanavidad",
-    },
-    {
       id: "navidad-temporada",
       active: false,
       emoji: "🎄",
@@ -1777,16 +1767,6 @@ const PREVENTAS_ACTIVAS = [
     linkTexto: "Quiero vender",
     tema: "vende",
   },
-  {
-      id: "godzilla-minus-one",
-      active: true,
-      emoji: "🦖",
-      titulo: "Godzilla Minus One",
-      texto: "Preventa de <strong>coleccionables de Godzilla Minus One</strong>.<br><br>El rey de los monstruos, en edición para fans y coleccionistas.",
-      link: "#catalogo",
-      linkTexto: "Ver coleccionables",
-      tema: "godzilla",
-    },
   {
     id: "gato-con-sombrero-2026",
     active: true,
