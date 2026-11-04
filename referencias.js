@@ -5,12 +5,12 @@
 (function () {
   // Más recientes primero (refer altos al inicio)
   const FOTOS = [
-    "imgs/referencias/ref1240.jpeg",
-    "imgs/referencias/ref1241.jpeg",
-    "imgs/referencias/ref1242.jpeg",
-    "imgs/referencias/ref1243.jpeg",
-    "imgs/referencias/ref1244.jpeg",
-    "imgs/referencias/ref1245.jpeg",
+    "imgs/referencias/ref1240.jpg",
+    "imgs/referencias/ref1241.jpg",
+    "imgs/referencias/ref1242.jpg",
+    "imgs/referencias/ref1243.jpg",
+    "imgs/referencias/ref1244.jpg",
+    "imgs/referencias/ref1245.jpg",
     "imgs/referencias/ref1230.jpeg",
     "imgs/referencias/ref1231.jpeg",
     "imgs/referencias/ref1232.jpeg",
@@ -414,3 +414,63 @@
   }
   observarContador();
 })();
+
+  // ========== EMPAQUE SECTION (clic para ampliar) ==========
+  const EMPAQUE_FOTOS = [
+    "imgs/empaque3.jpg",
+    "imgs/pochi28.jpg",
+    "imgs/pochi29.jpg",
+    "imgs/empaque2.jpg",
+    "imgs/empaque1.jpg",
+    "imgs/real.jpg"
+  ];
+
+  let indiceEmpaque = 0;
+  let modoEmpaque = false; // true cuando el lightbox está mostrando fotos de empaque
+
+  function openEmpaqueLightbox(index) {
+    modoEmpaque = true;
+    indiceEmpaque = index;
+    lbImage.src = EMPAQUE_FOTOS[index];
+    lbImage.alt = `Empaque – imagen ${index + 1}`;
+    if (lbCounter) lbCounter.textContent = `${index + 1} / ${EMPAQUE_FOTOS.length}`;
+    lightbox.classList.add("show");
+    document.body.style.overflow = "hidden";
+  }
+
+  // Sobrescribimos la navegación para que respete el modo
+  const originalNavegar = navegarLightbox;
+  navegarLightbox = function (dir) {
+    if (modoEmpaque) {
+      indiceEmpaque = (indiceEmpaque + dir + EMPAQUE_FOTOS.length) % EMPAQUE_FOTOS.length;
+      lbImage.src = EMPAQUE_FOTOS[indiceEmpaque];
+      lbImage.alt = `Empaque – imagen ${indiceEmpaque + 1}`;
+      if (lbCounter) lbCounter.textContent = `${indiceEmpaque + 1} / ${EMPAQUE_FOTOS.length}`;
+    } else {
+      originalNavegar(dir);
+    }
+  };
+
+  // Al cerrar, salimos del modo empaque
+  const originalClose = closeLightbox;
+  closeLightbox = function () {
+    modoEmpaque = false;
+    originalClose();
+  };
+
+  // Asignar clics a las tarjetas de empaque
+  document.querySelectorAll(".empaque-card img").forEach((img, index) => {
+    img.style.cursor = "pointer";
+    img.addEventListener("click", () => openEmpaqueLightbox(index));
+
+    // También hacer clicable toda la tarjeta
+    const card = img.closest(".empaque-card");
+    if (card) {
+      card.style.cursor = "pointer";
+      card.addEventListener("click", (e) => {
+        // Evitar doble disparo si ya se hizo clic en la img
+        if (e.target === img) return;
+        openEmpaqueLightbox(index);
+      });
+    }
+  });
