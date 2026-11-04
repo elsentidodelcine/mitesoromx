@@ -426,7 +426,7 @@ $descCorta = $tienda['descripcion_corta'] ?: 'Coleccionables y piezas selecciona
       <?php endif; ?>
       <div class="store-brand-text">
         <strong><?= e($nombreTienda) ?></strong>
-        <span>Tienda independiente</span>
+        <span><?= e($tienda['header_tagline'] ?: 'Tienda independiente') ?></span>
       </div>
     </a>
 
@@ -518,10 +518,12 @@ $descCorta = $tienda['descripcion_corta'] ?: 'Coleccionables y piezas selecciona
       <p><?= e($descCorta) ?></p>
     </div>
     <div class="store-footer-meta">
-      <p>Los pedidos se confirman por WhatsApp con esta tienda.</p>
+      <p><?= e($tienda['footer_texto'] ?: 'Los pedidos se confirman por WhatsApp con esta tienda.') ?></p>
+      <?php if (!isset($tienda['mostrar_red']) || (int)$tienda['mostrar_red'] === 1): ?>
       <p class="store-footer-network">
         Alojado en <a href="/tiendas.html">Mi Tesoro MX | Tu Tienda</a>
       </p>
+      <?php endif; ?>
     </div>
   </div>
 </footer>
