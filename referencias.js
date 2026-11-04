@@ -5,6 +5,12 @@
 (function () {
   // Más recientes primero (refer altos al inicio)
   const FOTOS = [
+    "imgs/referencias/ref1240.jpeg",
+    "imgs/referencias/ref1241.jpeg",
+    "imgs/referencias/ref1242.jpeg",
+    "imgs/referencias/ref1243.jpeg",
+    "imgs/referencias/ref1244.jpeg",
+    "imgs/referencias/ref1245.jpeg",
     "imgs/referencias/ref1230.jpeg",
     "imgs/referencias/ref1231.jpeg",
     "imgs/referencias/ref1232.jpeg",
@@ -172,7 +178,7 @@
   ];
 
   const POR_PAGINA = 24;
-  const PEDIDOS_TOTAL = 192; // número del contador animado
+  const PEDIDOS_TOTAL = 198; // número del contador animado
   let paginaActual = 1;
   let indiceLightbox = 0;
 
