@@ -2,6 +2,14 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0RVV6RWHTS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-0RVV6RWHTS');
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Tiendas independientes de coleccionables dentro de Mi Tesoro MX | Tu Tienda. Cada vendedor con su propio catálogo y WhatsApp.">
     <title>Tiendas de la red | Mi Tesoro MX</title>
@@ -194,33 +202,36 @@
 
     <nav class="header-center" id="mainNav" aria-label="Navegación principal">
         <a href="index.html#catalogo">Catálogo</a>
+        <a href="tiendas.html" aria-current="page">Tiendas</a>
         <a href="envios.html">Envíos</a>
         <a href="referencias.html">Referencias</a>
-        <a href="tiendas.html" aria-current="page">Tiendas</a>
+        <a href="vende.html">Vender</a>
         <a href="blog.html">Los Brujos del Cine</a>
     </nav>
 
     <div class="header-right">
+        <a href="index.html" class="cart-btn" aria-label="Ir al catálogo" style="text-decoration:none">🛒</a>
         <button id="toggleTheme" class="theme-btn" aria-label="Cambiar tema">🌙</button>
     </div>
 </header>
 
 <section class="tiendas-hero">
-    <h2>Tiendas de la Red</h2>
+    <h2>Tiendas de la red</h2>
     <p>
         Vendedores independientes con su propio catálogo y WhatsApp,
         dentro de la plataforma <strong>Mi Tesoro MX | Tu Tienda</strong>.
     </p>
+    <div class="tiendas-tag">Sin comisión por venta · $300 MXN / mes por tienda</div>
 </section>
-<br><br>
+
 <main>
     <div id="tiendasStatus" class="tiendas-status">Cargando tiendas…</div>
     <div id="tiendasGrid" class="tiendas-grid" hidden></div>
-    <br><br>
+
     <div class="tiendas-cta">
         <h2>¿Quieres tu propia tienda?</h2>
         <p>
-            $100 MXN al mes. Tú recibes los pagos y haces tus envíos.
+            $300 MXN al mes. Tú recibes los pagos y haces tus envíos.
             Nosotros administramos la página y el catálogo.
         </p>
         <a class="boton" href="vende.html">Quiero vender</a>
@@ -230,106 +241,106 @@
 <div id="footer"></div>
 
 <script>
-    (() => {
-        const btnTheme = document.getElementById("toggleTheme");
-        const temaGuardado = localStorage.getItem("tema");
-        if (temaGuardado === "dark") {
-            document.body.classList.add("dark");
-            if (btnTheme) btnTheme.textContent = "☀️";
-        }
-        btnTheme?.addEventListener("click", () => {
-            document.body.classList.toggle("dark");
-            const oscuro = document.body.classList.contains("dark");
-            btnTheme.textContent = oscuro ? "☀️" : "🌙";
-            localStorage.setItem("tema", oscuro ? "dark" : "light");
+(() => {
+    const btnTheme = document.getElementById("toggleTheme");
+    const temaGuardado = localStorage.getItem("tema");
+    if (temaGuardado === "dark") {
+        document.body.classList.add("dark");
+        if (btnTheme) btnTheme.textContent = "☀️";
+    }
+    btnTheme?.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        const oscuro = document.body.classList.contains("dark");
+        btnTheme.textContent = oscuro ? "☀️" : "🌙";
+        localStorage.setItem("tema", oscuro ? "dark" : "light");
+    });
+})();
+
+(() => {
+    const menuToggle = document.getElementById("menuToggle");
+    const headerMenu = document.querySelector(".header-center");
+    if (!menuToggle || !headerMenu) return;
+    menuToggle.addEventListener("click", () => {
+        const abierto = headerMenu.classList.toggle("open");
+        menuToggle.textContent = abierto ? "✕" : "☰";
+        menuToggle.setAttribute("aria-expanded", abierto);
+        document.body.style.overflow = abierto ? "hidden" : "";
+    });
+    headerMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+            headerMenu.classList.remove("open");
+            menuToggle.textContent = "☰";
+            menuToggle.setAttribute("aria-expanded", "false");
+            document.body.style.overflow = "";
         });
-    })();
+    });
+})();
 
-    (() => {
-        const menuToggle = document.getElementById("menuToggle");
-        const headerMenu = document.querySelector(".header-center");
-        if (!menuToggle || !headerMenu) return;
-        menuToggle.addEventListener("click", () => {
-            const abierto = headerMenu.classList.toggle("open");
-            menuToggle.textContent = abierto ? "✕" : "☰";
-            menuToggle.setAttribute("aria-expanded", abierto);
-            document.body.style.overflow = abierto ? "hidden" : "";
-        });
-        headerMenu.querySelectorAll("a").forEach((link) => {
-            link.addEventListener("click", () => {
-                headerMenu.classList.remove("open");
-                menuToggle.textContent = "☰";
-                menuToggle.setAttribute("aria-expanded", "false");
-                document.body.style.overflow = "";
-            });
-        });
-    })();
+(() => {
+    const status = document.getElementById("tiendasStatus");
+    const grid = document.getElementById("tiendasGrid");
 
-    (() => {
-        const status = document.getElementById("tiendasStatus");
-        const grid = document.getElementById("tiendasGrid");
+    function escapeHtml(str) {
+        return String(str || "")
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;");
+    }
 
-        function escapeHtml(str) {
-            return String(str || "")
-                .replace(/&/g, "&amp;")
-                .replace(/</g, "&lt;")
-                .replace(/>/g, "&gt;")
-                .replace(/"/g, "&quot;");
-        }
+    function initial(name) {
+        return (name || "T").trim().charAt(0).toUpperCase();
+    }
 
-        function initial(name) {
-            return (name || "T").trim().charAt(0).toUpperCase();
-        }
+    fetch("/api/tiendas.php")
+        .then((r) => r.json())
+        .then((data) => {
+            if (!data.ok || !Array.isArray(data.tiendas)) {
+                throw new Error("Respuesta inválida");
+            }
 
-        fetch("/api/tiendas.php")
-            .then((r) => r.json())
-            .then((data) => {
-                if (!data.ok || !Array.isArray(data.tiendas)) {
-                    throw new Error("Respuesta inválida");
-                }
-
-                if (data.tiendas.length === 0) {
-                    status.textContent =
-                        "Pronto habrá tiendas disponibles. Mientras tanto explora el catálogo principal.";
-                    return;
-                }
-
-                status.hidden = true;
-                grid.hidden = false;
-
-                grid.innerHTML = data.tiendas
-                    .map((t) => {
-                        const c1 = escapeHtml(t.color_principal || "#1a1a2e");
-                        const c2 = escapeHtml(t.color_secundario || "#e94560");
-                        const desc = escapeHtml(
-                            t.descripcion_corta || "Coleccionables y piezas seleccionadas."
-                        );
-                        const nombre = escapeHtml(t.nombre_comercial);
-                        const slug = encodeURIComponent(t.slug);
-                        const logo = t.logo_ruta
-                            ? `<img class="tienda-card-logo" src="/${escapeHtml(t.logo_ruta)}" alt="" onerror="this.style.display='none'">`
-                            : `<div class="tienda-card-logo placeholder">${escapeHtml(initial(t.nombre_comercial))}</div>`;
-
-                        return `
-                <article class="tienda-card">
-                  <div class="tienda-card-banner" style="--c1:${c1};--c2:${c2}">
-                    ${logo}
-                  </div>
-                  <div class="tienda-card-body">
-                    <h3>${nombre}</h3>
-                    <p>${desc}</p>
-                    <a class="boton" href="/tiendas/${slug}">Visitar tienda</a>
-                  </div>
-                </article>`;
-                    })
-                    .join("");
-            })
-            .catch(() => {
-                status.classList.add("error");
+            if (data.tiendas.length === 0) {
                 status.textContent =
-                    "No se pudieron cargar las tiendas. Revisa que exista /api/tiendas.php o intenta más tarde.";
-            });
-    })();
+                    "Pronto habrá tiendas disponibles. Mientras tanto explora el catálogo principal.";
+                return;
+            }
+
+            status.hidden = true;
+            grid.hidden = false;
+
+            grid.innerHTML = data.tiendas
+                .map((t) => {
+                    const c1 = escapeHtml(t.color_principal || "#1a1a2e");
+                    const c2 = escapeHtml(t.color_secundario || "#e94560");
+                    const desc = escapeHtml(
+                        t.descripcion_corta || "Coleccionables y piezas seleccionadas."
+                    );
+                    const nombre = escapeHtml(t.nombre_comercial);
+                    const slug = encodeURIComponent(t.slug);
+                    const logo = t.logo_ruta
+                        ? `<img class="tienda-card-logo" src="/${escapeHtml(t.logo_ruta)}" alt="" onerror="this.style.display='none'">`
+                        : `<div class="tienda-card-logo placeholder">${escapeHtml(initial(t.nombre_comercial))}</div>`;
+
+                    return `
+            <article class="tienda-card">
+              <div class="tienda-card-banner" style="--c1:${c1};--c2:${c2}">
+                ${logo}
+              </div>
+              <div class="tienda-card-body">
+                <h3>${nombre}</h3>
+                <p>${desc}</p>
+                <a class="boton" href="/tiendas/${slug}">Visitar tienda</a>
+              </div>
+            </article>`;
+                })
+                .join("");
+        })
+        .catch(() => {
+            status.classList.add("error");
+            status.textContent =
+                "No se pudieron cargar las tiendas. Revisa que exista /api/tiendas.php o intenta más tarde.";
+        });
+})();
 </script>
 <script src="Estructura/footer.js"></script>
 </body>
