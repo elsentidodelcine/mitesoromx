@@ -22,6 +22,7 @@ $current = basename($_SERVER['SCRIPT_NAME'] ?? '');
       <a href="/admin/productos.php" class="<?= $current === 'productos.php' ? 'active' : '' ?>">Productos</a>
       <a href="/admin/suscripciones.php" class="<?= $current === 'suscripciones.php' ? 'active' : '' ?>">Suscripciones</a>
       <a href="/admin/pagos.php" class="<?= $current === 'pagos.php' ? 'active' : '' ?>">Pagos</a>
+      <a href="/admin/reportes.php" class="<?= $current === 'reportes.php' ? 'active' : '' ?>">Reportes</a>
       <a href="/admin/logout.php">Cerrar sesión</a>
     </nav>
     <p style="margin-top:24px;padding:0 8px;font-size:.75rem;color:var(--muted)">

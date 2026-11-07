@@ -1768,16 +1768,6 @@ const PREVENTAS_ACTIVAS = [
     tema: "vende",
   },
   {
-    id: "gato-con-sombrero-2026",
-    active: true,
-    emoji: "🎩",
-    titulo: "El Gato con Sombrero · 2026",
-    texto: "Preventa de los <strong>coleccionables de El Gato con Sombrero</strong>.<br><br>Edición 2026 para fans del clásico.",
-    link: "#catalogo",
-    linkTexto: "Ver coleccionables",
-    tema: "gatosombrero",
-  },
-  {
     id: "juegos-hambre-amanecer-cosecha",
     active: true,
     emoji: "🔥",

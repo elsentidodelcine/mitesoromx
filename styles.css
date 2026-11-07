@@ -3225,28 +3225,6 @@ body.dark .btn-wishlist {
   color: #0d4f3c;
 }
 
-/* El Gato con Sombrero 2026 */
-.carousel-slide--gatosombrero {
-  background: linear-gradient(
-    135deg,
-    #1a0508 0%,
-    #5c0a12 30%,
-    #c41e3a 55%,
-    #f5f5f5 78%,
-    #0d3b66 100%
-  );
-  border-color: rgba(196, 30, 58, 0.4);
-}
-.carousel-slide--gatosombrero .banner-btn {
-  background: #fff;
-  color: #c41e3a;
-  font-weight: 700;
-}
-.carousel-slide--gatosombrero .banner-btn:hover {
-  background: #0d3b66;
-  color: #fff;
-}
-
 /* Los Juegos del Hambre – Amanecer en la Cosecha */
 .carousel-slide--juegoshambre {
   background: linear-gradient(

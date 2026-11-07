@@ -548,11 +548,13 @@ $bannerRuta = ltrim($bannerRuta, '/');
           <button type="button" data-modal="envios">Envíos</button>
         <?php endif; ?>
         <?php if ($terminosTxt !== ''): ?>
-          <button type="button" data-modal="terminos">Términos y condiciones</button>
+          <button type="button" data-modal="terminos">Términos de esta tienda</button>
         <?php endif; ?>
         <?php if ($extraLabel !== '' && $extraTexto !== ''): ?>
           <button type="button" data-modal="extra"><?= e($extraLabel) ?></button>
         <?php endif; ?>
+        <a href="/terminos-tu-tienda.html">Términos de Mi Tesoro MX | Tu Tienda</a>
+        <a href="/reportar-tienda.html?slug=<?= e(rawurlencode($slug)) ?>&amp;nombre=<?= e(rawurlencode($nombreTienda)) ?>">Reportar esta tienda</a>
       </div>
     </div>
     <div>
