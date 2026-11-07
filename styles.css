@@ -3225,28 +3225,30 @@ body.dark .btn-wishlist {
   color: #0d4f3c;
 }
 
-/* Los Juegos del Hambre – Amanecer en la Cosecha */
-.carousel-slide--juegoshambre {
+
+/* Mi Tesoro MX | Tu Tienda */
+.carousel-slide--tutienda {
   background: linear-gradient(
     135deg,
-    #0a0a0a 0%,
-    #1a1208 25%,
-    #3d2914 50%,
-    #8b6914 75%,
-    #1a0a0a 100%
+    #0f1117 0%,
+    #1a1d27 30%,
+    #2a1530 55%,
+    #e94560 85%,
+    #1a0a12 100%
   );
-  border-color: rgba(212, 175, 55, 0.4);
-}
-.carousel-slide--juegoshambre .banner-btn {
-  background: #d4af37;
-  color: #0a0a0a;
-  font-weight: 700;
-}
-.carousel-slide--juegoshambre .banner-btn:hover {
-  background: #fff;
-  color: #3d2914;
+  border-color: rgba(233, 69, 96, 0.45);
 }
 
+.carousel-slide--tutienda .banner-btn {
+  background: #e94560;
+  color: #fff;
+  font-weight: 700;
+}
+
+.carousel-slide--tutienda .banner-btn:hover {
+  background: #fff;
+  color: #e94560;
+}
 
 /* Navidad */
 .carousel-slide--navidad {
@@ -3279,20 +3281,6 @@ body.dark .btn-wishlist {
   color: #2d0a1f;
 }
 
-/* Avengers: Doomsday */
-.carousel-slide--doomsday {
-  background: linear-gradient(135deg, #050510 0%, #0a1628 35%, #1a3a6b 65%, #4a0a0a 100%);
-  border-color: rgba(100, 149, 237, 0.35);
-}
-.carousel-slide--doomsday .banner-btn {
-  background: #e8e8ec;
-  color: #0a1628;
-  font-weight: 700;
-}
-.carousel-slide--doomsday .banner-btn:hover {
-  background: #c41e3a;
-  color: #fff;
-}
 
 /* FedEx / envíos */
 .carousel-slide--envio {

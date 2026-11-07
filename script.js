@@ -693,7 +693,7 @@ function mostrarProductos() {
     const esFavorito = wishlist.includes(p.nombre);
 
     if (p.precio == 999) {
-      precioHTML = `<p class="precio proximamente-precio">💰 Precio por confirmar</p>`;
+      precioHTML = `<p class="precio proximamente-precio">💰 Aparta con $100.00 MXN</p>`;
       accionHTML = `
         <button
           type="button"
@@ -1708,6 +1708,18 @@ document.addEventListener("touchend", (e) => {
    ========================================================= */
 const PREVENTAS_ACTIVAS = [
     {
+      id: "tu-tienda-online",
+      active: true,
+      emoji: "🏪",
+      titulo: "Tu tienda online en Mi Tesoro MX",
+      texto:
+        "Publica tu catálogo, recibe pedidos por <strong>WhatsApp</strong> y vende a tu ritmo.<br><br>" +
+        "Sin comisión por venta · Desde <strong>$100 MXN</strong> al mes.",
+      link: "tiendas.html",
+      linkTexto: "Quiero mi tienda",
+      tema: "tutienda",
+    },
+    {
       id: "halloween-temporada",
       active: false,
       emoji: "🎃",
@@ -1763,30 +1775,10 @@ const PREVENTAS_ACTIVAS = [
     emoji: "💰",
     titulo: "Vende tus coleccionables",
     texto: "¿Tienes piezas guardadas que ya no usas?<br><br><strong>Te ayudo a venderlas</strong> con Mi Tesoro MX: exposición, difusión y atención a compradores.",
-    link: "https://losbrujosdelcine.com/tiendas.html",
+    link: "https://losbrujosdelcine.com/vende.html",
     linkTexto: "Quiero vender",
     tema: "vende",
-  },
-  {
-    id: "juegos-hambre-amanecer-cosecha",
-    active: true,
-    emoji: "🔥",
-    titulo: "Los Juegos del Hambre: Amanecer en la Cosecha",
-    texto: "Cinemex tendrá <strong>vasos oficiales</strong> de <em>Amanecer en la Cosecha</em>.<br><br>Aparta el tuyo antes de que se agoten.",
-    link: "#catalogo",
-    linkTexto: "Ver vasos",
-    tema: "juegoshambre",
-  },
-  {
-      id: "avengers-doomsday",
-      active: true,
-      emoji: "🛡️",
-      titulo: "Avengers: Doomsday",
-      texto: "Preventa de <strong>coleccionables de Avengers: Doomsday</strong>.<br><br>Aparta los tuyos antes de que se agoten.",
-      link: "preventas.html",
-      linkTexto: "Ver términos de preventa",
-      tema: "doomsday",
-    }
+  }
 ];
 
 function initCarouselPreventas() {
