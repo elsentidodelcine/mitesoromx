@@ -36,12 +36,14 @@ if ($slug === '' || !is_array($items) || count($items) === 0) {
 
 $pdo = db();
 $stmt = $pdo->prepare(
-    "SELECT id, nombre_comercial, whatsapp, estado FROM tiendas WHERE slug = ? AND es_principal = 0 LIMIT 1"
+    "SELECT id, nombre_comercial, whatsapp, estado, fecha_vencimiento
+     FROM tiendas WHERE slug = ? AND es_principal = 0 LIMIT 1"
 );
 $stmt->execute([$slug]);
 $tienda = $stmt->fetch();
 
-if (!$tienda || $tienda['estado'] !== 'activa') {
+$vencida = $tienda && !empty($tienda['fecha_vencimiento']) && $tienda['fecha_vencimiento'] < date('Y-m-d');
+if (!$tienda || $tienda['estado'] !== 'activa' || $vencida) {
     json_response(['error' => 'Tienda no disponible'], 403);
 }
 

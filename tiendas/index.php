@@ -32,10 +32,24 @@ if (!$tienda) {
     exit;
 }
 
-if ($tienda['estado'] !== 'activa') {
+// Si venció la suscripción, no mostrar (aunque el estado siga "activa")
+$vencida = !empty($tienda['fecha_vencimiento'])
+    && $tienda['fecha_vencimiento'] < date('Y-m-d');
+
+if ($vencida && $tienda['estado'] === 'activa') {
+    try {
+        db()->prepare("UPDATE tiendas SET estado = 'suspendida' WHERE id = ? AND es_principal = 0")
+           ->execute([(int) $tienda['id']]);
+        $tienda['estado'] = 'suspendida';
+    } catch (Throwable $e) {
+        // si falla el update, igual bloqueamos la vista
+    }
+}
+
+if ($tienda['estado'] !== 'activa' || $vencida) {
     http_response_code(403);
-    $msg = $tienda['estado'] === 'suspendida'
-        ? 'Esta tienda está temporalmente suspendida.'
+    $msg = ($vencida || $tienda['estado'] === 'suspendida')
+        ? 'Esta tienda no está disponible por el momento (suscripción vencida o suspendida).'
         : 'Esta tienda aún no está disponible.';
     ?><!DOCTYPE html>
 <html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">

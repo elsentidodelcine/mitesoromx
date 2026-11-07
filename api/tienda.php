@@ -18,7 +18,7 @@ $stmt = db()->prepare(
             whatsapp, color_principal, color_secundario, color_fondo, tipografia,
             estilo_tarjetas, estado
      FROM tiendas
-     WHERE slug = ? AND es_principal = 0
+     WHERE slug = ? AND es_principal = 0 AND estado = 'activa' AND (fecha_vencimiento IS NULL OR fecha_vencimiento >= CURDATE())
      LIMIT 1"
 );
 $stmt->execute([$slug]);

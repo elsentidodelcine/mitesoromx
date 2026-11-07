@@ -1,4 +1,8 @@
 <?php
+/**
+ * Listado público de tiendas activas (terceros)
+ * GET /api/tiendas.php
+ */
 declare(strict_types=1);
 require_once __DIR__ . '/../includes/bootstrap.php';
 
@@ -18,6 +22,7 @@ $stmt = db()->query(
      FROM tiendas
      WHERE es_principal = 0
        AND estado = 'activa'
+       AND (fecha_vencimiento IS NULL OR fecha_vencimiento >= CURDATE())
      ORDER BY nombre_comercial ASC"
 );
 
