@@ -1232,8 +1232,8 @@
     "titulo": "Hoshimachi Suisei Arena Tour 2026 Once Upon A Stellar Live",
     "tipo": "preventa",
     "estadoCartelera": "preventa",
-    "fecha": "2026-11-13",
-    "fechaTexto": "Viernes 13 de Noviembre 2026",
+    "fecha": "2026-11-12",
+    "fechaTexto": "Jueves 12 de Noviembre 2026",
     "poster": "imgs/estrenos/hoshimachi.jpg",
     "cines": ["Cinemex"],
     "nota": "Japón"
@@ -1386,8 +1386,8 @@
     "titulo": "No, Gracias, Ya no Fumo",
     "tipo": "preventa",
     "estadoCartelera": "preventa",
-    "fecha": "2026-11-16",
-    "fechaTexto": "Lunes 16 de Noviembre 2026",
+    "fecha": "2026-11-19",
+    "fechaTexto": "Jueves 19 de Noviembre 2026",
     "poster": "imgs/estrenos/fumo.jpg",
     "cines": ["Cinemex"],
     "nota": "México"
@@ -1622,5 +1622,170 @@
     "poster": "imgs/estrenos/possession.jpg",
     "cines": ["Cinepolis"],
     "nota": "Estados Unidos"
+  },
+  {
+    "id": "ramayana",
+    "titulo": "Ramayana",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-12",
+    "fechaTexto": "Jueves 12 de Noviembre 2026",
+    "poster": "imgs/estrenos/ramayana.jpg",
+    "cines": ["Cinemex"],
+    "nota": "India"
+  },
+  {
+    "id": "petardos",
+    "titulo": "Petardos y Magnolias",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-12",
+    "fechaTexto": "Jueves 12 de Noviembre 2026",
+    "poster": "imgs/estrenos/petardos.jpg",
+    "cines": ["Cinemex"],
+    "nota": "México"
+  },
+  {
+    "id": "joven",
+    "titulo": "El Joven Washington",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-12",
+    "fechaTexto": "Jueves 12 de Noviembre 2026",
+    "poster": "imgs/estrenos/joven.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "robot",
+    "titulo": "Mi Yo Robot",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-12",
+    "fechaTexto": "Jueves 12 de Noviembre 2026",
+    "poster": "imgs/estrenos/robot.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Canadá"
+  },
+  {
+    "id": "suegros",
+    "titulo": "Suegros Siniestros",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-12",
+    "fechaTexto": "Jueves 12 de Noviembre 2026",
+    "poster": "imgs/estrenos/suegros.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "atrapalo",
+    "titulo": "Atrápalo Quien Pueda",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-12",
+    "fechaTexto": "Jueves 12 de Noviembre 2026",
+    "poster": "imgs/estrenos/atrapalo.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Mexico"
+  },
+  {
+    "id": "sol",
+    "titulo": "Mi Amigo el Sol",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-19",
+    "fechaTexto": "Jueves 19 de Noviembre 2026",
+    "poster": "imgs/estrenos/sol.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Mexico"
+  },
+  {
+    "id": "caja",
+    "titulo": "La Caja del Demonio",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-19",
+    "fechaTexto": "Jueves 19 de Noviembre 2026",
+    "poster": "imgs/estrenos/caja.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "dreaming",
+    "titulo": "Jeonghan x Joshua Journey Into Dreaming In Japan",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-22",
+    "fechaTexto": "Domingo 22 de Noviembre 2026",
+    "poster": "imgs/estrenos/dreaming.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Japón"
+  },
+  {
+    "id": "hexe",
+    "titulo": "Hechizo: Bienvenidos a Hexe",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-26",
+    "fechaTexto": "Jueves 26 de Noviembre 2026",
+    "poster": "imgs/estrenos/hexe.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "encontraste",
+    "titulo": "Me Encontraste",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-26",
+    "fechaTexto": "Jueves 26 de Noviembre 2026",
+    "poster": "imgs/estrenos/encontraste.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Francia"
+  },
+  {
+    "id": "verlo",
+    "titulo": "Puedes Verlo Todo",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-26",
+    "fechaTexto": "Jueves 26 de Noviembre 2026",
+    "poster": "imgs/estrenos/verlo.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "focker",
+    "titulo": "La Nueva Focker",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-26",
+    "fechaTexto": "Jueves 26 de Noviembre 2026",
+    "poster": "imgs/estrenos/focker.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "integros",
+    "titulo": "Hombres Integros",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-12-03",
+    "fechaTexto": "Jueves 03 de Noviembre 2026",
+    "poster": "imgs/estrenos/integros.jpg",
+    "cines": ["Cinemex"],
+    "nota": "México"
+  },
+  {
+    "id": "psicopata",
+    "titulo": "La Psicopata",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-12-03",
+    "fechaTexto": "Jueves 03 de Noviembre 2026",
+    "poster": "imgs/estrenos/psicopata.jpg",
+    "cines": ["Cinemex"],
+    "nota": "Reino Unido"
   }
 ]
