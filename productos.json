@@ -46,7 +46,9 @@
   { "nombre": "3 Figuras Coca Cola Navideña", "categoria": "CocaCola", "precio": 100, "imagen": "imgs/vintage10.jpeg" ,"badge": "figura", "stock": 1},
 
   { "nombre": "Postal Godzilla Minus One", "categoria": "Godzilla", "precio": 200, "imagen": "imgs/nuevo5.jpg" ,"badge": "ultimo", "stock": 1},
-  { "nombre": "3 Vasos Godzilla Figuras Cinemex", "categoria": "Godzilla", "precio": 1000, "imagen": "imgs/godzilla30.jpeg" ,"badge": "exclusivo", "stock": 1},
+  { "nombre": "Funko 1018 Godzilla", "categoria": "Godzilla", "precio": 1000, "imagen": "imgs/godzy33.jpeg" ,"badge": "exclusivo", "stock": 1},
+  { "nombre": "Funko 1469 Godzilla", "categoria": "Godzilla", "precio": 1000, "imagen": "imgs/godzy34.jpeg" ,"badge": "exclusivo", "stock": 1},
+  { "nombre": "3 Vasos Godzilla Figuras Cinemex", "categoria": "Godzilla", "precio": 1000, "imagen": "imgs/godzy32.jpeg" ,"badge": "exclusivo", "stock": 1},
   { "nombre": "Palomera Metalica Godzilla Cinemex", "categoria": "Godzilla", "precio": 500, "imagen": "imgs/coleccionable1.jpg" ,"badge": "exclusivo", "stock": 1},
   { "nombre": "Vaso Godzilla Carls Jr Model2 ", "categoria": "Godzilla", "precio": 60, "imagen": "imgs/coleccionable120.jpg" ,"badge": "ultimo", "stock": 1},
   { "nombre": "Vaso Godzilla Movie Center ", "categoria": "Godzilla", "precio": 60, "imagen": "imgs/coleccionable121.jpg" ,"badge": "ultimo", "stock": 1},

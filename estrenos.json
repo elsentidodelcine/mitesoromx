@@ -1762,7 +1762,7 @@
     "estadoCartelera": "preventa",
     "fecha": "2026-11-26",
     "fechaTexto": "Jueves 26 de Noviembre 2026",
-    "poster": "imgs/estrenos/focker.jpg",
+    "poster": "imgs/estrenos/fovker.jpg",
     "cines": ["Cinemex"],
     "nota": "Estados Unidos"
   },
@@ -1787,5 +1787,27 @@
     "poster": "imgs/estrenos/psicopata.jpg",
     "cines": ["Cinemex"],
     "nota": "Reino Unido"
+  },
+  {
+    "id": "green",
+    "titulo": "Mrs Green Apple Xenjin Mito To In Mutable",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-20",
+    "fechaTexto": "Viernes 20 de Noviembre 2026",
+    "poster": "imgs/estrenos/green.jpg",
+    "cines": ["Cinepolis"],
+    "nota": "Korea"
+  },
+  {
+    "id": "nmixx",
+    "titulo": "NMIXX 1ST World Tour Episode 1: Zero Frontier Finale In Incheon Live",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-20",
+    "fechaTexto": "Domingo 29 de Noviembre 2026",
+    "poster": "imgs/estrenos/nmixx.jpg",
+    "cines": ["Cinepolis"],
+    "nota": "Korea"
   }
 ]

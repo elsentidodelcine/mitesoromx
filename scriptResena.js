@@ -265,7 +265,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         Number(b.puntaje) - Number(a.puntaje) ||
         (a.titulo || '').localeCompare(b.titulo || '', 'es')
       )
-      .slice(0, 10);
+      .slice(0, 12);
 
     if (rankingSubtitle) {
       rankingSubtitle.textContent = top.length
@@ -576,12 +576,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const btn = document.getElementById('back-to-top');
   if (!btn) return;
 
-  const toggle = () => {
-    btn.hidden = window.scrollY < 400;
+  const onScroll = () => {
+    if (window.scrollY > 380) {
+      btn.hidden = false;
+      btn.classList.add('is-visible');
+    } else {
+      btn.classList.remove('is-visible');
+      // delay hide for fade
+      setTimeout(() => {
+        if (window.scrollY <= 380) btn.hidden = true;
+      }, 200);
+    }
   };
 
-  window.addEventListener('scroll', toggle, { passive: true });
-  toggle();
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 
   btn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
