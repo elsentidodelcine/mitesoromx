@@ -5,9 +5,10 @@
   { "nombre": "Preventa Vaso Centinela Cinepolis", "categoria": "Peliculas", "precio": 999, "imagen": "imgs/centinela.jpeg" ,"badge": "preventa", "stock": 5},
   { "nombre": "Preventa Palomera Doom Cinepolis", "categoria": "Peliculas", "precio": 999, "imagen": "imgs/doom26.jpeg" ,"badge": "preventa", "stock": 5},
   { "nombre": "Preventa Palomera Doom Cinemex", "categoria": "Peliculas", "precio": 999, "imagen": "imgs/doom27.jpeg" ,"badge": "preventa", "stock": 5},
+  { "nombre": "Preventa Vaso Doom Cinedot", "categoria": "Peliculas", "precio": 999, "imagen": "imgs/cinedot.jpeg" ,"badge": "preventa", "stock": 5},
 
 
-  { "nombre": "Vaso Godzilla Cinepolis", "categoria": "Peliculas", "precio": 400, "imagen": "imgs/godzy90.jpg" ,"badge": "preventa", "stock": 3},
+  { "nombre": "Vaso Godzilla Cinepolis", "categoria": "Peliculas", "precio": 400, "imagen": "imgs/godzy90.jpg" ,"badge": "preventa", "stock": 2},
   { "nombre": "Preventa Vaso Godzilla Cinemex", "categoria": "Peliculas", "precio": 290, "imagen": "imgs/godzy2.jpeg" ,"badge": "preventa", "stock": 5},
   { "nombre": "Preventa 1 de 3 Vasos El Gato con Sombrero Cinemex", "categoria": "Peliculas", "precio": 320, "imagen": "imgs/gato.jpeg" ,"badge": "preventa", "stock": 5},
   { "nombre": "Preventa Vaso El Gato con Sombrero Cinepolis", "categoria": "Peliculas", "precio": 259, "imagen": "imgs/gato26.jpeg" ,"badge": "preventa", "stock": 5},
