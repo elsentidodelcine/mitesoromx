@@ -3575,6 +3575,74 @@
     ],
     "cita": "Cada vez que Buddy canta su canción, el día vuelve a comenzar.",
     "veredicto": "Terror analógico original y efectivo dentro del programa infantil. El final debilita un poco. Buen embrujo."
+  },
+  {
+    "id": "coward",
+    "titulo": "Coward",
+    "anio": 2026,
+    "fecha": "2026-11-10",
+    "duracion": "127 min",
+    "generos": ["Drama", "Bélico", "Romance"],
+    "puntaje": 4.5,
+    "destacada": true,
+    "etiqueta": "ESTRENO",
+    "plataformas": ["Cines"],
+    "resumen": "Historia de amor en la Primera Guerra Mundial. Relación bien desarrollada, sin el típico final trágico LGBT. Bonita, emotiva y con un cierre placentero. Magia mayor.",
+    "poster": "imgs/resenias/coward.jpg",
+    "posterFallback": {
+      "linea1": "Coward",
+      "linea2": ""
+    },
+    "letterboxd": "https://letterboxd.com/film/coward-2026",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt39328391/",
+      "rating": "7.5"
+    },
+    "lead": "Historia de amor en medio de la Primera Guerra Mundial. Bien desarrollada y con un final que evita el típico drama trágico. Magia mayor.",
+    "contenido": [
+      "Una historia bélica que nos lleva a la Primera Guerra Mundial, pero que también nos presenta una bonita historia de amor en medio de todo el horror que se vive en el campo de batalla.",
+      "Aquí conocemos a Pierre y Francis. Este último forma parte de un grupo de soldados que organiza espectáculos teatrales para entretener a sus compañeros y ayudarlos a olvidarse, aunque sea por un momento, de todo lo que están viviendo en la guerra.",
+      "Pierre está cansado de ver morir a sus compañeros y de enfrentarse constantemente a la violencia del combate. Por eso, decide provocarse una herida para poder integrarse al grupo de teatro y alejarse del frente. Una vez ahí, comienza a acercarse a Francis y poco a poco surge una atracción entre ambos que termina convirtiéndose en algo más.",
+      "Me gustó cómo se desarrolla su relación, sin apresurarse. Incluso hay una escena que me dio bastante risa cuando no saben muy bien qué hacer al momento de querer hacer el amor. Resulta hasta simpática por la época en la que transcurre la historia.",
+      "Pero enamorarse en medio de una guerra tampoco es sencillo. Ambos tienen que enfrentarse a los prejuicios de la época y a la incertidumbre de no saber qué harán cuando todo termine. No pueden simplemente abandonar el ejército porque desertar podría costarles la vida. Es complicado pensar en un futuro juntos cuando ni siquiera saben qué les espera al día siguiente.",
+      "En general, me pareció una historia muy bonita. Y algo que agradezco bastante es que no recurra al típico desenlace trágico que tantas veces encontramos en películas LGBT. Esta vez tenemos un final que me dejó satisfecho, un cierre muy bonito y placentero que me gustó muchísimo."
+    ],
+    "cita": "No recurre al típico desenlace trágico que tantas veces encontramos en películas LGBT.",
+    "veredicto": "Amor en medio de la guerra, bien desarrollado y con un final satisfactorio. Magia mayor."
+  },
+  {
+    "id": "tony",
+    "titulo": "Tony",
+    "anio": 2026,
+    "fecha": "2026-11-10",
+    "duracion": "106 min",
+    "generos": ["Biografía", "Drama", "Comedia"],
+    "puntaje": 4.0,
+    "destacada": false,
+    "etiqueta": "ESTRENO",
+    "plataformas": ["Cines"],
+    "resumen": "Biopic sencilla de los primeros pasos de Anthony Bourdain. Concentrada en sus inicios en la cocina y su redención. Cumple sin grandes momentos. Hechizo bien logrado.",
+    "poster": "imgs/resenias/tony.jpg",
+    "posterFallback": {
+      "linea1": "Tony",
+      "linea2": ""
+    },
+    "letterboxd": "https://letterboxd.com/film/tony-2026",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt33095251/",
+      "rating": "7.3"
+    },
+    "lead": "Biopic sencilla de los inicios de Anthony Bourdain. Concentrada en sus primeros pasos y su redención. Cumple. Hechizo bien logrado.",
+    "contenido": [
+      "Una película biográfica bastante sencilla sobre los primeros pasos de Anthony Bourdain antes de convertirse en el reconocido chef, escritor y figura que conocemos hoy. No es una historia en la que sucedan grandes cosas ni busca sorprender constantemente, pero sí nos permite conocer una etapa importante de su vida.",
+      "Aquí vemos a un joven Anthony que tiene el sueño de convertirse en escritor. Solicita una beca para continuar por ese camino, pero no consigue obtenerla. Aun así, decide mudarse y termina trabajando como lavaplatos en un restaurante, donde poco a poco comienza a involucrarse en el mundo de la cocina.",
+      "Algo que me llamó la atención es cómo al principio Anthony se resiste a aceptar ese trabajo. Sigue presentándose como escritor y les miente a las personas que lo rodean, como si trabajar en una cocina fuera algo que no estuviera a su altura. También vemos sus errores, sus malas decisiones y esa actitud inmadura que poco a poco tendrá que dejar atrás.",
+      "En ese proceso aparece el personaje de Antonio Banderas, quien se convierte en una figura importante para Anthony. A través de sus enseñanzas y de todo lo que vive dentro del restaurante, comienza a entender el valor de la cocina y del trabajo que antes rechazaba.",
+      "Me gustó ese camino hacia su redención, cuando finalmente deja de negar lo que está haciendo y comprende que realmente quiere dedicarse a ser chef. La película no nos cuenta toda su vida ni su trayectoria hasta alcanzar la fama, sino que se concentra en sus comienzos y en ese momento en el que descubre el camino que terminaría definiéndolo.",
+      "En general, me pareció una buena película. Es sencilla y quizá no tiene grandes momentos, pero cumple con contar esta etapa de Anthony Bourdain y mostrar cómo comenzó todo."
+    ],
+    "cita": "Se concentra en sus comienzos y en ese momento en el que descubre el camino que terminaría definiéndolo.",
+    "veredicto": "Biopic sencilla y efectiva de los inicios de Bourdain. Cumple sin pretender más. Hechizo bien logrado."
   }
 
 ]

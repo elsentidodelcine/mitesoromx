@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reseñas de películas | Los Brujos del Cine</title>
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0RVV6RWHTS"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -14,9 +14,10 @@
         gtag('config', 'G-0RVV6RWHTS');
     </script>
 
-    <meta name="description" content="Los Brujos del Cine: reseñas honestas de estrenos, clásicos y películas que vale la pena descubrir.">
+    <meta name="description" content="Los Brujos del Cine: reseñas honestas de estrenos, clásicos y películas que vale la pena descubrir. Opinión personal desde México.">
     <meta name="theme-color" content="#1A1210">
     <meta name="author" content="Los Brujos del Cine">
+    <meta name="robots" content="index, follow">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Reseñas de películas | Los Brujos del Cine">
@@ -24,6 +25,9 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_MX">
     <meta property="og:site_name" content="Los Brujos del Cine">
+    <meta property="og:url" content="https://losbrujosdelcine.com/blog.html">
+    <!-- Cambia por una imagen real del blog cuando la tengas -->
+    <meta property="og:image" content="https://losbrujosdelcine.com/imgs/og-blog.jpg">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Reseñas de películas | Los Brujos del Cine">
@@ -41,22 +45,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stylesLBDC.css">
 
+    <!-- Theme anti-FOUC -->
     <script>
         try {
           var t = localStorage.getItem('lbdc-theme');
           if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
         } catch (e) {}
     </script>
+
+    <!-- JSON-LD básico -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            "name": "Los Brujos del Cine",
+            "description": "Reseñas honestas de películas desde México",
+            "url": "https://losbrujosdelcine.com/blog.html",
+            "inLanguage": "es-MX",
+            "publisher": {
+                "@type": "Organization",
+                "name": "Los Brujos del Cine",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://losbrujosdelcine.com/imgs/logoLB.png"
+                }
+            }
+        }
+    </script>
 </head>
 <body>
 
-<!-- Skip link para accesibilidad -->
 <a href="#main-content" class="skip-link">Saltar al contenido</a>
 
 <header class="site-header">
     <div class="header-inner">
         <a href="blog.html" class="brand-link" aria-label="Los Brujos del Cine, inicio">
-            <img src="imgs/logoLB.png" alt="Los Brujos del Cine" class="site-logo" width="48" height="48" loading="eager">
+            <img src="imgs/logoLB.png" alt="" class="site-logo" width="48" height="48" loading="eager" decoding="async">
             <div class="logo-text">
                 <span class="site-title">Los Brujos del Cine</span>
                 <span class="site-tagline">Mi Tesoro MX</span>
@@ -64,13 +88,11 @@
         </a>
 
         <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </button>
 
         <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
-            <a href="blog.html#resenas">Reseñas</a>
+            <a href="blog.html#resenas" aria-current="page">Reseñas</a>
             <a href="estrenos.html">Estrenos</a>
             <a href="maratones.html">Maratones</a>
             <a href="sagas.html">Sagas</a>
@@ -96,10 +118,7 @@
         <div class="hero-vignette" aria-hidden="true"></div>
 
         <div class="hero-inner">
-            <div class="eyebrow">
-                <span aria-hidden="true"></span>
-                Cine con criterio propio
-            </div>
+            <div class="eyebrow"><span aria-hidden="true"></span> Cine con criterio propio</div>
 
             <h1 id="hero-title">
                 Películas que<br>
@@ -112,9 +131,8 @@
             </p>
 
             <div class="hero-actions">
-                <a href="#resenas" class="button button-primary">
-                    Explorar reseñas
-                    <span aria-hidden="true">↓</span>
+                <a href="#resenas" class="button button-primary" id="btn-explorar">
+                    Explorar reseñas <span aria-hidden="true">↓</span>
                 </a>
             </div>
 
@@ -158,17 +176,11 @@
             <p id="reviews-subtitle">Cargando reseñas...</p>
         </div>
 
-        <!-- BARRA DE FILTROS (antes no existía) -->
+        <!-- FILTROS -->
         <div class="filters-bar" role="search" aria-label="Filtrar reseñas">
-            <div class="filter-group">
+            <div class="filter-group filter-search">
                 <label for="review-search" class="visually-hidden">Buscar por título</label>
-                <input
-                        type="search"
-                        id="review-search"
-                        placeholder="Buscar película..."
-                        autocomplete="off"
-                        spellcheck="false"
-                >
+                <input type="search" id="review-search" placeholder="Buscar película..." autocomplete="off" spellcheck="false">
             </div>
 
             <div class="filter-group">
@@ -197,11 +209,21 @@
                     <option value="titulo">Título (A-Z)</option>
                 </select>
             </div>
+
+            <button type="button" id="btn-limpiar" class="btn-limpiar" hidden>
+                Limpiar filtros
+            </button>
         </div>
+
+        <!-- Chips de filtros activos -->
+        <div id="active-filters" class="active-filters" hidden aria-live="polite"></div>
 
         <p id="reviews-count" class="resultados-count" aria-live="polite"></p>
 
-        <div class="review-grid" id="reviews-grid">
+        <!-- Reseña destacada -->
+        <div id="featured-review-container" class="featured-review" hidden></div>
+
+        <div class="review-grid" id="reviews-grid" aria-busy="true">
             <div class="skeleton-card" aria-hidden="true"></div>
             <div class="skeleton-card" aria-hidden="true"></div>
             <div class="skeleton-card" aria-hidden="true"></div>
@@ -220,9 +242,9 @@
                 <span class="section-kicker">EL GRIMORIO ORDENADO</span>
                 <h2 id="ranking-heading">Ranking de reseñas</h2>
             </div>
-            <p>Top 10 de películas de 2026 según el grimorio.</p>
+            <p id="ranking-subtitle">Top 10 según el grimorio.</p>
         </div>
-        <div id="ranking-list" class="ranking-list" role="list"></div>
+        <ol id="ranking-list" class="ranking-list"></ol>
     </section>
 
     <!-- CITA -->
@@ -248,8 +270,7 @@
                 </p>
             </div>
             <a href="https://losbrujosdelcine.com/#catalogo" class="button button-primary" target="_blank" rel="noopener noreferrer">
-                Visitar Mi Tesoro MX
-                <span aria-hidden="true">↗</span>
+                Visitar Mi Tesoro MX <span aria-hidden="true">↗</span>
             </a>
         </div>
     </section>
