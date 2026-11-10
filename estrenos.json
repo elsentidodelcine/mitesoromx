@@ -1219,8 +1219,8 @@
   {
     "id": "stray",
     "titulo": "Stray Kids World Tour Run IT Live",
-    "tipo": "preventa",
-    "estadoCartelera": "preventa",
+    "tipo": "estreno",
+    "estadoCartelera": "fuera",
     "fecha": "2026-11-07",
     "fechaTexto": "Sábado 7 de Noviembre 2026",
     "poster": "imgs/estrenos/stray.jpg",
@@ -1428,8 +1428,8 @@
   {
     "id": "exo",
     "titulo": "Exo Planet #6 Exhorizon Dot In Cines",
-    "tipo": "preventa",
-    "estadoCartelera": "preventa",
+    "tipo": "estreno",
+    "estadoCartelera": "fuera",
     "fecha": "2026-11-08",
     "fechaTexto": "Domingo 08 de Noviembre 2026",
     "poster": "imgs/estrenos/exo.jpg",
@@ -1610,6 +1610,17 @@
     "fechaTexto": "Jueves 5 de Noviembre 2026",
     "poster": "imgs/estrenos/george.jpg",
     "cines": ["Cinemex"],
+    "nota": "Estados Unidos"
+  },
+  {
+    "id": "possession",
+    "titulo": "La Posesión",
+    "tipo": "preventa",
+    "estadoCartelera": "preventa",
+    "fecha": "2026-11-11",
+    "fechaTexto": "Miércoles 11 de Noviembre 2026",
+    "poster": "imgs/estrenos/possession.jpg",
+    "cines": ["Cinepolis"],
     "nota": "Estados Unidos"
   }
 ]

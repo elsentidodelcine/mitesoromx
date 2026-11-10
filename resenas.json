@@ -3272,5 +3272,309 @@
     ],
     "cita": "Si necesito investigar por mi cuenta para comprender lo que acabo de ver, creo que algo está fallando.",
     "veredicto": "Confusa, pesada y decepcionante. Tecnicismos, actores desaprovechados y juicio sin impacto. Mal augurio."
+  },
+  {
+    "id": "riley",
+    "titulo": "Riley",
+    "anio": 2023,
+    "fecha": "2026-11-08",
+    "duracion": "93 min",
+    "generos": ["Drama"],
+    "puntaje": 3.0,
+    "destacada": false,
+    "etiqueta": "",
+    "plataformas": ["Streaming"],
+    "resumen": "Descubrimiento de la sexualidad en la adolescencia. Historia sencilla y positiva, sin el típico final trágico. Entretenida, aunque no extraordinaria. Palomera ritual.",
+    "poster": "imgs/resenias/riley.jpg",
+    "posterFallback": {
+      "linea1": "Riley",
+      "linea2": ""
+    },
+    "letterboxd": "https://letterboxd.com/film/riley-2023",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt19848676/",
+      "rating": "6.6"
+    },
+    "lead": "Historia interesante sobre el descubrimiento de la sexualidad en la adolescencia. Sencilla, positiva y se deja ver. Palomera ritual.",
+    "contenido": [
+      "Riley es una película que aborda el descubrimiento de la sexualidad durante la adolescencia, siguiendo a un chico que comienza a experimentar y entender quién es realmente. Aquí conocemos a Dakota, un joven que empieza a cuestionarse su orientación sexual mientras intenta mantener la vida que todos esperan de él. No me pareció una película extraordinaria, pero sí una historia interesante que se deja ver.",
+      "A lo largo de la película vemos cómo Dakota comienza a explorar su sexualidad y tiene encuentros con otros hombres, mientras mantiene una relación con su novia. También intenta llevar una vida aparentemente normal con sus amigos y su familia, sin saber cómo expresar lo que realmente está sintiendo. Esa doble vida se convierte en uno de los principales conflictos de la historia.",
+      "Me gustó que la película no se limite únicamente a mostrar sus experiencias, sino que también nos permita ver esa confusión de no saber cómo hablar del tema con las personas más cercanas. Es una etapa complicada para el protagonista, porque mientras él comienza a descubrirse, también tiene que lidiar con las expectativas de quienes lo rodean.",
+      "Algo que agradezco es que no recurra necesariamente al típico desenlace trágico que hemos visto en otras películas sobre personajes LGBT. No todo tiene que terminar en sufrimiento para contar una historia sobre identidad y aceptación. En este caso, me gustó que Dakota pudiera avanzar en su proceso de descubrimiento y que la película nos dejara con una sensación más positiva.",
+      "En general, Riley me pareció una película entretenida, aunque tampoco creo que sea algo extraordinario. Su historia es sencilla y cumple con mostrar una parte importante del descubrimiento personal durante la adolescencia. Me quedo con que el protagonista finalmente comienza a aceptar quién es, y eso hace que su desenlace sea bastante agradable."
+    ],
+    "cita": "No todo tiene que terminar en sufrimiento para contar una historia sobre identidad y aceptación.",
+    "veredicto": "Sencilla y positiva sobre el descubrimiento adolescente. Se deja ver sin ser extraordinaria. Palomera ritual."
+  },{
+  "id": "campeon-gabacho",
+  "titulo": "Campeón Gabacho",
+  "anio": 2026,
+  "fecha": "2026-11-08",
+  "duracion": "108 min",
+  "generos": ["Drama", "Deportes"],
+  "puntaje": 1.5,
+  "destacada": false,
+  "etiqueta": "ESTRENO",
+  "plataformas": ["Cines"],
+  "resumen": "Migrante mexicano persigue el sueño americano. Idea con potencial que nunca despega ni toma el rumbo de superación. Muy equis y sin dirección clara. Brujería oscura.",
+  "poster": "imgs/resenias/gabacho.jpg",
+  "posterFallback": {
+    "linea1": "Campeón",
+    "linea2": "Gabacho"
+  },
+  "letterboxd": "https://letterboxd.com/film/campeon-gabacho",
+  "imdb": {
+    "url": "https://www.imdb.com/title/tt39368166/",
+    "rating": "6.5"
+  },
+  "lead": "Otra mexicana que termina en la basura. Idea con potencial de Rocky que nunca despega. Muy equis. Brujería oscura.",
+  "contenido": [
+    "Otra propuesta del cine mexicano que, para mí, termina en la basura. La historia nos presenta a Livorio, quien cruza de México a Estados Unidos buscando una mejor vida, persiguiendo el famoso sueño americano. Sin embargo, estar del otro lado no significa que todo vaya a mejorar.",
+    "Ya en Estados Unidos, Livorio trabaja como asistente en una librería y ha aprendido inglés, pero en lugar de mostrarnos una historia de superación, lo que vemos es cómo las cosas parecen ir cada vez peor.",
+    "Hubo un momento en el que pensé que la película tomaría un rumbo parecido al de Rocky Balboa: que Livorio se acercaría al boxeo, encontraría una oportunidad y comenzaría a luchar por salir adelante. Pero no, la historia nunca termina de llevarnos por ese camino.",
+    "Aunque llega a hacerse conocido en su entorno, eso no se traduce en un verdadero progreso para el personaje. Al final, sentí que la película no sabía muy bien hacia dónde quería llevar su historia.",
+    "Simplemente se me hizo una película muy equis, de esas que terminas de ver y no te dejan demasiado. Una idea que pudo dar para más, pero que a mí no me terminó de convencer."
+  ],
+  "cita": "La película no sabía muy bien hacia dónde quería llevar su historia.",
+  "veredicto": "Idea con potencial que nunca despega. Muy equis y sin dirección clara. Brujería oscura."
+},
+  {
+    "id": "blue-lock",
+    "titulo": "Blue Lock",
+    "anio": 2026,
+    "fecha": "2026-11-08",
+    "duracion": "128 min",
+    "generos": ["Acción", "Deporte", "Drama"],
+    "puntaje": 4.0,
+    "destacada": false,
+    "etiqueta": "ESTRENO",
+    "plataformas": ["Cines"],
+    "resumen": "Adaptación live action que sorprende. Partidos intensos, rivalidades egoístas y actuaciones sólidas. Historia incompleta, pero engancha aunque no te guste el fútbol. Hechizo bien logrado.",
+    "poster": "imgs/resenias/lock.jpg",
+    "posterFallback": {
+      "linea1": "Blue Lock",
+      "linea2": ""
+    },
+    "letterboxd": "https://letterboxd.com/film/blue-lock-2026",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt39400168/",
+      "rating": "6.5"
+    },
+    "lead": "No me gusta el fútbol ni los animes deportivos, pero esta live action me enganchó. Partidos intensos y rivalidades. Hechizo bien logrado.",
+    "contenido": [
+      "No soy fan de los animes deportivos y mucho menos del fútbol. Mi única excepción fue Supercampeones, pero eso fue durante mi infancia y adolescencia. Por eso, cuando fui a ver esta adaptación live action, no esperaba que me fuera a gustar tanto.",
+      "Hace tres años vi la versión animada que llegó a Cinemex y le puse 2 estrellas, principalmente porque resumía una historia de muchísimos capítulos en apenas una hora y media, además de dejarla inconclusa. Esta nueva versión tiene prácticamente el mismo problema, pero mi experiencia fue completamente diferente.",
+      "¡Me sorprendió bastante! Las actuaciones me gustaron y disfruté mucho los partidos, especialmente esa rivalidad entre los jugadores, donde cada uno busca imponerse sobre los demás, alimentar su ego y convertirse en el mejor delantero para llevar a Japón a ganar la Copa Mundial.",
+      "Lo único que por momentos me sacó un poco de la película fueron algunas escenas en las que los jugadores corrían a máxima velocidad. El efecto se veía algo falso, casi como cuando Flash corre en las películas de DC Comics. Fuera de eso, disfruté muchísimo la experiencia.",
+      "No le doy las cinco estrellas porque nuevamente nos dejan con la historia inconclusa. Además, solamente estuvo una semana en cartelera y me quedé con ganas de verla por segunda ocasión, pero ya no me dio tiempo.",
+      "Una película que me sorprendió para bien. No me gusta el fútbol ni soy fan de este tipo de anime, pero Blue Lock consiguió engancharme y hacerme disfrutar cada partido."
+    ],
+    "cita": "No me gusta el fútbol ni soy fan de este tipo de anime, pero Blue Lock consiguió engancharme.",
+    "veredicto": "Sorprende aunque no te guste el fútbol. Partidos intensos y rivalidades sólidas. Historia incompleta, pero engancha. Hechizo bien logrado."
+  },
+  {
+    "id": "sensatez-y-sentimiento",
+    "titulo": "Sensatez y Sentimiento",
+    "anio": 2026,
+    "fecha": "2026-11-08",
+    "duracion": "132 min",
+    "generos": ["Romance", "Drama"],
+    "puntaje": 2.0,
+    "destacada": false,
+    "etiqueta": "ESTRENO",
+    "plataformas": ["Cines"],
+    "resumen": "Adaptación de Jane Austen que no convence. Poca química entre los personajes, romances forzados y se siente demasiado larga. Conjuro mal ejecutado.",
+    "poster": "imgs/resenias/sensatez.jpg",
+    "posterFallback": {
+      "linea1": "Sensatez y",
+      "linea2": "Sentimiento"
+    },
+    "letterboxd": "https://letterboxd.com/film/sense-and-sensibility-2026",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt13609648/",
+      "rating": "7.2"
+    },
+    "lead": "No soy fan de este tipo de romances de época y esta no me cambió la opinión. Poca química y demasiado larga. Conjuro mal ejecutado.",
+    "contenido": [
+      "No soy muy fan de las películas románticas de esta época. De hecho, todavía no he visto Orgullo y prejuicio por esa misma razón. Sin embargo, tenía curiosidad por esta historia y, después de verla, puedo decir que no fue para mí.",
+      "Si la comparo con El testamento de Ann Lee, que también tiene elementos de época y cuya parte relacionada con la secta me llamó la atención, aquí esperaba encontrar algo que me atrapara, pero el supuesto romance nunca terminó de convencerme.",
+      "Y digo supuesto porque prácticamente no sentí química entre los personajes. Si acaso, entre Marianne y el coronel, aunque esa atracción aparece hasta el final. Con Willoughby y los demás intereses románticos tampoco sentí una conexión que me hiciera creer en esos enamoramientos.",
+      "De hecho, me recordó a esas historias de la época de mis abuelos, cuando bastaba con que un hombre le tocara la mano a una mujer para que prácticamente ya estuvieran destinados a casarse. Y entiendo que las costumbres eran diferentes, pero aquí las emociones y los diálogos sobre lo enamoradas que estaban las hermanas me parecían demasiado forzados. Yo solamente pensaba: ¿qué? ¡Si apenas se conocen!",
+      "También sentí que la película se alarga demasiado. Fácilmente le habría quitado una hora para hacerla más interesante. La historia se concentra principalmente en Marianne y sus pretendientes, mientras que Elinor queda mucho más relegada. Su relación con Edward tampoco me transmitió química y, cuando finalmente vemos que terminan juntos, sentí que sucedió de repente.",
+      "En general, no conecté con los personajes ni con sus romances. Una película que se me hizo demasiado larga y que, sinceramente, no disfruté."
+    ],
+    "cita": "¿Qué? ¡Si apenas se conocen!",
+    "veredicto": "Poca química, romances forzados y demasiado larga. No conecté. Conjuro mal ejecutado."
+  },
+  {
+    "id": "entregas-al-limite",
+    "titulo": "Entregas al Límite",
+    "anio": 2026,
+    "fecha": "2026-11-08",
+    "duracion": "98 min",
+    "generos": ["Acción", "Suspenso"],
+    "puntaje": 3.0,
+    "destacada": false,
+    "etiqueta": "ESTRENO",
+    "plataformas": ["Cines"],
+    "resumen": "Premisa similar a Resident Evil: entregar suministros médicos entre peligros. Acción y persecuciones entretenidas, pero llena de clichés. Blockbuster dominguero. Palomera ritual.",
+    "poster": "imgs/resenias/entrega.jpg",
+    "posterFallback": {
+      "linea1": "Entregas",
+      "linea2": "al Límite"
+    },
+    "letterboxd": "https://letterboxd.com/film/runner-2026",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt31349844/",
+      "rating": "6.2"
+    },
+    "lead": "Premisa parecida a Resident Evil con narcos en vez de zombis. Entretenida y palomera, aunque llena de clichés. Cumple.",
+    "contenido": [
+      "No pude evitar compararla con la nueva película de Resident Evil. Ambas tienen una premisa bastante similar: llevar una maleta con suministros médicos de un punto A a un punto B. La diferencia es que en Resident Evil tenemos zombis y aquí nos encontramos con gente peligrosa, narcos que quieren robar el cargamento antes de que llegue a su destino.",
+      "En esta ocasión, la misión es entregar ese contenido para ayudar a una niña que se encuentra en el hospital. Y aunque la premisa funciona para mantenerte entretenido, la película cae en muchos clichés y situaciones que se sienten bastante falsas.",
+      "Para mí, es un blockbuster dominguero: de esas películas que pones para pasar un buen rato, sin esperar demasiado. Tiene acción, persecuciones y momentos entretenidos, pero tampoco ofrece algo que no hayamos visto antes.",
+      "Al final, todo termina convirtiéndose en un éxito total y la misión se cumple. Es divertida y cumple como película palomera, pero no es de esas que me dejarían con ganas de volver a verla."
+    ],
+    "cita": "Es un blockbuster dominguero: de esas películas que pones para pasar un buen rato, sin esperar demasiado.",
+    "veredicto": "Acción entretenida y clichés. Cumple como palomera, pero nada memorable. Palomera ritual."
+  },
+  {
+    "id": "godzilla-minus-one",
+    "titulo": "Godzilla Minus One",
+    "anio": 2023,
+    "fecha": "2026-11-08",
+    "duracion": "125 min",
+    "generos": ["Acción", "Drama", "Ciencia Ficción"],
+    "puntaje": 5.0,
+    "destacada": true,
+    "etiqueta": "REESTRENO",
+    "plataformas": ["Cines"],
+    "resumen": "Una de mis favoritas de 2023. Godzilla aterrador, historia humana conmovedora y batallas espectaculares. Experiencia increíble, especialmente en 4DX. Cine legendario.",
+    "poster": "imgs/resenias/minusone.jpg",
+    "posterFallback": {
+      "linea1": "Godzilla",
+      "linea2": "Minus One"
+    },
+    "letterboxd": "https://letterboxd.com/film/godzilla-minus-one",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt23289160/",
+      "rating": "7.7"
+    },
+    "lead": "Volví a verla preparándome para Minus Zero y sigue siendo espectacular. Godzilla aterrador y peso emocional. Cine legendario.",
+    "contenido": [
+      "Hoy tocó volver a ver una de mis películas favoritas de 2023, y qué mejor manera de prepararme para el estreno de Godzilla Minus Zero.",
+      "La primera vez la disfruté muchísimo y volver a verla me recordó por qué me gusta tanto. Tuve la oportunidad de verla en 4DX y las batallas contra Godzilla son una experiencia espectacular. El nivel de destrucción, el caos que provoca y la manera en que los humanos intentan detenerlo hacen que cada enfrentamiento sea emocionante.",
+      "Algo que también me encanta es su historia humana, especialmente la de Kōichi, Noriko y la pequeña Akiko. No son una familia tradicional, pero poco a poco construyen ese vínculo y terminan convirtiéndose en algo muy especial. Esa parte le da un peso emocional a toda la historia.",
+      "También me gusta mucho esta versión de Godzilla. Estamos acostumbrados a verlo como el protector de la humanidad en las películas de Hollywood, pero aquí Japón nos presenta a un monstruo aterrador, una verdadera amenaza. Y lo mejor es que disfruto ambas versiones: no estoy casado con una sola interpretación. ¡Me gustan tanto el Godzilla bueno como el malo!",
+      "Las batallas, la destrucción y la forma en que los humanos se organizan para enfrentarlo hacen de esta película una experiencia increíble. Y aunque aparentemente consiguen vencerlo, sabemos que Godzilla es mucho más que un simple monstruo.",
+      "Sin duda, una de mis favoritas de 2023. Hoy fue un gusto volver a disfrutarla en pantalla antes de la siguiente aventura."
+    ],
+    "cita": "Me gustan tanto el Godzilla bueno como el malo!",
+    "veredicto": "Godzilla aterrador, peso emocional y batallas espectaculares. Una de mis favoritas de 2023. Cine legendario."
+  },
+  {
+    "id": "godzilla-minus-zero",
+    "titulo": "Godzilla Minus Zero",
+    "anio": 2026,
+    "fecha": "2026-11-08",
+    "duracion": "135 min",
+    "generos": ["Acción", "Ciencia Ficción", "Aventuras"],
+    "puntaje": 3.5,
+    "destacada": false,
+    "etiqueta": "ESTRENO",
+    "plataformas": ["Cines"],
+    "resumen": "Después de Minus One, esta secuela se siente más larga y centrada en el drama humano. Ghidorah impresiona, pero Godzilla aparece poco y sobran escenas. Buen embrujo, pero no alcanza a la anterior.",
+    "poster": "imgs/resenias/minus.jpg",
+    "posterFallback": {
+      "linea1": "Godzilla",
+      "linea2": "Minus Zero"
+    },
+    "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt34384661/",
+      "rating": "8.0"
+    },
+    "lead": "Después de una de mis favoritas de 2023, esta secuela me decepcionó un poco. Demasiado drama humano y Godzilla aparece poco. Buen embrujo.",
+    "contenido": [
+      "Después del éxito de Godzilla Minus One, que para mí fue una película de cinco estrellas, tenía muchas expectativas por esta continuación. Sin embargo, terminé saliendo un poco decepcionado. Pasamos de una historia épica a una película que, aunque tiene momentos bastante buenos, no terminó de convencerme.",
+      "El principal problema es que siento que el drama familiar y las historias de los personajes humanos ocupan demasiado tiempo. La película dura más de dos horas y fácilmente le habría quitado una hora. Hay escenas que, si las eliminaran, no afectarían prácticamente nada a la trama.",
+      "Por ejemplo, toda la parte en la que reclutan a la esposa de Kōichi, quien todavía sufre las secuelas del ataque de Godzilla y comienza a presentar cambios físicos, como un ojo de otro color y escamas. Utilizarla para atraer a Godzilla y provocar el enfrentamiento con Ghidorah me pareció innecesario. Para mí, habría sido mucho más emocionante que estos dos monstruos se encontraran directamente y comenzaran a pelear.",
+      "Y hablando de Ghidorah, ¡me encantó su diseño! Al principio lo vemos como un dragón más convencional, pero después evoluciona hasta convertirse en el conocido monstruo dorado de tres cabezas. Godzilla, por su parte, aparece muy poco y siento que esta película termina enfocándose mucho más en Ghidorah y en el drama de los humanos.",
+      "También hay momentos que me parecieron demasiado prolongados, como la despedida de la familia porque se han convertido en prófugos de la justicia estadounidense. Sinceramente, habría preferido que la película terminara cuando los tres se van felices en la motocicleta. Para mí, habría sido un cierre mucho más bonito y no necesitábamos extenderlo.",
+      "Alerta de spoilers. En la batalla final tenemos a Godzilla enfrentándose a Ghidorah, mientras los humanos ponen en marcha su estrategia para derrotarlo. Finalmente consiguen vencer a Ghidorah y Godzilla sobrevive. En lugar de acabar con él, deciden dejarlo libre, así que queda la incógnita de si en futuras películas continuará siendo una amenaza o si veremos otra faceta del monstruo.",
+      "Creo que será un éxito, pero personalmente esperaba mucho más. Godzilla Minus One me dejó una historia y unas batallas que disfruté de principio a fin; esta segunda entrega tiene buenos elementos, pero siento que le sobraron demasiadas escenas y que pudo ser mucho más emocionante."
+    ],
+    "cita": "Godzilla aparece muy poco y siento que esta película termina enfocándose mucho más en Ghidorah.",
+    "veredicto": "Ghidorah impresiona, pero sobra drama humano y Godzilla aparece poco. Buena, pero inferior a Minus One. Buen embrujo."
+  },
+  {
+    "id": "el-gato-con-sombrero",
+    "titulo": "El Gato con Sombrero",
+    "anio": 2026,
+    "fecha": "2026-11-08",
+    "duracion": "107 min",
+    "generos": ["Animación", "Familia", "Comedia"],
+    "puntaje": 2.5,
+    "destacada": false,
+    "etiqueta": "ESTRENO",
+    "plataformas": ["Cines"],
+    "resumen": "Buena animación, excelente doblaje de Alfonso Herrera y momentos divertidos, pero se alarga demasiado. Pensada para niños; a los adultos se les hace larga. Neutral, pero olvidable.",
+    "poster": "imgs/resenias/sombrero.jpg",
+    "posterFallback": {
+      "linea1": "El Gato",
+      "linea2": "con Sombrero"
+    },
+    "letterboxd": "https://letterboxd.com/film/the-cat-in-the-hat-2026",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt2321555/",
+      "rating": "6.6"
+    },
+    "lead": "No conocía al personaje. Buena animación y excelente doblaje de Alfonso Herrera, pero se alarga demasiado. Neutral, pero olvidable.",
+    "contenido": [
+      "La verdad, yo ni conocía a este personaje. Sé que El gato con sombrero existe desde hace muchos años y que forma parte de la infancia de muchos de mis amigos, pero nunca había visto nada de él. Así que llegué a esta película sin conocer prácticamente nada de su mundo.",
+      "Después de algunas experiencias con doblajes que no me han convencido, aquí tenemos una grata sorpresa. Alfonso Herrera le da voz al Gato con Sombrero y, sinceramente, hace un excelente trabajo. Su voz queda perfectamente con el personaje y es uno de los puntos que más disfruté.",
+      "La película nos presenta a un gato cuya misión es hacer felices a los niños, aunque sus ocurrencias terminan provocando problemas y desastres. Esta vez le toca enfrentarse a una misión bastante complicada con dos pequeños que no están nada contentos con su nueva vida.",
+      "Me gustaron mucho la animación, los personajes y la música. Visualmente es muy agradable y tiene momentos bastante divertidos. El problema es que la historia se alarga demasiado. ¡Otra película a la que yo le habría quitado varios minutos!",
+      "Tenemos tres cajas que representan los mundos de los dos niños y el de su mamá. Los personajes interactúan con cada uno de ellos, pero siento que las aventuras de las cajas de los niños sobran. Para mí, la parte realmente importante es cuando entran al mundo de la mamá y comienzan a comprender todo lo que hace por ellos, los sacrificios y el amor que hay detrás de sus decisiones.",
+      "Esa parte habría funcionado perfectamente si la película se hubiera concentrado en ella. En cambio, tantas vueltas terminaron por aburrirme. Eso sí, mientras yo ya estaba perdiendo el interés, los niños de la sala estaban bastante entretenidos, y al final entiendo que esta película está pensada principalmente para ellos, no para adultos como yo.",
+      "En general, tiene una buena animación, un excelente doblaje y elementos que seguramente disfrutarán los más pequeños, pero a mí se me hizo demasiado larga y no consiguió mantener mi atención."
+    ],
+    "cita": "¡Otra película a la que yo le habría quitado varios minutos!",
+    "veredicto": "Buena animación y excelente doblaje, pero se alarga demasiado. Pensada para niños. Neutral, pero olvidable."
+  },
+  {
+    "id": "buddy",
+    "titulo": "Buddy",
+    "anio": 2026,
+    "fecha": "2026-11-08",
+    "duracion": "96 min",
+    "generos": ["Terror"],
+    "puntaje": 3.5,
+    "destacada": false,
+    "etiqueta": "ESTRENO",
+    "plataformas": ["Cines", "Streaming"],
+    "resumen": "Excelente propuesta de terror analógico. Programa infantil que se vuelve amenaza, con reinicios y revelaciones inquietantes. El final debilita un poco, pero la idea es sólida. Buen embrujo.",
+    "poster": "imgs/resenias/buddy.jpg",
+    "posterFallback": {
+      "linea1": "Buddy",
+      "linea2": ""
+    },
+    "letterboxd": "https://letterboxd.com/film/buddy-2026",
+    "imdb": {
+      "url": "https://www.imdb.com/title/tt37281055/",
+      "rating": "6.6"
+    },
+    "lead": "Terror analógico con programa infantil al estilo Barney. La parte dentro del show es excelente; el final baja un poco. Buen embrujo.",
+    "contenido": [
+      "¡Una propuesta bastante interesante de terror analógico! Aquí tenemos una especie de programa infantil al estilo de Barney y sus amigos o los Teletubbies, donde Buddy interactúa con niños y otros personajes que parecen sacados de un mundo lleno de alegría e inocencia. Incluso personajes como el Pozo, el Buzón y la Mochila están vivos, acompañados por una enfermera.",
+      "Al principio todo parece funcionar como un programa infantil normal, con canciones, personajes amigables y actividades para los pequeños. Pero poco a poco comienzan a surgir dudas y los niños se dan cuenta de que algo no está bien.",
+      "Lo que más me gustó es cómo cada vez que Buddy canta su canción, el día vuelve a comenzar. Algo sucede con uno de los niños, Buddy deja ver su verdadera naturaleza y termina convirtiéndose en una amenaza. Después todo se reinicia y la historia vuelve a repetirse, pero cada vez más niños comienzan a descubrir lo que realmente está pasando.",
+      "Toda esa parte dentro del programa me pareció excelente. La manera en que se va revelando que Buddy no es el personaje inocente que aparenta, y cómo los niños intentan escapar mientras él los persigue, mantiene muy bien el interés.",
+      "Sin embargo, siento que la película pierde un poco de fuerza en su parte final. No me convenció tanto que una de las niñas termine escapando como única sobreviviente, ni tampoco toda la historia de la mamá en el mundo real y lo que sucede con la televisión. Me parecía mucho más interesante lo que estaba ocurriendo dentro de ese extraño programa infantil.",
+      "A pesar de ese cierre que no terminó de gustarme, me parece una excelente propuesta de terror analógico, con una idea bastante original y momentos que realmente consiguen inquietarte."
+    ],
+    "cita": "Cada vez que Buddy canta su canción, el día vuelve a comenzar.",
+    "veredicto": "Terror analógico original y efectivo dentro del programa infantil. El final debilita un poco. Buen embrujo."
   }
+
 ]

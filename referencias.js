@@ -10,7 +10,7 @@
     "imgs/referencias/ref1242.jpg",
     "imgs/referencias/ref1243.jpg",
     "imgs/referencias/ref1244.jpg",
-    "imgs/referencias/ref1245.jpg",
+   // "imgs/referencias/ref1245.jpg",
     "imgs/referencias/ref1230.jpeg",
     "imgs/referencias/ref1231.jpeg",
     "imgs/referencias/ref1232.jpeg",
