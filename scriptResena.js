@@ -84,20 +84,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     actualizarChips();
     actualizarBotonLimpiar();
 
-    // Reseña destacada (solo si no hay filtros activos)
-    const hayFiltros = hayFiltrosActivos();
-    if (featuredContainer) {
-      if (!hayFiltros && filtradas.length > 0) {
-        const destacada = filtradas[0]; // la más reciente o la primera del orden actual
-        featuredContainer.innerHTML = cardDestacada(destacada);
-        featuredContainer.hidden = false;
-      } else {
-        featuredContainer.innerHTML = '';
-        featuredContainer.hidden = true;
-      }
-    }
-
-    if (!filtradas.length) {
+  if (!filtradas.length) {
       if (grid) {
         grid.innerHTML = `
           <div class="empty-state">
@@ -119,10 +106,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const inicio = (paginaActual - 1) * RESEÑAS_POR_PAGINA;
     const pagina = filtradas.slice(inicio, inicio + RESEÑAS_POR_PAGINA);
 
-    // Si hay destacada y no hay filtros, no repetirla en el grid
-    const items = (!hayFiltros && paginaActual === 1)
-      ? pagina.slice(1)
-      : pagina;
+   const items = pagina;
 
     if (grid) {
       grid.innerHTML = items.map(cardSecundaria).join('');
@@ -586,3 +570,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 })();
+
+/* ===== Back to top ===== */
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('back-to-top');
+  if (!btn) return;
+
+  const toggle = () => {
+    btn.hidden = window.scrollY < 400;
+  };
+
+  window.addEventListener('scroll', toggle, { passive: true });
+  toggle();
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});

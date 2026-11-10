@@ -158,10 +158,21 @@
     <!-- INTRO -->
     <section class="intro-strip" id="sobre-el-blog" aria-labelledby="intro-heading">
         <div class="intro-inner">
+            <div class="intro-ornament" aria-hidden="true">
+                <span></span>
+                <span class="intro-icon">✧</span>
+                <span></span>
+            </div>
             <p class="intro-kicker" id="intro-heading">LOS BRUJOS DEL CINE</p>
-            <p>
+            <p class="intro-lead">
                 Porque ir al cine no termina cuando aparecen los créditos.
-                <strong>Aquí empieza la conversación.</strong>
+            </p>
+            <p class="intro-emphasis">
+                Aquí empieza la conversación.
+            </p>
+            <p class="intro-sub">
+                Reseñas con criterio, sin spoilers baratos y con la honestidad
+                de quien realmente paga el boleto.
             </p>
         </div>
     </section>
@@ -219,9 +230,6 @@
         <div id="active-filters" class="active-filters" hidden aria-live="polite"></div>
 
         <p id="reviews-count" class="resultados-count" aria-live="polite"></p>
-
-        <!-- Reseña destacada -->
-        <div id="featured-review-container" class="featured-review" hidden></div>
 
         <div class="review-grid" id="reviews-grid" aria-busy="true">
             <div class="skeleton-card" aria-hidden="true"></div>
@@ -289,7 +297,9 @@
         </div>
     </div>
 </footer>
-
+<button type="button" id="back-to-top" class="back-to-top" aria-label="Volver arriba" title="Volver arriba" hidden>
+    <span class="back-to-top-icon" aria-hidden="true">🧙‍♀️</span>
+</button>
 <script src="scriptResena.js"></script>
 </body>
 </html>
