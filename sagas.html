@@ -175,6 +175,193 @@
           flex-direction: column;
           gap: 0.75rem;
         }
+
+        /* ===== SAGAS: más vivo, sin “filtro oscuro” ===== */
+
+.sagas-page {
+  background: transparent;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+/* Quita velos / overlays que apaguen todo */
+.sagas-page::before,
+.sagas-page::after,
+.saga-timeline::before,
+.saga-item::before {
+  opacity: 0 !important;
+  content: none !important;
+}
+
+/* Timeline más clara y con aire */
+.saga-timeline {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Cards vivas */
+.saga-item {
+  display: grid;
+  grid-template-columns: auto 88px 1fr;
+  gap: 1rem 1.15rem;
+  align-items: center;
+  padding: 1rem 1.15rem;
+  border-radius: 14px;
+  border: 1px solid var(--border-strong, var(--border));
+  background: var(--surface) !important;
+  color: var(--text);
+  text-decoration: none;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+  opacity: 1 !important;
+  filter: none !important;
+  transform: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.saga-item:hover {
+  border-color: var(--accent);
+  box-shadow: 0 12px 36px rgba(212, 175, 55, 0.12);
+  transform: translateY(-2px);
+}
+
+/* Sin reseña: un poco más suave, pero NO apagado */
+.saga-item.is-disabled {
+  opacity: 1 !important;
+  filter: none !important;
+  cursor: default;
+}
+.saga-item.is-disabled:hover {
+  transform: none;
+  border-color: var(--border-strong, var(--border));
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+}
+
+/* Número con acento */
+.saga-num {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.85rem;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+/* Póster nítido */
+.saga-poster {
+  width: 88px;
+  height: 132px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  display: block;
+  filter: none !important;
+  opacity: 1 !important;
+}
+.saga-poster--empty {
+  width: 88px;
+  height: 132px;
+  border-radius: 10px;
+  background: var(--surface-hover, var(--bg-elevated));
+  border: 1px dashed var(--border);
+}
+
+.saga-body h2 {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text) !important;
+  line-height: 1.25;
+}
+
+.saga-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.85rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.saga-fase {
+  color: var(--accent) !important;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.saga-nota {
+  margin: 0.25rem 0 0.45rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--text-muted) !important;
+}
+
+.saga-cta {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.saga-item.is-disabled .saga-cta {
+  color: var(--text-faint);
+}
+
+/* Meta de arriba legible */
+.saga-meta {
+  color: var(--text-muted);
+}
+.saga-meta strong {
+  color: var(--text) !important;
+}
+
+/* Tabs más vivos */
+.saga-tab {
+  background: var(--surface) !important;
+  color: var(--text-muted);
+  border-color: var(--border);
+}
+.saga-tab:hover {
+  color: var(--text);
+  border-color: var(--border-strong, var(--border));
+}
+.saga-tab.active {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: #1a1208 !important;
+  box-shadow: 0 6px 18px rgba(212, 175, 55, 0.25);
+}
+
+/* Hero: glow un poco más fuerte */
+.sagas-hero-glow {
+  opacity: 0.45 !important;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .saga-item {
+    grid-template-columns: auto 72px 1fr;
+    gap: 0.75rem;
+    padding: 0.85rem;
+  }
+  .saga-poster,
+  .saga-poster--empty {
+    width: 72px;
+    height: 108px;
+  }
+  .saga-body h2 {
+    font-size: 1.02rem;
+  }
+}
     </style>
 </head>
 <body>
