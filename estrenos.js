@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   let estrenos = [];
   let filtroTipo = 'todos';
   let filtroMes = 'todos';
-  const POR_PAGINA = 12;
+  const POR_PAGINA = 15;
   let paginaActual = 1;
   let listaFiltrada = [];
 
@@ -632,22 +632,7 @@ function etiquetaCartelera(item) {
   return null;
 }
 
-// ===== Toggle tema claro / oscuro =====
-document.addEventListener('DOMContentLoaded', () => {
-  const btn = document.getElementById('theme-toggle');
-  if (!btn) return;
 
-  btn.addEventListener('click', () => {
-    const html = document.documentElement;
-    const actual = html.getAttribute('data-theme') || 'dark';
-    const nuevo = actual === 'dark' ? 'light' : 'dark';
-
-    html.setAttribute('data-theme', nuevo);
-    try {
-      localStorage.setItem('lbdc-theme', nuevo);
-    } catch (e) {}
-  });
-});
 
 // ===== Botón volver arriba =====
 const btnTop = document.getElementById('back-to-top') || document.getElementById('btn-top');
@@ -700,55 +685,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-/* ===== Theme toggle ===== */
-(function () {
-  const KEY = 'lbdc-theme';
-  const root = document.documentElement;
 
-  function apply(theme) {
-    root.setAttribute('data-theme', theme);
-    try {
-      localStorage.setItem(KEY, theme);
-    } catch (_) {}
-
-    const btn = document.getElementById('theme-toggle');
-    if (btn) {
-      btn.setAttribute(
-        'aria-label',
-        theme === 'light' ? 'Cambiar a modo oscuro' : 'Cambiar a modo claro'
-      );
-    }
-  }
-
-  // Tema inicial (el <script> del <head> ya puede haber puesto data-theme)
-  let saved = null;
-  try {
-    saved = localStorage.getItem(KEY);
-  } catch (_) {}
-
-  if (saved === 'light' || saved === 'dark') {
-    apply(saved);
-  } else if (!root.getAttribute('data-theme')) {
-    if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-      apply('light');
-    } else {
-      apply('dark');
-    }
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    const btn = document.getElementById('theme-toggle');
-    if (!btn) return;
-
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      const actual = root.getAttribute('data-theme') || 'dark';
-      const siguiente = actual === 'light' ? 'dark' : 'light';
-      apply(siguiente);
-    });
-  });
-})();
 
 /* ===== Botón volver arriba ===== */
 document.addEventListener('DOMContentLoaded', () => {
@@ -771,3 +708,56 @@ document.addEventListener('DOMContentLoaded', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 });
+/* ===== Theme toggle (único) ===== */
+(function () {
+  const KEY = 'lbdc-theme';
+  const root = document.documentElement;
+
+  function apply(theme) {
+    root.setAttribute('data-theme', theme);
+    try {
+      localStorage.setItem(KEY, theme);
+    } catch (_) {}
+
+    const btn = document.getElementById('theme-toggle');
+    if (btn) {
+      btn.setAttribute(
+        'aria-label',
+        theme === 'light' ? 'Cambiar a modo oscuro' : 'Cambiar a modo claro'
+      );
+    }
+  }
+
+  // Tema guardado al cargar
+  try {
+    const saved = localStorage.getItem(KEY);
+    if (saved === 'light' || saved === 'dark') {
+      apply(saved);
+    } else if (!root.getAttribute('data-theme')) {
+      apply(
+        window.matchMedia('(prefers-color-scheme: light)').matches
+          ? 'light'
+          : 'dark'
+      );
+    }
+  } catch (_) {}
+
+  function bind() {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn || btn.dataset.themeBound === '1') return;
+    btn.dataset.themeBound = '1';
+
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      const actual = root.getAttribute('data-theme') || 'dark';
+      apply(actual === 'light' ? 'dark' : 'light');
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bind);
+  } else {
+    bind();
+  }
+})();

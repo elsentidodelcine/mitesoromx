@@ -34,7 +34,7 @@ function mostrarSkeleton(n) {
     '<div class="maraton-skel" aria-hidden="true"></div>'
   ).join('');
 }
-
+/*
 function renderCountdown(m) {
   const el = document.getElementById('maraton-countdown');
   if (!el || !m.fechaObjetivo) { if (el) el.hidden = true; return; }
@@ -50,6 +50,25 @@ function renderCountdown(m) {
   el.textContent = dias === 0
     ? '🎃 ¡Es Halloween!'
     : `🎃 Faltan ${dias} día${dias === 1 ? '' : 's'} para Halloween`;
+  el.hidden = false;
+}
+*/
+function renderCountdown(m) {
+  const el = document.getElementById('maraton-countdown');
+  if (!el || !m.fechaObjetivo) { if (el) el.hidden = true; return; }
+  const target = new Date(m.fechaObjetivo + 'T23:59:59');
+  const diff = target - new Date();
+  const emoji = m.emoji || '🎄';
+  if (diff < 0) {
+    el.textContent = emoji + ' ¡Ya es temporada!';
+    el.hidden = false;
+    return;
+  }
+  const dias = Math.ceil(diff / 86400000);
+  const label = m.mes === 12 ? 'Navidad' : (m.nombre || 'la fecha');
+  el.textContent = dias === 0
+    ? emoji + ' ¡Es el día!'
+    : `${emoji} Faltan ${dias} día${dias === 1 ? '' : 's'} para ${label}`;
   el.hidden = false;
 }
 
@@ -456,23 +475,7 @@ document.addEventListener('DOMContentLoaded', async () => {
      renderTodoFiltrado();
    });
 
-  document.getElementById('theme-toggle')?.addEventListener('click', () => {
-    const html = document.documentElement;
-    const actual = html.getAttribute('data-theme') || 'dark';
-    const nuevo = actual === 'dark' ? 'light' : 'dark';
-    html.setAttribute('data-theme', nuevo);
-    try { localStorage.setItem('lbdc-theme', nuevo); } catch (e) {}
-  });
 
-  const btnTop = document.getElementById('btn-top');
-  if (btnTop) {
-    window.addEventListener('scroll', () => {
-      btnTop.classList.toggle('is-visible', window.scrollY > 400);
-    }, { passive: true });
-    btnTop.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  }
 
   try {
     const res = await fetch('maratones.json');
@@ -489,4 +492,88 @@ document.addEventListener('DOMContentLoaded', async () => {
     const grid = document.getElementById('maraton-grid');
     if (grid) grid.innerHTML = '<p class="maraton-empty">No se pudieron cargar los maratones.</p>';
   }
+});
+
+/* ===== Nav móvil ===== */
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.getElementById('nav-toggle');
+  const nav = document.getElementById('main-nav');
+  if (!toggle || !nav) return;
+
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const open = nav.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+  });
+
+  nav.querySelectorAll('a').forEach((a) => {
+    a.addEventListener('click', () => {
+      nav.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Abrir menú');
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!nav.classList.contains('is-open')) return;
+    if (nav.contains(e.target) || toggle.contains(e.target)) return;
+    nav.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Abrir menú');
+  });
+});
+
+/* ===== Theme (único) ===== */
+(function () {
+  const KEY = 'lbdc-theme';
+  const root = document.documentElement;
+
+  function apply(theme) {
+    root.setAttribute('data-theme', theme);
+    try { localStorage.setItem(KEY, theme); } catch (_) {}
+    const btn = document.getElementById('theme-toggle');
+    if (btn) {
+      btn.setAttribute(
+        'aria-label',
+        theme === 'light' ? 'Cambiar a modo oscuro' : 'Cambiar a modo claro'
+      );
+    }
+  }
+
+  try {
+    const saved = localStorage.getItem(KEY);
+    if (saved === 'light' || saved === 'dark') apply(saved);
+    else if (!root.getAttribute('data-theme')) {
+      apply(window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    }
+  } catch (_) {}
+
+  function bind() {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn || btn.dataset.themeBound === '1') return;
+    btn.dataset.themeBound = '1';
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const actual = root.getAttribute('data-theme') || 'dark';
+      apply(actual === 'light' ? 'dark' : 'light');
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bind);
+  } else {
+    bind();
+  }
+})();
+
+/* ===== Back to top ===== */
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('back-to-top') || document.getElementById('btn-top');
+  if (!btn) return;
+  const sync = () => btn.classList.toggle('is-visible', window.scrollY > 400);
+  window.addEventListener('scroll', sync, { passive: true });
+  sync();
+  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 });

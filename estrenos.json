@@ -1525,17 +1525,6 @@
     "nota": "Estados Unidos"
   },
   {
-    "id": "milagros",
-    "titulo": "El Caso de los Milagros",
-    "tipo": "estreno",
-    "estadoCartelera": "estreno",
-    "fecha": "2026-11-12",
-    "fechaTexto": "Jueves 12 de Noviembre del 2026",
-    "poster": "imgs/estrenos/milagros.jpg",
-    "cines": ["Cinepolis"],
-    "nota": "Estados Unidos"
-  },
-  {
     "id": "hambres",
     "titulo": "Los Juegos del Hambre",
     "tipo": "estreno",
@@ -1798,5 +1787,16 @@
     "poster": "imgs/estrenos/vida.jpg",
     "cines": [ "Cinepolis"],
     "nota": "México"
+  },
+  {
+    "id": "milagros",
+    "titulo": "El Caso de los Milagros",
+    "tipo": "estreno",
+    "estadoCartelera": "estreno",
+    "fecha": "2026-11-12",
+    "fechaTexto": "Jueves 12 de Noviembre del 2026",
+    "poster": "imgs/estrenos/milagros.jpg",
+    "cines": ["Cinepolis"],
+    "nota": "Estados Unidos"
   }
 ]

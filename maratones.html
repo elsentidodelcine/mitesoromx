@@ -4,50 +4,157 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maratones | Los Brujos del Cine</title>
-    <meta name="description" content="Maratones temáticos: 50 películas de terror para Halloween y más fechas del año.">
-    <meta name="theme-color" content="#0a0508">
-    <link rel="icon" href="imgs/logoLB.png" type="image/png">
+    <meta name="description" content="Maratones temáticos de Los Brujos del Cine: Navidad y más fechas del año. Listas para ver en casa.">
+    <meta name="theme-color" content="#0c0a09">
+    <meta name="author" content="Los Brujos del Cine">
+    <link rel="canonical" href="https://losbrujosdelcine.com/maratones.html">
+
+    <meta property="og:title" content="Maratones | Los Brujos del Cine">
+    <meta property="og:description" content="Maratones temáticos: Navidad y más fechas del año.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_MX">
+
+    <link rel="icon" href="imgs/logoLB.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="imgs/logoLB.png">
+    <link rel="shortcut icon" href="imgs/logoBL.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stylesLBDC.css">
     <link rel="stylesheet" href="maratones.css">
+
     <script>
         try {
           var t = localStorage.getItem('lbdc-theme');
           if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
         } catch (e) {}
     </script>
+
+    <style>
+        /* Hero alineado al blog / estrenos */
+        .maraton-hero {
+          position: relative;
+          padding: 5.5rem 1.5rem 4rem;
+          overflow: hidden;
+          text-align: center;
+          border-bottom: 1px solid var(--border);
+          background: var(--bg);
+        }
+        .maraton-hero-glow {
+          position: absolute;
+          border-radius: 50%;
+          filter: blur(80px);
+          pointer-events: none;
+          opacity: 0.35;
+          z-index: 0;
+        }
+        .maraton-hero-glow-one {
+          width: 420px;
+          height: 420px;
+          background: var(--accent);
+          top: -120px;
+          left: 50%;
+          transform: translateX(-60%);
+        }
+        .maraton-hero-glow-two {
+          width: 320px;
+          height: 320px;
+          background: #5c3d2e;
+          bottom: -80px;
+          right: 15%;
+        }
+        .maraton-hero-inner {
+          position: relative;
+          z-index: 1;
+          max-width: 720px;
+          margin: 0 auto;
+        }
+        .maraton-hero .eyebrow {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-size: 0.8rem;
+          font-weight: 600;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+          color: var(--accent);
+          margin-bottom: 1.25rem;
+        }
+        .maraton-hero h1 {
+          font-family: var(--font-display);
+          font-size: clamp(2.4rem, 5.5vw, 3.4rem);
+          font-weight: 700;
+          line-height: 1.15;
+          letter-spacing: -0.02em;
+          margin: 0 0 1rem;
+          color: var(--text);
+        }
+        .maraton-hero p {
+          color: var(--text-muted);
+          font-size: 1.05rem;
+          line-height: 1.65;
+          max-width: 540px;
+          margin: 0 auto;
+        }
+        .maraton-countdown {
+          margin-top: 1.25rem;
+          font-weight: 700;
+          color: var(--accent);
+          font-size: 0.95rem;
+        }
+
+        .maratones-page {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 0 4rem;
+        }
+    </style>
 </head>
 <body class="page-maratones">
-<!-- Pega aquí tu mismo header del blog -->
+
+<a href="#main-content" class="skip-link">Saltar al contenido</a>
+
 <header class="site-header">
     <div class="header-inner">
-        <a href="blog.html" class="brand-link">
-            <img src="imgs/logoLB.png" alt="Los Brujos del Cine" class="site-logo">
+        <a href="blog.html" class="brand-link" aria-label="Los Brujos del Cine, inicio">
+            <img src="imgs/logoLB.png" alt="" class="site-logo" width="68" height="68" loading="eager">
             <div class="logo-text">
-                <h1>Los Brujos del Cine</h1>
-                <span>Mi Tesoro MX</span>
+                <span class="site-title">Los Brujos del Cine</span>
+                <span class="site-tagline">Mi Tesoro MX</span>
             </div>
         </a>
-        <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-label="Abrir menú">
+
+        <button type="button" class="nav-toggle" id="nav-toggle"
+                aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
             <span></span><span></span><span></span>
         </button>
+
         <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
             <a href="blog.html#resenas">Reseñas</a>
             <a href="estrenos.html">Estrenos</a>
-            <a href="maratones.html">Maratones</a>
+            <a href="maratones.html" aria-current="page">Maratones</a>
             <a href="sagas.html">Sagas</a>
             <a href="taquilla-historia.html">Taquilla</a>
             <a href="precios.html">Precios</a>
             <a href="formatos.html">Formatos</a>
         </nav>
-        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">☾</button>
+
+        <button type="button" class="theme-toggle" id="theme-toggle"
+                aria-label="Cambiar tema" title="Modo claro / oscuro">
+            <span class="theme-icon theme-icon-moon" aria-hidden="true">☾</span>
+            <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
+        </button>
     </div>
 </header>
 
-<main class="maratones-page">
+<main id="main-content" class="maratones-page">
+
     <section class="maraton-hero" id="maraton-hero">
+        <div class="maraton-hero-glow maraton-hero-glow-one" aria-hidden="true"></div>
+        <div class="maraton-hero-glow maraton-hero-glow-two" aria-hidden="true"></div>
         <div class="maraton-hero-inner">
-            <div class="eyebrow" id="maraton-eyebrow">🎃 Temporada de sustos</div>
+            <div class="eyebrow" id="maraton-eyebrow">Temporada</div>
             <h1 id="maraton-titulo">Maratones</h1>
             <p id="maraton-desc"></p>
             <p class="maraton-countdown" id="maraton-countdown" hidden></p>
@@ -56,7 +163,6 @@
 
     <div class="maraton-tabs" id="maraton-tabs" role="tablist"></div>
 
-    <!-- Sticky filters -->
     <div class="maraton-filters-sticky" id="maraton-filters">
         <div class="maraton-filters-inner">
             <div class="maraton-count" id="maraton-count"></div>
@@ -88,34 +194,25 @@
         </div>
     </div>
 
-    <!-- Empieza aquí -->
     <section class="maraton-empieza" id="maraton-empieza" hidden>
         <h2>Empieza por estas</h2>
         <div class="maraton-empieza-grid" id="maraton-empieza-grid"></div>
     </section>
 
-    <!-- Noches -->
     <section class="maraton-noches" id="maraton-noches" hidden></section>
 
-    <!-- Parejas -->
     <section class="maraton-parejas" id="maraton-parejas" hidden>
         <h2>Si te gustó… sigue con</h2>
         <div class="maraton-parejas-list" id="maraton-parejas-list"></div>
     </section>
 
     <h2 class="maraton-grid-title" id="maraton-grid-title">Todas las películas</h2>
-    <div class="maraton-grid" id="maraton-grid" aria-live="polite">
-        <!-- skeleton -->
-    </div>
+    <div class="maraton-grid" id="maraton-grid" aria-live="polite"></div>
     <div class="maraton-empty" id="maraton-empty" hidden>
         <p>No hay películas con estos filtros.</p>
         <button type="button" class="btn-ghost" id="btn-limpiar-filtros">Limpiar filtros</button>
     </div>
-
-
 </main>
-
-<button type="button" id="btn-top" class="btn-top btn-top--pumpkin" aria-label="Volver arriba">🎃</button>
 
 <footer class="site-footer">
     <div class="footer-inner">
@@ -131,7 +228,10 @@
     </div>
 </footer>
 
-<button type="button" id="btn-top" class="btn-top" aria-label="Volver arriba">↑</button>
+<button type="button" id="back-to-top" class="back-to-top" aria-label="Volver arriba" title="Volver arriba">
+    <span class="back-to-top-icon" aria-hidden="true">🧙‍♀️</span>
+</button>
+
 <script src="maratones.js"></script>
 </body>
 </html>
