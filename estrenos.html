@@ -4,27 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estrenos y Preventas | Los Brujos del Cine</title>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0RVV6RWHTS"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-0RVV6RWHTS');
     </script>
+
     <meta name="description" content="Estrenos y preventas actuales en Cinépolis, Cinemex, Cinedot y Movie Center. Fechas, pósters y enlaces para comprar boletos.">
-    <meta name="theme-color" content="#030304">
+    <meta name="theme-color" content="#0c0a09">
+    <meta name="author" content="Los Brujos del Cine">
     <link rel="canonical" href="https://losbrujosdelcine.com/estrenos.html">
 
     <meta property="og:title" content="Estrenos y Preventas | Los Brujos del Cine">
     <meta property="og:description" content="Preventas y reestrenos en carteleras mexicanas.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://losbrujosdelcine.com/estrenos.html">
-    <meta property="og:image" content="https://elsentidodelcine.github.io/og-image.jpg">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:site_name" content="Los Brujos del Cine">
     <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Favicon moderno -->
     <link rel="icon" href="imgs/logoLB.png" type="image/png" sizes="32x32">
     <link rel="icon" href="imgs/logoLB.png" type="image/png" sizes="16x16">
     <link rel="apple-touch-icon" href="imgs/logoLB.png">
@@ -33,861 +35,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="stylesLBDC.css">
-
-    <style>
-        /* ========== ESTRENOS PAGE ========== */
-         .estrenos-page {
-           padding-bottom: 100px;
-         }
-
-         /* Hero */
-         .estrenos-hero {
-           position: relative;
-           padding: 70px 0 50px;
-           border-bottom: 1px solid var(--border);
-           overflow: hidden;
-           text-align: center;
-         }
-         .estrenos-hero::before {
-           content: "";
-           position: absolute;
-           inset: 0;
-           background:
-             radial-gradient(ellipse 80% 60% at 50% -20%, rgba(196, 30, 58, 0.14), transparent 55%),
-             radial-gradient(ellipse 50% 40% at 85% 30%, rgba(201, 162, 39, 0.05), transparent 50%);
-           pointer-events: none;
-         }
-         .estrenos-hero-inner {
-           position: relative;
-           width: min(700px, calc(100% - 48px));
-           margin: 0 auto;
-         }
-         .estrenos-hero .eyebrow { margin-bottom: 18px; }
-         .estrenos-hero h1 {
-           font-family: 'Playfair Display', Georgia, serif;
-           font-size: clamp(2.4rem, 5.5vw, 3.6rem);
-           font-weight: 800;
-           line-height: 1.05;
-           letter-spacing: -0.03em;
-           margin-bottom: 16px;
-         }
-         .estrenos-hero h1 em {
-           font-style: italic;
-           color: var(--gold);
-         }
-         .estrenos-hero p {
-           color: var(--muted);
-           font-size: 1.02rem;
-           line-height: 1.7;
-           max-width: 520px;
-           margin: 0 auto;
-         }
-
-         /* Filtros */
-         .estrenos-filters-wrapper {
-           width: min(var(--max), calc(100% - 48px));
-           margin: 32px auto 24px;
-           display: flex;
-           flex-wrap: wrap;
-           align-items: center;
-           justify-content: center;
-           gap: 16px 24px;
-         }
-         .estrenos-filters {
-           display: flex;
-           flex-wrap: wrap;
-           gap: 8px;
-           justify-content: center;
-         }
-         .filter-btn {
-           padding: 8px 16px;
-           border-radius: 999px;
-           border: 1px solid var(--border);
-           background: rgba(255,255,255,0.03);
-           color: var(--muted);
-           font-size: 0.76rem;
-           font-weight: 600;
-           letter-spacing: 0.03em;
-           cursor: pointer;
-           transition: all 0.22s ease;
-         }
-         .filter-btn:hover {
-           border-color: rgba(255,255,255,0.15);
-           color: #fff;
-         }
-         .filter-btn.active {
-           background: linear-gradient(135deg, var(--red), var(--red-dark));
-           border-color: transparent;
-           color: #fff;
-           box-shadow: 0 6px 20px rgba(196, 30, 58, 0.25);
-         }
-
-         .mes-filter {
-           display: flex;
-           align-items: center;
-           gap: 10px;
-         }
-         .mes-filter label {
-           font-size: 0.76rem;
-           font-weight: 600;
-           color: var(--muted);
-           letter-spacing: 0.04em;
-         }
-         .mes-filter select {
-           appearance: none;
-           -webkit-appearance: none;
-           padding: 8px 34px 8px 14px;
-           border-radius: 999px;
-           border: 1px solid var(--border);
-           background: rgba(255,255,255,0.04) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%239a9aa6' d='M1 1l5 5 5-5'/%3E%3C/svg%3E") no-repeat right 12px center;
-           color: #e8e8ec;
-           font-size: 0.78rem;
-           font-weight: 500;
-           cursor: pointer;
-           outline: none;
-         }
-         .mes-filter select:hover,
-         .mes-filter select:focus {
-           border-color: rgba(255,255,255,0.18);
-         }
-         .mes-filter select option {
-           background: #121218;
-           color: #e8e8ec;
-         }
-
-         /* Grid: más cards, menos espacio */
-         .estrenos-grid {
-           width: min(var(--max), calc(100% - 48px));
-           margin: 0 auto;
-           display: grid;
-           grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-           gap: 12px;
-         }
-         @media (min-width: 900px) {
-           .estrenos-grid {
-             grid-template-columns: repeat(4, 1fr);
-           }
-         }
-         @media (min-width: 1100px) {
-           .estrenos-grid {
-             grid-template-columns: repeat(4, 1fr);
-           }
-         }
-
-         /* Cards compactas */
-         .estreno-card {
-           display: flex;
-           flex-direction: column;
-           border: 1px solid var(--border);
-           border-radius: 12px;
-           background: var(--surface);
-           overflow: hidden;
-           transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
-         }
-         .estreno-card:hover {
-           transform: translateY(-2px);
-           border-color: rgba(196, 30, 58, 0.28);
-           box-shadow: var(--shadow-soft);
-         }
-
-         .estreno-poster {
-           position: relative;
-           aspect-ratio: 2 / 2.75;
-           overflow: hidden;
-           background: #0e0e14;
-         }
-         .estreno-poster img {
-           width: 100%;
-           height: 100%;
-           object-fit: cover;
-           display: block;
-           transition: transform 0.5s ease;
-         }
-         .estreno-card:hover .estreno-poster img {
-           transform: scale(1.04);
-         }
-
-         /* Badge tipo (izq) */
-         .estreno-badge {
-           position: absolute;
-           top: 8px;
-           left: 8px;
-           z-index: 2;
-           padding: 3px 7px;
-           border-radius: 5px;
-           background: rgba(0, 0, 0, 0.78);
-           border: 1px solid rgba(255, 255, 255, 0.12);
-           backdrop-filter: blur(8px);
-           font-size: 0.5rem;
-           font-weight: 700;
-           letter-spacing: 0.08em;
-           text-transform: uppercase;
-           color: #e8e8ec;
-         }
-         .estreno-badge.reestreno {
-           color: var(--gold);
-           border-color: rgba(201, 162, 39, 0.35);
-         }
-         .estreno-badge.preventa {
-           color: #7dd3fc;
-           border-color: rgba(125, 211, 252, 0.3);
-         }
-
-         /* Badge estado cartelera (der) */
-         .estreno-estado {
-           position: absolute;
-           top: 8px;
-           right: 8px;
-           z-index: 2;
-           padding: 3px 7px;
-           border-radius: 5px;
-           background: rgba(0, 0, 0, 0.78);
-           border: 1px solid rgba(255, 255, 255, 0.12);
-           font-size: 0.48rem;
-           font-weight: 700;
-           letter-spacing: 0.06em;
-           text-transform: uppercase;
-           max-width: 46%;
-           text-align: center;
-           line-height: 1.2;
-         }
-         .estreno-estado--encartelera,
-         .estreno-estado--hoy {
-           color: #7ddea0;
-           border-color: rgba(125, 222, 160, 0.35);
-         }
-         .estreno-estado--ultima {
-           color: #ff8a9a;
-           border-color: rgba(196, 30, 58, 0.4);
-         }
-         .estreno-estado--proximamente {
-           color: #7dd3fc;
-           border-color: rgba(125, 211, 252, 0.3);
-         }
-         .estreno-estado--salio,
-         .estreno-estado--sin-fin {
-           color: #9a9aa6;
-           border-color: rgba(255, 255, 255, 0.12);
-         }
-
-         .estreno-body {
-           padding: 10px;
-           display: flex;
-           flex-direction: column;
-           flex: 1;
-         }
-         .estreno-fecha {
-           font-size: 0.58rem;
-           font-weight: 600;
-           letter-spacing: 0.05em;
-           text-transform: uppercase;
-           color: var(--gold);
-           margin-bottom: 4px;
-         }
-         .estreno-titulo {
-           font-family: 'Playfair Display', Georgia, serif;
-           font-size: 0.9rem;
-           font-weight: 700;
-           line-height: 1.2;
-           letter-spacing: -0.02em;
-           margin: 0 0 8px;
-           color: var(--text, #fff);
-         }
-         .estreno-cines {
-           display: flex;
-           flex-wrap: wrap;
-           gap: 4px;
-           margin-bottom: 8px;
-         }
-         .cine-tag {
-           padding: 2px 7px;
-           border-radius: 999px;
-           background: rgba(255, 255, 255, 0.04);
-           border: 1px solid var(--border);
-           font-size: 0.55rem;
-           font-weight: 600;
-           color: var(--muted);
-         }
-
-         .estreno-links {
-           margin-top: auto;
-           display: flex;
-           flex-direction: column;
-           gap: 5px;
-         }
-         .btn-boletos {
-           display: inline-flex;
-           align-items: center;
-           justify-content: center;
-           gap: 5px;
-           padding: 6px 10px;
-           border-radius: 999px;
-           border: none;
-           background: linear-gradient(135deg, var(--red), var(--red-dark));
-           color: #fff !important;
-           font-size: 0.65rem;
-           font-weight: 600;
-           text-decoration: none;
-           transition: all 0.2s ease;
-         }
-         .btn-boletos:hover {
-           transform: translateY(-1px);
-           box-shadow: 0 6px 18px rgba(196, 30, 58, 0.35);
-         }
-         .btn-boletos.secondary {
-           background: transparent;
-           border: 1px solid var(--border-strong, rgba(255,255,255,0.14));
-           color: #e0e0e6 !important;
-           box-shadow: none;
-         }
-         .btn-boletos.secondary:hover {
-           background: rgba(255, 255, 255, 0.05);
-           border-color: rgba(255, 255, 255, 0.22);
-           transform: none;
-           box-shadow: none;
-         }
-
-         .estreno-countdown {
-           display: block;
-           margin-top: 8px;
-           font-size: 0.62rem;
-           font-weight: 700;
-           color: var(--gold);
-         }
-
-         .estrenos-empty,
-         .estrenos-loading {
-           width: min(var(--max), calc(100% - 48px));
-           margin: 60px auto;
-           text-align: center;
-           color: var(--muted);
-           font-size: 1.05rem;
-         }
-
-         /* Paginación */
-         .estrenos-pagination {
-           width: min(var(--max), calc(100% - 48px));
-           margin: 28px auto 0;
-           display: flex;
-           flex-wrap: wrap;
-           align-items: center;
-           justify-content: center;
-           gap: 8px;
-         }
-         .page-btn {
-           min-width: 38px;
-           height: 38px;
-           padding: 0 12px;
-           border-radius: 999px;
-           border: 1px solid var(--border);
-           background: rgba(255,255,255,0.04);
-           color: var(--muted);
-           font-size: 0.78rem;
-           font-weight: 600;
-           cursor: pointer;
-           transition: all 0.2s ease;
-         }
-         .page-btn:hover:not(:disabled) {
-           border-color: rgba(255,255,255,0.2);
-           color: #fff;
-         }
-         .page-btn.active {
-           background: linear-gradient(135deg, var(--red), var(--red-dark));
-           border-color: transparent;
-           color: #fff;
-         }
-         .page-btn:disabled {
-           opacity: 0.35;
-           cursor: not-allowed;
-         }
-         .page-info {
-           width: 100%;
-           text-align: center;
-           margin-top: 4px;
-           font-size: 0.72rem;
-           color: var(--muted);
-         }
-
-         /* Modo claro */
-         html[data-theme="light"] .estreno-titulo { color: #121214; }
-         html[data-theme="light"] .btn-boletos.secondary {
-           color: #121214 !important;
-           border-color: rgba(0,0,0,0.15);
-         }
-         html[data-theme="light"] .cine-tag {
-           background: rgba(0,0,0,0.04);
-           color: #3d3d46;
-         }
-         html[data-theme="light"] .filter-btn:hover { color: #121214; }
-
-         /* Móvil: 2 columnas */
-         @media (max-width: 700px) {
-           .estrenos-hero { padding: 48px 0 36px; }
-           .estrenos-grid {
-             grid-template-columns: repeat(2, 1fr);
-             gap: 10px;
-           }
-           .estrenos-filters-wrapper {
-             flex-direction: column;
-             gap: 14px;
-           }
-           .filter-btn {
-             padding: 7px 12px;
-             font-size: 0.7rem;
-           }
-           .estreno-titulo { font-size: 0.82rem; }
-           .btn-boletos { font-size: 0.6rem; padding: 5px 8px; }
-         }
-         @media (max-width: 380px) {
-           .estrenos-grid {
-             grid-template-columns: 1fr;
-           }
-         }
-
-                /* ========== MODO CLARO - ESTRENOS ========== */
-        html[data-theme="light"] .filter-btn {
-          background: #fff;
-          border-color: rgba(0,0,0,.12);
-          color: #3d3d46;
-        }
-        html[data-theme="light"] .filter-btn:hover {
-          border-color: rgba(0,0,0,.25);
-          color: #121214;
-        }
-        html[data-theme="light"] .filter-btn.active {
-          background: linear-gradient(135deg, var(--red), var(--red-dark));
-          color: #fff;
-          border-color: transparent;
-        }
-
-        html[data-theme="light"] .mes-filter select {
-          background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23555555' d='M1 1l5 5 5-5'/%3E%3C/svg%3E") no-repeat right 12px center;
-          color: #121214;
-          border-color: rgba(0,0,0,.15);
-        }
-        html[data-theme="light"] .mes-filter select option {
-          background: #fff;
-          color: #121214;
-        }
-
-        html[data-theme="light"] .estreno-card {
-          background: #fff;
-          border-color: rgba(0,0,0,.1);
-        }
-        html[data-theme="light"] .estreno-card:hover {
-          border-color: rgba(196, 30, 58, 0.3);
-        }
-
-        html[data-theme="light"] .estreno-poster {
-          background: #f0f0f2;
-        }
-
-        html[data-theme="light"] .estreno-badge,
-        html[data-theme="light"] .estreno-estado {
-          background: rgba(255,255,255,.92);
-          border-color: rgba(0,0,0,.12);
-          color: #121214;
-        }
-        html[data-theme="light"] .estreno-badge.preventa { color: #0284c7; }
-        html[data-theme="light"] .estreno-badge.reestreno { color: #a16207; }
-        html[data-theme="light"] .estreno-estado--encartelera,
-        html[data-theme="light"] .estreno-estado--hoy { color: #15803d; }
-        html[data-theme="light"] .estreno-estado--salio { color: #6b7280; }
-
-        html[data-theme="light"] .page-btn {
-          background: #fff;
-          border-color: rgba(0,0,0,.12);
-          color: #3d3d46;
-        }
-        html[data-theme="light"] .page-btn:hover:not(:disabled) {
-          border-color: rgba(0,0,0,.25);
-          color: #121214;
-        }
-        html[data-theme="light"] .page-btn.active {
-          background: linear-gradient(135deg, var(--red), var(--red-dark));
-          color: #fff;
-          border-color: transparent;
-        }
-
-                .estreno-nota {
-          font-size: 0.75rem;
-          color: var(--muted);
-          margin: 0 0 8px;
-          line-height: 1.4;
-        }
-
-                /* ========== CONTADOR DE RESULTADOS ========== */
-        .resultados-count {
-          width: min(var(--max), calc(100% - 48px));
-          margin: 0 auto 18px;
-          font-size: 0.82rem;
-          color: var(--muted);
-          text-align: center;
-        }
-
-        /* ========== SKELETON LOADING ========== */
-        .skeleton-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-          gap: 12px;
-          width: min(var(--max), calc(100% - 48px));
-          margin: 0 auto;
-        }
-        @media (min-width: 900px) {
-          .skeleton-grid { grid-template-columns: repeat(4, 1fr); }
-        }
-        @media (max-width: 700px) {
-          .skeleton-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-        }
-
-        .skeleton-card {
-          border-radius: 12px;
-          border: 1px solid var(--border);
-          background: var(--surface);
-          overflow: hidden;
-        }
-        .skeleton-poster {
-          aspect-ratio: 2 / 2.75;
-          background: linear-gradient(90deg, #1a1a22 25%, #252530 50%, #1a1a22 75%);
-          background-size: 200% 100%;
-          animation: skeleton-shine 1.4s ease-in-out infinite;
-        }
-        .skeleton-body {
-          padding: 12px 10px;
-        }
-        .skeleton-line {
-          height: 10px;
-          border-radius: 4px;
-          background: linear-gradient(90deg, #1a1a22 25%, #252530 50%, #1a1a22 75%);
-          background-size: 200% 100%;
-          animation: skeleton-shine 1.4s ease-in-out infinite;
-          margin-bottom: 8px;
-        }
-        .skeleton-line.short { width: 55%; }
-        .skeleton-line.medium { width: 80%; }
-
-        @keyframes skeleton-shine {
-          0% { background-position: 200% 0; }
-          100% { background-position: -200% 0; }
-        }
-
-        html[data-theme="light"] .skeleton-poster,
-        html[data-theme="light"] .skeleton-line {
-          background: linear-gradient(90deg, #e8e8ec 25%, #f4f4f6 50%, #e8e8ec 75%);
-          background-size: 200% 100%;
-        }
-
-        /* ========== RESALTAR HOY / ESTA SEMANA ========== */
-        .estreno-card.hoy {
-          border-color: rgba(125, 222, 160, 0.45);
-          box-shadow: 0 0 0 1px rgba(125, 222, 160, 0.15);
-        }
-        .estreno-card.esta-semana {
-          border-color: rgba(201, 162, 39, 0.4);
-        }
-
-        .estreno-countdown.hoy {
-          color: #7ddea0;
-          font-weight: 800;
-        }
-        .estreno-countdown.esta-semana {
-          color: var(--gold);
-        }
-
-        /* ========== ANIMACIÓN SUAVE AL FILTRAR ========== */
-        .estrenos-grid {
-          animation: fadeIn 0.35s ease;
-        }
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(8px); }
-          to   { opacity: 1; transform: translateY(0); }
-        }
-
-        /* ========== FOCUS STATES ========== */
-        .filter-btn:focus-visible,
-        .page-btn:focus-visible,
-        .mes-filter select:focus-visible,
-        .btn-top:focus-visible {
-          outline: 2px solid var(--gold);
-          outline-offset: 3px;
-        }
-
-        /* ========== BOTÓN VOLVER ARRIBA ========== */
-       .btn-top {
-          position: fixed;
-          bottom: 24px;
-          right: 18px;
-          z-index: 999;
-          width: 48px;
-          height: 48px;
-          border-radius: 50%;
-          border: 1px solid var(--border);
-          background: var(--surface);
-          color: var(--text);
-          font-size: 1.25rem;
-          cursor: pointer;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          box-shadow: 0 6px 20px rgba(0,0,0,0.35);
-          transition: opacity 0.25s ease, transform 0.25s ease;
-          opacity: 0;
-          pointer-events: none;
-          transform: translateY(12px);
-        }
-
-        .btn-top.is-visible {
-          opacity: 1;
-          pointer-events: auto;
-          transform: translateY(0);
-        }
-
-        .btn-top:hover {
-          transform: translateY(-3px);
-          border-color: var(--gold);
-        }
-        .btn-top[hidden] {
-          display: none;
-        }
-
-        html[data-theme="light"] .btn-top {
-          background: #fff;
-          box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-        }
-        @supports (padding: max(0px)) {
-          .btn-top {
-            bottom: max(24px, env(safe-area-inset-bottom) + 16px);
-          }
-        }
-
-
-        /* ========== PLACEHOLDER MEJORADO ========== */
-        .estreno-poster img {
-          background: linear-gradient(135deg, #1a1a22, #121218);
-        }
-
-        /* ===== Calendario dentro de estrenos ===== */
-        .estrenos-cal {
-          width: min(var(--max, 1120px), calc(100% - 40px));
-          margin: 28px auto 8px;
-          padding: 20px 0 8px;
-          border-bottom: 1px solid var(--border, rgba(255,255,255,.1));
-        }
-
-        .estrenos-cal-head {
-          display: flex;
-          flex-wrap: wrap;
-          align-items: center;
-          justify-content: space-between;
-          gap: 14px;
-          margin-bottom: 12px;
-        }
-
-        .estrenos-cal-head h2 {
-          font-family: 'Playfair Display', Georgia, serif;
-          font-size: 1.35rem;
-          margin: 4px 0 0;
-        }
-
-        .cal-controls {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-        }
-
-        .cal-controls h3 {
-          margin: 0;
-          min-width: 160px;
-          text-align: center;
-          font-size: 1rem;
-          font-weight: 600;
-        }
-
-        .cal-leyenda {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 14px;
-          font-size: .8rem;
-          color: var(--muted, #9a9aa6);
-          margin-bottom: 14px;
-        }
-
-        .cal-leyenda .dot {
-          display: inline-block;
-          width: 8px;
-          height: 8px;
-          border-radius: 50%;
-          margin-right: 6px;
-          vertical-align: middle;
-        }
-        .dot-semana { background: #7ddea0; }
-        .dot-preventa { background: #c9a227; }
-        .dot-estreno { background: #c41e3a; }
-
-        .cal-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-          gap: 12px;
-          margin-bottom: 20px;
-        }
-
-        .cal-dia {
-          background: var(--surface, #121218);
-          border: 1px solid var(--border, rgba(255,255,255,.1));
-          border-radius: 14px;
-          padding: 12px;
-        }
-
-        .cal-dia--semana {
-          border-color: rgba(125, 222, 160, 0.45);
-          box-shadow: 0 0 0 1px rgba(125, 222, 160, 0.12);
-        }
-
-        .cal-dia header {
-          display: flex;
-          align-items: baseline;
-          gap: 8px;
-          margin-bottom: 8px;
-        }
-
-        .cal-num {
-          font-size: 1.35rem;
-          font-weight: 800;
-          line-height: 1;
-        }
-
-        .cal-dow {
-          font-size: .75rem;
-          color: var(--muted, #9a9aa6);
-          text-transform: capitalize;
-        }
-
-        .cal-dia ul {
-          list-style: none;
-          margin: 0;
-          padding: 0;
-        }
-
-        .cal-dia li {
-          display: flex;
-          gap: 8px;
-          align-items: center;
-          margin: 8px 0 0;
-          font-size: .82rem;
-        }
-
-        .cal-dia li img {
-          width: 32px;
-          height: 48px;
-          object-fit: cover;
-          border-radius: 4px;
-          flex-shrink: 0;
-          background: #1a1a22;
-        }
-
-        .cal-dia li strong {
-          display: block;
-          line-height: 1.25;
-          color: var(--text, #e8e8ec);
-        }
-
-        .cal-dia li span {
-          font-size: .72rem;
-          color: var(--muted, #9a9aa6);
-        }
-
-        .cal-dia li.is-preventa strong {
-          color: var(--gold, #c9a227);
-        }
-
-        .cal-empty {
-          grid-column: 1 / -1;
-          text-align: center;
-          padding: 24px;
-          color: var(--muted, #9a9aa6);
-          font-size: .9rem;
-        }
-
-        html[data-theme="light"] .cal-dia {
-          background: #fff;
-          border-color: rgba(0,0,0,.1);
-        }
-        html[data-theme="light"] .cal-dia li strong {
-          color: #121214;
-        }
-
-        /* Leyenda: que se vean los colores */
-.cal-leyenda .dot {
-  display: inline-block;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  margin-right: 6px;
-  vertical-align: middle;
-}
-
-.cal-leyenda .dot-semana    { background: #7ddea0 !important; }
-.cal-leyenda .dot-preventa  { background: #c9a227 !important; }
-.cal-leyenda .dot-estreno   { background: #c41e3a !important; }
-.cal-leyenda .dot-cartelera { background: #6b8cff !important; }
-.cal-leyenda .dot-fuera     { background: #8a8a96 !important; }
-
-/* Día de esta semana (jue–mié) */
-.cal-dia--semana {
-  border-color: rgba(125, 222, 160, 0.55) !important;
-  box-shadow:
-    0 0 0 1px rgba(125, 222, 160, 0.2),
-    0 8px 24px rgba(125, 222, 160, 0.08);
-  background: rgba(125, 222, 160, 0.06);
-}
-html[data-theme="light"] .cal-dia--semana {
-  background: rgba(125, 222, 160, 0.12);
-  border-color: rgba(40, 140, 80, 0.35) !important;
-}
-
-/* Preventa / estreno en el texto */
-.cal-dia li.is-preventa strong { color: #c9a227 !important; }
-.cal-dia li.is-estreno strong  { color: var(--text, #e8e8ec); }
-
-/* Click */
-.cal-dia li[data-estreno-id] {
-  cursor: pointer;
-  border-radius: 8px;
-  padding: 4px;
-  margin-left: -4px;
-  margin-right: -4px;
-  transition: background .15s ease;
-}
-.cal-dia li[data-estreno-id]:hover {
-  background: rgba(255,255,255,.06);
-}
-html[data-theme="light"] .cal-dia li[data-estreno-id]:hover {
-  background: rgba(0,0,0,.05);
-}
-
-/* Flash al saltar desde el calendario */
-.estreno-card.estreno-flash {
-  outline: 2px solid var(--gold, #c9a227);
-  box-shadow: 0 0 0 6px rgba(201, 162, 39, 0.25);
-  transition: box-shadow .3s ease, outline .3s ease;
-}
-
-.cal-dia li.is-preventa strong  { color: #c9a227 !important; }
-.cal-dia li.is-estreno strong   { color: #ff6b7a !important; }
-.cal-dia li.is-cartelera strong { color: #6b8cff !important; }
-.cal-dia li.is-fuera strong     { color: #8a8a96 !important; }
-
-.cal-dia li.is-fuera {
-  opacity: 0.45;
-  filter: grayscale(0.75);
-}
-.cal-dia li.is-fuera:hover {
-  opacity: 0.75;
-  filter: grayscale(0.3);
-}
-    </style>
 
     <script>
         try {
@@ -895,126 +43,789 @@ html[data-theme="light"] .cal-dia li[data-estreno-id]:hover {
           if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
         } catch (e) {}
     </script>
+
+    <style>
+        /* ========== ESTRENOS — estilos de página ========== */
+        .estrenos-page {
+          padding-bottom: 4rem;
+        }
+
+        /* Hero */
+        .estrenos-hero {
+          position: relative;
+          padding: 4.5rem 1.5rem 3.25rem;
+          border-bottom: 1px solid var(--border);
+          overflow: hidden;
+          text-align: center;
+        }
+        .estrenos-hero::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background:
+            radial-gradient(ellipse 80% 60% at 50% -20%, rgba(212, 175, 55, 0.12), transparent 55%),
+            radial-gradient(ellipse 50% 40% at 85% 30%, rgba(92, 61, tiene 46, 0.08), transparent 50%);
+          pointer-events: none;
+        }
+        .estrenos-hero-inner {
+          position: relative;
+          max-width: 640px;
+          margin: 0 auto;
+        }
+        .estrenos-hero .eyebrow {
+          margin-bottom: 1.1rem;
+        }
+        .estrenos-hero h1 {
+          font-family: var(--font-display);
+          font-size: clamp(2.2rem, 5vw, 3.2rem);
+          font-weight: 700;
+          line-height: 1.1;
+          letter-spacing: -0.02em;
+          margin: 0 0 1rem;
+          color: var(--text);
+        }
+        .estrenos-hero h1 em {
+          font-style: italic;
+          color: var(--accent);
+        }
+        .estrenos-hero p {
+          color: var(--text-muted);
+          font-size: 1.02rem;
+          line-height: 1.65;
+          max-width: 500px;
+          margin: 0 auto;
+        }
+
+        /* Calendario */
+        .estrenos-cal {
+          max-width: 1100px;
+          margin: 2rem auto 0.5rem;
+          padding: 1.5rem 1.25rem 1rem;
+          border-bottom: 1px solid var(--border);
+        }
+        .estrenos-cal-head {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: space-between;
+          gap: 1rem;
+          margin-bottom: 0.85rem;
+        }
+        .estrenos-cal-head h2 {
+          font-family: var(--font-display);
+          font-size: 1.35rem;
+          margin: 0.25rem 0 0;
+          color: var(--text);
+        }
+        .cal-controls {
+          display: flex;
+          align-items: center;
+          gap: 0.65rem;
+        }
+        .cal-controls h3 {
+          margin: 0;
+          min-width: 150px;
+          text-align: center;
+          font-size: 0.95rem;
+          font-weight: 600;
+          color: var(--text);
+        }
+        .cal-leyenda {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.85rem 1.1rem;
+          font-size: 0.78rem;
+          color: var(--text-muted);
+          margin-bottom: 1rem;
+        }
+        .cal-leyenda .dot {
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          margin-right: 0.35rem;
+          vertical-align: middle;
+        }
+        .dot-semana { background: #7ddea0; }
+        .dot-preventa { background: var(--accent); }
+        .dot-estreno { background: #c45c4a; }
+        .dot-cartelera { background: #6b8cff; }
+        .dot-fuera { background: #8a7f72; }
+
+        .cal-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+          gap: 0.75rem;
+          margin-bottom: 1.25rem;
+        }
+        .cal-dia {
+          background: var(--surface);
+          border: 1px solid var(--border);
+          border-radius: var(--radius-sm);
+          padding: 0.85rem;
+        }
+        .cal-dia--semana {
+          border-color: rgba(125, 222, 160, 0.45);
+          background: rgba(125, 222, 160, 0.06);
+        }
+        [data-theme="light"] .cal-dia--semana {
+          background: rgba(125, 222, 160, 0.12);
+          border-color: rgba(40, 140, 80, 0.3);
+        }
+        .cal-dia header {
+          display: flex;
+          align-items: baseline;
+          gap: 0.5rem;
+          margin-bottom: 0.5rem;
+        }
+        .cal-num {
+          font-family: var(--font-display);
+          font-size: 1.25rem;
+          font-weight: 700;
+          line-height: 1;
+          color: var(--text);
+        }
+        .cal-dow {
+          font-size: 0.72rem;
+          color: var(--text-faint);
+          text-transform: capitalize;
+        }
+        .cal-dia ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+        .cal-dia li {
+          display: flex;
+          gap: 0.5rem;
+          align-items: center;
+          margin: 0.5rem 0 0;
+          font-size: 0.8rem;
+          border-radius: 6px;
+          padding: 0.25rem;
+          margin-left: -0.25rem;
+          margin-right: -0.25rem;
+          cursor: pointer;
+          transition: background 0.15s;
+        }
+        .cal-dia li:hover {
+          background: rgba(255, 255, 255, 0.05);
+        }
+        [data-theme="light"] .cal-dia li:hover {
+          background: rgba(0, 0, 0, 0.04);
+        }
+        .cal-dia li img {
+          width: 30px;
+          height: 45px;
+          object-fit: cover;
+          border-radius: 4px;
+          flex-shrink: 0;
+          background: var(--bg-elevated);
+        }
+        .cal-dia li strong {
+          display: block;
+          line-height: 1.25;
+          color: var(--text);
+          font-size: 0.8rem;
+        }
+        .cal-dia li span {
+          font-size: 0.7rem;
+          color: var(--text-faint);
+        }
+        .cal-dia li.is-preventa strong { color: var(--accent); }
+        .cal-dia li.is-estreno strong { color: #c45c4a; }
+        .cal-dia li.is-cartelera strong { color: #6b8cff; }
+        .cal-dia li.is-fuera {
+          opacity: 0.45;
+          filter: grayscale(0.7);
+        }
+        .cal-dia li.is-fuera:hover {
+          opacity: 0.75;
+          filter: grayscale(0.3);
+        }
+        .cal-empty {
+          grid-column: 1 / -1;
+          text-align: center;
+          padding: 1.5rem;
+          color: var(--text-muted);
+          font-size: 0.9rem;
+        }
+
+        /* Filtros */
+        .estrenos-filters-wrapper {
+          max-width: 1100px;
+          margin: 1.75rem auto 1.25rem;
+          padding: 0 1.25rem;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          gap: 0.85rem 1.25rem;
+        }
+        .estrenos-filters {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          justify-content: center;
+        }
+        .filter-btn {
+          padding: 0.45rem 0.95rem;
+          border-radius: 999px;
+          border: 1px solid var(--border);
+          background: var(--surface);
+          color: var(--text-muted);
+          font-size: 0.78rem;
+          font-weight: 600;
+          letter-spacing: 0.02em;
+          cursor: pointer;
+          transition: all 0.2s ease;
+        }
+        .filter-btn:hover {
+          border-color: var(--border-strong);
+          color: var(--text);
+        }
+        .filter-btn.active {
+          background: var(--accent);
+          border-color: var(--accent);
+          color: #1a1208;
+          box-shadow: 0 4px 14px rgba(212, 175, 55, 0.25);
+        }
+
+        .mes-filter {
+          display: flex;
+          align-items: center;
+          gap: 0.55rem;
+        }
+        .mes-filter label {
+          font-size: 0.76rem;
+          font-weight: 600;
+          color: var(--text-muted);
+        }
+        .mes-filter select {
+          appearance: none;
+          -webkit-appearance: none;
+          padding: 0.45rem 2rem 0.45rem 0.85rem;
+          border-radius: 999px;
+          border: 1px solid var(--border);
+          background: var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%238a7f72' d='M1 1l5 5 5-5'/%3E%3C/svg%3E") no-repeat right 12px center;
+          color: var(--text);
+          font-size: 0.78rem;
+          font-weight: 500;
+          cursor: pointer;
+          outline: none;
+        }
+        .mes-filter select:hover,
+        .mes-filter select:focus {
+          border-color: var(--accent);
+        }
+        .mes-filter select option {
+          background: var(--bg-elevated);
+          color: var(--text);
+        }
+
+        .resultados-count {
+          width: 100%;
+          max-width: 1100px;
+          margin: 0 auto 1rem;
+          padding: 0 1.25rem;
+          font-size: 0.82rem;
+          color: var(--text-faint);
+          text-align: center;
+        }
+
+        /* ========== GRID DE CARDS (más compacto) ========== */
+        .estrenos-grid,
+        .skeleton-grid {
+          max-width: 1100px;
+          margin: 0 auto;
+          padding: 0 1.25rem;
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+          gap: 0.85rem;
+        }
+        @media (min-width: 700px) {
+          .estrenos-grid,
+          .skeleton-grid {
+            grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+          }
+        }
+        @media (min-width: 1000px) {
+          .estrenos-grid,
+          .skeleton-grid {
+            grid-template-columns: repeat(5, 1fr);
+          }
+        }
+
+        .estreno-card {
+          display: flex;
+          flex-direction: column;
+          border: 1px solid var(--border);
+          border-radius: 12px;
+          background: var(--surface);
+          overflow: hidden;
+          transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+        }
+        .estreno-card:hover {
+          transform: translateY(-3px);
+          border-color: var(--border-strong);
+          box-shadow: var(--shadow);
+        }
+        .estreno-card.hoy {
+          border-color: rgba(125, 222, 160, 0.4);
+        }
+        .estreno-card.esta-semana {
+          border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+        }
+        .estreno-card.estreno-flash {
+          outline: 2px solid var(--accent);
+          box-shadow: 0 0 0 5px rgba(212, 175, 55, 0.2);
+        }
+
+        .estreno-poster {
+          position: relative;
+          aspect-ratio: 2 / 3;
+          overflow: hidden;
+          background: var(--bg-elevated);
+        }
+        .estreno-poster img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          transition: transform 0.4s ease;
+        }
+        .estreno-card:hover .estreno-poster img {
+          transform: scale(1.04);
+        }
+
+        .estreno-badge {
+          position: absolute;
+          top: 0.45rem;
+          left: 0.45rem;
+          z-index: 2;
+          padding: 0.2rem 0.4rem;
+          border-radius: 4px;
+          background: rgba(0, 0, 0, 0.78);
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          backdrop-filter: blur(6px);
+          font-size: 0.55rem;
+          font-weight: 700;
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+          color: #f0ebe3;
+        }
+        .estreno-badge.reestreno {
+          color: var(--accent);
+          border-color: rgba(212, 175, 55, 0.35);
+        }
+        .estreno-badge.preventa {
+          color: #7dd3fc;
+          border-color: rgba(125, 211, 252, 0.3);
+        }
+
+        .estreno-estado {
+          position: absolute;
+          top: 0.45rem;
+          right: 0.45rem;
+          z-index: 2;
+          padding: 0.2rem 0.4rem;
+          border-radius: 4px;
+          background: rgba(0, 0, 0, 0.78);
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          font-size: 0.52rem;
+          font-weight: 700;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+          max-width: 48%;
+          text-align: center;
+          line-height: 1.2;
+          color: #f0ebe3;
+        }
+        .estreno-estado--encartelera,
+        .estreno-estado--hoy {
+          color: #7ddea0;
+          border-color: rgba(125, 222, 160, 0.35);
+        }
+        .estreno-estado--ultima {
+          color: #ff8a9a;
+          border-color: rgba(196, 92, 74, 0.4);
+        }
+        .estreno-estado--proximamente {
+          color: #7dd3fc;
+          border-color: rgba(125, 211, 252, 0.3);
+        }
+        .estreno-estado--salio,
+        .estreno-estado--sin-fin {
+          color: #a89f94;
+          border-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .estreno-body {
+          padding: 0.7rem 0.75rem 0.85rem;
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+          gap: 0.25rem;
+        }
+        .estreno-fecha {
+          font-size: 0.62rem;
+          font-weight: 600;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+          color: var(--accent);
+        }
+        .estreno-titulo {
+          font-family: var(--font-display);
+          font-size: 0.88rem;
+          font-weight: 700;
+          line-height: 1.25;
+          letter-spacing: -0.01em;
+          margin: 0;
+          color: var(--text);
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        .estreno-cines {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.3rem;
+          margin-top: 0.2rem;
+        }
+        .cine-tag {
+          padding: 0.15rem 0.4rem;
+          border-radius: 999px;
+          background: rgba(255, 255, 255, 0.04);
+          border: 1px solid var(--border);
+          font-size: 0.58rem;
+          font-weight: 600;
+          color: var(--text-faint);
+        }
+        .estreno-nota {
+          font-size: 0.7rem;
+          color: var(--text-faint);
+          line-height: 1.35;
+          margin: 0.15rem 0 0;
+        }
+        .estreno-links {
+          margin-top: auto;
+          padding-top: 0.55rem;
+          display: flex;
+          flex-direction: column;
+          gap: 0.35rem;
+        }
+        .btn-boletos {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.3rem;
+          padding: 0.4rem 0.65rem;
+          border-radius: 999px;
+          border: none;
+          background: var(--accent);
+          color: #1a1208 !important;
+          font-size: 0.68rem;
+          font-weight: 600;
+          text-decoration: none;
+          transition: all 0.2s ease;
+        }
+        .btn-boletos:hover {
+          background: var(--accent-hover);
+          transform: translateY(-1px);
+        }
+        .btn-boletos.secondary {
+          background: transparent;
+          border: 1px solid var(--border-strong);
+          color: var(--text) !important;
+        }
+        .btn-boletos.secondary:hover {
+          background: var(--accent-soft);
+          border-color: var(--accent);
+          transform: none;
+        }
+        .estreno-countdown {
+          display: block;
+          margin-top: 0.35rem;
+          font-size: 0.65rem;
+          font-weight: 700;
+          color: var(--accent);
+        }
+        .estreno-countdown.hoy { color: #7ddea0; }
+        .estreno-countdown.esta-semana { color: var(--accent); }
+
+        .estrenos-empty,
+        .estrenos-loading {
+          max-width: 1100px;
+          margin: 3rem auto;
+          padding: 0 1.25rem;
+          text-align: center;
+          color: var(--text-muted);
+          font-size: 1rem;
+        }
+
+        /* Skeleton */
+        .skeleton-card {
+          border-radius: 12px;
+          border: 1px solid var(--border);
+          background: var(--surface);
+          overflow: hidden;
+        }
+        .skeleton-poster {
+          aspect-ratio: 2 / 3;
+          background: linear-gradient(90deg, var(--bg-elevated) 25%, var(--surface-hover) 50%, var(--bg-elevated) 75%);
+          background-size: 200% 100%;
+          animation: skeleton-shine 1.4s ease-in-out infinite;
+        }
+        .skeleton-body { padding: 0.75rem; }
+        .skeleton-line {
+          height: 9px;
+          border-radius: 4px;
+          background: linear-gradient(90deg, var(--bg-elevated) 25%, var(--surface-hover) 50%, var(--bg-elevated) 75%);
+          background-size: 200% 100%;
+          animation: skeleton-shine 1.4s ease-in-out infinite;
+          margin-bottom: 0.5rem;
+        }
+        .skeleton-line.short { width: 55%; }
+        .skeleton-line.medium { width: 80%; }
+        @keyframes skeleton-shine {
+          0% { background-position: 200% 0; }
+          100% { background-position: -200% 0; }
+        }
+
+        /* Paginación */
+        .estrenos-pagination {
+          max-width: 1100px;
+          margin: 1.75rem auto 0;
+          padding: 0 1.25rem;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          gap: 0.4rem;
+        }
+        .page-btn {
+          min-width: 38px;
+          height: 38px;
+          padding: 0 0.7rem;
+          border-radius: 10px;
+          border: 1px solid var(--border);
+          background: var(--surface);
+          color: var(--text-muted);
+          font-size: 0.82rem;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.2s ease;
+        }
+        .page-btn:hover:not(:disabled) {
+          border-color: var(--accent);
+          color: var(--text);
+          background: var(--accent-soft);
+        }
+        .page-btn.active {
+          background: var(--accent);
+          border-color: var(--accent);
+          color: #1a1208;
+        }
+        .page-btn:disabled {
+          opacity: 0.35;
+          cursor: not-allowed;
+        }
+        .page-info {
+          width: 100%;
+          text-align: center;
+          margin-top: 0.35rem;
+          font-size: 0.72rem;
+          color: var(--text-faint);
+        }
+
+        /* Animación grid */
+        .estrenos-grid {
+          animation: fadeIn 0.3s ease;
+        }
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(6px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Focus */
+        .filter-btn:focus-visible,
+        .page-btn:focus-visible,
+        .mes-filter select:focus-visible {
+          outline: 2px solid var(--accent);
+          outline-offset: 3px;
+        }
+
+        /* Modo claro ajustes específicos */
+        [data-theme="light"] .cine-tag {
+          background: rgba(0, 0, 0, 0.04);
+          color: var(--text-muted);
+        }
+        [data-theme="light"] .estreno-badge,
+        [data-theme="light"] .estreno-estado {
+          background: rgba(255, 255, 255, 0.92);
+          border-color: rgba(0, 0, 0, 0.12);
+          color: #12100e;
+        }
+        [data-theme="light"] .estreno-badge.preventa { color: #0284c7; }
+        [data-theme="light"] .estreno-badge.reestreno { color: #a16207; }
+        [data-theme="light"] .estreno-estado--encartelera,
+        [data-theme="light"] .estreno-estado--hoy { color: #15803d; }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+          .estrenos-hero { padding: 3rem 1.25rem 2.25rem; }
+          .estrenos-filters-wrapper {
+            flex-direction: column;
+            gap: 0.85rem;
+          }
+          .estrenos-grid,
+          .skeleton-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.7rem;
+            padding: 0 1rem;
+          }
+          .estreno-titulo { font-size: 0.82rem; }
+          .btn-boletos { font-size: 0.62rem; padding: 0.35rem 0.5rem; }
+          .estrenos-cal {
+            padding: 1.25rem 1rem 0.75rem;
+          }
+        }
+        @media (max-width: 400px) {
+          .estrenos-grid,
+          .skeleton-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 0.55rem;
+          }
+        }
+    </style>
 </head>
 <body>
-    <header class="site-header">
-        <div class="header-inner">
-            <a href="blog.html" class="brand-link" aria-label="Los Brujos del Cine, inicio">
-                <img src="imgs/logoLB.png" alt="Los Brujos del Cine" class="site-logo">
-                <div class="logo-text">
-                    <h1>Los Brujos del Cine</h1>
-                    <span>Mi Tesoro MX</span>
-                </div>
-            </a>
-            <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav"  aria-label="Abrir menú">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
-                <a href="blog.html#resenas">Reseñas</a>
-                <a href="estrenos.html">Estrenos</a>
-                <a href="maratones.html">Maratones</a>
-                <a href="sagas.html">Sagas</a>
-                <a href="taquilla-historia.html">Taquilla</a>
-                <a href="precios.html">Precios</a>
-                <a href="formatos.html">Formatos</a>
-            </nav>
-            <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema" title="Modo claro / oscuro">
-                <span class="theme-icon theme-icon-moon" aria-hidden="true">☾</span>
-                <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
-            </button>
+
+<a href="#main-content" class="skip-link">Saltar al contenido</a>
+
+<header class="site-header">
+    <div class="header-inner">
+        <a href="blog.html" class="brand-link" aria-label="Los Brujos del Cine, inicio">
+            <img src="imgs/logoLB.png" alt="" class="site-logo" width="68" height="68" loading="eager">
+            <div class="logo-text">
+                <span class="site-title">Los Brujos del Cine</span>
+                <span class="site-tagline">Mi Tesoro MX</span>
+            </div>
+        </a>
+
+        <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+            <a href="blog.html#resenas">Reseñas</a>
+            <a href="estrenos.html" aria-current="page">Estrenos</a>
+            <a href="maratones.html">Maratones</a>
+            <a href="sagas.html">Sagas</a>
+            <a href="taquilla-historia.html">Taquilla</a>
+            <a href="precios.html">Precios</a>
+            <a href="formatos.html">Formatos</a>
+        </nav>
+
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema" title="Modo claro / oscuro">
+            <span class="theme-icon theme-icon-moon" aria-hidden="true">☾</span>
+            <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
+        </button>
+    </div>
+</header>
+
+<main id="main-content" class="estrenos-page">
+
+    <!-- HERO -->
+    <section class="estrenos-hero">
+        <div class="estrenos-hero-inner">
+            <div class="eyebrow">
+                <span aria-hidden="true"></span>
+                Cartelera viva
+            </div>
+            <h1>Estrenos &amp; <em>Preventas</em></h1>
+            <p>
+                Reestrenos, aniversarios y próximas películas en Cinépolis, Cinemex, Cinedot y Movie Center.
+                Encuentra fechas y compra tus boletos.
+            </p>
         </div>
-    </header>
+    </section>
 
-    <main id="main-content" class="estrenos-page">
-
-        <!-- HERO -->
-        <section class="estrenos-hero">
-            <div class="estrenos-hero-inner">
-                <div class="eyebrow">
-                    <span aria-hidden="true"></span>
-                    Cartelera viva
-                </div>
-                <h1>Estrenos & <em>Preventas</em></h1>
-                <p>
-                    Reestrenos, aniversarios y próximas películas en Cinépolis, Cinemex, Cinedot y Movie Center.
-                    Encuentra fechas y compra tus boletos.
-                </p>
+    <!-- CALENDARIO -->
+    <section class="estrenos-cal" id="calendario-mes" aria-label="Calendario de estrenos del mes">
+        <div class="estrenos-cal-head">
+            <div>
+                <span class="section-kicker">VISTA MENSUAL</span>
+                <h2>Calendario del mes</h2>
             </div>
-        </section>
-
-        <!-- ===== CALENDARIO DEL MES ===== -->
-        <section class="estrenos-cal" id="calendario-mes" aria-label="Calendario de estrenos del mes">
-            <div class="estrenos-cal-head">
-                <div>
-                    <span class="section-kicker">VISTA MENSUAL</span>
-                    <h2>Calendario del mes</h2>
-                </div>
-                <div class="cal-controls">
-                    <button type="button" class="filter-btn" id="cal-prev" aria-label="Mes anterior">←</button>
-                    <h3 id="cal-mes-label">—</h3>
-                    <button type="button" class="filter-btn" id="cal-next" aria-label="Mes siguiente">→</button>
-                </div>
-            </div>
-
-            <div class="cal-leyenda">
-                <span><i class="dot dot-semana"></i> Esta semana (jue–mié)</span>
-                <span><i class="dot dot-preventa"></i> Preventa</span>
-                <span><i class="dot dot-estreno"></i> Estreno</span>
-                <span><i class="dot dot-cartelera"></i> Cartelera</span>
-                <span><i class="dot dot-fuera"></i> Fuera</span>
-            </div>
-
-            <div id="cal-grid" class="cal-grid"></div>
-        </section>
-        <!-- FILTROS -->
-        <div class="estrenos-filters-wrapper">
-            <div class="estrenos-filters" id="estrenos-filters">
-                <button class="filter-btn active" data-filter="todos">Todos</button>
-                <button class="filter-btn" data-filter="estreno">Estrenos</button>
-                <!--<button class="filter-btn" data-filter="reestreno">Reestrenos</button>-->
-                <button class="filter-btn" data-filter="preventa">Preventas</button>
-                <button class="filter-btn" data-filter="cartelera">En cartelera</button>
-                <button class="filter-btn" data-filter="fuera">Fuera de cartelera</button>
-            </div>
-            <!-- Contador de resultados -->
-            <div class="mes-filter">
-                <label for="filtro-mes">Mes:</label>
-                <select id="filtro-mes">
-                    <option value="todos">Todos los meses</option>
-                    <!-- se llenan con JS -->
-                </select>
-            </div>
-            <p id="resultados-count" class="resultados-count" aria-live="polite"></p>
-        </div>
-        <!-- GRID -->
-        <div id="estrenos-container">
-            <div class="estrenos-loading skeleton-grid" id="skeleton-loading">
-                <!-- se llena con JS -->
+            <div class="cal-controls">
+                <button type="button" class="filter-btn" id="cal-prev" aria-label="Mes anterior">←</button>
+                <h3 id="cal-mes-label">—</h3>
+                <button type="button" class="filter-btn" id="cal-next" aria-label="Mes siguiente">→</button>
             </div>
         </div>
-        <!-- PAGINACIÓN -->
-        <nav class="estrenos-pagination" id="estrenos-pagination" aria-label="Paginación de estrenos" hidden></nav>
-    </main>
 
-    <footer class="site-footer">
-        <div class="footer-inner">
-            <div class="footer-links">
-                <a href="aviso-de-privacidad-LBDC.html">Política de Privacidad</a>
-                <a href="https://losbrujosdelcine.com/#catalogo" target="_blank" rel="noopener noreferrer">Mi Tesoro MX</a>
-                <a href="https://www.facebook.com/LosBrujosDelCine" target="_blank" rel="noopener noreferrer">Facebook</a>
-                <a href="https://boxd.it/8uSCV" target="_blank" rel="noopener noreferrer">Letterboxd</a>
-            </div>
-            <div class="footer-copy">
-                <p>© 2026 Los Brujos del Cine</p>
-            </div>
+        <div class="cal-leyenda">
+            <span><i class="dot dot-semana"></i> Esta semana (jue–mié)</span>
+            <span><i class="dot dot-preventa"></i> Preventa</span>
+            <span><i class="dot dot-estreno"></i> Estreno</span>
+            <span><i class="dot dot-cartelera"></i> Cartelera</span>
+            <span><i class="dot dot-fuera"></i> Fuera</span>
         </div>
-    </footer>
 
-    <button type="button" id="btn-top" class="btn-top" aria-label="Volver arriba">↑</button>
+        <div id="cal-grid" class="cal-grid"></div>
+    </section>
 
-    <script src="estrenos.js"></script>
+    <!-- FILTROS -->
+    <div class="estrenos-filters-wrapper">
+        <div class="estrenos-filters" id="estrenos-filters">
+            <button type="button" class="filter-btn active" data-filter="todos">Todos</button>
+            <button type="button" class="filter-btn" data-filter="estreno">Estrenos</button>
+            <button type="button" class="filter-btn" data-filter="preventa">Preventas</button>
+            <button type="button" class="filter-btn" data-filter="cartelera">En cartelera</button>
+            <button type="button" class="filter-btn" data-filter="fuera">Fuera de cartelera</button>
+        </div>
+        <div class="mes-filter">
+            <label for="filtro-mes">Mes:</label>
+            <select id="filtro-mes">
+                <option value="todos">Todos los meses</option>
+            </select>
+        </div>
+    </div>
 
+    <p id="resultados-count" class="resultados-count" aria-live="polite"></p>
+
+    <!-- GRID -->
+    <div id="estrenos-container">
+        <div class="estrenos-loading skeleton-grid" id="skeleton-loading"></div>
+    </div>
+
+    <!-- PAGINACIÓN -->
+    <nav class="estrenos-pagination" id="estrenos-pagination" aria-label="Paginación de estrenos" hidden></nav>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-links">
+            <a href="aviso-de-privacidad-LBDC.html">Política de Privacidad</a>
+            <a href="https://losbrujosdelcine.com/#catalogo" target="_blank" rel="noopener noreferrer">Mi Tesoro MX</a>
+            <a href="https://www.facebook.com/LosBrujosDelCine" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://boxd.it/8uSCV" target="_blank" rel="noopener noreferrer">Letterboxd</a>
+        </div>
+        <div class="footer-copy">
+            <p>© 2026 Los Brujos del Cine</p>
+        </div>
+    </div>
+</footer>
+
+<button type="button" id="back-to-top" class="back-to-top" aria-label="Volver arriba" title="Volver arriba">
+    <span class="back-to-top-icon" aria-hidden="true">🧙‍♀️</span>
+</button>
+
+<script src="estrenos.js"></script>
+<script src="scriptResena.js"></script>
 </body>
 </html>

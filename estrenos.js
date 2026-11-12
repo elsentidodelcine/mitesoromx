@@ -394,12 +394,11 @@ function renderEstrenos() {
    if (paginaActual > totalPaginas) paginaActual = totalPaginas;
    if (paginaActual < 1) paginaActual = 1;
 
-   // Contador de resultados
-   /*if (countEl) {
-     countEl.textContent = total === 0
-       ? 'No hay resultados'
-       : `${total} elemento{total !== 1 ? 's' : ''} encontrado${total !== 1 ? 's' : ''}`;
-   }*/
+  if (countEl) {
+    countEl.textContent = total === 0
+      ? 'No hay resultados'
+      : `${total} resultado${total !== 1 ? 's' : ''}`;
+  }
 
    if (total === 0) {
      container.innerHTML = `
@@ -486,11 +485,13 @@ function crearCard(item) {
   const tipo = getTipoEfectivo(item);
   const d = diasRestantes(item.fecha);
 
-  const badgeClass = tipo === 'reestreno' ? 'reestreno' :
-                     tipo === 'preventa'  ? 'preventa'  : '';
+  const badgeClass =
+    tipo === 'reestreno' ? 'reestreno' :
+    tipo === 'preventa'  ? 'preventa'  : '';
 
-  const badgeTexto = tipo === 'reestreno' ? 'Reestreno' :
-                     tipo === 'preventa'  ? 'Preventa'  : 'Estreno';
+  const badgeTexto =
+    tipo === 'reestreno' ? 'Reestreno' :
+    tipo === 'preventa'  ? 'Preventa'  : 'Estreno';
 
   const estado = etiquetaCartelera(item);
   const estadoHTML = estado
@@ -501,7 +502,6 @@ function crearCard(item) {
     .map(c => `<span class="cine-tag">${escapeHTML(c)}</span>`)
     .join('');
 
-  // Clases para resaltar Hoy / Esta semana
   let extraClass = '';
   let countdownClass = '';
   if (d === 0) {
@@ -512,28 +512,43 @@ function crearCard(item) {
     countdownClass = 'esta-semana';
   }
 
-   const idAttr = item.id ? 'id="estreno-' + escapeHTML(item.id) + '"' : '';
+  const idAttr = item.id ? `id="estreno-${escapeHTML(item.id)}"` : '';
 
-   return `
-     <article class="estreno-card ${extraClass}" ${idAttr} data-estreno-id="${escapeHTML(item.id || '')}">
+  // Links opcionales (si existen en el JSON)
+  const links = [];
+  if (item.link || item.url || item.boletos) {
+    const href = item.link || item.url || item.boletos;
+    links.push(`<a class="btn-boletos" href="${escapeHTML(href)}" target="_blank" rel="noopener noreferrer">Comprar boletos</a>`);
+  }
+  if (item.link2) {
+    links.push(`<a class="btn-boletos secondary" href="${escapeHTML(item.link2)}" target="_blank" rel="noopener noreferrer">Otra cadena</a>`);
+  }
+  const linksHTML = links.length
+    ? `<div class="estreno-links">${links.join('')}</div>`
+    : '';
+
+  return `
+    <article class="estreno-card ${extraClass}" ${idAttr} data-estreno-id="${escapeHTML(item.id || '')}">
       <div class="estreno-poster">
         <img
-          src="${escapeHTML(item.poster)}"
-          alt="Póster de ${escapeHTML(item.titulo)}"
+          src="${escapeHTML(item.poster || '')}"
+          alt="Póster de ${escapeHTML(item.titulo || '')}"
           loading="lazy"
           decoding="async"
+          width="200"
+          height="300"
           onerror="this.src='imgs/posters/placeholder.jpg'; this.onerror=null;"
         >
         <span class="estreno-badge ${badgeClass}">${badgeTexto}</span>
         ${estadoHTML}
       </div>
-
       <div class="estreno-body">
-        <div class="estreno-fecha">${escapeHTML(item.fechaTexto || item.fecha)}</div>
-        <h2 class="estreno-titulo">${escapeHTML(item.titulo)}</h2>
+        <div class="estreno-fecha">${escapeHTML(item.fechaTexto || item.fecha || '')}</div>
+        <h2 class="estreno-titulo">${escapeHTML(item.titulo || 'Sin título')}</h2>
         ${item.nota ? `<p class="estreno-nota">${escapeHTML(item.nota)}</p>` : ''}
         <div class="estreno-cines">${cinesHTML}</div>
         <span class="estreno-countdown ${countdownClass}">${textoContador(item.fecha)}</span>
+        ${linksHTML}
       </div>
     </article>
   `;
@@ -551,35 +566,6 @@ function crearCard(item) {
   }
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const toggle = document.getElementById('nav-toggle');
-  const nav = document.getElementById('main-nav');
-  if (!toggle || !nav) return;
-
-  toggle.addEventListener('click', () => {
-    const open = nav.classList.toggle('is-open');
-    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
-  });
-
-  // Cerrar al tocar un link
-  nav.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      nav.classList.remove('is-open');
-      toggle.setAttribute('aria-expanded', 'false');
-      toggle.setAttribute('aria-label', 'Abrir menú');
-    });
-  });
-
-  // Cerrar al hacer click fuera
-  document.addEventListener('click', (e) => {
-    if (!nav.classList.contains('is-open')) return;
-    if (nav.contains(e.target) || toggle.contains(e.target)) return;
-    nav.classList.remove('is-open');
-    toggle.setAttribute('aria-expanded', 'false');
-    toggle.setAttribute('aria-label', 'Abrir menú');
-  });
-});
 
 function diasRestantes(fechaStr) {
   // fechaStr: "2026-08-29"
@@ -664,7 +650,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ===== Botón volver arriba =====
-const btnTop = document.getElementById('btn-top');
+const btnTop = document.getElementById('back-to-top') || document.getElementById('btn-top');
 
 function toggleBtnTop() {
   if (!btnTop) return;
@@ -676,7 +662,7 @@ function toggleBtnTop() {
 }
 
 window.addEventListener('scroll', toggleBtnTop, { passive: true });
-toggleBtnTop(); // por si la página ya está scrolleada
+toggleBtnTop();
 
 if (btnTop) {
   btnTop.addEventListener('click', () => {
