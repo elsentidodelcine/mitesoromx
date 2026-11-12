@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     container.innerHTML = `
       <div class="error-state">
         No se especificó ninguna reseña.<br>
-        <a href="index.html">Volver al inicio</a>
+        <a href="blog.html">Volver al inicio</a>
       </div>`;
     return;
   }
@@ -17,31 +17,33 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (!response.ok) throw new Error('No se pudo cargar el JSON');
 
     let resenas = await response.json();
+    if (!Array.isArray(resenas)) resenas = [];
 
-    // Ordenar por fecha (más reciente primero)
-    resenas = resenas.sort((a, b) => {
+    resenas = resenas.slice().sort((a, b) => {
       const fechaA = a.fecha ? new Date(a.fecha) : new Date(0);
       const fechaB = b.fecha ? new Date(b.fecha) : new Date(0);
       return fechaB - fechaA;
     });
 
-    const reseña = resenas.find(r => r.id === id);
+    const reseña = resenas.find((r) => r.id === id);
 
     if (!reseña) {
       container.innerHTML = `
         <div class="error-state">
           Reseña no encontrada.<br>
-          <a href="index.html">Volver al inicio</a>
+          <a href="blog.html">Volver al inicio</a>
         </div>`;
       return;
     }
 
-    // === Metadatos ===
     document.title = `${reseña.titulo} (${reseña.anio}) – Reseña | Los Brujos del Cine`;
 
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', reseña.resumen || `Reseña de ${reseña.titulo}`);
+      metaDescription.setAttribute(
+        'content',
+        reseña.resumen || `Reseña de ${reseña.titulo}`
+      );
     }
 
     setMeta('og:title', `${reseña.titulo} (${reseña.anio}) – Los Brujos del Cine`);
@@ -49,126 +51,139 @@ document.addEventListener('DOMContentLoaded', async () => {
     setMeta('og:url', window.location.href);
     setMeta('og:image', reseña.poster || '');
 
-    // === Anterior / Siguiente ===
-    const index = resenas.findIndex(r => r.id === id);
+    const index = resenas.findIndex((r) => r.id === id);
     const anterior = index > 0 ? resenas[index - 1] : null;
     const siguiente = index < resenas.length - 1 ? resenas[index + 1] : null;
 
-    // === Grimorio ===
     const grimorio = obtenerGrimorio(reseña.puntaje);
     const estrellasHTML = generarEstrellasHTML(reseña.puntaje);
 
     const paragrafos = (reseña.contenido || [])
-      .map(p => `<p>${escapeHTML(p)}</p>`)
+      .map((p) => `<p>${escapeHTML(p)}</p>`)
       .join('');
 
     const plataformas = (reseña.plataformas || [])
-      .map(p => `<span class="platform-tag">${escapeHTML(p)}</span>`)
+      .map((p) => `<span class="platform-tag">${escapeHTML(p)}</span>`)
       .join('');
-
-      const imdbHTML = reseña.imdb
-        ? `<a class="imdb-box" href="${escapeHTML(reseña.imdb.url || reseña.imdb)}" target="_blank" rel="noopener noreferrer">
-             IMDb ${reseña.imdb.rating ? `<strong>${escapeHTML(String(reseña.imdb.rating))}</strong>` : ''}
-             <span aria-hidden="true">↗</span>
-           </a>`
-        : '';
 
     const generos = (reseña.generos || []).join(' · ');
     const shareUrl = window.location.href;
     const shareText = `Reseña: ${reseña.titulo} (${reseña.anio}) — ${reseña.puntaje}/5\n${shareUrl}`;
     const waLink = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
 
-    // --- NUEVO ---
-    function tiempoLectura(contenido) {
-      const texto = Array.isArray(contenido) ? contenido.join(' ') : String(contenido || '');
-      const palabras = texto.trim().split(/\s+/).filter(Boolean).length;
-      const min = Math.max(1, Math.round(palabras / 200));
-      return `${min} min de lectura`;
-    }
-
     const lectura = tiempoLectura(reseña.contenido);
 
     const fechaTxt = reseña.fecha
       ? new Date(reseña.fecha + 'T12:00:00').toLocaleDateString('es-MX', {
-          year: 'numeric', month: 'long', day: 'numeric'
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
         })
       : '';
 
     const relacionadas = resenas
-      .filter(r => r.id !== reseña.id)
-      .filter(r => {
+      .filter((r) => r.id !== reseña.id)
+      .filter((r) => {
         const g1 = new Set(reseña.generos || []);
-        const mismoGenero = (r.generos || []).some(g => g1.has(g));
-        const notaParecida = Math.abs(Number(r.puntaje) - Number(reseña.puntaje)) <= 0.5;
+        const mismoGenero = (r.generos || []).some((g) => g1.has(g));
+        const notaParecida =
+          Math.abs(Number(r.puntaje) - Number(reseña.puntaje)) <= 0.5;
         return mismoGenero || notaParecida;
       })
       .slice(0, 3);
-    // --- fin nuevo ---
 
+    const imdbBtn = reseña.imdb
+      ? `<a class="btn-imdb" href="${escapeHTML(
+          reseña.imdb.url || reseña.imdb
+        )}" target="_blank" rel="noopener noreferrer">
+          IMDb ${
+            reseña.imdb.rating
+              ? `<strong>${escapeHTML(String(reseña.imdb.rating))}</strong>`
+              : ''
+          }
+          <span aria-hidden="true">↗</span>
+        </a>`
+      : '';
+
+    const metaBits = [
+      `<span>${escapeHTML(String(reseña.anio))}</span>`,
+      generos
+        ? `<span class="dot" aria-hidden="true"></span><span>${escapeHTML(
+            generos
+          )}</span>`
+        : '',
+      reseña.duracion
+        ? `<span class="dot" aria-hidden="true"></span><span>${escapeHTML(
+            String(reseña.duracion)
+          )}</span>`
+        : '',
+      fechaTxt
+        ? `<span class="dot" aria-hidden="true"></span><span>${escapeHTML(
+            fechaTxt
+          )}</span>`
+        : '',
+      `<span class="dot" aria-hidden="true"></span><span>${escapeHTML(
+        lectura
+      )}</span>`,
+    ]
+      .filter(Boolean)
+      .join('');
 
     container.innerHTML = `
       <section class="review-hero">
+        <div class="review-hero-glow review-hero-glow-one" aria-hidden="true"></div>
+        <div class="review-hero-glow review-hero-glow-two" aria-hidden="true"></div>
         <div class="review-hero-inner">
-          <a href="blog.html#resenas" class="back-link">
-            ← Volver a reseñas
-          </a>
+          <a href="blog.html#resenas" class="back-link">← Volver a reseñas</a>
 
           <div class="review-header">
             <div class="review-poster">
               <img
-                src="${escapeHTML(reseña.poster)}"
+                src="${escapeHTML(reseña.poster || '')}"
                 alt="Póster de ${escapeHTML(reseña.titulo)}"
+                width="240"
+                height="360"
                 loading="eager"
+                decoding="async"
                 onerror="this.style.display='none'; this.parentElement.classList.add('poster-placeholder'); this.parentElement.innerHTML='<span>Sin póster</span>';"
               >
             </div>
 
             <div class="review-info">
               <h1>${escapeHTML(reseña.titulo)}</h1>
+              <div class="review-meta">${metaBits}</div>
 
-             <div class="review-meta">
-               <span>${escapeHTML(String(reseña.anio))}</span>
-               ${generos ? `<span class="dot" aria-hidden="true"></span><span>${escapeHTML(generos)}</span>` : ''}
-               ${reseña.duracion ? `<span class="dot" aria-hidden="true"></span><span>${escapeHTML(reseña.duracion)}</span>` : ''}
-               ${fechaTxt ? `<span class="dot" aria-hidden="true"></span><span>${escapeHTML(fechaTxt)}</span>` : ''}
-               <span class="dot" aria-hidden="true"></span>
-               <span>${escapeHTML(lectura)}</span>
-             </div>
-
-              <!-- GRIMORIO DE CALIFICACIONES -->
-              <div class="grimorio-rating" aria-label="Calificación: ${reseña.puntaje} de 5 – ${grimorio.titulo}">
+              <div class="grimorio-rating" aria-label="Calificación: ${escapeHTML(
+                String(reseña.puntaje)
+              )} de 5 – ${escapeHTML(grimorio.titulo)}">
                 <div class="grimorio-top">
                   <div class="grimorio-score">
                     ${escapeHTML(String(reseña.puntaje))}<small> / 5</small>
                   </div>
-                  <div class="grimorio-stars" aria-hidden="true">
-                    ${estrellasHTML}
-                  </div>
+                  <div class="grimorio-stars" aria-hidden="true">${estrellasHTML}</div>
                 </div>
                 <div class="grimorio-title">${escapeHTML(grimorio.titulo)}</div>
                 <p class="grimorio-desc">${escapeHTML(grimorio.descripcion)}</p>
               </div>
 
-              ${plataformas ? `<div class="review-platforms">${plataformas}</div>` : ''}
+              ${
+                plataformas
+                  ? `<div class="review-platforms">${plataformas}</div>`
+                  : ''
+              }
 
               <div class="review-actions">
-                ${reseña.imdb ? `
-                  <a class="btn-imdb" href="${escapeHTML(reseña.imdb.url || reseña.imdb)}" target="_blank" rel="noopener noreferrer">
-                    IMDb ${reseña.imdb.rating ? `<strong>${escapeHTML(String(reseña.imdb.rating))}</strong>` : ''}
-                    <span aria-hidden="true">↗</span>
-                  </a>
-                ` : ''}
-
-                <a href="${escapeHTML(reseña.letterboxd || 'https://boxd.it/8uSCV')}"
-                   target="_blank" rel="noopener noreferrer" class="btn-letterboxd">
+                ${imdbBtn}
+                <a href="${escapeHTML(
+                  reseña.letterboxd || 'https://boxd.it/8uSCV'
+                )}" target="_blank" rel="noopener noreferrer" class="btn-letterboxd">
                   Ver en Letterboxd <span aria-hidden="true">↗</span>
                 </a>
-
-                <a href="${escapeHTML(waLink)}"
-                   target="_blank" rel="noopener noreferrer" class="btn-share-wa">
+                <a href="${escapeHTML(
+                  waLink
+                )}" target="_blank" rel="noopener noreferrer" class="btn-share-wa">
                   Compartir en WhatsApp
                 </a>
-
                 <button type="button" class="btn-copy-link" id="btn-copy-link">
                   Copiar enlace
                 </button>
@@ -180,13 +195,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 
       <article class="review-body">
         <p class="lead">${escapeHTML(reseña.lead || reseña.resumen || '')}</p>
-
         ${paragrafos}
-
-        ${reseña.cita ? `
-          <blockquote>${escapeHTML(reseña.cita)}</blockquote>
-        ` : ''}
-
+        ${
+          reseña.cita
+            ? `<blockquote>${escapeHTML(reseña.cita)}</blockquote>`
+            : ''
+        }
         <div class="verdict">
           <div class="verdict-header">
             <span aria-hidden="true">★</span>
@@ -205,36 +219,49 @@ document.addEventListener('DOMContentLoaded', async () => {
         </p>
       </aside>
 
-      ${relacionadas.length ? `
+      ${
+        relacionadas.length
+          ? `
       <section class="related-reviews">
         <h3>También en el Grimorio</h3>
         <div class="related-grid">
-          ${relacionadas.map(r => `
-            <a class="related-card" href="review.html?id=${encodeURIComponent(r.id)}">
+          ${relacionadas
+            .map(
+              (r) => `
+            <a class="related-card" href="review.html?id=${encodeURIComponent(
+              r.id
+            )}">
               <img src="${escapeHTML(r.poster || '')}" alt="" loading="lazy"
                    onerror="this.style.visibility='hidden'">
               <span class="related-title">${escapeHTML(r.titulo)}</span>
               <small>${escapeHTML(String(r.puntaje))}/5</small>
-            </a>
-          `).join('')}
+            </a>`
+            )
+            .join('')}
         </div>
-      </section>
-      ` : ''}
+      </section>`
+          : ''
+      }
 
       <nav class="review-nav" aria-label="Otras reseñas">
-        ${anterior ? `
+        ${
+          anterior
+            ? `
           <a href="review.html?id=${encodeURIComponent(anterior.id)}">
             <span class="label">← Anterior</span>
             <span class="title">${escapeHTML(anterior.titulo)}</span>
-          </a>
-        ` : '<div></div>'}
-
-        ${siguiente ? `
+          </a>`
+            : '<div></div>'
+        }
+        ${
+          siguiente
+            ? `
           <a href="review.html?id=${encodeURIComponent(siguiente.id)}">
             <span class="label">Siguiente →</span>
             <span class="title">${escapeHTML(siguiente.titulo)}</span>
-          </a>
-        ` : ''}
+          </a>`
+            : ''
+        }
       </nav>
     `;
 
@@ -244,7 +271,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         try {
           await navigator.clipboard.writeText(window.location.href);
           copyBtn.textContent = '¡Copiado!';
-          setTimeout(() => copyBtn.textContent = 'Copiar enlace', 2000);
+          setTimeout(() => {
+            copyBtn.textContent = 'Copiar enlace';
+          }, 2000);
         } catch (e) {
           copyBtn.textContent = 'Error al copiar';
         }
@@ -255,12 +284,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     container.innerHTML = `
       <div class="error-state">
         Error al cargar la reseña.<br>
-        <a href="index.html">Volver al inicio</a>
+        <a href="blog.html">Volver al inicio</a>
       </div>`;
   }
 });
-
-/* ========== HELPERS ========== */
 
 function setMeta(property, content) {
   let el = document.querySelector(`meta[property="${property}"]`);
@@ -282,97 +309,111 @@ function escapeHTML(str) {
     .replace(/'/g, '&#39;');
 }
 
-/* ========== GRIMORIO DE CALIFICACIONES ========== */
+function tiempoLectura(contenido) {
+  const texto = Array.isArray(contenido)
+    ? contenido.join(' ')
+    : String(contenido || '');
+  const palabras = texto.trim().split(/\s+/).filter(Boolean).length;
+  const min = Math.max(1, Math.round(palabras / 200));
+  return `${min} min de lectura`;
+}
+
 function obtenerGrimorio(puntaje) {
   const valor = Number(puntaje) || 0;
-
-  // Normalizamos a pasos de 0.5
   const key = Math.round(valor * 2) / 2;
 
   const grimorio = {
     0.5: {
-      titulo: "HECHIZO FALLIDO",
-      descripcion: "Se ve por morbo, no por gusto. Al final queda la culpa… y el coraje."
+      titulo: 'HECHIZO FALLIDO',
+      descripcion:
+        'Se ve por morbo, no por gusto. Al final queda la culpa… y el coraje.',
     },
     1.0: {
-      titulo: "MAL AUGURIO",
-      descripcion: "Nada funciona. Cada minuto duele y terminarla es más mérito del espectador que de la película."
+      titulo: 'MAL AUGURIO',
+      descripcion:
+        'Nada funciona. Cada minuto duele y terminarla es más mérito del espectador que de la película.',
     },
     1.5: {
-      titulo: "BRUJERÍA OSCURA",
-      descripcion: "Un desastre anunciado. No entretiene, no sorprende y solo deja arrepentimiento."
+      titulo: 'BRUJERÍA OSCURA',
+      descripcion:
+        'Un desastre anunciado. No entretiene, no sorprende y solo deja arrepentimiento.',
     },
     2.0: {
-      titulo: "CONJURO MAL EJECUTADO",
-      descripcion: "Tiene ideas, pero todo sale mal. Aburre, se siente torpe o se desinfla rápido."
+      titulo: 'CONJURO MAL EJECUTADO',
+      descripcion:
+        'Tiene ideas, pero todo sale mal. Aburre, se siente torpe o se desinfla rápido.',
     },
     2.5: {
-      titulo: "NEUTRAL, PERO OLVIDABLE",
-      descripcion: "Cumple lo básico y ya. No molesta, pero tampoco se queda contigo."
+      titulo: 'NEUTRAL, PERO OLVIDABLE',
+      descripcion:
+        'Cumple lo básico y ya. No molesta, pero tampoco se queda contigo.',
     },
     3.0: {
-      titulo: "PALOMERA RITUAL",
-      descripcion: "Funciona mientras dura. Ideal para apagar el cerebro y dejarla pasar."
+      titulo: 'PALOMERA RITUAL',
+      descripcion:
+        'Funciona mientras dura. Ideal para apagar el cerebro y dejarla pasar.',
     },
     3.5: {
-      titulo: "BUEN EMBRUJO",
-      descripcion: "Entretenida y con momentos sólidos. Le falta fuerza para trascender, pero se disfruta."
+      titulo: 'BUEN EMBRUJO',
+      descripcion:
+        'Entretenida y con momentos sólidos. Le falta fuerza para trascender, pero se disfruta.',
     },
     4.0: {
-      titulo: "HECHIZO BIEN LOGRADO",
-      descripcion: "Bien hecha, efectiva y cumplidora. Sales satisfecho y el boleto lo vale."
+      titulo: 'HECHIZO BIEN LOGRADO',
+      descripcion:
+        'Bien hecha, efectiva y cumplidora. Sales satisfecho y el boleto lo vale.',
     },
     4.5: {
-      titulo: "MAGIA MAYOR",
-      descripcion: "Destaca, conecta y se queda en la memoria. Muy fácil de recomendar."
+      titulo: 'MAGIA MAYOR',
+      descripcion:
+        'Destaca, conecta y se queda en la memoria. Muy fácil de recomendar.',
     },
     5.0: {
-      titulo: "CINE LEGENDARIO",
-      descripcion: "Pura magia. De esas que justifican amar el cine y querer volver a verla."
-    }
+      titulo: 'CINE LEGENDARIO',
+      descripcion:
+        'Pura magia. De esas que justifican amar el cine y querer volver a verla.',
+    },
   };
 
-  return grimorio[key] || {
-    titulo: "SIN CLASIFICAR",
-    descripcion: "Esta película aún no tiene un hechizo asignado en el grimorio."
-  };
+  return (
+    grimorio[key] || {
+      titulo: 'SIN CLASIFICAR',
+      descripcion:
+        'Esta película aún no tiene un hechizo asignado en el grimorio.',
+    }
+  );
 }
 
-/* Estrellas con media estrella real */
 function generarEstrellasHTML(puntaje) {
   const valor = Number(puntaje) || 0;
   const llenas = Math.floor(valor);
-  const tieneMedia = (valor - llenas) >= 0.25 && (valor - llenas) < 0.75;
-  const redondeaArriba = (valor - llenas) >= 0.75;
-
+  const decimal = valor - llenas;
   let html = '';
 
   for (let i = 1; i <= 5; i++) {
-    if (i <= llenas || (i === llenas + 1 && redondeaArriba)) {
-      html += '<span>★</span>';
-    } else if (i === llenas + 1 && tieneMedia) {
+    if (i <= llenas) html += '<span>★</span>';
+    else if (i === llenas + 1 && decimal >= 0.25 && decimal < 0.75)
       html += '<span class="half">★</span>';
-    } else {
-      html += '<span class="empty">★</span>';
-    }
+    else if (i === llenas + 1 && decimal >= 0.75) html += '<span>★</span>';
+    else html += '<span class="empty">★</span>';
   }
-
   return html;
 }
 
+/* ===== Nav ===== */
 document.addEventListener('DOMContentLoaded', () => {
   const toggle = document.getElementById('nav-toggle');
   const nav = document.getElementById('main-nav');
   if (!toggle || !nav) return;
 
-  toggle.addEventListener('click', () => {
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
     const open = nav.classList.toggle('is-open');
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
   });
 
-  // Cerrar al tocar un link
-  nav.querySelectorAll('a').forEach(a => {
+  nav.querySelectorAll('a').forEach((a) => {
     a.addEventListener('click', () => {
       nav.classList.remove('is-open');
       toggle.setAttribute('aria-expanded', 'false');
@@ -380,7 +421,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Cerrar al hacer click fuera
   document.addEventListener('click', (e) => {
     if (!nav.classList.contains('is-open')) return;
     if (nav.contains(e.target) || toggle.contains(e.target)) return;
@@ -390,19 +430,65 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// ===== Toggle tema =====
-document.addEventListener('DOMContentLoaded', () => {
-  const btn = document.getElementById('theme-toggle');
-  if (!btn) return;
+/* ===== Theme (único) ===== */
+(function () {
+  const KEY = 'lbdc-theme';
+  const root = document.documentElement;
 
-  btn.addEventListener('click', () => {
-    const html = document.documentElement;
-    const actual = html.getAttribute('data-theme') || 'dark';
-    const nuevo = actual === 'dark' ? 'light' : 'dark';
-
-    html.setAttribute('data-theme', nuevo);
+  function apply(theme) {
+    root.setAttribute('data-theme', theme);
     try {
-      localStorage.setItem('lbdc-theme', nuevo);
-    } catch (e) {}
-  });
+      localStorage.setItem(KEY, theme);
+    } catch (_) {}
+    const btn = document.getElementById('theme-toggle');
+    if (btn) {
+      btn.setAttribute(
+        'aria-label',
+        theme === 'light' ? 'Cambiar a modo oscuro' : 'Cambiar a modo claro'
+      );
+    }
+  }
+
+  try {
+    const saved = localStorage.getItem(KEY);
+    if (saved === 'light' || saved === 'dark') apply(saved);
+    else if (!root.getAttribute('data-theme')) {
+      apply(
+        window.matchMedia('(prefers-color-scheme: light)').matches
+          ? 'light'
+          : 'dark'
+      );
+    }
+  } catch (_) {}
+
+  function bind() {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn || btn.dataset.themeBound === '1') return;
+    btn.dataset.themeBound = '1';
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const actual = root.getAttribute('data-theme') || 'dark';
+      apply(actual === 'light' ? 'dark' : 'light');
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bind);
+  } else {
+    bind();
+  }
+})();
+
+/* ===== Back to top ===== */
+document.addEventListener('DOMContentLoaded', () => {
+  const btn =
+    document.getElementById('back-to-top') || document.getElementById('btn-top');
+  if (!btn) return;
+  const sync = () => btn.classList.toggle('is-visible', window.scrollY > 400);
+  window.addEventListener('scroll', sync, { passive: true });
+  sync();
+  btn.addEventListener('click', () =>
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  );
 });

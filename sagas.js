@@ -1,8 +1,5 @@
 /**
- * resena: URL a tu reseña en el blog.
- * - Si ya tienes anclas: "blog.html#iron-man"
- * - O página suelta: "resenas/iron-man.html"
- * - null = aún sin reseña (card no clickeable a reseña)
+ * resena: URL a tu reseña. null o "" = sin reseña aún
  */
 const SAGAS = {
   ucm: {
@@ -12,6 +9,7 @@ const SAGAS = {
     descripcion:
       'Películas del UCM en el orden en que ocurren en la historia (no el de estreno), hasta el cierre de la Saga del Infinito.',
     items: [
+      /* ... deja aquí tus mismos items del UCM ... */
       {
         id: 'cap-primer-vengador',
         titulo: 'Capitán América: El primer vengador',
@@ -50,7 +48,7 @@ const SAGAS = {
         fase: 'Fase 1',
         nota: 'Paralela al arranque de la era Stark; encaja cerca de Iron Man 2 / Thor.',
         poster: 'imgs/sagas/ucm/hulk.jpeg',
-        resena: 'review.html?id='
+        resena: ''
       },
       {
         id: 'iron-man-2',
@@ -70,7 +68,7 @@ const SAGAS = {
         fase: 'Fase 1',
         nota: 'Cierra la Semana de Furia antes de Los Vengadores.',
         poster: 'imgs/sagas/ucm/thor.jpeg',
-        resena: 'review.html?id='
+        resena: ''
       },
       {
         id: 'vengadores',
@@ -180,7 +178,7 @@ const SAGAS = {
         fase: 'Fase 3',
         nota: 'Poco después de Civil War.',
         poster: 'imgs/sagas/ucm/spiderman.jpeg',
-        resena: 'review.html?id='
+        resena: ''
       },
       {
         id: 'black-panther',
@@ -233,6 +231,186 @@ const SAGAS = {
         resena: 'review.html?id=avengers-endgame'
       }
     ]
+  },
+
+  rocky: {
+    id: 'rocky',
+    nombre: 'Rocky y Creed',
+    subtitulo: 'Orden de estreno · de Filadelfia a Adonis',
+    descripcion:
+      'La historia de Rocky Balboa y el relevo generacional con Adonis Creed. Orden de estreno (coincide con el de la trama).',
+    items: [
+      {
+        id: 'rocky',
+        titulo: 'Rocky',
+        anio: 1976,
+        cuando: '1975–1976',
+        fase: 'Rocky',
+        nota: 'El underdog de Filadelfia frente a Apollo Creed.',
+        poster: 'imgs/sagas/rocky/rocky.jpg',
+        resena: ''
+      },
+      {
+        id: 'rocky-2',
+        titulo: 'Rocky II',
+        anio: 1979,
+        cuando: '1976–1979',
+        fase: 'Rocky',
+        nota: 'La revancha. Familia, presión y el título.',
+        poster: 'imgs/sagas/rocky/rocky-2.jpg',
+        resena: ''
+      },
+      {
+        id: 'rocky-3',
+        titulo: 'Rocky III',
+        anio: 1982,
+        cuando: '1981–1982',
+        fase: 'Rocky',
+        nota: 'Clubber Lang y el regreso de la “mirada del tigre”.',
+        poster: 'imgs/sagas/rocky/rocky-3.jpg',
+        resena: ''
+      },
+      {
+        id: 'rocky-4',
+        titulo: 'Rocky IV',
+        anio: 1985,
+        cuando: '1985',
+        fase: 'Rocky',
+        nota: 'Ivan Drago, Guerra Fría y el round en Rusia.',
+        poster: 'imgs/sagas/rocky/rocky-4.jpg',
+        resena: ''
+      },
+      {
+        id: 'rocky-5',
+        titulo: 'Rocky V',
+        anio: 1990,
+        cuando: '1990',
+        fase: 'Rocky',
+        nota: 'Regreso a los barrios; mentor de un nuevo boxeador.',
+        poster: 'imgs/sagas/rocky/rocky-5.jpg',
+        resena: ''
+      },
+      {
+        id: 'rocky-balboa',
+        titulo: 'Rocky Balboa',
+        anio: 2006,
+        cuando: '2006',
+        fase: 'Rocky',
+        nota: 'El regreso del campeón años después. Cierre emocional de la saga clásica.',
+        poster: 'imgs/sagas/rocky/rocky-balboa.jpg',
+        resena: ''
+      },
+      {
+        id: 'creed',
+        titulo: 'Creed',
+        anio: 2015,
+        cuando: '2015',
+        fase: 'Creed',
+        nota: 'Adonis, hijo de Apollo, y Rocky como entrenador.',
+        poster: 'imgs/sagas/rocky/creed.jpg',
+        resena: ''
+      },
+      {
+        id: 'creed-2',
+        titulo: 'Creed II',
+        anio: 2018,
+        cuando: '2018',
+        fase: 'Creed',
+        nota: 'El fantasma de Drago vuelve a la familia Creed.',
+        poster: 'imgs/sagas/rocky/creed-2.jpg',
+        resena: ''
+      },
+      {
+        id: 'creed-3',
+        titulo: 'Creed III',
+        anio: 2023,
+        cuando: '2023',
+        fase: 'Creed',
+        nota: 'Adonis frente a su pasado; Michael B. Jordan dirige.',
+        poster: 'imgs/sagas/rocky/creed-3.jpg',
+        resena: ''
+      },
+      {
+        id: 'yo-soy-rocky',
+        titulo: 'Yo Soy Rocky',
+        anio: 2026,
+        cuando: '2026',
+        fase: 'Biográfica',
+        nota: 'Biografía de Rocky.',
+        poster: 'imgs/sagas/rocky/play-rocky.jpg',
+        resena: ''
+      }
+    ]
+  },
+
+  'juegos-del-hambre': {
+    id: 'juegos-del-hambre',
+    nombre: 'Los Juegos del Hambre',
+    subtitulo: 'Orden cronológico · precuela + trilogía',
+    descripcion:
+      'Primero la precuela (origen de Snow) y luego la historia de Katniss en el orden en que se cuenta en pantalla.',
+    items: [
+      {
+        id: 'balada-pajaros-serpientes',
+        titulo: 'Los Juegos del Hambre: Balada de pájaros cantores y serpientes',
+        anio: 2023,
+        cuando: '64 años antes de Katniss',
+        fase: 'Precuela',
+        nota: 'Origen de Coriolanus Snow. Ver antes si quieres cronología total.',
+        poster: 'imgs/sagas/juegos-del-hambre/balada.jpg',
+        resena: ''
+      },
+      {
+        id: 'amanecer-en-la-cosecha',
+        titulo: 'Los Juegos del Hambre: Amanecer en la Cosecha',
+        anio: 2026,
+        cuando: '40 años después de Balada y 24 años antes de Katniss',
+        fase: 'Precuela',
+        nota: 'Segundo Vasallaje de los 25. Ver antes si quieres cronología total.',
+        poster: 'imgs/sagas/juegos-del-hambre/cosecha.jpg',
+        resena: ''
+      },
+      {
+        id: 'juegos-del-hambre',
+        titulo: 'Los Juegos del Hambre',
+        anio: 2012,
+        cuando: '74.os Juegos',
+        fase: 'Trilogía',
+        nota: 'Katniss se ofrece como tributo. El inicio del arco principal.',
+        poster: 'imgs/sagas/juegos-del-hambre/hg1.jpg',
+        resena: ''
+      },
+      {
+        id: 'en-llamas',
+        titulo: 'Los Juegos del Hambre: En llamas',
+        anio: 2013,
+        cuando: '75.os Juegos (Vasallaje)',
+        fase: 'Trilogía',
+        nota: 'El Vasallaje de los Veinticinco y la chispa de la rebelión.',
+        poster: 'imgs/sagas/juegos-del-hambre/en-llamas.jpg',
+        resena: ''
+      },
+      {
+        id: 'sinsajo-1',
+        titulo: 'Los Juegos del Hambre: Sinsajo – Parte 1',
+        anio: 2014,
+        cuando: 'Post-Juegos / Distrito 13',
+        fase: 'Trilogía',
+        nota: 'Propaganda, Distrito 13 y la figura del Sinsajo.',
+        poster: 'imgs/sagas/juegos-del-hambre/sinsajo-1.jpg',
+        resena: ''
+      },
+      {
+        id: 'sinsajo-2',
+        titulo: 'Los Juegos del Hambre: Sinsajo – Parte 2',
+        anio: 2015,
+        cuando: 'Asalto al Capitolio',
+        fase: 'Trilogía',
+        nota: 'Cierre de la guerra y el destino de Panem.',
+        poster: 'imgs/sagas/juegos-del-hambre/sinsajo-2.jpg',
+        resena: ''
+      }
+    ]
   }
 };
 
@@ -253,7 +431,7 @@ function renderSaga(sagaId) {
   meta.innerHTML =
     '<strong>' +
     escapeHTML(saga.nombre) +
-    '</strong><br>' +
+    '</strong>' +
     escapeHTML(saga.descripcion) +
     '<br><span style="opacity:.85">' +
     saga.items.length +
@@ -262,44 +440,58 @@ function renderSaga(sagaId) {
     '</span>';
 
   timeline.innerHTML = saga.items
-       .map(function (item, i) {
-         var n = i + 1;
-         var tieneResena = item.resena && String(item.resena).trim();
-         var tag = tieneResena ? 'a' : 'div';
-         var href = tieneResena ? ' href="' + escapeHTML(item.resena) + '"' : '';
-         var disabled = tieneResena ? '' : ' is-disabled';
-         var cta = tieneResena
-           ? '<span class="saga-cta">Ver reseña →</span>'
-           : '<span class="saga-cta">Reseña pendiente</span>';
+    .map(function (item, i) {
+      var n = i + 1;
+      var tieneResena = item.resena && String(item.resena).trim();
+      var tag = tieneResena ? 'a' : 'div';
+      var href = tieneResena ? ' href="' + escapeHTML(item.resena) + '"' : '';
+      var disabled = tieneResena ? '' : ' is-disabled';
+      var cta = tieneResena
+        ? '<span class="saga-cta">Ver reseña →</span>'
+        : '<span class="saga-cta">Reseña pendiente</span>';
 
-         var poster = item.poster
-           ? '<img class="saga-poster" src="' + escapeHTML(item.poster) + '" alt="" loading="lazy" onerror="this.style.visibility=\'hidden\'">'
-           : '<div class="saga-poster saga-poster--empty" aria-hidden="true"></div>';
+      var poster = item.poster
+        ? '<img class="saga-poster" src="' +
+          escapeHTML(item.poster) +
+          '" alt="" loading="lazy" width="80" height="120" onerror="this.style.visibility=\'hidden\'">'
+        : '<div class="saga-poster saga-poster--empty" aria-hidden="true"></div>';
 
-         return (
-           '<' +
-           tag +
-           ' class="saga-item' +
-           disabled +
-           '"' +
-           href +
-           (tieneResena ? '' : ' aria-disabled="true"') +
-           '>' +
-           '<div class="saga-num">' + n + '</div>' +
-           poster +
-           '<div class="saga-body">' +
-           '<h2>' + escapeHTML(item.titulo) + '</h2>' +
-           '<div class="saga-meta-row">' +
-           '<span class="saga-fase">' + escapeHTML(item.fase) + '</span>' +
-           '<span>' + escapeHTML(item.cuando) + '</span>' +
-           '<span>Estreno ' + escapeHTML(String(item.anio)) + '</span>' +
-           '</div>' +
-           (item.nota ? '<p class="saga-nota">' + escapeHTML(item.nota) + '</p>' : '') +
-           cta +
-           '</div>' +
-           '</' + tag + '>'
-         );
-       })
+      return (
+        '<' +
+        tag +
+        ' class="saga-item' +
+        disabled +
+        '"' +
+        href +
+        (tieneResena ? '' : ' aria-disabled="true"') +
+        '>' +
+        '<div class="saga-num">' +
+        n +
+        '</div>' +
+        poster +
+        '<div class="saga-body">' +
+        '<h2>' +
+        escapeHTML(item.titulo) +
+        '</h2>' +
+        '<div class="saga-meta-row">' +
+        '<span class="saga-fase">' +
+        escapeHTML(item.fase) +
+        '</span>' +
+        '<span>' +
+        escapeHTML(item.cuando) +
+        '</span>' +
+        '<span>Estreno ' +
+        escapeHTML(String(item.anio)) +
+        '</span>' +
+        '</div>' +
+        (item.nota ? '<p class="saga-nota">' + escapeHTML(item.nota) + '</p>' : '') +
+        cta +
+        '</div>' +
+        '</' +
+        tag +
+        '>'
+      );
+    })
     .join('');
 }
 
@@ -320,7 +512,94 @@ document.addEventListener('DOMContentLoaded', function () {
       btn.setAttribute('aria-selected', 'true');
       actual = btn.dataset.saga;
       renderSaga(actual);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      var meta = document.getElementById('saga-meta');
+      if (meta) meta.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   }
+});
+
+/* ===== Nav móvil ===== */
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.getElementById('nav-toggle');
+  const nav = document.getElementById('main-nav');
+  if (!toggle || !nav) return;
+
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const open = nav.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+  });
+
+  nav.querySelectorAll('a').forEach((a) => {
+    a.addEventListener('click', () => {
+      nav.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Abrir menú');
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!nav.classList.contains('is-open')) return;
+    if (nav.contains(e.target) || toggle.contains(e.target)) return;
+    nav.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Abrir menú');
+  });
+});
+
+/* ===== Theme (único) ===== */
+(function () {
+  const KEY = 'lbdc-theme';
+  const root = document.documentElement;
+
+  function apply(theme) {
+    root.setAttribute('data-theme', theme);
+    try {
+      localStorage.setItem(KEY, theme);
+    } catch (_) {}
+    const btn = document.getElementById('theme-toggle');
+    if (btn) {
+      btn.setAttribute(
+        'aria-label',
+        theme === 'light' ? 'Cambiar a modo oscuro' : 'Cambiar a modo claro'
+      );
+    }
+  }
+
+  try {
+    const saved = localStorage.getItem(KEY);
+    if (saved === 'light' || saved === 'dark') apply(saved);
+    else if (!root.getAttribute('data-theme')) {
+      apply(window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    }
+  } catch (_) {}
+
+  function bind() {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn || btn.dataset.themeBound === '1') return;
+    btn.dataset.themeBound = '1';
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const actual = root.getAttribute('data-theme') || 'dark';
+      apply(actual === 'light' ? 'dark' : 'light');
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bind);
+  } else {
+    bind();
+  }
+})();
+
+/* ===== Back to top ===== */
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('back-to-top') || document.getElementById('btn-top');
+  if (!btn) return;
+  const sync = () => btn.classList.toggle('is-visible', window.scrollY > 400);
+  window.addEventListener('scroll', sync, { passive: true });
+  sync();
+  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 });

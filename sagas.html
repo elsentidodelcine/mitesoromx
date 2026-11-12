@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sagas y universos | Los Brujos del Cine</title>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0RVV6RWHTS"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -11,46 +12,202 @@
         gtag('js', new Date());
         gtag('config', 'G-0RVV6RWHTS');
     </script>
-    <meta name="description" content="Sagas y universos en orden: UCM hasta Avengers: Endgame y más.">
-    <meta name="theme-color" content="#030304">
+
+    <meta name="description" content="Sagas y universos en orden: UCM hasta Endgame, Rocky y Los Juegos del Hambre.">
+    <meta name="theme-color" content="#0c0a09">
+    <meta name="author" content="Los Brujos del Cine">
+    <link rel="canonical" href="https://losbrujosdelcine.com/sagas.html">
+
+    <meta property="og:title" content="Sagas y universos | Los Brujos del Cine">
+    <meta property="og:description" content="Órdenes para ver sin perder el hilo: Marvel, Rocky, Juegos del Hambre y más.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_MX">
+
     <link rel="icon" href="imgs/logoLB.png" type="image/png" sizes="32x32">
     <link rel="apple-touch-icon" href="imgs/logoLB.png">
+    <link rel="shortcut icon" href="imgs/logoBL.ico">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stylesLBDC.css">
     <link rel="stylesheet" href="sagas.css">
+
     <script>
         try {
           var t = localStorage.getItem('lbdc-theme');
           if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
         } catch (e) {}
     </script>
+
+    <style>
+        .sagas-page { padding-bottom: 4rem; }
+
+        .sagas-hero {
+          position: relative;
+          padding: 5.5rem 1.5rem 4rem;
+          overflow: hidden;
+          text-align: center;
+          border-bottom: 1px solid var(--border);
+          background: var(--bg);
+        }
+        .sagas-hero-glow {
+          position: absolute;
+          border-radius: 50%;
+          filter: blur(80px);
+          pointer-events: none;
+          opacity: 0.35;
+          z-index: 0;
+        }
+        .sagas-hero-glow-one {
+          width: 420px;
+          height: 420px;
+          background: var(--accent);
+          top: -120px;
+          left: 50%;
+          transform: translateX(-60%);
+        }
+        .sagas-hero-glow-two {
+          width: 320px;
+          height: 320px;
+          background: #5c3d2e;
+          bottom: -80px;
+          right: 15%;
+        }
+        .sagas-hero-inner {
+          position: relative;
+          z-index: 1;
+          max-width: 720px;
+          margin: 0 auto;
+        }
+        .sagas-hero .eyebrow {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-size: 0.8rem;
+          font-weight: 600;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+          color: var(--accent);
+          margin-bottom: 1.25rem;
+        }
+        .sagas-hero .eyebrow span {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: var(--accent);
+          box-shadow: 0 0 12px var(--accent);
+        }
+        .sagas-hero h1 {
+          font-family: var(--font-display);
+          font-size: clamp(2.4rem, 5.5vw, 3.4rem);
+          font-weight: 700;
+          line-height: 1.15;
+          letter-spacing: -0.02em;
+          margin: 0 0 1rem;
+          color: var(--text);
+        }
+        .sagas-hero h1 em {
+          font-style: italic;
+          color: var(--accent);
+        }
+        .sagas-hero p {
+          color: var(--text-muted);
+          font-size: 1.05rem;
+          line-height: 1.65;
+          max-width: 540px;
+          margin: 0 auto;
+        }
+        .sagas-hero p strong { color: var(--text); }
+
+        .sagas-tabs {
+          max-width: 1100px;
+          margin: 1.75rem auto 1rem;
+          padding: 0 1.25rem;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          justify-content: center;
+        }
+        .saga-tab {
+          padding: 0.5rem 1rem;
+          border-radius: 999px;
+          border: 1px solid var(--border);
+          background: var(--surface);
+          color: var(--text-muted);
+          font-size: 0.82rem;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.2s;
+        }
+        .saga-tab:hover {
+          border-color: var(--border-strong);
+          color: var(--text);
+        }
+        .saga-tab.active {
+          background: var(--accent);
+          border-color: var(--accent);
+          color: #1a1208;
+        }
+
+        .saga-meta {
+          max-width: 720px;
+          margin: 0 auto 1.5rem;
+          padding: 0 1.25rem;
+          text-align: center;
+          color: var(--text-muted);
+          font-size: 0.95rem;
+          line-height: 1.6;
+        }
+        .saga-meta strong {
+          color: var(--text);
+          font-family: var(--font-display);
+          font-size: 1.2rem;
+          display: block;
+          margin-bottom: 0.35rem;
+        }
+
+        .saga-timeline {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 0 1.25rem;
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+        }
+    </style>
 </head>
 <body>
+
+<a href="#main-content" class="skip-link">Saltar al contenido</a>
 
 <header class="site-header">
     <div class="header-inner">
         <a href="blog.html" class="brand-link" aria-label="Los Brujos del Cine, inicio">
-            <img src="imgs/logoLB.png" alt="Los Brujos del Cine" class="site-logo">
+            <img src="imgs/logoLB.png" alt="" class="site-logo" width="68" height="68" loading="eager">
             <div class="logo-text">
-                <h1>Los Brujos del Cine</h1>
-                <span>Mi Tesoro MX</span>
+                <span class="site-title">Los Brujos del Cine</span>
+                <span class="site-tagline">Mi Tesoro MX</span>
             </div>
         </a>
-        <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
+
+        <button type="button" class="nav-toggle" id="nav-toggle"
+                aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
             <span></span><span></span><span></span>
         </button>
+
         <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
             <a href="blog.html#resenas">Reseñas</a>
             <a href="estrenos.html">Estrenos</a>
             <a href="maratones.html">Maratones</a>
-            <a href="sagas.html">Sagas</a>
+            <a href="sagas.html" aria-current="page">Sagas</a>
             <a href="taquilla-historia.html">Taquilla</a>
             <a href="precios.html">Precios</a>
             <a href="formatos.html">Formatos</a>
         </nav>
-        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema" title="Modo claro / oscuro">
+
+        <button type="button" class="theme-toggle" id="theme-toggle"
+                aria-label="Cambiar tema" title="Modo claro / oscuro">
             <span class="theme-icon theme-icon-moon" aria-hidden="true">☾</span>
             <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
         </button>
@@ -58,18 +215,23 @@
 </header>
 
 <main id="main-content" class="sagas-page">
+
     <section class="sagas-hero">
+        <div class="sagas-hero-glow sagas-hero-glow-one" aria-hidden="true"></div>
+        <div class="sagas-hero-glow sagas-hero-glow-two" aria-hidden="true"></div>
         <div class="sagas-hero-inner">
             <div class="eyebrow"><span aria-hidden="true"></span> Universos conectados</div>
             <h1>Sagas y <em>universos</em></h1>
-            <p>Órdenes para ver sin perder el hilo. Empezamos con el UCM hasta <strong>Avengers: Endgame</strong>.</p>
+            <p>
+                Órdenes para ver sin perder el hilo.
+            </p>
         </div>
     </section>
 
-    <!-- Selector de saga -->
     <div class="sagas-tabs" id="sagas-tabs" role="tablist">
         <button type="button" class="saga-tab active" data-saga="ucm" role="tab" aria-selected="true">UCM · Infinity Saga</button>
-        <!-- Más sagas después: Star Wars, DC, etc. -->
+        <button type="button" class="saga-tab" data-saga="rocky" role="tab" aria-selected="false">Rocky · Creed</button>
+        <button type="button" class="saga-tab" data-saga="juegos-del-hambre" role="tab" aria-selected="false">Juegos del Hambre</button>
     </div>
 
     <div class="saga-meta" id="saga-meta"></div>
@@ -90,46 +252,10 @@
     </div>
 </footer>
 
-<button type="button" id="btn-top" class="btn-top" aria-label="Volver arriba">↑</button>
+<button type="button" id="back-to-top" class="back-to-top" aria-label="Volver arriba" title="Volver arriba">
+    <span class="back-to-top-icon" aria-hidden="true">🧙‍♀️</span>
+</button>
+
 <script src="sagas.js"></script>
-<script>
-    document.getElementById('theme-toggle')?.addEventListener('click', () => {
-      const html = document.documentElement;
-      const actual = html.getAttribute('data-theme') || 'dark';
-      const nuevo = actual === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', nuevo);
-      try { localStorage.setItem('lbdc-theme', nuevo); } catch (e) {}
-    });
-
-    document.addEventListener('DOMContentLoaded', () => {
-      const toggle = document.getElementById('nav-toggle');
-      const nav = document.getElementById('main-nav');
-      if (!toggle || !nav) return;
-      toggle.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const open = nav.classList.toggle('is-open');
-        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-      nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-        nav.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', 'false');
-      }));
-      document.addEventListener('click', (e) => {
-        if (!nav.classList.contains('is-open')) return;
-        if (nav.contains(e.target) || toggle.contains(e.target)) return;
-        nav.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-
-    document.addEventListener('DOMContentLoaded', () => {
-      const btn = document.getElementById('btn-top');
-      if (!btn) return;
-      const sync = () => btn.classList.toggle('is-visible', window.scrollY > 400);
-      window.addEventListener('scroll', sync, { passive: true });
-      sync();
-      btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-    });
-</script>
 </body>
 </html>
