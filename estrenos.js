@@ -248,11 +248,13 @@ function renderCalendario(listaCompleta) {
 
   } catch (error) {
     console.error(error);
-    container.innerHTML = `
-      <div class="estrenos-empty">
-        No se pudieron cargar los estrenos.<br>
-        Intenta de nuevo más tarde.
-      </div>`;
+    if (container) {
+      container.innerHTML = `
+        <div class="estrenos-empty">
+          No se pudieron cargar los estrenos.<br>
+          Intenta de nuevo más tarde.
+        </div>`;
+    }
   }
 
   // ===== Filtros de tipo =====
@@ -290,25 +292,25 @@ function renderCalendario(listaCompleta) {
   });
 
   // ===== Skeleton =====
-    function mostrarSkeleton(cantidad = 8) {
-      const skeleton = document.getElementById('skeleton-loading');
-      if (!skeleton) return;
+   function mostrarSkeleton(cantidad = 8) {
+     const skeleton = document.getElementById('skeleton-loading');
+     if (!skeleton) return;
 
-      let html = '';
-      for (let i = 0; i < cantidad; i++) {
-        html += `
-          <div class="skeleton-card">
-            <div class="skeleton-poster"></div>
-            <div class="skeleton-body">
-              <div class="skeleton-line short"></div>
-              <div class="skeleton-line medium"></div>
-              <div class="skeleton-line" style="width:40%"></div>
-            </div>
-          </div>`;
-      }
-      skeleton.innerHTML = html;
-      skeleton.style.display = 'grid';
-    }
+     let html = '';
+     for (let i = 0; i < cantidad; i++) {
+       html += `
+         <div class="skeleton-card">
+           <div class="skeleton-poster"></div>
+           <div class="skeleton-body">
+             <div class="skeleton-line short"></div>
+             <div class="skeleton-line medium"></div>
+             <div class="skeleton-line" style="width:40%"></div>
+           </div>
+         </div>`;
+     }
+     skeleton.innerHTML = html;
+     skeleton.style.display = 'grid';
+   }
 
   // ===== Tipo dinámico =====
  function getTipoEfectivo(item) {
@@ -404,7 +406,7 @@ function renderEstrenos() {
      container.innerHTML = `
        <div class="estrenos-empty">
          <p style="font-size:1.1rem; margin-bottom:8px;">No hay estrenos con estos filtros</p>
-         <p style="font-size:0.9rem; color:var(--muted); margin-bottom:20px;">Prueba cambiando el tipo o el mes</p>
+         <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:20px;">Prueba cambiando el tipo o el mes</p>
          <button type="button" class="filter-btn" id="limpiar-filtros">
            Ver todos los estrenos
          </button>
@@ -433,8 +435,7 @@ function renderEstrenos() {
    container.innerHTML = `
      <div class="estrenos-grid">
        ${slice.map(crearCard).join('')}
-     </div>
-   `;
+     </div>`;
 
    renderControlesPaginacion(total, totalPaginas);
  }
@@ -514,7 +515,6 @@ function crearCard(item) {
 
   const idAttr = item.id ? `id="estreno-${escapeHTML(item.id)}"` : '';
 
-  // Links opcionales (si existen en el JSON)
   const links = [];
   if (item.link || item.url || item.boletos) {
     const href = item.link || item.url || item.boletos;
@@ -669,3 +669,105 @@ if (btnTop) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
+
+/* ===== Nav móvil ===== */
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.getElementById('nav-toggle');
+  const nav = document.getElementById('main-nav');
+  if (!toggle || !nav) return;
+
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const open = nav.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+  });
+
+  nav.querySelectorAll('a').forEach((a) => {
+    a.addEventListener('click', () => {
+      nav.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Abrir menú');
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!nav.classList.contains('is-open')) return;
+    if (nav.contains(e.target) || toggle.contains(e.target)) return;
+    nav.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Abrir menú');
+  });
+});
+
+/* ===== Theme toggle ===== */
+(function () {
+  const KEY = 'lbdc-theme';
+  const root = document.documentElement;
+
+  function apply(theme) {
+    root.setAttribute('data-theme', theme);
+    try {
+      localStorage.setItem(KEY, theme);
+    } catch (_) {}
+
+    const btn = document.getElementById('theme-toggle');
+    if (btn) {
+      btn.setAttribute(
+        'aria-label',
+        theme === 'light' ? 'Cambiar a modo oscuro' : 'Cambiar a modo claro'
+      );
+    }
+  }
+
+  // Tema inicial (el <script> del <head> ya puede haber puesto data-theme)
+  let saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch (_) {}
+
+  if (saved === 'light' || saved === 'dark') {
+    apply(saved);
+  } else if (!root.getAttribute('data-theme')) {
+    if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+      apply('light');
+    } else {
+      apply('dark');
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const actual = root.getAttribute('data-theme') || 'dark';
+      const siguiente = actual === 'light' ? 'dark' : 'light';
+      apply(siguiente);
+    });
+  });
+})();
+
+/* ===== Botón volver arriba ===== */
+document.addEventListener('DOMContentLoaded', () => {
+  const btnTop =
+    document.getElementById('back-to-top') || document.getElementById('btn-top');
+  if (!btnTop) return;
+
+  const toggleBtn = () => {
+    if (window.scrollY > 400) {
+      btnTop.classList.add('is-visible');
+    } else {
+      btnTop.classList.remove('is-visible');
+    }
+  };
+
+  window.addEventListener('scroll', toggleBtn, { passive: true });
+  toggleBtn();
+
+  btnTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});

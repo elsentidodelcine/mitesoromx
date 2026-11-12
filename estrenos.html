@@ -50,51 +50,92 @@
           padding-bottom: 4rem;
         }
 
-        /* Hero */
-        .estrenos-hero {
-          position: relative;
-          padding: 4.5rem 1.5rem 3.25rem;
-          border-bottom: 1px solid var(--border);
-          overflow: hidden;
-          text-align: center;
-        }
-        .estrenos-hero::before {
-          content: "";
-          position: absolute;
-          inset: 0;
-          background:
-            radial-gradient(ellipse 80% 60% at 50% -20%, rgba(212, 175, 55, 0.12), transparent 55%),
-            radial-gradient(ellipse 50% 40% at 85% 30%, rgba(92, 61, tiene 46, 0.08), transparent 50%);
-          pointer-events: none;
-        }
-        .estrenos-hero-inner {
-          position: relative;
-          max-width: 640px;
-          margin: 0 auto;
-        }
-        .estrenos-hero .eyebrow {
-          margin-bottom: 1.1rem;
-        }
-        .estrenos-hero h1 {
-          font-family: var(--font-display);
-          font-size: clamp(2.2rem, 5vw, 3.2rem);
-          font-weight: 700;
-          line-height: 1.1;
-          letter-spacing: -0.02em;
-          margin: 0 0 1rem;
-          color: var(--text);
-        }
-        .estrenos-hero h1 em {
-          font-style: italic;
-          color: var(--accent);
-        }
-        .estrenos-hero p {
-          color: var(--text-muted);
-          font-size: 1.02rem;
-          line-height: 1.65;
-          max-width: 500px;
-          margin: 0 auto;
-        }
+        /* Hero estilo blog */
+.estrenos-hero {
+  position: relative;
+  padding: 5.5rem 1.5rem 4.5rem;
+  overflow: hidden;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.estrenos-hero::before {
+  content: none; /* quitamos el viejo */
+}
+
+.estrenos-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Glow dorado como el blog */
+.estrenos-hero-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  opacity: 0.35;
+  z-index: 0;
+}
+.estrenos-hero-glow-one {
+  width: 420px;
+  height: 420px;
+  background: var(--accent);
+  top: -120px;
+  left: 50%;
+  transform: translateX(-60%);
+}
+.estrenos-hero-glow-two {
+  width: 320px;
+  height: 320px;
+  background: #5c3d2e;
+  bottom: -80px;
+  right: 15%;
+}
+
+.estrenos-hero .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.25rem;
+}
+.estrenos-hero .eyebrow span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 12px var(--accent);
+}
+
+.estrenos-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5.5vw, 3.6rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.25rem;
+  color: var(--text);
+}
+.estrenos-hero h1 em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.estrenos-hero p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1.65;
+  max-width: 520px;
+  margin: 0 auto;
+}
 
         /* Calendario */
         .estrenos-cal {
@@ -741,6 +782,9 @@
 
     <!-- HERO -->
     <section class="estrenos-hero">
+        <div class="estrenos-hero-glow estrenos-hero-glow-one" aria-hidden="true"></div>
+        <div class="estrenos-hero-glow estrenos-hero-glow-two" aria-hidden="true"></div>
+
         <div class="estrenos-hero-inner">
             <div class="eyebrow">
                 <span aria-hidden="true"></span>
@@ -826,6 +870,5 @@
 </button>
 
 <script src="estrenos.js"></script>
-<script src="scriptResena.js"></script>
 </body>
 </html>
