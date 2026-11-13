@@ -12,15 +12,19 @@ function escapeHTML(str) {
 function rowHTML(p, { showYear = false } = {}) {
   const pos = Number(p.puesto) || 0;
   const top = pos >= 1 && pos <= 3 ? ' top3' : '';
-  const topClass = pos === 1 ? ' top-1' : pos === 2 ? ' top-2' : pos === 3 ? ' top-3' : '';
-  const enCartel = p.enCartel === true || Number(p.anio) === new Date().getFullYear();
+  const topClass =
+    pos === 1 ? ' top-1' : pos === 2 ? ' top-2' : pos === 3 ? ' top-3' : '';
+  const enCartel =
+    p.enCartel === true || Number(p.anio) === new Date().getFullYear();
   const rowClass = enCartel ? ' taquilla-row--cartel' : '';
 
   const meta = [
     showYear && p.anio ? String(p.anio) : null,
     p.distribuidora || null,
-    p.director || null
-  ].filter(Boolean).join(' · ');
+    p.director || null,
+  ]
+    .filter(Boolean)
+    .join(' · ');
 
   const resultado = p.resultado || calcResultado(p.taquilla, p.presupuesto);
 
@@ -40,7 +44,11 @@ function rowHTML(p, { showYear = false } = {}) {
       </div>
       <div class="taquilla-money">
         ${fmtMoney(p.taquilla, p.taquillaTexto)}
-        ${p.presupuesto != null || p.resultado ? badgeResultado(resultado) : ''}
+        ${
+          p.presupuesto != null || p.resultado
+            ? badgeResultado(resultado)
+            : ''
+        }
       </div>
     </article>
   `;
@@ -173,16 +181,18 @@ function pintarAnio(years, anio, modo = 'general', orden = 'puesto') {
       : 'Sin resultados';
   }
 
-  box.innerHTML = `
-    <div class="year-block">
-      <h2>${escapeHTML(String(y.anio))} · ${tituloLista}</h2>
-      <div class="taquilla-list">
-      ${pelis.length
-        ? pelis.map(p => rowHTMLAnio(p)).join('')
-        : `<p class="empty-state">No hay películas de ${tituloLista.toLowerCase()} para este año.</p>`}
+    box.innerHTML = `
+      <div class="year-block">
+        <h2>${escapeHTML(String(y.anio))} · ${tituloLista}</h2>
+        <div class="taquilla-list">
+          ${
+            pelis.length
+              ? pelis.map((p) => rowHTMLAnio(p)).join('')
+              : `<p class="empty-state">No hay películas de ${tituloLista.toLowerCase()} para este año.</p>`
+          }
+        </div>
       </div>
-    </div>
-  `;
+    `;
 }
 
 function bloqueAnio(y) {
@@ -238,22 +248,22 @@ function barraPresupuesto(p) {
   const resultado = p.resultado || calcResultado(gross, budget);
   const mult = (gross / budget).toFixed(1);
 
-  return `
-    <div class="bar-wrap">
-      <div class="bar-labels">
-        <span class="bar-label bar-label--budget" style="left:${pctBudget}%">1× ${fmtMoney(budget, p.presupuestoTexto)}</span>
-        <span class="bar-label bar-label--rentable" style="left:${pctRent}%">2× ${fmtMoney(rentable)}</span>
-        <span class="bar-label bar-label--exito" style="left:${pctExito}%">3× ${fmtMoney(exito)}</span>
-        <span class="bar-label bar-label--now" style="left:${pctGross}%">${mult}×</span>
+    return `
+      <div class="bar-wrap">
+        <div class="bar-labels">
+          <span class="bar-label bar-label--budget" style="left:${pctBudget}%">1× ${fmtMoney(budget, p.presupuestoTexto)}</span>
+          <span class="bar-label bar-label--rentable" style="left:${pctRent}%">2× ${fmtMoney(rentable)}</span>
+          <span class="bar-label bar-label--exito" style="left:${pctExito}%">3× ${fmtMoney(exito)}</span>
+          <span class="bar-label bar-label--now" style="left:${pctGross}%">${mult}×</span>
+        </div>
+        <div class="bar-track">
+          <div class="bar-fill bar-fill--${escapeHTML(resultado)}" style="width:${pctGross}%"></div>
+          <span class="bar-mark bar-mark--budget" style="left:${pctBudget}%"></span>
+          <span class="bar-mark bar-mark--rentable" style="left:${pctRent}%"></span>
+          <span class="bar-mark bar-mark--exito" style="left:${pctExito}%"></span>
+        </div>
       </div>
-      <div class="bar-track">
-        <div class="bar-fill bar-fill--${escapeHTML(resultado)}" style="width:${pctGross}%"></div>
-        <span class="bar-mark bar-mark--budget" style="left:${pctBudget}%"></span>
-        <span class="bar-mark bar-mark--rentable" style="left:${pctRent}%"></span>
-        <span class="bar-mark bar-mark--exito" style="left:${pctExito}%"></span>
-      </div>
-    </div>
-  `;
+    `;
 }
 
 
@@ -269,7 +279,8 @@ function fmtMoney(n, texto) {
 function rowHTMLAnio(p) {
   const pos = Number(p.puesto) || 0;
   const top = pos >= 1 && pos <= 3 ? ' top3' : '';
-  const topClass = pos === 1 ? ' top-1' : pos === 2 ? ' top-2' : pos === 3 ? ' top-3' : '';
+  const topClass =
+    pos === 1 ? ' top-1' : pos === 2 ? ' top-2' : pos === 3 ? ' top-3' : '';
   const resultado = p.resultado || calcResultado(p.taquilla, p.presupuesto);
   const meta = [p.distribuidora || null].filter(Boolean).join(' · ');
 
@@ -285,7 +296,11 @@ function rowHTMLAnio(p) {
         ${meta ? `<span>${escapeHTML(meta)}</span>` : ''}
         <div class="taquilla-figures">
           <span>Taquilla: <b>${fmtMoney(p.taquilla, p.taquillaTexto)}</b></span>
-          <span>Presupuesto: <b>${p.presupuesto != null ? fmtMoney(p.presupuesto, p.presupuestoTexto) : '—'}</b></span>
+          <span>Presupuesto: <b>${
+            p.presupuesto != null
+              ? fmtMoney(p.presupuesto, p.presupuestoTexto)
+              : '—'
+          }</b></span>
           ${badgeResultado(resultado)}
         </div>
         ${barraPresupuesto(p)}
@@ -294,68 +309,80 @@ function rowHTMLAnio(p) {
   `;
 }
 
-/// ===== Menú móvil =====
- document.addEventListener('DOMContentLoaded', () => {
-   const toggle = document.getElementById('nav-toggle');
-   const nav = document.getElementById('main-nav');
-   if (!toggle || !nav) return;
+/* Nav */
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.getElementById('nav-toggle');
+  const nav = document.getElementById('main-nav');
+  if (!toggle || !nav) return;
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const open = nav.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+  });
+  nav.querySelectorAll('a').forEach((a) => {
+    a.addEventListener('click', () => {
+      nav.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Abrir menú');
+    });
+  });
+  document.addEventListener('click', (e) => {
+    if (!nav.classList.contains('is-open')) return;
+    if (nav.contains(e.target) || toggle.contains(e.target)) return;
+    nav.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Abrir menú');
+  });
+});
 
-   toggle.addEventListener('click', () => {
-     const open = nav.classList.toggle('is-open');
-     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-     toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
-   });
+/* Theme único */
+(function () {
+  const KEY = 'lbdc-theme';
+  const root = document.documentElement;
+  function apply(theme) {
+    root.setAttribute('data-theme', theme);
+    try { localStorage.setItem(KEY, theme); } catch (_) {}
+    const btn = document.getElementById('theme-toggle');
+    if (btn) {
+      btn.setAttribute(
+        'aria-label',
+        theme === 'light' ? 'Cambiar a modo oscuro' : 'Cambiar a modo claro'
+      );
+    }
+  }
+  try {
+    const saved = localStorage.getItem(KEY);
+    if (saved === 'light' || saved === 'dark') apply(saved);
+    else if (!root.getAttribute('data-theme')) {
+      apply(window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    }
+  } catch (_) {}
+  function bind() {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn || btn.dataset.themeBound === '1') return;
+    btn.dataset.themeBound = '1';
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const actual = root.getAttribute('data-theme') || 'dark';
+      apply(actual === 'light' ? 'dark' : 'light');
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bind);
+  } else bind();
+})();
 
-   nav.querySelectorAll('a').forEach(a => {
-     a.addEventListener('click', () => {
-       nav.classList.remove('is-open');
-       toggle.setAttribute('aria-expanded', 'false');
-       toggle.setAttribute('aria-label', 'Abrir menú');
-     });
-   });
-
-   document.addEventListener('click', (e) => {
-     if (!nav.classList.contains('is-open')) return;
-     if (nav.contains(e.target) || toggle.contains(e.target)) return;
-     nav.classList.remove('is-open');
-     toggle.setAttribute('aria-expanded', 'false');
-     toggle.setAttribute('aria-label', 'Abrir menú');
-   });
- });
-
- // ===== Toggle tema (UNA SOLA VEZ) =====
- document.addEventListener('DOMContentLoaded', () => {
-   const btn = document.getElementById('theme-toggle');
-   if (!btn) return;
-
-   btn.addEventListener('click', () => {
-     const html = document.documentElement;
-     const actual = html.getAttribute('data-theme') || 'dark';
-     const nuevo = actual === 'dark' ? 'light' : 'dark';
-     html.setAttribute('data-theme', nuevo);
-     try {
-       localStorage.setItem('lbdc-theme', nuevo);
-     } catch (e) {}
-   });
- });
-
- // ===== Botón volver arriba =====
- document.addEventListener('DOMContentLoaded', () => {
-   const btnTop = document.getElementById('btn-top');
-   if (!btnTop) return;
-
-   function toggleBtnTop() {
-     if (window.scrollY > 400) {
-       btnTop.classList.add('is-visible');
-     } else {
-       btnTop.classList.remove('is-visible');
-     }
-   }
-
-   window.addEventListener('scroll', toggleBtnTop, { passive: true });
-   toggleBtnTop();
-
-   btnTop.addEventListener('click', () => {
-     window.scrollTo({ top: 0, behavior: 'smooth' });
-   });
- });
+/* Back to top */
+document.addEventListener('DOMContentLoaded', () => {
+  const btn =
+    document.getElementById('back-to-top') || document.getElementById('btn-top');
+  if (!btn) return;
+  const sync = () => btn.classList.toggle('is-visible', window.scrollY > 400);
+  window.addEventListener('scroll', sync, { passive: true });
+  sync();
+  btn.addEventListener('click', () =>
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  );
+});
